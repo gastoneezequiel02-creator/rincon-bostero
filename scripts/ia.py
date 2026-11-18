@@ -88,7 +88,7 @@ def generar_json(instrucciones: str, pedido: str, *, temperatura: float = 0.6) -
                 time.sleep(espera)
             _ultimo_llamado = time.time()
             try:
-                r = http_post_json(f"{BASE}/models/{modelo}:generateContent?key={clave}", cuerpo)
+                r = http_post_json(f"{BASE}/models/{modelo}:generateContent?key={clave}", cuerpo, timeout=150)
                 texto = r["candidates"][0]["content"]["parts"][0]["text"]
                 return _parsear_json(texto)
             except RuntimeError as e:
@@ -102,6 +102,10 @@ def generar_json(instrucciones: str, pedido: str, *, temperatura: float = 0.6) -
                     time.sleep(40)
                     continue
                 break  # probar con el siguiente modelo
+            except (TimeoutError, OSError) as e:  # la IA tardó demasiado o se cortó la conexión
+                errores.append(f"{modelo}: sin respuesta ({e})")
+                log(f"IA: {modelo} no respondió a tiempo, pruebo otro modelo")
+                break
             except (KeyError, IndexError, ValueError) as e:
                 errores.append(f"{modelo}: respuesta inesperada ({e})")
                 break
