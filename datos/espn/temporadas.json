@@ -162,5 +162,46 @@
       "gc": 2,
       "pts": 13
     }
+  },
+  "2022": {
+    "arg.1": {
+      "competencia": "Liga Profesional",
+      "grupo": "2022 Argentine Liga Profesional",
+      "equipos": 28,
+      "pos": 1,
+      "pj": 27,
+      "g": 16,
+      "e": 4,
+      "p": 7,
+      "gf": 34,
+      "gc": 28,
+      "pts": 52
+    },
+    "arg.copa_lpf": {
+      "competencia": "Copa de la Liga",
+      "grupo": "Group B",
+      "equipos": 14,
+      "pos": 2,
+      "pj": 14,
+      "g": 7,
+      "e": 6,
+      "p": 1,
+      "gf": 19,
+      "gc": 11,
+      "pts": 27
+    },
+    "conmebol.libertadores": {
+      "competencia": "Copa Libertadores",
+      "grupo": "Group E",
+      "equipos": 4,
+      "pos": 1,
+      "pj": 6,
+      "g": 3,
+      "e": 1,
+      "p": 2,
+      "gf": 5,
+      "gc": 5,
+      "pts": 10
+    }
   }
 }

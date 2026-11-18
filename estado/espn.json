@@ -23,6 +23,12 @@
     "2023:conmebol.recopa",
     "2023:arg.copa",
     "2023:arg.supercopa",
-    "2023:fifa.cwc"
+    "2023:fifa.cwc",
+    "2022:arg.1",
+    "2022:arg.copa_lpf",
+    "2022:conmebol.libertadores",
+    "2022:conmebol.sudamericana",
+    "2022:conmebol.recopa",
+    "2022:arg.copa"
   ]
 }
