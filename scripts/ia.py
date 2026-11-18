@@ -31,7 +31,7 @@ def _candidatos_modelo() -> list[str]:
     elegido = config()["ia"].get("modelo", "").strip()
     if elegido:
         return [elegido]
-    cache = leer_json(ESTADO / "ia_modelo.json", {})
+    cache = leer_json(ESTADO / "ia_modelos.json", {})
     if cache.get("modelos") and cache.get("fecha", "") >= time.strftime("%Y-%m-%d", time.gmtime(time.time() - 7 * 86400)):
         return cache["modelos"]
 
@@ -47,6 +47,9 @@ def _candidatos_modelo() -> list[str]:
         if any(x in n for x in ("pro", "image", "tts", "audio", "live", "embedding", "vision", "robotics", "computer")):
             continue
         nombres.append(nombre)
+    # El plan gratis cubre los modelos "flash": si hay alguno, se usan solo esos (los demás suelen dar cupo 0).
+    flash = [x for x in nombres if "flash" in x.lower()]
+    nombres = flash or nombres
 
     def puntaje(nombre: str):
         n = nombre.lower()
@@ -59,7 +62,7 @@ def _candidatos_modelo() -> list[str]:
     nombres.sort(key=puntaje, reverse=True)
     if not nombres:
         raise IAError("No encontré modelos Gemini Flash disponibles para tu clave.")
-    guardar_json(ESTADO / "ia_modelo.json", {"fecha": time.strftime("%Y-%m-%d"), "modelos": nombres[:6]})
+    guardar_json(ESTADO / "ia_modelos.json", {"fecha": time.strftime("%Y-%m-%d"), "modelos": nombres[:6]})
     log("IA: modelos candidatos →", ", ".join(nombres[:3]))
     return nombres[:6]
 
@@ -91,6 +94,9 @@ def generar_json(instrucciones: str, pedido: str, *, temperatura: float = 0.6) -
             except RuntimeError as e:
                 msg = str(e)
                 errores.append(f"{modelo}: {msg[:160]}")
+                if "429" in msg and any(x in msg for x in ("limit: 0", "PerDay", "per day", "free_tier")) and "PerMinute" not in msg:
+                    log(f"IA: {modelo} sin cupo gratis disponible, pruebo otro modelo")
+                    break
                 if "429" in msg and intento == 0:
                     log("IA: límite por minuto alcanzado, espero 40 s…")
                     time.sleep(40)
