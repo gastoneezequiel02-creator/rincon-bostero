@@ -71,6 +71,12 @@
     "2017:conmebol.recopa",
     "2017:arg.copa",
     "2017:arg.supercopa",
-    "2017:fifa.cwc"
+    "2017:fifa.cwc",
+    "2016:arg.1",
+    "2016:arg.copa_lpf",
+    "2016:conmebol.libertadores",
+    "2016:conmebol.sudamericana",
+    "2016:conmebol.recopa",
+    "2016:arg.copa"
   ]
 }

@@ -330,5 +330,33 @@
       "gc": 22,
       "pts": 58
     }
+  },
+  "2016": {
+    "arg.1": {
+      "competencia": "Liga Profesional",
+      "grupo": "2016/17 Argentina Primera Division",
+      "equipos": 30,
+      "pos": 1,
+      "pj": 30,
+      "g": 18,
+      "e": 9,
+      "p": 3,
+      "gf": 62,
+      "gc": 25,
+      "pts": 63
+    },
+    "conmebol.libertadores": {
+      "competencia": "Copa Libertadores",
+      "grupo": "COPA LIBERTADORES - GROUP 3",
+      "equipos": 4,
+      "pos": 1,
+      "pj": 6,
+      "g": 3,
+      "e": 3,
+      "p": 0,
+      "gf": 11,
+      "gc": 4,
+      "pts": 12
+    }
   }
 }
