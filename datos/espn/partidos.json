@@ -1,5 +1,46 @@
 [
   {
+    "id": "478230",
+    "fecha": "2017-08-14T21:10:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Don Carlos Antonio Romero",
+    "ciudad": "",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 5,
+      "penales": null
+    },
+    "visitante": {
+      "id": "10743",
+      "nombre": "Gimnasia y Tiro (Salta)",
+      "corto": "G y T (Salta)",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10743.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "10743",
+      "nombre": "Gimnasia y Tiro (Salta)",
+      "corto": "G y T (Salta)",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10743.png"
+    },
+    "goles_boca": 5,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "493489",
     "fecha": "2017-08-27T18:05:00-03:00",
     "hora_a_confirmar": false,
@@ -74,6 +115,47 @@
       "nombre": "Lanús",
       "corto": "Lanús ",
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "494013",
+    "fecha": "2017-09-13T20:10:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Malvinas Argentinas (Mendoza)",
+    "ciudad": "Mendoza",
+    "condicion": "V",
+    "local": {
+      "id": "11674",
+      "nombre": "Guillermo Brown",
+      "corto": "G. Brown",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/11674.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "11674",
+      "nombre": "Guillermo Brown",
+      "corto": "G. Brown",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/11674.png"
     },
     "goles_boca": 1,
     "goles_rival": 0,
@@ -162,6 +244,47 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "G"
+  },
+  {
+    "id": "496959",
+    "fecha": "2017-09-27T21:10:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Malvinas Argentinas (Mendoza)",
+    "ciudad": "Mendoza",
+    "condicion": "V",
+    "local": {
+      "id": "17",
+      "nombre": "Rosario Central",
+      "corto": "Rosario Central",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "17",
+      "nombre": "Rosario Central",
+      "corto": "Rosario Central",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
   },
   {
     "id": "493428",
@@ -818,6 +941,47 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "G"
+  },
+  {
+    "id": "501083",
+    "fecha": "2018-03-14T21:10:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Supercopa Argentina",
+    "competencia_slug": "arg.supercopa",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Malvinas Argentinas (Mendoza)",
+    "ciudad": "Mendoza",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "16",
+      "nombre": "River Plate",
+      "corto": "River Plate",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
+      "goles": 2,
+      "penales": null
+    },
+    "rival": {
+      "id": "16",
+      "nombre": "River Plate",
+      "corto": "River Plate",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 2,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
   },
   {
     "id": "493217",
