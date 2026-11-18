@@ -136,7 +136,8 @@ def efemerides_guardadas() -> dict[str, list[dict]]:
 CARPETA_HISTORIALES = DATOS / "hdb" / "historiales"
 RE_FECHA = re.compile(r"\b(\d{2})/(\d{2})/(\d{4})\b")
 EQUIPO = r"[A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑÜáéíóúñü'´`’\.\(\) ]{0,40}?"
-RE_MARCADOR = re.compile(rf"({EQUIPO})\s+(\d{{1,2}})\s*-\s*({EQUIPO})\s+(\d{{1,2}})(?!\d)")
+# "Boca 1-River 2"; en desempates por penales: "Boca 0 (3)-River 0 (4)"
+RE_MARCADOR = re.compile(rf"({EQUIPO})\s+(\d{{1,2}})(?:\s*\(\d{{1,2}}\))?\s*-\s*({EQUIPO})\s+(\d{{1,2}})(?:\s*\(\d{{1,2}}\))?(?![\d(])")
 
 
 def _texto_con_filas(html: str) -> str:
@@ -225,11 +226,247 @@ def historial_importado(nombre_rival: str) -> dict | None:
     return leer_json(CARPETA_HISTORIALES / f"{clave}.json")
 
 
+# ------------------------------------------------------------ campañas --
+ARCHIVO_CAMPANIAS = DATOS / "hdb" / "campanias.json"
+CARPETA_POSICIONES = DATOS.parent / "sitio" / "estatico" / "img" / "posiciones"
+CAMPANIAS_POR_CORRIDA = 40
+EXCLUIR_TORNEOS = ("amistoso", "anulado")
+
+
+def _post_form(url: str, campos: dict, timeout: int = 40) -> tuple[str, str]:
+    """POST de formulario; devuelve (url final, html). Sigue la redirección a la página de la campaña."""
+    import urllib.parse
+    import urllib.request
+    from comun import USER_AGENT
+    req = urllib.request.Request(url, data=urllib.parse.urlencode(campos).encode(),
+                                 headers={"User-Agent": USER_AGENT, "Content-Type": "application/x-www-form-urlencoded"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.geturl(), r.read().decode("utf-8", "ignore")
+
+
+def parsear_campania(html: str) -> list[dict]:
+    """Partidos de una página de campaña: fecha, fase, local, visitante y goles."""
+    partidos = []
+    for fila in re.findall(r"(?is)<tr[^>]*>(.*?)</tr>", html):
+        celdas = [re.sub(r"\s+", " ", html_mod.unescape(re.sub(r"(?s)<div class=\"tooltip_templates\">.*?</div>\s*</div>\s*</div>", "", c)))
+                  for c in re.findall(r"(?is)<td[^>]*>(.*?)</td>", fila)]
+        celdas = [re.sub(r"<[^>]+>", " ", c).strip() for c in celdas]
+        if len(celdas) < 3 or not RE_FECHA.fullmatch(celdas[0]):
+            continue
+        m = RE_MARCADOR.search(celdas[2])
+        if not m:
+            continue
+        local, gl, visit, gv = m.group(1).strip(), int(m.group(2)), m.group(3).strip(), int(m.group(4))
+        boca_local = normalizar(local) == "boca"
+        if not boca_local and normalizar(visit) != "boca":
+            continue
+        gb, gr = (gl, gv) if boca_local else (gv, gl)
+        d, me, a = celdas[0].split("/")
+        partidos.append({"fecha": f"{a}-{me}-{d}", "fase": celdas[1], "rival": visit if boca_local else local,
+                         "condicion": celdas[4] if len(celdas) > 4 and celdas[4] in ("L", "V", "N") else ("L" if boca_local else "V"),
+                         "goles_boca": gb, "goles_rival": gr, "resultado": "G" if gb > gr else "P" if gb < gr else "E"})
+    vistos, unicos = set(), []
+    for x in partidos:
+        k = (x["fecha"], x["rival"], x["goles_boca"], x["goles_rival"])
+        if k not in vistos:
+            vistos.add(k)
+            unicos.append(x)
+    return unicos
+
+
+def importar_campanias() -> None:
+    """Catálogo de campañas oficiales (1905 en adelante) y, de a poco, el detalle de cada una con su tabla."""
+    datos = leer_json(ARCHIVO_CAMPANIAS, {}) or {}
+    catalogo = datos.get("catalogo") or {}
+    hoy = ahora()
+    # 1) catálogo: una vez por semana se recorren todos los años
+    if datos.get("catalogo_actualizado", "") < (hoy - dt.timedelta(days=7)).date().isoformat():
+        nuevo = {}
+        for anio in range(1905, hoy.year + 1):
+            try:
+                html = http_get(f"{BASE}/anios-campeonatos.php?anios={anio}", timeout=25).decode("utf-8", "ignore")
+            except Exception as e:
+                log(f"Historia de Boca: no pude leer el catálogo de campañas de {anio} ({e})")
+                nuevo = None
+                break
+            for cod, nombre in re.findall(r"value='(\d+)'>([^<]+)<", html):
+                nombre = html_mod.unescape(nombre).strip()
+                if any(x in normalizar(nombre) for x in EXCLUIR_TORNEOS):
+                    continue
+                nuevo[f"{anio}-{cod}"] = {"anio": anio, "codigo": cod, "nombre": nombre}
+        if nuevo:
+            catalogo = nuevo
+            datos["catalogo"] = catalogo
+            datos["catalogo_actualizado"] = hoy.date().isoformat()
+            log(f"Historia de Boca: catálogo con {len(catalogo)} campañas oficiales")
+    detalle = datos.get("detalle") or {}
+    # 2) detalle: primero las que faltan; las del año en curso se renuevan cada día
+    pendientes = [k for k in catalogo if k not in detalle]
+    pendientes += [k for k in catalogo if k in detalle and catalogo[k]["anio"] >= hoy.year - (1 if hoy.month <= 2 else 0)
+                   and detalle[k].get("consultado") != hoy.date().isoformat()]
+    hechas = 0
+    CARPETA_POSICIONES.mkdir(parents=True, exist_ok=True)
+    for k in pendientes[:CAMPANIAS_POR_CORRIDA]:
+        c = catalogo[k]
+        try:
+            url, html = _post_form(f"{BASE}/validarcamp.php", {"anios": c["anio"], "comboCampeonato": c["codigo"]})
+        except Exception as e:
+            log(f"Historia de Boca: no pude leer la campaña {c['nombre']} {c['anio']} ({e})")
+            continue
+        ps = parsear_campania(html)
+        if not ps:
+            detalle[k] = {"consultado": hoy.date().isoformat(), "partidos": [], "sin_datos": True}
+            continue
+        tabla = None
+        m = re.search(r'(?i)src="(/Fotos/Posiciones/(\d+)\.(gif|png|jpe?g))"', html)
+        if m:
+            destino = CARPETA_POSICIONES / f"{m.group(2)}.{m.group(3).lower()}"
+            if not destino.exists() or c["anio"] >= hoy.year - 1:
+                try:
+                    img = http_get(BASE + m.group(1), timeout=30)
+                    if img[:3] in (b"GIF", b"\x89PN", b"\xff\xd8\xff"):
+                        destino.write_bytes(img)
+                except Exception as e:
+                    log(f"Historia de Boca: no pude bajar la tabla de {c['nombre']} {c['anio']} ({e})")
+            if destino.exists():
+                tabla = f"img/posiciones/{destino.name}"
+        detalle[k] = {"consultado": hoy.date().isoformat(), "partidos": ps, "tabla": tabla}
+        hechas += 1
+    datos["detalle"] = detalle
+    guardar_json(ARCHIVO_CAMPANIAS, datos)
+    if hechas:
+        faltan = len([k for k in catalogo if k not in detalle])
+        log(f"Historia de Boca: {hechas} campañas importadas" + (f" (faltan {faltan})" if faltan else " (catálogo completo)"))
+
+
+def campanias() -> list[dict]:
+    """Campañas ya importadas, con totales: [{anio, nombre, pj, g, e, p, gf, gc, tabla}]."""
+    datos = leer_json(ARCHIVO_CAMPANIAS, {}) or {}
+    salida = []
+    for k, c in (datos.get("catalogo") or {}).items():
+        d = (datos.get("detalle") or {}).get(k)
+        if not d or not d.get("partidos"):
+            continue
+        ps = d["partidos"]
+        salida.append({**c, "pj": len(ps), "g": sum(p["resultado"] == "G" for p in ps), "e": sum(p["resultado"] == "E" for p in ps),
+                       "p": sum(p["resultado"] == "P" for p in ps), "gf": sum(p["goles_boca"] for p in ps),
+                       "gc": sum(p["goles_rival"] for p in ps), "tabla": d.get("tabla")})
+    return salida
+
+
+def catalogo_completo() -> bool:
+    datos = leer_json(ARCHIVO_CAMPANIAS, {}) or {}
+    cat = datos.get("catalogo") or {}
+    return bool(cat) and all(k in (datos.get("detalle") or {}) for k in cat)
+
+
+# ------------------------------------------------------- rankings de jugadores y DT --
+ARCHIVO_RANKINGS = DATOS / "hdb" / "rankings.json"
+RANKINGS_JUGADORES = {  # código de Historia de Boca → (clave, título)
+    0: ("partidos", "Los que más partidos jugaron"),
+    1: ("goles", "Máximos goleadores"),
+    3: ("penales", "Más goles de penal"),
+    16: ("cabeza", "Más goles de cabeza"),
+    6: ("expulsiones", "Los más expulsados"),
+    27: ("amonestaciones", "Los más amonestados"),
+}
+
+
+def _filas_ranking(html: str) -> list[list[str]]:
+    filas = []
+    for fila in re.findall(r"(?is)<tr[^>]*>(.*?)</tr>", html):
+        fila = re.sub(r'(?is)<div class="tooltip_templates">.*?</div>\s*</div>\s*</div>', "", fila)
+        celdas = [re.sub(r"\s+", " ", html_mod.unescape(re.sub(r"<[^>]+>", " ", c))).strip()
+                  for c in re.findall(r"(?is)<td[^>]*>(.*?)</td>", fila)]
+        if celdas and re.fullmatch(r"\d+º", celdas[0]):
+            filas.append(celdas)
+    return filas
+
+
+def importar_rankings(forzar: bool = False) -> None:
+    """Una vez por semana: rankings históricos (partidos oficiales) de jugadores y técnicos."""
+    previo = leer_json(ARCHIVO_RANKINGS, {}) or {}
+    if not forzar and previo.get("importado", "") > (ahora() - dt.timedelta(days=7)).isoformat():
+        return
+    hasta = ahora().year
+    salida = {"importado": ahora().isoformat(timespec="seconds"), "alcance": "partidos oficiales", "jugadores": {}}
+    for cod, (clave, titulo) in RANKINGS_JUGADORES.items():
+        try:
+            html = http_get(f"{BASE}/records-jugadores/20/{cod}/0/1905/{hasta}/6/0/0.html", timeout=40).decode("utf-8", "ignore")
+        except Exception as e:
+            log(f"Historia de Boca: no pude leer el ranking «{titulo}» ({e})")
+            continue
+        filas = []
+        for c in _filas_ranking(html):
+            nums = [int(x) for x in c[2:] if x.isdigit()]
+            if not nums:
+                continue
+            fila = {"nombre": c[1], "valor": nums[0]}
+            if clave == "goles" and len(nums) > 1:
+                fila["partidos"] = nums[1]
+            if clave == "partidos" and len(nums) > 1:
+                fila["goles"] = nums[1]
+            filas.append(fila)
+        valores = [f["valor"] for f in filas]
+        if len(filas) >= 5 and valores == sorted(valores, reverse=True):
+            salida["jugadores"][clave] = {"titulo": titulo, "filas": filas}
+        else:
+            log(f"Historia de Boca: el ranking «{titulo}» no se pudo verificar; queda el anterior")
+            if clave in (previo.get("jugadores") or {}):
+                salida["jugadores"][clave] = previo["jugadores"][clave]
+    # técnicos: partidos dirigidos y, de cada uno, ganados/empatados/perdidos sumando su tabla por campeonato
+    tecnicos = []
+    try:
+        html = http_get(f"{BASE}/tecnicos-records/20/0/0/1930/{hasta}/6/0/0.html", timeout=40).decode("utf-8", "ignore")
+        enlaces = dict(re.findall(r'href="(/tecnicos/[^"]+\.html)"[^>]*>([^<]+)</a>', html))
+        por_nombre = {html_mod.unescape(v).strip(): k for k, v in enlaces.items()}
+        for c in _filas_ranking(html):
+            nombre, pj = c[1], int(c[2]) if c[2].isdigit() else None
+            if not pj:
+                continue
+            t = {"nombre": nombre, "pj": pj, "nacimiento": c[3] if len(c) > 3 else ""}
+            url = por_nombre.get(nombre)
+            if url:
+                try:
+                    pag = http_get(BASE + url, timeout=40).decode("utf-8", "ignore")
+                    ini = pag.find("Por campeonato")
+                    bloque = pag[ini:pag.find("</table>", ini)] if ini >= 0 else ""
+                    tot = [0, 0, 0, 0, 0, 0]
+                    for fila in re.findall(r"(?is)<tr[^>]*>(.*?)</tr>", bloque):
+                        nums = [re.sub(r"<[^>]+>", "", x).strip() for x in re.findall(r"(?is)<td[^>]*>(.*?)</td>", fila)]
+                        nums = [int(x) for x in nums[1:7] if x.isdigit()]
+                        if len(nums) == 6:
+                            tot = [a + b for a, b in zip(tot, nums)]
+                    if tot[0] == pj and tot[1] + tot[2] + tot[3] == pj:
+                        t.update(g=tot[1], e=tot[2], p=tot[3], gf=tot[4], gc=tot[5])
+                except Exception as e:
+                    log(f"Historia de Boca: no pude leer la ficha de {nombre} ({e})")
+            tecnicos.append(t)
+    except Exception as e:
+        log(f"Historia de Boca: no pude leer el ranking de técnicos ({e})")
+    if len(tecnicos) >= 5:
+        salida["tecnicos"] = tecnicos
+    elif previo.get("tecnicos"):
+        salida["tecnicos"] = previo["tecnicos"]
+    guardar_json(ARCHIVO_RANKINGS, salida)
+    log(f"Historia de Boca: rankings actualizados ({len(salida['jugadores'])} de jugadores, "
+        f"{sum(1 for t in salida.get('tecnicos', []) if 'g' in t)} técnicos con balance verificado)")
+
+
+def rankings() -> dict:
+    return leer_json(ARCHIVO_RANKINGS, {}) or {}
+
+
 def ejecutar() -> None:
     if not opciones():
         return
     ejecutar_efemerides()
     importar_historiales()
+    for paso in (importar_rankings, importar_campanias):
+        try:
+            paso()
+        except Exception as e:  # un paso que falla no frena a los demás
+            log(f"Historia de Boca: falló {paso.__name__} ({e})")
 
 
 if __name__ == "__main__":
