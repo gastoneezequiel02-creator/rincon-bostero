@@ -27,6 +27,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Acomodar archivos y carpetas (solo si hace falta)
+        run: |
+          git config user.name "rincon-bostero-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -d rincon-bostero ]; then
+            shopt -s dotglob
+            git mv rincon-bostero/* .
+            rmdir rincon-bostero || true
+          fi
+          [ -f .gitignore ] || printf '_sitio/\n__pycache__/\n*.pyc\n*.tmp\n.DS_Store\n' > .gitignore
+          for d in contenido/notas contenido/borradores estado datos/espn sitio/estatico/img; do
+            mkdir -p "$d"; [ -n "$(ls -A "$d")" ] || touch "$d/.gitkeep"
+          done
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Acomodar archivos en la raíz del repositorio"
+            git push
+          fi
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -40,8 +59,6 @@ jobs:
 
       - name: Guardar las notas y datos nuevos en el repositorio
         run: |
-          git config user.name "rincon-bostero-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add contenido datos estado sitio/estatico/img
           if ! git diff --cached --quiet; then
             git commit -m "Actualización automática"
