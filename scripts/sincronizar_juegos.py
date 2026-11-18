@@ -10,7 +10,7 @@ from comun import config, http_post_json, log, secreto
 
 def ejecutar() -> None:
     c = config().get("cuentas") or {}
-    clave = secreto("SUPABASE_SERVICE_KEY")
+    clave = "".join(secreto("SUPABASE_SERVICE_KEY").split())  # las claves no llevan espacios: se sacan saltos de línea pegados de más
     if not c.get("activado") or not c.get("supabase_url"):
         return
     if not clave:
