@@ -214,7 +214,7 @@ def bajar_posiciones(slug: str, nombre: str, boca_id: str, temporada: int | None
         filas.sort(key=lambda f: (f.get("pos") or 999, -(f.get("pts") or 0)))
         for i, f in enumerate(filas, 1):
             f["pos"] = i  # posición dentro de su grupo o zona
-        grupos.append({"nombre": b.get("name") or b.get("abbreviation") or nombre, "filas": filas})
+        grupos.append({"nombre": traducir(b.get("name") or b.get("abbreviation") or nombre), "filas": filas})
     if not grupos:
         return None
     temporada_txt = (datos.get("seasons") or [{}])[0].get("displayName") if datos.get("seasons") else None
