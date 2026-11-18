@@ -130,7 +130,7 @@ def ejecutar() -> int:
         guardar_json(ARCHIVO_VISTOS, {**vistos, **nuevos_vistos})
         return 0
 
-    candidatos = candidatos[:40]
+    candidatos = candidatos[:20]  # menos titulares por corrida: la IA responde más rápido y gasta menos cupo gratis
     publicadas = 0
     try:
         temas = ia.seleccionar_noticias(candidatos, recientes, cupo)
