@@ -19,7 +19,11 @@ def ejecutar() -> None:
     import juegos
     banco = [{k: q[k] for k in ("id", "tema", "texto", "opciones", "correcta", "dato")} for q in juegos.armar()["preguntas"]]
     url = c["supabase_url"].rstrip("/") + "/rest/v1/rpc/sincronizar_preguntas"
-    r = http_post_json(url, {"p": banco}, headers={"apikey": clave, "Authorization": f"Bearer {clave}"})
+    # Las claves nuevas (sb_secret_...) van solo en "apikey"; las viejas (JWT service_role) también como Bearer.
+    cabeceras = {"apikey": clave}
+    if clave.startswith("eyJ"):
+        cabeceras["Authorization"] = f"Bearer {clave}"
+    r = http_post_json(url, {"p": banco}, headers=cabeceras)
     log(f"Cuentas: banco de preguntas actualizado ({r.get('activas', '?')} preguntas activas)")
 
 
