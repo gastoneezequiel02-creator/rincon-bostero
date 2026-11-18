@@ -1,0 +1,57 @@
+name: Actualizar Rincón Bostero
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # cada 15 minutos (GitHub a veces se demora unos minutos más)
+  workflow_dispatch:          # botón "Run workflow" para correrlo a mano
+  push:
+    branches: [main]
+    paths: ["config.json", "contenido/**", "datos/manual/**", "sitio/**", "scripts/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: actualizar
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.publicar.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Buscar noticias, leer el bot, bajar datos y armar el sitio
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python scripts/ejecutar_todo.py
+
+      - name: Guardar las notas y datos nuevos en el repositorio
+        run: |
+          git config user.name "rincon-bostero-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add contenido datos estado sitio/estatico/img
+          if ! git diff --cached --quiet; then
+            git commit -m "Actualización automática"
+            git pull --rebase --autostash
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _sitio
+      - id: publicar
+        uses: actions/deploy-pages@v4
