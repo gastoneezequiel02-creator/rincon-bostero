@@ -148,6 +148,19 @@
       "gf": 17,
       "gc": 16,
       "pts": 18
+    },
+    "conmebol.libertadores": {
+      "competencia": "Copa Libertadores",
+      "grupo": "Group F",
+      "equipos": 4,
+      "pos": 1,
+      "pj": 6,
+      "g": 4,
+      "e": 1,
+      "p": 1,
+      "gf": 9,
+      "gc": 2,
+      "pts": 13
     }
   }
 }
