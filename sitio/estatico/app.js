@@ -98,6 +98,8 @@
     function filtrar() {
       var palabras = normal(buscador.value).split(/\s+/).filter(Boolean);
       var t = { n: 0, pj: 0, g: 0, e: 0, p: 0, gf: 0, gc: 0, campeon: 0 };
+      tablaCamp.querySelectorAll("tbody tr.detalle-tabla").forEach(function (d) { d.remove(); });
+      tablaCamp.querySelectorAll("button.ver-tabla").forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
       tablaCamp.querySelectorAll("tbody tr").forEach(function (tr) {
         var texto = tr.getAttribute("data-texto");
         var comp = tr.getAttribute("data-comp");
@@ -122,6 +124,34 @@
       filtrar();
     });
     buscador.addEventListener("input", filtrar);
+    // "Tabla": muestra debajo de la fila la tabla de posiciones de ese campeonato
+    tablaCamp.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button.ver-tabla");
+      if (!b) return;
+      var tr = b.closest("tr");
+      var siguiente = tr.nextElementSibling;
+      if (siguiente && siguiente.classList.contains("detalle-tabla")) {
+        siguiente.remove();
+        b.setAttribute("aria-expanded", "false");
+        return;
+      }
+      var fila = document.createElement("tr");
+      fila.className = "detalle-tabla";
+      var celda = document.createElement("td");
+      celda.colSpan = tr.children.length;
+      var img = document.createElement("img");
+      img.src = b.getAttribute("data-tabla");
+      img.alt = "Tabla de posiciones: " + tr.children[1].textContent + " " + tr.children[0].textContent;
+      img.loading = "lazy";
+      celda.appendChild(img);
+      var nota = document.createElement("p");
+      nota.className = "nota-dato";
+      nota.textContent = "Tabla de posiciones. Fuente: Historia de Boca.";
+      celda.appendChild(nota);
+      fila.appendChild(celda);
+      tr.after(fila);
+      b.setAttribute("aria-expanded", "true");
+    });
     filtrar();
   }
 
