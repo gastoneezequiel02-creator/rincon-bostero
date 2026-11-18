@@ -111,11 +111,18 @@ def cuando(p: dict, largo: bool = True) -> str:
 
 
 # ================================================================ layout ==
+def icono_html(pre: str) -> str:
+    """Ícono de la pestaña: el logo si está cargado; si no, el ícono dibujado."""
+    if (SITIO / "estatico" / "img" / "logo.webp").exists():
+        return f'<link rel="icon" href="{pre}img/logo.webp" type="image/webp">'
+    return f'<link rel="icon" href="{pre}estatico/icono.svg" type="image/svg+xml">'
+
+
 def logo_html(pre: str) -> str:
     """El logo de Rincón Bostero si está en sitio/estatico/img/ (logo.png, .jpg, .webp o .svg); si no, un monograma."""
     for ext in ("svg", "png", "webp", "jpg", "jpeg"):
         if (SITIO / "estatico" / "img" / f"logo.{ext}").exists():
-            return f'<img class="logo" src="{pre}img/logo.{ext}" alt="" width="52" height="52">'
+            return f'<img class="logo" src="{pre}img/logo.{ext}" alt="" width="60" height="60">'
     return '<span class="logo monograma" aria-hidden="true">RB</span>'
 
 
@@ -147,7 +154,7 @@ def pagina(titulo: str, cuerpo: str, *, activa: str = "", pre: str = "", descrip
 {og_img}
 <meta name="theme-color" content="#0b2a6f">
 <link rel="alternate" type="application/rss+xml" title="{e(s['nombre'])}" href="{pre}feed.xml">
-<link rel="icon" href="{pre}estatico/icono.svg" type="image/svg+xml">
+{icono_html(pre)}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
