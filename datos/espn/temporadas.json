@@ -244,5 +244,20 @@
       "gc": 2,
       "pts": 10
     }
+  },
+  "2020": {
+    "conmebol.libertadores": {
+      "competencia": "Copa Libertadores",
+      "grupo": "COPA LIBERTADORES - Grupo H",
+      "equipos": 4,
+      "pos": 1,
+      "pj": 6,
+      "g": 4,
+      "e": 2,
+      "p": 0,
+      "gf": 10,
+      "gc": 1,
+      "pts": 14
+    }
   }
 }

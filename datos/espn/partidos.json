@@ -1,5 +1,251 @@
 [
   {
+    "id": "561255",
+    "fecha": "2020-03-03T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Estadio Olímpico de la UCV",
+    "ciudad": "Caracas",
+    "condicion": "V",
+    "local": {
+      "id": "4811",
+      "nombre": "Caracas FC",
+      "corto": "Caracas",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4811.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "4811",
+      "nombre": "Caracas FC",
+      "corto": "Caracas",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4811.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
+    "id": "561254",
+    "fecha": "2020-03-10T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 3,
+      "penales": null
+    },
+    "visitante": {
+      "id": "2690",
+      "nombre": "Independiente Medellín",
+      "corto": "Ind. Medellín",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2690.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "2690",
+      "nombre": "Independiente Medellín",
+      "corto": "Ind. Medellín",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2690.png"
+    },
+    "goles_boca": 3,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "561243",
+    "fecha": "2020-09-17T21:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Estadio ueno La Nueva Olla",
+    "ciudad": "Asunción",
+    "condicion": "V",
+    "local": {
+      "id": "2670",
+      "nombre": "Libertad",
+      "corto": "Libertad",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2670.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "rival": {
+      "id": "2670",
+      "nombre": "Libertad",
+      "corto": "Libertad",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2670.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "561225",
+    "fecha": "2020-09-24T21:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Atanasio Girardot",
+    "ciudad": "Medellin",
+    "condicion": "V",
+    "local": {
+      "id": "2690",
+      "nombre": "Independiente Medellín",
+      "corto": "Ind. Medellín",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2690.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "2690",
+      "nombre": "Independiente Medellín",
+      "corto": "Ind. Medellín",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2690.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "561219",
+    "fecha": "2020-09-29T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "2670",
+      "nombre": "Libertad",
+      "corto": "Libertad",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2670.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "2670",
+      "nombre": "Libertad",
+      "corto": "Libertad",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2670.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
+    "id": "561196",
+    "fecha": "2020-10-22T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 3,
+      "penales": null
+    },
+    "visitante": {
+      "id": "4811",
+      "nombre": "Caracas FC",
+      "corto": "Caracas",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4811.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "4811",
+      "nombre": "Caracas FC",
+      "corto": "Caracas",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4811.png"
+    },
+    "goles_boca": 3,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "587363",
     "fecha": "2020-10-31T21:15:00-03:00",
     "hora_a_confirmar": false,
@@ -205,6 +451,47 @@
     "resultado": "G"
   },
   {
+    "id": "587530",
+    "fecha": "2020-12-02T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "ida",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Estadio Beira-Rio",
+    "ciudad": "Porto Alegre",
+    "condicion": "V",
+    "local": {
+      "id": "1936",
+      "nombre": "Internacional",
+      "corto": "Internacional",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "1936",
+      "nombre": "Internacional",
+      "corto": "Internacional",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "587302",
     "fecha": "2020-12-06T21:30:00-03:00",
     "hora_a_confirmar": false,
@@ -244,6 +531,47 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "E"
+  },
+  {
+    "id": "587522",
+    "fecha": "2020-12-09T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "vuelta - Tied on aggregate - CABJ advance 5-4 on penalties",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT-Pens",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "1936",
+      "nombre": "Internacional",
+      "corto": "Internacional",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "1936",
+      "nombre": "Internacional",
+      "corto": "Internacional",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
   },
   {
     "id": "590611",
@@ -287,6 +615,47 @@
     "resultado": "E"
   },
   {
+    "id": "590521",
+    "fecha": "2020-12-16T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "ida",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Presidente Perón (Cilindro de Avellaneda)",
+    "ciudad": "Buenos Aires",
+    "condicion": "V",
+    "local": {
+      "id": "15",
+      "nombre": "Racing Club",
+      "corto": "Racing ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "15",
+      "nombre": "Racing Club",
+      "corto": "Racing ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
+  },
+  {
     "id": "590594",
     "fecha": "2020-12-20T19:20:00-03:00",
     "hora_a_confirmar": false,
@@ -323,6 +692,47 @@
     },
     "goles_boca": 2,
     "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "590522",
+    "fecha": "2020-12-23T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "vuelta - Boca Juniors advance 2-1 on aggregate",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "15",
+      "nombre": "Racing Club",
+      "corto": "Racing ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "15",
+      "nombre": "Racing Club",
+      "corto": "Racing ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "G"
@@ -410,6 +820,47 @@
     "resultado": "E"
   },
   {
+    "id": "591325",
+    "fecha": "2021-01-06T19:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "ida",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "2674",
+      "nombre": "Santos",
+      "corto": "Santos",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "2674",
+      "nombre": "Santos",
+      "corto": "Santos",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
     "id": "590557",
     "fecha": "2021-01-09T21:30:00-03:00",
     "hora_a_confirmar": false,
@@ -449,6 +900,47 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "E"
+  },
+  {
+    "id": "591323",
+    "fecha": "2021-01-13T19:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "vuelta - Santos advance 3-0 on aggregate",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Estádio Vila Belmiro (Urbano Caldeira)",
+    "ciudad": "Santos",
+    "condicion": "V",
+    "local": {
+      "id": "2674",
+      "nombre": "Santos",
+      "corto": "Santos",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png",
+      "goles": 3,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "2674",
+      "nombre": "Santos",
+      "corto": "Santos",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 3,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
   },
   {
     "id": "592392",
@@ -615,6 +1107,47 @@
     "resultado": "E"
   },
   {
+    "id": "568991",
+    "fecha": "2021-03-03T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Ciudad de Lanús",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "10102",
+      "nombre": "Claypole",
+      "corto": "Claypole",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10102.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "10102",
+      "nombre": "Claypole",
+      "corto": "Claypole",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10102.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "594571",
     "fecha": "2021-03-07T21:30:00-03:00",
     "hora_a_confirmar": false,
@@ -736,6 +1269,47 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "P"
+  },
+  {
+    "id": "596883",
+    "fecha": "2021-03-24T20:10:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Ciudad de La Plata",
+    "ciudad": "La Plata",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 3,
+      "penales": null
+    },
+    "visitante": {
+      "id": "10151",
+      "nombre": "Defensores de Belgrano",
+      "corto": "Defensores",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10151.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "10151",
+      "nombre": "Defensores de Belgrano",
+      "corto": "Defensores",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10151.png"
+    },
+    "goles_boca": 3,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
   },
   {
     "id": "594530",
@@ -1599,6 +2173,47 @@
     "resultado": "E"
   },
   {
+    "id": "616892",
+    "fecha": "2021-08-04T19:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "Boca Juniors advance 4-1 on penalties",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT-Pens",
+    "estadio": "Ciudad de La Plata",
+    "ciudad": "La Plata",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "16",
+      "nombre": "River Plate",
+      "corto": "River Plate",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "16",
+      "nombre": "River Plate",
+      "corto": "River Plate",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
     "id": "610191",
     "fecha": "2021-08-08T18:00:00-03:00",
     "hora_a_confirmar": false,
@@ -1927,6 +2542,47 @@
     "resultado": "G"
   },
   {
+    "id": "619827",
+    "fecha": "2021-09-22T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "Boca Juniors advance 4-2 on penalties",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT-Pens",
+    "estadio": "Estadio Único Madre de Ciudades",
+    "ciudad": "Santiago del Estero",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "10374",
+      "nombre": "Patronato",
+      "corto": "Patronato",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10374.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "10374",
+      "nombre": "Patronato",
+      "corto": "Patronato",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10374.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
     "id": "610088",
     "fecha": "2021-09-26T20:15:00-03:00",
     "hora_a_confirmar": false,
@@ -2212,6 +2868,47 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "P"
+  },
+  {
+    "id": "620944",
+    "fecha": "2021-11-03T21:10:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2020,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Malvinas Argentinas (Mendoza)",
+    "ciudad": "Mendoza",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "3",
+      "nombre": "Argentinos Juniors",
+      "corto": "Argentinos ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/3.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "3",
+      "nombre": "Argentinos Juniors",
+      "corto": "Argentinos ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/3.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
   },
   {
     "id": "609999",
