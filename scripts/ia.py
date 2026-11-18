@@ -31,7 +31,7 @@ def _candidatos_modelo() -> list[str]:
     elegido = config()["ia"].get("modelo", "").strip()
     if elegido:
         return [elegido]
-    cache = leer_json(ESTADO / "ia_modelos.json", {})
+    cache = leer_json(ESTADO / "ia_modelos2.json", {})
     if cache.get("modelos") and cache.get("fecha", "") >= time.strftime("%Y-%m-%d", time.gmtime(time.time() - 7 * 86400)):
         return cache["modelos"]
 
@@ -60,11 +60,15 @@ def _candidatos_modelo() -> list[str]:
         return (estable, version, latest, -lite)
 
     nombres.sort(key=puntaje, reverse=True)
+    # se alternan los "flash" y los "flash-lite": cada modelo tiene su propio cupo gratis por día
+    completos = [x for x in nombres if "lite" not in x.lower()][:4]
+    livianos = [x for x in nombres if "lite" in x.lower()][:4]
+    nombres = [x for par in zip(completos, livianos) for x in par] + completos[len(livianos):] + livianos[len(completos):]
     if not nombres:
         raise IAError("No encontré modelos Gemini Flash disponibles para tu clave.")
-    guardar_json(ESTADO / "ia_modelos.json", {"fecha": time.strftime("%Y-%m-%d"), "modelos": nombres[:6]})
-    log("IA: modelos candidatos →", ", ".join(nombres[:3]))
-    return nombres[:6]
+    guardar_json(ESTADO / "ia_modelos2.json", {"fecha": time.strftime("%Y-%m-%d"), "modelos": nombres[:8]})
+    log("IA: modelos candidatos →", ", ".join(nombres[:4]))
+    return nombres[:8]
 
 
 # --------------------------------------------------------------- llamado --
@@ -78,7 +82,9 @@ def generar_json(instrucciones: str, pedido: str, *, temperatura: float = 0.6) -
     cuerpo = {
         "systemInstruction": {"parts": [{"text": instrucciones}]},
         "contents": [{"role": "user", "parts": [{"text": pedido}]}],
-        "generationConfig": {"temperature": temperatura, "responseMimeType": "application/json"},
+        "generationConfig": {"temperature": temperatura, "responseMimeType": "application/json",
+                             # pensar poco: las notas no lo necesitan y la respuesta llega mucho más rápido
+                             "thinkingConfig": {"thinkingBudget": 0}},
     }
     errores = []
     for modelo in _candidatos_modelo():
@@ -94,6 +100,9 @@ def generar_json(instrucciones: str, pedido: str, *, temperatura: float = 0.6) -
             except RuntimeError as e:
                 msg = str(e)
                 errores.append(f"{modelo}: {msg[:160]}")
+                if "400" in msg and "thinking" in msg.lower() and "thinkingConfig" in cuerpo["generationConfig"]:
+                    cuerpo["generationConfig"].pop("thinkingConfig")  # este modelo no acepta el ajuste: se pide sin él
+                    continue
                 if "429" in msg and any(x in msg for x in ("limit: 0", "PerDay", "per day", "free_tier")) and "PerMinute" not in msg:
                     log(f"IA: {modelo} sin cupo gratis disponible, pruebo otro modelo")
                     break
