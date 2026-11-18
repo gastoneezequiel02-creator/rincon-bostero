@@ -603,17 +603,18 @@ def resultado_campana(partidos: list[dict], tabla: dict | None) -> tuple[str, st
 # Familias de competencias (para filtrar y buscar en Campañas)
 FAMILIAS = [
     ("liga", "Liga argentina", "liga argentina primera division campeonato torneo metropolitano nacional apertura clausura superliga liga profesional",
-     r"campeonato|torneo|superliga|liga profesional|primera divisi|metropolitano|nacional|apertura|clausura|inicial|transici|liguilla|reducido|desempate|octogonal|hexagonal"),
-    ("copa-liga", "Copa de la Liga", "copa de la liga profesional lpf", r"copa de la liga"),
+     r"campeonato|torneo|superliga|liga profesional|primera divisi|metropolitano|nacional|apertura|clausura|inicial|transici|liguilla|reducido|desempate|octogonal|hexagonal|temporada|final"),
+    ("copa-liga", "Copa de la Liga", "copa de la liga profesional lpf superliga", r"copa (de la )?liga|copa superliga"),
     ("libertadores", "Copa Libertadores", "libertadores conmebol", r"libertadores(?!.*supercopa)"),
     ("sudamericana", "Copa Sudamericana", "sudamericana conmebol", r"(?<!super)copa sudamericana|copa conmebol sudamericana"),
-    ("copa-argentina", "Copa Argentina", "copa argentina", r"copa argentina"),
+    ("copa-argentina", "Copa Argentina", "copa argentina", r"copa (de )?argentina"),
     ("recopa", "Recopa Sudamericana", "recopa conmebol", r"recopa"),
     ("mundial", "Intercontinental y Mundial", "intercontinental mundial de clubes toyota fifa", r"intercontinental|mundial|toyota"),
     ("otras-conmebol", "Otras copas internacionales", "supercopa sudamericana copa de oro master conmebol rioplatense",
      r"supercopa (sudamericana|libertadores|joao)|copa de oro|master|conmebol|rioplatense|tie|aldao|ibarguren"),
     ("supercopa", "Supercopas y copas nacionales", "supercopa argentina trofeo de campeones copa de honor competencia escobar confraternidad",
      r"supercopa|trofeo|copa de honor|copa competencia|escobar|confraternidad|copa de competencia|copa ibarguren|copa adrian|copa británica"),
+    ("ascenso", "Segunda División (1908-1912)", "segunda division intermedia ascenso copa bullrich", r"segunda divisi|bullrich|intermedia"),
     ("amistosos", "Amistosos", "amistoso amistosos", r"amistos"),
 ]
 FAMILIA_ESPN = {"arg.1": "liga", "arg.copa_lpf": "copa-liga", "conmebol.libertadores": "libertadores",
@@ -622,15 +623,15 @@ FAMILIA_ESPN = {"arg.1": "liga", "arg.copa_lpf": "copa-liga", "conmebol.libertad
 
 
 ORDEN_DETECCION = [
-    ("amistosos", r"amistos"), ("recopa", r"recopa"),
+    ("amistosos", r"amistos"), ("ascenso", r"segunda divisi|bullrich|intermedia"), ("recopa", r"recopa"),
     ("otras-conmebol", r"supercopa (sudamericana|libertadores|joao)"), ("sudamericana", r"sudamericana"),
     ("libertadores", r"libertadores"), ("mundial", r"intercontinental|mundial|toyota"),
-    ("copa-liga", r"copa de la liga"),
+    ("copa-liga", r"copa (de la )?liga|copa superliga"),
     ("supercopa", r"supercopa|trofeo|copa de honor|competencia|escobar|confraternidad|ibarguren|adrian|britanica"),
-    ("copa-argentina", r"copa argentina"),
-    ("otras-conmebol", r"copa de oro|master|conmebol|rioplatense|\btie\b|aldao|mercosur|merconorte"),
+    ("copa-argentina", r"copa (de )?argentina"),
+    ("otras-conmebol", r"copa de oro|master|conmebol|rioplatense|\btie\b|aldao|mercosur|merconorte|iberoamericana|interamericana|atlantico"),
     ("liga", r"campeonato|torneo|superliga|liga profesional|primera divisi|metropolitano|nacional|apertura|clausura|"
-             r"inicial|transici|liguilla|reducido|desempate|octogonal|hexagonal"),
+             r"inicial|transici|liguilla|reducido|desempate|octogonal|hexagonal|temporada|finales"),
 ]
 
 
@@ -662,6 +663,10 @@ def marcar_titulos(filas: list[dict], palmares: dict) -> None:
             continue
         if re.search(r"(?i)tabla anual|campe[oó]n de liga", titulo):
             # título por tabla anual: suma de los torneos de liga de ese año
+            anual = [f for f in filas if f["fam"] == "liga" and f["anio"] == anio and f["nombre"].lower().startswith("tabla anual")]
+            if anual:
+                anual[0]["res"], anual[0]["clase"] = "Campeón", "campeon"
+                continue
             del_anio = [f for f in filas if f["fam"] == "liga" and f["anio"] == anio]
             if len(del_anio) == 1:
                 del_anio[0]["res"], del_anio[0]["clase"] = "Campeón (tabla anual)", "campeon"
@@ -678,15 +683,15 @@ def marcar_titulos(filas: list[dict], palmares: dict) -> None:
             if f["fam"] != fam or not f["anio"].isdigit() or abs(int(f["anio"]) - int(anio)) > 1:
                 continue
             propias = set(re.findall(r"[a-z]+", normalizar(f["nombre"]))) - vacias
-            candidatas.append((len(palabras & propias), int(f["anio"]) == int(anio), f))
+            candidatas.append((len(palabras & propias), int(f["anio"]) == int(anio), -len(propias - palabras), f))
         if not candidatas:
             continue
         if len(candidatas) > 1:
-            candidatas.sort(key=lambda c: (c[0], c[1]), reverse=True)
+            candidatas.sort(key=lambda c: (c[0], c[1], c[2]), reverse=True)
             primero, segundo = candidatas[0], candidatas[1]
-            if (primero[0], primero[1]) == (segundo[0], segundo[1]):
+            if (primero[0], primero[1], primero[2]) == (segundo[0], segundo[1], segundo[2]):
                 continue  # ambiguo: mejor no marcar nada
-        candidatas[0][2]["res"], candidatas[0][2]["clase"] = "Campeón", "campeon"
+        candidatas[0][3]["res"], candidatas[0][3]["clase"] = "Campeón", "campeon"
 
 
 def bloque_titulos(palmares: dict) -> str:
@@ -759,13 +764,20 @@ def pagina_campanas(temporadas: dict, jugados: list[dict], palmares: dict, proxi
     #    donde hay datos de Historia de Boca reemplazan a los de BocaStats de esa competencia y ese año
     import historia_de_boca as hdb
     filas_hdb = []
-    for c in hdb.campanias():
+    camp_hdb = hdb.campanias()
+    con_cortos = {c["anio"] for c in camp_hdb if re.search(r"apertura|clausura", normalizar(c["nombre"]))}
+    for c in camp_hdb:
         nombre = c["nombre"]
         if normalizar(nombre) == "supercopa" and c["anio"] < 2010:
             nombre = "Supercopa Sudamericana"
-        filas_hdb.append(dict(anio=str(c["anio"]), fam=familia_de(nombre), nombre=nombre, res="", clase="", pj=c["pj"],
+        if normalizar(nombre) == "campeonato" and c["anio"] in con_cortos:
+            nombre = "Tabla anual"  # suma Apertura y Clausura: no se cuenta dos veces en los totales
+        fam = "liga" if nombre == "Tabla anual" else familia_de(nombre)
+        filas_hdb.append(dict(anio=str(c["anio"]), fam=fam, nombre=nombre, res="", clase="", pj=c["pj"],
                               c={k: c[k] for k in "gep"}, gf=c["gf"], gc=c["gc"], tabla=c.get("tabla")))
-    if filas_hdb:
+    if hdb.catalogo_completo():
+        filas = filas_hdb  # el catálogo de Historia de Boca ya cubre todas las campañas oficiales
+    elif filas_hdb:
         cubiertas = {(f["fam"], f["anio"]) for f in filas_hdb}
         filas = [f for f in filas if (f["fam"], f["anio"]) not in cubiertas] + filas_hdb
     # el resultado de ESPN se suma a la fila de BocaStats cuando hay una sola de esa competencia ese año
@@ -795,9 +807,12 @@ def pagina_campanas(temporadas: dict, jugados: list[dict], palmares: dict, proxi
                     f'aria-expanded="false">Tabla</button>')
         return res
 
+    def suma(f):  # la tabla anual repite partidos del Apertura y el Clausura: no entra en los totales
+        return 0 if f["nombre"].lower().startswith("tabla anual") else 1
+
     cuerpo_tabla = "".join(
-        f'<tr data-comp="{e(f["fam"])}" data-texto="{e(f["texto"])}" data-pj="{f["pj"]}" data-g="{f["c"]["g"]}" '
-        f'data-e="{f["c"]["e"]}" data-p="{f["c"]["p"]}" data-gf="{f["gf"]}" data-gc="{f["gc"]}" '
+        f'<tr data-comp="{e(f["fam"])}" data-texto="{e(f["texto"])}" data-pj="{f["pj"] * suma(f)}" data-g="{f["c"]["g"] * suma(f)}" '
+        f'data-e="{f["c"]["e"] * suma(f)}" data-p="{f["c"]["p"] * suma(f)}" data-gf="{f["gf"] * suma(f)}" data-gc="{f["gc"] * suma(f)}" '
         f'data-campeon="{1 if f["clase"] == "campeon" else 0}">'
         f'<td class="pts">{e(f["anio"])}</td><td class="izq">{e(f["nombre"])}</td><td class="izq">{celda_resultado(f)}</td>'
         f'<td>{f["pj"]}</td><td>{f["c"]["g"]}</td><td>{f["c"]["e"]}</td><td>{f["c"]["p"]}</td><td>{f["gf"]}</td><td>{f["gc"]}</td></tr>'

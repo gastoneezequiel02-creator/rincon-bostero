@@ -11,6 +11,7 @@ from __future__ import annotations
 import datetime as dt
 import html as html_mod
 import re
+import time
 
 from comun import DATOS, DATOS_MANUAL, ahora, config, guardar_json, http_get, leer_json, limpiar_html, log, normalizar, parsear_fecha
 
@@ -230,7 +231,8 @@ def historial_importado(nombre_rival: str) -> dict | None:
 ARCHIVO_CAMPANIAS = DATOS / "hdb" / "campanias.json"
 CARPETA_POSICIONES = DATOS.parent / "sitio" / "estatico" / "img" / "posiciones"
 CAMPANIAS_POR_CORRIDA = 40
-EXCLUIR_TORNEOS = ("amistoso", "anulado")
+PAUSA = 1.5  # segundos entre pedidos, para no cargar el sitio
+EXCLUIR_TORNEOS = ("amistoso", "anulado", "gira")
 
 
 def _post_form(url: str, campos: dict, timeout: int = 40) -> tuple[str, str]:
@@ -283,6 +285,7 @@ def importar_campanias() -> None:
     if datos.get("catalogo_actualizado", "") < (hoy - dt.timedelta(days=7)).date().isoformat():
         nuevo = {}
         for anio in range(1905, hoy.year + 1):
+            time.sleep(PAUSA)
             try:
                 html = http_get(f"{BASE}/anios-campeonatos.php?anios={anio}", timeout=25).decode("utf-8", "ignore")
             except Exception as e:
@@ -294,7 +297,7 @@ def importar_campanias() -> None:
                 if any(x in normalizar(nombre) for x in EXCLUIR_TORNEOS):
                     continue
                 nuevo[f"{anio}-{cod}"] = {"anio": anio, "codigo": cod, "nombre": nombre}
-        if nuevo:
+        if nuevo and len(nuevo) >= 0.9 * len(catalogo):  # si el sitio no respondió bien, queda el catálogo anterior
             catalogo = nuevo
             datos["catalogo"] = catalogo
             datos["catalogo_actualizado"] = hoy.date().isoformat()
@@ -305,31 +308,20 @@ def importar_campanias() -> None:
     pendientes += [k for k in catalogo if k in detalle and catalogo[k]["anio"] >= hoy.year - (1 if hoy.month <= 2 else 0)
                    and detalle[k].get("consultado") != hoy.date().isoformat()]
     hechas = 0
-    CARPETA_POSICIONES.mkdir(parents=True, exist_ok=True)
     for k in pendientes[:CAMPANIAS_POR_CORRIDA]:
         c = catalogo[k]
+        time.sleep(PAUSA)
         try:
             url, html = _post_form(f"{BASE}/validarcamp.php", {"anios": c["anio"], "comboCampeonato": c["codigo"]})
         except Exception as e:
-            log(f"Historia de Boca: no pude leer la campaña {c['nombre']} {c['anio']} ({e})")
-            continue
+            log(f"Historia de Boca: no pude leer la campaña {c['nombre']} {c['anio']} ({e}). Sigo en la próxima corrida.")
+            break
         ps = parsear_campania(html)
         if not ps:
             detalle[k] = {"consultado": hoy.date().isoformat(), "partidos": [], "sin_datos": True}
             continue
-        tabla = None
-        m = re.search(r'(?i)src="(/Fotos/Posiciones/(\d+)\.(gif|png|jpe?g))"', html)
-        if m:
-            destino = CARPETA_POSICIONES / f"{m.group(2)}.{m.group(3).lower()}"
-            if not destino.exists() or c["anio"] >= hoy.year - 1:
-                try:
-                    img = http_get(BASE + m.group(1), timeout=30)
-                    if img[:3] in (b"GIF", b"\x89PN", b"\xff\xd8\xff"):
-                        destino.write_bytes(img)
-                except Exception as e:
-                    log(f"Historia de Boca: no pude bajar la tabla de {c['nombre']} {c['anio']} ({e})")
-            if destino.exists():
-                tabla = f"img/posiciones/{destino.name}"
+        m = re.search(r'(?i)src="(/Fotos/Posiciones/[^"]+\.(?:gif|png|jpe?g))"', html)
+        tabla = BASE + m.group(1) if m else None
         detalle[k] = {"consultado": hoy.date().isoformat(), "partidos": ps, "tabla": tabla}
         hechas += 1
     datos["detalle"] = detalle
@@ -344,7 +336,13 @@ def campanias() -> list[dict]:
     datos = leer_json(ARCHIVO_CAMPANIAS, {}) or {}
     salida = []
     for k, c in (datos.get("catalogo") or {}).items():
+        if any(x in normalizar(c["nombre"]) for x in EXCLUIR_TORNEOS):
+            continue
         d = (datos.get("detalle") or {}).get(k)
+        if d and d.get("totales") and not d.get("partidos"):  # copia cargada con los totales de cada campaña
+            if d["totales"].get("pj"):
+                salida.append({**c, **{x: d["totales"][x] for x in ("pj", "g", "e", "p", "gf", "gc")}, "tabla": d.get("tabla")})
+            continue
         if not d or not d.get("partidos"):
             continue
         ps = d["partidos"]
@@ -391,10 +389,13 @@ def importar_rankings(forzar: bool = False) -> None:
     hasta = ahora().year
     salida = {"importado": ahora().isoformat(timespec="seconds"), "alcance": "partidos oficiales", "jugadores": {}}
     for cod, (clave, titulo) in RANKINGS_JUGADORES.items():
+        time.sleep(PAUSA)
         try:
             html = http_get(f"{BASE}/records-jugadores/20/{cod}/0/1905/{hasta}/6/0/0.html", timeout=40).decode("utf-8", "ignore")
         except Exception as e:
             log(f"Historia de Boca: no pude leer el ranking «{titulo}» ({e})")
+            if clave in (previo.get("jugadores") or {}):
+                salida["jugadores"][clave] = previo["jugadores"][clave]
             continue
         filas = []
         for c in _filas_ranking(html):
@@ -427,6 +428,7 @@ def importar_rankings(forzar: bool = False) -> None:
             t = {"nombre": nombre, "pj": pj, "nacimiento": c[3] if len(c) > 3 else ""}
             url = por_nombre.get(nombre)
             if url:
+                time.sleep(PAUSA)
                 try:
                     pag = http_get(BASE + url, timeout=40).decode("utf-8", "ignore")
                     ini = pag.find("Por campeonato")
@@ -444,7 +446,7 @@ def importar_rankings(forzar: bool = False) -> None:
             tecnicos.append(t)
     except Exception as e:
         log(f"Historia de Boca: no pude leer el ranking de técnicos ({e})")
-    if len(tecnicos) >= 5:
+    if len(tecnicos) >= 5 and sum("g" in t for t in tecnicos) >= sum("g" in t for t in previo.get("tecnicos", [])):
         salida["tecnicos"] = tecnicos
     elif previo.get("tecnicos"):
         salida["tecnicos"] = previo["tecnicos"]
