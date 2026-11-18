@@ -43,8 +43,8 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 .cabecera { background: var(--azul); color: #fff; }
 .cabecera-top .envoltura { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
 .marca { display: flex; align-items: center; gap: 14px; text-decoration: none; color: #fff; min-width: 0; }
-.logo { width: 52px; height: 52px; border-radius: 50%; flex: none; object-fit: cover; box-shadow: 0 0 0 3px var(--oro); }
-.monograma {
+.logo { width: 60px; height: 60px; border-radius: 50%; flex: none; object-fit: cover; }
+.monograma { box-shadow: 0 0 0 3px var(--oro);
   display: grid; place-items: center; color: var(--azul-hondo);
   font: 800 22px/1 var(--titulos); letter-spacing: -.5px;
   background: linear-gradient(var(--azul-hondo) 0 34%, var(--oro) 34% 66%, var(--azul-hondo) 66%);
@@ -287,7 +287,7 @@ td.pts { font-weight: 700; }
 @media (max-width: 640px) {
   body { font-size: 16px; }
   .cabecera-top .envoltura { padding-block: 10px; }
-  .logo { width: 40px; height: 40px; }
+  .logo { width: 44px; height: 44px; }
   .monograma { font-size: 17px; }
   .marca-texto b { font-size: 27px; }
   .marca-texto small { display: none; }
