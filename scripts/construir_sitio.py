@@ -111,6 +111,14 @@ def cuando(p: dict, largo: bool = True) -> str:
 
 
 # ================================================================ layout ==
+def logo_html(pre: str) -> str:
+    """El logo de Rincón Bostero si está en sitio/estatico/img/ (logo.png, .jpg, .webp o .svg); si no, un monograma."""
+    for ext in ("svg", "png", "webp", "jpg", "jpeg"):
+        if (SITIO / "estatico" / "img" / f"logo.{ext}").exists():
+            return f'<img class="logo" src="{pre}img/logo.{ext}" alt="" width="52" height="52">'
+    return '<span class="logo monograma" aria-hidden="true">RB</span>'
+
+
 def pagina(titulo: str, cuerpo: str, *, activa: str = "", pre: str = "", descripcion: str = "",
            imagen: str = "", canonica: str = "", franja: str = "") -> str:
     s = sitio()
@@ -148,10 +156,11 @@ def pagina(titulo: str, cuerpo: str, *, activa: str = "", pre: str = "", descrip
 <body>
 {demo}
 <header class="cabecera">
-  <div class="envoltura">
-    <a class="marca" href="{pre}index.html">{e(s['nombre'])}<small>{e(s['lema'])}</small></a>
-    <nav class="menu" aria-label="Secciones">{menu}</nav>
-  </div>
+  <div class="cabecera-top"><div class="envoltura">
+    <a class="marca" href="{pre}index.html">{logo_html(pre)}<span class="marca-texto"><b>{e(s['nombre'])}</b><small>{e(s['lema'])}</small></span></a>
+    <a class="cabecera-x" href="https://x.com/{e(s.get('twitter', ''))}" rel="noopener">@{e(s.get('twitter', ''))}<span class="oculto"> en X</span></a>
+  </div></div>
+  <div class="cabecera-menu"><div class="envoltura"><nav class="menu" aria-label="Secciones">{menu}</nav></div></div>
 </header>
 {franja}
 <main class="envoltura" id="contenido">
@@ -257,8 +266,7 @@ def pagina_inicio(notas, proximos, jugados, tablas) -> str:
 <ul class="listado">{''.join(item_lista(x, pre) for x in notas[1:11])}</ul>
 <p style="margin-top:28px"><a class="boton secundario" href="noticias.html">Ver todas las noticias</a></p>"""
     else:
-        principal = ('<div class="vacio">Todavía no hay notas. Mandale un tweet al bot de Telegram '
-                     'o esperá a que corra la automatización: las primeras notas aparecen solas.</div>')
+        principal = '<div class="vacio">Estamos cargando las noticias: en unos minutos aparecen las primeras.</div>'
 
     lateral = []
     if jugados:
@@ -273,6 +281,10 @@ def pagina_inicio(notas, proximos, jugados, tablas) -> str:
   </div>
   <p class="donde">{e(u.get('estadio', ''))}</p>
 </section>""")
+        dia_n = (ahora().date() - __import__("datetime").date(2026, 11, 18)).days + 1
+        lateral.append(f"""<section class="invitacion-juego"><h2 class="titulo-seccion">Pregunta del día #{dia_n}</h2>
+<p>10 preguntas sobre la historia de Boca, las mismas para todos. ¿Cuántas sacás?</p>
+<a class="boton" href="juegos.html">Jugar</a></section>""")
         forma = "".join(f'<li class="r-{p["resultado"]}" title="{NOMBRE_RES[p["resultado"]]} {p["goles_boca"]}-{p["goles_rival"]} '
                         f'vs {e(p["rival"]["nombre"])}">{p["resultado"]}</li>' for p in jugados[:5][::-1] if p.get("resultado"))
         lateral.append(f"""<section><h2 class="titulo-seccion">Cómo viene Boca</h2>
@@ -282,10 +294,6 @@ def pagina_inicio(notas, proximos, jugados, tablas) -> str:
         filas = "".join(fila_partido(p, resultado=False) for p in proximos[1:4])
         lateral.append(f'<section><h2 class="titulo-seccion">Lo que viene <a href="fixture.html">Fixture</a></h2>'
                        f'<ul class="lista-partidos">{filas}</ul></section>')
-    dia_n = (ahora().date() - __import__("datetime").date(2026, 11, 18)).days + 1
-    lateral.append(f"""<section class="invitacion-juego"><h2 class="titulo-seccion">Pregunta del día #{dia_n}</h2>
-<p>10 preguntas sobre la historia de Boca, las mismas para todos. ¿Cuántas sacás?</p>
-<a class="boton" href="juegos.html">Jugar</a></section>""")
     lateral.append(mini_tabla(tablas, pre))
     if hdb():
         import historia_de_boca
@@ -620,7 +628,7 @@ ORDEN_DETECCION = [
     ("copa-liga", r"copa de la liga"),
     ("supercopa", r"supercopa|trofeo|copa de honor|competencia|escobar|confraternidad|ibarguren|adrian|britanica"),
     ("copa-argentina", r"copa argentina"),
-    ("otras-conmebol", r"copa de oro|master|conmebol|rioplatense|\btie\b|aldao"),
+    ("otras-conmebol", r"copa de oro|master|conmebol|rioplatense|\btie\b|aldao|mercosur|merconorte"),
     ("liga", r"campeonato|torneo|superliga|liga profesional|primera divisi|metropolitano|nacional|apertura|clausura|"
              r"inicial|transici|liguilla|reducido|desempate|octogonal|hexagonal"),
 ]
@@ -747,6 +755,19 @@ def pagina_campanas(temporadas: dict, jugados: list[dict], palmares: dict, proxi
         cuenta = {k: sum(1 for p in ps if p["resultado"] == k.upper()) for k in ("g", "e", "p")}
         filas.append(dict(anio=anio, fam=fam, nombre=nombre, res="", clase="", pj=len(ps), c=cuenta,
                           gf=sum(p["goles_boca"] for p in ps), gc=sum(p["goles_rival"] for p in ps)))
+    # 3) campañas según Historia de Boca (catálogo oficial completo, con la tabla de posiciones cuando existe):
+    #    donde hay datos de Historia de Boca reemplazan a los de BocaStats de esa competencia y ese año
+    import historia_de_boca as hdb
+    filas_hdb = []
+    for c in hdb.campanias():
+        nombre = c["nombre"]
+        if normalizar(nombre) == "supercopa" and c["anio"] < 2010:
+            nombre = "Supercopa Sudamericana"
+        filas_hdb.append(dict(anio=str(c["anio"]), fam=familia_de(nombre), nombre=nombre, res="", clase="", pj=c["pj"],
+                              c={k: c[k] for k in "gep"}, gf=c["gf"], gc=c["gc"], tabla=c.get("tabla")))
+    if filas_hdb:
+        cubiertas = {(f["fam"], f["anio"]) for f in filas_hdb}
+        filas = [f for f in filas if (f["fam"], f["anio"]) not in cubiertas] + filas_hdb
     # el resultado de ESPN se suma a la fila de BocaStats cuando hay una sola de esa competencia ese año
     por_fam_anio = defaultdict(list)
     for f in filas:
@@ -768,9 +789,11 @@ def pagina_campanas(temporadas: dict, jugados: list[dict], palmares: dict, proxi
     orden = orden_fam
 
     def celda_resultado(f):
-        if f["clase"]:
-            return f'<span class="logro {f["clase"]}">{e(f["res"])}</span>'
-        return e(f["res"]) or "–"
+        res = f'<span class="logro {f["clase"]}">{e(f["res"])}</span>' if f["clase"] else (e(f["res"]) or "–")
+        if f.get("tabla"):
+            res += (f' <button type="button" class="ver-tabla" data-tabla="{e(f["tabla"])}" '
+                    f'aria-expanded="false">Tabla</button>')
+        return res
 
     cuerpo_tabla = "".join(
         f'<tr data-comp="{e(f["fam"])}" data-texto="{e(f["texto"])}" data-pj="{f["pj"]}" data-g="{f["c"]["g"]}" '
@@ -790,7 +813,7 @@ def pagina_campanas(temporadas: dict, jugados: list[dict], palmares: dict, proxi
 
     desde = min((f[0] for f in filas if f[0].isdigit()), default="")
     cuerpo = f"""<header class="encabezado-pagina"><h1>Campañas</h1>
-<p>Cómo le fue a Boca en cada torneo oficial{f", desde {e(desde)}" if desde else ""}. Buscá un torneo o un año, o elegí una competencia.</p></header>
+<p>Cómo le fue a Boca en cada torneo oficial{f", desde {e(desde)}" if desde else ""}. Buscá un torneo o un año, o elegí una competencia. Donde dice «Tabla», tocalo para ver la tabla de posiciones de ese campeonato.</p></header>
 {titulos}
 <div class="buscador-campanas">
   <label for="buscar-campana" class="oculto">Buscar</label>
@@ -802,7 +825,8 @@ def pagina_campanas(temporadas: dict, jugados: list[dict], palmares: dict, proxi
 <th title="Partidos jugados">PJ</th><th title="Ganados">G</th><th title="Empatados">E</th><th title="Perdidos">P</th>
 <th title="Goles a favor">GF</th><th title="Goles en contra">GC</th></tr></thead>
 <tbody>{cuerpo_tabla}</tbody></table></div>
-<p class="vacio" id="sin-campanas" hidden>No hay campañas que coincidan con la búsqueda.</p>"""
+<p class="vacio" id="sin-campanas" hidden>No hay campañas que coincidan con la búsqueda.</p>
+<p class="nota-dato">Datos históricos y tablas de posiciones: Historia de Boca y BocaStats. Resultados y posiciones recientes: ESPN.</p>"""
     return pagina("Campañas", cuerpo, activa="campanas.html", franja=barra_franja(proximos, ""))
 
 
@@ -878,6 +902,52 @@ def pagina_efemerides(mes: int, dia: int, items: list[dict], dias: list[str], pr
                   franja=barra_franja(proximos, pre))
 
 
+def secciones_rankings() -> list[str]:
+    """Rankings históricos de jugadores y técnicos (Historia de Boca, partidos oficiales)."""
+    import historia_de_boca as hdb
+    rk = hdb.rankings()
+    partes = []
+    jug = rk.get("jugadores") or {}
+    orden = ["goles", "partidos", "penales", "cabeza", "expulsiones", "amonestaciones"]
+    unidad = {"goles": "goles", "partidos": "partidos", "penales": "penales", "cabeza": "de cabeza",
+              "expulsiones": "rojas", "amonestaciones": "amarillas"}
+    tarjetas = ""
+    for clave in [c for c in orden if c in jug]:
+        r = jug[clave]
+        items = ""
+        for i, f in enumerate(r["filas"][:10], 1):
+            extra = ""
+            if clave == "goles" and f.get("partidos"):
+                extra = f'<small>en {f["partidos"]} partidos</small>'
+            elif clave == "partidos" and f.get("goles") is not None:
+                extra = f'<small>{f["goles"]} goles</small>'
+            items += (f'<li><span class="rk-pos">{i}</span><span class="rk-nombre">{e(f["nombre"])}{extra}</span>'
+                      f'<span class="rk-valor">{f["valor"]}<small>{unidad[clave]}</small></span></li>')
+        tarjetas += f'<article class="ranking"><h3>{e(r["titulo"])}</h3><ol>{items}</ol></article>'
+    if tarjetas:
+        partes.append(f"""<section><h2 class="titulo-seccion">Jugadores</h2><div class="rankings">{tarjetas}</div>
+<p class="nota-dato">Partidos oficiales desde 1905. Las asistencias no tienen registro histórico confiable: las de la temporada están en <a href="plantel.html">Plantel</a>. Fuente: Historia de Boca.</p></section>""")
+    tec = [t for t in rk.get("tecnicos") or [] if t.get("pj")]
+    if tec:
+        con_balance = [t for t in tec if "g" in t]
+        por_victorias = len(con_balance) >= len(tec) * 0.6
+        lista = sorted(con_balance, key=lambda t: -t["g"]) if por_victorias else sorted(tec, key=lambda t: -t["pj"])
+        filas = ""
+        for i, t in enumerate(lista[:15], 1):
+            if "g" in t:
+                pct = round(100 * (3 * t["g"] + t["e"]) / (3 * t["pj"]))
+                cifras = f'<td>{t["pj"]}</td><td class="pts">{t["g"]}</td><td>{t["e"]}</td><td>{t["p"]}</td><td>{pct}%</td>'
+            else:
+                cifras = f'<td>{t["pj"]}</td><td colspan="4" class="nota-dato">sin desglose</td>'
+            filas += f'<tr><td>{i}</td><td class="izq"><b>{e(t["nombre"])}</b></td>{cifras}</tr>'
+        criterio = "más victorias" if por_victorias else "más partidos dirigidos"
+        partes.append(f"""<section><h2 class="titulo-seccion">Técnicos con {criterio}</h2><div class="tabla-scroll"><table>
+<thead><tr><th>#</th><th class="izq">Técnico</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th title="Puntos obtenidos sobre los posibles, contando 3 por victoria">Efectividad</th></tr></thead>
+<tbody>{filas}</tbody></table></div>
+<p class="nota-dato">Partidos oficiales. Efectividad: puntos obtenidos sobre los posibles (3 por victoria). Fuente: Historia de Boca.</p></section>""")
+    return partes
+
+
 def pagina_records(historicos: list[dict], proximos) -> str:
     import bocastats
     rec = leer_json(RAIZ / "datos" / "bocastats" / "records.json", {}) if bs_opciones() else {}
@@ -916,6 +986,7 @@ def pagina_records(historicos: list[dict], proximos) -> str:
         items = "".join(f'<li><span class="nota-dato">{e(m["titulo"])}</span><b>{e(m["valor"])}</b><span>{e(m.get("detalle", ""))}</span></li>'
                         for m in marcas)
         partes.append(f'<section><h2 class="titulo-seccion">Marcas históricas</h2><ul class="marcas">{items}</ul></section>')
+    partes += secciones_rankings()
     if len(oficiales) > 500:
         goleadas = sorted(oficiales, key=lambda p: (-(p["goles_boca"] - p["goles_rival"]), -p["goles_boca"], p["fecha"]))[:10]
         def fila(p):
@@ -965,8 +1036,8 @@ def pagina_records(historicos: list[dict], proximos) -> str:
     if not partes:
         partes.append('<div class="vacio">Los récords aparecen cuando se cargan los datos históricos.</div>')
     act = rec.get("actualizado_fuente")
-    pie = f'<p class="nota-dato" style="margin-top:28px">Datos históricos: BocaStats{f", al {_fecha_txt(act)}" if act else ""}.</p>' if rec else ""
-    cuerpo = f"""<header class="encabezado-pagina"><h1>Récords</h1><p>Los números de Boca desde 1905: balance, marcas históricas, goleadas y rivales.</p></header>
+    pie = f'<p class="nota-dato" style="margin-top:28px">Datos históricos: Historia de Boca y BocaStats{f" (BocaStats al {_fecha_txt(act)})" if act else ""}.</p>' if rec else ""
+    cuerpo = f"""<header class="encabezado-pagina"><h1>Récords</h1><p>Los números de Boca desde 1905: balance, goleadores, los que más jugaron, técnicos, goleadas y rivales.</p></header>
 <div class="records">{"".join(partes)}</div>{pie}"""
     return pagina("Récords", cuerpo, activa="records.html", franja=barra_franja(proximos, ""))
 
