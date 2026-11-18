@@ -237,8 +237,11 @@ def importar_records() -> None:
         log(f"BocaStats: no pude leer los récords ({e})")
         return
     def numero(etiqueta):
-        m = re.search(rf"(?i){etiqueta}\s*[:|]?\s*([\d.]+)", texto) or re.search(rf"(?i)([\d.]+)\s*[|]?\s*{etiqueta}", texto)
-        return int(m.group(1).replace(".", "")) if m else None
+        for patron in (rf"(?i){etiqueta}\s*[:|]?\s*(\d[\d.]*)", rf"(?i)(\d[\d.]*)\s*[|]?\s*{etiqueta}"):
+            m = re.search(patron, texto)
+            if m and m.group(1).replace(".", "").isdigit():
+                return int(m.group(1).replace(".", ""))
+        return None
     balance = {"pj": numero("Partidos"), "g": numero("Victorias"), "e": numero("Empates"), "p": numero("Derrotas"),
                "gf": numero("Goles a favor"), "gc": numero("Goles en contra")}
     if None in balance.values() or balance["g"] + balance["e"] + balance["p"] != balance["pj"]:
