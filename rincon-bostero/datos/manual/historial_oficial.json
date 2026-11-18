@@ -1,0 +1,28 @@
+{
+  "_instrucciones": "Historial total de Boca contra cada rival, tomado de Historia de Boca (historiadeboca.com.ar) con su permiso. Alcance: campeonatos de liga de AFA desde el amateurismo. La web suma sola los partidos de liga jugados DESPUÉS de la fecha 'hasta', así el total queda siempre al día. Para actualizar un rival, copiá los números de su página y cambiá 'hasta' por la fecha del último partido que incluye. 'nombres' son las formas en que puede aparecer el rival en los datos automáticos.",
+  "fuente": "Historia de Boca",
+  "fuente_url": "https://historiadeboca.com.ar/",
+  "alcance": "campeonatos de liga de AFA",
+  "consultado": "2026-11-18",
+  "rivales": [
+    {"nombres": ["River Plate", "River"], "pj": 219, "g": 80, "e": 66, "p": 73, "gf": 295, "gc": 276,
+     "hasta": "2026-04-19", "url": "https://historiadeboca.com.ar/historial-boca-river/17/1905/2026/2.html"},
+    {"nombres": ["Independiente", "CA Independiente"], "pj": 203, "g": 75, "e": 62, "p": 66, "gf": 288, "gc": 273,
+     "hasta": "2026-10-25", "url": "https://historiadeboca.com.ar/historial-boca-independiente/5/1913/2026/2.html"},
+    {"nombres": ["Racing Club", "Racing"], "pj": 188, "g": 84, "e": 46, "p": 58, "gf": 283, "gc": 232,
+     "hasta": "2026-08-23", "url": "https://historiadeboca.com.ar/historial-boca-racing/9/1913/2026/2.html"},
+    {"nombres": ["San Lorenzo", "San Lorenzo de Almagro"], "pj": 206, "g": 76, "e": 52, "p": 77, "gf": 294, "gc": 282,
+     "hasta": "2026-09-20", "url": "https://historiadeboca.com.ar/historial-boca-san-lorenzo/13/1905/2026/2.html",
+     "_nota": "Historia de Boca informa 206 partidos y 76+52+77 = 205 resultados: puede haber un partido sin resultado (suspendido o anulado)."},
+    {"nombres": ["Huracán", "Huracan"], "pj": 183, "g": 94, "e": 54, "p": 35, "gf": 329, "gc": 198,
+     "hasta": "2026-05-09", "url": "https://historiadeboca.com.ar/historial-boca-huracan/11/1913/2026/2.html"},
+    {"nombres": ["Estudiantes de La Plata", "Estudiantes (LP)", "Estudiantes LP"], "pj": 208, "g": 113, "e": 48, "p": 47, "gf": 344, "gc": 215,
+     "hasta": "2026-08-05", "url": "https://historiadeboca.com.ar/historial-boca-estudiantes-lp/15/1913/2026/2.html"},
+    {"nombres": ["Vélez Sarsfield", "Velez Sarsfield", "Vélez"], "pj": 180, "g": 92, "e": 42, "p": 46, "gf": 312, "gc": 215,
+     "hasta": "2026-08-08", "url": "https://historiadeboca.com.ar/historial-boca-velez/8/1905/2026/2.html"},
+    {"nombres": ["Newell's Old Boys", "Newell's", "Newells Old Boys"], "pj": 164, "g": 71, "e": 49, "p": 44, "gf": 255, "gc": 191,
+     "hasta": "2026-08-02", "url": "https://historiadeboca.com.ar/historial-boca-newell_s/22/1905/2026/2.html"},
+    {"nombres": ["Rosario Central", "R. Central"], "pj": 161, "g": 71, "e": 41, "p": 49, "gf": 245, "gc": 203,
+     "hasta": "2025-09-14", "url": "https://historiadeboca.com.ar/historial-boca-r-central/23/1905/2026/2.html"}
+  ]
+}

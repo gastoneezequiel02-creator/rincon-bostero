@@ -1,0 +1,124 @@
+{
+  "sitio": {
+    "nombre": "Rincón Bostero",
+    "lema": "Noticias de Boca, todos los días",
+    "url": "https://gastoneezequiel02-creator.github.io/rincon-bostero",
+    "twitter": "RinconDeBoca",
+    "zona_horaria_utc": -3
+  },
+  "noticias_rss": {
+    "activado": true,
+    "modo": "automatico",
+    "_modo_opciones": "automatico = se publica sola | aprobacion = te llega por Telegram con botones Publicar / Descartar",
+    "max_notas_por_corrida": 3,
+    "max_notas_por_dia": 25,
+    "palabras_clave": [
+      "Boca",
+      "Xeneize",
+      "Bombonera",
+      "La Ribera"
+    ],
+    "fuentes": [
+      {
+        "nombre": "Google Noticias - Boca Juniors",
+        "url": "https://news.google.com/rss/search?q=%22Boca+Juniors%22+when:1d&hl=es-419&gl=AR&ceid=AR:es-419"
+      },
+      {
+        "nombre": "Google Noticias - Boca (Xeneize)",
+        "url": "https://news.google.com/rss/search?q=Xeneize+when:1d&hl=es-419&gl=AR&ceid=AR:es-419"
+      }
+    ]
+  },
+  "telegram": {
+    "activado": true,
+    "_usuarios_permitidos": "IDs numéricos de Telegram de quienes pueden cargar notas. Si alguien no autorizado le escribe al bot, el bot le contesta con su ID para que lo agregues acá.",
+    "usuarios_permitidos": []
+  },
+  "datos_futbol": {
+    "activado": true,
+    "proveedor": "espn",
+    "equipo_nombre": "Boca Juniors",
+    "equipo_id_espn": "",
+    "_equipo_id_espn": "Dejalo vacío: se busca solo por nombre la primera vez.",
+    "competencias": [
+      {
+        "slug": "arg.1",
+        "nombre": "Liga Profesional",
+        "tabla": true,
+        "alias": "liga argentina primera division torneo apertura clausura superliga"
+      },
+      {
+        "slug": "arg.copa_lpf",
+        "nombre": "Copa de la Liga",
+        "tabla": true,
+        "alias": "copa de la liga profesional lpf"
+      },
+      {
+        "slug": "conmebol.libertadores",
+        "nombre": "Copa Libertadores",
+        "tabla": true,
+        "alias": "libertadores conmebol copa"
+      },
+      {
+        "slug": "conmebol.sudamericana",
+        "nombre": "Copa Sudamericana",
+        "tabla": true,
+        "alias": "sudamericana conmebol copa"
+      },
+      {
+        "slug": "conmebol.recopa",
+        "nombre": "Recopa Sudamericana",
+        "tabla": false,
+        "alias": "recopa conmebol"
+      },
+      {
+        "slug": "arg.copa",
+        "nombre": "Copa Argentina",
+        "tabla": false,
+        "alias": "copa argentina"
+      },
+      {
+        "slug": "arg.supercopa",
+        "nombre": "Supercopa Argentina",
+        "tabla": false,
+        "alias": "supercopa argentina"
+      },
+      {
+        "slug": "fifa.cwc",
+        "nombre": "Mundial de Clubes",
+        "tabla": true,
+        "alias": "mundial de clubes fifa"
+      }
+    ],
+    "temporada_desde": 2010,
+    "cronicas_automaticas": true,
+    "previas_automaticas": true,
+    "_competencias": "Si ESPN no tiene alguna (o cambia su código), simplemente queda vacía. 'alias' son las palabras con las que se encuentra en el buscador de Campañas."
+  },
+  "ia": {
+    "proveedor": "gemini",
+    "modelo": "",
+    "_modelo": "Dejalo vacío: elige solo un modelo gratuito disponible (Flash / Flash-Lite).",
+    "tono": "Medio partidario de Boca Juniors. Escribís como hincha informado: cercano, apasionado, con lenguaje rioplatense (vos, xeneize, el Mundo Boca), pero siempre con información precisa. Nunca inventás datos, nombres, cifras ni declaraciones. Si algo no está confirmado, lo decís claramente."
+  },
+  "historia_de_boca": {
+    "_que_es": "Datos de historiadeboca.com.ar (con permiso): historial partido a partido de los clásicos (se importa y verifica una vez por semana) y efemérides diarias. Todo se muestra dentro de la web, con el crédito 'Datos históricos: Historia de Boca'. 'efemerides' es la página de donde se leen.",
+    "activado": true,
+    "efemerides": "https://historiadeboca.com.ar/efemerides.php",
+    "credito": "Historia de Boca"
+  },
+  "bocastats": {
+    "_que_es": "Datos de bocastats.com (con permiso): historial contra 240 rivales, partido por partido desde 1905, récords y goleadores. Todo se muestra dentro de la web.",
+    "activado": true,
+    "credito": "BocaStats"
+  },
+  "cuentas": {
+    "_que_es": "Cuentas de usuario y ranking de los juegos (Supabase, plan gratis). Mientras esté en false, los juegos funcionan igual pero sin cuentas ni ranking. Ver la guía en README.md.",
+    "activado": true,
+    "supabase_url": "https://ykeogpvhnoflayvxhbff.supabase.co",
+    "supabase_anon_key": "sb_publishable_X8Kdn7-ZiiCDNqAmfcSa_g_ReejFHE3",
+    "_supabase_anon_key": "Es la clave pública 'anon' del proyecto: está pensada para ir en la web, no es secreta. La clave 'service_role' NUNCA va acá: va en GitHub Secrets como SUPABASE_SERVICE_KEY.",
+    "entrar_con_google": true,
+    "_entrar_con_google": "Ponelo en true solo después de configurar Google en Supabase (paso opcional de la guía). Sin eso, se entra con el link por mail."
+  }
+}

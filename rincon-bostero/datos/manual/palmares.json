@@ -1,0 +1,107 @@
+{
+ "_instrucciones": "Títulos oficiales de Boca. Cuando gane uno nuevo, agregalo en su categoría con el mismo formato (nombre y año) y actualizá 'consultado'. La web los cuenta sola y marca la campaña como Campeón.",
+ "fuente": "442 (Perfil), 8/11/2026, contrastado con El Gráfico",
+ "consultado": "2026-11-18",
+ "categorias": [
+  {
+   "nombre": "Campeonatos argentinos",
+   "titulos": [
+    "Campeonato de Primera División 1919",
+    "Campeonato de Primera División 1920",
+    "Campeonato de Primera División 1923",
+    "Campeonato de Primera División 1924",
+    "Campeonato de Primera División 1926",
+    "Campeonato de Primera División 1930",
+    "Campeonato de Primera División 1931",
+    "Campeonato de Primera División 1934",
+    "Campeonato de Primera División 1935",
+    "Campeonato de Primera División 1940",
+    "Campeonato de Primera División 1943",
+    "Campeonato de Primera División 1944",
+    "Campeonato de Primera División 1954",
+    "Campeonato de Primera División 1962",
+    "Campeonato de Primera División 1964",
+    "Campeonato de Primera División 1965",
+    "Torneo Nacional 1969",
+    "Torneo Nacional 1970",
+    "Torneo Metropolitano 1976",
+    "Torneo Nacional 1976",
+    "Torneo Metropolitano 1981",
+    "Torneo Apertura 1992",
+    "Torneo Apertura 1998",
+    "Torneo Clausura 1999",
+    "Torneo Apertura 2000",
+    "Torneo Apertura 2003",
+    "Torneo Apertura 2005",
+    "Torneo Clausura 2006",
+    "Torneo Apertura 2008",
+    "Torneo Apertura 2011",
+    "Campeonato de Primera División 2015",
+    "Campeonato de Primera División 2016/17",
+    "Superliga Argentina 2017/18",
+    "Superliga Argentina 2019/20",
+    "Liga Profesional 2022",
+    "Campeón de Liga 2026 (Tabla Anual)"
+   ]
+  },
+  {
+   "nombre": "Copas nacionales",
+   "titulos": [
+    "Copa Carlos Ibarguren 1919",
+    "Copa Carlos Ibarguren 1923",
+    "Copa Carlos Ibarguren 1924",
+    "Copa Competencia 1925",
+    "Copa Estímulo 1926",
+    "Copa Carlos Ibarguren 1940",
+    "Copa Carlos Ibarguren 1944",
+    "Copa Competencia Británica 1946",
+    "Copa Argentina 1969",
+    "Copa Argentina 2012",
+    "Copa Argentina 2015",
+    "Supercopa Argentina 2019",
+    "Copa Diego Armando Maradona 2020/21",
+    "Copa Argentina 2021",
+    "Copa de la Liga Profesional 2022",
+    "Supercopa Argentina 2022"
+   ]
+  },
+  {
+   "nombre": "Copas internacionales",
+   "titulos": [
+    "Copa Libertadores 1977",
+    "Copa Intercontinental 1977",
+    "Copa Libertadores 1978",
+    "Supercopa Sudamericana 1989",
+    "Recopa Sudamericana 1990",
+    "Copa Master 1992",
+    "Copa de Oro Nicolás Leoz 1993",
+    "Copa Libertadores 2000",
+    "Copa Intercontinental 2000",
+    "Copa Libertadores 2001",
+    "Copa Libertadores 2003",
+    "Copa Intercontinental 2003",
+    "Copa Sudamericana 2004",
+    "Recopa Sudamericana 2005",
+    "Copa Sudamericana 2005",
+    "Recopa Sudamericana 2006",
+    "Copa Libertadores 2007",
+    "Recopa Sudamericana 2008"
+   ]
+  },
+  {
+   "nombre": "Copas rioplatenses (AFA-AUF)",
+   "titulos": [
+    "Copa Tie-Competition 1919",
+    "Copa de Honor 1920",
+    "Copa Confraternidad 1945",
+    "Copa Confraternidad 1946"
+   ]
+  },
+  {
+   "nombre": "Título de honor",
+   "titulos": [
+    "Campeonato de Honor 1925"
+   ]
+  }
+ ]
+}
