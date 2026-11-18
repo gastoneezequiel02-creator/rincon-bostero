@@ -30,7 +30,7 @@
   "2026": {
     "arg.1": {
       "competencia": "Liga Profesional",
-      "grupo": "Group A",
+      "grupo": "Grupo A",
       "equipos": 15,
       "pos": 2,
       "pj": 16,
@@ -43,7 +43,7 @@
     },
     "arg.copa_lpf": {
       "competencia": "Copa de la Liga",
-      "grupo": "Group B",
+      "grupo": "Grupo B",
       "equipos": 14,
       "pos": 4,
       "pj": 14,
@@ -56,7 +56,7 @@
     },
     "conmebol.libertadores": {
       "competencia": "Copa Libertadores",
-      "grupo": "Group D",
+      "grupo": "Grupo D",
       "equipos": 4,
       "pos": 3,
       "pj": 6,
@@ -69,7 +69,7 @@
     },
     "fifa.cwc": {
       "competencia": "Mundial de Clubes",
-      "grupo": "Group C",
+      "grupo": "Grupo C",
       "equipos": 4,
       "pos": 3,
       "pj": 3,
@@ -201,6 +201,47 @@
       "p": 2,
       "gf": 5,
       "gc": 5,
+      "pts": 10
+    }
+  },
+  "2021": {
+    "arg.1": {
+      "competencia": "Liga Profesional",
+      "grupo": "2021 Liga Profesional",
+      "equipos": 26,
+      "pos": 4,
+      "pj": 25,
+      "g": 11,
+      "e": 8,
+      "p": 6,
+      "gf": 35,
+      "gc": 19,
+      "pts": 41
+    },
+    "arg.copa_lpf": {
+      "competencia": "Copa de la Liga",
+      "grupo": "Grupo B",
+      "equipos": 13,
+      "pos": 2,
+      "pj": 13,
+      "g": 6,
+      "e": 4,
+      "p": 3,
+      "gf": 22,
+      "gc": 12,
+      "pts": 22
+    },
+    "conmebol.libertadores": {
+      "competencia": "Copa Libertadores",
+      "grupo": "Copa Libertadores - Grupo C",
+      "equipos": 4,
+      "pos": 2,
+      "pj": 6,
+      "g": 3,
+      "e": 1,
+      "p": 2,
+      "gf": 6,
+      "gc": 2,
       "pts": 10
     }
   }

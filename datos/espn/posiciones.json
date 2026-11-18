@@ -5,7 +5,7 @@
     "temporada": "2026 Argentine Liga Profesional de Fútbol",
     "grupos": [
       {
-        "nombre": "Group A",
+        "nombre": "Grupo A",
         "filas": [
           {
             "equipo": "Instituto (Córdoba)",
@@ -250,7 +250,7 @@
         ]
       },
       {
-        "nombre": "Group B",
+        "nombre": "Grupo B",
         "filas": [
           {
             "equipo": "Rosario Central",
@@ -495,7 +495,7 @@
         ]
       }
     ],
-    "actualizado": "2026-11-18T17:49-03:00"
+    "actualizado": "2026-11-18T18:08-03:00"
   },
   "arg.copa_lpf": {
     "slug": "arg.copa_lpf",
@@ -503,7 +503,7 @@
     "temporada": "2024 Argentine Copa de la Liga Profesional",
     "grupos": [
       {
-        "nombre": "Group A",
+        "nombre": "Grupo A",
         "filas": [
           {
             "equipo": "River Plate",
@@ -732,7 +732,7 @@
         ]
       },
       {
-        "nombre": "Group B",
+        "nombre": "Grupo B",
         "filas": [
           {
             "equipo": "Godoy Cruz Antonio Tomba",
@@ -961,7 +961,7 @@
         ]
       }
     ],
-    "actualizado": "2026-11-18T17:49-03:00"
+    "actualizado": "2026-11-18T18:08-03:00"
   },
   "conmebol.libertadores": {
     "slug": "conmebol.libertadores",
@@ -969,7 +969,7 @@
     "temporada": "2026 CONMEBOL Libertadores",
     "grupos": [
       {
-        "nombre": "Group A",
+        "nombre": "Grupo A",
         "filas": [
           {
             "equipo": "Flamengo",
@@ -1044,7 +1044,7 @@
         ]
       },
       {
-        "nombre": "Group B",
+        "nombre": "Grupo B",
         "filas": [
           {
             "equipo": "Coquimbo Unido",
@@ -1113,7 +1113,7 @@
         ]
       },
       {
-        "nombre": "Group C",
+        "nombre": "Grupo C",
         "filas": [
           {
             "equipo": "Independiente Rivadavia",
@@ -1182,7 +1182,7 @@
         ]
       },
       {
-        "nombre": "Group D",
+        "nombre": "Grupo D",
         "filas": [
           {
             "equipo": "Universidad Católica",
@@ -1251,7 +1251,7 @@
         ]
       },
       {
-        "nombre": "Group E",
+        "nombre": "Grupo E",
         "filas": [
           {
             "equipo": "Corinthians",
@@ -1320,7 +1320,7 @@
         ]
       },
       {
-        "nombre": "Group F",
+        "nombre": "Grupo F",
         "filas": [
           {
             "equipo": "Cerro Porteño",
@@ -1389,7 +1389,7 @@
         ]
       },
       {
-        "nombre": "Group G",
+        "nombre": "Grupo G",
         "filas": [
           {
             "equipo": "Liga de Quito",
@@ -1458,7 +1458,7 @@
         ]
       },
       {
-        "nombre": "Group H",
+        "nombre": "Grupo H",
         "filas": [
           {
             "equipo": "Independiente del Valle",
@@ -1527,7 +1527,7 @@
         ]
       }
     ],
-    "actualizado": "2026-11-18T17:49-03:00"
+    "actualizado": "2026-11-18T18:08-03:00"
   },
   "fifa.cwc": {
     "slug": "fifa.cwc",
@@ -1535,7 +1535,7 @@
     "temporada": "2025 FIFA Club World Cup",
     "grupos": [
       {
-        "nombre": "Group A",
+        "nombre": "Grupo A",
         "filas": [
           {
             "equipo": "Palmeiras",
@@ -1608,7 +1608,7 @@
         ]
       },
       {
-        "nombre": "Group B",
+        "nombre": "Grupo B",
         "filas": [
           {
             "equipo": "Paris Saint-Germain",
@@ -1681,7 +1681,7 @@
         ]
       },
       {
-        "nombre": "Group C",
+        "nombre": "Grupo C",
         "filas": [
           {
             "equipo": "Benfica",
@@ -1754,7 +1754,7 @@
         ]
       },
       {
-        "nombre": "Group D",
+        "nombre": "Grupo D",
         "filas": [
           {
             "equipo": "Flamengo",
@@ -1827,7 +1827,7 @@
         ]
       },
       {
-        "nombre": "Group E",
+        "nombre": "Grupo E",
         "filas": [
           {
             "equipo": "Internazionale",
@@ -1900,7 +1900,7 @@
         ]
       },
       {
-        "nombre": "Group F",
+        "nombre": "Grupo F",
         "filas": [
           {
             "equipo": "Borussia Dortmund",
@@ -1973,7 +1973,7 @@
         ]
       },
       {
-        "nombre": "Group G",
+        "nombre": "Grupo G",
         "filas": [
           {
             "equipo": "Manchester City",
@@ -2046,7 +2046,7 @@
         ]
       },
       {
-        "nombre": "Group H",
+        "nombre": "Grupo H",
         "filas": [
           {
             "equipo": "Real Madrid",
@@ -2119,6 +2119,6 @@
         ]
       }
     ],
-    "actualizado": "2026-11-18T17:49-03:00"
+    "actualizado": "2026-11-18T18:08-03:00"
   }
 }
