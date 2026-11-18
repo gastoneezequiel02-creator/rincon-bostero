@@ -287,5 +287,33 @@
       "gc": 6,
       "pts": 11
     }
+  },
+  "2018": {
+    "arg.1": {
+      "competencia": "Liga Profesional",
+      "grupo": "2018/19 Superliga",
+      "equipos": 26,
+      "pos": 3,
+      "pj": 25,
+      "g": 15,
+      "e": 6,
+      "p": 4,
+      "gf": 42,
+      "gc": 18,
+      "pts": 51
+    },
+    "conmebol.libertadores": {
+      "competencia": "Copa Libertadores",
+      "grupo": "GROUP 8",
+      "equipos": 4,
+      "pos": 2,
+      "pj": 6,
+      "g": 2,
+      "e": 3,
+      "p": 1,
+      "gf": 8,
+      "gc": 4,
+      "pts": 9
+    }
   }
 }
