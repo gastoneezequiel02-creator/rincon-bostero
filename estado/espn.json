@@ -47,6 +47,12 @@
     "2020:conmebol.recopa",
     "2020:arg.copa",
     "2020:arg.supercopa",
-    "2020:fifa.cwc"
+    "2020:fifa.cwc",
+    "2019:arg.1",
+    "2019:arg.copa_lpf",
+    "2019:conmebol.libertadores",
+    "2019:conmebol.sudamericana",
+    "2019:conmebol.recopa",
+    "2019:arg.copa"
   ]
 }

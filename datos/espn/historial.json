@@ -1,74 +1,74 @@
 {
-  "4811": {
+  "6054": {
     "rival": {
-      "id": "4811",
-      "nombre": "Caracas FC",
-      "corto": "Caracas",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4811.png"
+      "id": "6054",
+      "nombre": "Wilstermann",
+      "corto": "Wilstermann",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/6054.png"
     },
     "pj": 2,
     "g": 1,
     "e": 1,
-    "p": 0,
-    "gf": 4,
-    "gc": 1,
-    "partidos": [
-      {
-        "id": "561196",
-        "fecha": "2020-10-22T21:30:00-03:00",
-        "competencia": "Copa Libertadores",
-        "condicion": "L",
-        "goles_boca": 3,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2020
-      },
-      {
-        "id": "561255",
-        "fecha": "2020-03-03T21:30:00-03:00",
-        "competencia": "Copa Libertadores",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2020
-      }
-    ],
-    "desde": 2020
-  },
-  "2690": {
-    "rival": {
-      "id": "2690",
-      "nombre": "Independiente Medellín",
-      "corto": "Ind. Medellín",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2690.png"
-    },
-    "pj": 2,
-    "g": 2,
-    "e": 0,
     "p": 0,
     "gf": 4,
     "gc": 0,
     "partidos": [
       {
-        "id": "561225",
-        "fecha": "2020-09-24T21:00:00-03:00",
+        "id": "530748",
+        "fecha": "2019-04-10T21:30:00-03:00",
         "competencia": "Copa Libertadores",
-        "condicion": "V",
-        "goles_boca": 1,
+        "condicion": "L",
+        "goles_boca": 4,
         "goles_rival": 0,
         "penales_boca": null,
         "penales_rival": null,
         "resultado": "G",
-        "temporada": 2020
+        "temporada": 2019
       },
       {
-        "id": "561254",
-        "fecha": "2020-03-10T21:30:00-03:00",
+        "id": "530789",
+        "fecha": "2019-03-05T21:30:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "5489": {
+    "rival": {
+      "id": "5489",
+      "nombre": "Deportes Tolima",
+      "corto": "Tolima",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5489.png"
+    },
+    "pj": 2,
+    "g": 1,
+    "e": 1,
+    "p": 0,
+    "gf": 5,
+    "gc": 2,
+    "partidos": [
+      {
+        "id": "530745",
+        "fecha": "2019-04-24T21:30:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2019
+      },
+      {
+        "id": "530784",
+        "fecha": "2019-03-12T19:15:00-03:00",
         "competencia": "Copa Libertadores",
         "condicion": "L",
         "goles_boca": 3,
@@ -76,29 +76,308 @@
         "penales_boca": null,
         "penales_rival": null,
         "resultado": "G",
-        "temporada": 2020
+        "temporada": 2019
       }
     ],
-    "desde": 2020
+    "desde": 2019
   },
-  "2670": {
+  "3458": {
     "rival": {
-      "id": "2670",
-      "nombre": "Libertad",
-      "corto": "Libertad",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2670.png"
+      "id": "3458",
+      "nombre": "Athletico Paranaense",
+      "corto": "Athletico-PR",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/3458.png"
     },
-    "pj": 2,
+    "pj": 4,
+    "g": 3,
+    "e": 0,
+    "p": 1,
+    "gf": 5,
+    "gc": 4,
+    "partidos": [
+      {
+        "id": "540104",
+        "fecha": "2019-07-31T21:30:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
+      },
+      {
+        "id": "540112",
+        "fecha": "2019-07-24T21:30:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
+      },
+      {
+        "id": "532775",
+        "fecha": "2019-05-09T21:30:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
+      },
+      {
+        "id": "530752",
+        "fecha": "2019-04-02T21:30:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 3,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "19685": {
+    "rival": {
+      "id": "19685",
+      "nombre": "Estudiantes de Río Cuarto",
+      "corto": "Estudiantes RC",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/19685.png"
+    },
+    "pj": 1,
     "g": 1,
-    "e": 1,
+    "e": 0,
     "p": 0,
     "gf": 2,
     "gc": 0,
     "partidos": [
       {
-        "id": "561219",
-        "fecha": "2020-09-29T21:30:00-03:00",
-        "competencia": "Copa Libertadores",
+        "id": "536596",
+        "fecha": "2019-04-19T18:00:00-03:00",
+        "competencia": "Copa Argentina",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "10": {
+    "rival": {
+      "id": "10",
+      "nombre": "Huracán",
+      "corto": "Huracán ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10.png"
+    },
+    "pj": 11,
+    "g": 5,
+    "e": 3,
+    "p": 3,
+    "gf": 13,
+    "gc": 6,
+    "partidos": [
+      {
+        "id": "401871437",
+        "fecha": "2026-05-09T19:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 3,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2026
+      },
+      {
+        "id": "729022",
+        "fecha": "2025-07-27T18:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2025
+      },
+      {
+        "id": "727987",
+        "fecha": "2025-02-02T19:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2025
+      },
+      {
+        "id": "694497",
+        "fecha": "2024-11-23T21:45:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2024
+      },
+      {
+        "id": "656542",
+        "fecha": "2023-07-10T19:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2023
+      },
+      {
+        "id": "635537",
+        "fecha": "2022-09-19T19:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2022
+      },
+      {
+        "id": "627306",
+        "fecha": "2022-03-06T19:15:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2022
+      },
+      {
+        "id": "610051",
+        "fecha": "2021-10-16T20:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 3,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2021
+      },
+      {
+        "id": "594479",
+        "fecha": "2021-04-24T18:00:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2021
+      },
+      {
+        "id": "590585",
+        "fecha": "2020-12-27T19:20:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 3,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2020
+      },
+      {
+        "id": "552010",
+        "fecha": "2019-07-28T20:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "10374": {
+    "rival": {
+      "id": "10374",
+      "nombre": "Patronato",
+      "corto": "Patronato",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10374.png"
+    },
+    "pj": 7,
+    "g": 3,
+    "e": 2,
+    "p": 2,
+    "gf": 7,
+    "gc": 5,
+    "partidos": [
+      {
+        "id": "666584",
+        "fecha": "2023-03-01T21:15:00-03:00",
+        "competencia": "Supercopa Argentina",
+        "condicion": "L",
+        "goles_boca": 3,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2022
+      },
+      {
+        "id": "654740",
+        "fecha": "2022-10-26T21:30:00-03:00",
+        "competencia": "Copa Argentina",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2022
+      },
+      {
+        "id": "635410",
+        "fecha": "2022-07-31T18:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 3,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2022
+      },
+      {
+        "id": "619827",
+        "fecha": "2021-09-22T21:30:00-03:00",
+        "competencia": "Copa Argentina",
         "condicion": "L",
         "goles_boca": 0,
         "goles_rival": 0,
@@ -108,37 +387,8 @@
         "temporada": 2020
       },
       {
-        "id": "561243",
-        "fecha": "2020-09-17T21:00:00-03:00",
-        "competencia": "Copa Libertadores",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2020
-      }
-    ],
-    "desde": 2020
-  },
-  "12": {
-    "rival": {
-      "id": "12",
-      "nombre": "Lanús",
-      "corto": "Lanús ",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png"
-    },
-    "pj": 13,
-    "g": 6,
-    "e": 4,
-    "p": 3,
-    "gf": 17,
-    "gc": 11,
-    "partidos": [
-      {
-        "id": "401841527",
-        "fecha": "2026-08-28T21:30:00-03:00",
+        "id": "610172",
+        "fecha": "2021-08-21T20:15:00-03:00",
         "competencia": "Liga Profesional",
         "condicion": "L",
         "goles_boca": 1,
@@ -146,12 +396,224 @@
         "penales_boca": null,
         "penales_rival": null,
         "resultado": "G",
-        "temporada": 2026
+        "temporada": 2021
       },
       {
-        "id": "762878",
-        "fecha": "2026-03-04T21:00:00-03:00",
+        "id": "594452",
+        "fecha": "2021-05-08T18:00:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2021
+      },
+      {
+        "id": "551995",
+        "fecha": "2019-08-04T20:00:00-03:00",
         "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "2": {
+    "rival": {
+      "id": "2",
+      "nombre": "Almagro",
+      "corto": "Almagro ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2.png"
+    },
+    "pj": 2,
+    "g": 0,
+    "e": 2,
+    "p": 0,
+    "gf": 3,
+    "gc": 3,
+    "partidos": [
+      {
+        "id": "685763",
+        "fecha": "2023-09-10T17:30:00-03:00",
+        "competencia": "Copa Argentina",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2023
+      },
+      {
+        "id": "540441",
+        "fecha": "2019-08-13T21:10:00-03:00",
+        "competencia": "Copa Argentina",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "9739": {
+    "rival": {
+      "id": "9739",
+      "nombre": "Aldosivi",
+      "corto": "Aldosivi",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9739.png"
+    },
+    "pj": 6,
+    "g": 6,
+    "e": 0,
+    "p": 0,
+    "gf": 13,
+    "gc": 3,
+    "partidos": [
+      {
+        "id": "729077",
+        "fecha": "2025-08-31T14:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2025
+      },
+      {
+        "id": "728051",
+        "fecha": "2025-02-22T19:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2025
+      },
+      {
+        "id": "635596",
+        "fecha": "2022-10-09T18:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2022
+      },
+      {
+        "id": "627274",
+        "fecha": "2022-02-16T19:15:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2022
+      },
+      {
+        "id": "609999",
+        "fecha": "2021-11-08T21:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 3,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2021
+      },
+      {
+        "id": "551980",
+        "fecha": "2019-08-18T20:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "4816": {
+    "rival": {
+      "id": "4816",
+      "nombre": "Liga de Quito",
+      "corto": "LDU",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4816.png"
+    },
+    "pj": 2,
+    "g": 1,
+    "e": 1,
+    "p": 0,
+    "gf": 3,
+    "gc": 0,
+    "partidos": [
+      {
+        "id": "554827",
+        "fecha": "2019-08-28T19:15:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2019
+      },
+      {
+        "id": "554829",
+        "fecha": "2019-08-21T19:15:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "V",
+        "goles_boca": 3,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "235": {
+    "rival": {
+      "id": "235",
+      "nombre": "Banfield",
+      "corto": "Banfield",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png"
+    },
+    "pj": 9,
+    "g": 5,
+    "e": 2,
+    "p": 2,
+    "gf": 11,
+    "gc": 5,
+    "partidos": [
+      {
+        "id": "401926286",
+        "fecha": "2026-11-14T19:00:00-03:00",
+        "competencia": "Copa Argentina",
         "condicion": "V",
         "goles_boca": 3,
         "goles_rival": 0,
@@ -161,22 +623,171 @@
         "temporada": 2026
       },
       {
-        "id": "735663",
-        "fecha": "2025-05-10T21:00:00-03:00",
+        "id": "729066",
+        "fecha": "2025-08-24T18:15:00-03:00",
         "competencia": "Liga Profesional",
         "condicion": "L",
-        "goles_boca": 0,
+        "goles_boca": 2,
         "goles_rival": 0,
         "penales_boca": null,
         "penales_rival": null,
-        "resultado": "E",
+        "resultado": "G",
         "temporada": 2025
       },
       {
-        "id": "694444",
-        "fecha": "2024-11-03T19:30:00-03:00",
+        "id": "728042",
+        "fecha": "2025-02-14T20:00:00-03:00",
         "competencia": "Liga Profesional",
         "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2025
+      },
+      {
+        "id": "694256",
+        "fecha": "2024-07-31T20:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 3,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2024
+      },
+      {
+        "id": "656302",
+        "fecha": "2023-03-12T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2023
+      },
+      {
+        "id": "635341",
+        "fecha": "2022-07-01T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 3,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2022
+      },
+      {
+        "id": "610232",
+        "fecha": "2021-07-24T20:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2021
+      },
+      {
+        "id": "592392",
+        "fecha": "2021-01-17T22:10:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2020
+      },
+      {
+        "id": "551972",
+        "fecha": "2019-08-25T20:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "16": {
+    "rival": {
+      "id": "16",
+      "nombre": "River Plate",
+      "corto": "River Plate",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png"
+    },
+    "pj": 19,
+    "g": 7,
+    "e": 6,
+    "p": 6,
+    "gf": 17,
+    "gc": 17,
+    "partidos": [
+      {
+        "id": "401841658",
+        "fecha": "2026-11-01T15:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2026
+      },
+      {
+        "id": "762995",
+        "fecha": "2026-04-19T17:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2026
+      },
+      {
+        "id": "729200",
+        "fecha": "2025-11-09T16:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2025
+      },
+      {
+        "id": "728175",
+        "fecha": "2025-04-27T15:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2025
+      },
+      {
+        "id": "694369",
+        "fecha": "2024-09-21T16:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
         "goles_boca": 0,
         "goles_rival": 1,
         "penales_boca": null,
@@ -185,45 +796,69 @@
         "temporada": 2024
       },
       {
-        "id": "694045",
-        "fecha": "2024-02-18T21:30:00-03:00",
+        "id": "702108",
+        "fecha": "2024-04-21T15:30:00-03:00",
         "competencia": "Copa de la Liga",
         "condicion": "V",
-        "goles_boca": 1,
+        "goles_boca": 3,
         "goles_rival": 2,
         "penales_boca": null,
         "penales_rival": null,
-        "resultado": "P",
+        "resultado": "G",
         "temporada": 2024
       },
       {
-        "id": "656667",
-        "fecha": "2023-09-23T18:30:00-03:00",
+        "id": "694070",
+        "fecha": "2024-02-25T17:00:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2024
+      },
+      {
+        "id": "656682",
+        "fecha": "2023-10-01T14:00:00-03:00",
         "competencia": "Copa de la Liga",
         "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 1,
+        "goles_boca": 0,
+        "goles_rival": 2,
         "penales_boca": null,
         "penales_rival": null,
-        "resultado": "E",
+        "resultado": "P",
         "temporada": 2023
       },
       {
-        "id": "656486",
-        "fecha": "2023-06-10T20:00:00-03:00",
+        "id": "656416",
+        "fecha": "2023-05-07T17:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2023
+      },
+      {
+        "id": "635508",
+        "fecha": "2022-09-11T17:00:00-03:00",
         "competencia": "Liga Profesional",
         "condicion": "L",
         "goles_boca": 1,
-        "goles_rival": 1,
+        "goles_rival": 0,
         "penales_boca": null,
         "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2023
+        "resultado": "G",
+        "temporada": 2022
       },
       {
-        "id": "635522",
-        "fecha": "2022-09-14T21:30:00-03:00",
-        "competencia": "Liga Profesional",
+        "id": "627341",
+        "fecha": "2022-03-20T19:00:00-03:00",
+        "competencia": "Copa de la Liga",
         "condicion": "V",
         "goles_boca": 1,
         "goles_rival": 0,
@@ -233,8 +868,32 @@
         "temporada": 2022
       },
       {
-        "id": "627382",
-        "fecha": "2022-04-17T19:00:00-03:00",
+        "id": "610077",
+        "fecha": "2021-10-03T17:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2021
+      },
+      {
+        "id": "616892",
+        "fecha": "2021-08-04T19:00:00-03:00",
+        "competencia": "Copa Argentina",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2020
+      },
+      {
+        "id": "602618",
+        "fecha": "2021-05-16T17:30:00-03:00",
         "competencia": "Copa de la Liga",
         "condicion": "L",
         "goles_boca": 1,
@@ -242,47 +901,112 @@
         "penales_boca": null,
         "penales_rival": null,
         "resultado": "E",
-        "temporada": 2022
-      },
-      {
-        "id": "610068",
-        "fecha": "2021-10-09T20:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 4,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
         "temporada": 2021
       },
       {
-        "id": "594469",
-        "fecha": "2021-05-02T10:00:00-03:00",
+        "id": "594563",
+        "fecha": "2021-03-14T18:00:00-03:00",
         "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2021
+      },
+      {
+        "id": "590576",
+        "fecha": "2021-01-02T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2020
+      },
+      {
+        "id": "557053",
+        "fecha": "2019-10-22T21:30:00-03:00",
+        "competencia": "Copa Libertadores",
         "condicion": "L",
         "goles_boca": 1,
         "goles_rival": 0,
         "penales_boca": null,
         "penales_rival": null,
         "resultado": "G",
-        "temporada": 2021
+        "temporada": 2019
       },
       {
-        "id": "587329",
-        "fecha": "2020-11-20T19:20:00-03:00",
+        "id": "557054",
+        "fecha": "2019-10-01T21:30:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2019
+      },
+      {
+        "id": "551959",
+        "fecha": "2019-09-01T17:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "8": {
+    "rival": {
+      "id": "8",
+      "nombre": "Estudiantes de La Plata",
+      "corto": "Estudiantes",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png"
+    },
+    "pj": 14,
+    "g": 6,
+    "e": 3,
+    "p": 5,
+    "gf": 15,
+    "gc": 12,
+    "partidos": [
+      {
+        "id": "401841460",
+        "fecha": "2026-08-05T19:00:00-03:00",
         "competencia": "Liga Profesional",
         "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2026
+      },
+      {
+        "id": "762794",
+        "fecha": "2026-01-28T22:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
         "goles_boca": 1,
         "goles_rival": 2,
         "penales_boca": null,
         "penales_rival": null,
         "resultado": "P",
-        "temporada": 2020
+        "temporada": 2026
       },
       {
-        "id": "587363",
-        "fecha": "2020-10-31T21:15:00-03:00",
+        "id": "729188",
+        "fecha": "2025-11-02T16:00:00-03:00",
         "competencia": "Liga Profesional",
         "condicion": "V",
         "goles_boca": 2,
@@ -290,10 +1014,267 @@
         "penales_boca": null,
         "penales_rival": null,
         "resultado": "G",
-        "temporada": 2020
+        "temporada": 2025
+      },
+      {
+        "id": "728150",
+        "fecha": "2025-04-19T20:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2025
+      },
+      {
+        "id": "694325",
+        "fecha": "2024-08-26T21:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2024
+      },
+      {
+        "id": "702161",
+        "fecha": "2024-04-30T20:00:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2024
+      },
+      {
+        "id": "694100",
+        "fecha": "2024-04-12T19:30:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2024
+      },
+      {
+        "id": "689365",
+        "fecha": "2023-11-22T21:10:00-03:00",
+        "competencia": "Copa Argentina",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 3,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2023
+      },
+      {
+        "id": "656735",
+        "fecha": "2023-10-28T19:00:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2023
+      },
+      {
+        "id": "656373",
+        "fecha": "2023-04-15T19:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2023
+      },
+      {
+        "id": "635398",
+        "fecha": "2022-07-24T20:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 3,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2022
+      },
+      {
+        "id": "627319",
+        "fecha": "2022-03-13T21:30:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2022
+      },
+      {
+        "id": "610181",
+        "fecha": "2021-08-15T18:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2021
+      },
+      {
+        "id": "551947",
+        "fecha": "2019-09-15T20:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
       }
     ],
-    "desde": 2020
+    "desde": 2019
+  },
+  "18": {
+    "rival": {
+      "id": "18",
+      "nombre": "San Lorenzo",
+      "corto": "San Lorenzo ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png"
+    },
+    "pj": 9,
+    "g": 4,
+    "e": 2,
+    "p": 3,
+    "gf": 12,
+    "gc": 10,
+    "partidos": [
+      {
+        "id": "401841577",
+        "fecha": "2026-09-20T14:45:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2026
+      },
+      {
+        "id": "762912",
+        "fecha": "2026-03-11T19:45:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2026
+      },
+      {
+        "id": "694312",
+        "fecha": "2024-08-18T14:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 3,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2024
+      },
+      {
+        "id": "694113",
+        "fecha": "2024-03-30T17:00:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2024
+      },
+      {
+        "id": "656760",
+        "fecha": "2023-11-08T19:00:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2023
+      },
+      {
+        "id": "656368",
+        "fecha": "2023-04-12T17:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2023
+      },
+      {
+        "id": "635346",
+        "fecha": "2022-07-09T15:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2022
+      },
+      {
+        "id": "610228",
+        "fecha": "2021-07-27T21:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2021
+      },
+      {
+        "id": "551935",
+        "fecha": "2019-09-21T17:45:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
   },
   "14": {
     "rival": {
@@ -302,12 +1283,12 @@
       "corto": "Newell's",
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png"
     },
-    "pj": 13,
+    "pj": 14,
     "g": 9,
-    "e": 2,
+    "e": 3,
     "p": 2,
-    "gf": 21,
-    "gc": 8,
+    "gf": 22,
+    "gc": 9,
     "partidos": [
       {
         "id": "401841473",
@@ -464,41 +1445,41 @@
         "penales_rival": null,
         "resultado": "G",
         "temporada": 2020
-      }
-    ],
-    "desde": 2020
-  },
-  "19": {
-    "rival": {
-      "id": "19",
-      "nombre": "Talleres (Córdoba)",
-      "corto": "Talleres ",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png"
-    },
-    "pj": 12,
-    "g": 4,
-    "e": 5,
-    "p": 3,
-    "gf": 10,
-    "gc": 8,
-    "partidos": [
+      },
       {
-        "id": "401841627",
-        "fecha": "2026-10-16T21:30:00-03:00",
+        "id": "551926",
+        "fecha": "2019-09-28T20:00:00-03:00",
         "competencia": "Liga Profesional",
         "condicion": "L",
-        "goles_boca": 2,
+        "goles_boca": 1,
         "goles_rival": 1,
         "penales_boca": null,
         "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2026
-      },
+        "resultado": "E",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "8950": {
+    "rival": {
+      "id": "8950",
+      "nombre": "Defensa y Justicia",
+      "corto": "Def. y Jus.",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png"
+    },
+    "pj": 13,
+    "g": 7,
+    "e": 4,
+    "p": 2,
+    "gf": 18,
+    "gc": 6,
+    "partidos": [
       {
-        "id": "762963",
-        "fecha": "2026-04-02T20:30:00-03:00",
+        "id": "401841669",
+        "fecha": "2026-11-07T17:30:00-03:00",
         "competencia": "Liga Profesional",
-        "condicion": "V",
+        "condicion": "L",
         "goles_boca": 1,
         "goles_rival": 0,
         "penales_boca": null,
@@ -507,11 +1488,35 @@
         "temporada": 2026
       },
       {
-        "id": "761363",
-        "fecha": "2025-11-23T20:00:00-03:00",
+        "id": "763011",
+        "fecha": "2026-04-23T20:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 4,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2026
+      },
+      {
+        "id": "729126",
+        "fecha": "2025-09-27T19:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2025
+      },
+      {
+        "id": "728101",
+        "fecha": "2025-03-16T18:15:00-03:00",
         "competencia": "Liga Profesional",
         "condicion": "L",
-        "goles_boca": 2,
+        "goles_boca": 4,
         "goles_rival": 0,
         "penales_boca": null,
         "penales_rival": null,
@@ -519,21 +1524,21 @@
         "temporada": 2025
       },
       {
-        "id": "705911",
-        "fecha": "2024-09-07T20:00:00-03:00",
-        "competencia": "Copa Argentina",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 1,
+        "id": "694246",
+        "fecha": "2024-07-21T20:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 2,
         "penales_boca": null,
         "penales_rival": null,
         "resultado": "E",
         "temporada": 2024
       },
       {
-        "id": "694202",
-        "fecha": "2024-05-25T20:00:00-03:00",
-        "competencia": "Liga Profesional",
+        "id": "694021",
+        "fecha": "2024-02-10T19:15:00-03:00",
+        "competencia": "Copa de la Liga",
         "condicion": "L",
         "goles_boca": 0,
         "goles_rival": 0,
@@ -543,151 +1548,9 @@
         "temporada": 2024
       },
       {
-        "id": "688149",
-        "fecha": "2023-10-15T21:10:00-03:00",
-        "competencia": "Copa Argentina",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2023
-      },
-      {
-        "id": "656257",
-        "fecha": "2023-02-11T21:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2023
-      },
-      {
-        "id": "635371",
-        "fecha": "2022-07-16T20:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "610207",
-        "fecha": "2021-08-01T15:45:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2021
-      },
-      {
-        "id": "594552",
-        "fecha": "2021-03-21T21:00:00-03:00",
+        "id": "656640",
+        "fecha": "2023-09-15T18:45:00-03:00",
         "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2021
-      },
-      {
-        "id": "587302",
-        "fecha": "2020-12-06T21:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2020
-      },
-      {
-        "id": "587346",
-        "fecha": "2020-11-15T21:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2020
-      }
-    ],
-    "desde": 2020
-  },
-  "1936": {
-    "rival": {
-      "id": "1936",
-      "nombre": "Internacional",
-      "corto": "Internacional",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png"
-    },
-    "pj": 2,
-    "g": 1,
-    "e": 0,
-    "p": 1,
-    "gf": 1,
-    "gc": 1,
-    "partidos": [
-      {
-        "id": "587522",
-        "fecha": "2020-12-09T21:30:00-03:00",
-        "competencia": "Copa Libertadores",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2020
-      },
-      {
-        "id": "587530",
-        "fecha": "2020-12-02T21:30:00-03:00",
-        "competencia": "Copa Libertadores",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2020
-      }
-    ],
-    "desde": 2020
-  },
-  "2635": {
-    "rival": {
-      "id": "2635",
-      "nombre": "Arsenal Sarandi",
-      "corto": "Arsenal Sarandi",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2635.png"
-    },
-    "pj": 5,
-    "g": 1,
-    "e": 3,
-    "p": 1,
-    "gf": 6,
-    "gc": 6,
-    "partidos": [
-      {
-        "id": "656470",
-        "fecha": "2023-06-01T21:30:00-03:00",
-        "competencia": "Liga Profesional",
         "condicion": "V",
         "goles_boca": 0,
         "goles_rival": 1,
@@ -697,55 +1560,79 @@
         "temporada": 2023
       },
       {
-        "id": "635650",
-        "fecha": "2022-06-05T19:30:00-03:00",
+        "id": "656289",
+        "fecha": "2023-03-06T21:00:00-03:00",
         "competencia": "Liga Profesional",
         "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 1,
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2023
+      },
+      {
+        "id": "635471",
+        "fecha": "2022-08-21T20:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 0,
         "penales_boca": null,
         "penales_rival": null,
         "resultado": "G",
         "temporada": 2022
       },
       {
-        "id": "627348",
-        "fecha": "2022-04-02T21:30:00-03:00",
+        "id": "634997",
+        "fecha": "2022-05-10T21:30:00-03:00",
         "competencia": "Copa de la Liga",
         "condicion": "L",
         "goles_boca": 2,
-        "goles_rival": 2,
+        "goles_rival": 0,
         "penales_boca": null,
         "penales_rival": null,
-        "resultado": "E",
+        "resultado": "G",
         "temporada": 2022
       },
       {
-        "id": "609947",
-        "fecha": "2021-12-04T17:00:00-03:00",
+        "id": "610115",
+        "fecha": "2021-09-14T21:00:00-03:00",
         "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 1,
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 0,
         "penales_boca": null,
         "penales_rival": null,
         "resultado": "E",
         "temporada": 2021
       },
       {
-        "id": "590611",
-        "fecha": "2020-12-12T19:20:00-03:00",
-        "competencia": "Liga Profesional",
+        "id": "594519",
+        "fecha": "2021-04-03T18:30:00-03:00",
+        "competencia": "Copa de la Liga",
         "condicion": "L",
-        "goles_boca": 1,
+        "goles_boca": 2,
         "goles_rival": 1,
         "penales_boca": null,
         "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2020
+        "resultado": "G",
+        "temporada": 2021
+      },
+      {
+        "id": "551911",
+        "fecha": "2019-10-06T20:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
       }
     ],
-    "desde": 2020
+    "desde": 2019
   },
   "15": {
     "rival": {
@@ -754,12 +1641,12 @@
       "corto": "Racing ",
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png"
     },
-    "pj": 19,
+    "pj": 20,
     "g": 4,
     "e": 9,
-    "p": 6,
+    "p": 7,
     "gf": 17,
-    "gc": 17,
+    "gc": 18,
     "partidos": [
       {
         "id": "401912726",
@@ -988,9 +1875,855 @@
         "penales_rival": null,
         "resultado": "P",
         "temporada": 2020
+      },
+      {
+        "id": "551903",
+        "fecha": "2019-10-18T21:10:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2019
       }
     ],
-    "desde": 2020
+    "desde": 2019
+  },
+  "12": {
+    "rival": {
+      "id": "12",
+      "nombre": "Lanús",
+      "corto": "Lanús ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png"
+    },
+    "pj": 14,
+    "g": 6,
+    "e": 4,
+    "p": 4,
+    "gf": 18,
+    "gc": 13,
+    "partidos": [
+      {
+        "id": "401841527",
+        "fecha": "2026-08-28T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2026
+      },
+      {
+        "id": "762878",
+        "fecha": "2026-03-04T21:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 3,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2026
+      },
+      {
+        "id": "735663",
+        "fecha": "2025-05-10T21:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2025
+      },
+      {
+        "id": "694444",
+        "fecha": "2024-11-03T19:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2024
+      },
+      {
+        "id": "694045",
+        "fecha": "2024-02-18T21:30:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2024
+      },
+      {
+        "id": "656667",
+        "fecha": "2023-09-23T18:30:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2023
+      },
+      {
+        "id": "656486",
+        "fecha": "2023-06-10T20:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2023
+      },
+      {
+        "id": "635522",
+        "fecha": "2022-09-14T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2022
+      },
+      {
+        "id": "627382",
+        "fecha": "2022-04-17T19:00:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2022
+      },
+      {
+        "id": "610068",
+        "fecha": "2021-10-09T20:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 4,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2021
+      },
+      {
+        "id": "594469",
+        "fecha": "2021-05-02T10:00:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2021
+      },
+      {
+        "id": "587329",
+        "fecha": "2020-11-20T19:20:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2020
+      },
+      {
+        "id": "587363",
+        "fecha": "2020-10-31T21:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2020
+      },
+      {
+        "id": "551886",
+        "fecha": "2019-10-31T21:20:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "2635": {
+    "rival": {
+      "id": "2635",
+      "nombre": "Arsenal Sarandi",
+      "corto": "Arsenal Sarandi",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2635.png"
+    },
+    "pj": 6,
+    "g": 2,
+    "e": 3,
+    "p": 1,
+    "gf": 11,
+    "gc": 7,
+    "partidos": [
+      {
+        "id": "656470",
+        "fecha": "2023-06-01T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2023
+      },
+      {
+        "id": "635650",
+        "fecha": "2022-06-05T19:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2022
+      },
+      {
+        "id": "627348",
+        "fecha": "2022-04-02T21:30:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2022
+      },
+      {
+        "id": "609947",
+        "fecha": "2021-12-04T17:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2021
+      },
+      {
+        "id": "590611",
+        "fecha": "2020-12-12T19:20:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2020
+      },
+      {
+        "id": "551873",
+        "fecha": "2019-11-03T11:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 5,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "21": {
+    "rival": {
+      "id": "21",
+      "nombre": "Vélez Sarsfield",
+      "corto": "Vélez ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png"
+    },
+    "pj": 11,
+    "g": 4,
+    "e": 4,
+    "p": 3,
+    "gf": 16,
+    "gc": 11,
+    "partidos": [
+      {
+        "id": "401892190",
+        "fecha": "2026-09-02T21:15:00-03:00",
+        "competencia": "Copa Argentina",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2026
+      },
+      {
+        "id": "401841482",
+        "fecha": "2026-08-08T19:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2026
+      },
+      {
+        "id": "762833",
+        "fecha": "2026-02-08T22:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2026
+      },
+      {
+        "id": "722676",
+        "fecha": "2024-11-27T21:10:00-03:00",
+        "competencia": "Copa Argentina",
+        "condicion": "L",
+        "goles_boca": 3,
+        "goles_rival": 4,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2024
+      },
+      {
+        "id": "694229",
+        "fecha": "2024-06-14T19:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2024
+      },
+      {
+        "id": "656280",
+        "fecha": "2023-02-25T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2023
+      },
+      {
+        "id": "635564",
+        "fecha": "2022-10-02T18:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2022
+      },
+      {
+        "id": "627366",
+        "fecha": "2022-04-09T21:30:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2022
+      },
+      {
+        "id": "610025",
+        "fecha": "2021-10-24T20:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2021
+      },
+      {
+        "id": "594571",
+        "fecha": "2021-03-07T21:30:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 7,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2021
+      },
+      {
+        "id": "551863",
+        "fecha": "2019-11-10T20:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "20": {
+    "rival": {
+      "id": "20",
+      "nombre": "Unión (Santa Fe)",
+      "corto": "Unión (SF)",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png"
+    },
+    "pj": 12,
+    "g": 4,
+    "e": 5,
+    "p": 3,
+    "gf": 13,
+    "gc": 9,
+    "partidos": [
+      {
+        "id": "401841594",
+        "fecha": "2026-10-02T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 3,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2026
+      },
+      {
+        "id": "762938",
+        "fecha": "2026-03-15T22:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2026
+      },
+      {
+        "id": "729005",
+        "fecha": "2025-07-18T19:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2025
+      },
+      {
+        "id": "727969",
+        "fecha": "2025-01-29T19:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2025
+      },
+      {
+        "id": "694482",
+        "fecha": "2024-11-20T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2024
+      },
+      {
+        "id": "694076",
+        "fecha": "2024-03-06T19:15:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2024
+      },
+      {
+        "id": "656708",
+        "fecha": "2023-10-20T21:30:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2023
+      },
+      {
+        "id": "656538",
+        "fecha": "2023-07-06T17:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2023
+      },
+      {
+        "id": "635327",
+        "fecha": "2022-06-24T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2022
+      },
+      {
+        "id": "610246",
+        "fecha": "2021-07-16T19:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2021
+      },
+      {
+        "id": "594505",
+        "fecha": "2021-04-11T18:30:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2021
+      },
+      {
+        "id": "551858",
+        "fecha": "2019-11-24T17:10:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "3": {
+    "rival": {
+      "id": "3",
+      "nombre": "Argentinos Juniors",
+      "corto": "Argentinos ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/3.png"
+    },
+    "pj": 10,
+    "g": 4,
+    "e": 5,
+    "p": 1,
+    "gf": 8,
+    "gc": 6,
+    "partidos": [
+      {
+        "id": "761967",
+        "fecha": "2025-11-30T18:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2025
+      },
+      {
+        "id": "729001",
+        "fecha": "2025-07-13T18:45:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2025
+      },
+      {
+        "id": "727955",
+        "fecha": "2025-01-26T19:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2025
+      },
+      {
+        "id": "694398",
+        "fecha": "2024-10-06T21:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2024
+      },
+      {
+        "id": "656441",
+        "fecha": "2023-05-19T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2023
+      },
+      {
+        "id": "635374",
+        "fecha": "2022-07-19T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2022
+      },
+      {
+        "id": "620944",
+        "fecha": "2021-11-03T21:10:00-03:00",
+        "competencia": "Copa Argentina",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2020
+      },
+      {
+        "id": "610191",
+        "fecha": "2021-08-08T18:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2021
+      },
+      {
+        "id": "590557",
+        "fecha": "2021-01-09T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2020
+      },
+      {
+        "id": "551836",
+        "fecha": "2019-11-30T19:40:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "17": {
+    "rival": {
+      "id": "17",
+      "nombre": "Rosario Central",
+      "corto": "Rosario Central",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png"
+    },
+    "pj": 8,
+    "g": 4,
+    "e": 3,
+    "p": 1,
+    "gf": 10,
+    "gc": 7,
+    "partidos": [
+      {
+        "id": "729104",
+        "fecha": "2025-09-14T17:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2025
+      },
+      {
+        "id": "728059",
+        "fecha": "2025-02-28T20:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2025
+      },
+      {
+        "id": "694349",
+        "fecha": "2024-08-31T21:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2024
+      },
+      {
+        "id": "656395",
+        "fecha": "2023-04-23T15:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2023
+      },
+      {
+        "id": "635449",
+        "fecha": "2022-08-17T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2022
+      },
+      {
+        "id": "627288",
+        "fecha": "2022-02-20T19:15:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2022
+      },
+      {
+        "id": "610130",
+        "fecha": "2021-09-04T20:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2021
+      },
+      {
+        "id": "551827",
+        "fecha": "2019-12-08T19:40:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
   },
   "11": {
     "rival": {
@@ -999,9 +2732,9 @@
       "corto": "Independiente",
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png"
     },
-    "pj": 10,
+    "pj": 11,
     "g": 3,
-    "e": 5,
+    "e": 6,
     "p": 2,
     "gf": 11,
     "gc": 9,
@@ -1125,344 +2858,337 @@
         "penales_rival": null,
         "resultado": "G",
         "temporada": 2020
+      },
+      {
+        "id": "551814",
+        "fecha": "2020-01-26T21:45:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2019
       }
     ],
-    "desde": 2020
+    "desde": 2019
   },
-  "10": {
+  "19": {
     "rival": {
-      "id": "10",
-      "nombre": "Huracán",
-      "corto": "Huracán ",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10.png"
+      "id": "19",
+      "nombre": "Talleres (Córdoba)",
+      "corto": "Talleres ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png"
     },
-    "pj": 10,
+    "pj": 13,
     "g": 5,
-    "e": 2,
+    "e": 5,
     "p": 3,
-    "gf": 13,
+    "gf": 12,
+    "gc": 9,
+    "partidos": [
+      {
+        "id": "401841627",
+        "fecha": "2026-10-16T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2026
+      },
+      {
+        "id": "762963",
+        "fecha": "2026-04-02T20:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2026
+      },
+      {
+        "id": "761363",
+        "fecha": "2025-11-23T20:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2025
+      },
+      {
+        "id": "705911",
+        "fecha": "2024-09-07T20:00:00-03:00",
+        "competencia": "Copa Argentina",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2024
+      },
+      {
+        "id": "694202",
+        "fecha": "2024-05-25T20:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2024
+      },
+      {
+        "id": "688149",
+        "fecha": "2023-10-15T21:10:00-03:00",
+        "competencia": "Copa Argentina",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2023
+      },
+      {
+        "id": "656257",
+        "fecha": "2023-02-11T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2023
+      },
+      {
+        "id": "635371",
+        "fecha": "2022-07-16T20:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2022
+      },
+      {
+        "id": "610207",
+        "fecha": "2021-08-01T15:45:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2021
+      },
+      {
+        "id": "594552",
+        "fecha": "2021-03-21T21:00:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2021
+      },
+      {
+        "id": "587302",
+        "fecha": "2020-12-06T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2020
+      },
+      {
+        "id": "587346",
+        "fecha": "2020-11-15T21:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2020
+      },
+      {
+        "id": "551804",
+        "fecha": "2020-02-02T21:45:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "9785": {
+    "rival": {
+      "id": "9785",
+      "nombre": "Atlético Tucumán",
+      "corto": "Atl Tucumán",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9785.png"
+    },
+    "pj": 7,
+    "g": 5,
+    "e": 0,
+    "p": 2,
+    "gf": 11,
     "gc": 6,
     "partidos": [
       {
-        "id": "401871437",
-        "fecha": "2026-05-09T19:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 3,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2026
-      },
-      {
-        "id": "729022",
-        "fecha": "2025-07-27T18:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2025
-      },
-      {
-        "id": "727987",
-        "fecha": "2025-02-02T19:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2025
-      },
-      {
-        "id": "694497",
-        "fecha": "2024-11-23T21:45:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2024
-      },
-      {
-        "id": "656542",
-        "fecha": "2023-07-10T19:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2023
-      },
-      {
-        "id": "635537",
-        "fecha": "2022-09-19T19:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2022
-      },
-      {
-        "id": "627306",
-        "fecha": "2022-03-06T19:15:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2022
-      },
-      {
-        "id": "610051",
-        "fecha": "2021-10-16T20:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 3,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2021
-      },
-      {
-        "id": "594479",
-        "fecha": "2021-04-24T18:00:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2021
-      },
-      {
-        "id": "590585",
-        "fecha": "2020-12-27T19:20:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 3,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2020
-      }
-    ],
-    "desde": 2020
-  },
-  "16": {
-    "rival": {
-      "id": "16",
-      "nombre": "River Plate",
-      "corto": "River Plate",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png"
-    },
-    "pj": 16,
-    "g": 6,
-    "e": 5,
-    "p": 5,
-    "gf": 16,
-    "gc": 15,
-    "partidos": [
-      {
-        "id": "401841658",
-        "fecha": "2026-11-01T15:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2026
-      },
-      {
-        "id": "762995",
-        "fecha": "2026-04-19T17:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2026
-      },
-      {
-        "id": "729200",
-        "fecha": "2025-11-09T16:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2025
-      },
-      {
-        "id": "728175",
-        "fecha": "2025-04-27T15:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2025
-      },
-      {
-        "id": "694369",
-        "fecha": "2024-09-21T16:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2024
-      },
-      {
-        "id": "702108",
-        "fecha": "2024-04-21T15:30:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 3,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2024
-      },
-      {
-        "id": "694070",
-        "fecha": "2024-02-25T17:00:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2024
-      },
-      {
-        "id": "656682",
-        "fecha": "2023-10-01T14:00:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2023
-      },
-      {
-        "id": "656416",
-        "fecha": "2023-05-07T17:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2023
-      },
-      {
-        "id": "635508",
-        "fecha": "2022-09-11T17:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "627341",
-        "fecha": "2022-03-20T19:00:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "610077",
-        "fecha": "2021-10-03T17:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2021
-      },
-      {
-        "id": "616892",
-        "fecha": "2021-08-04T19:00:00-03:00",
+        "id": "735158",
+        "fecha": "2025-07-23T21:10:00-03:00",
         "competencia": "Copa Argentina",
         "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2025
+      },
+      {
+        "id": "694172",
+        "fecha": "2024-05-12T20:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
         "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2024
+      },
+      {
+        "id": "656220",
+        "fecha": "2023-01-29T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
         "goles_rival": 0,
         "penales_boca": null,
         "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2020
+        "resultado": "G",
+        "temporada": 2023
       },
       {
-        "id": "602618",
-        "fecha": "2021-05-16T17:30:00-03:00",
-        "competencia": "Copa de la Liga",
+        "id": "635481",
+        "fecha": "2022-08-28T18:00:00-03:00",
+        "competencia": "Liga Profesional",
         "condicion": "L",
-        "goles_boca": 1,
+        "goles_boca": 2,
         "goles_rival": 1,
         "penales_boca": null,
         "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2021
+        "resultado": "G",
+        "temporada": 2022
       },
       {
-        "id": "594563",
-        "fecha": "2021-03-14T18:00:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 1,
+        "id": "610104",
+        "fecha": "2021-09-18T20:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 2,
         "goles_rival": 1,
         "penales_boca": null,
         "penales_rival": null,
-        "resultado": "E",
+        "resultado": "G",
         "temporada": 2021
       },
       {
-        "id": "590576",
-        "fecha": "2021-01-02T21:30:00-03:00",
+        "id": "594490",
+        "fecha": "2021-04-17T18:00:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 3,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2021
+      },
+      {
+        "id": "551789",
+        "fecha": "2020-02-08T21:45:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "11989": {
+    "rival": {
+      "id": "11989",
+      "nombre": "Central Córdoba (Santiago del Estero)",
+      "corto": "C. Córdoba (SE)",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png"
+    },
+    "pj": 12,
+    "g": 9,
+    "e": 2,
+    "p": 1,
+    "gf": 33,
+    "gc": 9,
+    "partidos": [
+      {
+        "id": "401841557",
+        "fecha": "2026-09-11T21:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 3,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2026
+      },
+      {
+        "id": "762907",
+        "fecha": "2026-05-02T16:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2026
+      },
+      {
+        "id": "729111",
+        "fecha": "2025-09-21T21:15:00-03:00",
         "competencia": "Liga Profesional",
         "condicion": "L",
         "goles_boca": 2,
@@ -1470,303 +3196,339 @@
         "penales_boca": null,
         "penales_rival": null,
         "resultado": "E",
-        "temporada": 2020
+        "temporada": 2025
+      },
+      {
+        "id": "728082",
+        "fecha": "2025-03-07T21:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 3,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2025
+      },
+      {
+        "id": "694187",
+        "fecha": "2024-05-19T20:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 4,
+        "goles_rival": 2,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2024
+      },
+      {
+        "id": "694031",
+        "fecha": "2024-02-14T19:15:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2024
+      },
+      {
+        "id": "656654",
+        "fecha": "2023-09-19T18:45:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 3,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2023
+      },
+      {
+        "id": "656235",
+        "fecha": "2023-02-05T19:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2023
+      },
+      {
+        "id": "635286",
+        "fecha": "2022-06-12T20:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2022
+      },
+      {
+        "id": "627411",
+        "fecha": "2022-04-23T19:00:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2022
+      },
+      {
+        "id": "609934",
+        "fecha": "2021-12-11T22:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 8,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2021
+      },
+      {
+        "id": "551781",
+        "fecha": "2020-02-16T21:50:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 4,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
       }
     ],
-    "desde": 2020
+    "desde": 2019
   },
-  "2674": {
+  "6756": {
     "rival": {
-      "id": "2674",
-      "nombre": "Santos",
-      "corto": "Santos",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png"
+      "id": "6756",
+      "nombre": "Godoy Cruz Antonio Tomba",
+      "corto": "Godoy Cruz",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/6756.png"
     },
-    "pj": 4,
-    "g": 1,
+    "pj": 8,
+    "g": 6,
     "e": 1,
-    "p": 2,
-    "gf": 2,
+    "p": 1,
+    "gf": 14,
+    "gc": 8,
+    "partidos": [
+      {
+        "id": "694454",
+        "fecha": "2024-11-06T19:30:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 4,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2024
+      },
+      {
+        "id": "694107",
+        "fecha": "2024-04-16T19:30:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2024
+      },
+      {
+        "id": "656782",
+        "fecha": "2023-11-26T21:30:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2023
+      },
+      {
+        "id": "656502",
+        "fecha": "2023-06-22T21:45:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 4,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2023
+      },
+      {
+        "id": "635553",
+        "fecha": "2022-09-23T19:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2022
+      },
+      {
+        "id": "627401",
+        "fecha": "2022-04-20T21:30:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2022
+      },
+      {
+        "id": "610040",
+        "fecha": "2021-10-20T21:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2021
+      },
+      {
+        "id": "551769",
+        "fecha": "2020-02-23T19:40:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 3,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "7": {
+    "rival": {
+      "id": "7",
+      "nombre": "Colón (Santa Fe)",
+      "corto": "Colón SF",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/7.png"
+    },
+    "pj": 5,
+    "g": 3,
+    "e": 1,
+    "p": 1,
+    "gf": 9,
     "gc": 4,
     "partidos": [
       {
-        "id": "600861",
-        "fecha": "2021-05-11T19:15:00-03:00",
-        "competencia": "Copa Libertadores",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2021
-      },
-      {
-        "id": "600891",
-        "fecha": "2021-04-27T21:30:00-03:00",
-        "competencia": "Copa Libertadores",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2021
-      },
-      {
-        "id": "591323",
-        "fecha": "2021-01-13T19:15:00-03:00",
-        "competencia": "Copa Libertadores",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 3,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2020
-      },
-      {
-        "id": "591325",
-        "fecha": "2021-01-06T19:15:00-03:00",
-        "competencia": "Copa Libertadores",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2020
-      }
-    ],
-    "desde": 2020
-  },
-  "3": {
-    "rival": {
-      "id": "3",
-      "nombre": "Argentinos Juniors",
-      "corto": "Argentinos ",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/3.png"
-    },
-    "pj": 9,
-    "g": 4,
-    "e": 4,
-    "p": 1,
-    "gf": 7,
-    "gc": 5,
-    "partidos": [
-      {
-        "id": "761967",
-        "fecha": "2025-11-30T18:30:00-03:00",
+        "id": "656344",
+        "fecha": "2023-04-09T21:30:00-03:00",
         "competencia": "Liga Profesional",
         "condicion": "L",
         "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2025
-      },
-      {
-        "id": "729001",
-        "fecha": "2025-07-13T18:45:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2025
-      },
-      {
-        "id": "727955",
-        "fecha": "2025-01-26T19:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2025
-      },
-      {
-        "id": "694398",
-        "fecha": "2024-10-06T21:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2024
-      },
-      {
-        "id": "656441",
-        "fecha": "2023-05-19T21:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2023
-      },
-      {
-        "id": "635374",
-        "fecha": "2022-07-19T21:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
         "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2022
-      },
-      {
-        "id": "620944",
-        "fecha": "2021-11-03T21:10:00-03:00",
-        "competencia": "Copa Argentina",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2020
-      },
-      {
-        "id": "610191",
-        "fecha": "2021-08-08T18:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2021
-      },
-      {
-        "id": "590557",
-        "fecha": "2021-01-09T21:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2020
-      }
-    ],
-    "desde": 2020
-  },
-  "235": {
-    "rival": {
-      "id": "235",
-      "nombre": "Banfield",
-      "corto": "Banfield",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png"
-    },
-    "pj": 8,
-    "g": 4,
-    "e": 2,
-    "p": 2,
-    "gf": 10,
-    "gc": 5,
-    "partidos": [
-      {
-        "id": "401926286",
-        "fecha": "2026-11-14T19:00:00-03:00",
-        "competencia": "Copa Argentina",
-        "condicion": "V",
-        "goles_boca": 3,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2026
-      },
-      {
-        "id": "729066",
-        "fecha": "2025-08-24T18:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2025
-      },
-      {
-        "id": "728042",
-        "fecha": "2025-02-14T20:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2025
-      },
-      {
-        "id": "694256",
-        "fecha": "2024-07-31T20:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 3,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2024
-      },
-      {
-        "id": "656302",
-        "fecha": "2023-03-12T21:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 1,
         "penales_boca": null,
         "penales_rival": null,
         "resultado": "P",
         "temporada": 2023
       },
       {
-        "id": "635341",
-        "fecha": "2022-07-01T21:30:00-03:00",
+        "id": "635496",
+        "fecha": "2022-09-04T18:00:00-03:00",
         "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 3,
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 1,
         "penales_boca": null,
         "penales_rival": null,
-        "resultado": "P",
+        "resultado": "G",
         "temporada": 2022
       },
       {
-        "id": "610232",
-        "fecha": "2021-07-24T20:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 0,
+        "id": "627258",
+        "fecha": "2022-02-13T21:30:00-03:00",
+        "competencia": "Copa de la Liga",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 1,
         "penales_boca": null,
         "penales_rival": null,
         "resultado": "E",
+        "temporada": 2022
+      },
+      {
+        "id": "610088",
+        "fecha": "2021-09-26T20:15:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
         "temporada": 2021
       },
       {
-        "id": "592392",
-        "fecha": "2021-01-17T22:10:00-03:00",
+        "id": "551758",
+        "fecha": "2020-02-28T21:10:00-03:00",
         "competencia": "Liga Profesional",
+        "condicion": "V",
+        "goles_boca": 4,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
+      }
+    ],
+    "desde": 2019
+  },
+  "4811": {
+    "rival": {
+      "id": "4811",
+      "nombre": "Caracas FC",
+      "corto": "Caracas",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4811.png"
+    },
+    "pj": 2,
+    "g": 1,
+    "e": 1,
+    "p": 0,
+    "gf": 4,
+    "gc": 1,
+    "partidos": [
+      {
+        "id": "561196",
+        "fecha": "2020-10-22T21:30:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "L",
+        "goles_boca": 3,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2020
+      },
+      {
+        "id": "561255",
+        "fecha": "2020-03-03T21:30:00-03:00",
+        "competencia": "Copa Libertadores",
         "condicion": "V",
         "goles_boca": 1,
         "goles_rival": 1,
@@ -1785,11 +3547,11 @@
       "corto": "Gimnasia LP",
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9.png"
     },
-    "pj": 6,
-    "g": 3,
+    "pj": 7,
+    "g": 4,
     "e": 2,
     "p": 1,
-    "gf": 9,
+    "gf": 10,
     "gc": 6,
     "partidos": [
       {
@@ -1863,9 +3625,209 @@
         "penales_rival": null,
         "resultado": "E",
         "temporada": 2021
+      },
+      {
+        "id": "551745",
+        "fecha": "2020-03-07T21:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2019
       }
     ],
-    "desde": 2021
+    "desde": 2019
+  },
+  "2690": {
+    "rival": {
+      "id": "2690",
+      "nombre": "Independiente Medellín",
+      "corto": "Ind. Medellín",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2690.png"
+    },
+    "pj": 2,
+    "g": 2,
+    "e": 0,
+    "p": 0,
+    "gf": 4,
+    "gc": 0,
+    "partidos": [
+      {
+        "id": "561225",
+        "fecha": "2020-09-24T21:00:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2020
+      },
+      {
+        "id": "561254",
+        "fecha": "2020-03-10T21:30:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "L",
+        "goles_boca": 3,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2020
+      }
+    ],
+    "desde": 2020
+  },
+  "2670": {
+    "rival": {
+      "id": "2670",
+      "nombre": "Libertad",
+      "corto": "Libertad",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2670.png"
+    },
+    "pj": 2,
+    "g": 1,
+    "e": 1,
+    "p": 0,
+    "gf": 2,
+    "gc": 0,
+    "partidos": [
+      {
+        "id": "561219",
+        "fecha": "2020-09-29T21:30:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2020
+      },
+      {
+        "id": "561243",
+        "fecha": "2020-09-17T21:00:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "V",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2020
+      }
+    ],
+    "desde": 2020
+  },
+  "1936": {
+    "rival": {
+      "id": "1936",
+      "nombre": "Internacional",
+      "corto": "Internacional",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png"
+    },
+    "pj": 2,
+    "g": 1,
+    "e": 0,
+    "p": 1,
+    "gf": 1,
+    "gc": 1,
+    "partidos": [
+      {
+        "id": "587522",
+        "fecha": "2020-12-09T21:30:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2020
+      },
+      {
+        "id": "587530",
+        "fecha": "2020-12-02T21:30:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "V",
+        "goles_boca": 1,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2020
+      }
+    ],
+    "desde": 2020
+  },
+  "2674": {
+    "rival": {
+      "id": "2674",
+      "nombre": "Santos",
+      "corto": "Santos",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png"
+    },
+    "pj": 4,
+    "g": 1,
+    "e": 1,
+    "p": 2,
+    "gf": 2,
+    "gc": 4,
+    "partidos": [
+      {
+        "id": "600861",
+        "fecha": "2021-05-11T19:15:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 1,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2021
+      },
+      {
+        "id": "600891",
+        "fecha": "2021-04-27T21:30:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2021
+      },
+      {
+        "id": "591323",
+        "fecha": "2021-01-13T19:15:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "V",
+        "goles_boca": 0,
+        "goles_rival": 3,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "P",
+        "temporada": 2020
+      },
+      {
+        "id": "591325",
+        "fecha": "2021-01-06T19:15:00-03:00",
+        "competencia": "Copa Libertadores",
+        "condicion": "L",
+        "goles_boca": 0,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "E",
+        "temporada": 2020
+      }
+    ],
+    "desde": 2020
   },
   "10158": {
     "rival": {
@@ -2009,143 +3971,6 @@
     ],
     "desde": 2020
   },
-  "21": {
-    "rival": {
-      "id": "21",
-      "nombre": "Vélez Sarsfield",
-      "corto": "Vélez ",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png"
-    },
-    "pj": 10,
-    "g": 4,
-    "e": 3,
-    "p": 3,
-    "gf": 16,
-    "gc": 11,
-    "partidos": [
-      {
-        "id": "401892190",
-        "fecha": "2026-09-02T21:15:00-03:00",
-        "competencia": "Copa Argentina",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2026
-      },
-      {
-        "id": "401841482",
-        "fecha": "2026-08-08T19:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2026
-      },
-      {
-        "id": "762833",
-        "fecha": "2026-02-08T22:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2026
-      },
-      {
-        "id": "722676",
-        "fecha": "2024-11-27T21:10:00-03:00",
-        "competencia": "Copa Argentina",
-        "condicion": "L",
-        "goles_boca": 3,
-        "goles_rival": 4,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2024
-      },
-      {
-        "id": "694229",
-        "fecha": "2024-06-14T19:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2024
-      },
-      {
-        "id": "656280",
-        "fecha": "2023-02-25T21:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2023
-      },
-      {
-        "id": "635564",
-        "fecha": "2022-10-02T18:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "627366",
-        "fecha": "2022-04-09T21:30:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2022
-      },
-      {
-        "id": "610025",
-        "fecha": "2021-10-24T20:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2021
-      },
-      {
-        "id": "594571",
-        "fecha": "2021-03-07T21:30:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 7,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2021
-      }
-    ],
-    "desde": 2021
-  },
   "10151": {
     "rival": {
       "id": "10151",
@@ -2174,405 +3999,6 @@
       }
     ],
     "desde": 2020
-  },
-  "8950": {
-    "rival": {
-      "id": "8950",
-      "nombre": "Defensa y Justicia",
-      "corto": "Def. y Jus.",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png"
-    },
-    "pj": 12,
-    "g": 6,
-    "e": 4,
-    "p": 2,
-    "gf": 17,
-    "gc": 6,
-    "partidos": [
-      {
-        "id": "401841669",
-        "fecha": "2026-11-07T17:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2026
-      },
-      {
-        "id": "763011",
-        "fecha": "2026-04-23T20:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 4,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2026
-      },
-      {
-        "id": "729126",
-        "fecha": "2025-09-27T19:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2025
-      },
-      {
-        "id": "728101",
-        "fecha": "2025-03-16T18:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 4,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2025
-      },
-      {
-        "id": "694246",
-        "fecha": "2024-07-21T20:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2024
-      },
-      {
-        "id": "694021",
-        "fecha": "2024-02-10T19:15:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2024
-      },
-      {
-        "id": "656640",
-        "fecha": "2023-09-15T18:45:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2023
-      },
-      {
-        "id": "656289",
-        "fecha": "2023-03-06T21:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2023
-      },
-      {
-        "id": "635471",
-        "fecha": "2022-08-21T20:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "634997",
-        "fecha": "2022-05-10T21:30:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "610115",
-        "fecha": "2021-09-14T21:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2021
-      },
-      {
-        "id": "594519",
-        "fecha": "2021-04-03T18:30:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2021
-      }
-    ],
-    "desde": 2021
-  },
-  "20": {
-    "rival": {
-      "id": "20",
-      "nombre": "Unión (Santa Fe)",
-      "corto": "Unión (SF)",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png"
-    },
-    "pj": 11,
-    "g": 3,
-    "e": 5,
-    "p": 3,
-    "gf": 11,
-    "gc": 9,
-    "partidos": [
-      {
-        "id": "401841594",
-        "fecha": "2026-10-02T21:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 3,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2026
-      },
-      {
-        "id": "762938",
-        "fecha": "2026-03-15T22:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2026
-      },
-      {
-        "id": "729005",
-        "fecha": "2025-07-18T19:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2025
-      },
-      {
-        "id": "727969",
-        "fecha": "2025-01-29T19:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2025
-      },
-      {
-        "id": "694482",
-        "fecha": "2024-11-20T21:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2024
-      },
-      {
-        "id": "694076",
-        "fecha": "2024-03-06T19:15:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2024
-      },
-      {
-        "id": "656708",
-        "fecha": "2023-10-20T21:30:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2023
-      },
-      {
-        "id": "656538",
-        "fecha": "2023-07-06T17:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2023
-      },
-      {
-        "id": "635327",
-        "fecha": "2022-06-24T21:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2022
-      },
-      {
-        "id": "610246",
-        "fecha": "2021-07-16T19:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2021
-      },
-      {
-        "id": "594505",
-        "fecha": "2021-04-11T18:30:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2021
-      }
-    ],
-    "desde": 2021
-  },
-  "9785": {
-    "rival": {
-      "id": "9785",
-      "nombre": "Atlético Tucumán",
-      "corto": "Atl Tucumán",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9785.png"
-    },
-    "pj": 6,
-    "g": 4,
-    "e": 0,
-    "p": 2,
-    "gf": 9,
-    "gc": 6,
-    "partidos": [
-      {
-        "id": "735158",
-        "fecha": "2025-07-23T21:10:00-03:00",
-        "competencia": "Copa Argentina",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2025
-      },
-      {
-        "id": "694172",
-        "fecha": "2024-05-12T20:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2024
-      },
-      {
-        "id": "656220",
-        "fecha": "2023-01-29T21:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2023
-      },
-      {
-        "id": "635481",
-        "fecha": "2022-08-28T18:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "610104",
-        "fecha": "2021-09-18T20:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2021
-      },
-      {
-        "id": "594490",
-        "fecha": "2021-04-17T18:00:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 3,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2021
-      }
-    ],
-    "desde": 2021
   },
   "2687": {
     "rival": {
@@ -2680,95 +4106,6 @@
     ],
     "desde": 2021
   },
-  "10374": {
-    "rival": {
-      "id": "10374",
-      "nombre": "Patronato",
-      "corto": "Patronato",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10374.png"
-    },
-    "pj": 6,
-    "g": 2,
-    "e": 2,
-    "p": 2,
-    "gf": 5,
-    "gc": 5,
-    "partidos": [
-      {
-        "id": "666584",
-        "fecha": "2023-03-01T21:15:00-03:00",
-        "competencia": "Supercopa Argentina",
-        "condicion": "L",
-        "goles_boca": 3,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "654740",
-        "fecha": "2022-10-26T21:30:00-03:00",
-        "competencia": "Copa Argentina",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2022
-      },
-      {
-        "id": "635410",
-        "fecha": "2022-07-31T18:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 3,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2022
-      },
-      {
-        "id": "619827",
-        "fecha": "2021-09-22T21:30:00-03:00",
-        "competencia": "Copa Argentina",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2020
-      },
-      {
-        "id": "610172",
-        "fecha": "2021-08-21T20:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2021
-      },
-      {
-        "id": "594452",
-        "fecha": "2021-05-08T18:00:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2021
-      }
-    ],
-    "desde": 2021
-  },
   "7632": {
     "rival": {
       "id": "7632",
@@ -2805,292 +4142,6 @@
         "penales_boca": null,
         "penales_rival": null,
         "resultado": "E",
-        "temporada": 2021
-      }
-    ],
-    "desde": 2021
-  },
-  "18": {
-    "rival": {
-      "id": "18",
-      "nombre": "San Lorenzo",
-      "corto": "San Lorenzo ",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png"
-    },
-    "pj": 8,
-    "g": 3,
-    "e": 2,
-    "p": 3,
-    "gf": 10,
-    "gc": 10,
-    "partidos": [
-      {
-        "id": "401841577",
-        "fecha": "2026-09-20T14:45:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2026
-      },
-      {
-        "id": "762912",
-        "fecha": "2026-03-11T19:45:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2026
-      },
-      {
-        "id": "694312",
-        "fecha": "2024-08-18T14:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 3,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2024
-      },
-      {
-        "id": "694113",
-        "fecha": "2024-03-30T17:00:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2024
-      },
-      {
-        "id": "656760",
-        "fecha": "2023-11-08T19:00:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2023
-      },
-      {
-        "id": "656368",
-        "fecha": "2023-04-12T17:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2023
-      },
-      {
-        "id": "635346",
-        "fecha": "2022-07-09T15:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2022
-      },
-      {
-        "id": "610228",
-        "fecha": "2021-07-27T21:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2021
-      }
-    ],
-    "desde": 2021
-  },
-  "8": {
-    "rival": {
-      "id": "8",
-      "nombre": "Estudiantes de La Plata",
-      "corto": "Estudiantes",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png"
-    },
-    "pj": 13,
-    "g": 5,
-    "e": 3,
-    "p": 5,
-    "gf": 14,
-    "gc": 12,
-    "partidos": [
-      {
-        "id": "401841460",
-        "fecha": "2026-08-05T19:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2026
-      },
-      {
-        "id": "762794",
-        "fecha": "2026-01-28T22:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2026
-      },
-      {
-        "id": "729188",
-        "fecha": "2025-11-02T16:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2025
-      },
-      {
-        "id": "728150",
-        "fecha": "2025-04-19T20:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2025
-      },
-      {
-        "id": "694325",
-        "fecha": "2024-08-26T21:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2024
-      },
-      {
-        "id": "702161",
-        "fecha": "2024-04-30T20:00:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2024
-      },
-      {
-        "id": "694100",
-        "fecha": "2024-04-12T19:30:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2024
-      },
-      {
-        "id": "689365",
-        "fecha": "2023-11-22T21:10:00-03:00",
-        "competencia": "Copa Argentina",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 3,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2023
-      },
-      {
-        "id": "656735",
-        "fecha": "2023-10-28T19:00:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2023
-      },
-      {
-        "id": "656373",
-        "fecha": "2023-04-15T19:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2023
-      },
-      {
-        "id": "635398",
-        "fecha": "2022-07-24T20:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 3,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "627319",
-        "fecha": "2022-03-13T21:30:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "610181",
-        "fecha": "2021-08-15T18:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
         "temporada": 2021
       }
     ],
@@ -3200,499 +4251,6 @@
         "competencia": "Liga Profesional",
         "condicion": "V",
         "goles_boca": 3,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2021
-      }
-    ],
-    "desde": 2021
-  },
-  "17": {
-    "rival": {
-      "id": "17",
-      "nombre": "Rosario Central",
-      "corto": "Rosario Central",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png"
-    },
-    "pj": 7,
-    "g": 4,
-    "e": 3,
-    "p": 0,
-    "gf": 10,
-    "gc": 6,
-    "partidos": [
-      {
-        "id": "729104",
-        "fecha": "2025-09-14T17:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2025
-      },
-      {
-        "id": "728059",
-        "fecha": "2025-02-28T20:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2025
-      },
-      {
-        "id": "694349",
-        "fecha": "2024-08-31T21:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2024
-      },
-      {
-        "id": "656395",
-        "fecha": "2023-04-23T15:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2023
-      },
-      {
-        "id": "635449",
-        "fecha": "2022-08-17T21:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2022
-      },
-      {
-        "id": "627288",
-        "fecha": "2022-02-20T19:15:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "610130",
-        "fecha": "2021-09-04T20:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2021
-      }
-    ],
-    "desde": 2021
-  },
-  "7": {
-    "rival": {
-      "id": "7",
-      "nombre": "Colón (Santa Fe)",
-      "corto": "Colón SF",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/7.png"
-    },
-    "pj": 4,
-    "g": 2,
-    "e": 1,
-    "p": 1,
-    "gf": 5,
-    "gc": 4,
-    "partidos": [
-      {
-        "id": "656344",
-        "fecha": "2023-04-09T21:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2023
-      },
-      {
-        "id": "635496",
-        "fecha": "2022-09-04T18:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "627258",
-        "fecha": "2022-02-13T21:30:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2022
-      },
-      {
-        "id": "610088",
-        "fecha": "2021-09-26T20:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2021
-      }
-    ],
-    "desde": 2021
-  },
-  "6756": {
-    "rival": {
-      "id": "6756",
-      "nombre": "Godoy Cruz Antonio Tomba",
-      "corto": "Godoy Cruz",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/6756.png"
-    },
-    "pj": 7,
-    "g": 5,
-    "e": 1,
-    "p": 1,
-    "gf": 11,
-    "gc": 8,
-    "partidos": [
-      {
-        "id": "694454",
-        "fecha": "2024-11-06T19:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 4,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2024
-      },
-      {
-        "id": "694107",
-        "fecha": "2024-04-16T19:30:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2024
-      },
-      {
-        "id": "656782",
-        "fecha": "2023-11-26T21:30:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2023
-      },
-      {
-        "id": "656502",
-        "fecha": "2023-06-22T21:45:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 4,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2023
-      },
-      {
-        "id": "635553",
-        "fecha": "2022-09-23T19:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 1,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "627401",
-        "fecha": "2022-04-20T21:30:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 1,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2022
-      },
-      {
-        "id": "610040",
-        "fecha": "2021-10-20T21:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2021
-      }
-    ],
-    "desde": 2021
-  },
-  "9739": {
-    "rival": {
-      "id": "9739",
-      "nombre": "Aldosivi",
-      "corto": "Aldosivi",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9739.png"
-    },
-    "pj": 5,
-    "g": 5,
-    "e": 0,
-    "p": 0,
-    "gf": 11,
-    "gc": 3,
-    "partidos": [
-      {
-        "id": "729077",
-        "fecha": "2025-08-31T14:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2025
-      },
-      {
-        "id": "728051",
-        "fecha": "2025-02-22T19:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2025
-      },
-      {
-        "id": "635596",
-        "fecha": "2022-10-09T18:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "627274",
-        "fecha": "2022-02-16T19:15:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "609999",
-        "fecha": "2021-11-08T21:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 3,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2021
-      }
-    ],
-    "desde": 2021
-  },
-  "11989": {
-    "rival": {
-      "id": "11989",
-      "nombre": "Central Córdoba (Santiago del Estero)",
-      "corto": "C. Córdoba (SE)",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png"
-    },
-    "pj": 11,
-    "g": 8,
-    "e": 2,
-    "p": 1,
-    "gf": 29,
-    "gc": 9,
-    "partidos": [
-      {
-        "id": "401841557",
-        "fecha": "2026-09-11T21:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 3,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2026
-      },
-      {
-        "id": "762907",
-        "fecha": "2026-05-02T16:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2026
-      },
-      {
-        "id": "729111",
-        "fecha": "2025-09-21T21:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2025
-      },
-      {
-        "id": "728082",
-        "fecha": "2025-03-07T21:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 3,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2025
-      },
-      {
-        "id": "694187",
-        "fecha": "2024-05-19T20:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 4,
-        "goles_rival": 2,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2024
-      },
-      {
-        "id": "694031",
-        "fecha": "2024-02-14T19:15:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "L",
-        "goles_boca": 2,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2024
-      },
-      {
-        "id": "656654",
-        "fecha": "2023-09-19T18:45:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 3,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2023
-      },
-      {
-        "id": "656235",
-        "fecha": "2023-02-05T19:15:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 0,
-        "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2023
-      },
-      {
-        "id": "635286",
-        "fecha": "2022-06-12T20:30:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "V",
-        "goles_boca": 0,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "P",
-        "temporada": 2022
-      },
-      {
-        "id": "627411",
-        "fecha": "2022-04-23T19:00:00-03:00",
-        "competencia": "Copa de la Liga",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 1,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "G",
-        "temporada": 2022
-      },
-      {
-        "id": "609934",
-        "fecha": "2021-12-11T22:00:00-03:00",
-        "competencia": "Liga Profesional",
-        "condicion": "L",
-        "goles_boca": 8,
         "goles_rival": 1,
         "penales_boca": null,
         "penales_rival": null,
@@ -4530,35 +5088,6 @@
         "condicion": "V",
         "goles_boca": 0,
         "goles_rival": 0,
-        "penales_boca": null,
-        "penales_rival": null,
-        "resultado": "E",
-        "temporada": 2023
-      }
-    ],
-    "desde": 2023
-  },
-  "2": {
-    "rival": {
-      "id": "2",
-      "nombre": "Almagro",
-      "corto": "Almagro ",
-      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2.png"
-    },
-    "pj": 1,
-    "g": 0,
-    "e": 1,
-    "p": 0,
-    "gf": 2,
-    "gc": 2,
-    "partidos": [
-      {
-        "id": "685763",
-        "fecha": "2023-09-10T17:30:00-03:00",
-        "competencia": "Copa Argentina",
-        "condicion": "V",
-        "goles_boca": 2,
-        "goles_rival": 2,
         "penales_boca": null,
         "penales_rival": null,
         "resultado": "E",

@@ -259,5 +259,33 @@
       "gc": 1,
       "pts": 14
     }
+  },
+  "2019": {
+    "arg.1": {
+      "competencia": "Liga Profesional",
+      "grupo": "2019-20 Superliga",
+      "equipos": 24,
+      "pos": 1,
+      "pj": 23,
+      "g": 14,
+      "e": 6,
+      "p": 3,
+      "gf": 35,
+      "gc": 8,
+      "pts": 48
+    },
+    "conmebol.libertadores": {
+      "competencia": "Copa Libertadores",
+      "grupo": "Grupo G",
+      "equipos": 4,
+      "pos": 1,
+      "pj": 6,
+      "g": 3,
+      "e": 2,
+      "p": 1,
+      "gf": 11,
+      "gc": 6,
+      "pts": 11
+    }
   }
 }
