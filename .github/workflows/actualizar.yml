@@ -26,6 +26,8 @@ jobs:
       url: ${{ steps.publicar.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # siempre la última versión (si no, una corrida vieja choca con los datos nuevos)
 
       - name: Acomodar archivos y carpetas (solo si hace falta)
         run: |
@@ -62,8 +64,12 @@ jobs:
           git add contenido datos estado sitio/estatico/img
           if ! git diff --cached --quiet; then
             git commit -m "Actualización automática"
-            git pull --rebase --autostash
-            git push
+            # si otra corrida guardó datos en el medio, gana lo de esta corrida (es lo más nuevo)
+            for intento in 1 2 3; do
+              if git pull --rebase -X theirs --autostash && git push; then break; fi
+              git rebase --abort 2>/dev/null || true
+              sleep 5
+            done
           fi
 
       - uses: actions/configure-pages@v5
