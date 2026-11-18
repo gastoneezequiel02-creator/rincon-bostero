@@ -1,5 +1,758 @@
 {
-  "importado": "2026-11-18T17:49:18-03:00",
-  "alcance": "partidos oficiales",
-  "jugadores": {}
+ "importado": "2026-11-18T18:30:00-03:00",
+ "alcance": "partidos oficiales",
+ "jugadores": {
+  "partidos": {
+   "titulo": "Los que más partidos jugaron",
+   "filas": [
+    {
+     "nombre": "Roberto Mouzo",
+     "valor": 426,
+     "goles": 25
+    },
+    {
+     "nombre": "Hugo Orlando Gatti",
+     "valor": 417,
+     "goles": 0
+    },
+    {
+     "nombre": "Silvio Marzolini",
+     "valor": 408,
+     "goles": 10
+    },
+    {
+     "nombre": "Martín Palermo",
+     "valor": 404,
+     "goles": 236
+    },
+    {
+     "nombre": "Carlos Fernando Navarro Montoya",
+     "valor": 400,
+     "goles": 0
+    },
+    {
+     "nombre": "Juan Román Riquelme",
+     "valor": 388,
+     "goles": 92
+    },
+    {
+     "nombre": "Antonio Ubaldo Rattín",
+     "valor": 382,
+     "goles": 28
+    },
+    {
+     "nombre": "Ernesto Lazzatti",
+     "valor": 379,
+     "goles": 7
+    },
+    {
+     "nombre": "Rubén José Suñé",
+     "valor": 377,
+     "goles": 36
+    },
+    {
+     "nombre": "Natalio Agustín Pescia",
+     "valor": 365,
+     "goles": 9
+    },
+    {
+     "nombre": "Roberto Carlos Abbondanzieri",
+     "valor": 345,
+     "goles": 0
+    },
+    {
+     "nombre": "Pedro Bonifacio Arico Suárez",
+     "valor": 335,
+     "goles": 2
+    },
+    {
+     "nombre": "Antonio Roma",
+     "valor": 331,
+     "goles": 0
+    },
+    {
+     "nombre": "Jorge José Benítez",
+     "valor": 329,
+     "goles": 40
+    },
+    {
+     "nombre": "Hugo Benjamín Ibarra",
+     "valor": 324,
+     "goles": 10
+    },
+    {
+     "nombre": "Sebastián Alejandro Battaglia",
+     "valor": 313,
+     "goles": 24
+    },
+    {
+     "nombre": "Roberto Eugenio Cherro",
+     "valor": 305,
+     "goles": 223
+    },
+    {
+     "nombre": "Roberto Domingo Rogel",
+     "valor": 302,
+     "goles": 17
+    },
+    {
+     "nombre": "Guillermo Barros Schelotto",
+     "valor": 300,
+     "goles": 86
+    },
+    {
+     "nombre": "Carlos Adolfo Sosa",
+     "valor": 294,
+     "goles": 9
+    }
+   ]
+  },
+  "goles": {
+   "titulo": "Máximos goleadores",
+   "filas": [
+    {
+     "nombre": "Martín Palermo",
+     "valor": 236,
+     "partidos": 404
+    },
+    {
+     "nombre": "Roberto Eugenio Cherro",
+     "valor": 223,
+     "partidos": 305
+    },
+    {
+     "nombre": "Francisco Antonio Varallo",
+     "valor": 194,
+     "partidos": 222
+    },
+    {
+     "nombre": "Domingo Alberto Tarasconi",
+     "valor": 192,
+     "partidos": 236
+    },
+    {
+     "nombre": "Jaime Sarlanga",
+     "valor": 129,
+     "partidos": 220
+    },
+    {
+     "nombre": "Mario Emilio Heriberto Boyé",
+     "valor": 123,
+     "partidos": 228
+    },
+    {
+     "nombre": "Delfín Benítez Cáceres",
+     "valor": 114,
+     "partidos": 176
+    },
+    {
+     "nombre": "Bleo Pedro Fournol Calomino",
+     "valor": 99,
+     "partidos": 226
+    },
+    {
+     "nombre": "Pío Sixto Corcuera",
+     "valor": 97,
+     "partidos": 187
+    },
+    {
+     "nombre": "Carlos Alberto Tevez",
+     "valor": 94,
+     "partidos": 279
+    },
+    {
+     "nombre": "Juan Román Riquelme",
+     "valor": 92,
+     "partidos": 388
+    },
+    {
+     "nombre": "Sergio Daniel Martínez",
+     "valor": 86,
+     "partidos": 167
+    },
+    {
+     "nombre": "Guillermo Barros Schelotto",
+     "valor": 86,
+     "partidos": 300
+    },
+    {
+     "nombre": "Alfredo Oscar Graciani",
+     "valor": 83,
+     "partidos": 250
+    },
+    {
+     "nombre": "Rodrigo Sebastián Palacio",
+     "valor": 82,
+     "partidos": 185
+    },
+    {
+     "nombre": "Osvaldo Rubén Potente",
+     "valor": 81,
+     "partidos": 195
+    },
+    {
+     "nombre": "Angel Clemente Rojas",
+     "valor": 79,
+     "partidos": 222
+    },
+    {
+     "nombre": "Diego Fernando Latorre",
+     "valor": 77,
+     "partidos": 242
+    },
+    {
+     "nombre": "Paulo Angelo Valentim",
+     "valor": 71,
+     "partidos": 111
+    },
+    {
+     "nombre": "Darío Ismael Benedetto",
+     "valor": 71,
+     "partidos": 172
+    }
+   ]
+  },
+  "penales": {
+   "titulo": "Más goles de penal",
+   "filas": [
+    {
+     "nombre": "Bleo Pedro Fournol Calomino",
+     "valor": 33
+    },
+    {
+     "nombre": "Domingo Alberto Tarasconi",
+     "valor": 30
+    },
+    {
+     "nombre": "Martín Palermo",
+     "valor": 30
+    },
+    {
+     "nombre": "Rubén José Suñé",
+     "valor": 29
+    },
+    {
+     "nombre": "Guillermo Barros Schelotto",
+     "valor": 28
+    },
+    {
+     "nombre": "Francisco Antonio Varallo",
+     "valor": 20
+    },
+    {
+     "nombre": "Paulo Angelo Valentim",
+     "valor": 20
+    },
+    {
+     "nombre": "Roberto Mouzo",
+     "valor": 14
+    },
+    {
+     "nombre": "Diego Armando Maradona",
+     "valor": 14
+    },
+    {
+     "nombre": "Marcelo Antonio Trobbiani",
+     "valor": 14
+    },
+    {
+     "nombre": "Sergio Daniel Martínez",
+     "valor": 13
+    },
+    {
+     "nombre": "Severino Varela",
+     "valor": 13
+    },
+    {
+     "nombre": "Federico Roberto Edwards",
+     "valor": 13
+    },
+    {
+     "nombre": "Juan Román Riquelme",
+     "valor": 13
+    },
+    {
+     "nombre": "Alfredo Oscar Graciani",
+     "valor": 11
+    },
+    {
+     "nombre": "Jorge Daniel Ribolzi",
+     "valor": 10
+    },
+    {
+     "nombre": "Darío Ismael Benedetto",
+     "valor": 10
+    },
+    {
+     "nombre": "Darío Luis Felman",
+     "valor": 9
+    },
+    {
+     "nombre": "Enzo Ferrero",
+     "valor": 9
+    },
+    {
+     "nombre": "Miguel Alberto Nicolau",
+     "valor": 9
+    }
+   ]
+  },
+  "expulsiones": {
+   "titulo": "Los más expulsados",
+   "filas": [
+    {
+     "nombre": "Blas Armando Giunta",
+     "valor": 13
+    },
+    {
+     "nombre": "Vicente Alberto Pernía",
+     "valor": 13
+    },
+    {
+     "nombre": "Roberto Aníbal Passucci",
+     "valor": 12
+    },
+    {
+     "nombre": "Néstor Ariel Fabbri",
+     "valor": 10
+    },
+    {
+     "nombre": "Enrique Oscar Hrabina",
+     "valor": 10
+    },
+    {
+     "nombre": "Martín Palermo",
+     "valor": 10
+    },
+    {
+     "nombre": "Jorge José Benítez",
+     "valor": 10
+    },
+    {
+     "nombre": "Fabián Gustavo Carrizo",
+     "valor": 9
+    },
+    {
+     "nombre": "Clemente Juan Rodríguez",
+     "valor": 8
+    },
+    {
+     "nombre": "Ricardo Alberto Gareca",
+     "valor": 8
+    },
+    {
+     "nombre": "Antonio Ubaldo Rattín",
+     "valor": 8
+    },
+    {
+     "nombre": "Juan Ernesto Simón",
+     "valor": 7
+    },
+    {
+     "nombre": "Mario Emilio Heriberto Boyé",
+     "valor": 7
+    },
+    {
+     "nombre": "Cristian Alberto Traverso",
+     "valor": 7
+    },
+    {
+     "nombre": "José Luis Tesare",
+     "valor": 7
+    },
+    {
+     "nombre": "Alfredo Oscar Graciani",
+     "valor": 6
+    },
+    {
+     "nombre": "Fabián Andrés Vargas",
+     "valor": 6
+    },
+    {
+     "nombre": "Sebastián Alejandro Battaglia",
+     "valor": 6
+    },
+    {
+     "nombre": "Jorge Roberto Rinaldi",
+     "valor": 6
+    },
+    {
+     "nombre": "Carlos Roberto Izquierdoz",
+     "valor": 6
+    }
+   ]
+  },
+  "cabeza": {
+   "titulo": "Más goles de cabeza",
+   "filas": [
+    {
+     "nombre": "Martín Palermo",
+     "valor": 68
+    },
+    {
+     "nombre": "Roberto Eugenio Cherro",
+     "valor": 50
+    },
+    {
+     "nombre": "Jaime Sarlanga",
+     "valor": 45
+    },
+    {
+     "nombre": "Mario Emilio Heriberto Boyé",
+     "valor": 31
+    },
+    {
+     "nombre": "Pío Sixto Corcuera",
+     "valor": 28
+    },
+    {
+     "nombre": "Ricardo Alberto Gareca",
+     "valor": 22
+    },
+    {
+     "nombre": "Osvaldo Rubén Potente",
+     "valor": 20
+    },
+    {
+     "nombre": "Severino Varela",
+     "valor": 17
+    },
+    {
+     "nombre": "Delfín Benítez Cáceres",
+     "valor": 16
+    },
+    {
+     "nombre": "Alfredo Hugo Rojas",
+     "valor": 15
+    },
+    {
+     "nombre": "Rolando Carlos Schiavi",
+     "valor": 14
+    },
+    {
+     "nombre": "Sergio Daniel Martínez",
+     "valor": 14
+    },
+    {
+     "nombre": "Antonio Daniel Barijho",
+     "valor": 14
+    },
+    {
+     "nombre": "Alfredo Garasini",
+     "valor": 13
+    },
+    {
+     "nombre": "Darío Ismael Benedetto",
+     "valor": 13
+    },
+    {
+     "nombre": "Domingo Alberto Tarasconi",
+     "valor": 13
+    },
+    {
+     "nombre": "Jorge Hernán Bermúdez",
+     "valor": 13
+    },
+    {
+     "nombre": "Ricardo Antonio Alarcón",
+     "valor": 12
+    },
+    {
+     "nombre": "Lucas Ezequiel Viatri",
+     "valor": 12
+    },
+    {
+     "nombre": "Abel Aníbal Alves",
+     "valor": 11
+    }
+   ]
+  },
+  "amonestaciones": {
+   "titulo": "Los más amonestados",
+   "filas": [
+    {
+     "nombre": "Sebastián Alejandro Battaglia",
+     "valor": 71
+    },
+    {
+     "nombre": "Rolando Carlos Schiavi",
+     "valor": 69
+    },
+    {
+     "nombre": "Blas Armando Giunta",
+     "valor": 66
+    },
+    {
+     "nombre": "Guillermo Barros Schelotto",
+     "valor": 65
+    },
+    {
+     "nombre": "Guillermo Matías Fernández",
+     "valor": 60
+    },
+    {
+     "nombre": "Frank Yusty Fabra",
+     "valor": 57
+    },
+    {
+     "nombre": "Pablo Javier Pérez",
+     "valor": 57
+    },
+    {
+     "nombre": "Clemente Juan Rodríguez",
+     "valor": 55
+    },
+    {
+     "nombre": "Pablo Martín Ledesma",
+     "valor": 53
+    },
+    {
+     "nombre": "Martín Palermo",
+     "valor": 49
+    },
+    {
+     "nombre": "Cristian Alberto Traverso",
+     "valor": 48
+    },
+    {
+     "nombre": "Hugo Benjamín Ibarra",
+     "valor": 48
+    },
+    {
+     "nombre": "Daniel Alberto Díaz",
+     "valor": 46
+    },
+    {
+     "nombre": "Carlos Fernando Navarro Montoya",
+     "valor": 45
+    },
+    {
+     "nombre": "Carlos Javier Mac Allister",
+     "valor": 44
+    },
+    {
+     "nombre": "Fernando Rubén Gago",
+     "valor": 44
+    },
+    {
+     "nombre": "Fabián Andrés Vargas",
+     "valor": 42
+    },
+    {
+     "nombre": "Alfredo Raúl Cascini",
+     "valor": 41
+    },
+    {
+     "nombre": "Juan Ernesto Simón",
+     "valor": 41
+    },
+    {
+     "nombre": "Juan Román Riquelme",
+     "valor": 38
+    }
+   ]
+  }
+ },
+ "tecnicos": [
+  {
+   "nombre": "Carlos Bianchi",
+   "pj": 349,
+   "nacimiento": "Buenos Aires",
+   "g": 181,
+   "e": 97,
+   "p": 71,
+   "gf": 586,
+   "gc": 354
+  },
+  {
+   "nombre": "Mario Francisco Fortunato",
+   "pj": 259,
+   "nacimiento": "Buenos Aires",
+   "g": 171,
+   "e": 41,
+   "p": 47,
+   "gf": 651,
+   "gc": 329
+  },
+  {
+   "nombre": "Juan Carlos Lorenzo",
+   "pj": 234,
+   "nacimiento": "Buenos Aires",
+   "g": 117,
+   "e": 61,
+   "p": 56,
+   "gf": 325,
+   "gc": 228
+  },
+  {
+   "nombre": "Oscar Washington Tabárez",
+   "pj": 167,
+   "nacimiento": "Montevideo (Uruguay)",
+   "g": 82,
+   "e": 53,
+   "p": 32,
+   "gf": 212,
+   "gc": 122
+  },
+  {
+   "nombre": "Rogelio Antonio Domínguez",
+   "pj": 146,
+   "nacimiento": "Buenos Aires",
+   "g": 84,
+   "e": 17,
+   "p": 45,
+   "gf": 306,
+   "gc": 174
+  },
+  {
+   "nombre": "Miguel Angel Russo",
+   "pj": 128,
+   "nacimiento": "Valentín Alsina (Buenos Aires)",
+   "g": 60,
+   "e": 40,
+   "p": 28,
+   "gf": 203,
+   "gc": 107
+  },
+  {
+   "nombre": "Guillermo Barros Schelotto",
+   "pj": 115,
+   "nacimiento": "La Plata (Buenos Aires)",
+   "g": 62,
+   "e": 30,
+   "p": 23,
+   "gf": 201,
+   "gc": 99
+  },
+  {
+   "nombre": "Alfredo Garasini",
+   "pj": 114,
+   "nacimiento": "Buenos Aires",
+   "g": 71,
+   "e": 25,
+   "p": 18,
+   "gf": 295,
+   "gc": 163
+  },
+  {
+   "nombre": "Rodolfo Martín Arruabarrena",
+   "pj": 103,
+   "nacimiento": "Marcos Paz (Buenos Aires)",
+   "g": 64,
+   "e": 21,
+   "p": 18,
+   "gf": 167,
+   "gc": 78
+  },
+  {
+   "nombre": "Julio César Falcioni",
+   "pj": 96,
+   "nacimiento": "Buenos Aires",
+   "g": 44,
+   "e": 37,
+   "p": 15,
+   "gf": 127,
+   "gc": 85
+  },
+  {
+   "nombre": "José D´Amico",
+   "pj": 87,
+   "nacimiento": "Buenos Aires",
+   "g": 40,
+   "e": 32,
+   "p": 15,
+   "gf": 130,
+   "gc": 74
+  },
+  {
+   "nombre": "Silvio Marzolini",
+   "pj": 83,
+   "nacimiento": "Buenos Aires",
+   "g": 40,
+   "e": 26,
+   "p": 17,
+   "gf": 127,
+   "gc": 79
+  },
+  {
+   "nombre": "Carlos Ischia",
+   "pj": 83,
+   "nacimiento": "Buenos Aires",
+   "g": 41,
+   "e": 20,
+   "p": 22,
+   "gf": 133,
+   "gc": 91
+  },
+  {
+   "nombre": "José Omar Pastoriza",
+   "pj": 83,
+   "nacimiento": "Rosario (Santa Fe)",
+   "g": 41,
+   "e": 23,
+   "p": 19,
+   "gf": 121,
+   "gc": 91
+  },
+  {
+   "nombre": "Bernardo José Gandulla",
+   "pj": 82,
+   "nacimiento": "Buenos Aires",
+   "g": 31,
+   "e": 23,
+   "p": 28,
+   "gf": 130,
+   "gc": 116
+  },
+  {
+   "nombre": "Alfredo Stéfano Di Stéfano",
+   "pj": 78,
+   "nacimiento": "Buenos Aires",
+   "g": 43,
+   "e": 19,
+   "p": 16,
+   "gf": 139,
+   "gc": 69
+  },
+  {
+   "nombre": "César Luis Menotti",
+   "pj": 77,
+   "nacimiento": "Rosario (Santa Fe)",
+   "g": 28,
+   "e": 26,
+   "p": 23,
+   "gf": 116,
+   "gc": 91
+  },
+  {
+   "nombre": "Alfio Basile",
+   "pj": 76,
+   "nacimiento": "Bahía Blanca (Buenos Aires)",
+   "g": 42,
+   "e": 20,
+   "p": 14,
+   "gf": 143,
+   "gc": 73
+  },
+  {
+   "nombre": "Néstor Raúl Rossi",
+   "pj": 71,
+   "nacimiento": "Buenos Aires",
+   "g": 37,
+   "e": 24,
+   "p": 10,
+   "gf": 105,
+   "gc": 55
+  },
+  {
+   "nombre": "Carlos Daniel Aimar",
+   "pj": 71,
+   "nacimiento": "Corral de Bustos (Córdoba)",
+   "g": 24,
+   "e": 35,
+   "p": 12,
+   "gf": 78,
+   "gc": 55
+  }
+ ]
 }
