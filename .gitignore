@@ -1,0 +1,5 @@
+_sitio/
+__pycache__/
+*.pyc
+*.tmp
+.DS_Store
