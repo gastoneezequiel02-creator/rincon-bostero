@@ -121,5 +121,33 @@
       "gc": 6,
       "pts": 11
     }
+  },
+  "2023": {
+    "arg.1": {
+      "competencia": "Liga Profesional",
+      "grupo": "2023 Argentine Liga Profesional",
+      "equipos": 28,
+      "pos": 7,
+      "pj": 27,
+      "g": 13,
+      "e": 5,
+      "p": 9,
+      "gf": 33,
+      "gc": 24,
+      "pts": 44
+    },
+    "arg.copa_lpf": {
+      "competencia": "Copa de la Liga",
+      "grupo": "Group B",
+      "equipos": 14,
+      "pos": 7,
+      "pj": 14,
+      "g": 5,
+      "e": 3,
+      "p": 6,
+      "gf": 17,
+      "gc": 16,
+      "pts": 18
+    }
   }
 }

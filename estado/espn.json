@@ -11,6 +11,12 @@
     "2024:arg.1",
     "2024:arg.copa_lpf",
     "2024:conmebol.libertadores",
-    "2024:conmebol.sudamericana"
+    "2024:conmebol.sudamericana",
+    "2024:conmebol.recopa",
+    "2024:arg.copa",
+    "2024:arg.supercopa",
+    "2024:fifa.cwc",
+    "2023:arg.1",
+    "2023:arg.copa_lpf"
   ]
 }
