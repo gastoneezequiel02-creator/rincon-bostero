@@ -315,5 +315,20 @@
       "gc": 4,
       "pts": 9
     }
+  },
+  "2017": {
+    "arg.1": {
+      "competencia": "Liga Profesional",
+      "grupo": "2017/18 Superliga",
+      "equipos": 28,
+      "pos": 1,
+      "pj": 27,
+      "g": 18,
+      "e": 4,
+      "p": 5,
+      "gf": 50,
+      "gc": 22,
+      "pts": 58
+    }
   }
 }

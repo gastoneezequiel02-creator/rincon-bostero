@@ -1,5 +1,702 @@
 [
   {
+    "id": "493489",
+    "fecha": "2017-08-27T18:05:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 3,
+      "penales": null
+    },
+    "visitante": {
+      "id": "2636",
+      "nombre": "Olimpo",
+      "corto": "Olimpo",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2636.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "2636",
+      "nombre": "Olimpo",
+      "corto": "Olimpo",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2636.png"
+    },
+    "goles_boca": 3,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "493471",
+    "fecha": "2017-09-10T20:05:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Ciudad de Lanús",
+    "ciudad": "Buenos Aires",
+    "condicion": "V",
+    "local": {
+      "id": "12",
+      "nombre": "Lanús",
+      "corto": "Lanús ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "12",
+      "nombre": "Lanús",
+      "corto": "Lanús ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "493458",
+    "fecha": "2017-09-17T18:05:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 4,
+      "penales": null
+    },
+    "visitante": {
+      "id": "6756",
+      "nombre": "Godoy Cruz Antonio Tomba",
+      "corto": "Godoy Cruz",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/6756.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "6756",
+      "nombre": "Godoy Cruz Antonio Tomba",
+      "corto": "Godoy Cruz",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/6756.png"
+    },
+    "goles_boca": 4,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "493443",
+    "fecha": "2017-09-23T18:05:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "José Amalfitani",
+    "ciudad": "Buenos Aires",
+    "condicion": "V",
+    "local": {
+      "id": "21",
+      "nombre": "Vélez Sarsfield",
+      "corto": "Vélez ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 4,
+      "penales": null
+    },
+    "rival": {
+      "id": "21",
+      "nombre": "Vélez Sarsfield",
+      "corto": "Vélez ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png"
+    },
+    "goles_boca": 4,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "493428",
+    "fecha": "2017-10-01T18:05:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "6",
+      "nombre": "Chacarita Juniors",
+      "corto": "Chacarita ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/6.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "6",
+      "nombre": "Chacarita Juniors",
+      "corto": "Chacarita ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/6.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "493415",
+    "fecha": "2017-10-15T20:05:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Presbítero Bartolomé Grella",
+    "ciudad": "Parana",
+    "condicion": "V",
+    "local": {
+      "id": "10374",
+      "nombre": "Patronato",
+      "corto": "Patronato",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10374.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "rival": {
+      "id": "10374",
+      "nombre": "Patronato",
+      "corto": "Patronato",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10374.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "493399",
+    "fecha": "2017-10-29T18:05:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 4,
+      "penales": null
+    },
+    "visitante": {
+      "id": "4",
+      "nombre": "Belgrano (Córdoba)",
+      "corto": "Belgrano ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "4",
+      "nombre": "Belgrano (Córdoba)",
+      "corto": "Belgrano ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4.png"
+    },
+    "goles_boca": 4,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "493387",
+    "fecha": "2017-11-05T18:05:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Mâs Monumental",
+    "ciudad": "Buenos Aires",
+    "condicion": "V",
+    "local": {
+      "id": "16",
+      "nombre": "River Plate",
+      "corto": "River Plate",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "rival": {
+      "id": "16",
+      "nombre": "River Plate",
+      "corto": "River Plate",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "493378",
+    "fecha": "2017-11-19T19:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "15",
+      "nombre": "Racing Club",
+      "corto": "Racing ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png",
+      "goles": 2,
+      "penales": null
+    },
+    "rival": {
+      "id": "15",
+      "nombre": "Racing Club",
+      "corto": "Racing ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 2,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
+  },
+  {
+    "id": "493358",
+    "fecha": "2017-11-26T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Gigante de Arroyito",
+    "ciudad": "Rosario",
+    "condicion": "V",
+    "local": {
+      "id": "17",
+      "nombre": "Rosario Central",
+      "corto": "Rosario Central",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "17",
+      "nombre": "Rosario Central",
+      "corto": "Rosario Central",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
+  },
+  {
+    "id": "493342",
+    "fecha": "2017-12-03T19:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "2635",
+      "nombre": "Arsenal Sarandi",
+      "corto": "Arsenal Sarandi",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2635.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "2635",
+      "nombre": "Arsenal Sarandi",
+      "corto": "Arsenal Sarandi",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2635.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "493330",
+    "fecha": "2017-12-10T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Estadio Centenario Ciudad de Quilmes",
+    "ciudad": "Quilmes, Buenos Aires",
+    "condicion": "V",
+    "local": {
+      "id": "8",
+      "nombre": "Estudiantes de La Plata",
+      "corto": "Estudiantes",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "8",
+      "nombre": "Estudiantes de La Plata",
+      "corto": "Estudiantes",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "493318",
+    "fecha": "2018-01-27T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "7",
+      "nombre": "Colón (Santa Fe)",
+      "corto": "Colón SF",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/7.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "7",
+      "nombre": "Colón (Santa Fe)",
+      "corto": "Colón SF",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/7.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "493301",
+    "fecha": "2018-02-04T19:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Nuevo Gasómetro",
+    "ciudad": "Buenos Aires",
+    "condicion": "V",
+    "local": {
+      "id": "18",
+      "nombre": "San Lorenzo",
+      "corto": "San Lorenzo ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "18",
+      "nombre": "San Lorenzo",
+      "corto": "San Lorenzo ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
+    "id": "493299",
+    "fecha": "2018-02-11T19:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "10162",
+      "nombre": "Temperley",
+      "corto": "Temperley",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10162.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "10162",
+      "nombre": "Temperley",
+      "corto": "Temperley",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10162.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "493273",
+    "fecha": "2018-02-18T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Florencio Solá",
+    "ciudad": "Buenos Aires",
+    "condicion": "V",
+    "local": {
+      "id": "235",
+      "nombre": "Banfield",
+      "corto": "Banfield",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "235",
+      "nombre": "Banfield",
+      "corto": "Banfield",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "493269",
+    "fecha": "2018-02-25T19:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 4,
+      "penales": null
+    },
+    "visitante": {
+      "id": "7845",
+      "nombre": "San Martín (San Juan)",
+      "corto": "San Martín SJ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/7845.png",
+      "goles": 2,
+      "penales": null
+    },
+    "rival": {
+      "id": "7845",
+      "nombre": "San Martín (San Juan)",
+      "corto": "San Martín SJ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/7845.png"
+    },
+    "goles_boca": 4,
+    "goles_rival": 2,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "501068",
     "fecha": "2018-03-01T21:30:00-03:00",
     "hora_a_confirmar": false,
@@ -39,6 +736,170 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "E"
+  },
+  {
+    "id": "493244",
+    "fecha": "2018-03-05T21:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Diego Armando Maradona",
+    "ciudad": "Buenos Aires",
+    "condicion": "V",
+    "local": {
+      "id": "3",
+      "nombre": "Argentinos Juniors",
+      "corto": "Argentinos ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/3.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "3",
+      "nombre": "Argentinos Juniors",
+      "corto": "Argentinos ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/3.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 2,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
+  },
+  {
+    "id": "493243",
+    "fecha": "2018-03-10T19:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "7767",
+      "nombre": "Tigre",
+      "corto": "Tigre",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/7767.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "7767",
+      "nombre": "Tigre",
+      "corto": "Tigre",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/7767.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "493217",
+    "fecha": "2018-03-18T17:45:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Monumental Presidente José Fierro",
+    "ciudad": "Tucuman",
+    "condicion": "V",
+    "local": {
+      "id": "9785",
+      "nombre": "Atlético Tucumán",
+      "corto": "Atl Tucumán",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9785.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "9785",
+      "nombre": "Atlético Tucumán",
+      "corto": "Atl Tucumán",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9785.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
+    "id": "493213",
+    "fecha": "2018-04-01T17:45:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "19",
+      "nombre": "Talleres (Córdoba)",
+      "corto": "Talleres ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "19",
+      "nombre": "Talleres (Córdoba)",
+      "corto": "Talleres ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
   },
   {
     "id": "501062",
@@ -82,6 +943,47 @@
     "resultado": "G"
   },
   {
+    "id": "493191",
+    "fecha": "2018-04-07T20:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "8950",
+      "nombre": "Defensa y Justicia",
+      "corto": "Def. y Jus.",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
+      "goles": 2,
+      "penales": null
+    },
+    "rival": {
+      "id": "8950",
+      "nombre": "Defensa y Justicia",
+      "corto": "Def. y Jus.",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 2,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
+  },
+  {
     "id": "501037",
     "fecha": "2018-04-11T21:45:00-03:00",
     "hora_a_confirmar": false,
@@ -121,6 +1023,88 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "E"
+  },
+  {
+    "id": "493178",
+    "fecha": "2018-04-15T20:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Estadio Libertadores de América",
+    "ciudad": "Avellaneda",
+    "condicion": "V",
+    "local": {
+      "id": "11",
+      "nombre": "Independiente",
+      "corto": "Independiente",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "11",
+      "nombre": "Independiente",
+      "corto": "Independiente",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
+  },
+  {
+    "id": "493167",
+    "fecha": "2018-04-22T20:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 3,
+      "penales": null
+    },
+    "visitante": {
+      "id": "14",
+      "nombre": "Newell's Old Boys",
+      "corto": "Newell's",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "14",
+      "nombre": "Newell's Old Boys",
+      "corto": "Newell's",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png"
+    },
+    "goles_boca": 3,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
   },
   {
     "id": "501030",
@@ -205,6 +1189,129 @@
     "resultado": "E"
   },
   {
+    "id": "493144",
+    "fecha": "2018-05-06T17:45:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "20",
+      "nombre": "Unión (Santa Fe)",
+      "corto": "Unión (SF)",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "20",
+      "nombre": "Unión (Santa Fe)",
+      "corto": "Unión (SF)",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "493150",
+    "fecha": "2018-05-09T19:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Juan Carmelo Zerillo (El Bosque)",
+    "ciudad": "La Plata",
+    "condicion": "V",
+    "local": {
+      "id": "9",
+      "nombre": "Gimnasia La Plata",
+      "corto": "Gimnasia LP",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "rival": {
+      "id": "9",
+      "nombre": "Gimnasia La Plata",
+      "corto": "Gimnasia LP",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 2,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
+    "id": "493122",
+    "fecha": "2018-05-12T11:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2017,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Tomás Adolfo Ducó",
+    "ciudad": "Buenos Aires",
+    "condicion": "V",
+    "local": {
+      "id": "10",
+      "nombre": "Huracán",
+      "corto": "Huracán ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10.png",
+      "goles": 3,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 3,
+      "penales": null
+    },
+    "rival": {
+      "id": "10",
+      "nombre": "Huracán",
+      "corto": "Huracán ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10.png"
+    },
+    "goles_boca": 3,
+    "goles_rival": 3,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
     "id": "500987",
     "fecha": "2018-05-16T21:45:00-03:00",
     "hora_a_confirmar": false,
@@ -240,6 +1347,47 @@
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2680.png"
     },
     "goles_boca": 5,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "508535",
+    "fecha": "2018-08-01T19:10:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2018,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Ciudad de Lanús",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 6,
+      "penales": null
+    },
+    "visitante": {
+      "id": "19143",
+      "nombre": "Alvarado (Mar del Plata)",
+      "corto": "Alvarado",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/19143.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "19143",
+      "nombre": "Alvarado (Mar del Plata)",
+      "corto": "Alvarado",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/19143.png"
+    },
+    "goles_boca": 6,
     "goles_rival": 0,
     "penales_boca": null,
     "penales_rival": null,
@@ -492,6 +1640,47 @@
     "resultado": "G"
   },
   {
+    "id": "523984",
+    "fecha": "2018-09-07T18:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2018,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Don Carlos Antonio Romero",
+    "ciudad": "",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "17814",
+      "nombre": "San Martín (Tucumán)",
+      "corto": "San Martín (T)",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17814.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "17814",
+      "nombre": "San Martín (Tucumán)",
+      "corto": "San Martín (T)",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17814.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "521354",
     "fecha": "2018-09-15T20:00:00-03:00",
     "hora_a_confirmar": false,
@@ -610,6 +1799,47 @@
     },
     "goles_boca": 0,
     "goles_rival": 2,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
+  },
+  {
+    "id": "527063",
+    "fecha": "2018-09-27T21:10:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2018,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Mario Alberto Kempes",
+    "ciudad": "Córdoba",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "9",
+      "nombre": "Gimnasia La Plata",
+      "corto": "Gimnasia LP",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "9",
+      "nombre": "Gimnasia La Plata",
+      "corto": "Gimnasia LP",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 1,
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "P"
@@ -1840,6 +3070,47 @@
     },
     "goles_boca": 2,
     "goles_rival": 2,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
+    "id": "535552",
+    "fecha": "2019-05-02T21:10:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Supercopa Argentina",
+    "competencia_slug": "arg.supercopa",
+    "instancia": "Boca Juniors win 6-5 on penalties",
+    "temporada": 2018,
+    "estado": "finalizado",
+    "detalle": "FT-Pens",
+    "estadio": "Malvinas Argentinas (Mendoza)",
+    "ciudad": "Mendoza",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "17",
+      "nombre": "Rosario Central",
+      "corto": "Rosario Central",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "17",
+      "nombre": "Rosario Central",
+      "corto": "Rosario Central",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 0,
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "E"

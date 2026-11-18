@@ -59,6 +59,12 @@
     "2018:arg.1",
     "2018:arg.copa_lpf",
     "2018:conmebol.libertadores",
-    "2018:conmebol.sudamericana"
+    "2018:conmebol.sudamericana",
+    "2018:conmebol.recopa",
+    "2018:arg.copa",
+    "2018:arg.supercopa",
+    "2018:fifa.cwc",
+    "2017:arg.1",
+    "2017:arg.copa_lpf"
   ]
 }
