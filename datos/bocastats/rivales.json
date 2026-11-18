@@ -1,2174 +1,2174 @@
 {
- "_fuente": "BocaStats (bocastats.com/historial/), con permiso. Todos los partidos, incluidos amistosos y era amateur. Copia del 18/11/2026; se actualiza sola una vez por semana.",
- "consultado": "2026-11-18",
- "totales": {
-  "pj": 5875,
-  "g": 2954,
-  "e": 1520,
-  "p": 1401,
-  "gf": 10490,
-  "gc": 6653
- },
- "rivales": [
-  {
-   "slug": "river",
-   "nombre": "River",
-   "pj": 391,
-   "g": 140,
-   "e": 122,
-   "p": 129,
-   "dg": 37
-  },
-  {
-   "slug": "racing",
-   "nombre": "Racing",
-   "pj": 311,
-   "g": 130,
-   "e": 77,
-   "p": 104,
-   "dg": 43
-  },
-  {
-   "slug": "independiente",
-   "nombre": "Independiente",
-   "pj": 299,
-   "g": 113,
-   "e": 90,
-   "p": 96,
-   "dg": 33
-  },
-  {
-   "slug": "san-lorenzo",
-   "nombre": "San Lorenzo",
-   "pj": 280,
-   "g": 102,
-   "e": 79,
-   "p": 99,
-   "dg": 26
-  },
-  {
-   "slug": "estudiantes",
-   "nombre": "Estudiantes",
-   "pj": 248,
-   "g": 132,
-   "e": 56,
-   "p": 60,
-   "dg": 144
-  },
-  {
-   "slug": "huracan",
-   "nombre": "Huracan",
-   "pj": 219,
-   "g": 112,
-   "e": 61,
-   "p": 46,
-   "dg": 147
-  },
-  {
-   "slug": "velez",
-   "nombre": "Velez",
-   "pj": 218,
-   "g": 106,
-   "e": 55,
-   "p": 57,
-   "dg": 117
-  },
-  {
-   "slug": "newells",
-   "nombre": "Newells",
-   "pj": 205,
-   "g": 90,
-   "e": 56,
-   "p": 59,
-   "dg": 83
-  },
-  {
-   "slug": "rosario-central",
-   "nombre": "Rosario Central",
-   "pj": 196,
-   "g": 84,
-   "e": 53,
-   "p": 59,
-   "dg": 53
-  },
-  {
-   "slug": "gimnasia",
-   "nombre": "Gimnasia",
-   "pj": 177,
-   "g": 94,
-   "e": 43,
-   "p": 40,
-   "dg": 137
-  },
-  {
-   "slug": "ferro",
-   "nombre": "Ferro",
-   "pj": 165,
-   "g": 85,
-   "e": 52,
-   "p": 28,
-   "dg": 152
-  },
-  {
-   "slug": "argentinos",
-   "nombre": "Argentinos",
-   "pj": 158,
-   "g": 74,
-   "e": 48,
-   "p": 36,
-   "dg": 87
-  },
-  {
-   "slug": "lanus",
-   "nombre": "Lanus",
-   "pj": 155,
-   "g": 86,
-   "e": 43,
-   "p": 26,
-   "dg": 158
-  },
-  {
-   "slug": "platense",
-   "nombre": "Platense",
-   "pj": 154,
-   "g": 68,
-   "e": 52,
-   "p": 34,
-   "dg": 95
-  },
-  {
-   "slug": "chacarita",
-   "nombre": "Chacarita",
-   "pj": 132,
-   "g": 83,
-   "e": 29,
-   "p": 20,
-   "dg": 152
-  },
-  {
-   "slug": "banfield",
-   "nombre": "Banfield",
-   "pj": 130,
-   "g": 76,
-   "e": 28,
-   "p": 26,
-   "dg": 128
-  },
-  {
-   "slug": "atlanta",
-   "nombre": "Atlanta",
-   "pj": 113,
-   "g": 63,
-   "e": 32,
-   "p": 18,
-   "dg": 133
-  },
-  {
-   "slug": "talleres",
-   "nombre": "Talleres",
-   "pj": 95,
-   "g": 39,
-   "e": 31,
-   "p": 25,
-   "dg": 18
-  },
-  {
-   "slug": "colon",
-   "nombre": "Colon",
-   "pj": 95,
-   "g": 56,
-   "e": 18,
-   "p": 21,
-   "dg": 74
-  },
-  {
-   "slug": "tigre",
-   "nombre": "Tigre",
-   "pj": 92,
-   "g": 61,
-   "e": 15,
-   "p": 16,
-   "dg": 114
-  },
-  {
-   "slug": "union",
-   "nombre": "Union",
-   "pj": 86,
-   "g": 44,
-   "e": 23,
-   "p": 19,
-   "dg": 49
-  },
-  {
-   "slug": "quilmes",
-   "nombre": "Quilmes",
-   "pj": 74,
-   "g": 44,
-   "e": 20,
-   "p": 10,
-   "dg": 96
-  },
-  {
-   "slug": "nacional-uru",
-   "nombre": "Nacional Uru",
-   "pj": 66,
-   "g": 22,
-   "e": 23,
-   "p": 21,
-   "dg": -2
-  },
-  {
-   "slug": "belgrano",
-   "nombre": "Belgrano",
-   "pj": 63,
-   "g": 32,
-   "e": 12,
-   "p": 19,
-   "dg": 32
-  },
-  {
-   "slug": "instituto",
-   "nombre": "Instituto",
-   "pj": 46,
-   "g": 21,
-   "e": 16,
-   "p": 9,
-   "dg": 26
-  },
-  {
-   "slug": "penarol",
-   "nombre": "Penarol",
-   "pj": 43,
-   "g": 21,
-   "e": 6,
-   "p": 16,
-   "dg": -1
-  },
-  {
-   "slug": "arsenal",
-   "nombre": "Arsenal",
-   "pj": 39,
-   "g": 20,
-   "e": 11,
-   "p": 8,
-   "dg": 22
-  },
-  {
-   "slug": "atletico-tucuman",
-   "nombre": "Atletico Tucuman",
-   "pj": 36,
-   "g": 18,
-   "e": 6,
-   "p": 12,
-   "dg": 16
-  },
-  {
-   "slug": "godoy-cruz",
-   "nombre": "Godoy Cruz",
-   "pj": 35,
-   "g": 20,
-   "e": 8,
-   "p": 7,
-   "dg": 18
-  },
-  {
-   "slug": "deportivo-espanol",
-   "nombre": "Deportivo Espanol",
-   "pj": 33,
-   "g": 11,
-   "e": 15,
-   "p": 7,
-   "dg": 13
-  },
-  {
-   "slug": "estudiantil-p",
-   "nombre": "Estudiantil P",
-   "pj": 30,
-   "g": 18,
-   "e": 5,
-   "p": 7,
-   "dg": 25
-  },
-  {
-   "slug": "colo-colo",
-   "nombre": "Colo Colo",
-   "pj": 30,
-   "g": 20,
-   "e": 4,
-   "p": 6,
-   "dg": 25
-  },
-  {
-   "slug": "olimpia-paraguay",
-   "nombre": "Olimpia Paraguay",
-   "pj": 30,
-   "g": 13,
-   "e": 8,
-   "p": 9,
-   "dg": 6
-  },
-  {
-   "slug": "gimnasia-j",
-   "nombre": "Gimnasia J",
-   "pj": 29,
-   "g": 18,
-   "e": 7,
-   "p": 4,
-   "dg": 34
-  },
-  {
-   "slug": "olimpo-b-blanca",
-   "nombre": "Olimpo B Blanca",
-   "pj": 29,
-   "g": 18,
-   "e": 9,
-   "p": 2,
-   "dg": 31
-  },
-  {
-   "slug": "all-boys",
-   "nombre": "All Boys",
-   "pj": 28,
-   "g": 16,
-   "e": 5,
-   "p": 7,
-   "dg": 27
-  },
-  {
-   "slug": "san-martin-tuc",
-   "nombre": "San Martin Tuc",
-   "pj": 27,
-   "g": 17,
-   "e": 5,
-   "p": 5,
-   "dg": 35
-  },
-  {
-   "slug": "palmeiras",
-   "nombre": "Palmeiras",
-   "pj": 27,
-   "g": 4,
-   "e": 15,
-   "p": 8,
-   "dg": -9
-  },
-  {
-   "slug": "sp-barracas",
-   "nombre": "Sp Barracas",
-   "pj": 26,
-   "g": 16,
-   "e": 6,
-   "p": 4,
-   "dg": 28
-  },
-  {
-   "slug": "nueva-chicago",
-   "nombre": "Nueva Chicago",
-   "pj": 25,
-   "g": 16,
-   "e": 7,
-   "p": 2,
-   "dg": 33
-  },
-  {
-   "slug": "temperley",
-   "nombre": "Temperley",
-   "pj": 25,
-   "g": 15,
-   "e": 7,
-   "p": 3,
-   "dg": 23
-  },
-  {
-   "slug": "argentino-quilmes",
-   "nombre": "Argentino Quilmes",
-   "pj": 23,
-   "g": 18,
-   "e": 2,
-   "p": 3,
-   "dg": 45
-  },
-  {
-   "slug": "sarmiento",
-   "nombre": "Sarmiento",
-   "pj": 22,
-   "g": 16,
-   "e": 4,
-   "p": 2,
-   "dg": 36
-  },
-  {
-   "slug": "talleres-re",
-   "nombre": "Talleres Re",
-   "pj": 22,
-   "g": 15,
-   "e": 5,
-   "p": 2,
-   "dg": 33
-  },
-  {
-   "slug": "san-pablo",
-   "nombre": "San Pablo",
-   "pj": 22,
-   "g": 9,
-   "e": 6,
-   "p": 7,
-   "dg": 1
-  },
-  {
-   "slug": "aldosivi",
-   "nombre": "Aldosivi",
-   "pj": 21,
-   "g": 13,
-   "e": 4,
-   "p": 4,
-   "dg": 25
-  },
-  {
-   "slug": "porteno",
-   "nombre": "Porteno",
-   "pj": 21,
-   "g": 18,
-   "e": 3,
-   "p": 0,
-   "dg": 53
-  },
-  {
-   "slug": "cerro-porteno",
-   "nombre": "Cerro Porteno",
-   "pj": 20,
-   "g": 10,
-   "e": 6,
-   "p": 4,
-   "dg": 16
-  },
-  {
-   "slug": "cruzeiro",
-   "nombre": "Cruzeiro",
-   "pj": 20,
-   "g": 7,
-   "e": 5,
-   "p": 8,
-   "dg": -1
-  },
-  {
-   "slug": "gimnasia-mendoza",
-   "nombre": "Gimnasia Mendoza",
-   "pj": 19,
-   "g": 9,
-   "e": 5,
-   "p": 5,
-   "dg": 19
-  },
-  {
-   "slug": "defensa",
-   "nombre": "Defensa",
-   "pj": 19,
-   "g": 11,
-   "e": 5,
-   "p": 3,
-   "dg": 16
-  },
-  {
-   "slug": "corinthians",
-   "nombre": "Corinthians",
-   "pj": 19,
-   "g": 6,
-   "e": 8,
-   "p": 5,
-   "dg": 7
-  },
-  {
-   "slug": "estudiantes-ba",
-   "nombre": "Estudiantes Ba",
-   "pj": 18,
-   "g": 12,
-   "e": 3,
-   "p": 3,
-   "dg": 27
-  },
-  {
-   "slug": "san-martin-sj",
-   "nombre": "San Martin Sj",
-   "pj": 17,
-   "g": 11,
-   "e": 3,
-   "p": 3,
-   "dg": 12
-  },
-  {
-   "slug": "universitario-p",
-   "nombre": "Universitario P",
-   "pj": 17,
-   "g": 7,
-   "e": 4,
-   "p": 6,
-   "dg": 4
-  },
-  {
-   "slug": "racing-cba",
-   "nombre": "Racing Cba",
-   "pj": 16,
-   "g": 6,
-   "e": 5,
-   "p": 5,
-   "dg": 2
-  },
-  {
-   "slug": "santos",
-   "nombre": "Santos",
-   "pj": 16,
-   "g": 5,
-   "e": 3,
-   "p": 8,
-   "dg": -6
-  },
-  {
-   "slug": "vasco-da-gama",
-   "nombre": "Vasco Da Gama",
-   "pj": 16,
-   "g": 7,
-   "e": 7,
-   "p": 2,
-   "dg": 9
-  },
-  {
-   "slug": "deportivo-mandiyu",
-   "nombre": "Deportivo Mandiyu",
-   "pj": 14,
-   "g": 8,
-   "e": 5,
-   "p": 1,
-   "dg": 13
-  },
-  {
-   "slug": "san-isidro",
-   "nombre": "San Isidro",
-   "pj": 14,
-   "g": 5,
-   "e": 4,
-   "p": 5,
-   "dg": 3
-  },
-  {
-   "slug": "bolivar",
-   "nombre": "Bolivar",
-   "pj": 14,
-   "g": 6,
-   "e": 4,
-   "p": 4,
-   "dg": 10
-  },
-  {
-   "slug": "almagro",
-   "nombre": "Almagro",
-   "pj": 13,
-   "g": 6,
-   "e": 3,
-   "p": 4,
-   "dg": 16
-  },
-  {
-   "slug": "del-plata",
-   "nombre": "Del Plata",
-   "pj": 13,
-   "g": 7,
-   "e": 3,
-   "p": 3,
-   "dg": 19
-  },
-  {
-   "slug": "el-porvenir",
-   "nombre": "El Porvenir",
-   "pj": 13,
-   "g": 11,
-   "e": 2,
-   "p": 0,
-   "dg": 24
-  },
-  {
-   "slug": "alianza-lima",
-   "nombre": "Alianza Lima",
-   "pj": 13,
-   "g": 7,
-   "e": 3,
-   "p": 3,
-   "dg": 14
-  },
-  {
-   "slug": "america-mex",
-   "nombre": "America Mex",
-   "pj": 13,
-   "g": 9,
-   "e": 1,
-   "p": 3,
-   "dg": 11
-  },
-  {
-   "slug": "u-catolica-chi",
-   "nombre": "U Catolica Chi",
-   "pj": 13,
-   "g": 8,
-   "e": 2,
-   "p": 3,
-   "dg": 11
-  },
-  {
-   "slug": "barracas",
-   "nombre": "Barracas",
-   "pj": 12,
-   "g": 11,
-   "e": 1,
-   "p": 0,
-   "dg": 33
-  },
-  {
-   "slug": "independiente-rivadavia",
-   "nombre": "Independiente Rivadavia",
-   "pj": 12,
-   "g": 5,
-   "e": 6,
-   "p": 1,
-   "dg": 12
-  },
-  {
-   "slug": "patronato",
-   "nombre": "Patronato",
-   "pj": 12,
-   "g": 7,
-   "e": 3,
-   "p": 2,
-   "dg": 7
-  },
-  {
-   "slug": "atl-rafaela",
-   "nombre": "Atl Rafaela",
-   "pj": 12,
-   "g": 7,
-   "e": 3,
-   "p": 2,
-   "dg": 7
-  },
-  {
-   "slug": "chaco-for-ever",
-   "nombre": "Chaco For Ever",
-   "pj": 12,
-   "g": 6,
-   "e": 6,
-   "p": 0,
-   "dg": 12
-  },
-  {
-   "slug": "sp-palermo",
-   "nombre": "Sp Palermo",
-   "pj": 12,
-   "g": 10,
-   "e": 0,
-   "p": 2,
-   "dg": 18
-  },
-  {
-   "slug": "dep-cali",
-   "nombre": "Dep Cali",
-   "pj": 12,
-   "g": 6,
-   "e": 4,
-   "p": 2,
-   "dg": 9
-  },
-  {
-   "slug": "flamengo",
-   "nombre": "Flamengo",
-   "pj": 12,
-   "g": 5,
-   "e": 3,
-   "p": 4,
-   "dg": 7
-  },
-  {
-   "slug": "comercio",
-   "nombre": "Comercio",
-   "pj": 11,
-   "g": 11,
-   "e": 0,
-   "p": 0,
-   "dg": 26
-  },
-  {
-   "slug": "san-fernando",
-   "nombre": "San Fernando",
-   "pj": 11,
-   "g": 10,
-   "e": 1,
-   "p": 0,
-   "dg": 34
-  },
-  {
-   "slug": "libertad-par",
-   "nombre": "Libertad Par",
-   "pj": 11,
-   "g": 8,
-   "e": 3,
-   "p": 0,
-   "dg": 16
-  },
-  {
-   "slug": "c-cordoba-ros",
-   "nombre": "C Cordoba Ros",
-   "pj": 10,
-   "g": 7,
-   "e": 1,
-   "p": 2,
-   "dg": 10
-  },
-  {
-   "slug": "def-de-belgrano",
-   "nombre": "Def De Belgrano",
-   "pj": 10,
-   "g": 7,
-   "e": 2,
-   "p": 1,
-   "dg": 17
-  },
-  {
-   "slug": "gimnasia-y-tiro-s",
-   "nombre": "Gimnasia Y Tiro S",
-   "pj": 10,
-   "g": 7,
-   "e": 2,
-   "p": 1,
-   "dg": 17
-  },
-  {
-   "slug": "barcelona-ecu",
-   "nombre": "Barcelona Ecu",
-   "pj": 10,
-   "g": 5,
-   "e": 2,
-   "p": 3,
-   "dg": 7
-  },
-  {
-   "slug": "inter-brasil",
-   "nombre": "Inter Brasil",
-   "pj": 10,
-   "g": 4,
-   "e": 1,
-   "p": 5,
-   "dg": 0
-  },
-  {
-   "slug": "milan",
-   "nombre": "Milan",
-   "pj": 10,
-   "g": 3,
-   "e": 5,
-   "p": 2,
-   "dg": 0
-  },
-  {
-   "slug": "arg-de-banfield",
-   "nombre": "Arg De Banfield",
-   "pj": 9,
-   "g": 8,
-   "e": 0,
-   "p": 1,
-   "dg": 17
-  },
-  {
-   "slug": "san-lorenzo-mdp",
-   "nombre": "San Lorenzo Mdp",
-   "pj": 9,
-   "g": 8,
-   "e": 0,
-   "p": 1,
-   "dg": 16
-  },
-  {
-   "slug": "atl-mineiro",
-   "nombre": "Atl Mineiro",
-   "pj": 9,
-   "g": 3,
-   "e": 5,
-   "p": 1,
-   "dg": 2
-  },
-  {
-   "slug": "guadalajara",
-   "nombre": "Guadalajara",
-   "pj": 9,
-   "g": 2,
-   "e": 6,
-   "p": 1,
-   "dg": -1
-  },
-  {
-   "slug": "real-madrid",
-   "nombre": "Real Madrid",
-   "pj": 9,
-   "g": 4,
-   "e": 1,
-   "p": 4,
-   "dg": -3
-  },
-  {
-   "slug": "sp-cristal",
-   "nombre": "Sp Cristal",
-   "pj": 9,
-   "g": 6,
-   "e": 1,
-   "p": 2,
-   "dg": 8
-  },
-  {
-   "slug": "the-strongest",
-   "nombre": "The Strongest",
-   "pj": 9,
-   "g": 6,
-   "e": 1,
-   "p": 2,
-   "dg": 8
-  },
-  {
-   "slug": "central-norte-s",
-   "nombre": "Central Norte S",
-   "pj": 8,
-   "g": 7,
-   "e": 0,
-   "p": 1,
-   "dg": 14
-  },
-  {
-   "slug": "cipolletti",
-   "nombre": "Cipolletti",
-   "pj": 8,
-   "g": 6,
-   "e": 1,
-   "p": 1,
-   "dg": 9
-  },
-  {
-   "slug": "kimberley",
-   "nombre": "Kimberley",
-   "pj": 8,
-   "g": 4,
-   "e": 1,
-   "p": 3,
-   "dg": 2
-  },
-  {
-   "slug": "los-andes",
-   "nombre": "Los Andes",
-   "pj": 8,
-   "g": 5,
-   "e": 1,
-   "p": 2,
-   "dg": 6
-  },
-  {
-   "slug": "fluminense",
-   "nombre": "Fluminense",
-   "pj": 8,
-   "g": 3,
-   "e": 2,
-   "p": 3,
-   "dg": 1
-  },
-  {
-   "slug": "gremio",
-   "nombre": "Gremio",
-   "pj": 8,
-   "g": 5,
-   "e": 1,
-   "p": 2,
-   "dg": 6
-  },
-  {
-   "slug": "guarani-a-franco",
-   "nombre": "Guarani A Franco",
-   "pj": 8,
-   "g": 6,
-   "e": 1,
-   "p": 1,
-   "dg": 8
-  },
-  {
-   "slug": "universidad-chi",
-   "nombre": "Universidad Chi",
-   "pj": 8,
-   "g": 5,
-   "e": 1,
-   "p": 2,
-   "dg": 3
-  },
-  {
-   "slug": "alvear",
-   "nombre": "Alvear",
-   "pj": 7,
-   "g": 5,
-   "e": 1,
-   "p": 1,
-   "dg": 16
-  },
-  {
-   "slug": "boca-alumni",
-   "nombre": "Boca Alumni",
-   "pj": 7,
-   "g": 6,
-   "e": 0,
-   "p": 1,
-   "dg": 21
-  },
-  {
-   "slug": "columbian",
-   "nombre": "Columbian",
-   "pj": 7,
-   "g": 5,
-   "e": 1,
-   "p": 1,
-   "dg": 9
-  },
-  {
-   "slug": "deportivo-armenio",
-   "nombre": "Deportivo Armenio",
-   "pj": 7,
-   "g": 3,
-   "e": 3,
-   "p": 1,
-   "dg": 4
-  },
-  {
-   "slug": "geba",
-   "nombre": "Geba",
-   "pj": 7,
-   "g": 3,
-   "e": 4,
-   "p": 0,
-   "dg": 6
-  },
-  {
-   "slug": "kimberley-mdp",
-   "nombre": "Kimberley Mdp",
-   "pj": 7,
-   "g": 5,
-   "e": 2,
-   "p": 0,
-   "dg": 9
-  },
-  {
-   "slug": "nacional",
-   "nombre": "Nacional",
-   "pj": 7,
-   "g": 2,
-   "e": 1,
-   "p": 4,
-   "dg": 0
-  },
-  {
-   "slug": "san-telmo",
-   "nombre": "San Telmo",
-   "pj": 7,
-   "g": 4,
-   "e": 2,
-   "p": 1,
-   "dg": 5
-  },
-  {
-   "slug": "sportivo-del-norte",
-   "nombre": "Sportivo Del Norte",
-   "pj": 7,
-   "g": 7,
-   "e": 0,
-   "p": 0,
-   "dg": 24
-  },
-  {
-   "slug": "tiro-federal-ros",
-   "nombre": "Tiro Federal Ros",
-   "pj": 7,
-   "g": 2,
-   "e": 2,
-   "p": 3,
-   "dg": -7
-  },
-  {
-   "slug": "atl-paranaense",
-   "nombre": "Atl Paranaense",
-   "pj": 7,
-   "g": 5,
-   "e": 0,
-   "p": 2,
-   "dg": 3
-  },
-  {
-   "slug": "atlas-mexico",
-   "nombre": "Atlas Mexico",
-   "pj": 7,
-   "g": 3,
-   "e": 2,
-   "p": 2,
-   "dg": 4
-  },
-  {
-   "slug": "altos-hornos-zapla",
-   "nombre": "Altos Hornos Zapla",
-   "pj": 6,
-   "g": 4,
-   "e": 0,
-   "p": 2,
-   "dg": 7
-  },
-  {
-   "slug": "dock-sud",
-   "nombre": "Dock Sud",
-   "pj": 6,
-   "g": 5,
-   "e": 0,
-   "p": 1,
-   "dg": 8
-  },
-  {
-   "slug": "estudiantes-rio-iv",
-   "nombre": "Estudiantes Rio Iv",
-   "pj": 6,
-   "g": 4,
-   "e": 2,
-   "p": 0,
-   "dg": 18
-  },
-  {
-   "slug": "palermo",
-   "nombre": "Palermo",
-   "pj": 6,
-   "g": 6,
-   "e": 0,
-   "p": 0,
-   "dg": 15
-  },
-  {
-   "slug": "america-col",
-   "nombre": "America Col",
-   "pj": 6,
-   "g": 4,
-   "e": 2,
-   "p": 0,
-   "dg": 9
-  },
-  {
-   "slug": "benfica",
-   "nombre": "Benfica",
-   "pj": 6,
-   "g": 1,
-   "e": 5,
-   "p": 0,
-   "dg": 1
-  },
-  {
-   "slug": "defensor-uru",
-   "nombre": "Defensor Uru",
-   "pj": 6,
-   "g": 2,
-   "e": 3,
-   "p": 1,
-   "dg": 4
-  },
-  {
-   "slug": "j-wilstermann",
-   "nombre": "J Wilstermann",
-   "pj": 6,
-   "g": 2,
-   "e": 3,
-   "p": 1,
-   "dg": 4
-  },
-  {
-   "slug": "junior-col",
-   "nombre": "Junior Col",
-   "pj": 6,
-   "g": 3,
-   "e": 3,
-   "p": 0,
-   "dg": 6
-  },
-  {
-   "slug": "montevideo-wanderers",
-   "nombre": "Montevideo Wanderers",
-   "pj": 6,
-   "g": 5,
-   "e": 0,
-   "p": 1,
-   "dg": 7
-  },
-  {
-   "slug": "independiente-med",
-   "nombre": "Independiente Med",
-   "pj": 6,
-   "g": 4,
-   "e": 0,
-   "p": 2,
-   "dg": 4
-  },
-  {
-   "slug": "belgrano-rosario",
-   "nombre": "Belgrano Rosario",
-   "pj": 5,
-   "g": 3,
-   "e": 0,
-   "p": 2,
-   "dg": 1
-  },
-  {
-   "slug": "desamparados",
-   "nombre": "Desamparados",
-   "pj": 5,
-   "g": 4,
-   "e": 1,
-   "p": 0,
-   "dg": 10
-  },
-  {
-   "slug": "eureka",
-   "nombre": "Eureka",
-   "pj": 5,
-   "g": 5,
-   "e": 0,
-   "p": 0,
-   "dg": 13
-  },
-  {
-   "slug": "excursionistas",
-   "nombre": "Excursionistas",
-   "pj": 5,
-   "g": 3,
-   "e": 2,
-   "p": 0,
-   "dg": 6
-  },
-  {
-   "slug": "progresista",
-   "nombre": "Progresista",
-   "pj": 5,
-   "g": 5,
-   "e": 0,
-   "p": 0,
-   "dg": 13
-  },
-  {
-   "slug": "riachuelo",
-   "nombre": "Riachuelo",
-   "pj": 5,
-   "g": 4,
-   "e": 1,
-   "p": 0,
-   "dg": 10
-  },
-  {
-   "slug": "san-martin-mza",
-   "nombre": "San Martin Mza",
-   "pj": 5,
-   "g": 0,
-   "e": 3,
-   "p": 2,
-   "dg": -2
-  },
-  {
-   "slug": "sp-buenos-aires",
-   "nombre": "Sp Buenos Aires",
-   "pj": 5,
-   "g": 5,
-   "e": 0,
-   "p": 0,
-   "dg": 12
-  },
-  {
-   "slug": "liga-dep-univ-ecu",
-   "nombre": "Liga Dep Univ Ecu",
-   "pj": 5,
-   "g": 2,
-   "e": 2,
-   "p": 1,
-   "dg": 4
-  },
-  {
-   "slug": "o-petrolero",
-   "nombre": "O Petrolero",
-   "pj": 5,
-   "g": 3,
-   "e": 1,
-   "p": 1,
-   "dg": 2
-  },
-  {
-   "slug": "toluca",
-   "nombre": "Toluca",
-   "pj": 5,
-   "g": 2,
-   "e": 0,
-   "p": 3,
-   "dg": 1
-  },
-  {
-   "slug": "universal-uru",
-   "nombre": "Universal Uru",
-   "pj": 5,
-   "g": 3,
-   "e": 0,
-   "p": 2,
-   "dg": 2
-  },
-  {
-   "slug": "atlanta-argentinos",
-   "nombre": "Atlanta Argentinos",
-   "pj": 4,
-   "g": 3,
-   "e": 0,
-   "p": 1,
-   "dg": 6
-  },
-  {
-   "slug": "belgrano-ath",
-   "nombre": "Belgrano Ath",
-   "pj": 4,
-   "g": 1,
-   "e": 1,
-   "p": 2,
-   "dg": -3
-  },
-  {
-   "slug": "colegiales",
-   "nombre": "Colegiales",
-   "pj": 4,
-   "g": 2,
-   "e": 2,
-   "p": 0,
-   "dg": 10
-  },
-  {
-   "slug": "huracan-ta",
-   "nombre": "Huracan Ta",
-   "pj": 4,
-   "g": 4,
-   "e": 0,
-   "p": 0,
-   "dg": 8
-  },
-  {
-   "slug": "santamarina-tandil",
-   "nombre": "Santamarina Tandil",
-   "pj": 4,
-   "g": 3,
-   "e": 1,
-   "p": 0,
-   "dg": 10
-  },
-  {
-   "slug": "urquiza",
-   "nombre": "Urquiza",
-   "pj": 4,
-   "g": 4,
-   "e": 0,
-   "p": 0,
-   "dg": 12
-  },
-  {
-   "slug": "always-ready",
-   "nombre": "Always Ready",
-   "pj": 4,
-   "g": 3,
-   "e": 1,
-   "p": 0,
-   "dg": 4
-  },
-  {
-   "slug": "atl-nacional",
-   "nombre": "Atl Nacional",
-   "pj": 4,
-   "g": 2,
-   "e": 0,
-   "p": 2,
-   "dg": 1
-  },
-  {
-   "slug": "bayern-munich",
-   "nombre": "Bayern Munich",
-   "pj": 4,
-   "g": 1,
-   "e": 1,
-   "p": 2,
-   "dg": -1
-  },
-  {
-   "slug": "cobreloa",
-   "nombre": "Cobreloa",
-   "pj": 4,
-   "g": 4,
-   "e": 0,
-   "p": 0,
-   "dg": 4
-  },
-  {
-   "slug": "cruz-azul",
-   "nombre": "Cruz Azul",
-   "pj": 4,
-   "g": 1,
-   "e": 1,
-   "p": 2,
-   "dg": -2
-  },
-  {
-   "slug": "dep-cuenca",
-   "nombre": "Dep Cuenca",
-   "pj": 4,
-   "g": 2,
-   "e": 1,
-   "p": 1,
-   "dg": 3
-  },
-  {
-   "slug": "el-nacional-ecu",
-   "nombre": "El Nacional Ecu",
-   "pj": 4,
-   "g": 2,
-   "e": 2,
-   "p": 0,
-   "dg": 4
-  },
-  {
-   "slug": "guarani-par",
-   "nombre": "Guarani Par",
-   "pj": 4,
-   "g": 3,
-   "e": 1,
-   "p": 0,
-   "dg": 6
-  },
-  {
-   "slug": "once-caldas",
-   "nombre": "Once Caldas",
-   "pj": 4,
-   "g": 1,
-   "e": 2,
-   "p": 1,
-   "dg": 1
-  },
-  {
-   "slug": "santiago-wanderers",
-   "nombre": "Santiago Wanderers",
-   "pj": 4,
-   "g": 2,
-   "e": 1,
-   "p": 1,
-   "dg": 1
-  },
-  {
-   "slug": "zamora",
-   "nombre": "Zamora",
-   "pj": 4,
-   "g": 3,
-   "e": 1,
-   "p": 0,
-   "dg": 11
-  },
-  {
-   "slug": "independiente-ecu",
-   "nombre": "Independiente Ecu",
-   "pj": 4,
-   "g": 1,
-   "e": 1,
-   "p": 2,
-   "dg": -1
-  },
-  {
-   "slug": "central-cordoba",
-   "nombre": "Central Cordoba",
-   "pj": 3,
-   "g": 1,
-   "e": 1,
-   "p": 1,
-   "dg": 3
-  },
-  {
-   "slug": "alianza-cutral-co",
-   "nombre": "Alianza Cutral Co",
-   "pj": 3,
-   "g": 2,
-   "e": 0,
-   "p": 1,
-   "dg": 1
-  },
-  {
-   "slug": "almirante-brown",
-   "nombre": "Almirante Brown",
-   "pj": 3,
-   "g": 2,
-   "e": 0,
-   "p": 1,
-   "dg": 2
-  },
-  {
-   "slug": "argentino-del-sud",
-   "nombre": "Argentino Del Sud",
-   "pj": 3,
-   "g": 3,
-   "e": 0,
-   "p": 0,
-   "dg": 12
-  },
-  {
-   "slug": "huracan-corr",
-   "nombre": "Huracan Corr",
-   "pj": 3,
-   "g": 3,
-   "e": 0,
-   "p": 0,
-   "dg": 7
-  },
-  {
-   "slug": "junin",
-   "nombre": "Junin",
-   "pj": 3,
-   "g": 2,
-   "e": 0,
-   "p": 1,
-   "dg": 5
-  },
-  {
-   "slug": "juv-alianza-sj",
-   "nombre": "Juv Alianza Sj",
-   "pj": 3,
-   "g": 3,
-   "e": 0,
-   "p": 0,
-   "dg": 7
-  },
-  {
-   "slug": "sp-almagro",
-   "nombre": "Sp Almagro",
-   "pj": 3,
-   "g": 2,
-   "e": 1,
-   "p": 0,
-   "dg": 6
-  },
-  {
-   "slug": "sportsman",
-   "nombre": "Sportsman",
-   "pj": 3,
-   "g": 3,
-   "e": 0,
-   "p": 0,
-   "dg": 11
-  },
-  {
-   "slug": "talleres-lanus",
-   "nombre": "Talleres Lanus",
-   "pj": 3,
-   "g": 2,
-   "e": 0,
-   "p": 1,
-   "dg": 3
-  },
-  {
-   "slug": "blooming",
-   "nombre": "Blooming",
-   "pj": 3,
-   "g": 1,
-   "e": 1,
-   "p": 1,
-   "dg": 4
-  },
-  {
-   "slug": "cienciano",
-   "nombre": "Cienciano",
-   "pj": 3,
-   "g": 1,
-   "e": 1,
-   "p": 1,
-   "dg": -2
-  },
-  {
-   "slug": "emelec",
-   "nombre": "Emelec",
-   "pj": 3,
-   "g": 3,
-   "e": 0,
-   "p": 0,
-   "dg": 5
-  },
-  {
-   "slug": "palestino",
-   "nombre": "Palestino",
-   "pj": 3,
-   "g": 2,
-   "e": 0,
-   "p": 1,
-   "dg": 3
-  },
-  {
-   "slug": "dep-riestra",
-   "nombre": "Dep Riestra",
-   "pj": 3,
-   "g": 1,
-   "e": 1,
-   "p": 1,
-   "dg": -2
-  },
-  {
-   "slug": "alvarado-mdp",
-   "nombre": "Alvarado Mdp",
-   "pj": 2,
-   "g": 1,
-   "e": 1,
-   "p": 0,
-   "dg": 6
-  },
-  {
-   "slug": "argentino-rosario",
-   "nombre": "Argentino Rosario",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 2
-  },
-  {
-   "slug": "belgrano-ath-ii",
-   "nombre": "Belgrano Ath Ii",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 3
-  },
-  {
-   "slug": "bernal",
-   "nombre": "Bernal",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 11
-  },
-  {
-   "slug": "brown-pto-madryn",
-   "nombre": "Brown Pto Madryn",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 5
-  },
-  {
-   "slug": "continental-b",
-   "nombre": "Continental B",
-   "pj": 2,
-   "g": 1,
-   "e": 1,
-   "p": 0,
-   "dg": 2
-  },
-  {
-   "slug": "deportivo-italiano",
-   "nombre": "Deportivo Italiano",
-   "pj": 2,
-   "g": 1,
-   "e": 1,
-   "p": 0,
-   "dg": 1
-  },
-  {
-   "slug": "ferrocarril-sud",
-   "nombre": "Ferrocarril Sud",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 9
-  },
-  {
-   "slug": "ferro-pico",
-   "nombre": "Ferro Pico",
-   "pj": 2,
-   "g": 1,
-   "e": 1,
-   "p": 0,
-   "dg": 1
-  },
-  {
-   "slug": "gemes-santiago",
-   "nombre": "Gemes Santiago",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 7
-  },
-  {
-   "slug": "gimnasia-chivilcoy",
-   "nombre": "Gimnasia Chivilcoy",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 8
-  },
-  {
-   "slug": "gral-san-martin",
-   "nombre": "Gral San Martin",
-   "pj": 2,
-   "g": 1,
-   "e": 1,
-   "p": 0,
-   "dg": 3
-  },
-  {
-   "slug": "hispano-argentino",
-   "nombre": "Hispano Argentino",
-   "pj": 2,
-   "g": 1,
-   "e": 0,
-   "p": 1,
-   "dg": 1
-  },
-  {
-   "slug": "huracan-ing-white",
-   "nombre": "Huracan Ing White",
-   "pj": 2,
-   "g": 1,
-   "e": 1,
-   "p": 0,
-   "dg": 8
-  },
-  {
-   "slug": "independiente-b",
-   "nombre": "Independiente B",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 7
-  },
-  {
-   "slug": "instituto-americano",
-   "nombre": "Instituto Americano",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 4
-  },
-  {
-   "slug": "la-plata-fc",
-   "nombre": "La Plata Fc",
-   "pj": 2,
-   "g": 1,
-   "e": 1,
-   "p": 0,
-   "dg": 1
-  },
-  {
-   "slug": "liberal-argentino",
-   "nombre": "Liberal Argentino",
-   "pj": 2,
-   "g": 1,
-   "e": 1,
-   "p": 0,
-   "dg": 3
-  },
-  {
-   "slug": "los-andes-sj",
-   "nombre": "Los Andes Sj",
-   "pj": 2,
-   "g": 0,
-   "e": 1,
-   "p": 1,
-   "dg": -1
-  },
-  {
-   "slug": "m-moreno-junin",
-   "nombre": "M Moreno Junin",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 5
-  },
-  {
-   "slug": "olivos",
-   "nombre": "Olivos",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 8
-  },
-  {
-   "slug": "puerto-comercial",
-   "nombre": "Puerto Comercial",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 10
-  },
-  {
-   "slug": "quilmes-b",
-   "nombre": "Quilmes B",
-   "pj": 2,
-   "g": 0,
-   "e": 2,
-   "p": 0,
-   "dg": 0
-  },
-  {
-   "slug": "river-plate-b",
-   "nombre": "River Plate B",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 5
-  },
-  {
-   "slug": "san-isidro-ii",
-   "nombre": "San Isidro Ii",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 5
-  },
-  {
-   "slug": "sarmiento-sde",
-   "nombre": "Sarmiento Sde",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 4
-  },
-  {
-   "slug": "sp-balcarce",
-   "nombre": "Sp Balcarce",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 4
-  },
-  {
-   "slug": "borussia-m",
-   "nombre": "Borussia M",
-   "pj": 2,
-   "g": 1,
-   "e": 1,
-   "p": 0,
-   "dg": 3
-  },
-  {
-   "slug": "caracas",
-   "nombre": "Caracas",
-   "pj": 2,
-   "g": 1,
-   "e": 1,
-   "p": 0,
-   "dg": 3
-  },
-  {
-   "slug": "cucuta",
-   "nombre": "Cucuta",
-   "pj": 2,
-   "g": 1,
-   "e": 0,
-   "p": 1,
-   "dg": 1
-  },
-  {
-   "slug": "dep-capiata",
-   "nombre": "Dep Capiata",
-   "pj": 2,
-   "g": 1,
-   "e": 0,
-   "p": 1,
-   "dg": 0
-  },
-  {
-   "slug": "dep-italia-ven",
-   "nombre": "Dep Italia Ven",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 4
-  },
-  {
-   "slug": "dep-pereira",
-   "nombre": "Dep Pereira",
-   "pj": 2,
-   "g": 1,
-   "e": 0,
-   "p": 1,
-   "dg": 0
-  },
-  {
-   "slug": "dep-quito",
-   "nombre": "Dep Quito",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 5
-  },
-  {
-   "slug": "fortaleza",
-   "nombre": "Fortaleza",
-   "pj": 2,
-   "g": 0,
-   "e": 1,
-   "p": 1,
-   "dg": -2
-  },
-  {
-   "slug": "lara-fc",
-   "nombre": "Lara Fc",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 4
-  },
-  {
-   "slug": "monagas",
-   "nombre": "Monagas",
-   "pj": 2,
-   "g": 1,
-   "e": 1,
-   "p": 0,
-   "dg": 4
-  },
-  {
-   "slug": "nacional-bol",
-   "nombre": "Nacional Bol",
-   "pj": 2,
-   "g": 1,
-   "e": 1,
-   "p": 0,
-   "dg": 4
-  },
-  {
-   "slug": "pachuca",
-   "nombre": "Pachuca",
-   "pj": 2,
-   "g": 1,
-   "e": 0,
-   "p": 1,
-   "dg": 2
-  },
-  {
-   "slug": "paysandu",
-   "nombre": "Paysandu",
-   "pj": 2,
-   "g": 1,
-   "e": 0,
-   "p": 1,
-   "dg": 1
-  },
-  {
-   "slug": "sao-caetano",
-   "nombre": "Sao Caetano",
-   "pj": 2,
-   "g": 0,
-   "e": 2,
-   "p": 0,
-   "dg": 0
-  },
-  {
-   "slug": "sp-trinidense",
-   "nombre": "Sp Trinidense",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 2
-  },
-  {
-   "slug": "tachira",
-   "nombre": "Tachira",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 4
-  },
-  {
-   "slug": "tolima",
-   "nombre": "Tolima",
-   "pj": 2,
-   "g": 1,
-   "e": 1,
-   "p": 0,
-   "dg": 3
-  },
-  {
-   "slug": "u-espanola-chile",
-   "nombre": "U Espanola Chile",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 2
-  },
-  {
-   "slug": "u-maracaibo",
-   "nombre": "U Maracaibo",
-   "pj": 2,
-   "g": 1,
-   "e": 1,
-   "p": 0,
-   "dg": 3
-  },
-  {
-   "slug": "unam",
-   "nombre": "Unam",
-   "pj": 2,
-   "g": 0,
-   "e": 2,
-   "p": 0,
-   "dg": 0
-  },
-  {
-   "slug": "universitario-bol",
-   "nombre": "Universitario Bol",
-   "pj": 2,
-   "g": 1,
-   "e": 1,
-   "p": 0,
-   "dg": 4
-  },
-  {
-   "slug": "ohiggins",
-   "nombre": "Ohiggins",
-   "pj": 2,
-   "g": 1,
-   "e": 0,
-   "p": 1,
-   "dg": 0
-  },
-  {
-   "slug": "deportivo-recoleta",
-   "nombre": "Deportivo Recoleta",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 6
-  },
-  {
-   "slug": "central-cordoba-santiago-del-estero",
-   "nombre": "Central Cordoba Santiago Del Estero",
-   "pj": 2,
-   "g": 2,
-   "e": 0,
-   "p": 0,
-   "dg": 3
-  },
-  {
-   "slug": "agropecuario",
-   "nombre": "Agropecuario",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 1
-  },
-  {
-   "slug": "argentino-maiz-maiz",
-   "nombre": "Argentino Maiz Maiz",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 5
-  },
-  {
-   "slug": "claypole",
-   "nombre": "Claypole",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 1
-  },
-  {
-   "slug": "crucero-del-norte",
-   "nombre": "Crucero Del Norte",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 1
-  },
-  {
-   "slug": "dep-merlo",
-   "nombre": "Dep Merlo",
-   "pj": 1,
-   "g": 0,
-   "e": 1,
-   "p": 0,
-   "dg": 0
-  },
-  {
-   "slug": "estudiantes-ii",
-   "nombre": "Estudiantes Ii",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 2
-  },
-  {
-   "slug": "fed-tucumana",
-   "nombre": "Fed Tucumana",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 6
-  },
-  {
-   "slug": "flores",
-   "nombre": "Flores",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 4
-  },
-  {
-   "slug": "floresta",
-   "nombre": "Floresta",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 3
-  },
-  {
-   "slug": "g-belgrano-lp",
-   "nombre": "G Belgrano Lp",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 1
-  },
-  {
-   "slug": "honor-y-patria-b",
-   "nombre": "Honor Y Patria B",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 8
-  },
-  {
-   "slug": "huracan-las-heras",
-   "nombre": "Huracan Las Heras",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 2
-  },
-  {
-   "slug": "pretender",
-   "nombre": "Pretender",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 2
-  },
-  {
-   "slug": "racing-club-b",
-   "nombre": "Racing Club B",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 1
-  },
-  {
-   "slug": "royal",
-   "nombre": "Royal",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 4
-  },
-  {
-   "slug": "sociedad-sportiva",
-   "nombre": "Sociedad Sportiva",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 6
-  },
-  {
-   "slug": "sportivo-coghlan",
-   "nombre": "Sportivo Coghlan",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 1
-  },
-  {
-   "slug": "universal",
-   "nombre": "Universal",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 8
-  },
-  {
-   "slug": "victoria",
-   "nombre": "Victoria",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 8
-  },
-  {
-   "slug": "villa-ballester",
-   "nombre": "Villa Ballester",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 1
-  },
-  {
-   "slug": "auckland-city",
-   "nombre": "Auckland City",
-   "pj": 1,
-   "g": 0,
-   "e": 1,
-   "p": 0,
-   "dg": 0
-  },
-  {
-   "slug": "etoile-tunez",
-   "nombre": "Etoile Tunez",
-   "pj": 1,
-   "g": 1,
-   "e": 0,
-   "p": 0,
-   "dg": 1
-  }
- ]
+  "_fuente": "BocaStats (bocastats.com/historial/), con permiso. Todos los partidos, incluidos amistosos y era amateur. Copia del 18/11/2026; se actualiza sola una vez por semana.",
+  "consultado": "2026-11-18",
+  "totales": {
+    "pj": 5875,
+    "g": 2954,
+    "e": 1520,
+    "p": 1401,
+    "gf": 10490,
+    "gc": 6653
+  },
+  "rivales": [
+    {
+      "slug": "river",
+      "nombre": "RI\n River",
+      "pj": 391,
+      "g": 140,
+      "e": 122,
+      "p": 129,
+      "dg": 37
+    },
+    {
+      "slug": "racing",
+      "nombre": "RA\n Racing",
+      "pj": 311,
+      "g": 130,
+      "e": 77,
+      "p": 104,
+      "dg": 43
+    },
+    {
+      "slug": "independiente",
+      "nombre": "IN\n Independiente",
+      "pj": 299,
+      "g": 113,
+      "e": 90,
+      "p": 96,
+      "dg": 33
+    },
+    {
+      "slug": "san-lorenzo",
+      "nombre": "SL\n San Lorenzo",
+      "pj": 280,
+      "g": 102,
+      "e": 79,
+      "p": 99,
+      "dg": 26
+    },
+    {
+      "slug": "estudiantes",
+      "nombre": "ES\n Estudiantes",
+      "pj": 248,
+      "g": 132,
+      "e": 56,
+      "p": 60,
+      "dg": 144
+    },
+    {
+      "slug": "huracan",
+      "nombre": "HU\n Huracan",
+      "pj": 219,
+      "g": 112,
+      "e": 61,
+      "p": 46,
+      "dg": 147
+    },
+    {
+      "slug": "velez",
+      "nombre": "VE\n Velez",
+      "pj": 218,
+      "g": 106,
+      "e": 55,
+      "p": 57,
+      "dg": 117
+    },
+    {
+      "slug": "newells",
+      "nombre": "NE\n Newells",
+      "pj": 205,
+      "g": 90,
+      "e": 56,
+      "p": 59,
+      "dg": 83
+    },
+    {
+      "slug": "rosario-central",
+      "nombre": "RC\n Rosario Central",
+      "pj": 196,
+      "g": 84,
+      "e": 53,
+      "p": 59,
+      "dg": 53
+    },
+    {
+      "slug": "gimnasia",
+      "nombre": "GI\n Gimnasia",
+      "pj": 177,
+      "g": 94,
+      "e": 43,
+      "p": 40,
+      "dg": 137
+    },
+    {
+      "slug": "ferro",
+      "nombre": "FE\n Ferro",
+      "pj": 165,
+      "g": 85,
+      "e": 52,
+      "p": 28,
+      "dg": 152
+    },
+    {
+      "slug": "argentinos",
+      "nombre": "AR\n Argentinos",
+      "pj": 158,
+      "g": 74,
+      "e": 48,
+      "p": 36,
+      "dg": 87
+    },
+    {
+      "slug": "lanus",
+      "nombre": "LA\n Lanus",
+      "pj": 155,
+      "g": 86,
+      "e": 43,
+      "p": 26,
+      "dg": 158
+    },
+    {
+      "slug": "platense",
+      "nombre": "PL\n Platense",
+      "pj": 154,
+      "g": 68,
+      "e": 52,
+      "p": 34,
+      "dg": 95
+    },
+    {
+      "slug": "chacarita",
+      "nombre": "CH\n Chacarita",
+      "pj": 132,
+      "g": 83,
+      "e": 29,
+      "p": 20,
+      "dg": 152
+    },
+    {
+      "slug": "banfield",
+      "nombre": "BA\n Banfield",
+      "pj": 130,
+      "g": 76,
+      "e": 28,
+      "p": 26,
+      "dg": 128
+    },
+    {
+      "slug": "atlanta",
+      "nombre": "AT\n Atlanta",
+      "pj": 113,
+      "g": 63,
+      "e": 32,
+      "p": 18,
+      "dg": 133
+    },
+    {
+      "slug": "talleres",
+      "nombre": "TA\n Talleres",
+      "pj": 95,
+      "g": 39,
+      "e": 31,
+      "p": 25,
+      "dg": 18
+    },
+    {
+      "slug": "colon",
+      "nombre": "CO\n Colon",
+      "pj": 95,
+      "g": 56,
+      "e": 18,
+      "p": 21,
+      "dg": 74
+    },
+    {
+      "slug": "tigre",
+      "nombre": "TI\n Tigre",
+      "pj": 92,
+      "g": 61,
+      "e": 15,
+      "p": 16,
+      "dg": 114
+    },
+    {
+      "slug": "union",
+      "nombre": "UN\n Union",
+      "pj": 86,
+      "g": 44,
+      "e": 23,
+      "p": 19,
+      "dg": 49
+    },
+    {
+      "slug": "quilmes",
+      "nombre": "QU\n Quilmes",
+      "pj": 74,
+      "g": 44,
+      "e": 20,
+      "p": 10,
+      "dg": 96
+    },
+    {
+      "slug": "nacional-uru",
+      "nombre": "NU\n Nacional Uru",
+      "pj": 66,
+      "g": 22,
+      "e": 23,
+      "p": 21,
+      "dg": -2
+    },
+    {
+      "slug": "belgrano",
+      "nombre": "BE\n Belgrano",
+      "pj": 63,
+      "g": 32,
+      "e": 12,
+      "p": 19,
+      "dg": 32
+    },
+    {
+      "slug": "instituto",
+      "nombre": "IN\n Instituto",
+      "pj": 46,
+      "g": 21,
+      "e": 16,
+      "p": 9,
+      "dg": 26
+    },
+    {
+      "slug": "penarol",
+      "nombre": "PE\n Penarol",
+      "pj": 43,
+      "g": 21,
+      "e": 6,
+      "p": 16,
+      "dg": -1
+    },
+    {
+      "slug": "arsenal",
+      "nombre": "AR\n Arsenal",
+      "pj": 39,
+      "g": 20,
+      "e": 11,
+      "p": 8,
+      "dg": 22
+    },
+    {
+      "slug": "atletico-tucuman",
+      "nombre": "AT\n Atletico Tucuman",
+      "pj": 36,
+      "g": 18,
+      "e": 6,
+      "p": 12,
+      "dg": 16
+    },
+    {
+      "slug": "godoy-cruz",
+      "nombre": "GC\n Godoy Cruz",
+      "pj": 35,
+      "g": 20,
+      "e": 8,
+      "p": 7,
+      "dg": 18
+    },
+    {
+      "slug": "deportivo-espanol",
+      "nombre": "DE\n Deportivo Espanol",
+      "pj": 33,
+      "g": 11,
+      "e": 15,
+      "p": 7,
+      "dg": 13
+    },
+    {
+      "slug": "estudiantil-p",
+      "nombre": "EP\n Estudiantil P",
+      "pj": 30,
+      "g": 18,
+      "e": 5,
+      "p": 7,
+      "dg": 25
+    },
+    {
+      "slug": "colo-colo",
+      "nombre": "CC\n Colo Colo",
+      "pj": 30,
+      "g": 20,
+      "e": 4,
+      "p": 6,
+      "dg": 25
+    },
+    {
+      "slug": "olimpia-paraguay",
+      "nombre": "OP\n Olimpia Paraguay",
+      "pj": 30,
+      "g": 13,
+      "e": 8,
+      "p": 9,
+      "dg": 6
+    },
+    {
+      "slug": "gimnasia-j",
+      "nombre": "GJ\n Gimnasia J",
+      "pj": 29,
+      "g": 18,
+      "e": 7,
+      "p": 4,
+      "dg": 34
+    },
+    {
+      "slug": "olimpo-b-blanca",
+      "nombre": "OB\n Olimpo B Blanca",
+      "pj": 29,
+      "g": 18,
+      "e": 9,
+      "p": 2,
+      "dg": 31
+    },
+    {
+      "slug": "all-boys",
+      "nombre": "AB\n All Boys",
+      "pj": 28,
+      "g": 16,
+      "e": 5,
+      "p": 7,
+      "dg": 27
+    },
+    {
+      "slug": "san-martin-tuc",
+      "nombre": "SM\n San Martin Tuc",
+      "pj": 27,
+      "g": 17,
+      "e": 5,
+      "p": 5,
+      "dg": 35
+    },
+    {
+      "slug": "palmeiras",
+      "nombre": "PA\n Palmeiras",
+      "pj": 27,
+      "g": 4,
+      "e": 15,
+      "p": 8,
+      "dg": -9
+    },
+    {
+      "slug": "sp-barracas",
+      "nombre": "SB\n Sp Barracas",
+      "pj": 26,
+      "g": 16,
+      "e": 6,
+      "p": 4,
+      "dg": 28
+    },
+    {
+      "slug": "nueva-chicago",
+      "nombre": "NC\n Nueva Chicago",
+      "pj": 25,
+      "g": 16,
+      "e": 7,
+      "p": 2,
+      "dg": 33
+    },
+    {
+      "slug": "temperley",
+      "nombre": "TE\n Temperley",
+      "pj": 25,
+      "g": 15,
+      "e": 7,
+      "p": 3,
+      "dg": 23
+    },
+    {
+      "slug": "argentino-quilmes",
+      "nombre": "AQ\n Argentino Quilmes",
+      "pj": 23,
+      "g": 18,
+      "e": 2,
+      "p": 3,
+      "dg": 45
+    },
+    {
+      "slug": "sarmiento",
+      "nombre": "SA\n Sarmiento",
+      "pj": 22,
+      "g": 16,
+      "e": 4,
+      "p": 2,
+      "dg": 36
+    },
+    {
+      "slug": "talleres-re",
+      "nombre": "TR\n Talleres Re",
+      "pj": 22,
+      "g": 15,
+      "e": 5,
+      "p": 2,
+      "dg": 33
+    },
+    {
+      "slug": "san-pablo",
+      "nombre": "SP\n San Pablo",
+      "pj": 22,
+      "g": 9,
+      "e": 6,
+      "p": 7,
+      "dg": 1
+    },
+    {
+      "slug": "aldosivi",
+      "nombre": "AL\n Aldosivi",
+      "pj": 21,
+      "g": 13,
+      "e": 4,
+      "p": 4,
+      "dg": 25
+    },
+    {
+      "slug": "porteno",
+      "nombre": "PO\n Porteno",
+      "pj": 21,
+      "g": 18,
+      "e": 3,
+      "p": 0,
+      "dg": 53
+    },
+    {
+      "slug": "cerro-porteno",
+      "nombre": "CP\n Cerro Porteno",
+      "pj": 20,
+      "g": 10,
+      "e": 6,
+      "p": 4,
+      "dg": 16
+    },
+    {
+      "slug": "cruzeiro",
+      "nombre": "CR\n Cruzeiro",
+      "pj": 20,
+      "g": 7,
+      "e": 5,
+      "p": 8,
+      "dg": -1
+    },
+    {
+      "slug": "gimnasia-mendoza",
+      "nombre": "GM\n Gimnasia Mendoza",
+      "pj": 19,
+      "g": 9,
+      "e": 5,
+      "p": 5,
+      "dg": 19
+    },
+    {
+      "slug": "defensa",
+      "nombre": "DE\n Defensa",
+      "pj": 19,
+      "g": 11,
+      "e": 5,
+      "p": 3,
+      "dg": 16
+    },
+    {
+      "slug": "corinthians",
+      "nombre": "CO\n Corinthians",
+      "pj": 19,
+      "g": 6,
+      "e": 8,
+      "p": 5,
+      "dg": 7
+    },
+    {
+      "slug": "estudiantes-ba",
+      "nombre": "EB\n Estudiantes Ba",
+      "pj": 18,
+      "g": 12,
+      "e": 3,
+      "p": 3,
+      "dg": 27
+    },
+    {
+      "slug": "san-martin-sj",
+      "nombre": "SM\n San Martin Sj",
+      "pj": 17,
+      "g": 11,
+      "e": 3,
+      "p": 3,
+      "dg": 12
+    },
+    {
+      "slug": "universitario-p",
+      "nombre": "UP\n Universitario P",
+      "pj": 17,
+      "g": 7,
+      "e": 4,
+      "p": 6,
+      "dg": 4
+    },
+    {
+      "slug": "racing-cba",
+      "nombre": "RC\n Racing Cba",
+      "pj": 16,
+      "g": 6,
+      "e": 5,
+      "p": 5,
+      "dg": 2
+    },
+    {
+      "slug": "santos",
+      "nombre": "SA\n Santos",
+      "pj": 16,
+      "g": 5,
+      "e": 3,
+      "p": 8,
+      "dg": -6
+    },
+    {
+      "slug": "vasco-da-gama",
+      "nombre": "VD\n Vasco Da Gama",
+      "pj": 16,
+      "g": 7,
+      "e": 7,
+      "p": 2,
+      "dg": 9
+    },
+    {
+      "slug": "deportivo-mandiyu",
+      "nombre": "DM\n Deportivo Mandiyu",
+      "pj": 14,
+      "g": 8,
+      "e": 5,
+      "p": 1,
+      "dg": 13
+    },
+    {
+      "slug": "san-isidro",
+      "nombre": "SI\n San Isidro",
+      "pj": 14,
+      "g": 5,
+      "e": 4,
+      "p": 5,
+      "dg": 3
+    },
+    {
+      "slug": "bolivar",
+      "nombre": "BO\n Bolivar",
+      "pj": 14,
+      "g": 6,
+      "e": 4,
+      "p": 4,
+      "dg": 10
+    },
+    {
+      "slug": "almagro",
+      "nombre": "AL\n Almagro",
+      "pj": 13,
+      "g": 6,
+      "e": 3,
+      "p": 4,
+      "dg": 16
+    },
+    {
+      "slug": "del-plata",
+      "nombre": "DP\n Del Plata",
+      "pj": 13,
+      "g": 7,
+      "e": 3,
+      "p": 3,
+      "dg": 19
+    },
+    {
+      "slug": "el-porvenir",
+      "nombre": "EP\n El Porvenir",
+      "pj": 13,
+      "g": 11,
+      "e": 2,
+      "p": 0,
+      "dg": 24
+    },
+    {
+      "slug": "alianza-lima",
+      "nombre": "AL\n Alianza Lima",
+      "pj": 13,
+      "g": 7,
+      "e": 3,
+      "p": 3,
+      "dg": 14
+    },
+    {
+      "slug": "america-mex",
+      "nombre": "AM\n America Mex",
+      "pj": 13,
+      "g": 9,
+      "e": 1,
+      "p": 3,
+      "dg": 11
+    },
+    {
+      "slug": "u-catolica-chi",
+      "nombre": "UC\n U Catolica Chi",
+      "pj": 13,
+      "g": 8,
+      "e": 2,
+      "p": 3,
+      "dg": 11
+    },
+    {
+      "slug": "barracas",
+      "nombre": "BA\n Barracas",
+      "pj": 12,
+      "g": 11,
+      "e": 1,
+      "p": 0,
+      "dg": 33
+    },
+    {
+      "slug": "independiente-rivadavia",
+      "nombre": "IR\n Independiente Rivadavia",
+      "pj": 12,
+      "g": 5,
+      "e": 6,
+      "p": 1,
+      "dg": 12
+    },
+    {
+      "slug": "patronato",
+      "nombre": "PA\n Patronato",
+      "pj": 12,
+      "g": 7,
+      "e": 3,
+      "p": 2,
+      "dg": 7
+    },
+    {
+      "slug": "atl-rafaela",
+      "nombre": "AR\n Atl Rafaela",
+      "pj": 12,
+      "g": 7,
+      "e": 3,
+      "p": 2,
+      "dg": 7
+    },
+    {
+      "slug": "chaco-for-ever",
+      "nombre": "CF\n Chaco For Ever",
+      "pj": 12,
+      "g": 6,
+      "e": 6,
+      "p": 0,
+      "dg": 12
+    },
+    {
+      "slug": "sp-palermo",
+      "nombre": "SP\n Sp Palermo",
+      "pj": 12,
+      "g": 10,
+      "e": 0,
+      "p": 2,
+      "dg": 18
+    },
+    {
+      "slug": "dep-cali",
+      "nombre": "DC\n Dep Cali",
+      "pj": 12,
+      "g": 6,
+      "e": 4,
+      "p": 2,
+      "dg": 9
+    },
+    {
+      "slug": "flamengo",
+      "nombre": "FL\n Flamengo",
+      "pj": 12,
+      "g": 5,
+      "e": 3,
+      "p": 4,
+      "dg": 7
+    },
+    {
+      "slug": "comercio",
+      "nombre": "CO\n Comercio",
+      "pj": 11,
+      "g": 11,
+      "e": 0,
+      "p": 0,
+      "dg": 26
+    },
+    {
+      "slug": "san-fernando",
+      "nombre": "SF\n San Fernando",
+      "pj": 11,
+      "g": 10,
+      "e": 1,
+      "p": 0,
+      "dg": 34
+    },
+    {
+      "slug": "libertad-par",
+      "nombre": "LP\n Libertad Par",
+      "pj": 11,
+      "g": 8,
+      "e": 3,
+      "p": 0,
+      "dg": 16
+    },
+    {
+      "slug": "c-cordoba-ros",
+      "nombre": "CC\n C Cordoba Ros",
+      "pj": 10,
+      "g": 7,
+      "e": 1,
+      "p": 2,
+      "dg": 10
+    },
+    {
+      "slug": "def-de-belgrano",
+      "nombre": "DD\n Def De Belgrano",
+      "pj": 10,
+      "g": 7,
+      "e": 2,
+      "p": 1,
+      "dg": 17
+    },
+    {
+      "slug": "gimnasia-y-tiro-s",
+      "nombre": "GY\n Gimnasia Y Tiro S",
+      "pj": 10,
+      "g": 7,
+      "e": 2,
+      "p": 1,
+      "dg": 17
+    },
+    {
+      "slug": "barcelona-ecu",
+      "nombre": "BE\n Barcelona Ecu",
+      "pj": 10,
+      "g": 5,
+      "e": 2,
+      "p": 3,
+      "dg": 7
+    },
+    {
+      "slug": "inter-brasil",
+      "nombre": "IB\n Inter Brasil",
+      "pj": 10,
+      "g": 4,
+      "e": 1,
+      "p": 5,
+      "dg": 0
+    },
+    {
+      "slug": "milan",
+      "nombre": "MI\n Milan",
+      "pj": 10,
+      "g": 3,
+      "e": 5,
+      "p": 2,
+      "dg": 0
+    },
+    {
+      "slug": "arg-de-banfield",
+      "nombre": "AD\n Arg De Banfield",
+      "pj": 9,
+      "g": 8,
+      "e": 0,
+      "p": 1,
+      "dg": 17
+    },
+    {
+      "slug": "san-lorenzo-mdp",
+      "nombre": "SL\n San Lorenzo Mdp",
+      "pj": 9,
+      "g": 8,
+      "e": 0,
+      "p": 1,
+      "dg": 16
+    },
+    {
+      "slug": "atl-mineiro",
+      "nombre": "AM\n Atl Mineiro",
+      "pj": 9,
+      "g": 3,
+      "e": 5,
+      "p": 1,
+      "dg": 2
+    },
+    {
+      "slug": "guadalajara",
+      "nombre": "GU\n Guadalajara",
+      "pj": 9,
+      "g": 2,
+      "e": 6,
+      "p": 1,
+      "dg": -1
+    },
+    {
+      "slug": "real-madrid",
+      "nombre": "RM\n Real Madrid",
+      "pj": 9,
+      "g": 4,
+      "e": 1,
+      "p": 4,
+      "dg": -3
+    },
+    {
+      "slug": "sp-cristal",
+      "nombre": "SC\n Sp Cristal",
+      "pj": 9,
+      "g": 6,
+      "e": 1,
+      "p": 2,
+      "dg": 8
+    },
+    {
+      "slug": "the-strongest",
+      "nombre": "TS\n The Strongest",
+      "pj": 9,
+      "g": 6,
+      "e": 1,
+      "p": 2,
+      "dg": 8
+    },
+    {
+      "slug": "central-norte-s",
+      "nombre": "CN\n Central Norte S",
+      "pj": 8,
+      "g": 7,
+      "e": 0,
+      "p": 1,
+      "dg": 14
+    },
+    {
+      "slug": "cipolletti",
+      "nombre": "CI\n Cipolletti",
+      "pj": 8,
+      "g": 6,
+      "e": 1,
+      "p": 1,
+      "dg": 9
+    },
+    {
+      "slug": "kimberley",
+      "nombre": "KI\n Kimberley",
+      "pj": 8,
+      "g": 4,
+      "e": 1,
+      "p": 3,
+      "dg": 2
+    },
+    {
+      "slug": "los-andes",
+      "nombre": "LA\n Los Andes",
+      "pj": 8,
+      "g": 5,
+      "e": 1,
+      "p": 2,
+      "dg": 6
+    },
+    {
+      "slug": "fluminense",
+      "nombre": "FL\n Fluminense",
+      "pj": 8,
+      "g": 3,
+      "e": 2,
+      "p": 3,
+      "dg": 1
+    },
+    {
+      "slug": "gremio",
+      "nombre": "GR\n Gremio",
+      "pj": 8,
+      "g": 5,
+      "e": 1,
+      "p": 2,
+      "dg": 6
+    },
+    {
+      "slug": "guarani-a-franco",
+      "nombre": "GA\n Guarani A Franco",
+      "pj": 8,
+      "g": 6,
+      "e": 1,
+      "p": 1,
+      "dg": 8
+    },
+    {
+      "slug": "universidad-chi",
+      "nombre": "UC\n Universidad Chi",
+      "pj": 8,
+      "g": 5,
+      "e": 1,
+      "p": 2,
+      "dg": 3
+    },
+    {
+      "slug": "alvear",
+      "nombre": "AL\n Alvear",
+      "pj": 7,
+      "g": 5,
+      "e": 1,
+      "p": 1,
+      "dg": 16
+    },
+    {
+      "slug": "boca-alumni",
+      "nombre": "BA\n Boca Alumni",
+      "pj": 7,
+      "g": 6,
+      "e": 0,
+      "p": 1,
+      "dg": 21
+    },
+    {
+      "slug": "columbian",
+      "nombre": "CO\n Columbian",
+      "pj": 7,
+      "g": 5,
+      "e": 1,
+      "p": 1,
+      "dg": 9
+    },
+    {
+      "slug": "deportivo-armenio",
+      "nombre": "DA\n Deportivo Armenio",
+      "pj": 7,
+      "g": 3,
+      "e": 3,
+      "p": 1,
+      "dg": 4
+    },
+    {
+      "slug": "geba",
+      "nombre": "GE\n Geba",
+      "pj": 7,
+      "g": 3,
+      "e": 4,
+      "p": 0,
+      "dg": 6
+    },
+    {
+      "slug": "kimberley-mdp",
+      "nombre": "KM\n Kimberley Mdp",
+      "pj": 7,
+      "g": 5,
+      "e": 2,
+      "p": 0,
+      "dg": 9
+    },
+    {
+      "slug": "nacional",
+      "nombre": "NA\n Nacional",
+      "pj": 7,
+      "g": 2,
+      "e": 1,
+      "p": 4,
+      "dg": 0
+    },
+    {
+      "slug": "san-telmo",
+      "nombre": "ST\n San Telmo",
+      "pj": 7,
+      "g": 4,
+      "e": 2,
+      "p": 1,
+      "dg": 5
+    },
+    {
+      "slug": "sportivo-del-norte",
+      "nombre": "SD\n Sportivo Del Norte",
+      "pj": 7,
+      "g": 7,
+      "e": 0,
+      "p": 0,
+      "dg": 24
+    },
+    {
+      "slug": "tiro-federal-ros",
+      "nombre": "TF\n Tiro Federal Ros",
+      "pj": 7,
+      "g": 2,
+      "e": 2,
+      "p": 3,
+      "dg": -7
+    },
+    {
+      "slug": "atl-paranaense",
+      "nombre": "AP\n Atl Paranaense",
+      "pj": 7,
+      "g": 5,
+      "e": 0,
+      "p": 2,
+      "dg": 3
+    },
+    {
+      "slug": "atlas-mexico",
+      "nombre": "AM\n Atlas Mexico",
+      "pj": 7,
+      "g": 3,
+      "e": 2,
+      "p": 2,
+      "dg": 4
+    },
+    {
+      "slug": "altos-hornos-zapla",
+      "nombre": "AH\n Altos Hornos Zapla",
+      "pj": 6,
+      "g": 4,
+      "e": 0,
+      "p": 2,
+      "dg": 7
+    },
+    {
+      "slug": "dock-sud",
+      "nombre": "DS\n Dock Sud",
+      "pj": 6,
+      "g": 5,
+      "e": 0,
+      "p": 1,
+      "dg": 8
+    },
+    {
+      "slug": "estudiantes-rio-iv",
+      "nombre": "ER\n Estudiantes Rio Iv",
+      "pj": 6,
+      "g": 4,
+      "e": 2,
+      "p": 0,
+      "dg": 18
+    },
+    {
+      "slug": "palermo",
+      "nombre": "PA\n Palermo",
+      "pj": 6,
+      "g": 6,
+      "e": 0,
+      "p": 0,
+      "dg": 15
+    },
+    {
+      "slug": "america-col",
+      "nombre": "AC\n America Col",
+      "pj": 6,
+      "g": 4,
+      "e": 2,
+      "p": 0,
+      "dg": 9
+    },
+    {
+      "slug": "benfica",
+      "nombre": "BE\n Benfica",
+      "pj": 6,
+      "g": 1,
+      "e": 5,
+      "p": 0,
+      "dg": 1
+    },
+    {
+      "slug": "defensor-uru",
+      "nombre": "DU\n Defensor Uru",
+      "pj": 6,
+      "g": 2,
+      "e": 3,
+      "p": 1,
+      "dg": 4
+    },
+    {
+      "slug": "j-wilstermann",
+      "nombre": "JW\n J Wilstermann",
+      "pj": 6,
+      "g": 2,
+      "e": 3,
+      "p": 1,
+      "dg": 4
+    },
+    {
+      "slug": "junior-col",
+      "nombre": "JC\n Junior Col",
+      "pj": 6,
+      "g": 3,
+      "e": 3,
+      "p": 0,
+      "dg": 6
+    },
+    {
+      "slug": "montevideo-wanderers",
+      "nombre": "MW\n Montevideo Wanderers",
+      "pj": 6,
+      "g": 5,
+      "e": 0,
+      "p": 1,
+      "dg": 7
+    },
+    {
+      "slug": "independiente-med",
+      "nombre": "IM\n Independiente Med",
+      "pj": 6,
+      "g": 4,
+      "e": 0,
+      "p": 2,
+      "dg": 4
+    },
+    {
+      "slug": "belgrano-rosario",
+      "nombre": "BR\n Belgrano Rosario",
+      "pj": 5,
+      "g": 3,
+      "e": 0,
+      "p": 2,
+      "dg": 1
+    },
+    {
+      "slug": "desamparados",
+      "nombre": "DE\n Desamparados",
+      "pj": 5,
+      "g": 4,
+      "e": 1,
+      "p": 0,
+      "dg": 10
+    },
+    {
+      "slug": "eureka",
+      "nombre": "EU\n Eureka",
+      "pj": 5,
+      "g": 5,
+      "e": 0,
+      "p": 0,
+      "dg": 13
+    },
+    {
+      "slug": "excursionistas",
+      "nombre": "EX\n Excursionistas",
+      "pj": 5,
+      "g": 3,
+      "e": 2,
+      "p": 0,
+      "dg": 6
+    },
+    {
+      "slug": "progresista",
+      "nombre": "PR\n Progresista",
+      "pj": 5,
+      "g": 5,
+      "e": 0,
+      "p": 0,
+      "dg": 13
+    },
+    {
+      "slug": "riachuelo",
+      "nombre": "RI\n Riachuelo",
+      "pj": 5,
+      "g": 4,
+      "e": 1,
+      "p": 0,
+      "dg": 10
+    },
+    {
+      "slug": "san-martin-mza",
+      "nombre": "SM\n San Martin Mza",
+      "pj": 5,
+      "g": 0,
+      "e": 3,
+      "p": 2,
+      "dg": -2
+    },
+    {
+      "slug": "sp-buenos-aires",
+      "nombre": "SB\n Sp Buenos Aires",
+      "pj": 5,
+      "g": 5,
+      "e": 0,
+      "p": 0,
+      "dg": 12
+    },
+    {
+      "slug": "liga-dep-univ-ecu",
+      "nombre": "LD\n Liga Dep Univ Ecu",
+      "pj": 5,
+      "g": 2,
+      "e": 2,
+      "p": 1,
+      "dg": 4
+    },
+    {
+      "slug": "o-petrolero",
+      "nombre": "OP\n O Petrolero",
+      "pj": 5,
+      "g": 3,
+      "e": 1,
+      "p": 1,
+      "dg": 2
+    },
+    {
+      "slug": "toluca",
+      "nombre": "TO\n Toluca",
+      "pj": 5,
+      "g": 2,
+      "e": 0,
+      "p": 3,
+      "dg": 1
+    },
+    {
+      "slug": "universal-uru",
+      "nombre": "UU\n Universal Uru",
+      "pj": 5,
+      "g": 3,
+      "e": 0,
+      "p": 2,
+      "dg": 2
+    },
+    {
+      "slug": "atlanta-argentinos",
+      "nombre": "AA\n Atlanta Argentinos",
+      "pj": 4,
+      "g": 3,
+      "e": 0,
+      "p": 1,
+      "dg": 6
+    },
+    {
+      "slug": "belgrano-ath",
+      "nombre": "BA\n Belgrano Ath",
+      "pj": 4,
+      "g": 1,
+      "e": 1,
+      "p": 2,
+      "dg": -3
+    },
+    {
+      "slug": "colegiales",
+      "nombre": "CO\n Colegiales",
+      "pj": 4,
+      "g": 2,
+      "e": 2,
+      "p": 0,
+      "dg": 10
+    },
+    {
+      "slug": "huracan-ta",
+      "nombre": "HT\n Huracan Ta",
+      "pj": 4,
+      "g": 4,
+      "e": 0,
+      "p": 0,
+      "dg": 8
+    },
+    {
+      "slug": "santamarina-tandil",
+      "nombre": "ST\n Santamarina Tandil",
+      "pj": 4,
+      "g": 3,
+      "e": 1,
+      "p": 0,
+      "dg": 10
+    },
+    {
+      "slug": "urquiza",
+      "nombre": "UR\n Urquiza",
+      "pj": 4,
+      "g": 4,
+      "e": 0,
+      "p": 0,
+      "dg": 12
+    },
+    {
+      "slug": "always-ready",
+      "nombre": "AR\n Always Ready",
+      "pj": 4,
+      "g": 3,
+      "e": 1,
+      "p": 0,
+      "dg": 4
+    },
+    {
+      "slug": "atl-nacional",
+      "nombre": "AN\n Atl Nacional",
+      "pj": 4,
+      "g": 2,
+      "e": 0,
+      "p": 2,
+      "dg": 1
+    },
+    {
+      "slug": "bayern-munich",
+      "nombre": "BM\n Bayern Munich",
+      "pj": 4,
+      "g": 1,
+      "e": 1,
+      "p": 2,
+      "dg": -1
+    },
+    {
+      "slug": "cobreloa",
+      "nombre": "CO\n Cobreloa",
+      "pj": 4,
+      "g": 4,
+      "e": 0,
+      "p": 0,
+      "dg": 4
+    },
+    {
+      "slug": "cruz-azul",
+      "nombre": "CA\n Cruz Azul",
+      "pj": 4,
+      "g": 1,
+      "e": 1,
+      "p": 2,
+      "dg": -2
+    },
+    {
+      "slug": "dep-cuenca",
+      "nombre": "DC\n Dep Cuenca",
+      "pj": 4,
+      "g": 2,
+      "e": 1,
+      "p": 1,
+      "dg": 3
+    },
+    {
+      "slug": "el-nacional-ecu",
+      "nombre": "EN\n El Nacional Ecu",
+      "pj": 4,
+      "g": 2,
+      "e": 2,
+      "p": 0,
+      "dg": 4
+    },
+    {
+      "slug": "guarani-par",
+      "nombre": "GP\n Guarani Par",
+      "pj": 4,
+      "g": 3,
+      "e": 1,
+      "p": 0,
+      "dg": 6
+    },
+    {
+      "slug": "once-caldas",
+      "nombre": "OC\n Once Caldas",
+      "pj": 4,
+      "g": 1,
+      "e": 2,
+      "p": 1,
+      "dg": 1
+    },
+    {
+      "slug": "santiago-wanderers",
+      "nombre": "SW\n Santiago Wanderers",
+      "pj": 4,
+      "g": 2,
+      "e": 1,
+      "p": 1,
+      "dg": 1
+    },
+    {
+      "slug": "zamora",
+      "nombre": "ZA\n Zamora",
+      "pj": 4,
+      "g": 3,
+      "e": 1,
+      "p": 0,
+      "dg": 11
+    },
+    {
+      "slug": "independiente-ecu",
+      "nombre": "IE\n Independiente Ecu",
+      "pj": 4,
+      "g": 1,
+      "e": 1,
+      "p": 2,
+      "dg": -1
+    },
+    {
+      "slug": "central-cordoba",
+      "nombre": "CC\n Central Cordoba",
+      "pj": 3,
+      "g": 1,
+      "e": 1,
+      "p": 1,
+      "dg": 3
+    },
+    {
+      "slug": "alianza-cutral-co",
+      "nombre": "AC\n Alianza Cutral Co",
+      "pj": 3,
+      "g": 2,
+      "e": 0,
+      "p": 1,
+      "dg": 1
+    },
+    {
+      "slug": "almirante-brown",
+      "nombre": "AB\n Almirante Brown",
+      "pj": 3,
+      "g": 2,
+      "e": 0,
+      "p": 1,
+      "dg": 2
+    },
+    {
+      "slug": "argentino-del-sud",
+      "nombre": "AD\n Argentino Del Sud",
+      "pj": 3,
+      "g": 3,
+      "e": 0,
+      "p": 0,
+      "dg": 12
+    },
+    {
+      "slug": "huracan-corr",
+      "nombre": "HC\n Huracan Corr",
+      "pj": 3,
+      "g": 3,
+      "e": 0,
+      "p": 0,
+      "dg": 7
+    },
+    {
+      "slug": "junin",
+      "nombre": "JU\n Junin",
+      "pj": 3,
+      "g": 2,
+      "e": 0,
+      "p": 1,
+      "dg": 5
+    },
+    {
+      "slug": "juv-alianza-sj",
+      "nombre": "JA\n Juv Alianza Sj",
+      "pj": 3,
+      "g": 3,
+      "e": 0,
+      "p": 0,
+      "dg": 7
+    },
+    {
+      "slug": "sp-almagro",
+      "nombre": "SA\n Sp Almagro",
+      "pj": 3,
+      "g": 2,
+      "e": 1,
+      "p": 0,
+      "dg": 6
+    },
+    {
+      "slug": "sportsman",
+      "nombre": "SP\n Sportsman",
+      "pj": 3,
+      "g": 3,
+      "e": 0,
+      "p": 0,
+      "dg": 11
+    },
+    {
+      "slug": "talleres-lanus",
+      "nombre": "TL\n Talleres Lanus",
+      "pj": 3,
+      "g": 2,
+      "e": 0,
+      "p": 1,
+      "dg": 3
+    },
+    {
+      "slug": "blooming",
+      "nombre": "BL\n Blooming",
+      "pj": 3,
+      "g": 1,
+      "e": 1,
+      "p": 1,
+      "dg": 4
+    },
+    {
+      "slug": "cienciano",
+      "nombre": "CI\n Cienciano",
+      "pj": 3,
+      "g": 1,
+      "e": 1,
+      "p": 1,
+      "dg": -2
+    },
+    {
+      "slug": "emelec",
+      "nombre": "EM\n Emelec",
+      "pj": 3,
+      "g": 3,
+      "e": 0,
+      "p": 0,
+      "dg": 5
+    },
+    {
+      "slug": "palestino",
+      "nombre": "PA\n Palestino",
+      "pj": 3,
+      "g": 2,
+      "e": 0,
+      "p": 1,
+      "dg": 3
+    },
+    {
+      "slug": "dep-riestra",
+      "nombre": "DR\n Dep Riestra",
+      "pj": 3,
+      "g": 1,
+      "e": 1,
+      "p": 1,
+      "dg": -2
+    },
+    {
+      "slug": "alvarado-mdp",
+      "nombre": "AM\n Alvarado Mdp",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "dg": 6
+    },
+    {
+      "slug": "argentino-rosario",
+      "nombre": "AR\n Argentino Rosario",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 2
+    },
+    {
+      "slug": "belgrano-ath-ii",
+      "nombre": "BA\n Belgrano Ath Ii",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 3
+    },
+    {
+      "slug": "bernal",
+      "nombre": "BE\n Bernal",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 11
+    },
+    {
+      "slug": "brown-pto-madryn",
+      "nombre": "BP\n Brown Pto Madryn",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 5
+    },
+    {
+      "slug": "continental-b",
+      "nombre": "CB\n Continental B",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "dg": 2
+    },
+    {
+      "slug": "deportivo-italiano",
+      "nombre": "DI\n Deportivo Italiano",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "dg": 1
+    },
+    {
+      "slug": "ferrocarril-sud",
+      "nombre": "FS\n Ferrocarril Sud",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 9
+    },
+    {
+      "slug": "ferro-pico",
+      "nombre": "FP\n Ferro Pico",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "dg": 1
+    },
+    {
+      "slug": "gemes-santiago",
+      "nombre": "GS\n Gemes Santiago",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 7
+    },
+    {
+      "slug": "gimnasia-chivilcoy",
+      "nombre": "GC\n Gimnasia Chivilcoy",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 8
+    },
+    {
+      "slug": "gral-san-martin",
+      "nombre": "GS\n Gral San Martin",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "dg": 3
+    },
+    {
+      "slug": "hispano-argentino",
+      "nombre": "HA\n Hispano Argentino",
+      "pj": 2,
+      "g": 1,
+      "e": 0,
+      "p": 1,
+      "dg": 1
+    },
+    {
+      "slug": "huracan-ing-white",
+      "nombre": "HI\n Huracan Ing White",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "dg": 8
+    },
+    {
+      "slug": "independiente-b",
+      "nombre": "IB\n Independiente B",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 7
+    },
+    {
+      "slug": "instituto-americano",
+      "nombre": "IA\n Instituto Americano",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 4
+    },
+    {
+      "slug": "la-plata-fc",
+      "nombre": "LP\n La Plata Fc",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "dg": 1
+    },
+    {
+      "slug": "liberal-argentino",
+      "nombre": "LA\n Liberal Argentino",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "dg": 3
+    },
+    {
+      "slug": "los-andes-sj",
+      "nombre": "LA\n Los Andes Sj",
+      "pj": 2,
+      "g": 0,
+      "e": 1,
+      "p": 1,
+      "dg": -1
+    },
+    {
+      "slug": "m-moreno-junin",
+      "nombre": "MM\n M Moreno Junin",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 5
+    },
+    {
+      "slug": "olivos",
+      "nombre": "OL\n Olivos",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 8
+    },
+    {
+      "slug": "puerto-comercial",
+      "nombre": "PC\n Puerto Comercial",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 10
+    },
+    {
+      "slug": "quilmes-b",
+      "nombre": "QB\n Quilmes B",
+      "pj": 2,
+      "g": 0,
+      "e": 2,
+      "p": 0,
+      "dg": 0
+    },
+    {
+      "slug": "river-plate-b",
+      "nombre": "RP\n River Plate B",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 5
+    },
+    {
+      "slug": "san-isidro-ii",
+      "nombre": "SI\n San Isidro Ii",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 5
+    },
+    {
+      "slug": "sarmiento-sde",
+      "nombre": "SS\n Sarmiento Sde",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 4
+    },
+    {
+      "slug": "sp-balcarce",
+      "nombre": "SB\n Sp Balcarce",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 4
+    },
+    {
+      "slug": "borussia-m",
+      "nombre": "BM\n Borussia M",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "dg": 3
+    },
+    {
+      "slug": "caracas",
+      "nombre": "CA\n Caracas",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "dg": 3
+    },
+    {
+      "slug": "cucuta",
+      "nombre": "CU\n Cucuta",
+      "pj": 2,
+      "g": 1,
+      "e": 0,
+      "p": 1,
+      "dg": 1
+    },
+    {
+      "slug": "dep-capiata",
+      "nombre": "DC\n Dep Capiata",
+      "pj": 2,
+      "g": 1,
+      "e": 0,
+      "p": 1,
+      "dg": 0
+    },
+    {
+      "slug": "dep-italia-ven",
+      "nombre": "DI\n Dep Italia Ven",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 4
+    },
+    {
+      "slug": "dep-pereira",
+      "nombre": "DP\n Dep Pereira",
+      "pj": 2,
+      "g": 1,
+      "e": 0,
+      "p": 1,
+      "dg": 0
+    },
+    {
+      "slug": "dep-quito",
+      "nombre": "DQ\n Dep Quito",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 5
+    },
+    {
+      "slug": "fortaleza",
+      "nombre": "FO\n Fortaleza",
+      "pj": 2,
+      "g": 0,
+      "e": 1,
+      "p": 1,
+      "dg": -2
+    },
+    {
+      "slug": "lara-fc",
+      "nombre": "LF\n Lara Fc",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 4
+    },
+    {
+      "slug": "monagas",
+      "nombre": "MO\n Monagas",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "dg": 4
+    },
+    {
+      "slug": "nacional-bol",
+      "nombre": "NB\n Nacional Bol",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "dg": 4
+    },
+    {
+      "slug": "pachuca",
+      "nombre": "PA\n Pachuca",
+      "pj": 2,
+      "g": 1,
+      "e": 0,
+      "p": 1,
+      "dg": 2
+    },
+    {
+      "slug": "paysandu",
+      "nombre": "PA\n Paysandu",
+      "pj": 2,
+      "g": 1,
+      "e": 0,
+      "p": 1,
+      "dg": 1
+    },
+    {
+      "slug": "sao-caetano",
+      "nombre": "SC\n Sao Caetano",
+      "pj": 2,
+      "g": 0,
+      "e": 2,
+      "p": 0,
+      "dg": 0
+    },
+    {
+      "slug": "sp-trinidense",
+      "nombre": "ST\n Sp Trinidense",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 2
+    },
+    {
+      "slug": "tachira",
+      "nombre": "TA\n Tachira",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 4
+    },
+    {
+      "slug": "tolima",
+      "nombre": "TO\n Tolima",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "dg": 3
+    },
+    {
+      "slug": "u-espanola-chile",
+      "nombre": "UE\n U Espanola Chile",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 2
+    },
+    {
+      "slug": "u-maracaibo",
+      "nombre": "UM\n U Maracaibo",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "dg": 3
+    },
+    {
+      "slug": "unam",
+      "nombre": "UN\n Unam",
+      "pj": 2,
+      "g": 0,
+      "e": 2,
+      "p": 0,
+      "dg": 0
+    },
+    {
+      "slug": "universitario-bol",
+      "nombre": "UB\n Universitario Bol",
+      "pj": 2,
+      "g": 1,
+      "e": 1,
+      "p": 0,
+      "dg": 4
+    },
+    {
+      "slug": "ohiggins",
+      "nombre": "OH\n Ohiggins",
+      "pj": 2,
+      "g": 1,
+      "e": 0,
+      "p": 1,
+      "dg": 0
+    },
+    {
+      "slug": "deportivo-recoleta",
+      "nombre": "DR\n Deportivo Recoleta",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 6
+    },
+    {
+      "slug": "central-cordoba-santiago-del-estero",
+      "nombre": "CC\n Central Cordoba Santiago Del Estero",
+      "pj": 2,
+      "g": 2,
+      "e": 0,
+      "p": 0,
+      "dg": 3
+    },
+    {
+      "slug": "agropecuario",
+      "nombre": "AG\n Agropecuario",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 1
+    },
+    {
+      "slug": "argentino-maiz-maiz",
+      "nombre": "AM\n Argentino Maiz Maiz",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 5
+    },
+    {
+      "slug": "claypole",
+      "nombre": "CL\n Claypole",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 1
+    },
+    {
+      "slug": "crucero-del-norte",
+      "nombre": "CD\n Crucero Del Norte",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 1
+    },
+    {
+      "slug": "dep-merlo",
+      "nombre": "DM\n Dep Merlo",
+      "pj": 1,
+      "g": 0,
+      "e": 1,
+      "p": 0,
+      "dg": 0
+    },
+    {
+      "slug": "estudiantes-ii",
+      "nombre": "EI\n Estudiantes Ii",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 2
+    },
+    {
+      "slug": "fed-tucumana",
+      "nombre": "FT\n Fed Tucumana",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 6
+    },
+    {
+      "slug": "flores",
+      "nombre": "FL\n Flores",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 4
+    },
+    {
+      "slug": "floresta",
+      "nombre": "FL\n Floresta",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 3
+    },
+    {
+      "slug": "g-belgrano-lp",
+      "nombre": "GB\n G Belgrano Lp",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 1
+    },
+    {
+      "slug": "honor-y-patria-b",
+      "nombre": "HY\n Honor Y Patria B",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 8
+    },
+    {
+      "slug": "huracan-las-heras",
+      "nombre": "HL\n Huracan Las Heras",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 2
+    },
+    {
+      "slug": "pretender",
+      "nombre": "PR\n Pretender",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 2
+    },
+    {
+      "slug": "racing-club-b",
+      "nombre": "RC\n Racing Club B",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 1
+    },
+    {
+      "slug": "royal",
+      "nombre": "RO\n Royal",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 4
+    },
+    {
+      "slug": "sociedad-sportiva",
+      "nombre": "SS\n Sociedad Sportiva",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 6
+    },
+    {
+      "slug": "sportivo-coghlan",
+      "nombre": "SC\n Sportivo Coghlan",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 1
+    },
+    {
+      "slug": "universal",
+      "nombre": "UN\n Universal",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 8
+    },
+    {
+      "slug": "victoria",
+      "nombre": "VI\n Victoria",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 8
+    },
+    {
+      "slug": "villa-ballester",
+      "nombre": "VB\n Villa Ballester",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 1
+    },
+    {
+      "slug": "auckland-city",
+      "nombre": "AC\n Auckland City",
+      "pj": 1,
+      "g": 0,
+      "e": 1,
+      "p": 0,
+      "dg": 0
+    },
+    {
+      "slug": "etoile-tunez",
+      "nombre": "ET\n Etoile Tunez",
+      "pj": 1,
+      "g": 1,
+      "e": 0,
+      "p": 0,
+      "dg": 1
+    }
+  ]
 }

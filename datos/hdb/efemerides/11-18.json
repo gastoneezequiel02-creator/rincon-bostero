@@ -1,0 +1,95 @@
+{
+  "consultado": "2026-11-18",
+  "items": [
+    {
+      "anio": 1914,
+      "titulo": "Nació Rubén Angel Aveiro",
+      "detalle": "Delantero. Paraguayo. Voluntarioso, de discreto manejo de pelota. Continuó en A",
+      "tipo": "persona"
+    },
+    {
+      "anio": 1917,
+      "titulo": "Boca le ganó a San Lorenzo de Almagro 3 a 2",
+      "detalle": "Campeonato 1917. Fecha 19",
+      "tipo": "partido"
+    },
+    {
+      "anio": 1928,
+      "titulo": "Boca le ganó a Tigre 4 a 1",
+      "detalle": "Campeonato 1928. Fecha 22",
+      "tipo": "partido"
+    },
+    {
+      "anio": 1934,
+      "titulo": "Boca empató con Independiente 1 a 1",
+      "detalle": "Campeonato 1934. Fecha 34",
+      "tipo": "partido"
+    },
+    {
+      "anio": 1945,
+      "titulo": "Boca goleó a River 4-1",
+      "detalle": "Faltando tres fechas para el final del torneo, Boca le dio una paliza a River y lo venció 4-1 con tantos de Corcuera, Sarlanga y dos de Boyé",
+      "tipo": "partido"
+    },
+    {
+      "anio": 1945,
+      "titulo": "Boca le ganó a River Plate 4 a 1",
+      "detalle": "Campeonato 1945. Fecha 28",
+      "tipo": "partido"
+    },
+    {
+      "anio": 1947,
+      "titulo": "Nació Omar Rubén Larrosa",
+      "detalle": "Volante Ofensivo. Ganó un título (Nacional 1970). Surgido de las Inferiores. E",
+      "tipo": "persona"
+    },
+    {
+      "anio": 1951,
+      "titulo": "Jugó por última vez Martín Ramón Domínguez",
+      "detalle": "Medio Derecho. Presente en la pobre campaña del club que casi desemboca en el d",
+      "tipo": "persona"
+    },
+    {
+      "anio": 1951,
+      "titulo": "Boca empató con Quilmes 3 a 3",
+      "detalle": "Campeonato 1951. Fecha 33",
+      "tipo": "partido"
+    },
+    {
+      "anio": 1956,
+      "titulo": "Jugó por última vez Benicio José Acosta",
+      "detalle": "Centro Medio. Ganó un título (Campeonato 1954). Llegó de Tigre y luego fue a",
+      "tipo": "persona"
+    },
+    {
+      "anio": 1956,
+      "titulo": "Jugó por última vez Julio Marcarián",
+      "detalle": "Puntero Izquierdo. Ganó un título (Campeonato 1954). Surgido de las Inferiores",
+      "tipo": "persona"
+    },
+    {
+      "anio": 1956,
+      "titulo": "Boca perdió con Independiente 1 a 0",
+      "detalle": "Campeonato 1956. Fecha 28",
+      "tipo": "partido"
+    },
+    {
+      "anio": 1973,
+      "titulo": "Jugó por última vez Carlos Oscar Pachamé",
+      "detalle": "Volante Central. Llegó desde Estudiantes de La Plata, en donde ganó todo en el",
+      "tipo": "persona"
+    },
+    {
+      "anio": 1973,
+      "titulo": "Jugó por última vez Andrés Arturo Bertolotti",
+      "detalle": "Marcador Central. Surgido de Chacarita, llegó de Independiente, con el récord",
+      "tipo": "persona"
+    },
+    {
+      "anio": 1973,
+      "titulo": "Falleció Juan José Ferraro",
+      "detalle": "Centrodelantero. Llegó desde Vélez, en donde fue ídolo. No rindió lo esperad",
+      "tipo": "persona"
+    }
+  ]
+}

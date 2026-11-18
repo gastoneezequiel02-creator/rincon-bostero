@@ -1,0 +1,428 @@
+{
+  "actualizado": "2026-11-18T17:04-03:00",
+  "jugadores": [
+    {
+      "nombre": "Javier García",
+      "numero": "30",
+      "posicion": "Goalkeeper",
+      "pos_abrev": "G",
+      "edad": 39,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Álvaro Montero",
+      "numero": "1",
+      "posicion": "Goalkeeper",
+      "pos_abrev": "G",
+      "edad": 31,
+      "nacionalidad": "Colombia",
+      "foto": ""
+    },
+    {
+      "nombre": "Agustín Marchesín",
+      "numero": "1",
+      "posicion": "Goalkeeper",
+      "pos_abrev": "G",
+      "edad": 38,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Leandro Brey",
+      "numero": "12",
+      "posicion": "Goalkeeper",
+      "pos_abrev": "G",
+      "edad": 24,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Fernando Rodríguez",
+      "numero": "47",
+      "posicion": "Goalkeeper",
+      "pos_abrev": "G",
+      "edad": 22,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Jorge Figal",
+      "numero": "4",
+      "posicion": "Defender",
+      "pos_abrev": "D",
+      "edad": 32,
+      "nacionalidad": "Argentina",
+      "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/189952.png"
+    },
+    {
+      "nombre": "Ayrton Costa",
+      "numero": "32",
+      "posicion": "Defender",
+      "pos_abrev": "D",
+      "edad": 27,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Lautaro Blanco",
+      "numero": "3",
+      "posicion": "Defender",
+      "pos_abrev": "D",
+      "edad": 27,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Marco Pellegrino",
+      "numero": "26",
+      "posicion": "Defender",
+      "pos_abrev": "D",
+      "edad": 24,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Leandro Lozano",
+      "numero": "17",
+      "posicion": "Defender",
+      "pos_abrev": "D",
+      "edad": 27,
+      "nacionalidad": "Uruguay",
+      "foto": ""
+    },
+    {
+      "nombre": "Lautaro Di Lollo",
+      "numero": "2",
+      "posicion": "Defender",
+      "pos_abrev": "D",
+      "edad": 22,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Dylan Gorosito",
+      "numero": "48",
+      "posicion": "Defender",
+      "pos_abrev": "D",
+      "edad": 20,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Facundo Herrera",
+      "numero": "42",
+      "posicion": "Defender",
+      "pos_abrev": "D",
+      "edad": 20,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Matías Satas",
+      "numero": "46",
+      "posicion": "Defender",
+      "pos_abrev": "D",
+      "edad": 18,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Gian Paoli",
+      "numero": "51",
+      "posicion": "Defender",
+      "pos_abrev": "D",
+      "edad": 21,
+      "nacionalidad": "Paraguay",
+      "foto": ""
+    },
+    {
+      "nombre": "Baltazar Blum Macías",
+      "numero": "48",
+      "posicion": "Defender",
+      "pos_abrev": "D",
+      "edad": null,
+      "nacionalidad": "",
+      "foto": ""
+    },
+    {
+      "nombre": "Camilo Rey",
+      "numero": "38",
+      "posicion": "Midfielder",
+      "pos_abrev": "M",
+      "edad": 20,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Rodrigo Battaglia",
+      "numero": "6",
+      "posicion": "Midfielder",
+      "pos_abrev": "M",
+      "edad": 35,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Leandro Paredes",
+      "numero": "5",
+      "posicion": "Midfielder",
+      "pos_abrev": "M",
+      "edad": 32,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Carlos Palacios",
+      "numero": "7",
+      "posicion": "Midfielder",
+      "pos_abrev": "M",
+      "edad": 26,
+      "nacionalidad": "Chile",
+      "foto": ""
+    },
+    {
+      "nombre": "Santiago Ascacibar",
+      "numero": "25",
+      "posicion": "Midfielder",
+      "pos_abrev": "M",
+      "edad": 29,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Tomás Belmonte",
+      "numero": "8",
+      "posicion": "Midfielder",
+      "pos_abrev": "M",
+      "edad": 28,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Malcom Braida",
+      "numero": "27",
+      "posicion": "Midfielder",
+      "pos_abrev": "M",
+      "edad": 29,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "William Alarcón",
+      "numero": "15",
+      "posicion": "Midfielder",
+      "pos_abrev": "M",
+      "edad": 25,
+      "nacionalidad": "Chile",
+      "foto": ""
+    },
+    {
+      "nombre": "Alan Velasco",
+      "numero": "20",
+      "posicion": "Midfielder",
+      "pos_abrev": "M",
+      "edad": 24,
+      "nacionalidad": "Argentina",
+      "foto": "https://a.espncdn.com/i/headshots/soccer/players/full/286516.png"
+    },
+    {
+      "nombre": "Milton Delgado",
+      "numero": "18",
+      "posicion": "Midfielder",
+      "pos_abrev": "M",
+      "edad": 21,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Dante Gonzalez",
+      "numero": "50",
+      "posicion": "Midfielder",
+      "pos_abrev": "M",
+      "edad": 20,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Tomás Aranda",
+      "numero": "36",
+      "posicion": "Midfielder",
+      "pos_abrev": "M",
+      "edad": 19,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Gonzalo Tomás Márquez",
+      "numero": "31",
+      "posicion": "Midfielder",
+      "pos_abrev": "M",
+      "edad": null,
+      "nacionalidad": "",
+      "foto": ""
+    },
+    {
+      "nombre": "Matias Calegari",
+      "numero": "39",
+      "posicion": "Midfielder",
+      "pos_abrev": "M",
+      "edad": null,
+      "nacionalidad": "",
+      "foto": ""
+    },
+    {
+      "nombre": "Lautaro Mendieta",
+      "numero": "33",
+      "posicion": "Midfielder",
+      "pos_abrev": "M",
+      "edad": null,
+      "nacionalidad": "",
+      "foto": ""
+    },
+    {
+      "nombre": "Sebastián Villa",
+      "numero": "22",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": 30,
+      "nacionalidad": "Colombia",
+      "foto": ""
+    },
+    {
+      "nombre": "Enner Valencia",
+      "numero": "13",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": 37,
+      "nacionalidad": "Ecuador",
+      "foto": ""
+    },
+    {
+      "nombre": "Ángel Romero",
+      "numero": "29",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": 34,
+      "nacionalidad": "Paraguay",
+      "foto": ""
+    },
+    {
+      "nombre": "Adam Bareiro",
+      "numero": "28",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": 30,
+      "nacionalidad": "Paraguay",
+      "foto": ""
+    },
+    {
+      "nombre": "Miguel Merentiel",
+      "numero": "16",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": 30,
+      "nacionalidad": "Uruguay",
+      "foto": ""
+    },
+    {
+      "nombre": "Milton Gimenez",
+      "numero": "9",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": 30,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Juan Payal",
+      "numero": "34",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": 21,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Joaquín Ruíz",
+      "numero": "53",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": 20,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Leonel Flores",
+      "numero": "44",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": 19,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Joaquín Piñeyro",
+      "numero": "49",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": 18,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Kevin Ferreira",
+      "numero": "54",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": 18,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Rodrigo Bacidalupe",
+      "numero": "44",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": 19,
+      "nacionalidad": "Argentina",
+      "foto": ""
+    },
+    {
+      "nombre": "Silvio Miguel Ventos",
+      "numero": "",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": null,
+      "nacionalidad": "",
+      "foto": ""
+    },
+    {
+      "nombre": "Juan Augusto Pussetto Schramm",
+      "numero": "",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": null,
+      "nacionalidad": "",
+      "foto": ""
+    },
+    {
+      "nombre": "Franco Sebastián Pérez",
+      "numero": "35",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": null,
+      "nacionalidad": "",
+      "foto": ""
+    },
+    {
+      "nombre": "Lautaro Facundo Bianco",
+      "numero": "40",
+      "posicion": "Forward",
+      "pos_abrev": "F",
+      "edad": null,
+      "nacionalidad": "",
+      "foto": ""
+    }
+  ]
+}
