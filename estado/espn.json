@@ -83,6 +83,12 @@
     "2015:arg.1",
     "2015:arg.copa_lpf",
     "2015:conmebol.libertadores",
-    "2015:conmebol.sudamericana"
+    "2015:conmebol.sudamericana",
+    "2015:conmebol.recopa",
+    "2015:arg.copa",
+    "2015:arg.supercopa",
+    "2015:fifa.cwc",
+    "2014:arg.1",
+    "2014:arg.copa_lpf"
   ]
 }

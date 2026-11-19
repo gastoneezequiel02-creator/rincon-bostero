@@ -373,5 +373,20 @@
       "gc": 26,
       "pts": 64
     }
+  },
+  "2014": {
+    "arg.1": {
+      "competencia": "Liga Profesional",
+      "grupo": "Torneo Inicial 2014",
+      "equipos": 20,
+      "pos": 5,
+      "pj": 19,
+      "g": 9,
+      "e": 4,
+      "p": 6,
+      "gf": 25,
+      "gc": 23,
+      "pts": 31
+    }
   }
 }
