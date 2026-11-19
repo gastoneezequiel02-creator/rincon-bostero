@@ -1053,7 +1053,7 @@
               (est.errores.length ? "<p class='qs-errores'>No es: " + est.errores.map(esc).join(", ") + "</p>" : "") +
               "<form class='idolo-form' id='qs-form' autocomplete='off'><label class='oculto' for='qs-input'>¿Quién es?</label>" +
               "<input id='qs-input' list='lista-quien' placeholder='¿Quién es?'>" + lista + "<button class='boton' type='submit'>Arriesgar</button></form>" +
-              "<p class='nota-dato' id='qs-msg'>Te quedan " + plural(QS_ERRORES - est.errores.length, "intento", "intentos") + ". Cada error destapa otra pista.</p>" +
+              "<p class='nota-dato' id='qs-msg'>" + (QS_ERRORES - est.errores.length === 1 ? "Te queda 1 intento" : "Te quedan " + (QS_ERRORES - est.errores.length) + " intentos") + ". Podés escribir cualquier jugador; cada error destapa otra pista.</p>" +
               "<div class='qs-acciones'>" + (est.vistas < s.pistas.length ? "<button type='button' class='boton secundario' id='qs-pista'>Otra pista (vale " + QS_PUNTOS[est.vistas] + ")</button>" : "") +
               "<button type='button' class='boton secundario' id='qs-rendir'>Me rindo</button></div>";
           }
@@ -1067,11 +1067,16 @@
           var f = caja.querySelector("#qs-form");
           if (f) f.addEventListener("submit", function (e) {
             e.preventDefault();
-            var s = secretos[est.r.length], g = buscar(caja.querySelector("#qs-input").value), msg = caja.querySelector("#qs-msg");
-            if (g === "varios") { msg.textContent = "Hay varios con ese nombre: elegí uno de la lista."; return; }
-            if (!g) { msg.textContent = "No está en la lista: solo entran jugadores con más de " + (Q.minimo - 1) + " partidos oficiales."; return; }
+            var texto = caja.querySelector("#qs-input").value.replace(/\s+/g, " ").trim();
+            var s = secretos[est.r.length], g = buscar(texto), msg = caja.querySelector("#qs-msg");
+            if (g === "varios") { msg.textContent = "Hay varios con ese nombre: elegí uno de la lista o escribí nombre y apellido."; return; }
+            // Se puede arriesgar cualquier nombre, aunque no esté en la lista: si no es el jugador, cuenta como error.
+            if (!g) {
+              if (normal(texto).length < 3) { msg.textContent = "Escribí el nombre de un jugador."; return; }
+              g = { n: texto };
+            }
             if (g.n === s.n) { cerrar(QS_PUNTOS[est.vistas - 1]); return; }
-            if (est.errores.indexOf(g.n) >= 0) { msg.textContent = "Ya lo probaste."; return; }
+            if (est.errores.some(function (x) { return normal(x) === normal(g.n); })) { msg.textContent = "Ya lo probaste."; return; }
             est.errores.push(g.n);
             if (est.errores.length >= QS_ERRORES) { cerrar(0); return; }
             if (est.vistas < s.pistas.length) est.vistas++;
