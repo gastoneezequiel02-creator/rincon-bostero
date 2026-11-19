@@ -522,7 +522,8 @@
     function esSel(i) { return /^Selección/.test(G.clubes[i]); }
     for (var minimo = 3; minimo >= 1; minimo--) {
       for (var intento = 0; intento < 3000; intento++) {
-        var elegidos = mezclar(G.clubes.map(function (_, i) { return i; }), r).slice(0, 6);
+        // Solo entre los 24 clubes con más jugadores en común con Boca (los más conocidos)
+        var elegidos = mezclar(G.clubes.map(function (_, i) { return i; }).slice(0, 24), r).slice(0, 6);
         var filas = elegidos.slice(0, 3), cols = elegidos.slice(3);
         if (filas.filter(esSel).length > 1 || cols.filter(esSel).length > 1) continue;
         var resp = [], ok = true;
