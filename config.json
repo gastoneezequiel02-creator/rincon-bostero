@@ -39,7 +39,9 @@
     "_usuarios_permitidos": "IDs numéricos de Telegram de quienes pueden cargar notas. Si alguien no autorizado le escribe al bot, el bot le contesta con su ID para que lo agregues acá.",
     "usuarios_permitidos": [
       1616863037
-    ]
+    ],
+    "_fotos_al_banco_entre": "Fotos mandadas sin comando entre estas dos fechas van al banco de fotos, aunque tengan texto largo (se usó el 19/11 para unas que se mandaron sin /banco).",
+    "fotos_al_banco_entre": ["2026-11-19T13:50:00-03:00", "2026-11-19T16:30:00-03:00"]
   },
   "datos_futbol": {
     "activado": true,
