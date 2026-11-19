@@ -1366,6 +1366,7 @@ def pagina_juegos(proximos) -> str:
     datos["hay_grilla"] = bool(juegos.datos_grilla())
     import jugadores_hdb
     hay_quien = bool(jugadores_hdb.datos_quien_soy())
+    hay_conexion = bool(jugadores_hdb.datos_conexion(ahora().date(), dias=1, practica=5))
     datos_json = json.dumps(datos, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     dia_n = (ahora().date() - __import__("datetime").date(2026, 11, 18)).days + 1
 
@@ -1373,6 +1374,8 @@ def pagina_juegos(proximos) -> str:
     lista = [
         ("quien", "¿Quién soy?", "Cinco pistas para descubrir a un jugador con 50 partidos o más en Boca. Con menos pistas, más puntos.",
          '<span class="g-texto">?</span>', "juego-quien"),
+        ("conexion", "¿Quién jugó con quién?", "Dos jugadores de Boca: ¿compartieron cancha en un partido oficial? 10 por día, cada vez más difíciles.",
+         '<span class="g-texto">A<small>+</small>B</span>', "juego-conexion"),
         ("idolo", "Adiviná el ídolo", "Una foto borrosa y 6 intentos. Cada intento la aclara un poco más.",
          GLIFO_IDOLO, "juego-idolo"),
         ("mas-o-menos", "¿Más o menos?", "Cara a cara: ¿quién hizo más goles, quién jugó más partidos? Hasta que le erres.",
@@ -1392,7 +1395,9 @@ def pagina_juegos(proximos) -> str:
         lista = [x for x in lista if x[0] != "grilla"]
     if not hay_quien:
         lista = [x for x in lista if x[0] != "quien"]
-    NUEVOS = {"quien"}
+    if not hay_conexion:
+        lista = [x for x in lista if x[0] != "conexion"]
+    NUEVOS = {"quien", "conexion"}
     tarjetas = "".join(
         f'<a class="jtarjeta{" nuevo" if k in NUEVOS else ""}" href="#{k}"><span class="jt-glifo">{g}</span><span class="jt-cuerpo">'
         f'<b>{e(n)}{"<em class=jt-nuevo>Nuevo</em>" if k in NUEVOS else ""}</b><span>{e(d)}</span>'
@@ -1401,7 +1406,8 @@ def pagina_juegos(proximos) -> str:
     secciones = [("del-dia", f"Pregunta del día #{dia_n}",
                   "10 preguntas por día, las mismas para todos y sin repetir. Mantené la racha.", "juego-dia")]
     secciones += [(k, n, d, caja) for k, n, d, _g, caja in lista]
-    secciones += [("ranking", "Ranking", "Los que más saben de Boca. Suman la pregunta del día y la trivia. Armá tu liga con amigos.",
+    secciones += [("perfil", "Tu perfil", "Tu nivel, tu experiencia, las misiones del día y tus números en cada juego.", "juego-perfil"),
+                  ("ranking", "Ranking", "Los que más saben de Boca, por experiencia: suman todos los juegos y las misiones. Armá tu liga con amigos.",
                    "juego-ranking"),
                   ("insignias", "Tus insignias", "Se ganan jugando. Las de la cuenta se ven en cualquier dispositivo.",
                    "juego-insignias")]
@@ -1428,6 +1434,7 @@ def pagina_juegos(proximos) -> str:
   </a>
   <div class="jtarjetas">{tarjetas}</div>
   <div class="jextra">
+    <a class="jextra-item" href="#perfil"><b>Tu perfil</b><span data-estado="perfil">Nivel, misiones y estadísticas</span></a>
     <a class="jextra-item" href="#ranking"><b>Ranking y ligas</b><span data-estado="ranking">General y con tus amigos</span></a>
     <a class="jextra-item" href="#insignias"><b>Insignias</b><span data-estado="insignias">Mirá cuáles ganaste</span></a>
   </div>
@@ -1447,8 +1454,8 @@ def pagina_privacidad(proximos) -> str:
 <div class="cuerpo">
 <p>{e(s['nombre'])} es un medio partidario. Para leer la web no hace falta registrarse y no te pedimos ningún dato.</p>
 <h2>Si creás una cuenta para los juegos</h2>
-<p>Guardamos tu mail (o tu cuenta de Google), el apodo que elijas y tus respuestas en la pregunta del día y la trivia. Lo usamos solo para
-el ranking y para que tu racha se mantenga en cualquier dispositivo. Tu mail no se muestra en ningún lado: en el ranking solo aparece tu apodo.</p>
+<p>Guardamos tu mail (o tu cuenta de Google), el apodo que elijas, tus respuestas en la pregunta del día y la trivia y el resultado de cada
+juego que jugás con la cuenta. Lo usamos solo para el ranking, tu nivel y tus misiones, y para que todo se mantenga en cualquier dispositivo. Tu mail no se muestra en ningún lado: en el ranking solo aparece tu apodo.</p>
 <p>Los datos se guardan en Supabase, el servicio de base de datos que usamos. No los vendemos ni los compartimos con nadie.</p>
 <h2>Borrar tu cuenta</h2>
 <p>Cuando quieras, entrá a Juegos y tocá «Borrar mi cuenta»: se eliminan tu cuenta, tu apodo y todos tus puntos.</p>
@@ -1585,6 +1592,9 @@ def construir() -> None:
     quien = jugadores_hdb.datos_quien_soy()
     if quien:
         escribir("quiensoy.json", json.dumps(quien, ensure_ascii=False, separators=(",", ":")))
+    conexion = jugadores_hdb.datos_conexion(ahora().date())
+    if conexion:
+        escribir("conexion.json", json.dumps(conexion, ensure_ascii=False, separators=(",", ":")))
     grilla = _juegos.datos_grilla()
     if grilla:
         escribir("grilla.json", json.dumps(grilla, ensure_ascii=False, separators=(",", ":")))

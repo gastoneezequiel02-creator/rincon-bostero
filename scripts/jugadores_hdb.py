@@ -211,3 +211,140 @@ def partidos_por_nombre(nombres: list[str]) -> dict[str, int]:
 
 def semilla(texto: str) -> int:
     return int(hashlib.sha1(texto.encode()).hexdigest()[:8], 16)
+
+
+# ---------------------------------------------------- ¿Jugaron juntos? --
+# "Jugaron juntos" = compartieron al menos un partido oficial en Boca (la lista de compañeros de Historia de Boca).
+MIN_PJ_CONEXION = 50
+PREGUNTAS_CONEXION = 10
+
+
+def _anio_torneo(nombre: str) -> int | None:
+    m = re.findall(r"(?:19|20)\d\d", nombre or "")
+    return int(m[0]) if m else None
+
+
+def _anios_jugados(j: dict) -> set[int]:
+    """Años en los que jugó partidos oficiales (según los torneos), así se ven bien las segundas etapas."""
+    return {a for a in (_anio_torneo(t[0]) for t in j.get("tor", []) if t[1]) if a}
+
+
+def _rango(j: dict) -> tuple[int, int] | None:
+    a = _anios_jugados(j)
+    return (min(a), max(a)) if a else None
+
+
+def _etapas(anios: set[int]) -> str:
+    """{2009, 2010, 2011, 2024} → "de 2009 a 2011 y en 2024"."""
+    tramos, ant = [], None
+    for a in sorted(anios):
+        if ant is not None and a - ant <= 1:
+            tramos[-1][1] = a
+        else:
+            tramos.append([a, a])
+        ant = a
+    partes = [f"en {x}" if x == y else f"de {x} a {y}" for x, y in tramos]
+    return _lista(partes)
+
+
+def _lista(cosas: list[str]) -> str:
+    return cosas[0] if len(cosas) == 1 else ", ".join(cosas[:-1]) + " y " + cosas[-1]
+
+
+def explicar_conexion(a: dict, b: dict, juntos: bool) -> str:
+    tor_b = {t[0] for t in b.get("tor", []) if t[1]}
+    comunes = [t[0] for t in a.get("tor", []) if t[1] and t[0] in tor_b]
+    if juntos:
+        if not comunes:
+            return "Sí. Compartieron cancha en al menos un partido oficial de Boca."
+        if len(comunes) <= 3:
+            return f"Sí. Jugaron juntos en {_lista(comunes)}."
+        anios = sorted({x for x in (_anio_torneo(t) for t in comunes) if x})
+        cuando = f"en {anios[0]}" if anios and anios[0] == anios[-1] else f"entre {anios[0]} y {anios[-1]}" if anios else ""
+        return f"Sí. Jugaron juntos en Boca {cuando}: coincidieron en {len(comunes)} torneos.".replace("  ", " ")
+    aa, ab = _anios_jugados(a), _anios_jugados(b)
+    if not (aa & ab):
+        return f"No. {a['n']} jugó en Boca {_etapas(aa)} y {b['n']}, {_etapas(ab)}: no coincidieron."
+    if comunes:
+        return (f"No. Los dos jugaron {_lista(comunes[:2])}" + (" (y otros torneos)" if len(comunes) > 2 else "") +
+                ", pero nunca en el mismo partido oficial.")
+    return (f"No. Los dos jugaron partidos oficiales en {_lista([str(x) for x in sorted(aa & ab)])}, "
+            f"pero nunca en el mismo partido ({a['n']}: {_etapas(aa)}; {b['n']}: {_etapas(ab)}).")
+
+
+def _pregunta_conexion(rng, cand: list[dict], todos: dict, dif: int, usados: set) -> dict | None:
+    """dif 1: muy conocidos y épocas lejanas; 2: conocidos; 3: menos partidos y los "no" son de la misma época."""
+    minimo = {1: 200, 2: 110, 3: MIN_PJ_CONEXION}[dif]
+    pool = [j for j in cand if j["pj"] >= minimo and j["id"] not in usados]
+    if len(pool) < 10:
+        return None
+    juntos = rng.random() < 0.5
+    for _ in range(400):
+        a = rng.choice(pool)
+        comp = set(a.get("comp", []))
+        ra = _rango(a)
+        if juntos:
+            opciones = [todos[c] for c in comp if c in todos and c in {p["id"] for p in pool}]
+            if dif == 3:  # los difíciles: compartieron pocos torneos
+                opciones = [b for b in opciones if len({t[0] for t in a.get("tor", [])} & {t[0] for t in b.get("tor", [])}) <= 3] or opciones
+            if not opciones:
+                continue
+            b = rng.choice(opciones)
+        else:
+            opciones = []
+            for b in pool:
+                if b["id"] == a["id"] or b["id"] in comp:
+                    continue
+                rb = _rango(b)
+                if not (ra and rb):
+                    continue
+                separados = not (_anios_jugados(a) & _anios_jugados(b))
+                distancia = min(abs(x - y) for x in _anios_jugados(a) for y in _anios_jugados(b))
+                if dif == 1 and separados and distancia >= 3:
+                    opciones.append(b)
+                elif dif == 2 and (not separados or distancia <= 4):
+                    opciones.append(b)
+                elif dif == 3 and not separados:
+                    opciones.append(b)
+            if not opciones:
+                continue
+            b = rng.choice(opciones)
+        if b["id"] in usados or b["id"] == a["id"]:
+            continue
+        usados.update({a["id"], b["id"]})
+        par = [a, b] if rng.random() < 0.5 else [b, a]
+        return {"a": par[0]["n"], "b": par[1]["n"], "si": juntos, "dif": dif,
+                "exp": explicar_conexion(par[0], par[1], juntos)}
+    return None
+
+
+def datos_conexion(hoy, dias: int = 10, practica: int = 150) -> dict | None:
+    """Preguntas de "¿Jugaron juntos?" para hoy y los próximos días (las mismas para todos) y un banco de práctica."""
+    import datetime as dt
+    import random
+    todos = jugadores()
+    for i, j in todos.items():
+        j["id"] = i
+    cand = [j for j in todos.values() if (j.get("pj") or 0) >= MIN_PJ_CONEXION and j.get("n") and j.get("comp") and _rango(j)]
+    if len(cand) < 60:
+        return None
+    salida = {"dias": {}, "practica": [], "fuente": credito()}
+    for k in range(dias):
+        fecha = (hoy + dt.timedelta(days=k)).isoformat()
+        rng = random.Random(semilla("conexion" + fecha))
+        usados, lista = set(), []
+        for n in range(PREGUNTAS_CONEXION):
+            dif = 1 if n < 3 else 2 if n < 7 else 3
+            q = _pregunta_conexion(rng, cand, todos, dif, usados)
+            if q:
+                lista.append(q)
+        salida["dias"][fecha] = lista
+    rng = random.Random(semilla("conexion-practica" + hoy.isoformat()))
+    usados = set()
+    for n in range(practica):
+        if len(usados) > len(cand) - 20:
+            usados = set()
+        q = _pregunta_conexion(rng, cand, todos, (n % 3) + 1, usados)
+        if q:
+            salida["practica"].append(q)
+    return salida
