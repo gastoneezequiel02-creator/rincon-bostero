@@ -1,0 +1,17 @@
+{
+  "slug": "victoria",
+  "nombre": "Victoria",
+  "importado": "2026-11-18T22:59:13-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "1910-10-16",
+      "torneo": "Segunda División 1910",
+      "condicion": "L",
+      "goles_boca": 8,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "auckland-city",
+  "nombre": "Auckland City",
+  "importado": "2026-11-18T22:59:14-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "2025-06-24",
+      "torneo": "Mundial de Clubes 2025",
+      "condicion": "N",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": false
+    }
+  ]
+}

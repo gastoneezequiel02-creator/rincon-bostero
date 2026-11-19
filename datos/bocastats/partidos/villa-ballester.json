@@ -1,0 +1,17 @@
+{
+  "slug": "villa-ballester",
+  "nombre": "Villa Ballester",
+  "importado": "2026-11-18T22:59:14-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "1908-06-07",
+      "torneo": "Segunda División 1908",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}
