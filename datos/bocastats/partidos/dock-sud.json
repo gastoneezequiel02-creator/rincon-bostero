@@ -1,0 +1,62 @@
+{
+  "slug": "dock-sud",
+  "nombre": "Dock Sud",
+  "importado": "2026-11-18T22:23:04-03:00",
+  "oficiales_segun_pagina": 4,
+  "partidos": [
+    {
+      "fecha": "1922-04-23",
+      "torneo": "Campeonato 1922",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1922-08-06",
+      "torneo": "Amistosos 1922",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1923-03-18",
+      "torneo": "Campeonato 1923",
+      "condicion": "V",
+      "goles_boca": 5,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1924-02-17",
+      "torneo": "Amistosos 1924",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1924-09-07",
+      "torneo": "Campeonato 1924",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1926-05-02",
+      "torneo": "Campeonato 1926",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

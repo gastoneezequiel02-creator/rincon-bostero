@@ -1,0 +1,80 @@
+{
+  "slug": "cipolletti",
+  "nombre": "Cipolletti",
+  "importado": "2026-11-18T22:23:00-03:00",
+  "oficiales_segun_pagina": 4,
+  "partidos": [
+    {
+      "fecha": "1968-03-31",
+      "torneo": "Amistosos 1968",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1974-03-12",
+      "torneo": "Amistosos 1974",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1976-10-20",
+      "torneo": "Amistosos 1976",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1977-12-04",
+      "torneo": "Torneo Nacional 1977",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1978-01-04",
+      "torneo": "Torneo Nacional 1977",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 4,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1979-09-09",
+      "torneo": "Torneo Nacional 1979",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1979-10-28",
+      "torneo": "Torneo Nacional 1979",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1983-12-17",
+      "torneo": "Amistosos 1983",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    }
+  ]
+}

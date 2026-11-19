@@ -1,0 +1,89 @@
+{
+  "slug": "real-madrid",
+  "nombre": "Real Madrid",
+  "importado": "2026-11-18T22:22:59-03:00",
+  "oficiales_segun_pagina": 4,
+  "partidos": [
+    {
+      "fecha": "1925-03-22",
+      "torneo": "Gira por Europa 1925",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1927-07-16",
+      "torneo": "Amistosos 1927",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1964-08-23",
+      "torneo": "Amistosos 1964",
+      "condicion": "N",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1964-08-30",
+      "torneo": "Amistosos 1964",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1965-08-12",
+      "torneo": "Amistosos 1965",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1966-08-28",
+      "torneo": "Amistosos 1966",
+      "condicion": "N",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "1994-05-19",
+      "torneo": "Copa Iberoamericana 1994",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1994-05-25",
+      "torneo": "Copa Iberoamericana 1994",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2000-11-28",
+      "torneo": "Copa Intercontinental 2000",
+      "condicion": "N",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

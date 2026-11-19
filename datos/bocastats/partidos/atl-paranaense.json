@@ -1,0 +1,71 @@
+{
+  "slug": "atl-paranaense",
+  "nombre": "Athletico Paranaense",
+  "importado": "2026-11-18T22:23:04-03:00",
+  "oficiales_segun_pagina": 4,
+  "partidos": [
+    {
+      "fecha": "1973-01-29",
+      "torneo": "Amistosos 1973",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "2019-04-02",
+      "torneo": "Copa Libertadores 2019",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2019-05-09",
+      "torneo": "Copa Libertadores 2019",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2019-07-24",
+      "torneo": "Copa Libertadores 2019",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2019-07-31",
+      "torneo": "Copa Libertadores 2019",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2020-01-19",
+      "torneo": "Amistosos 2020",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "2026-07-08",
+      "torneo": "Amistosos 2026",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    }
+  ]
+}

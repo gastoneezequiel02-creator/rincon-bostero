@@ -1,0 +1,89 @@
+{
+  "slug": "sp-cristal",
+  "nombre": "Sporting Cristal",
+  "importado": "2026-11-18T22:22:59-03:00",
+  "oficiales_segun_pagina": 8,
+  "partidos": [
+    {
+      "fecha": "1957-01-31",
+      "torneo": "Amistosos 1957",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1971-03-01",
+      "torneo": "Copa Libertadores 1971",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1971-03-17",
+      "torneo": "Copa Libertadores 1971",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1989-02-23",
+      "torneo": "Copa Libertadores 1989",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 1,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1989-03-21",
+      "torneo": "Copa Libertadores 1989",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 3,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2004-05-04",
+      "torneo": "Copa Libertadores 2004",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2004-05-12",
+      "torneo": "Copa Libertadores 2004",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2005-03-02",
+      "torneo": "Copa Libertadores 2005",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2005-04-27",
+      "torneo": "Copa Libertadores 2005",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

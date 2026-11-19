@@ -1,0 +1,62 @@
+{
+  "slug": "palermo",
+  "nombre": "Palermo",
+  "importado": "2026-11-18T22:23:05-03:00",
+  "oficiales_segun_pagina": 5,
+  "partidos": [
+    {
+      "fecha": "1920-03-19",
+      "torneo": "Amistosos 1920",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1920-03-28",
+      "torneo": "Campeonato 1920",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1923-10-07",
+      "torneo": "Campeonato 1923",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1924-08-03",
+      "torneo": "Campeonato 1924",
+      "condicion": "L",
+      "goles_boca": 5,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1925-09-01",
+      "torneo": "Campeonato 1925",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1926-05-16",
+      "torneo": "Campeonato 1926",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

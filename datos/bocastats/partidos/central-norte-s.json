@@ -1,0 +1,80 @@
+{
+  "slug": "central-norte-s",
+  "nombre": "Central Norte S",
+  "importado": "2026-11-18T22:22:59-03:00",
+  "oficiales_segun_pagina": 7,
+  "partidos": [
+    {
+      "fecha": "1971-06-30",
+      "torneo": "Amistosos 1971",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1974-08-18",
+      "torneo": "Torneo Nacional 1974",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1974-10-27",
+      "torneo": "Torneo Nacional 1974",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1977-12-11",
+      "torneo": "Torneo Nacional 1977",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1978-01-11",
+      "torneo": "Torneo Nacional 1977",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1982-02-28",
+      "torneo": "Torneo Nacional 1982",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1982-04-11",
+      "torneo": "Torneo Nacional 1982",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2024-03-23",
+      "torneo": "Copa Argentina 2024",
+      "condicion": "N",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

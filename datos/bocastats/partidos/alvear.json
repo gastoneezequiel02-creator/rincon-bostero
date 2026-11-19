@@ -1,0 +1,71 @@
+{
+  "slug": "alvear",
+  "nombre": "Alvear",
+  "importado": "2026-11-18T22:23:01-03:00",
+  "oficiales_segun_pagina": 6,
+  "partidos": [
+    {
+      "fecha": "1922-06-11",
+      "torneo": "Campeonato 1922",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1923-09-16",
+      "torneo": "Campeonato 1923",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1923-10-21",
+      "torneo": "Campeonato 1923",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1924-12-21",
+      "torneo": "Campeonato 1924",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1925-10-18",
+      "torneo": "Copa Competencia 1925",
+      "condicion": "L",
+      "goles_boca": 8,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1926-06-20",
+      "torneo": "Campeonato 1926",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1930-05-24",
+      "torneo": "Amistosos 1930",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    }
+  ]
+}

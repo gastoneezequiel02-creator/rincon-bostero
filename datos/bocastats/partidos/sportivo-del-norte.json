@@ -1,0 +1,71 @@
+{
+  "slug": "sportivo-del-norte",
+  "nombre": "Sportivo Del Norte",
+  "importado": "2026-11-18T22:23:03-03:00",
+  "oficiales_segun_pagina": 7,
+  "partidos": [
+    {
+      "fecha": "1920-04-01",
+      "torneo": "Campeonato 1920",
+      "condicion": "L",
+      "goles_boca": 6,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1920-12-12",
+      "torneo": "Campeonato 1920",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1921-07-03",
+      "torneo": "Campeonato 1921",
+      "condicion": "V",
+      "goles_boca": 5,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1921-11-06",
+      "torneo": "Campeonato 1921",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1922-06-18",
+      "torneo": "Campeonato 1922",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1923-03-11",
+      "torneo": "Campeonato 1923",
+      "condicion": "L",
+      "goles_boca": 6,
+      "goles_rival": 3,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1924-11-30",
+      "torneo": "Campeonato 1924",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

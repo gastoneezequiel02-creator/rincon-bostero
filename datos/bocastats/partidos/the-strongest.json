@@ -1,0 +1,89 @@
+{
+  "slug": "the-strongest",
+  "nombre": "The Strongest",
+  "importado": "2026-11-18T22:22:59-03:00",
+  "oficiales_segun_pagina": 6,
+  "partidos": [
+    {
+      "fecha": "1952-01-20",
+      "torneo": "Amistosos 1952",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1964-03-08",
+      "torneo": "Amistosos 1964",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "1965-02-14",
+      "torneo": "Copa Libertadores 1965",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1965-03-05",
+      "torneo": "Copa Libertadores 1965",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1978-05-25",
+      "torneo": "Amistosos 1978",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1982-08-11",
+      "torneo": "Copa Libertadores 1982",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 1,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1982-08-31",
+      "torneo": "Copa Libertadores 1982",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2021-04-21",
+      "torneo": "Copa Libertadores 2021",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2021-05-26",
+      "torneo": "Copa Libertadores 2021",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

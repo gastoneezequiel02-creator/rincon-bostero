@@ -416,5 +416,33 @@
       "gc": 15,
       "pts": 32
     }
+  },
+  "2012": {
+    "arg.1": {
+      "competencia": "Liga Profesional",
+      "grupo": "Torneo Final 2013",
+      "equipos": 20,
+      "pos": 19,
+      "pj": 19,
+      "g": 3,
+      "e": 9,
+      "p": 7,
+      "gf": 13,
+      "gc": 29,
+      "pts": 18
+    },
+    "conmebol.libertadores": {
+      "competencia": "Copa Libertadores",
+      "grupo": "Group 1",
+      "equipos": 4,
+      "pos": 2,
+      "pj": 6,
+      "g": 3,
+      "e": 0,
+      "p": 3,
+      "gf": 7,
+      "gc": 7,
+      "pts": 9
+    }
   }
 }

@@ -1,0 +1,71 @@
+{
+  "slug": "san-telmo",
+  "nombre": "San Telmo",
+  "importado": "2026-11-18T22:23:03-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1905-07-02",
+      "torneo": "Amistosos 1905",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1908-01-12",
+      "torneo": "Amistosos 1908",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "1908-04-12",
+      "torneo": "Amistosos 1908",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1921-04-17",
+      "torneo": "Amistosos 1921",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1976-02-04",
+      "torneo": "Amistosos 1976",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "1976-03-21",
+      "torneo": "Torneo Metropolitano 1976",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1976-05-25",
+      "torneo": "Torneo Metropolitano 1976",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    }
+  ]
+}
