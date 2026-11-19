@@ -18,7 +18,7 @@ from comun import DATOS_MANUAL, SITIO, ahora, guardar_json, leer_json, normaliza
 ARCHIVO = DATOS_MANUAL / "banco_imagenes.json"
 CARPETA = SITIO / "estatico" / "img" / "banco"
 DIAS_SIN_REPETIR = 2      # una foto usada hace menos de esto se evita si hay otra que sirva
-PUNTAJE_MINIMO = 3        # un apellido que coincide vale 3; cada palabra en común, 1
+PUNTAJE_MINIMO = 3        # una palabra en común con el título vale 3; con la bajada o las etiquetas, 1
 
 VACIAS = set("""boca juniors xeneize xeneizes bostero bosteros club equipo plantel para como desde hasta sobre entre
 ante tras contra pero porque cuando donde este esta estos estas ese esos esas fueron sera seria tiene tienen hace hacia
@@ -71,16 +71,12 @@ def _reciente(img: dict) -> bool:
 
 
 def _puntaje(img: dict, nota: dict) -> int:
-    texto = " ".join([nota.get("titulo", ""), nota.get("bajada", ""), " ".join(nota.get("etiquetas") or []),
-                      " ".join(nota.get("protagonistas") or [])])
-    desc = normalizar(img.get("descripcion", ""))
-    palabras_desc = set(re.findall(r"[a-z0-9]+", desc))
-    puntos = len(raices(texto) & raices(img.get("descripcion", "")))
-    for persona in nota.get("protagonistas") or []:
-        apellido = normalizar(persona).split()[-1] if normalizar(persona).split() else ""
-        if len(apellido) >= 4 and apellido in palabras_desc:
-            puntos += 3
-    return puntos
+    """Cada palabra de la descripción que aparece en el título o entre los protagonistas vale 3;
+    si solo aparece en la bajada o las etiquetas, 1."""
+    desc = raices(img.get("descripcion", ""))
+    fuerte = raices(" ".join([nota.get("titulo", ""), " ".join(nota.get("protagonistas") or [])]))
+    debil = raices(" ".join([nota.get("bajada", ""), " ".join(nota.get("etiquetas") or [])]))
+    return 3 * len(desc & fuerte) + len((desc - fuerte) & debil)
 
 
 def elegir(nota: dict, general: bool = False) -> dict | None:
