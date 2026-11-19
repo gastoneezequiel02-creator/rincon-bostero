@@ -1,0 +1,9 @@
+{
+ "_instrucciones": "Datos de contrato que le faltan a Boca en Números. Solo se usan si su relevamiento no trae el dato; si lo trae, vale el de ellos. 'vence' puede ser solo el año (\"2030\") o la fecha completa (\"2030-06-30\").",
+ "contratos": {
+  "Sebastián Villa": {
+   "vence": "2030",
+   "nota": "Firmó en julio de 2026 hasta 2030 (la prensa difiere entre junio y diciembre). Cargado por el dueño el 19/11/2026."
+  }
+ }
+}
