@@ -695,6 +695,10 @@
     "santiago ascacibar": {
       "archivo": null,
       "buscado": "2026-11-19T10:36:45.481562-03:00"
+    },
+    "alberto marcico": {
+      "archivo": "Marcico ferro c oeste.jpg",
+      "buscado": "2026-11-19T12:54:37.236530-03:00"
     }
   },
   "archivos": {
@@ -1085,6 +1089,10 @@
     "Boca Juniors stadı La Bombonera giriş 2018.jpg": {
       "imagen": "img/archivo/boca-juniors-stad-la-bombonera-giris-2018-ff1eb4.jpg",
       "credito": "Foto de archivo: Mehmettorun / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "Marcico ferro c oeste.jpg": {
+      "imagen": "img/archivo/marcico-ferro-c-oeste-2d3d99.jpg",
+      "credito": "Foto de archivo: Unknown author Unknown author / Wikimedia Commons (Public domain)"
     }
   },
   "bombonera": {
