@@ -1,0 +1,53 @@
+{
+  "slug": "liga-dep-univ-ecu",
+  "nombre": "Liga de Quito",
+  "importado": "2026-11-18T22:41:19-03:00",
+  "oficiales_segun_pagina": 4,
+  "partidos": [
+    {
+      "fecha": "1997-04-27",
+      "torneo": "Amistosos 1997",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "2008-09-23",
+      "torneo": "Copa Sudamericana 2008",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2008-10-01",
+      "torneo": "Copa Sudamericana 2008",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "2019-08-21",
+      "torneo": "Copa Libertadores 2019",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2019-08-28",
+      "torneo": "Copa Libertadores 2019",
+      "condicion": "L",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    }
+  ]
+}

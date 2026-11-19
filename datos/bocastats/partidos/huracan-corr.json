@@ -1,0 +1,35 @@
+{
+  "slug": "huracan-corr",
+  "nombre": "Huracan Corr",
+  "importado": "2026-11-18T22:41:23-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1996-09-21",
+      "torneo": "Torneo Apertura 1996",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1997-03-14",
+      "torneo": "Torneo Clausura 1997",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1998-04-28",
+      "torneo": "Amistosos 1998",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    }
+  ]
+}

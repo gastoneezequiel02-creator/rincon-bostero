@@ -1,0 +1,409 @@
+{
+  "personas": {
+    "puerto madryn": {
+      "archivo": null,
+      "buscado": "2026-11-18T22:41:25.456994-03:00"
+    },
+    "juan roman riquelme": {
+      "archivo": "Juan Román Riquelme - 2019.jpg",
+      "buscado": "2026-11-18T22:41:26.677136-03:00"
+    },
+    "atletico mineiro": {
+      "archivo": null,
+      "buscado": "2026-11-18T22:41:26.860082-03:00"
+    },
+    "recopa sudamericana": {
+      "archivo": null,
+      "buscado": "2026-11-18T22:41:27.136177-03:00"
+    },
+    "historia xeneize": {
+      "archivo": null,
+      "buscado": "2026-11-18T22:41:27.225384-03:00"
+    },
+    "rodolfo arruabarrena": {
+      "archivo": "Arruaberra en villarreal 2007.jpg",
+      "buscado": "2026-11-18T22:41:27.875411-03:00"
+    },
+    "leandro paredes": {
+      "archivo": "Leandro Paredes Argentina v Egypt 7 July 2026-048.jpg",
+      "buscado": "2026-11-18T22:41:28.248798-03:00"
+    },
+    "milton delgado": {
+      "archivo": null,
+      "buscado": "2026-11-18T22:41:28.818033-03:00"
+    },
+    "miguel merentiel": {
+      "archivo": null,
+      "buscado": "2026-11-18T22:41:29.219010-03:00"
+    }
+  },
+  "archivos": {
+    "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 03.jpg": {
+      "imagen": "img/archivo/vista-aerea-del-estadio-alberto-j-armando-la-bombo-b9fc90.jpg",
+      "credito": "Foto de archivo: ProtoplasmaKid / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "La bombonera vista campo.jpg": {
+      "imagen": "img/archivo/la-bombonera-vista-campo-31b4c9.jpg",
+      "credito": "Foto de archivo: i_aoquadrado / Wikimedia Commons (CC BY-SA 2.0)"
+    },
+    "Juan Román Riquelme - 2019.jpg": {
+      "imagen": "img/archivo/juan-roman-riquelme-2019-44fdd8.jpg",
+      "credito": "Foto de archivo: Todo Noticias / Wikimedia Commons (CC BY 3.0)"
+    },
+    "La Bombonera2.jpg": {
+      "imagen": "img/archivo/la-bombonera2-e02333.jpg",
+      "credito": "Foto de archivo: Raffael Paranhos / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "La Bombonera - panoramica.jpg": {
+      "imagen": "img/archivo/la-bombonera-panoramica-ef3368.jpg",
+      "credito": "Foto de archivo: Diego Silvestre from Sao Paulo, Brazil / Wikimedia Commons (CC BY 2.0)"
+    },
+    "Bombonera 01.jpg": {
+      "imagen": "img/archivo/bombonera-01-5b69cb.jpg",
+      "credito": "Foto de archivo: Sangianense / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "La Bombonera - 2013 (12118446894).jpg": {
+      "imagen": "img/archivo/la-bombonera-2013-12118446894-1df218.jpg",
+      "credito": "Foto de archivo: Wir Weltenbummler / Wikimedia Commons (CC BY-SA 2.0)"
+    },
+    "La Bombonera1.jpg": {
+      "imagen": "img/archivo/la-bombonera1-efa895.jpg",
+      "credito": "Foto de archivo: Raffael Paranhos / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "Arruaberra en villarreal 2007.jpg": {
+      "imagen": "img/archivo/arruaberra-en-villarreal-2007-f3b41b.jpg",
+      "credito": "Foto de archivo: Davic / Wikimedia Commons (CC BY-SA 2.0)"
+    },
+    "LA BOMBONERA 1.jpg": {
+      "imagen": "img/archivo/la-bombonera-1-d4afe5.jpg",
+      "credito": "Foto de archivo: Matibro / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "Leandro Paredes Argentina v Egypt 7 July 2026-048.jpg": {
+      "imagen": "img/archivo/leandro-paredes-argentina-v-egypt-7-july-2026-048-abd31a.jpg",
+      "credito": "Foto de archivo: Bryan Berlin / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 04.jpg": {
+      "imagen": "img/archivo/vista-aerea-del-estadio-alberto-j-armando-la-bombo-4280c0.jpg",
+      "credito": "Foto de archivo: ProtoplasmaKid / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "La Bombonera3.jpg": {
+      "imagen": "img/archivo/la-bombonera3-e203df.jpg",
+      "credito": "Foto de archivo: Raffael Paranhos / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 01.jpg": {
+      "imagen": "img/archivo/vista-aerea-del-estadio-alberto-j-armando-la-bombo-be10a8.jpg",
+      "credito": "Foto de archivo: ProtoplasmaKid / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "La Bombonera - 2008 (2196233623).jpg": {
+      "imagen": "img/archivo/la-bombonera-2008-2196233623-857d08.jpg",
+      "credito": "Foto de archivo: H Dragon / Wikimedia Commons (CC BY 2.0)"
+    },
+    "La Bombonera (4390601627).jpg": {
+      "imagen": "img/archivo/la-bombonera-4390601627-42e0f0.jpg",
+      "credito": "Foto de archivo: Pablo Dodda from Buenos Aires, Argentina / Wikimedia Commons (CC BY 2.0)"
+    },
+    "La Bombonera - 2007 (1923753902).jpg": {
+      "imagen": "img/archivo/la-bombonera-2007-1923753902-39cb8a.jpg",
+      "credito": "Foto de archivo: Richie Diesterheft from Santa Barbara, CA, USA / Wikimedia Commons (CC BY 2.0)"
+    },
+    "La Bombonera - 2013 (12118717106).jpg": {
+      "imagen": "img/archivo/la-bombonera-2013-12118717106-919550.jpg",
+      "credito": "Foto de archivo: Wir Weltenbummler / Wikimedia Commons (CC BY-SA 2.0)"
+    }
+  },
+  "bombonera": {
+    "fecha": "2026-11-18T22:41:26.158456-03:00",
+    "archivos": [
+      "20170807 La Bombonera - Estadio Alberto Jacinto Armando.jpg",
+      "Boca Junior stadium.JPG",
+      "Boca Juniors stadı La Bombonera giriş 2018.jpg",
+      "Bombonera 01.jpg",
+      "Estadio Alberto J. Armando field night view.jpg",
+      "Estadio Alberto J. Armando field view.jpg",
+      "Estadio Boca Juniors desde las vías.jpg",
+      "Estadio de Boca Juniors.jpg",
+      "Estrellas de La Bombonera, Buenos Aires ARG.jpg",
+      "LA BOMBONERA 1.jpg",
+      "La Bombonera (4390601627).jpg",
+      "La Bombonera - 2006 (238772908).jpg",
+      "La Bombonera - 2007 (1923753902).jpg",
+      "La Bombonera - 2008 (2196233623).jpg",
+      "La Bombonera - 2008 (2923476817).jpg",
+      "La Bombonera - 2012 (8336738589).jpg",
+      "La Bombonera - 2013 (12118446894).jpg",
+      "La Bombonera - 2013 (12118717106).jpg",
+      "La Bombonera - Buenos Aires - Argentina.jpg",
+      "La Bombonera - panoramica.jpg",
+      "La Bombonera 2.jpg",
+      "La Bombonera1.jpg",
+      "La Bombonera2.jpg",
+      "La Bombonera3.jpg",
+      "La bombonera vista campo.jpg",
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 01.jpg",
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 02.jpg",
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 03.jpg",
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 04.jpg",
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 05.jpg",
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 06.jpg",
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 08.jpg",
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 09.jpg",
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 10.jpg",
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 11.jpg",
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 12.jpg"
+    ],
+    "info": {
+      "20170807 La Bombonera - Estadio Alberto Jacinto Armando.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/20170807_La_Bombonera_-_Estadio_Alberto_Jacinto_Armando.jpg/960px-20170807_La_Bombonera_-_Estadio_Alberto_Jacinto_Armando.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 6000,
+        "alto": 4000,
+        "autor": "Matthias Bethke",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "Boca Junior stadium.JPG": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Boca_Junior_stadium.JPG/960px-Boca_Junior_stadium.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 3393,
+        "alto": 2592,
+        "autor": "Helge Høifødt",
+        "licencia": "CC BY-SA 3.0"
+      },
+      "Boca Juniors stadı La Bombonera giriş 2018.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Boca_Juniors_stad%C4%B1_La_Bombonera_giri%C5%9F_2018.jpg/960px-Boca_Juniors_stad%C4%B1_La_Bombonera_giri%C5%9F_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 3264,
+        "alto": 2448,
+        "autor": "Mehmettorun",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "Bombonera 01.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Bombonera_01.jpg/960px-Bombonera_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 4624,
+        "alto": 3472,
+        "autor": "Sangianense",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "Estadio Alberto J. Armando field night view.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Estadio_Alberto_J._Armando_field_night_view.jpg/960px-Estadio_Alberto_J._Armando_field_night_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 3057,
+        "alto": 2038,
+        "autor": "Ministerio de Cultura de la Nación",
+        "licencia": "CC BY-SA 2.0"
+      },
+      "Estadio Alberto J. Armando field view.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Estadio_Alberto_J._Armando_field_view.jpg/960px-Estadio_Alberto_J._Armando_field_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 6466,
+        "alto": 4311,
+        "autor": "Ministerio de Cultura de la Nación",
+        "licencia": "CC BY-SA 2.0"
+      },
+      "Estadio Boca Juniors desde las vías.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Estadio_Boca_Juniors_desde_las_v%C3%ADas.jpg/960px-Estadio_Boca_Juniors_desde_las_v%C3%ADas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 2848,
+        "alto": 2134,
+        "autor": "Dario Alpern",
+        "licencia": "CC BY 3.0"
+      },
+      "Estadio de Boca Juniors.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Estadio_de_Boca_Juniors.jpg/960px-Estadio_de_Boca_Juniors.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 3072,
+        "alto": 2304,
+        "autor": "Alekino",
+        "licencia": "Public domain"
+      },
+      "Estrellas de La Bombonera, Buenos Aires ARG.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Estrellas_de_La_Bombonera%2C_Buenos_Aires_ARG.jpg/960px-Estrellas_de_La_Bombonera%2C_Buenos_Aires_ARG.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 2592,
+        "alto": 1944,
+        "autor": "Stefano Vigorelli",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "LA BOMBONERA 1.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/LA_BOMBONERA_1.jpg/960px-LA_BOMBONERA_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 12336,
+        "alto": 3680,
+        "autor": "Matibro",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "La Bombonera (4390601627).jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/La_Bombonera_%284390601627%29.jpg/960px-La_Bombonera_%284390601627%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 2476,
+        "alto": 452,
+        "autor": "Pablo Dodda from Buenos Aires, Argentina",
+        "licencia": "CC BY 2.0"
+      },
+      "La Bombonera - 2006 (238772908).jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/La_Bombonera_-_2006_%28238772908%29.jpg/960px-La_Bombonera_-_2006_%28238772908%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 1400,
+        "alto": 824,
+        "autor": "Kai Hendry from Singapore, Malaysia",
+        "licencia": "CC BY 2.0"
+      },
+      "La Bombonera - 2007 (1923753902).jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/La_Bombonera_-_2007_%281923753902%29.jpg/960px-La_Bombonera_-_2007_%281923753902%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 1600,
+        "alto": 1200,
+        "autor": "Richie Diesterheft from Santa Barbara, CA, USA",
+        "licencia": "CC BY 2.0"
+      },
+      "La Bombonera - 2008 (2196233623).jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/La_Bombonera_-_2008_%282196233623%29.jpg/960px-La_Bombonera_-_2008_%282196233623%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 1200,
+        "alto": 799,
+        "autor": "H Dragon",
+        "licencia": "CC BY 2.0"
+      },
+      "La Bombonera - 2008 (2923476817).jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/La_Bombonera_-_2008_%282923476817%29.jpg/960px-La_Bombonera_-_2008_%282923476817%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 3072,
+        "alto": 2304,
+        "autor": "Matthew Baron from Lexington, MA, USA",
+        "licencia": "CC BY-SA 2.0"
+      },
+      "La Bombonera - 2012 (8336738589).jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/La_Bombonera_-_2012_%288336738589%29.jpg/960px-La_Bombonera_-_2012_%288336738589%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 2048,
+        "alto": 1536,
+        "autor": "Vania Wolf from Indaiatuba, Brasil",
+        "licencia": "CC BY-SA 2.0"
+      },
+      "La Bombonera - 2013 (12118446894).jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/La_Bombonera_-_2013_%2812118446894%29.jpg/960px-La_Bombonera_-_2013_%2812118446894%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 1024,
+        "alto": 768,
+        "autor": "Wir Weltenbummler",
+        "licencia": "CC BY-SA 2.0"
+      },
+      "La Bombonera - 2013 (12118717106).jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/La_Bombonera_-_2013_%2812118717106%29.jpg/960px-La_Bombonera_-_2013_%2812118717106%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 1024,
+        "alto": 768,
+        "autor": "Wir Weltenbummler",
+        "licencia": "CC BY-SA 2.0"
+      },
+      "La Bombonera - Buenos Aires - Argentina.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/La_Bombonera_-_Buenos_Aires_-_Argentina.jpg/960px-La_Bombonera_-_Buenos_Aires_-_Argentina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 3045,
+        "alto": 2202,
+        "autor": "Diego Delso",
+        "licencia": "CC BY-SA 3.0"
+      },
+      "La Bombonera - panoramica.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/La_Bombonera_-_panoramica.jpg/960px-La_Bombonera_-_panoramica.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 3854,
+        "alto": 600,
+        "autor": "Diego Silvestre from Sao Paulo, Brazil",
+        "licencia": "CC BY 2.0"
+      },
+      "La Bombonera 2.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/La_Bombonera_2.jpg/960px-La_Bombonera_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 4000,
+        "alto": 3000,
+        "autor": "Matibro",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "La Bombonera1.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/La_Bombonera1.jpg/960px-La_Bombonera1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 5184,
+        "alto": 3456,
+        "autor": "Raffael Paranhos",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "La Bombonera2.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/La_Bombonera2.jpg/960px-La_Bombonera2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 5184,
+        "alto": 3456,
+        "autor": "Raffael Paranhos",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "La Bombonera3.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/La_Bombonera3.jpg/960px-La_Bombonera3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 5184,
+        "alto": 3456,
+        "autor": "Raffael Paranhos",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "La bombonera vista campo.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/La_bombonera_vista_campo.jpg/960px-La_bombonera_vista_campo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 4960,
+        "alto": 1280,
+        "autor": "i_aoquadrado",
+        "licencia": "CC BY-SA 2.0"
+      },
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 01.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_01.jpg/960px-Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 8064,
+        "alto": 4536,
+        "autor": "ProtoplasmaKid",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 02.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_02.jpg/960px-Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 8064,
+        "alto": 4536,
+        "autor": "ProtoplasmaKid",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 03.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_03.jpg/960px-Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 8064,
+        "alto": 4536,
+        "autor": "ProtoplasmaKid",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 04.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_04.jpg/960px-Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 7149,
+        "alto": 4021,
+        "autor": "ProtoplasmaKid",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 05.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_05.jpg/960px-Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 8064,
+        "alto": 4536,
+        "autor": "ProtoplasmaKid",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 06.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_06.jpg/960px-Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 8064,
+        "alto": 4536,
+        "autor": "ProtoplasmaKid",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 08.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_08.jpg/960px-Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 8064,
+        "alto": 4536,
+        "autor": "ProtoplasmaKid",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 09.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_09.jpg/960px-Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 8064,
+        "alto": 4536,
+        "autor": "ProtoplasmaKid",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 10.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_10.jpg/960px-Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 7198,
+        "alto": 4049,
+        "autor": "ProtoplasmaKid",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 11.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_11.jpg/960px-Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 8064,
+        "alto": 4536,
+        "autor": "ProtoplasmaKid",
+        "licencia": "CC BY-SA 4.0"
+      },
+      "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 12.jpg": {
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_12.jpg/960px-Vista_a%C3%A9rea_del_Estadio_Alberto_J._Armando_%22La_Bombonera%22_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "ancho": 8064,
+        "alto": 4536,
+        "autor": "ProtoplasmaKid",
+        "licencia": "CC BY-SA 4.0"
+      }
+    }
+  }
+}

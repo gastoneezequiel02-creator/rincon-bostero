@@ -107,6 +107,12 @@
     "2012:arg.1",
     "2012:arg.copa_lpf",
     "2012:conmebol.libertadores",
-    "2012:conmebol.sudamericana"
+    "2012:conmebol.sudamericana",
+    "2012:conmebol.recopa",
+    "2012:arg.copa",
+    "2012:arg.supercopa",
+    "2012:fifa.cwc",
+    "2011:arg.1",
+    "2011:arg.copa_lpf"
   ]
 }

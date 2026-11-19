@@ -1,0 +1,35 @@
+{
+  "slug": "alianza-cutral-co",
+  "nombre": "Alianza Cutral Co",
+  "importado": "2026-11-18T22:41:23-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1985-08-11",
+      "torneo": "Amistosos 1985",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1986-04-27",
+      "torneo": "Liguilla 1985/86",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1986-05-04",
+      "torneo": "Liguilla 1985/86",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

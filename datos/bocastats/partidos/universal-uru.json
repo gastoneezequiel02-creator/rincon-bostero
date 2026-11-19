@@ -1,0 +1,53 @@
+{
+  "slug": "universal-uru",
+  "nombre": "Universal Uru",
+  "importado": "2026-11-18T22:41:19-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "1907-12-08",
+      "torneo": "Amistosos 1907",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1908-10-18",
+      "torneo": "Amistosos 1908",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1911-11-19",
+      "torneo": "Amistosos 1911",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1922-11-11",
+      "torneo": "Amistosos 1922",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1923-09-20",
+      "torneo": "Copa de Honor Cousenier 1920",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

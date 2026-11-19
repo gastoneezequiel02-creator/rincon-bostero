@@ -1,0 +1,62 @@
+{
+  "slug": "montevideo-wanderers",
+  "nombre": "Montevideo Wanderers",
+  "importado": "2026-11-18T22:41:17-03:00",
+  "oficiales_segun_pagina": 6,
+  "partidos": [
+    {
+      "fecha": "1986-07-23",
+      "torneo": "Copa Libertadores 1986",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1986-08-07",
+      "torneo": "Copa Libertadores 1986",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2002-03-06",
+      "torneo": "Copa Libertadores 2002",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2002-04-10",
+      "torneo": "Copa Libertadores 2002",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2015-02-26",
+      "torneo": "Copa Libertadores 2015",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2015-04-09",
+      "torneo": "Copa Libertadores 2015",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "slug": "huracan-ta",
+  "nombre": "Huracan Ta",
+  "importado": "2026-11-18T22:41:20-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1960-05-25",
+      "torneo": "Amistosos 1960",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1969-12-16",
+      "torneo": "Amistosos 1969",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "2004-10-03",
+      "torneo": "Torneo Apertura 2004",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2005-04-17",
+      "torneo": "Torneo Clausura 2005",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

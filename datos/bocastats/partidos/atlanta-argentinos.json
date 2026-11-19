@@ -1,0 +1,44 @@
+{
+  "slug": "atlanta-argentinos",
+  "nombre": "Atlanta Argentinos",
+  "importado": "2026-11-18T22:41:19-03:00",
+  "oficiales_segun_pagina": 3,
+  "partidos": [
+    {
+      "fecha": "1934-01-27",
+      "torneo": "Amistosos 1934",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1934-06-24",
+      "torneo": "Campeonato 1934",
+      "condicion": "V",
+      "goles_boca": 6,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1934-09-23",
+      "torneo": "Campeonato 1934",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1934-11-11",
+      "torneo": "Campeonato 1934",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

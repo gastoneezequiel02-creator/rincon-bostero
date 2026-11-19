@@ -1,0 +1,53 @@
+{
+  "slug": "sp-buenos-aires",
+  "nombre": "Sp Buenos Aires",
+  "importado": "2026-11-18T22:41:19-03:00",
+  "oficiales_segun_pagina": 3,
+  "partidos": [
+    {
+      "fecha": "1927-12-18",
+      "torneo": "Campeonato 1927",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1928-05-12",
+      "torneo": "Amistosos 1928",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1928-11-25",
+      "torneo": "Campeonato 1928",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1929-10-20",
+      "torneo": "Campeonato Estímulo 1929",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1930-11-16",
+      "torneo": "Campeonato 1930",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

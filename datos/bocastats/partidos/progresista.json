@@ -1,0 +1,53 @@
+{
+  "slug": "progresista",
+  "nombre": "Progresista",
+  "importado": "2026-11-18T22:41:18-03:00",
+  "oficiales_segun_pagina": 5,
+  "partidos": [
+    {
+      "fecha": "1922-05-28",
+      "torneo": "Campeonato 1922",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1923-06-03",
+      "torneo": "Campeonato 1923",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1923-12-16",
+      "torneo": "Campeonato 1923",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1925-11-11",
+      "torneo": "Campeonato 1925",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1926-11-21",
+      "torneo": "Campeonato 1926",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

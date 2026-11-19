@@ -1,0 +1,35 @@
+{
+  "slug": "argentino-del-sud",
+  "nombre": "Argentino Del Sud",
+  "importado": "2026-11-18T22:41:23-03:00",
+  "oficiales_segun_pagina": 3,
+  "partidos": [
+    {
+      "fecha": "1927-05-01",
+      "torneo": "Campeonato 1927",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1928-09-09",
+      "torneo": "Campeonato 1928",
+      "condicion": "L",
+      "goles_boca": 6,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1930-09-14",
+      "torneo": "Campeonato 1930",
+      "condicion": "L",
+      "goles_boca": 5,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

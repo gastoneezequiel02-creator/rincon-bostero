@@ -1,0 +1,35 @@
+{
+  "slug": "almirante-brown",
+  "nombre": "Almirante Brown",
+  "importado": "2026-11-18T22:41:23-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "1972-01-15",
+      "torneo": "Amistosos 1972",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1979-03-07",
+      "torneo": "Amistosos 1979",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 1,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "2024-06-19",
+      "torneo": "Copa Argentina 2024",
+      "condicion": "N",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

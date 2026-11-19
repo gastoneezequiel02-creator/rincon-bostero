@@ -1,0 +1,44 @@
+{
+  "slug": "cobreloa",
+  "nombre": "Cobreloa",
+  "importado": "2026-11-18T22:41:21-03:00",
+  "oficiales_segun_pagina": 4,
+  "partidos": [
+    {
+      "fecha": "2001-02-28",
+      "torneo": "Copa Libertadores 2001",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2001-03-20",
+      "torneo": "Copa Libertadores 2001",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2003-05-21",
+      "torneo": "Copa Libertadores 2003",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2003-05-28",
+      "torneo": "Copa Libertadores 2003",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

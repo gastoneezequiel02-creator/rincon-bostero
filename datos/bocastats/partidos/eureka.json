@@ -1,0 +1,53 @@
+{
+  "slug": "eureka",
+  "nombre": "Eureka",
+  "importado": "2026-11-18T22:41:18-03:00",
+  "oficiales_segun_pagina": 4,
+  "partidos": [
+    {
+      "fecha": "1919-08-03",
+      "torneo": "Copa Competencia (Anulada) 1919",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1919-10-26",
+      "torneo": "Campeonato 1919",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1919-11-30",
+      "torneo": "Campeonato 1919",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1920-03-14",
+      "torneo": "Amistosos 1920",
+      "condicion": "L",
+      "goles_boca": 7,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1920-04-11",
+      "torneo": "Campeonato 1920",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

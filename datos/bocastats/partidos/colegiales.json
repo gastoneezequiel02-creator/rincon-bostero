@@ -1,0 +1,44 @@
+{
+  "slug": "colegiales",
+  "nombre": "Colegiales",
+  "importado": "2026-11-18T22:41:20-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1926-06-13",
+      "torneo": "Campeonato 1926",
+      "condicion": "L",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1931-03-08",
+      "torneo": "Campeonato 1930",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1944-03-30",
+      "torneo": "Amistosos 1944",
+      "condicion": "L",
+      "goles_boca": 8,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1949-04-03",
+      "torneo": "Amistosos 1949",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": true
+    }
+  ]
+}

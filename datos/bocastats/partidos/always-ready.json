@@ -1,0 +1,44 @@
+{
+  "slug": "always-ready",
+  "nombre": "Always Ready",
+  "importado": "2026-11-18T22:41:20-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1952-01-27",
+      "torneo": "Amistosos 1952",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "1978-05-27",
+      "torneo": "Amistosos 1978",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 3,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "2022-04-12",
+      "torneo": "Copa Libertadores 2022",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2022-05-04",
+      "torneo": "Copa Libertadores 2022",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

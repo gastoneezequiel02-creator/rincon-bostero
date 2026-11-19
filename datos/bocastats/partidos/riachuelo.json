@@ -1,0 +1,53 @@
+{
+  "slug": "riachuelo",
+  "nombre": "Riachuelo",
+  "importado": "2026-11-18T22:41:18-03:00",
+  "oficiales_segun_pagina": 3,
+  "partidos": [
+    {
+      "fecha": "1910-03-27",
+      "torneo": "Amistosos 1910",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "1910-09-08",
+      "torneo": "Amistosos 1910",
+      "condicion": "L",
+      "goles_boca": 6,
+      "goles_rival": 3,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1912-07-21",
+      "torneo": "División Intermedia 1912",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1912-09-08",
+      "torneo": "División Intermedia 1912",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1913-04-27",
+      "torneo": "Campeonato 1913",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

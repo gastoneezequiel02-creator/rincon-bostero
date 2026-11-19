@@ -444,5 +444,20 @@
       "gc": 7,
       "pts": 9
     }
+  },
+  "2011": {
+    "arg.1": {
+      "competencia": "Liga Profesional",
+      "grupo": "Torneo Clausura 2012",
+      "equipos": 20,
+      "pos": 4,
+      "pj": 19,
+      "g": 9,
+      "e": 6,
+      "p": 4,
+      "gf": 30,
+      "gc": 20,
+      "pts": 33
+    }
   }
 }

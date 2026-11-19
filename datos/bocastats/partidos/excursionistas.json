@@ -1,0 +1,53 @@
+{
+  "slug": "excursionistas",
+  "nombre": "Excursionistas",
+  "importado": "2026-11-18T22:41:18-03:00",
+  "oficiales_segun_pagina": 4,
+  "partidos": [
+    {
+      "fecha": "1927-03-27",
+      "torneo": "Campeonato 1927",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1928-04-15",
+      "torneo": "Campeonato 1928",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1929-07-21",
+      "torneo": "Campeonato Estímulo 1929",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1930-10-26",
+      "torneo": "Campeonato 1930",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2013-03-21",
+      "torneo": "Copa Argentina 2013",
+      "condicion": "N",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}
