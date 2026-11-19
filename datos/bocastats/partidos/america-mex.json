@@ -1,0 +1,125 @@
+{
+  "slug": "america-mex",
+  "nombre": "América de México",
+  "importado": "2026-11-18T22:22:09-03:00",
+  "oficiales_segun_pagina": 5,
+  "partidos": [
+    {
+      "fecha": "1967-08-12",
+      "torneo": "Amistosos 1967",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1978-03-28",
+      "torneo": "Copa Interamericana 1978",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1978-04-12",
+      "torneo": "Copa Interamericana 1978",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 1,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1978-04-14",
+      "torneo": "Copa Interamericana 1978",
+      "condicion": "N",
+      "goles_boca": 1,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1982-01-26",
+      "torneo": "Amistosos 1982",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1999-07-15",
+      "torneo": "Amistosos 1999",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1999-07-17",
+      "torneo": "Amistosos 1999",
+      "condicion": "N",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "2000-05-31",
+      "torneo": "Copa Libertadores 2000",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2000-06-07",
+      "torneo": "Copa Libertadores 2000",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2002-07-02",
+      "torneo": "Amistosos 2002",
+      "condicion": "N",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "2004-07-23",
+      "torneo": "Amistosos 2004",
+      "condicion": "N",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "2007-07-20",
+      "torneo": "Amistosos 2007",
+      "condicion": "N",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "2019-07-03",
+      "torneo": "Amistosos 2019",
+      "condicion": "N",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    }
+  ]
+}

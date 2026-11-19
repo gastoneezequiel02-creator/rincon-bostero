@@ -1,0 +1,125 @@
+{
+  "slug": "el-porvenir",
+  "nombre": "EP\n El Porvenir",
+  "importado": "2026-11-18T22:22:09-03:00",
+  "oficiales_segun_pagina": 9,
+  "partidos": [
+    {
+      "fecha": "1921-06-26",
+      "torneo": "Campeonato 1921",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1921-12-04",
+      "torneo": "Campeonato 1921",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1922-05-21",
+      "torneo": "Campeonato 1922",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1922-09-17",
+      "torneo": "Amistosos 1922",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1923-06-17",
+      "torneo": "Campeonato 1923",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1924-02-24",
+      "torneo": "Amistosos 1924",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "1924-10-05",
+      "torneo": "Campeonato 1924",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1925-08-23",
+      "torneo": "Amistosos 1925",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 3,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1925-11-15",
+      "torneo": "Copa Competencia 1925",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1926-05-09",
+      "torneo": "Campeonato 1926",
+      "condicion": "V",
+      "goles_boca": 5,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1929-03-31",
+      "torneo": "Campeonato 1928",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1931-04-05",
+      "torneo": "Campeonato 1930",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1938-10-26",
+      "torneo": "Amistosos 1938",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    }
+  ]
+}

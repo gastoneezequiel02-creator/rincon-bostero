@@ -1,0 +1,107 @@
+{
+  "slug": "san-fernando",
+  "nombre": "SF\n San Fernando",
+  "importado": "2026-11-18T22:22:10-03:00",
+  "oficiales_segun_pagina": 8,
+  "partidos": [
+    {
+      "fecha": "1906-05-13",
+      "torneo": "Amistosos 1906",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "1922-09-24",
+      "torneo": "Campeonato 1922",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1923-05-27",
+      "torneo": "Campeonato 1923",
+      "condicion": "L",
+      "goles_boca": 5,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1924-11-09",
+      "torneo": "Campeonato 1924",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1925-11-08",
+      "torneo": "Campeonato 1925",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1926-12-12",
+      "torneo": "Campeonato 1926",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1927-04-10",
+      "torneo": "Campeonato 1927",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1928-03-31",
+      "torneo": "Amistosos 1928",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1929-04-14",
+      "torneo": "Campeonato 1928",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1930-08-09",
+      "torneo": "Amistosos 1930",
+      "condicion": "L",
+      "goles_boca": 6,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1930-10-05",
+      "torneo": "Campeonato 1930",
+      "condicion": "V",
+      "goles_boca": 6,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

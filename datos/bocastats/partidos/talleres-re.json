@@ -1,0 +1,206 @@
+{
+  "slug": "talleres-re",
+  "nombre": "TR\n Talleres Re",
+  "importado": "2026-11-18T22:22:06-03:00",
+  "oficiales_segun_pagina": 18,
+  "partidos": [
+    {
+      "fecha": "1927-07-03",
+      "torneo": "Campeonato 1927",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1928-08-26",
+      "torneo": "Campeonato 1928",
+      "condicion": "L",
+      "goles_boca": 0,
+      "goles_rival": 1,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1930-06-08",
+      "torneo": "Campeonato 1930",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1931-02-12",
+      "torneo": "Amistosos 1931",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1931-09-12",
+      "torneo": "Campeonato 1931",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1932-01-01",
+      "torneo": "Campeonato 1931",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1932-03-02",
+      "torneo": "Amistosos 1932",
+      "condicion": "L",
+      "goles_boca": 0,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1932-06-12",
+      "torneo": "Campeonato 1932",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1932-10-23",
+      "torneo": "Campeonato 1932",
+      "condicion": "V",
+      "goles_boca": 5,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1933-05-28",
+      "torneo": "Campeonato 1933",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1933-10-15",
+      "torneo": "Campeonato 1933",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1933-12-17",
+      "torneo": "Copa de Honor Beccar Varela 1933",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1935-07-28",
+      "torneo": "Campeonato 1935",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1935-12-23",
+      "torneo": "Campeonato 1935",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1936-03-29",
+      "torneo": "Amistosos 1936",
+      "condicion": "L",
+      "goles_boca": 7,
+      "goles_rival": 3,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1936-04-12",
+      "torneo": "Copa de Honor 1936",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1936-08-23",
+      "torneo": "Copa Campeonato 1936",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1937-04-11",
+      "torneo": "Campeonato 1937",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1937-08-29",
+      "torneo": "Campeonato 1937",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1938-05-08",
+      "torneo": "Campeonato 1938",
+      "condicion": "L",
+      "goles_boca": 7,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1938-09-18",
+      "torneo": "Campeonato 1938",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 3,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1956-03-03",
+      "torneo": "Amistosos 1956",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": true
+    }
+  ]
+}

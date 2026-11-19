@@ -401,5 +401,20 @@
       "gc": 2,
       "pts": 18
     }
+  },
+  "2013": {
+    "arg.1": {
+      "competencia": "Liga Profesional",
+      "grupo": "Torneo Final 2014",
+      "equipos": 20,
+      "pos": 2,
+      "pj": 19,
+      "g": 9,
+      "e": 5,
+      "p": 5,
+      "gf": 25,
+      "gc": 15,
+      "pts": 32
+    }
   }
 }

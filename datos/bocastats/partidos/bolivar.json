@@ -1,0 +1,134 @@
+{
+  "slug": "bolivar",
+  "nombre": "Bolívar",
+  "importado": "2026-11-18T22:22:08-03:00",
+  "oficiales_segun_pagina": 12,
+  "partidos": [
+    {
+      "fecha": "1952-02-03",
+      "torneo": "Amistosos 1952",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "1968-09-01",
+      "torneo": "Amistosos 1968",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1970-02-22",
+      "torneo": "Copa Libertadores 1970",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1970-03-12",
+      "torneo": "Copa Libertadores 1970",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1991-03-12",
+      "torneo": "Copa Libertadores 1991",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1991-03-29",
+      "torneo": "Copa Libertadores 1991",
+      "condicion": "L",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "2004-02-18",
+      "torneo": "Copa Libertadores 2004",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2004-04-21",
+      "torneo": "Copa Libertadores 2004",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2004-12-08",
+      "torneo": "Copa Sudamericana 2004",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 1,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2004-12-17",
+      "torneo": "Copa Sudamericana 2004",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2007-02-14",
+      "torneo": "Copa Libertadores 2007",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "2007-04-26",
+      "torneo": "Copa Libertadores 2007",
+      "condicion": "L",
+      "goles_boca": 7,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2016-03-10",
+      "torneo": "Copa Libertadores 2016",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "2016-04-07",
+      "torneo": "Copa Libertadores 2016",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

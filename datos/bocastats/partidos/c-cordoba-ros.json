@@ -1,0 +1,98 @@
+{
+  "slug": "c-cordoba-ros",
+  "nombre": "CC\n C Cordoba Ros",
+  "importado": "2026-11-18T22:22:10-03:00",
+  "oficiales_segun_pagina": 8,
+  "partidos": [
+    {
+      "fecha": "1939-07-08",
+      "torneo": "Amistosos 1939",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "1958-01-24",
+      "torneo": "Amistosos 1958",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1958-06-01",
+      "torneo": "Copa Suecia 1958",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1958-07-06",
+      "torneo": "Campeonato 1958",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1958-08-22",
+      "torneo": "Copa Suecia 1958",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1958-10-26",
+      "torneo": "Campeonato 1958",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1959-05-03",
+      "torneo": "Campeonato 1959",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1959-08-23",
+      "torneo": "Campeonato 1959",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2012-02-29",
+      "torneo": "Copa Argentina 2012",
+      "condicion": "N",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2022-03-02",
+      "torneo": "Copa Argentina 2022",
+      "condicion": "N",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

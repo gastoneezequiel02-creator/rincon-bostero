@@ -1,0 +1,107 @@
+{
+  "slug": "comercio",
+  "nombre": "CO\n Comercio",
+  "importado": "2026-11-18T22:22:10-03:00",
+  "oficiales_segun_pagina": 8,
+  "partidos": [
+    {
+      "fecha": "1906-08-19",
+      "torneo": "Amistosos 1906",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1911-06-11",
+      "torneo": "División Intermedia 1911",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1911-12-17",
+      "torneo": "División Intermedia 1911",
+      "condicion": "V",
+      "goles_boca": 6,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1912-04-14",
+      "torneo": "División Intermedia 1912",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1912-09-01",
+      "torneo": "División Intermedia 1912",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1913-06-22",
+      "torneo": "Campeonato 1913",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1913-10-26",
+      "torneo": "Campeonato 1913",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1914-03-15",
+      "torneo": "Amistosos 1914",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1914-05-03",
+      "torneo": "Amistosos 1914",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1914-10-18",
+      "torneo": "Campeonato 1914",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1915-11-11",
+      "torneo": "Campeonato 1915",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

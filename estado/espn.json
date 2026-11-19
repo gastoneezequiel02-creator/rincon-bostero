@@ -95,6 +95,12 @@
     "2014:conmebol.recopa",
     "2014:arg.copa",
     "2014:arg.supercopa",
-    "2014:fifa.cwc"
+    "2014:fifa.cwc",
+    "2013:arg.1",
+    "2013:arg.copa_lpf",
+    "2013:conmebol.libertadores",
+    "2013:conmebol.sudamericana",
+    "2013:conmebol.recopa",
+    "2013:arg.copa"
   ]
 }

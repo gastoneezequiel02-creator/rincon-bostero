@@ -1,0 +1,116 @@
+{
+  "slug": "sp-palermo",
+  "nombre": "SP\n Sp Palermo",
+  "importado": "2026-11-18T22:22:10-03:00",
+  "oficiales_segun_pagina": 8,
+  "partidos": [
+    {
+      "fecha": "1920-10-24",
+      "torneo": "Campeonato 1920",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1921-06-12",
+      "torneo": "Campeonato 1921",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1921-08-07",
+      "torneo": "Campeonato 1921",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1922-04-01",
+      "torneo": "Amistosos 1922",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1922-05-14",
+      "torneo": "Campeonato 1922",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1922-07-30",
+      "torneo": "Amistosos 1922",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1922-12-24",
+      "torneo": "Amistosos 1922",
+      "condicion": "N",
+      "goles_boca": 3,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1923-04-22",
+      "torneo": "Campeonato 1923",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1927-12-25",
+      "torneo": "Campeonato 1927",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1928-07-22",
+      "torneo": "Campeonato 1928",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1930-01-05",
+      "torneo": "Campeonato Estímulo 1929",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1930-10-12",
+      "torneo": "Campeonato 1930",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}
