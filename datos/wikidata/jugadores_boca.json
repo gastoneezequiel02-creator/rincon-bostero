@@ -1,0 +1,6090 @@
+{
+  "_fuente": "Wikidata (CC0). Jugadores con «miembro del equipo deportivo: Club Atlético Boca Juniors».",
+  "consultado": "2026-11-18T23:12:20.503558-03:00",
+  "clubes": {
+    "Q1023532": {
+      "nombre": "Atlas de Guadalajara",
+      "jugadores": 10
+    },
+    "Q12297": {
+      "nombre": "Villarreal",
+      "jugadores": 16
+    },
+    "Q214940": {
+      "nombre": "Estudiantes (LP)",
+      "jugadores": 61
+    },
+    "Q214978": {
+      "nombre": "Independiente",
+      "jugadores": 56
+    },
+    "Q221882": {
+      "nombre": "Newell's",
+      "jugadores": 42
+    },
+    "Q670186": {
+      "nombre": "Deportivo Toluca",
+      "jugadores": 9
+    },
+    "Q736937": {
+      "nombre": "Pachuca",
+      "jugadores": 9
+    },
+    "Q75729": {
+      "nombre": "Sporting Clube de Portugal",
+      "jugadores": 9
+    },
+    "Q1022904": {
+      "nombre": "Atlanta",
+      "jugadores": 37
+    },
+    "Q79800": {
+      "nombre": "Selección Argentina",
+      "jugadores": 240
+    },
+    "Q1543": {
+      "nombre": "Milan",
+      "jugadores": 13
+    },
+    "Q172020": {
+      "nombre": "Selección paraguaya",
+      "jugadores": 16
+    },
+    "Q215163": {
+      "nombre": "Vélez Sarsfield",
+      "jugadores": 47
+    },
+    "Q59962": {
+      "nombre": "Belgrano",
+      "jugadores": 23
+    },
+    "Q220621": {
+      "nombre": "Argentinos Juniors",
+      "jugadores": 61
+    },
+    "Q324589": {
+      "nombre": "Lanús",
+      "jugadores": 36
+    },
+    "Q459090": {
+      "nombre": "América",
+      "jugadores": 15
+    },
+    "Q80899": {
+      "nombre": "Unión",
+      "jugadores": 42
+    },
+    "Q845859": {
+      "nombre": "de Futbol Cruz Azul",
+      "jugadores": 11
+    },
+    "Q80886": {
+      "nombre": "Tigre",
+      "jugadores": 34
+    },
+    "Q18640": {
+      "nombre": "Gimnasia (LP)",
+      "jugadores": 33
+    },
+    "Q910444": {
+      "nombre": "Ferro",
+      "jugadores": 36
+    },
+    "Q15799": {
+      "nombre": "River Plate",
+      "jugadores": 74
+    },
+    "Q218282": {
+      "nombre": "San Lorenzo",
+      "jugadores": 48
+    },
+    "Q692646": {
+      "nombre": "Banfield",
+      "jugadores": 46
+    },
+    "Q744555": {
+      "nombre": "Nueva Chicago",
+      "jugadores": 16
+    },
+    "Q1022939": {
+      "nombre": "Talleres",
+      "jugadores": 32
+    },
+    "Q853053": {
+      "nombre": "Chacarita Juniors",
+      "jugadores": 46
+    },
+    "Q10308": {
+      "nombre": "Zaragoza",
+      "jugadores": 12
+    },
+    "Q631": {
+      "nombre": "Inter",
+      "jugadores": 16
+    },
+    "Q499616": {
+      "nombre": "Nacional de Football",
+      "jugadores": 27
+    },
+    "Q80897": {
+      "nombre": "Colón",
+      "jugadores": 30
+    },
+    "Q134916": {
+      "nombre": "Selección uruguaya",
+      "jugadores": 27
+    },
+    "Q1191661": {
+      "nombre": "Español",
+      "jugadores": 14
+    },
+    "Q212564": {
+      "nombre": "Selección colombiana",
+      "jugadores": 13
+    },
+    "Q332605": {
+      "nombre": "Atlético Nacional",
+      "jugadores": 12
+    },
+    "Q327172": {
+      "nombre": "Huracán",
+      "jugadores": 55
+    },
+    "Q151907": {
+      "nombre": "Platense",
+      "jugadores": 29
+    },
+    "Q391987": {
+      "nombre": "América de Cali",
+      "jugadores": 15
+    },
+    "Q16320": {
+      "nombre": "Peñarol",
+      "jugadores": 25
+    },
+    "Q185163": {
+      "nombre": "OGC Niza",
+      "jugadores": 9
+    },
+    "Q38568": {
+      "nombre": "São Paulo",
+      "jugadores": 12
+    },
+    "Q80964": {
+      "nombre": "Sociedade Esportiva Palmeiras",
+      "jugadores": 8
+    },
+    "Q757470": {
+      "nombre": "Atlético Tucumán",
+      "jugadores": 10
+    },
+    "Q1424072": {
+      "nombre": "Independiente Santa Fe",
+      "jugadores": 18
+    },
+    "Q332524": {
+      "nombre": "Junior de Barranquilla",
+      "jugadores": 10
+    },
+    "Q35933": {
+      "nombre": "Corinthians",
+      "jugadores": 12
+    },
+    "Q318307": {
+      "nombre": "Rosario Central",
+      "jugadores": 42
+    },
+    "Q221695": {
+      "nombre": "Grêmio Foot-Ball Porto Alegrense",
+      "jugadores": 10
+    },
+    "Q8723": {
+      "nombre": "Real Betis Balompié",
+      "jugadores": 10
+    },
+    "Q1422": {
+      "nombre": "Juventus",
+      "jugadores": 10
+    },
+    "Q676899": {
+      "nombre": "Selección de Italia",
+      "jugadores": 8
+    },
+    "Q2798": {
+      "nombre": "Udinese Calcio",
+      "jugadores": 9
+    },
+    "Q604589": {
+      "nombre": "Olimpia",
+      "jugadores": 10
+    },
+    "Q914086": {
+      "nombre": "Cerro Porteño",
+      "jugadores": 10
+    },
+    "Q19066": {
+      "nombre": "Universitario de Deportes",
+      "jugadores": 9
+    },
+    "Q212166": {
+      "nombre": "selección de fútbol del Perú",
+      "jugadores": 9
+    },
+    "Q427446": {
+      "nombre": "U. Católica (Chile)",
+      "jugadores": 16
+    },
+    "Q737753": {
+      "nombre": "Universidad de Chile",
+      "jugadores": 11
+    },
+    "Q1074980": {
+      "nombre": "Olimpo",
+      "jugadores": 16
+    },
+    "Q332527": {
+      "nombre": "Deportivo Independiente Medellín",
+      "jugadores": 13
+    },
+    "Q47533": {
+      "nombre": "Once Caldas",
+      "jugadores": 8
+    },
+    "Q5014111": {
+      "nombre": "de Regatas Vasco da Gama",
+      "jugadores": 11
+    },
+    "Q80958": {
+      "nombre": "Botafogo de Futebol e Regatas",
+      "jugadores": 10
+    },
+    "Q17479": {
+      "nombre": "Flamengo",
+      "jugadores": 15
+    },
+    "Q2052": {
+      "nombre": "ACF Fiorentina",
+      "jugadores": 11
+    },
+    "Q80955": {
+      "nombre": "Santos",
+      "jugadores": 10
+    },
+    "Q83459": {
+      "nombre": "Selección brasileña",
+      "jugadores": 12
+    },
+    "Q8780": {
+      "nombre": "Real Club Deportivo Espanyol de Barcelona",
+      "jugadores": 8
+    },
+    "Q12230": {
+      "nombre": "Real Murcia",
+      "jugadores": 8
+    },
+    "Q7156": {
+      "nombre": "Fútbol Club Barcelona",
+      "jugadores": 9
+    },
+    "Q1280895": {
+      "nombre": "Necaxa",
+      "jugadores": 9
+    },
+    "Q849823": {
+      "nombre": "Tigres de la UANL",
+      "jugadores": 8
+    },
+    "Q663400": {
+      "nombre": "Deportivo Cali",
+      "jugadores": 15
+    },
+    "Q270995": {
+      "nombre": "Clube Atlético Mineiro",
+      "jugadores": 10
+    },
+    "Q2317584": {
+      "nombre": "Los Andes",
+      "jugadores": 10
+    },
+    "Q1102931": {
+      "nombre": "Almirante Brown",
+      "jugadores": 8
+    },
+    "Q971490": {
+      "nombre": "Aldosivi",
+      "jugadores": 15
+    },
+    "Q8701": {
+      "nombre": "Atlético Madrid",
+      "jugadores": 13
+    },
+    "Q162923": {
+      "nombre": "Tiro Federal",
+      "jugadores": 10
+    },
+    "Q646088": {
+      "nombre": "All Boys",
+      "jugadores": 15
+    },
+    "Q207373": {
+      "nombre": "Colo Colo",
+      "jugadores": 13
+    },
+    "Q519966": {
+      "nombre": "Sarmiento",
+      "jugadores": 16
+    },
+    "Q2739": {
+      "nombre": "Roma",
+      "jugadores": 15
+    },
+    "Q80882": {
+      "nombre": "Godoy Cruz Antonio Tomba",
+      "jugadores": 10
+    },
+    "Q80921": {
+      "nombre": "San Martín (San Juan)",
+      "jugadores": 9
+    },
+    "Q2454482": {
+      "nombre": "Sportivo Independiente Rivadavia",
+      "jugadores": 8
+    },
+    "Q249612": {
+      "nombre": "Sport Emelec",
+      "jugadores": 12
+    },
+    "Q1102935": {
+      "nombre": "Almagro",
+      "jugadores": 8
+    },
+    "Q1022923": {
+      "nombre": "Gimnasia y Esgrima (Jujuy)",
+      "jugadores": 10
+    }
+  },
+  "jugadores": [
+    [
+      "Aaron Anselmino",
+      []
+    ],
+    [
+      "Abel Alves",
+      [
+        "Q18640",
+        "Q324589",
+        "Q327172",
+        "Q692646"
+      ]
+    ],
+    [
+      "Abel Balbo",
+      [
+        "Q15799",
+        "Q2052",
+        "Q221882",
+        "Q2739",
+        "Q2798",
+        "Q79800"
+      ]
+    ],
+    [
+      "Adolfo Bielli",
+      [
+        "Q214940",
+        "Q318307",
+        "Q79800"
+      ]
+    ],
+    [
+      "Adrián Domenech",
+      [
+        "Q151907",
+        "Q214978",
+        "Q220621"
+      ]
+    ],
+    [
+      "Adrián Gunino",
+      [
+        "Q16320"
+      ]
+    ],
+    [
+      "Adrián Sánchez",
+      []
+    ],
+    [
+      "Agustín Bouzat",
+      []
+    ],
+    [
+      "Agustín Heredia",
+      []
+    ],
+    [
+      "Agustín Lanata",
+      []
+    ],
+    [
+      "Agustín Obando",
+      []
+    ],
+    [
+      "Agustín Orion",
+      [
+        "Q214940",
+        "Q218282",
+        "Q79800"
+      ]
+    ],
+    [
+      "Agustín Rossi",
+      [
+        "Q214940",
+        "Q853053"
+      ]
+    ],
+    [
+      "Agustín Sández",
+      []
+    ],
+    [
+      "Agustín Valido",
+      [
+        "Q17479",
+        "Q324589"
+      ]
+    ],
+    [
+      "Alan Aguirre",
+      []
+    ],
+    [
+      "Alberto Etcheverry",
+      [
+        "Q853053"
+      ]
+    ],
+    [
+      "Alberto Federico Acosta",
+      [
+        "Q218282",
+        "Q427446",
+        "Q75729",
+        "Q79800",
+        "Q80899"
+      ]
+    ],
+    [
+      "Alberto Mario González",
+      [
+        "Q1022904",
+        "Q151907",
+        "Q692646",
+        "Q79800"
+      ]
+    ],
+    [
+      "Alberto Márcico",
+      [
+        "Q18640",
+        "Q79800",
+        "Q910444"
+      ]
+    ],
+    [
+      "Alberto Penney",
+      []
+    ],
+    [
+      "Alberto Tarantini",
+      [
+        "Q1022939",
+        "Q15799",
+        "Q79800"
+      ]
+    ],
+    [
+      "Alcides Silveira",
+      [
+        "Q134916",
+        "Q214978",
+        "Q499616",
+        "Q7156"
+      ]
+    ],
+    [
+      "Aldo Bobadilla",
+      [
+        "Q172020",
+        "Q18640",
+        "Q332524",
+        "Q332527",
+        "Q35933",
+        "Q604589",
+        "Q914086"
+      ]
+    ],
+    [
+      "Aldo Mores",
+      []
+    ],
+    [
+      "Aldo Paredes",
+      [
+        "Q1102935",
+        "Q218282",
+        "Q2454482",
+        "Q910444"
+      ]
+    ],
+    [
+      "Alejandro Farías",
+      [
+        "Q1022904",
+        "Q1102935",
+        "Q692646",
+        "Q744555"
+      ]
+    ],
+    [
+      "Alejandro Lanari",
+      [
+        "Q220621",
+        "Q318307",
+        "Q79800",
+        "Q849823"
+      ]
+    ],
+    [
+      "Alejandro Maciel",
+      []
+    ],
+    [
+      "Alejandro Mancuso",
+      [
+        "Q17479",
+        "Q214978",
+        "Q215163",
+        "Q79800",
+        "Q80964",
+        "Q910444"
+      ]
+    ],
+    [
+      "Alexandre McCulloch",
+      []
+    ],
+    [
+      "Alexis Messidoro",
+      []
+    ],
+    [
+      "Alexis Rolín",
+      [
+        "Q499616",
+        "Q604589"
+      ]
+    ],
+    [
+      "Alfredo David Moreno",
+      [
+        "Q1023532",
+        "Q1280895",
+        "Q459090",
+        "Q849823"
+      ]
+    ],
+    [
+      "Alfredo Di Stéfano",
+      [
+        "Q15799",
+        "Q212564",
+        "Q327172",
+        "Q79800",
+        "Q8780"
+      ]
+    ],
+    [
+      "Alfredo Elli",
+      [
+        "Q15799",
+        "Q79800"
+      ]
+    ],
+    [
+      "Alfredo Garasini",
+      [
+        "Q15799",
+        "Q79800"
+      ]
+    ],
+    [
+      "Alfredo Graciani",
+      [
+        "Q1022904",
+        "Q1191661",
+        "Q220621",
+        "Q757470"
+      ]
+    ],
+    [
+      "Alfredo Jesús Berti",
+      [
+        "Q1023532",
+        "Q221882",
+        "Q391987"
+      ]
+    ],
+    [
+      "Alfredo Letanú",
+      []
+    ],
+    [
+      "Alfredo Martín",
+      [
+        "Q15799",
+        "Q79800",
+        "Q80886"
+      ]
+    ],
+    [
+      "Alfredo Rojas",
+      [
+        "Q15799",
+        "Q18640",
+        "Q324589",
+        "Q427446",
+        "Q79800",
+        "Q8701",
+        "Q8723"
+      ]
+    ],
+    [
+      "Alfredo Scarpati",
+      []
+    ],
+    [
+      "Almir Pernambuquinho",
+      [
+        "Q17479",
+        "Q2052",
+        "Q35933",
+        "Q5014111",
+        "Q80955",
+        "Q83459"
+      ]
+    ],
+    [
+      "Alphonse Tchami",
+      [
+        "Q185163"
+      ]
+    ],
+    [
+      "Américo Menutti",
+      [
+        "Q151907",
+        "Q5014111",
+        "Q80955"
+      ]
+    ],
+    [
+      "Américo Tesoriere",
+      [
+        "Q79800"
+      ]
+    ],
+    [
+      "Andrés Bertolotti",
+      [
+        "Q214978",
+        "Q79800",
+        "Q853053"
+      ]
+    ],
+    [
+      "Andrés Chávez",
+      [
+        "Q1102935",
+        "Q327172",
+        "Q38568",
+        "Q692646",
+        "Q971490"
+      ]
+    ],
+    [
+      "Andrés Cubas",
+      []
+    ],
+    [
+      "Andrés Franzoia",
+      [
+        "Q1074980",
+        "Q220621",
+        "Q318307",
+        "Q327172",
+        "Q519966",
+        "Q80899"
+      ]
+    ],
+    [
+      "Andrés Grande",
+      []
+    ],
+    [
+      "Andrés Guglielminpietro",
+      [
+        "Q1543",
+        "Q18640",
+        "Q631",
+        "Q79800"
+      ]
+    ],
+    [
+      "Andrés Rebottaro",
+      [
+        "Q221882",
+        "Q79800",
+        "Q80886",
+        "Q80897"
+      ]
+    ],
+    [
+      "Andrés Román",
+      []
+    ],
+    [
+      "Antonino Spilinga",
+      []
+    ],
+    [
+      "Antonio Alberino",
+      [
+        "Q646088",
+        "Q80886"
+      ]
+    ],
+    [
+      "Antonio Ameal Pereyra",
+      [
+        "Q15799",
+        "Q79800"
+      ]
+    ],
+    [
+      "Antonio Angelillo",
+      [
+        "Q1543",
+        "Q2739",
+        "Q631",
+        "Q676899",
+        "Q79800"
+      ]
+    ],
+    [
+      "Antonio Barijho",
+      [
+        "Q214978",
+        "Q327172",
+        "Q692646"
+      ]
+    ],
+    [
+      "Antonio Battaglia",
+      [
+        "Q1022904",
+        "Q215163"
+      ]
+    ],
+    [
+      "Antonio Cerrotta",
+      [
+        "Q79800"
+      ]
+    ],
+    [
+      "Antonio Cortella",
+      [
+        "Q151907",
+        "Q79800"
+      ]
+    ],
+    [
+      "Antonio Ganduglia",
+      [
+        "Q1022904",
+        "Q15799",
+        "Q910444"
+      ]
+    ],
+    [
+      "Antonio Mohamed",
+      [
+        "Q2052",
+        "Q214978",
+        "Q327172",
+        "Q459090",
+        "Q79800"
+      ]
+    ],
+    [
+      "Antonio Roberto Cabrera",
+      [
+        "Q1022904",
+        "Q79800"
+      ]
+    ],
+    [
+      "Antonio Roma",
+      [
+        "Q79800",
+        "Q910444"
+      ]
+    ],
+    [
+      "Antonio Ubaldo Rattín",
+      [
+        "Q79800"
+      ]
+    ],
+    [
+      "Aníbal Samuel Matellán",
+      [
+        "Q220621"
+      ]
+    ],
+    [
+      "Aníbal Tarabini",
+      [
+        "Q214940",
+        "Q214978",
+        "Q79800"
+      ]
+    ],
+    [
+      "Arcadio López",
+      [
+        "Q17479",
+        "Q324589",
+        "Q79800",
+        "Q910444"
+      ]
+    ],
+    [
+      "Ariel Carreño",
+      [
+        "Q1424072",
+        "Q162923",
+        "Q218282",
+        "Q324589",
+        "Q47533",
+        "Q744555",
+        "Q80921",
+        "Q853053"
+      ]
+    ],
+    [
+      "Ariel Cólzera",
+      [
+        "Q1022923",
+        "Q327172",
+        "Q80899",
+        "Q80921"
+      ]
+    ],
+    [
+      "Ariel Krasouski",
+      [
+        "Q134916",
+        "Q214940",
+        "Q218282"
+      ]
+    ],
+    [
+      "Ariel Rosada",
+      [
+        "Q1074980",
+        "Q221882",
+        "Q670186",
+        "Q692646",
+        "Q853053"
+      ]
+    ],
+    [
+      "Arián Pucheta",
+      []
+    ],
+    [
+      "Arley Dinas",
+      [
+        "Q212564",
+        "Q391987",
+        "Q663400"
+      ]
+    ],
+    [
+      "Armando Artigas",
+      [
+        "Q16320"
+      ]
+    ],
+    [
+      "Armando Husillos",
+      [
+        "Q12230",
+        "Q214940",
+        "Q218282"
+      ]
+    ],
+    [
+      "Arturo Penney",
+      []
+    ],
+    [
+      "Atilio García",
+      [
+        "Q134916",
+        "Q151907",
+        "Q499616"
+      ]
+    ],
+    [
+      "Ayres Morais de Albuquerque",
+      []
+    ],
+    [
+      "Benjamín Delgado",
+      [
+        "Q1022904",
+        "Q220621",
+        "Q79800",
+        "Q80886"
+      ]
+    ],
+    [
+      "Bernardo Gandulla",
+      [
+        "Q1022904",
+        "Q5014111",
+        "Q79800",
+        "Q910444"
+      ]
+    ],
+    [
+      "Beto Naveda",
+      []
+    ],
+    [
+      "Blas Giunta",
+      [
+        "Q12230",
+        "Q151907",
+        "Q218282",
+        "Q670186",
+        "Q79800"
+      ]
+    ],
+    [
+      "Brandon Cortés",
+      []
+    ],
+    [
+      "Breyner Bonilla",
+      []
+    ],
+    [
+      "Brian Flores",
+      []
+    ],
+    [
+      "Bruno Galván",
+      []
+    ],
+    [
+      "Bruno Malias",
+      [
+        "Q80955",
+        "Q80958"
+      ]
+    ],
+    [
+      "Bruno Marioni",
+      [
+        "Q1023532",
+        "Q12297",
+        "Q214940",
+        "Q214978",
+        "Q221882",
+        "Q670186",
+        "Q736937",
+        "Q75729"
+      ]
+    ],
+    [
+      "Bruno Urribarri",
+      [
+        "Q15799",
+        "Q220621",
+        "Q80886",
+        "Q80897"
+      ]
+    ],
+    [
+      "Camilo Bonelli",
+      [
+        "Q1022904",
+        "Q15799",
+        "Q220621",
+        "Q79800"
+      ]
+    ],
+    [
+      "Camilo Nuin",
+      [
+        "Q214978"
+      ]
+    ],
+    [
+      "Carlos Adolfo Sosa",
+      [
+        "Q1022904",
+        "Q79800"
+      ]
+    ],
+    [
+      "Carlos Arredondo",
+      [
+        "Q327172",
+        "Q692646",
+        "Q79800"
+      ]
+    ],
+    [
+      "Carlos Augusto Quiñónez",
+      []
+    ],
+    [
+      "Carlos Barisio",
+      [
+        "Q15799",
+        "Q18640",
+        "Q646088",
+        "Q853053",
+        "Q910444"
+      ]
+    ],
+    [
+      "Carlos Biasutto",
+      [
+        "Q1022904",
+        "Q151907",
+        "Q318307",
+        "Q80899"
+      ]
+    ],
+    [
+      "Carlos Bueno",
+      [
+        "Q134916",
+        "Q16320",
+        "Q218282",
+        "Q220621",
+        "Q427446",
+        "Q519966",
+        "Q59962",
+        "Q737753",
+        "Q75729",
+        "Q80921"
+      ]
+    ],
+    [
+      "Carlos Córdoba",
+      []
+    ],
+    [
+      "Carlos Daniel Tapia",
+      [
+        "Q15799",
+        "Q737753",
+        "Q79800"
+      ]
+    ],
+    [
+      "Carlos Duré",
+      []
+    ],
+    [
+      "Carlos Fernando Navarro Montoya",
+      [
+        "Q1022923",
+        "Q1074980",
+        "Q1424072",
+        "Q18640",
+        "Q212564",
+        "Q214978",
+        "Q215163",
+        "Q744555",
+        "Q853053"
+      ]
+    ],
+    [
+      "Carlos Fondacaro",
+      [
+        "Q162923",
+        "Q757470",
+        "Q80886"
+      ]
+    ],
+    [
+      "Carlos Gómez Sánchez",
+      []
+    ],
+    [
+      "Carlos Mac Allister",
+      [
+        "Q220621",
+        "Q79800",
+        "Q910444"
+      ]
+    ],
+    [
+      "Carlos Marinelli",
+      [
+        "Q971490"
+      ]
+    ],
+    [
+      "Carlos María García Cambón",
+      [
+        "Q80899",
+        "Q853053"
+      ]
+    ],
+    [
+      "Carlos Morete",
+      [
+        "Q1022939",
+        "Q15799",
+        "Q214978",
+        "Q220621",
+        "Q79800"
+      ]
+    ],
+    [
+      "Carlos Moya",
+      [
+        "Q1191661",
+        "Q692646",
+        "Q80882",
+        "Q910444"
+      ]
+    ],
+    [
+      "Carlos Pachamé",
+      [
+        "Q214940",
+        "Q324589",
+        "Q332527",
+        "Q79800"
+      ]
+    ],
+    [
+      "Carlos Salguero",
+      []
+    ],
+    [
+      "Carlos Scarone",
+      [
+        "Q134916",
+        "Q499616"
+      ]
+    ],
+    [
+      "Carlos Squeo",
+      [
+        "Q215163",
+        "Q59962",
+        "Q79800"
+      ]
+    ],
+    [
+      "Carlos Tévez",
+      [
+        "Q1422",
+        "Q35933",
+        "Q646088",
+        "Q79800"
+      ]
+    ],
+    [
+      "Carlos Veglio",
+      [
+        "Q1022923",
+        "Q1191661",
+        "Q218282",
+        "Q79800",
+        "Q914086"
+      ]
+    ],
+    [
+      "Carlos Álvarez",
+      [
+        "Q220621"
+      ]
+    ],
+    [
+      "Carlos Ángel López",
+      [
+        "Q15799",
+        "Q214940",
+        "Q215163",
+        "Q519966",
+        "Q79800"
+      ]
+    ],
+    [
+      "Carmelo Simeone",
+      [
+        "Q215163",
+        "Q59962",
+        "Q79800"
+      ]
+    ],
+    [
+      "Cata Díaz",
+      [
+        "Q318307",
+        "Q79800",
+        "Q80897",
+        "Q845859",
+        "Q8701"
+      ]
+    ],
+    [
+      "Cataldo Spitale",
+      [
+        "Q151907",
+        "Q15799",
+        "Q18640",
+        "Q220621",
+        "Q221882",
+        "Q2739"
+      ]
+    ],
+    [
+      "Catriel Orcellet",
+      [
+        "Q1022939",
+        "Q324589",
+        "Q744555"
+      ]
+    ],
+    [
+      "Cecilio Domínguez",
+      [
+        "Q172020"
+      ]
+    ],
+    [
+      "Cesáreo Onzari",
+      [
+        "Q327172",
+        "Q79800"
+      ]
+    ],
+    [
+      "Charles Fabian Figueiredo Santos",
+      [
+        "Q17479",
+        "Q221695",
+        "Q83459",
+        "Q8701"
+      ]
+    ],
+    [
+      "Christian Cellay",
+      [
+        "Q1022923",
+        "Q214940",
+        "Q327172",
+        "Q79800"
+      ]
+    ],
+    [
+      "Christian Dollberg",
+      [
+        "Q220621",
+        "Q324589"
+      ]
+    ],
+    [
+      "Christian Eduardo Giménez",
+      [
+        "Q670186",
+        "Q744555",
+        "Q853053"
+      ]
+    ],
+    [
+      "Christian Giménez",
+      [
+        "Q214978",
+        "Q459090",
+        "Q736937",
+        "Q80899",
+        "Q845859"
+      ]
+    ],
+    [
+      "Christian Mayo",
+      []
+    ],
+    [
+      "Christian Moreno",
+      []
+    ],
+    [
+      "Clarisa Huber",
+      [
+        "Q1022904"
+      ]
+    ],
+    [
+      "Claudio Benetti",
+      [
+        "Q59962",
+        "Q744555"
+      ]
+    ],
+    [
+      "Claudio Cabrera",
+      [
+        "Q15799",
+        "Q215163",
+        "Q220621",
+        "Q327172",
+        "Q79800"
+      ]
+    ],
+    [
+      "Claudio Caniggia",
+      [
+        "Q15799",
+        "Q2739",
+        "Q79800"
+      ]
+    ],
+    [
+      "Claudio Marangoni",
+      [
+        "Q214978",
+        "Q218282",
+        "Q327172",
+        "Q79800",
+        "Q853053"
+      ]
+    ],
+    [
+      "Claudio Morel Rodríguez",
+      [
+        "Q172020",
+        "Q214978",
+        "Q218282"
+      ]
+    ],
+    [
+      "Claudio Riaño",
+      [
+        "Q1022939",
+        "Q214978",
+        "Q80899",
+        "Q80921"
+      ]
+    ],
+    [
+      "Claudio Vacca",
+      [
+        "Q1022904",
+        "Q327172",
+        "Q79800"
+      ]
+    ],
+    [
+      "Clemente Rodríguez",
+      [
+        "Q214940",
+        "Q38568",
+        "Q79800",
+        "Q80897",
+        "Q8780"
+      ]
+    ],
+    [
+      "Cristian Erbes",
+      []
+    ],
+    [
+      "Cristian Espinoza",
+      [
+        "Q12297",
+        "Q327172"
+      ]
+    ],
+    [
+      "Cristian Lema",
+      [
+        "Q16320",
+        "Q221882",
+        "Q59962",
+        "Q80886"
+      ]
+    ],
+    [
+      "Cristian Lucchetti",
+      [
+        "Q692646",
+        "Q757470"
+      ]
+    ],
+    [
+      "Cristian Manuel Chávez",
+      [
+        "Q324589",
+        "Q79800"
+      ]
+    ],
+    [
+      "Cristian Marcelo Álvarez",
+      []
+    ],
+    [
+      "Cristian Medina",
+      [
+        "Q214940",
+        "Q80958"
+      ]
+    ],
+    [
+      "Cristian Pavón",
+      [
+        "Q1022939",
+        "Q221695",
+        "Q270995",
+        "Q79800",
+        "Q80897"
+      ]
+    ],
+    [
+      "Cristian Revainera",
+      []
+    ],
+    [
+      "Cristian Ríos",
+      []
+    ],
+    [
+      "Cristian Traverso",
+      [
+        "Q220621",
+        "Q737753"
+      ]
+    ],
+    [
+      "Cristián Fernando Muñoz",
+      [
+        "Q1022939",
+        "Q207373",
+        "Q2317584"
+      ]
+    ],
+    [
+      "César Horst",
+      []
+    ],
+    [
+      "César Luis Menotti",
+      [
+        "Q318307",
+        "Q79800",
+        "Q80955"
+      ]
+    ],
+    [
+      "César Meli",
+      [
+        "Q80897"
+      ]
+    ],
+    [
+      "Damián Arce",
+      []
+    ],
+    [
+      "Damián Batallini",
+      []
+    ],
+    [
+      "Damián Díaz",
+      [
+        "Q249612",
+        "Q318307",
+        "Q80897"
+      ]
+    ],
+    [
+      "Damián Escudero",
+      [
+        "Q12297",
+        "Q215163",
+        "Q221695",
+        "Q270995"
+      ]
+    ],
+    [
+      "Daniel Bilos",
+      [
+        "Q218282",
+        "Q459090",
+        "Q692646",
+        "Q79800"
+      ]
+    ],
+    [
+      "Daniel Tílger",
+      [
+        "Q1424072",
+        "Q162923",
+        "Q220621",
+        "Q324589",
+        "Q332524",
+        "Q391987",
+        "Q47533",
+        "Q663400",
+        "Q744555",
+        "Q80899"
+      ]
+    ],
+    [
+      "Daniele De Rossi",
+      [
+        "Q2739",
+        "Q676899"
+      ]
+    ],
+    [
+      "Dante Lugo",
+      [
+        "Q218282",
+        "Q324589",
+        "Q79800",
+        "Q8701",
+        "Q910444"
+      ]
+    ],
+    [
+      "Darío Cvitanich",
+      [
+        "Q1022939",
+        "Q15799",
+        "Q185163",
+        "Q692646",
+        "Q736937"
+      ]
+    ],
+    [
+      "Darío Luis Felman Castro",
+      [
+        "Q2454482",
+        "Q79800"
+      ]
+    ],
+    [
+      "Darío Scatolaro",
+      [
+        "Q12230"
+      ]
+    ],
+    [
+      "Darío Scotto",
+      [
+        "Q1280895",
+        "Q151907",
+        "Q220621",
+        "Q318307",
+        "Q79800",
+        "Q914086"
+      ]
+    ],
+    [
+      "David Drocco",
+      [
+        "Q757470",
+        "Q80921"
+      ]
+    ],
+    [
+      "Delfín Benítez Cáceres",
+      [
+        "Q172020",
+        "Q332524",
+        "Q79800",
+        "Q910444"
+      ]
+    ],
+    [
+      "Dermival Almeida Lima",
+      [
+        "Q270995",
+        "Q332605",
+        "Q5014111",
+        "Q80955",
+        "Q80964"
+      ]
+    ],
+    [
+      "Diego Cagna",
+      [
+        "Q12297",
+        "Q214978",
+        "Q220621",
+        "Q79800"
+      ]
+    ],
+    [
+      "Diego Canali",
+      []
+    ],
+    [
+      "Diego Crosa",
+      [
+        "Q215163",
+        "Q221882",
+        "Q79800",
+        "Q80897",
+        "Q853053",
+        "Q8723"
+      ]
+    ],
+    [
+      "Diego Gastón Herrera",
+      [
+        "Q2739"
+      ]
+    ],
+    [
+      "Diego Maradona",
+      [
+        "Q220621",
+        "Q221882",
+        "Q7156",
+        "Q79800"
+      ]
+    ],
+    [
+      "Diego Pave",
+      []
+    ],
+    [
+      "Diego Perotti",
+      [
+        "Q2739",
+        "Q79800"
+      ]
+    ],
+    [
+      "Diego Rivero",
+      [
+        "Q218282",
+        "Q220621",
+        "Q736937",
+        "Q845859",
+        "Q853053"
+      ]
+    ],
+    [
+      "Diego Soñora",
+      [
+        "Q914086"
+      ]
+    ],
+    [
+      "Dino Sani",
+      [
+        "Q1543",
+        "Q35933",
+        "Q38568",
+        "Q80964",
+        "Q83459"
+      ]
+    ],
+    [
+      "Domingo Fossati",
+      []
+    ],
+    [
+      "Domingo Tarasconi",
+      [
+        "Q1022904",
+        "Q220621",
+        "Q221882",
+        "Q79800"
+      ]
+    ],
+    [
+      "Domingos Antônio da Guia",
+      [
+        "Q17479",
+        "Q35933",
+        "Q499616",
+        "Q5014111",
+        "Q83459"
+      ]
+    ],
+    [
+      "Donato Abbatángelo",
+      [
+        "Q15799",
+        "Q324589",
+        "Q327172",
+        "Q79800"
+      ]
+    ],
+    [
+      "Edgar Espíndola",
+      [
+        "Q1022939"
+      ]
+    ],
+    [
+      "Edilio Cardoso",
+      []
+    ],
+    [
+      "Edinson Cavani",
+      [
+        "Q134916"
+      ]
+    ],
+    [
+      "Edmundo Piaggio",
+      [
+        "Q324589",
+        "Q79800"
+      ]
+    ],
+    [
+      "Eduardo Astudillo",
+      []
+    ],
+    [
+      "Eduardo Ricagni",
+      [
+        "Q1422",
+        "Q151907",
+        "Q1543",
+        "Q327172",
+        "Q676899",
+        "Q853053"
+      ]
+    ],
+    [
+      "Edwin Cardona",
+      [
+        "Q1424072",
+        "Q212564",
+        "Q332524",
+        "Q332605"
+      ]
+    ],
+    [
+      "El Suplente",
+      [
+        "Q1022939",
+        "Q220621",
+        "Q332527"
+      ]
+    ],
+    [
+      "El chelo",
+      []
+    ],
+    [
+      "Eliseo Mouriño",
+      [
+        "Q692646",
+        "Q79800"
+      ]
+    ],
+    [
+      "Elías Bazzi",
+      [
+        "Q1022939",
+        "Q80882"
+      ]
+    ],
+    [
+      "Emanuel Insúa",
+      [
+        "Q215163",
+        "Q221882",
+        "Q2798",
+        "Q692646",
+        "Q80882",
+        "Q971490"
+      ]
+    ],
+    [
+      "Emanuel Trípodi",
+      [
+        "Q519966",
+        "Q80899"
+      ]
+    ],
+    [
+      "Emanuele Del Vecchio",
+      [
+        "Q1543",
+        "Q38568",
+        "Q80955",
+        "Q83459"
+      ]
+    ],
+    [
+      "Emiliano Albín",
+      [
+        "Q16320"
+      ]
+    ],
+    [
+      "Emiliano Barrera",
+      []
+    ],
+    [
+      "Emiliano Fusco",
+      []
+    ],
+    [
+      "Emiliano Insúa",
+      [
+        "Q75729",
+        "Q79800",
+        "Q8701",
+        "Q971490"
+      ]
+    ],
+    [
+      "Emiliano Rey",
+      [
+        "Q19066",
+        "Q663400",
+        "Q7156",
+        "Q737753"
+      ]
+    ],
+    [
+      "Emiliano Romay",
+      []
+    ],
+    [
+      "Emilio López",
+      []
+    ],
+    [
+      "Emmanuel Gigliotti",
+      [
+        "Q218282",
+        "Q220621",
+        "Q646088",
+        "Q757470",
+        "Q79800",
+        "Q80897"
+      ]
+    ],
+    [
+      "Enner Valencia",
+      []
+    ],
+    [
+      "Enrique Brichetto",
+      [
+        "Q79800"
+      ]
+    ],
+    [
+      "Enrique Colla",
+      []
+    ],
+    [
+      "Enrique Espinosa",
+      [
+        "Q1022904",
+        "Q327172",
+        "Q79800",
+        "Q853053"
+      ]
+    ],
+    [
+      "Enrique Martegani",
+      [
+        "Q214940",
+        "Q646088",
+        "Q853053"
+      ]
+    ],
+    [
+      "Enrique Vidallé",
+      [
+        "Q18640",
+        "Q214940",
+        "Q220621",
+        "Q327172",
+        "Q79800"
+      ]
+    ],
+    [
+      "Enry Juan Barale",
+      [
+        "Q214940",
+        "Q692646"
+      ]
+    ],
+    [
+      "Enzo Ferrero",
+      [
+        "Q79800"
+      ]
+    ],
+    [
+      "Enzo Gutiérrez",
+      [
+        "Q737753"
+      ]
+    ],
+    [
+      "Enzo Ruiz",
+      []
+    ],
+    [
+      "Ernesto Cucchiaroni",
+      [
+        "Q1543",
+        "Q79800",
+        "Q80886"
+      ]
+    ],
+    [
+      "Ernesto Grillo",
+      [
+        "Q1543",
+        "Q214978",
+        "Q79800"
+      ]
+    ],
+    [
+      "Ernesto Lazzatti",
+      [
+        "Q79800"
+      ]
+    ],
+    [
+      "Ernesto Mastrángelo",
+      [
+        "Q1022904",
+        "Q15799",
+        "Q79800",
+        "Q80899"
+      ]
+    ],
+    [
+      "Esteban Andrada",
+      [
+        "Q10308",
+        "Q324589",
+        "Q79800"
+      ]
+    ],
+    [
+      "Esteban Baglietto",
+      []
+    ],
+    [
+      "Esteban Genaro Staniscia",
+      [
+        "Q10308",
+        "Q15799",
+        "Q214978",
+        "Q631",
+        "Q79800"
+      ]
+    ],
+    [
+      "Esteban Herrera",
+      [
+        "Q1022939",
+        "Q853053"
+      ]
+    ],
+    [
+      "Esteban Kuko",
+      [
+        "Q79800"
+      ]
+    ],
+    [
+      "Esteban Pogany",
+      [
+        "Q1191661",
+        "Q1424072",
+        "Q214978",
+        "Q218282",
+        "Q327172",
+        "Q332524",
+        "Q59962",
+        "Q692646",
+        "Q757470",
+        "Q910444"
+      ]
+    ],
+    [
+      "Estefanía Piazza",
+      [
+        "Q318307"
+      ]
+    ],
+    [
+      "Eusebio Chamorro",
+      [
+        "Q1424072",
+        "Q17479",
+        "Q221882"
+      ]
+    ],
+    [
+      "Exequiel Benavídez",
+      [
+        "Q162923",
+        "Q646088",
+        "Q744555"
+      ]
+    ],
+    [
+      "Exequiel Zeballos",
+      []
+    ],
+    [
+      "Ezequiel Cañete",
+      [
+        "Q80899"
+      ]
+    ],
+    [
+      "Ezequiel González",
+      [
+        "Q2052",
+        "Q318307"
+      ]
+    ],
+    [
+      "Ezequiel Medrán",
+      [
+        "Q59962",
+        "Q80921",
+        "Q914086"
+      ]
+    ],
+    [
+      "Ezequiel Muñoz",
+      []
+    ],
+    [
+      "Ezequiel Scarione",
+      []
+    ],
+    [
+      "Ezequiel Fernández",
+      [
+        "Q80886"
+      ]
+    ],
+    [
+      "Fabio Márquez",
+      []
+    ],
+    [
+      "Fabián Carrizo",
+      []
+    ],
+    [
+      "Fabián Monzón",
+      [
+        "Q185163",
+        "Q2798",
+        "Q737753",
+        "Q79800",
+        "Q8723"
+      ]
+    ],
+    [
+      "Fabián Moyano",
+      [
+        "Q1022904"
+      ]
+    ],
+    [
+      "Fabián Rinaudo",
+      [
+        "Q18640",
+        "Q75729",
+        "Q79800"
+      ]
+    ],
+    [
+      "Fabián Vargas",
+      [
+        "Q212564",
+        "Q214978",
+        "Q391987",
+        "Q971490"
+      ]
+    ],
+    [
+      "Fabricio Coloccini",
+      [
+        "Q12297",
+        "Q1543",
+        "Q218282",
+        "Q79800",
+        "Q8701",
+        "Q971490"
+      ]
+    ],
+    [
+      "Facundo Bonvín",
+      [
+        "Q151907",
+        "Q220621"
+      ]
+    ],
+    [
+      "Facundo Cobos",
+      []
+    ],
+    [
+      "Facundo Erpen",
+      [
+        "Q1022939",
+        "Q1023532"
+      ]
+    ],
+    [
+      "Facundo Imboden",
+      [
+        "Q1074980",
+        "Q18640",
+        "Q427446",
+        "Q59962",
+        "Q910444"
+      ]
+    ],
+    [
+      "Facundo Roncaglia",
+      [
+        "Q2052",
+        "Q214940",
+        "Q79800",
+        "Q8780"
+      ]
+    ],
+    [
+      "Facundo Sava",
+      [
+        "Q18640",
+        "Q910444"
+      ]
+    ],
+    [
+      "Facundo Taborda",
+      []
+    ],
+    [
+      "Facundo Zamarián",
+      []
+    ],
+    [
+      "Fausto Vera",
+      []
+    ],
+    [
+      "Federico Abadía",
+      []
+    ],
+    [
+      "Federico Bravo",
+      []
+    ],
+    [
+      "Federico Carrizo",
+      [
+        "Q318307",
+        "Q845859"
+      ]
+    ],
+    [
+      "Federico Edwards",
+      [
+        "Q79800",
+        "Q80899"
+      ]
+    ],
+    [
+      "Federico Insúa",
+      [
+        "Q1280895",
+        "Q214978",
+        "Q215163",
+        "Q220621",
+        "Q459090",
+        "Q79800"
+      ]
+    ],
+    [
+      "Federico León",
+      []
+    ],
+    [
+      "Federico Sacchi",
+      [
+        "Q221882",
+        "Q79800"
+      ]
+    ],
+    [
+      "Federico Scoppa",
+      []
+    ],
+    [
+      "Felipe Mesones",
+      [
+        "Q1022904",
+        "Q12230",
+        "Q1424072",
+        "Q218282",
+        "Q8723"
+      ]
+    ],
+    [
+      "Fernando Cáceres",
+      [
+        "Q10308",
+        "Q15799",
+        "Q214978",
+        "Q220621",
+        "Q79800"
+      ]
+    ],
+    [
+      "Fernando Daniel Pandolfi",
+      [
+        "Q215163",
+        "Q79800"
+      ]
+    ],
+    [
+      "Fernando Evangelista",
+      []
+    ],
+    [
+      "Fernando Gago",
+      [
+        "Q215163",
+        "Q2739",
+        "Q79800"
+      ]
+    ],
+    [
+      "Fernando Gamboa",
+      [
+        "Q15799",
+        "Q207373",
+        "Q220621",
+        "Q221882",
+        "Q79800",
+        "Q853053"
+      ]
+    ],
+    [
+      "Fernando Morena",
+      [
+        "Q134916",
+        "Q16320",
+        "Q17479"
+      ]
+    ],
+    [
+      "Fernando Navas",
+      [
+        "Q80899",
+        "Q853053"
+      ]
+    ],
+    [
+      "Fernando Ortiz",
+      [
+        "Q214940",
+        "Q215163",
+        "Q218282",
+        "Q459090",
+        "Q692646",
+        "Q80899",
+        "Q849823"
+      ]
+    ],
+    [
+      "Fernando Pasquinelli",
+      [
+        "Q1022939",
+        "Q151907",
+        "Q519966"
+      ]
+    ],
+    [
+      "Fernando Zuqui",
+      [
+        "Q80882"
+      ]
+    ],
+    [
+      "Fernando Ávalos",
+      [
+        "Q1191661",
+        "Q327172",
+        "Q35933",
+        "Q744555"
+      ]
+    ],
+    [
+      "Florencio Sarasíbar",
+      [
+        "Q162923",
+        "Q318307",
+        "Q79800"
+      ]
+    ],
+    [
+      "Francesco Daniel Celeste",
+      []
+    ],
+    [
+      "Francisco Di Franco",
+      []
+    ],
+    [
+      "Francisco Lombardo",
+      [
+        "Q15799",
+        "Q221882",
+        "Q2454482",
+        "Q79800"
+      ]
+    ],
+    [
+      "Francisco Provvidente",
+      [
+        "Q17479",
+        "Q215163",
+        "Q2739"
+      ]
+    ],
+    [
+      "Francisco Sohn",
+      [
+        "Q220621"
+      ]
+    ],
+    [
+      "Francisco Sá",
+      [
+        "Q1022923",
+        "Q15799",
+        "Q214978",
+        "Q79800"
+      ]
+    ],
+    [
+      "Francisco Varallo",
+      [
+        "Q18640",
+        "Q215163",
+        "Q79800"
+      ]
+    ],
+    [
+      "Franck Engonga",
+      []
+    ],
+    [
+      "Franco Cristaldo",
+      []
+    ],
+    [
+      "Franco Cángele",
+      [
+        "Q214978",
+        "Q80897"
+      ]
+    ],
+    [
+      "Franco Fragapane",
+      []
+    ],
+    [
+      "Franco Sebastián Sosa",
+      [
+        "Q1022923"
+      ]
+    ],
+    [
+      "Fredy Guarín",
+      [
+        "Q212564",
+        "Q5014111",
+        "Q631"
+      ]
+    ],
+    [
+      "Gabriel Amato",
+      [
+        "Q15799",
+        "Q18640",
+        "Q214978",
+        "Q221695",
+        "Q327172",
+        "Q692646",
+        "Q8723",
+        "Q971490"
+      ]
+    ],
+    [
+      "Gabriel Batistuta",
+      [
+        "Q15799",
+        "Q2052",
+        "Q221882",
+        "Q2739",
+        "Q631",
+        "Q79800"
+      ]
+    ],
+    [
+      "Gabriel Cedrés",
+      [
+        "Q134916",
+        "Q15799",
+        "Q16320",
+        "Q220621",
+        "Q459090"
+      ]
+    ],
+    [
+      "Gabriel Ferreyra",
+      []
+    ],
+    [
+      "Gabriel Guerra",
+      []
+    ],
+    [
+      "Gabriel Paletta",
+      [
+        "Q1543",
+        "Q676899",
+        "Q692646"
+      ]
+    ],
+    [
+      "Gabriel Rodríguez",
+      [
+        "Q971490"
+      ]
+    ],
+    [
+      "Gaston Amadeo Rossi",
+      [
+        "Q1102931",
+        "Q853053"
+      ]
+    ],
+    [
+      "Gastón Sauro",
+      []
+    ],
+    [
+      "Gastón Ávila",
+      []
+    ],
+    [
+      "Gaúcho",
+      [
+        "Q17479",
+        "Q221695",
+        "Q270995",
+        "Q80964"
+      ]
+    ],
+    [
+      "General Viana",
+      [
+        "Q1022904",
+        "Q134916",
+        "Q499616"
+      ]
+    ],
+    [
+      "Georgi Kinkladze",
+      []
+    ],
+    [
+      "Gerardo Bedoya",
+      [
+        "Q1424072",
+        "Q212564",
+        "Q332605",
+        "Q663400",
+        "Q80897"
+      ]
+    ],
+    [
+      "Gerardo Reinoso",
+      [
+        "Q15799",
+        "Q214978",
+        "Q427446",
+        "Q663400",
+        "Q79800"
+      ]
+    ],
+    [
+      "Gerardo Ríos",
+      []
+    ],
+    [
+      "Germán Pacheco",
+      [
+        "Q1543",
+        "Q214978",
+        "Q8701"
+      ]
+    ],
+    [
+      "Gino Peruzzi",
+      [
+        "Q215163",
+        "Q79800"
+      ]
+    ],
+    [
+      "Gonzalo Castellani",
+      [
+        "Q12297",
+        "Q324589",
+        "Q80882",
+        "Q910444"
+      ]
+    ],
+    [
+      "Gonzalo Escalante",
+      []
+    ],
+    [
+      "Gonzalo Goñi",
+      []
+    ],
+    [
+      "Gonzalo Lamardo",
+      []
+    ],
+    [
+      "Gonzalo Maroni",
+      []
+    ],
+    [
+      "Gonzalo Palpacelli",
+      []
+    ],
+    [
+      "Guido Vadalá",
+      [
+        "Q1422",
+        "Q80899"
+      ]
+    ],
+    [
+      "Guillermina Lazzari",
+      []
+    ],
+    [
+      "Guillermo Barros Schelotto",
+      [
+        "Q18640",
+        "Q79800"
+      ]
+    ],
+    [
+      "Guillermo Burdisso",
+      [
+        "Q2317584",
+        "Q318307",
+        "Q79800"
+      ]
+    ],
+    [
+      "Guillermo Lorenzo",
+      []
+    ],
+    [
+      "Guillermo Marino",
+      [
+        "Q221882",
+        "Q737753",
+        "Q849823"
+      ]
+    ],
+    [
+      "Guillermo Sara",
+      [
+        "Q8723"
+      ]
+    ],
+    [
+      "Guillermo Valdez",
+      []
+    ],
+    [
+      "Gustavo Albella",
+      [
+        "Q38568"
+      ]
+    ],
+    [
+      "Gustavo Barros Schelotto",
+      [
+        "Q12297",
+        "Q18640",
+        "Q318307",
+        "Q80899"
+      ]
+    ],
+    [
+      "Gustavo Chena",
+      []
+    ],
+    [
+      "Gustavo Dalsasso",
+      [
+        "Q1191661"
+      ]
+    ],
+    [
+      "Gustavo Eberto",
+      [
+        "Q1022939"
+      ]
+    ],
+    [
+      "Gustavo Gómez Portillo",
+      [
+        "Q1543",
+        "Q172020"
+      ]
+    ],
+    [
+      "Gustavo Neffa",
+      [
+        "Q1422",
+        "Q172020",
+        "Q214940",
+        "Q604589",
+        "Q80899"
+      ]
+    ],
+    [
+      "Gustavo Pinto",
+      [
+        "Q1074980",
+        "Q221882",
+        "Q249612",
+        "Q80882"
+      ]
+    ],
+    [
+      "Heleno de Freitas",
+      [
+        "Q332524",
+        "Q5014111",
+        "Q80955",
+        "Q80958",
+        "Q83459"
+      ]
+    ],
+    [
+      "Heraldo Bezerra",
+      [
+        "Q221882",
+        "Q8701"
+      ]
+    ],
+    [
+      "Hernán Grana",
+      [
+        "Q151907",
+        "Q2317584",
+        "Q324589",
+        "Q59962",
+        "Q646088"
+      ]
+    ],
+    [
+      "Hernán Vigna",
+      []
+    ],
+    [
+      "Horacio Bongiovanni",
+      []
+    ],
+    [
+      "Hugo Coscia",
+      [
+        "Q15799",
+        "Q214940",
+        "Q218282",
+        "Q318307",
+        "Q79800",
+        "Q80897"
+      ]
+    ],
+    [
+      "Hugo Curioni",
+      [
+        "Q18640",
+        "Q670186"
+      ]
+    ],
+    [
+      "Hugo Ibarra",
+      [
+        "Q79800",
+        "Q80897",
+        "Q8780"
+      ]
+    ],
+    [
+      "Hugo Orlando Gatti",
+      [
+        "Q1022904",
+        "Q15799",
+        "Q18640",
+        "Q79800",
+        "Q80899"
+      ]
+    ],
+    [
+      "Hugo Romeo Guerra",
+      [
+        "Q1102931",
+        "Q134916",
+        "Q162923",
+        "Q16320",
+        "Q18640",
+        "Q327172",
+        "Q499616",
+        "Q670186",
+        "Q757470",
+        "Q910444"
+      ]
+    ],
+    [
+      "Hugo Zarich",
+      [
+        "Q1022904",
+        "Q15799",
+        "Q670186",
+        "Q79800"
+      ]
+    ],
+    [
+      "Humberto Taborda",
+      []
+    ],
+    [
+      "Héctor Bailetti",
+      [
+        "Q19066",
+        "Q212166"
+      ]
+    ],
+    [
+      "Héctor Bracamonte",
+      [
+        "Q2317584",
+        "Q318307",
+        "Q519966"
+      ]
+    ],
+    [
+      "Héctor Carballo",
+      [
+        "Q1102931",
+        "Q910444"
+      ]
+    ],
+    [
+      "Héctor Damián Larroque",
+      []
+    ],
+    [
+      "Héctor Pueblas",
+      []
+    ],
+    [
+      "Héctor Ricardo",
+      [
+        "Q318307",
+        "Q327172",
+        "Q79800"
+      ]
+    ],
+    [
+      "Héctor Scotta",
+      [
+        "Q218282",
+        "Q221695",
+        "Q646088",
+        "Q744555",
+        "Q79800",
+        "Q80899",
+        "Q910444"
+      ]
+    ],
+    [
+      "Ignacio Ramón Peña",
+      []
+    ],
+    [
+      "Iker Zufiaurre",
+      []
+    ],
+    [
+      "Isaac Monti",
+      []
+    ],
+    [
+      "Isaac Scliar",
+      [
+        "Q1022904",
+        "Q215163",
+        "Q80886"
+      ]
+    ],
+    [
+      "Ivan Ribes",
+      [
+        "Q1022904",
+        "Q162923",
+        "Q59962",
+        "Q692646",
+        "Q80886"
+      ]
+    ],
+    [
+      "Ivar Stafuza",
+      []
+    ],
+    [
+      "Ivo Basay",
+      [
+        "Q1280895",
+        "Q207373"
+      ]
+    ],
+    [
+      "Iván Furios",
+      [
+        "Q1074980",
+        "Q853053",
+        "Q971490"
+      ]
+    ],
+    [
+      "Iván Leszczuk",
+      []
+    ],
+    [
+      "Jaime Sarlanga",
+      [
+        "Q18640",
+        "Q79800",
+        "Q80886",
+        "Q910444"
+      ]
+    ],
+    [
+      "Javier Ambrois",
+      [
+        "Q134916",
+        "Q324589",
+        "Q499616"
+      ]
+    ],
+    [
+      "Javier Bustillos",
+      []
+    ],
+    [
+      "Javier Hernán García",
+      [
+        "Q79800",
+        "Q80886"
+      ]
+    ],
+    [
+      "Javier Pinola",
+      [
+        "Q1424072",
+        "Q318307",
+        "Q79800",
+        "Q853053",
+        "Q8701"
+      ]
+    ],
+    [
+      "Javier Villarreal",
+      [
+        "Q1022939",
+        "Q59962",
+        "Q692646",
+        "Q80897",
+        "Q914086"
+      ]
+    ],
+    [
+      "Jesús Dátolo",
+      [
+        "Q270995",
+        "Q692646",
+        "Q79800",
+        "Q8780"
+      ]
+    ],
+    [
+      "Jesús Méndez",
+      [
+        "Q1074980",
+        "Q15799",
+        "Q214978",
+        "Q318307",
+        "Q7156",
+        "Q79800"
+      ]
+    ],
+    [
+      "Joel Acosta",
+      [
+        "Q1074980",
+        "Q1102931"
+      ]
+    ],
+    [
+      "Joel Barbosa",
+      []
+    ],
+    [
+      "Joel Rodríguez",
+      []
+    ],
+    [
+      "John Jairo Tréllez",
+      [
+        "Q212564",
+        "Q332605"
+      ]
+    ],
+    [
+      "Jonathan Calleri",
+      [
+        "Q38568",
+        "Q646088"
+      ]
+    ],
+    [
+      "Jonathan Castillo",
+      []
+    ],
+    [
+      "Jonathan Fabbro",
+      [
+        "Q15799",
+        "Q172020",
+        "Q220621",
+        "Q270995",
+        "Q427446",
+        "Q47533",
+        "Q914086"
+      ]
+    ],
+    [
+      "Jonathan Maidana",
+      [
+        "Q15799",
+        "Q2317584",
+        "Q692646",
+        "Q79800"
+      ]
+    ],
+    [
+      "Jonathan Phillippe",
+      [
+        "Q391987",
+        "Q80921",
+        "Q910444"
+      ]
+    ],
+    [
+      "Jonathan Silva",
+      [
+        "Q214940",
+        "Q2739",
+        "Q75729",
+        "Q79800"
+      ]
+    ],
+    [
+      "Jorge Alberto Rojas",
+      [
+        "Q249612",
+        "Q332605",
+        "Q391987"
+      ]
+    ],
+    [
+      "Jorge Bermúdez",
+      [
+        "Q1424072",
+        "Q212564",
+        "Q221882",
+        "Q391987"
+      ]
+    ],
+    [
+      "Jorge Carlos Domínguez",
+      [
+        "Q185163",
+        "Q18640",
+        "Q79800"
+      ]
+    ],
+    [
+      "Jorge Comas",
+      [
+        "Q215163",
+        "Q79800",
+        "Q80897"
+      ]
+    ],
+    [
+      "Jorge Daniel Martínez",
+      [
+        "Q10308",
+        "Q1074980",
+        "Q151907",
+        "Q15799",
+        "Q214978",
+        "Q744555",
+        "Q79800",
+        "Q80897"
+      ]
+    ],
+    [
+      "Jorge Davino",
+      []
+    ],
+    [
+      "Jorge Duilio Benitez",
+      [
+        "Q172020",
+        "Q17479"
+      ]
+    ],
+    [
+      "Jorge Higuaín",
+      [
+        "Q15799",
+        "Q18640",
+        "Q218282",
+        "Q692646",
+        "Q744555"
+      ]
+    ],
+    [
+      "Jorge Insfrán",
+      []
+    ],
+    [
+      "Jorge José Benítez",
+      [
+        "Q663400",
+        "Q79800",
+        "Q80899"
+      ]
+    ],
+    [
+      "Jorge Rinaldi",
+      [
+        "Q15799",
+        "Q218282",
+        "Q79800"
+      ]
+    ],
+    [
+      "Jorge Sánchez García",
+      [
+        "Q214978",
+        "Q459090",
+        "Q80886"
+      ]
+    ],
+    [
+      "Jorginho Paulista",
+      [
+        "Q2798",
+        "Q38568",
+        "Q5014111",
+        "Q80958",
+        "Q80964"
+      ]
+    ],
+    [
+      "Jorman Campuzano",
+      []
+    ],
+    [
+      "Josué Ayala",
+      [
+        "Q2454482",
+        "Q757470"
+      ]
+    ],
+    [
+      "José Alfredo López",
+      [
+        "Q79800"
+      ]
+    ],
+    [
+      "José Antonio Plá",
+      [
+        "Q19066"
+      ]
+    ],
+    [
+      "José Basualdo",
+      [
+        "Q1191661",
+        "Q215163",
+        "Q79800"
+      ]
+    ],
+    [
+      "José Bellocq",
+      []
+    ],
+    [
+      "José Benincasa",
+      [
+        "Q134916",
+        "Q16320"
+      ]
+    ],
+    [
+      "José Borello",
+      [
+        "Q1074980",
+        "Q151907",
+        "Q214940",
+        "Q324589",
+        "Q79800",
+        "Q853053"
+      ]
+    ],
+    [
+      "José Daniel Ponce",
+      [
+        "Q214940",
+        "Q218282",
+        "Q332524",
+        "Q757470",
+        "Q79800",
+        "Q80882"
+      ]
+    ],
+    [
+      "José Farías",
+      [
+        "Q18640",
+        "Q2317584",
+        "Q324589",
+        "Q327172"
+      ]
+    ],
+    [
+      "José Felipe Perassi",
+      []
+    ],
+    [
+      "José Galván",
+      [
+        "Q853053"
+      ]
+    ],
+    [
+      "José Luis Brown",
+      [
+        "Q1191661",
+        "Q12230",
+        "Q214940",
+        "Q332605",
+        "Q79800"
+      ]
+    ],
+    [
+      "José Luis Burtovoy",
+      [
+        "Q1102931",
+        "Q214978",
+        "Q80897",
+        "Q80899"
+      ]
+    ],
+    [
+      "José Luis Cuciuffo",
+      [
+        "Q1022939",
+        "Q215163",
+        "Q59962",
+        "Q79800"
+      ]
+    ],
+    [
+      "José Luis Saldaño",
+      []
+    ],
+    [
+      "José Luis Tesare",
+      []
+    ],
+    [
+      "José Luis Villarreal",
+      [
+        "Q15799",
+        "Q214940",
+        "Q59962",
+        "Q646088",
+        "Q736937",
+        "Q79800",
+        "Q8701"
+      ]
+    ],
+    [
+      "José Manuel Moreno",
+      [
+        "Q1280895",
+        "Q15799",
+        "Q332527",
+        "Q427446",
+        "Q79800",
+        "Q910444"
+      ]
+    ],
+    [
+      "José Marante",
+      [
+        "Q79800",
+        "Q910444"
+      ]
+    ],
+    [
+      "José Marinovich",
+      []
+    ],
+    [
+      "José María Calvo",
+      []
+    ],
+    [
+      "José María Silvero",
+      [
+        "Q214940"
+      ]
+    ],
+    [
+      "José Milton Melgar",
+      [
+        "Q15799"
+      ]
+    ],
+    [
+      "José Pedro Fuenzalida",
+      [
+        "Q207373",
+        "Q427446"
+      ]
+    ],
+    [
+      "José Pereda Maruyama",
+      [
+        "Q19066",
+        "Q212166"
+      ]
+    ],
+    [
+      "José Rodrigues Neto",
+      [
+        "Q17479",
+        "Q80958",
+        "Q83459",
+        "Q910444"
+      ]
+    ],
+    [
+      "José Sanfilippo",
+      [
+        "Q218282",
+        "Q499616",
+        "Q692646",
+        "Q79800"
+      ]
+    ],
+    [
+      "José Sasía",
+      [
+        "Q134916",
+        "Q16320",
+        "Q318307",
+        "Q499616"
+      ]
+    ],
+    [
+      "José Vicente Grecco",
+      [
+        "Q12230",
+        "Q1424072",
+        "Q221882",
+        "Q332527",
+        "Q80899"
+      ]
+    ],
+    [
+      "José Yudica",
+      [
+        "Q151907",
+        "Q214940",
+        "Q215163",
+        "Q221882",
+        "Q663400",
+        "Q79800"
+      ]
+    ],
+    [
+      "Juan Alberto Taverna",
+      [
+        "Q12230",
+        "Q214940"
+      ]
+    ],
+    [
+      "Juan Apolonio Vairo",
+      [
+        "Q1422",
+        "Q15799",
+        "Q318307",
+        "Q332527",
+        "Q391987",
+        "Q47533",
+        "Q80886"
+      ]
+    ],
+    [
+      "Juan Carlos Colman",
+      [
+        "Q1022904",
+        "Q221882",
+        "Q79800"
+      ]
+    ],
+    [
+      "Juan Carlos Lorenzo",
+      [
+        "Q15799",
+        "Q744555",
+        "Q853053",
+        "Q8701"
+      ]
+    ],
+    [
+      "Juan Carlos Rulli",
+      []
+    ],
+    [
+      "Juan Cobián",
+      [
+        "Q1102935",
+        "Q327172"
+      ]
+    ],
+    [
+      "Juan Cruz Komar",
+      [
+        "Q1022939"
+      ]
+    ],
+    [
+      "Juan Delgado",
+      [
+        "Q134916",
+        "Q16320"
+      ]
+    ],
+    [
+      "Juan Estrada",
+      [
+        "Q327172",
+        "Q79800"
+      ]
+    ],
+    [
+      "Juan Evaristo",
+      [
+        "Q214978",
+        "Q220621",
+        "Q327172",
+        "Q79800"
+      ]
+    ],
+    [
+      "Juan Forchetti",
+      [
+        "Q853053"
+      ]
+    ],
+    [
+      "Juan Forlín",
+      [
+        "Q8780"
+      ]
+    ],
+    [
+      "Juan Gilberto Funes",
+      [
+        "Q15799",
+        "Q215163",
+        "Q519966"
+      ]
+    ],
+    [
+      "Juan José Ferraro",
+      [
+        "Q1424072",
+        "Q215163",
+        "Q79800"
+      ]
+    ],
+    [
+      "Juan José López",
+      [
+        "Q1022939",
+        "Q15799",
+        "Q220621",
+        "Q59962",
+        "Q692646",
+        "Q79800",
+        "Q80899"
+      ]
+    ],
+    [
+      "Juan José Negri",
+      [
+        "Q151907",
+        "Q15799",
+        "Q214940"
+      ]
+    ],
+    [
+      "Juan José Pizzuti",
+      [
+        "Q15799",
+        "Q692646",
+        "Q79800"
+      ]
+    ],
+    [
+      "Juan José «Yaya» Rodríguez",
+      []
+    ],
+    [
+      "Juan Krupoviesa",
+      [
+        "Q214940",
+        "Q853053"
+      ]
+    ],
+    [
+      "Juan Manuel Aróstegui",
+      [
+        "Q427446",
+        "Q59962",
+        "Q736937",
+        "Q853053",
+        "Q971490"
+      ]
+    ],
+    [
+      "Juan Manuel Insaurralde",
+      [
+        "Q207373",
+        "Q221882",
+        "Q79800",
+        "Q853053"
+      ]
+    ],
+    [
+      "Juan Manuel Martínez",
+      [
+        "Q1424072",
+        "Q215163",
+        "Q220621",
+        "Q332524",
+        "Q35933",
+        "Q79800",
+        "Q845859"
+      ]
+    ],
+    [
+      "Juan Manuel Munafo Horta",
+      []
+    ],
+    [
+      "Juan Manuel Perillo",
+      [
+        "Q19066",
+        "Q47533"
+      ]
+    ],
+    [
+      "Juan Martín Imbert",
+      []
+    ],
+    [
+      "Juan Matías Fischer",
+      []
+    ],
+    [
+      "Juan Pablo Caffa",
+      [
+        "Q10308",
+        "Q8723",
+        "Q910444"
+      ]
+    ],
+    [
+      "Juan Pablo López",
+      []
+    ],
+    [
+      "Juan Ramón Rocha",
+      [
+        "Q221882",
+        "Q332524",
+        "Q79800"
+      ]
+    ],
+    [
+      "Juan Román Riquelme",
+      [
+        "Q12297",
+        "Q220621",
+        "Q7156",
+        "Q79800"
+      ]
+    ],
+    [
+      "Juan Sebastián Verón",
+      [
+        "Q214940",
+        "Q631",
+        "Q79800"
+      ]
+    ],
+    [
+      "Juan Simón",
+      [
+        "Q221882",
+        "Q79800"
+      ]
+    ],
+    [
+      "Juan Sánchez Miño",
+      [
+        "Q214940",
+        "Q214978"
+      ]
+    ],
+    [
+      "Juan Yustrich",
+      [
+        "Q18640",
+        "Q324589",
+        "Q79800"
+      ]
+    ],
+    [
+      "Julio Alas",
+      []
+    ],
+    [
+      "Julio Alberto Barroso",
+      [
+        "Q207373",
+        "Q214940",
+        "Q220621"
+      ]
+    ],
+    [
+      "Julio Alcorsé",
+      []
+    ],
+    [
+      "Julio Buffarini",
+      [
+        "Q1022939",
+        "Q218282",
+        "Q38568",
+        "Q757470",
+        "Q910444"
+      ]
+    ],
+    [
+      "Julio César Balerio",
+      [
+        "Q212166"
+      ]
+    ],
+    [
+      "Julio César Cáceres",
+      [
+        "Q15799",
+        "Q172020",
+        "Q270995",
+        "Q604589",
+        "Q849823"
+      ]
+    ],
+    [
+      "Julio César Toresani",
+      [
+        "Q15799",
+        "Q214978",
+        "Q80897",
+        "Q80899"
+      ]
+    ],
+    [
+      "Julio Elías Musimessi",
+      [
+        "Q221882",
+        "Q79800"
+      ]
+    ],
+    [
+      "Julio Marchant",
+      [
+        "Q1280895",
+        "Q391987",
+        "Q692646",
+        "Q80897",
+        "Q80899",
+        "Q853053"
+      ]
+    ],
+    [
+      "Julio Meléndez Calderón",
+      [
+        "Q212166"
+      ]
+    ],
+    [
+      "Julio Olarticoechea",
+      [
+        "Q15799",
+        "Q220621",
+        "Q79800"
+      ]
+    ],
+    [
+      "Julio Saldaña",
+      [
+        "Q221882",
+        "Q79800"
+      ]
+    ],
+    [
+      "Júpiter Crescio",
+      [
+        "Q16320"
+      ]
+    ],
+    [
+      "Kevin Becerra",
+      []
+    ],
+    [
+      "Kevin Zenón",
+      [
+        "Q1023532",
+        "Q80899"
+      ]
+    ],
+    [
+      "Kily González",
+      [
+        "Q10308",
+        "Q218282",
+        "Q318307",
+        "Q631",
+        "Q79800"
+      ]
+    ],
+    [
+      "Lautaro Acosta",
+      [
+        "Q324589"
+      ]
+    ],
+    [
+      "Lautaro Di Lollo",
+      []
+    ],
+    [
+      "Leandro Brey",
+      [
+        "Q2317584"
+      ]
+    ],
+    [
+      "Leandro Gracián",
+      [
+        "Q214978",
+        "Q215163",
+        "Q80897"
+      ]
+    ],
+    [
+      "Leandro Javier Díaz",
+      [
+        "Q12297",
+        "Q327172",
+        "Q427446",
+        "Q47533"
+      ]
+    ],
+    [
+      "Leandro Kuszko",
+      [
+        "Q151907",
+        "Q327172"
+      ]
+    ],
+    [
+      "Leandro Marín",
+      [
+        "Q80886"
+      ]
+    ],
+    [
+      "Leandro Paredes",
+      []
+    ],
+    [
+      "Leandro Somoza",
+      [
+        "Q12297",
+        "Q215163",
+        "Q324589",
+        "Q79800",
+        "Q8723"
+      ]
+    ],
+    [
+      "Leonardo Delfino",
+      []
+    ],
+    [
+      "Leonardo Luppino",
+      [
+        "Q249612",
+        "Q80886"
+      ]
+    ],
+    [
+      "Leonardo Ponzio",
+      [
+        "Q10308",
+        "Q15799",
+        "Q221882",
+        "Q79800"
+      ]
+    ],
+    [
+      "Leonardo Suárez",
+      []
+    ],
+    [
+      "Leonardo Verón",
+      [
+        "Q853053"
+      ]
+    ],
+    [
+      "Lionel Laborda",
+      []
+    ],
+    [
+      "Lisandro Ezequiel López",
+      [
+        "Q631",
+        "Q79800",
+        "Q853053"
+      ]
+    ],
+    [
+      "Lisandro Magallán",
+      [
+        "Q18640",
+        "Q318307"
+      ]
+    ],
+    [
+      "Luca Langoni",
+      []
+    ],
+    [
+      "Lucas Arzamendia",
+      []
+    ],
+    [
+      "Lucas Castromán",
+      [
+        "Q215163",
+        "Q2798",
+        "Q459090",
+        "Q79800"
+      ]
+    ],
+    [
+      "Lucas Gatti",
+      [
+        "Q220621"
+      ]
+    ],
+    [
+      "Lucas Janson",
+      [
+        "Q18640",
+        "Q215163",
+        "Q80886"
+      ]
+    ],
+    [
+      "Lucas Olaza",
+      []
+    ],
+    [
+      "Lucas Orbán",
+      [
+        "Q15799",
+        "Q79800",
+        "Q80886"
+      ]
+    ],
+    [
+      "Lucas Pratto",
+      [
+        "Q215163",
+        "Q427446",
+        "Q80886",
+        "Q80899"
+      ]
+    ],
+    [
+      "Lucas Viatri",
+      [
+        "Q207373",
+        "Q214940",
+        "Q249612",
+        "Q692646",
+        "Q79800"
+      ]
+    ],
+    [
+      "Luciano Becchio",
+      [
+        "Q12230",
+        "Q59962",
+        "Q7156"
+      ]
+    ],
+    [
+      "Luciano Figueroa",
+      [
+        "Q12297",
+        "Q15799",
+        "Q249612",
+        "Q318307",
+        "Q79800",
+        "Q845859"
+      ]
+    ],
+    [
+      "Ludovico Bidoglio",
+      [
+        "Q79800"
+      ]
+    ],
+    [
+      "Luis Abramovich",
+      [
+        "Q59962",
+        "Q853053"
+      ]
+    ],
+    [
+      "Luis Alberto Carranza",
+      [
+        "Q1102931",
+        "Q19066",
+        "Q214940",
+        "Q214978",
+        "Q218282",
+        "Q79800"
+      ]
+    ],
+    [
+      "Luis Amaranto Perea",
+      [
+        "Q1022939",
+        "Q212564",
+        "Q332527",
+        "Q845859",
+        "Q8701"
+      ]
+    ],
+    [
+      "Luis Antonio Sánchez",
+      [
+        "Q151907"
+      ]
+    ],
+    [
+      "Luis Cardoso",
+      [
+        "Q1022904",
+        "Q79800",
+        "Q80886"
+      ]
+    ],
+    [
+      "Luis Carniglia",
+      [
+        "Q1023532",
+        "Q185163",
+        "Q80886",
+        "Q853053"
+      ]
+    ],
+    [
+      "Luis Cerezo",
+      []
+    ],
+    [
+      "Luis Darío Calvo",
+      [
+        "Q2454482",
+        "Q318307",
+        "Q692646"
+      ]
+    ],
+    [
+      "Luis Hernández",
+      [
+        "Q1280895",
+        "Q459090",
+        "Q845859",
+        "Q849823"
+      ]
+    ],
+    [
+      "Luis Ibáñez",
+      []
+    ],
+    [
+      "Luis La Fuente",
+      [
+        "Q19066",
+        "Q212166"
+      ]
+    ],
+    [
+      "Luis Liendo",
+      []
+    ],
+    [
+      "Luis Manuel Blanco",
+      [
+        "Q324589",
+        "Q80886"
+      ]
+    ],
+    [
+      "Luis María Carregado",
+      []
+    ],
+    [
+      "Luis María Más",
+      [
+        "Q910444"
+      ]
+    ],
+    [
+      "Luis Medero",
+      [
+        "Q1022923",
+        "Q1074980",
+        "Q1102935",
+        "Q218282",
+        "Q220621",
+        "Q249612",
+        "Q80897"
+      ]
+    ],
+    [
+      "Luis Miguel Escalada",
+      [
+        "Q1022923",
+        "Q221882",
+        "Q249612",
+        "Q80958"
+      ]
+    ],
+    [
+      "Luis Monti",
+      [
+        "Q1422",
+        "Q218282",
+        "Q327172",
+        "Q676899",
+        "Q79800"
+      ]
+    ],
+    [
+      "Luis Pardiés",
+      [
+        "Q1022904",
+        "Q220621"
+      ]
+    ],
+    [
+      "Luis Pedro Monti",
+      [
+        "Q151907",
+        "Q214940"
+      ]
+    ],
+    [
+      "Luis Pentrelli",
+      [
+        "Q18640",
+        "Q2052",
+        "Q2798",
+        "Q519966",
+        "Q79800",
+        "Q853053"
+      ]
+    ],
+    [
+      "Luis Vaccaro",
+      [
+        "Q218282",
+        "Q220621",
+        "Q79800"
+      ]
+    ],
+    [
+      "Luiz Alberto da Silva Oliveira",
+      [
+        "Q17479",
+        "Q270995",
+        "Q80955",
+        "Q83459"
+      ]
+    ],
+    [
+      "Manuel Fleitas Solich",
+      [
+        "Q1022939",
+        "Q151907",
+        "Q172020"
+      ]
+    ],
+    [
+      "Manuel Roffo",
+      []
+    ],
+    [
+      "Manuel Seoane",
+      [
+        "Q214978",
+        "Q79800"
+      ]
+    ],
+    [
+      "Manuel Vicentini",
+      [
+        "Q519966"
+      ]
+    ],
+    [
+      "Marcelo Alejandro Delgado",
+      [
+        "Q318307",
+        "Q59962",
+        "Q79800",
+        "Q845859"
+      ]
+    ],
+    [
+      "Marcelo Cañete",
+      [
+        "Q38568",
+        "Q427446"
+      ]
+    ],
+    [
+      "Marcelo De Césari",
+      [
+        "Q1022904",
+        "Q79800"
+      ]
+    ],
+    [
+      "Marcelo Tejera",
+      [
+        "Q134916",
+        "Q16320",
+        "Q499616"
+      ]
+    ],
+    [
+      "Marcelo Trobbiani",
+      [
+        "Q1022939",
+        "Q10308",
+        "Q214940",
+        "Q79800"
+      ]
+    ],
+    [
+      "Marco Ruben",
+      [
+        "Q12297",
+        "Q15799",
+        "Q318307",
+        "Q79800",
+        "Q849823"
+      ]
+    ],
+    [
+      "Marco Torsiglieri",
+      [
+        "Q1022939",
+        "Q215163",
+        "Q75729"
+      ]
+    ],
+    [
+      "Marcos Acuña",
+      [
+        "Q75729",
+        "Q79800",
+        "Q910444"
+      ]
+    ],
+    [
+      "Marcos Mondaini",
+      [
+        "Q249612",
+        "Q332605",
+        "Q499616"
+      ]
+    ],
+    [
+      "Marcos Rojo",
+      [
+        "Q214940",
+        "Q75729",
+        "Q79800"
+      ]
+    ],
+    [
+      "Mariano Echeverría",
+      [
+        "Q79800",
+        "Q80886",
+        "Q853053"
+      ]
+    ],
+    [
+      "Mariano Pavone",
+      [
+        "Q15799",
+        "Q207373",
+        "Q214940",
+        "Q215163",
+        "Q324589",
+        "Q79800",
+        "Q845859",
+        "Q8723"
+      ]
+    ],
+    [
+      "Mariano Torres",
+      [
+        "Q327172",
+        "Q35933",
+        "Q80882"
+      ]
+    ],
+    [
+      "Mariano Trípodi",
+      [
+        "Q270995",
+        "Q80921",
+        "Q80955"
+      ]
+    ],
+    [
+      "Mario Boyé",
+      [
+        "Q327172",
+        "Q79800"
+      ]
+    ],
+    [
+      "Mario Busso",
+      []
+    ],
+    [
+      "Mario Evaristo",
+      [
+        "Q185163",
+        "Q214978",
+        "Q79800"
+      ]
+    ],
+    [
+      "Mario Franceschini",
+      [
+        "Q1022904"
+      ]
+    ],
+    [
+      "Mario Tossoni",
+      [
+        "Q80886"
+      ]
+    ],
+    [
+      "Mario Zanabria",
+      [
+        "Q220621",
+        "Q221882",
+        "Q327172",
+        "Q79800",
+        "Q80899"
+      ]
+    ],
+    [
+      "Marisa Gerez",
+      []
+    ],
+    [
+      "Martim Mércio da Silveira",
+      [
+        "Q80958",
+        "Q83459"
+      ]
+    ],
+    [
+      "Martín Andrizzi",
+      [
+        "Q214940",
+        "Q324589",
+        "Q519966",
+        "Q59962",
+        "Q646088",
+        "Q692646",
+        "Q80899",
+        "Q80921"
+      ]
+    ],
+    [
+      "Martín Herrera",
+      [
+        "Q1022904",
+        "Q214940",
+        "Q670186",
+        "Q910444"
+      ]
+    ],
+    [
+      "Martín Palermo",
+      [
+        "Q12297",
+        "Q214940",
+        "Q79800",
+        "Q8723"
+      ]
+    ],
+    [
+      "Martín Payero",
+      []
+    ],
+    [
+      "Mateo Mendía",
+      [
+        "Q151907"
+      ]
+    ],
+    [
+      "Matías Arce",
+      []
+    ],
+    [
+      "Matías Cahais",
+      [
+        "Q1022923",
+        "Q332527",
+        "Q427446"
+      ]
+    ],
+    [
+      "Matías Caruzzo",
+      [
+        "Q218282",
+        "Q220621",
+        "Q737753",
+        "Q79800"
+      ]
+    ],
+    [
+      "Matías Donnet",
+      [
+        "Q221882",
+        "Q59962",
+        "Q604589",
+        "Q80899"
+      ]
+    ],
+    [
+      "Matías Giménez",
+      [
+        "Q218282",
+        "Q220621",
+        "Q327172",
+        "Q59962",
+        "Q604589",
+        "Q692646",
+        "Q80886"
+      ]
+    ],
+    [
+      "Matías Marchesini",
+      [
+        "Q214978",
+        "Q2317584",
+        "Q459090"
+      ]
+    ],
+    [
+      "Matías Navarrete",
+      []
+    ],
+    [
+      "Matías Nicolás Rodríguez",
+      [
+        "Q221695",
+        "Q499616",
+        "Q737753"
+      ]
+    ],
+    [
+      "Matías Romero",
+      []
+    ],
+    [
+      "Matías Silvestre",
+      [
+        "Q1543",
+        "Q631"
+      ]
+    ],
+    [
+      "Matías Viguet",
+      []
+    ],
+    [
+      "Matías Zaragoza",
+      []
+    ],
+    [
+      "Mauricio Aubone",
+      []
+    ],
+    [
+      "Mauricio Caranta",
+      [
+        "Q1022939",
+        "Q318307",
+        "Q324589"
+      ]
+    ],
+    [
+      "Mauricio Giganti",
+      [
+        "Q1022904"
+      ]
+    ],
+    [
+      "Mauricio Pineda",
+      [
+        "Q2798",
+        "Q324589",
+        "Q327172",
+        "Q79800",
+        "Q80897"
+      ]
+    ],
+    [
+      "Mauricio Serna",
+      [
+        "Q1022939",
+        "Q212564",
+        "Q332605",
+        "Q853053"
+      ]
+    ],
+    [
+      "Maurinho",
+      [
+        "Q38568",
+        "Q5014111",
+        "Q83459"
+      ]
+    ],
+    [
+      "Mauro Astrada",
+      []
+    ],
+    [
+      "Mauro Boselli",
+      [
+        "Q214940",
+        "Q35933",
+        "Q79800",
+        "Q914086"
+      ]
+    ],
+    [
+      "Mauro Dalla Costa",
+      []
+    ],
+    [
+      "Mauro González",
+      []
+    ],
+    [
+      "Mauro Luna Diale",
+      []
+    ],
+    [
+      "Mauro Navas",
+      [
+        "Q1102935",
+        "Q2798",
+        "Q692646",
+        "Q8780"
+      ]
+    ],
+    [
+      "Mauro Zárate",
+      [
+        "Q151907",
+        "Q2052",
+        "Q215163",
+        "Q631"
+      ]
+    ],
+    [
+      "Maxi Barreiro",
+      []
+    ],
+    [
+      "Maximiliano Asís",
+      [
+        "Q249612"
+      ]
+    ],
+    [
+      "Maximiliano Padilla",
+      []
+    ],
+    [
+      "Maximiliano Scapparoni",
+      [
+        "Q2317584",
+        "Q2454482"
+      ]
+    ],
+    [
+      "Micaela Cabrera",
+      []
+    ],
+    [
+      "Miguel Angel Brindisi",
+      [
+        "Q327172",
+        "Q499616",
+        "Q79800",
+        "Q80899"
+      ]
+    ],
+    [
+      "Miguel Angel Magnoni",
+      []
+    ],
+    [
+      "Miguel Caneo",
+      [
+        "Q207373",
+        "Q663400",
+        "Q80882"
+      ]
+    ],
+    [
+      "Miguel Loayza",
+      [
+        "Q15799",
+        "Q212166",
+        "Q318307",
+        "Q327172",
+        "Q663400",
+        "Q7156"
+      ]
+    ],
+    [
+      "Miguel Nicolau",
+      []
+    ],
+    [
+      "Miguel Oswaldo González",
+      [
+        "Q2454482",
+        "Q663400",
+        "Q692646"
+      ]
+    ],
+    [
+      "Miguel Portillo",
+      []
+    ],
+    [
+      "Miguel Ángel Bordón",
+      [
+        "Q1022939",
+        "Q1023532",
+        "Q218282",
+        "Q220621",
+        "Q332605",
+        "Q744555",
+        "Q79800",
+        "Q80897",
+        "Q853053"
+      ]
+    ],
+    [
+      "Mikael Yourassowsky",
+      []
+    ],
+    [
+      "Milan Borjan",
+      [
+        "Q15799",
+        "Q499616"
+      ]
+    ],
+    [
+      "Milton Viera",
+      [
+        "Q134916",
+        "Q16320",
+        "Q499616"
+      ]
+    ],
+    [
+      "Nahitan Nández",
+      [
+        "Q134916",
+        "Q16320"
+      ]
+    ],
+    [
+      "Nahuel Fioretto",
+      [
+        "Q1074980",
+        "Q324589",
+        "Q327172",
+        "Q744555",
+        "Q80899",
+        "Q910444"
+      ]
+    ],
+    [
+      "Nahuel Tenaglia",
+      []
+    ],
+    [
+      "Nahuel Zárate",
+      [
+        "Q80882",
+        "Q80899"
+      ]
+    ],
+    [
+      "Naohiro Takahara",
+      []
+    ],
+    [
+      "Natalio Agustín Pescia",
+      [
+        "Q79800"
+      ]
+    ],
+    [
+      "Nazareno Solís",
+      [
+        "Q1022939",
+        "Q737753"
+      ]
+    ],
+    [
+      "Nelson Vivas",
+      [
+        "Q15799",
+        "Q631",
+        "Q79800"
+      ]
+    ],
+    [
+      "Neri Cardozo",
+      [
+        "Q79800"
+      ]
+    ],
+    [
+      "Nicolás Benegas",
+      []
+    ],
+    [
+      "Nicolás Bertolo",
+      [
+        "Q10308",
+        "Q15799",
+        "Q499616",
+        "Q692646",
+        "Q79800",
+        "Q845859"
+      ]
+    ],
+    [
+      "Nicolás Burdisso",
+      [
+        "Q2739",
+        "Q631",
+        "Q79800"
+      ]
+    ],
+    [
+      "Nicolás Capaldo",
+      []
+    ],
+    [
+      "Nicolás Colazo",
+      [
+        "Q646088",
+        "Q79800"
+      ]
+    ],
+    [
+      "Nicolás Figal",
+      [
+        "Q1074980",
+        "Q214978"
+      ]
+    ],
+    [
+      "Nicolás Gaitán",
+      [
+        "Q16320",
+        "Q519966",
+        "Q79800",
+        "Q8701",
+        "Q971490"
+      ]
+    ],
+    [
+      "Nicolás González",
+      []
+    ],
+    [
+      "Nicolás Lodeiro",
+      [
+        "Q134916",
+        "Q35933",
+        "Q499616",
+        "Q80958"
+      ]
+    ],
+    [
+      "Nicolás Mazzina",
+      []
+    ],
+    [
+      "Nicolás Novello",
+      []
+    ],
+    [
+      "Nicolás Valentini",
+      [
+        "Q2052",
+        "Q519966",
+        "Q971490"
+      ]
+    ],
+    [
+      "Nicolás Villafañe",
+      []
+    ],
+    [
+      "Nicolás Wandi",
+      [
+        "Q207373",
+        "Q218282",
+        "Q220621",
+        "Q221695"
+      ]
+    ],
+    [
+      "Nolberto Solano",
+      [
+        "Q19066",
+        "Q212166"
+      ]
+    ],
+    [
+      "Norberto Madurga",
+      [
+        "Q692646",
+        "Q79800",
+        "Q80964"
+      ]
+    ],
+    [
+      "Norberto Menéndez",
+      [
+        "Q15799",
+        "Q327172",
+        "Q79800",
+        "Q80897"
+      ]
+    ],
+    [
+      "Norberto Outes",
+      [
+        "Q1280895",
+        "Q214978",
+        "Q215163",
+        "Q459090",
+        "Q79800"
+      ]
+    ],
+    [
+      "Néstor Errea",
+      [
+        "Q1022904",
+        "Q16320",
+        "Q214940",
+        "Q692646",
+        "Q79800",
+        "Q80897"
+      ]
+    ],
+    [
+      "Néstor Fabbri",
+      [
+        "Q214940",
+        "Q324589",
+        "Q391987",
+        "Q646088",
+        "Q663400",
+        "Q79800"
+      ]
+    ],
+    [
+      "Néstor Isella",
+      [
+        "Q15799",
+        "Q427446"
+      ]
+    ],
+    [
+      "Néstor Lorenzo",
+      [
+        "Q218282",
+        "Q220621",
+        "Q692646",
+        "Q79800",
+        "Q910444"
+      ]
+    ],
+    [
+      "Néstor Merlo",
+      [
+        "Q1191661",
+        "Q214940",
+        "Q853053",
+        "Q971490"
+      ]
+    ],
+    [
+      "Obdulio Diano",
+      [
+        "Q207373"
+      ]
+    ],
+    [
+      "Octavio Díaz",
+      [
+        "Q1022904",
+        "Q318307",
+        "Q79800"
+      ]
+    ],
+    [
+      "Omar Larrosa",
+      [
+        "Q214978",
+        "Q215163",
+        "Q218282",
+        "Q220621",
+        "Q327172",
+        "Q79800"
+      ]
+    ],
+    [
+      "Omar Sebastián Pérez",
+      [
+        "Q1424072",
+        "Q332524",
+        "Q332527",
+        "Q692646"
+      ]
+    ],
+    [
+      "Oreste Corbatta",
+      [
+        "Q1424072",
+        "Q162923",
+        "Q332527",
+        "Q79800"
+      ]
+    ],
+    [
+      "Orlando Gaona Lugo",
+      [
+        "Q1074980",
+        "Q172020"
+      ]
+    ],
+    [
+      "Orlando Peçanha de Carvalho",
+      [
+        "Q5014111",
+        "Q80955",
+        "Q83459"
+      ]
+    ],
+    [
+      "Oscar Blanco",
+      []
+    ],
+    [
+      "Oscar López",
+      [
+        "Q214978",
+        "Q692646"
+      ]
+    ],
+    [
+      "Oscar Malbernat",
+      [
+        "Q214940",
+        "Q79800"
+      ]
+    ],
+    [
+      "Oscar Pianetti",
+      [
+        "Q207373",
+        "Q249612"
+      ]
+    ],
+    [
+      "Oscar Ruggeri",
+      [
+        "Q15799",
+        "Q215163",
+        "Q218282",
+        "Q324589",
+        "Q459090",
+        "Q79800"
+      ]
+    ],
+    [
+      "Oscar Salomón",
+      []
+    ],
+    [
+      "Oscar Trejo",
+      []
+    ],
+    [
+      "Oscar Ustari",
+      [
+        "Q1023532",
+        "Q214978",
+        "Q221882",
+        "Q736937",
+        "Q79800"
+      ]
+    ],
+    [
+      "Oscar Víctor Trossero",
+      [
+        "Q15799",
+        "Q79800",
+        "Q80899"
+      ]
+    ],
+    [
+      "Osvaldo Escudero",
+      [
+        "Q151907",
+        "Q214978",
+        "Q215163",
+        "Q318307",
+        "Q80899",
+        "Q853053"
+      ]
+    ],
+    [
+      "Osvaldo Ferreño",
+      []
+    ],
+    [
+      "Osvaldo Nardiello",
+      [
+        "Q214940",
+        "Q221882",
+        "Q853053"
+      ]
+    ],
+    [
+      "Osvaldo Rubén Potente",
+      [
+        "Q318307",
+        "Q79800"
+      ]
+    ],
+    [
+      "Osvaldo Santos",
+      [
+        "Q1424072",
+        "Q220621",
+        "Q324589",
+        "Q327172"
+      ]
+    ],
+    [
+      "Osvaldo Zubeldía",
+      [
+        "Q1022904",
+        "Q215163",
+        "Q692646",
+        "Q79800"
+      ]
+    ],
+    [
+      "Pablo Daniel Osvaldo",
+      [
+        "Q1422",
+        "Q2052",
+        "Q2739",
+        "Q327172",
+        "Q631",
+        "Q676899",
+        "Q692646",
+        "Q8780"
+      ]
+    ],
+    [
+      "Pablo Islas",
+      [
+        "Q220621",
+        "Q221882",
+        "Q327172",
+        "Q80886",
+        "Q80899",
+        "Q853053"
+      ]
+    ],
+    [
+      "Pablo Javier Pérez",
+      [
+        "Q214978",
+        "Q221882",
+        "Q249612",
+        "Q519966",
+        "Q80899"
+      ]
+    ],
+    [
+      "Pablo Jerez",
+      [
+        "Q1074980",
+        "Q327172",
+        "Q80886",
+        "Q80897"
+      ]
+    ],
+    [
+      "Pablo Ledesma",
+      [
+        "Q1022939",
+        "Q79800",
+        "Q80897"
+      ]
+    ],
+    [
+      "Pablo Migliore",
+      [
+        "Q1102931",
+        "Q16320",
+        "Q218282",
+        "Q220621",
+        "Q327172"
+      ]
+    ],
+    [
+      "Pablo Mouche",
+      [
+        "Q324589",
+        "Q79800",
+        "Q80964"
+      ]
+    ],
+    [
+      "Pablo Sebastián Cuevas",
+      []
+    ],
+    [
+      "Pablo Sebastián Álvarez",
+      [
+        "Q10308",
+        "Q214940",
+        "Q318307",
+        "Q327172"
+      ]
+    ],
+    [
+      "Pablo Trobbiani",
+      []
+    ],
+    [
+      "Pancho Gonzales",
+      [
+        "Q185163"
+      ]
+    ],
+    [
+      "Pascual Garrido",
+      []
+    ],
+    [
+      "Paulo Valentim",
+      [
+        "Q270995",
+        "Q38568",
+        "Q80958",
+        "Q83459"
+      ]
+    ],
+    [
+      "Pedro Arico Suárez",
+      [
+        "Q79800",
+        "Q910444"
+      ]
+    ],
+    [
+      "Pedro Aurélio Munt",
+      []
+    ],
+    [
+      "Pedro Calomino",
+      [
+        "Q79800"
+      ]
+    ],
+    [
+      "Pedro González Pierella",
+      [
+        "Q1191661",
+        "Q499616"
+      ]
+    ],
+    [
+      "Pedro Iarley",
+      [
+        "Q35933"
+      ]
+    ],
+    [
+      "Perfecto Rodríguez",
+      [
+        "Q214940",
+        "Q327172",
+        "Q332527",
+        "Q332605",
+        "Q853053"
+      ]
+    ],
+    [
+      "Pierino González",
+      []
+    ],
+    [
+      "Pilar Casas",
+      []
+    ],
+    [
+      "Pío Corcuera",
+      [
+        "Q18640"
+      ]
+    ],
+    [
+      "Rafael Pratt",
+      []
+    ],
+    [
+      "Raimundo Orsi",
+      [
+        "Q1102935",
+        "Q1422",
+        "Q151907",
+        "Q16320",
+        "Q17479",
+        "Q214978",
+        "Q218282",
+        "Q676899",
+        "Q79800"
+      ]
+    ],
+    [
+      "Ramiro Martínez",
+      []
+    ],
+    [
+      "Ramón Abeledo",
+      [
+        "Q214978",
+        "Q79800"
+      ]
+    ],
+    [
+      "Ramón Centurión",
+      [
+        "Q15799",
+        "Q214940",
+        "Q80899"
+      ]
+    ],
+    [
+      "Ramón Héctor Ponce",
+      [
+        "Q207373"
+      ]
+    ],
+    [
+      "Ramón Muttis",
+      [
+        "Q1022904",
+        "Q1102935",
+        "Q220621",
+        "Q79800"
+      ]
+    ],
+    [
+      "Ramón Ábila",
+      [
+        "Q327172",
+        "Q519966"
+      ]
+    ],
+    [
+      "Raúl Adolfo Pérez",
+      [
+        "Q1191661"
+      ]
+    ],
+    [
+      "Raúl Alfredo Cascini",
+      [
+        "Q151907",
+        "Q214940",
+        "Q214978"
+      ]
+    ],
+    [
+      "Raúl Emeal",
+      [
+        "Q5014111",
+        "Q79800",
+        "Q910444"
+      ]
+    ],
+    [
+      "Raúl Estévez",
+      [
+        "Q218282",
+        "Q737753",
+        "Q80897",
+        "Q80958"
+      ]
+    ],
+    [
+      "Raúl Horacio Madero",
+      [
+        "Q214940",
+        "Q327172",
+        "Q79800"
+      ]
+    ],
+    [
+      "Raúl Maradona",
+      []
+    ],
+    [
+      "Raúl Noriega",
+      []
+    ],
+    [
+      "Raúl Osella",
+      [
+        "Q162923"
+      ]
+    ],
+    [
+      "Raúl Peralta",
+      [
+        "Q1022939",
+        "Q1191661",
+        "Q327172"
+      ]
+    ],
+    [
+      "René Seghini",
+      [
+        "Q151907",
+        "Q332527",
+        "Q663400",
+        "Q79800"
+      ]
+    ],
+    [
+      "Reynaldo Silvio Aimonetti",
+      []
+    ],
+    [
+      "Ribair Rodríguez",
+      [
+        "Q59962",
+        "Q80886"
+      ]
+    ],
+    [
+      "Ricardo Alarcón",
+      [
+        "Q151907",
+        "Q17479",
+        "Q218282",
+        "Q79800"
+      ]
+    ],
+    [
+      "Ricardo David Páez",
+      [
+        "Q324589",
+        "Q391987"
+      ]
+    ],
+    [
+      "Ricardo Gareca",
+      [
+        "Q15799",
+        "Q214978",
+        "Q215163",
+        "Q391987",
+        "Q519966",
+        "Q79800"
+      ]
+    ],
+    [
+      "Ricardo Grance",
+      []
+    ],
+    [
+      "Ricardo Mier",
+      [
+        "Q134916",
+        "Q215163",
+        "Q327172",
+        "Q646088"
+      ]
+    ],
+    [
+      "Ricardo Noir",
+      [
+        "Q221882",
+        "Q427446",
+        "Q692646",
+        "Q7156"
+      ]
+    ],
+    [
+      "Ricardo Zatelli",
+      [
+        "Q15799",
+        "Q2317584",
+        "Q79800",
+        "Q80886"
+      ]
+    ],
+    [
+      "Rinaldo Fioramonte Martino",
+      [
+        "Q1422",
+        "Q218282",
+        "Q499616",
+        "Q676899",
+        "Q79800"
+      ]
+    ],
+    [
+      "Roberto Abbondanzieri",
+      [
+        "Q318307",
+        "Q79800"
+      ]
+    ],
+    [
+      "Roberto Acuña",
+      [
+        "Q10308",
+        "Q172020",
+        "Q214978",
+        "Q220621",
+        "Q318307",
+        "Q604589"
+      ]
+    ],
+    [
+      "Roberto Cabañas",
+      [
+        "Q172020",
+        "Q332527",
+        "Q391987",
+        "Q914086"
+      ]
+    ],
+    [
+      "Roberto Carlos Sosa",
+      [
+        "Q18640",
+        "Q2798"
+      ]
+    ],
+    [
+      "Roberto Cherro",
+      [
+        "Q79800",
+        "Q910444"
+      ]
+    ],
+    [
+      "Roberto Cochrane",
+      [
+        "Q162923",
+        "Q318307",
+        "Q79800"
+      ]
+    ],
+    [
+      "Roberto Colautti",
+      [
+        "Q692646"
+      ]
+    ],
+    [
+      "Roberto Luco B.",
+      []
+    ],
+    [
+      "Roberto Mouzo",
+      [
+        "Q1022904",
+        "Q79800"
+      ]
+    ],
+    [
+      "Roberto Pompei",
+      [
+        "Q214940",
+        "Q215163",
+        "Q327172",
+        "Q853053"
+      ]
+    ],
+    [
+      "Roberto Rolando",
+      [
+        "Q214940",
+        "Q214978",
+        "Q215163",
+        "Q670186"
+      ]
+    ],
+    [
+      "Rodolfo Arruabarrena",
+      [
+        "Q12297",
+        "Q318307",
+        "Q427446",
+        "Q79800",
+        "Q80886"
+      ]
+    ],
+    [
+      "Rodolfo De Zorzi",
+      [
+        "Q318307",
+        "Q79800"
+      ]
+    ],
+    [
+      "Rodolfo Esteban Cardoso",
+      [
+        "Q214940",
+        "Q79800"
+      ]
+    ],
+    [
+      "Rodolfo Orlandini",
+      [
+        "Q185163",
+        "Q79800"
+      ]
+    ],
+    [
+      "Rodolfo Smargiassi",
+      [
+        "Q18640"
+      ]
+    ],
+    [
+      "Rodrigo Palacio",
+      [
+        "Q631",
+        "Q692646",
+        "Q79800"
+      ]
+    ],
+    [
+      "Rolando Schiavi",
+      [
+        "Q214940",
+        "Q220621",
+        "Q221695",
+        "Q221882",
+        "Q79800"
+      ]
+    ],
+    [
+      "Romildo Etcheverry",
+      [
+        "Q172020",
+        "Q604589"
+      ]
+    ],
+    [
+      "Romina Ferro",
+      [
+        "Q15799"
+      ]
+    ],
+    [
+      "Roque Ditro",
+      [
+        "Q1191661",
+        "Q15799",
+        "Q220621",
+        "Q79800"
+      ]
+    ],
+    [
+      "Rubén Cecco",
+      []
+    ],
+    [
+      "Rubén Da Silva",
+      [
+        "Q134916",
+        "Q15799",
+        "Q318307",
+        "Q499616"
+      ]
+    ],
+    [
+      "Rubén Fernández",
+      [
+        "Q172020",
+        "Q218282"
+      ]
+    ],
+    [
+      "Rubén González",
+      [
+        "Q134916",
+        "Q215163",
+        "Q499616"
+      ]
+    ],
+    [
+      "Rubén Horacio Galletti",
+      [
+        "Q15799",
+        "Q214940",
+        "Q220621",
+        "Q327172",
+        "Q79800"
+      ]
+    ],
+    [
+      "Rubén José Suñé",
+      [
+        "Q218282",
+        "Q327172",
+        "Q79800",
+        "Q80899"
+      ]
+    ],
+    [
+      "Rubén Magdalena",
+      []
+    ],
+    [
+      "Rubén Omar Sánchez",
+      []
+    ],
+    [
+      "Rubén Pereira",
+      [
+        "Q134916",
+        "Q1422",
+        "Q16320",
+        "Q499616"
+      ]
+    ],
+    [
+      "Ruth Bravo",
+      []
+    ],
+    [
+      "Róbert Waltner",
+      []
+    ],
+    [
+      "Santiago Ramos Mingo",
+      []
+    ],
+    [
+      "Santiago Sana",
+      []
+    ],
+    [
+      "Santiago Silva",
+      [
+        "Q18640",
+        "Q2052",
+        "Q215163",
+        "Q221882",
+        "Q324589",
+        "Q35933",
+        "Q499616",
+        "Q692646"
+      ]
+    ],
+    [
+      "Santiago Simón",
+      []
+    ],
+    [
+      "Santiago Villafañe",
+      [
+        "Q2454482",
+        "Q80897"
+      ]
+    ],
+    [
+      "Sebastián Battaglia",
+      [
+        "Q12297",
+        "Q79800"
+      ]
+    ],
+    [
+      "Sebastián D'Angelo",
+      [
+        "Q221882",
+        "Q80886"
+      ]
+    ],
+    [
+      "Sebastián Nayar",
+      [
+        "Q663400",
+        "Q971490"
+      ]
+    ],
+    [
+      "Sebastián Palacios",
+      [
+        "Q1022939",
+        "Q214978",
+        "Q221882",
+        "Q736937",
+        "Q80899"
+      ]
+    ],
+    [
+      "Sebastián Prediger",
+      [
+        "Q214940",
+        "Q59962",
+        "Q79800",
+        "Q80897"
+      ]
+    ],
+    [
+      "Sebastián Sosa",
+      [
+        "Q16320",
+        "Q215163",
+        "Q318307",
+        "Q736937"
+      ]
+    ],
+    [
+      "Sebastián Villa",
+      []
+    ],
+    [
+      "Sergio Adrián Guillermo",
+      []
+    ],
+    [
+      "Sergio Araujo",
+      [
+        "Q7156",
+        "Q80886",
+        "Q914086"
+      ]
+    ],
+    [
+      "Sergio Ariel Páez",
+      [
+        "Q519966"
+      ]
+    ],
+    [
+      "Sergio Berti",
+      [
+        "Q10308",
+        "Q15799",
+        "Q327172",
+        "Q459090",
+        "Q79800"
+      ]
+    ],
+    [
+      "Sergio Daniel Martínez",
+      [
+        "Q134916",
+        "Q16320",
+        "Q499616"
+      ]
+    ],
+    [
+      "Sergio Galván",
+      [
+        "Q1424072",
+        "Q332605",
+        "Q391987",
+        "Q47533"
+      ]
+    ],
+    [
+      "Sergio Romero",
+      [
+        "Q220621",
+        "Q79800"
+      ]
+    ],
+    [
+      "Sergio Unrein",
+      []
+    ],
+    [
+      "Sergio Órteman",
+      [
+        "Q1023532",
+        "Q16320",
+        "Q214978",
+        "Q221695",
+        "Q604589"
+      ]
+    ],
+    [
+      "Severino Varela",
+      [
+        "Q134916",
+        "Q16320"
+      ]
+    ],
+    [
+      "Silvio Carrario",
+      [
+        "Q1022939",
+        "Q1074980",
+        "Q1191661",
+        "Q220621",
+        "Q324589",
+        "Q80899",
+        "Q853053",
+        "Q971490"
+      ]
+    ],
+    [
+      "Silvio Dulcich",
+      [
+        "Q1022939"
+      ]
+    ],
+    [
+      "Silvio Marzolini",
+      [
+        "Q79800",
+        "Q910444"
+      ]
+    ],
+    [
+      "Silvio Rudman",
+      [
+        "Q214978",
+        "Q220621"
+      ]
+    ],
+    [
+      "Simón Nardin",
+      [
+        "Q1022923"
+      ]
+    ],
+    [
+      "Sony Norde",
+      []
+    ],
+    [
+      "Tomás Fernández",
+      []
+    ],
+    [
+      "Tomás Garibaldi",
+      []
+    ],
+    [
+      "Tomás Pochettino",
+      []
+    ],
+    [
+      "Vicente Cincotta",
+      [
+        "Q646088",
+        "Q910444"
+      ]
+    ],
+    [
+      "Vicente Pernía",
+      [
+        "Q214940",
+        "Q215163",
+        "Q79800"
+      ]
+    ],
+    [
+      "Vicente Taborda",
+      [
+        "Q151907"
+      ]
+    ],
+    [
+      "Victoriano Leguizamón",
+      [
+        "Q172020",
+        "Q604589"
+      ]
+    ],
+    [
+      "Victorio Cocco",
+      [
+        "Q1022904",
+        "Q15799",
+        "Q218282",
+        "Q79800",
+        "Q80899"
+      ]
+    ],
+    [
+      "Víctor Benítez",
+      [
+        "Q1543",
+        "Q212166",
+        "Q2739",
+        "Q631"
+      ]
+    ],
+    [
+      "Víctor Hugo Marchesini",
+      []
+    ],
+    [
+      "Víctor Ormazábal",
+      [
+        "Q1102931"
+      ]
+    ],
+    [
+      "Víctor Valussi",
+      [
+        "Q79800",
+        "Q80886",
+        "Q853053"
+      ]
+    ],
+    [
+      "Walter Davoine",
+      [
+        "Q134916",
+        "Q18640"
+      ]
+    ],
+    [
+      "Walter Erviti",
+      [
+        "Q218282",
+        "Q692646",
+        "Q79800"
+      ]
+    ],
+    [
+      "Walter Gaitán",
+      [
+        "Q12297",
+        "Q1280895",
+        "Q318307",
+        "Q849823"
+      ]
+    ],
+    [
+      "Walter Molas",
+      []
+    ],
+    [
+      "Walter Ormeño",
+      [
+        "Q19066",
+        "Q212166",
+        "Q318307",
+        "Q459090"
+      ]
+    ],
+    [
+      "Walter del Río",
+      []
+    ],
+    [
+      "Wilfredo Caballero",
+      [
+        "Q79800"
+      ]
+    ],
+    [
+      "Willian Vargas",
+      []
+    ],
+    [
+      "Wilmar Barrios",
+      [
+        "Q212564"
+      ]
+    ],
+    [
+      "Wálter Perazzo",
+      [
+        "Q1424072",
+        "Q214940",
+        "Q218282",
+        "Q220621",
+        "Q663400"
+      ]
+    ],
+    [
+      "Wálter Samuel",
+      [
+        "Q221882",
+        "Q2739",
+        "Q631",
+        "Q79800"
+      ]
+    ],
+    [
+      "Yamil Romero",
+      []
+    ],
+    [
+      "Yeso Amalfi",
+      [
+        "Q16320",
+        "Q185163",
+        "Q38568",
+        "Q80964"
+      ]
+    ],
+    [
+      "Zoilo Canavery",
+      [
+        "Q15799",
+        "Q214978",
+        "Q79800"
+      ]
+    ],
+    [
+      "uhalde jara",
+      [
+        "Q214940",
+        "Q215163"
+      ]
+    ],
+    [
+      "Álvaro Rafael González",
+      [
+        "Q1023532",
+        "Q134916",
+        "Q499616"
+      ]
+    ],
+    [
+      "Ángel Clemente Rojas",
+      [
+        "Q324589",
+        "Q744555",
+        "Q79800"
+      ]
+    ],
+    [
+      "Ángel Guillermo Hoyos",
+      [
+        "Q853053"
+      ]
+    ],
+    [
+      "Ángel Romano",
+      [
+        "Q134916",
+        "Q499616"
+      ]
+    ],
+    [
+      "Ángel Schandlein",
+      [
+        "Q18640"
+      ]
+    ],
+    [
+      "Ángel Segundo Médici",
+      [
+        "Q1022904",
+        "Q79800"
+      ]
+    ],
+    [
+      "Óscar Córdoba",
+      [
+        "Q212564",
+        "Q332605",
+        "Q391987",
+        "Q47533",
+        "Q663400"
+      ]
+    ]
+  ]
+}
