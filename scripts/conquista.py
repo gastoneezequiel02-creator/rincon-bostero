@@ -20,7 +20,7 @@ HORAS = 20
 
 def _bajar(nombre: str) -> dict:
     return json.loads(http_get(f"{BASE}/{nombre}", intentos=2, timeout=40, headers={
-        "Accept": "application/json", "User-Agent": "RinconBosteroBot/1.0 (+https://gastoneezequiel02-creator.github.io/rincon-bostero)"
+        "Accept": "application/json", "User-Agent": "RinconBosteroBot/1.0 (+https://rinconbostero.com.ar)"
     }).decode("utf-8"))
 
 
