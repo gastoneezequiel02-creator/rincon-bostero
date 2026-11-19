@@ -281,11 +281,17 @@ def foto_de_la_bombonera(semilla: str, cache: dict) -> dict | None:
 
 # ----------------------------------------------------------------- notas --
 def elegir_foto(nota: dict, cache: dict) -> dict | None:
+    """Orden: foto del banco propio que coincide con el tema, foto libre del protagonista (Wikimedia),
+    foto general del banco propio (rotando) y, por último, una de la Bombonera de Wikimedia."""
+    import banco_imagenes as banco
+    res = banco.elegir(nota)
+    if res:
+        return res
     for nombre in _nombres_posibles(nota):
         res = foto_de_persona(nombre, cache)
         if res:
             return res
-    return foto_de_la_bombonera(nota.get("id") or nota.get("titulo", ""), cache)
+    return banco.elegir(nota, general=True) or foto_de_la_bombonera(nota.get("id") or nota.get("titulo", ""), cache)
 
 
 def ejecutar(dias: int = 10) -> int:

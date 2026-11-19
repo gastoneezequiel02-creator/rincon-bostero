@@ -9,6 +9,7 @@ mensajes pendientes y responde.
 """
 from __future__ import annotations
 
+import hashlib
 import re
 import time
 import urllib.parse
@@ -38,6 +39,13 @@ Para cambiarle la foto a una nota ya publicada:
 • /foto nombre-de-la-nota → va en esa nota (los nombres salen en /ultimas).
 • O respondé con la foto y /foto a mi mensaje de esa nota.
 • Si querés, agregá el crédito al final: /foto nombre-de-la-nota Foto: Juan Pérez
+
+Banco de fotos (las notas las usan cuando el tema coincide):
+• Mandame la foto con /banco y qué se ve: /banco Paredes festejando un gol en la Bombonera
+• Con /banco general sirve para cualquier nota: /banco general Hinchada con banderas en la Bombonera
+• Crédito al final: … Foto: Juan Pérez
+• Solo fotos propias o con permiso del autor (nada de diarios ni agencias).
+• /banco solo te muestra las últimas; /banco borrar ID saca una.
 
 Comandos:
 /ultimas – las últimas 5 notas
@@ -92,19 +100,20 @@ def fotos_del_mensaje(msg: dict) -> list[dict]:
     return []
 
 
-def bajar_foto(fotos: list[dict], nombre: str) -> str | None:
+def bajar_foto(fotos: list[dict], nombre: str, carpeta=None) -> str | None:
     if not fotos:
         return None
+    carpeta = carpeta or IMAGENES_NOTAS
     mayor = max(fotos, key=lambda f: f.get("file_size", 0) or f.get("width", 0))
     try:
         info = _api("getFile", file_id=mayor["file_id"])
         ruta = info["result"]["file_path"]
         token = secreto("TELEGRAM_BOT_TOKEN")
         contenido = http_get(f"https://api.telegram.org/file/bot{token}/{ruta}")
-        IMAGENES_NOTAS.mkdir(parents=True, exist_ok=True)
-        destino = IMAGENES_NOTAS / f"{nombre}.jpg"
+        carpeta.mkdir(parents=True, exist_ok=True)
+        destino = carpeta / f"{nombre}.jpg"
         destino.write_bytes(contenido)
-        return f"img/notas/{destino.name}"
+        return f"img/{carpeta.name}/{destino.name}"
     except Exception as e:
         log(f"Telegram: no pude bajar la foto: {e}")
         return None
@@ -173,6 +182,16 @@ def procesar_mensaje(msg: dict, ya_avisados: set) -> None:
         return
     if texto.startswith(("/start", "/ayuda", "/help")):
         responder(chat_id, AYUDA.format(nombre=config()["sitio"]["nombre"]))
+        return
+    # Álbum: Telegram pone el epígrafe solo en la primera foto; las demás heredan el /banco
+    grupo = msg.get("media_group_id")
+    if grupo:
+        if texto:
+            EPIGRAFES_DE_ALBUM[grupo] = texto
+        else:
+            texto = EPIGRAFES_DE_ALBUM.get(grupo, "")
+    if re.match(r"(?i)/banco(@\w+)?\b", texto):
+        cargar_al_banco(msg, chat_id, texto)
         return
     if re.match(r"(?i)/foto(@\w+)?\b", texto):
         cambiar_foto(msg, chat_id, texto)
@@ -248,6 +267,55 @@ def procesar_mensaje(msg: dict, ya_avisados: set) -> None:
     responder(chat_id, f"✅ Publicada ({nota['estado']}):\n{nota['titulo']}\n\n"
                        f"Aparece en la web en unos minutos:\n{url_nota(nota)}\n\n"
                        f"¿Algo mal? /borrar {nota['slug']}")
+
+
+EPIGRAFES_DE_ALBUM: dict[str, str] = {}
+
+
+def cargar_al_banco(msg: dict, chat_id: int, texto: str) -> None:
+    """/banco [general] descripción [Foto: crédito] con una foto; /banco solo lista; /banco borrar ID."""
+    import banco_imagenes as banco
+    resto = re.sub(r"(?i)^/banco(@\w+)?", "", texto).strip()
+    fotos = fotos_del_mensaje(msg)
+    m = re.match(r"(?i)borrar\s+([0-9a-f]{6,12})\b", resto)
+    if m:
+        img = banco.borrar(m.group(1).lower())
+        responder(chat_id, f"🗑️ Saqué del banco: {img['descripcion']}" if img else "No encontré esa foto en el banco.")
+        return
+    if not fotos:
+        lista = banco.cargar()
+        if not lista:
+            responder(chat_id, "El banco de fotos está vacío. Mandame una foto con /banco y qué se ve en ella.")
+            return
+        ultimas = "\n".join(f"• {x['id']} {'(general) ' if x.get('general') else ''}{x['descripcion'][:70]} · usada {x.get('usos', 0)} veces"
+                            for x in lista[-8:][::-1])
+        generales = sum(1 for x in lista if x.get("general"))
+        responder(chat_id, f"🗂️ Banco de fotos: {len(lista)} ({generales} generales).\n\n{ultimas}\n\nPara sacar una: /banco borrar ID")
+        return
+    general = bool(re.match(r"(?i)general\b", resto))
+    if general:
+        resto = re.sub(r"(?i)^general\b[\s:,-]*", "", resto)
+    credito = ""
+    partes = re.split(r"(?i)\b(?:foto|cr[eé]dito)\s*:\s*", resto)
+    if len(partes) > 1:
+        resto, credito = " ".join(partes[:-1]).strip(" .-–"), partes[-1].strip()
+    descripcion = re.sub(r"\s+", " ", resto).strip()
+    if len(descripcion) < 6 and not general:
+        responder(chat_id, "Contame qué se ve en la foto, así sé en qué notas usarla.\n"
+                           "Ej.: /banco Merentiel festejando un gol ante River\n"
+                           "o /banco general Hinchada en la Bombonera")
+        return
+    id_ = hashlib.sha1(f"{msg.get('message_id')}-{chat_id}-{time.time()}".encode()).hexdigest()[:8]
+    archivo = bajar_foto(fotos, id_, carpeta=banco.CARPETA)
+    if not archivo:
+        responder(chat_id, "⚠️ No pude bajar la foto. Mandala de nuevo en un rato.")
+        return
+    img = banco.agregar(id_, archivo, descripcion or "Foto general", credito, general)
+    log(f"Telegram: 🗂️ foto nueva en el banco ({id_})")
+    uso = "cualquier nota sin una foto mejor" if general else "las notas que hablen de eso"
+    responder(chat_id, f"🗂️ Guardada en el banco ({img['id']}): {img['descripcion']}\n"
+                       f"{'Crédito: ' + img['credito'] if img['credito'] else 'Sin crédito (sale como archivo del Rincón)'}\n"
+                       f"La voy a usar en {uso}. Para sacarla: /banco borrar {img['id']}")
 
 
 def cambiar_foto(msg: dict, chat_id: int, texto: str) -> None:
