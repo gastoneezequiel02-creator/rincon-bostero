@@ -699,6 +699,10 @@
     "alberto marcico": {
       "archivo": "Marcico ferro c oeste.jpg",
       "buscado": "2026-11-19T12:54:37.236530-03:00"
+    },
+    "eduardo dominguez": {
+      "archivo": null,
+      "buscado": "2026-11-19T13:21:45.032582-03:00"
     }
   },
   "archivos": {
@@ -1093,6 +1097,10 @@
     "Marcico ferro c oeste.jpg": {
       "imagen": "img/archivo/marcico-ferro-c-oeste-2d3d99.jpg",
       "credito": "Foto de archivo: Unknown author Unknown author / Wikimedia Commons (Public domain)"
+    },
+    "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 05.jpg": {
+      "imagen": "img/archivo/vista-aerea-del-estadio-alberto-j-armando-la-bombo-be8998.jpg",
+      "credito": "Foto de archivo: ProtoplasmaKid / Wikimedia Commons (CC BY-SA 4.0)"
     }
   },
   "bombonera": {
