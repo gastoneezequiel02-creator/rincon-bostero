@@ -22,8 +22,8 @@ SALIDA = Path(os.environ.get("SALIDA_SITIO", RAIZ / "_sitio"))
 DEMO = os.environ.get("DEMO") == "1"
 e = html.escape
 
-MENU = [("index.html", "Inicio"), ("noticias.html", "Noticias"), ("fixture.html", "Fixture y posiciones"),
-        ("historial.html", "Historial"), ("campanas.html", "Campañas"), ("records.html", "Récords"), ("efemerides.html", "Un día como hoy"), ("juegos.html", "Juegos"),
+MENU = [("index.html", "Inicio"), ("noticias.html", "Noticias"), ("juegos.html", "Juegos"), ("fixture.html", "Fixture y posiciones"),
+        ("historial.html", "Historial"), ("campanas.html", "Campañas"), ("records.html", "Récords"), ("efemerides.html", "Un día como hoy"),
         ("plantel.html", "Plantel")]
 NOMBRE_ESTADO = {"oficial": "Oficial", "confirmado": "Confirmado", "rumor": "Rumor"}
 NOMBRE_RES = {"G": "Ganó", "E": "Empató", "P": "Perdió"}
