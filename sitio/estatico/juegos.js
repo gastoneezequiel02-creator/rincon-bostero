@@ -59,7 +59,9 @@
     { id: "scout", nombre: "Ojo de scout", glifo: "2", desc: "Adivinaste el ídolo del día en 2 intentos o menos." },
     { id: "archivo", nombre: "Memoria de archivo", glifo: "±0", desc: "Clavaste el año exacto en ¿En qué año fue?" },
     { id: "historiador", nombre: "Historiador", glifo: "400", desc: "400 puntos o más en ¿En qué año fue?" },
-    { id: "grilla9", nombre: "Grilla llena", glifo: "9", desc: "Completaste los 9 casilleros de la Grilla bostera." }
+    { id: "grilla9", nombre: "Grilla llena", glifo: "9", desc: "Completaste los 9 casilleros de la Grilla bostera." },
+    { id: "grilla-experto", nombre: "Enciclopedia", glifo: "E", desc: "Llenaste una Grilla bostera en Experto." },
+    { id: "detective", nombre: "Detective", glifo: "?", desc: "Adivinaste un jugador de ¿Quién soy? con la primera pista." }
   ];
   function logrosLocales() { return leer("logros", {}); }
   function ganar(id) {
@@ -514,24 +516,45 @@
 
   // -------------------------------------------------------- 6. Grilla bostera --
   var GRILLA = null;
-  function armarGrilla(G, r) {
+  var NIVELES_GRILLA = ["facil", "intermedio", "dificil", "experto"];
+  function nivelesGrilla(G) { return G.niveles && G.pj ? NIVELES_GRILLA.filter(function (k) { return G.niveles[k]; }) : []; }
+  function armarGrilla(G, r, nivel, evitar) {
     var n = G.clubes.length, miembros = G.clubes.map(function () { return []; });
     G.jugadores.forEach(function (j, idx) { for (var k = 1; k < j.length; k++) miembros[j[k]].push(idx); });
     var conjuntos = miembros.map(function (l) { var s = {}; l.forEach(function (x) { s[x] = 1; }); return s; });
     function cruce(a, b) { var m = miembros[a].length < miembros[b].length ? [a, b] : [b, a]; return miembros[m[0]].filter(function (x) { return conjuntos[m[1]][x]; }); }
     function esSel(i) { return /^Selección/.test(G.clubes[i]); }
-    for (var minimo = 3; minimo >= 1; minimo--) {
-      for (var intento = 0; intento < 3000; intento++) {
-        // Solo entre los 24 clubes con más jugadores en común con Boca (los más conocidos)
-        var elegidos = mezclar(G.clubes.map(function (_, i) { return i; }).slice(0, 24), r).slice(0, 6);
+    // fama de un casillero: partidos en Boca del jugador más conocido que lo resuelve (tope 300)
+    function fama(x) { var m = 0; x.forEach(function (i) { var p = G.pj[i] || 0; if (p > m) m = p; }); return Math.min(m, 300); }
+    var cfg = nivel && G.niveles && G.pj ? G.niveles[nivel] : null;
+    var tope = cfg ? Math.min(cfg.clubes, n) : Math.min(24, n);
+    var todos = G.clubes.map(function (_, i) { return i; }).slice(0, tope);
+    function probar(pool, aceptar, intentos) {
+      if (pool.length < 6) return null;
+      for (var intento = 0; intento < intentos; intento++) {
+        var elegidos = mezclar(pool, r).slice(0, 6);
         var filas = elegidos.slice(0, 3), cols = elegidos.slice(3);
         if (filas.filter(esSel).length > 1 || cols.filter(esSel).length > 1) continue;
         var resp = [], ok = true;
-        for (var f = 0; f < 3 && ok; f++) for (var c = 0; c < 3; c++) { var x = cruce(filas[f], cols[c]); if (x.length < minimo) { ok = false; break; } resp.push(x); }
-        if (ok) return { filas: filas, cols: cols, resp: resp };
+        for (var f = 0; f < 3 && ok; f++) for (var c = 0; c < 3; c++) { var x = cruce(filas[f], cols[c]); if (!aceptar.celda(x)) { ok = false; break; } resp.push(x); }
+        if (ok && (!aceptar.total || aceptar.total(resp))) return { filas: filas, cols: cols, resp: resp, nivel: nivel || null };
       }
+      return null;
     }
-    return null;
+    var g = null;
+    if (cfg) {
+      var conNivel = {
+        celda: function (x) { return x.length >= (cfg.resp || 1) && fama(x) >= (cfg.piso || 0); },
+        total: function (resp) { var m = resp.reduce(function (s, x) { return s + fama(x); }, 0) / 9; return m >= cfg.media[0] && m < cfg.media[1]; }
+      };
+      // Primero sin los clubes de la grilla de ayer del mismo nivel, para que no se repitan siempre los mismos.
+      var sinAyer = evitar ? todos.filter(function (i) { return evitar.indexOf(i) < 0; }) : null;
+      if (sinAyer) g = probar(sinAyer, conNivel, 4000);
+      if (!g) g = probar(todos, conNivel, 6000);
+    }
+    for (var minimo = 3; !g && minimo >= 1; minimo--) g = probar(todos, { celda: function (x) { return x.length >= minimo; } }, 3000);
+    if (g && nivel) g.nivel = nivel;
+    return g;
   }
   function iniciarGrilla() {
     var caja = document.getElementById("juego-grilla");
@@ -540,6 +563,45 @@
     caja.innerHTML = "<p class='nota-dato'>Armando la grilla…</p>";
     fetch("grilla.json").then(function (r) { if (!r.ok) throw r; return r.json(); }).then(function (G) {
       GRILLA = G;
+      var marco = caja, niveles = nivelesGrilla(G), nivel = null;
+      if (niveles.length) {
+        nivel = leer("grilla-nivel", "intermedio");
+        if (niveles.indexOf(nivel) < 0) nivel = niveles[0];
+        marco.innerHTML = "<div class='g-niveles' role='group' aria-label='Dificultad'></div><p class='nota-dato g-nivel-info'></p><div class='g-juego'></div>";
+        caja = marco.querySelector(".g-juego");
+      }
+      function nombreNivel(k) { return G.niveles && G.niveles[k] ? G.niveles[k].nombre || k : ""; }
+      function claveNivel(k) { return k ? k + "-" : ""; }
+      function pintarNiveles() {
+        if (!niveles.length) return;
+        var hoy = hoyTxt(), st = leer("grilla-stats", {});
+        marco.querySelector(".g-niveles").innerHTML = niveles.map(function (k) {
+          var res = leer("res-grilla-" + k + "-" + hoy, null);
+          return "<button type='button' class='g-nivel n-" + k + (k === nivel ? " activo" : "") + "' data-nivel='" + k + "' aria-pressed='" + (k === nivel) + "'>" +
+            esc(nombreNivel(k)) + "<small>" + (res != null ? "Hoy " + res + "/9" : "Sin jugar") + "</small></button>";
+        }).join("");
+        var e = st[nivel];
+        marco.querySelector(".g-nivel-info").innerHTML = (nivel === "facil" ? "Casilleros con jugadores de muchos partidos en Boca." :
+          nivel === "intermedio" ? "Jugadores conocidos, no siempre los primeros que se te vienen a la cabeza." :
+          nivel === "dificil" ? "Menos partidos, etapas menos recordadas." : "Pasos cortos y otras épocas: para los que saben de verdad.") +
+          (e && e.jugadas ? " Tus números en " + esc(nombreNivel(nivel)) + ": " + plural(e.jugadas, "grilla", "grillas") + ", promedio " +
+            (e.casilleros / e.jugadas).toFixed(1).replace(".", ",") + "/9" + (e.llenas ? ", " + plural(e.llenas, "llena", "llenas") : "") + "." : "");
+        marco.querySelectorAll(".g-nivel").forEach(function (b) {
+          b.addEventListener("click", function () { var k = b.getAttribute("data-nivel"); if (k === nivel) return; nivel = k; guardar("grilla-nivel", k); delDia(); });
+        });
+      }
+      function grillaDelDia(k, fecha) {
+        var semillaTxt = k ? "grilla-" + k + fecha : "grilla" + fecha;
+        var ayer = null;
+        if (k) { var d = new Date(); d.setDate(d.getDate() - 1); var ga = armarGrilla(G, azar(semilla("grilla-" + k + hoyTxt(d))), k, null); if (ga) ayer = ga.filas.concat(ga.cols); }
+        return armarGrilla(G, azar(semilla(semillaTxt)), k, ayer);
+      }
+      function delDia() {
+        pintarNiveles();
+        var g = grillaDelDia(nivel, hoyTxt());
+        if (!g) { caja.innerHTML = "<p class='vacio'>Hoy no se pudo armar la grilla. Probá mañana.</p>"; return; }
+        partida(g, "grilla-" + claveNivel(nivel) + hoyTxt());
+      }
       var nombres = {}; G.jugadores.forEach(function (j, i) { nombres[normal(j[0])] = i; });
       var lista = "<datalist id='lista-grilla'>" + G.jugadores.map(function (j) { return "<option value='" + esc(j[0]) + "'>"; }).join("") + "</datalist>";
       function partida(grilla, clave) {
@@ -550,7 +612,8 @@
         function guardarEst() { if (clave) guardar(clave, est); }
         function pintar() {
           var termino = est.intentos <= 0 || lleno() === 9;
-          var html = "<div class='grilla' role='grid' aria-label='Grilla bostera'><div class='g-esquina'>Boca y…</div>" +
+          var html = (clave ? "" : "<p class='nota-dato g-practica'>Grilla de práctica" + (grilla.nivel ? " en " + esc(nombreNivel(grilla.nivel)) : "") + ": no cuenta para tus números.</p>") +
+            "<div class='grilla' role='grid' aria-label='Grilla bostera'><div class='g-esquina'>Boca y…</div>" +
             grilla.cols.map(function (c) { return "<div class='g-cab' role='columnheader'>" + esc(G.clubes[c]) + "</div>"; }).join("");
           for (var f = 0; f < 3; f++) {
             html += "<div class='g-cab g-fila' role='rowheader'>" + esc(G.clubes[grilla.filas[f]]) + "</div>";
@@ -594,29 +657,39 @@
           });
         }
         function final() {
-          var n = lleno();
-          if (clave) { guardar("res-grilla-" + hoyTxt(), n); pintarEstados(); }
+          var n = lleno(), nv = grilla.nivel, etiquetaNivel = nv ? " (" + nombreNivel(nv) + ")" : "";
+          if (clave) {
+            var claveRes = "res-grilla-" + claveNivel(nv) + hoyTxt(), nueva = leer(claveRes, null) == null;
+            guardar(claveRes, n);
+            if (nv && nueva) {
+              var st = leer("grilla-stats", {}), e = st[nv] || { jugadas: 0, casilleros: 0, llenas: 0 };
+              e.jugadas++; e.casilleros += n; if (n === 9) e.llenas++; st[nv] = e; guardar("grilla-stats", st);
+            }
+            pintarEstados(); pintarNiveles();
+          }
           if (n === 9) ganar("grilla9");
+          if (n === 9 && nv === "experto") ganar("grilla-experto");
           var celdas = [0, 1, 2].map(function (f) { return [0, 1, 2].map(function (c) { return est.celdas[f * 3 + c] != null ? "ok" : "mal"; }); });
-          var ejemplos = grilla.resp.map(function (r, k) { return est.celdas[k] != null ? "" : "<li><b>" + esc(G.clubes[grilla.filas[Math.floor(k / 3)]] + " y " + G.clubes[grilla.cols[k % 3]]) + ":</b> " +
-            esc(r.slice(0, 3).map(function (i) { return G.jugadores[i][0]; }).join(", ")) + (r.length > 3 ? " y " + (r.length - 3) + " más" : "") + "</li>"; }).join("");
+          var ejemplos = grilla.resp.map(function (r, k) {
+            if (est.celdas[k] != null) return "";
+            var orden = G.pj ? r.slice().sort(function (a, b) { return (G.pj[b] || 0) - (G.pj[a] || 0); }) : r;
+            return "<li><b>" + esc(G.clubes[grilla.filas[Math.floor(k / 3)]] + " y " + G.clubes[grilla.cols[k % 3]]) + ":</b> " +
+              esc(orden.slice(0, 3).map(function (i) { return G.jugadores[i][0]; }).join(", ")) + (r.length > 3 ? " y " + (r.length - 3) + " más" : "") + "</li>"; }).join("");
           var cont = caja.querySelector("#grilla-final");
-          var textoG = firma() + "Grilla bostera #" + numeroDelDia() + " de Rincón Bostero: " + n + "/9\n" +
+          var textoG = firma() + "Grilla bostera #" + numeroDelDia() + etiquetaNivel + " de Rincón Bostero: " + n + "/9\n" +
             celdas.map(function (f) { return f.map(function (x) { return x === "ok" ? "🟨" : "⬛"; }).join(""); }).join("\n") + "\n" + URL_JUEGOS + "#grilla";
-          cont.innerHTML = "<div class='marcador final chico'><p class='m-etiqueta'>Grilla bostera" + (clave ? " #" + numeroDelDia() : "") + "</p><p class='m-puntaje'><b>" + n + "</b><small>/9</small></p></div>" +
+          cont.innerHTML = "<div class='marcador final chico'><p class='m-etiqueta'>Grilla bostera" + (clave ? " #" + numeroDelDia() : "") + esc(etiquetaNivel) + "</p><p class='m-puntaje'><b>" + n + "</b><small>/9</small></p></div>" +
             (ejemplos ? "<details class='grilla-resp'><summary>Ver algunos que servían</summary><ul>" + ejemplos + "</ul></details>" : "") +
             (clave ? bloqueCompartir({ texto: textoG }) : "") +
             "<button type='button' class='boton secundario' id='grilla-otra'>Jugar otra grilla (práctica)</button>";
-          if (clave) activarCompartir(cont, { juego: "Grilla bostera #" + numeroDelDia(), puntaje: n, total: 9, linea: n === 9 ? "¡Grilla llena!" : plural(n, "casillero", "casilleros"), celdas: celdas, texto: textoG });
-          cont.querySelector("#grilla-otra").addEventListener("click", function () { partida(armarGrilla(G, Math.random), null); });
+          if (clave) activarCompartir(cont, { juego: "Grilla bostera #" + numeroDelDia() + etiquetaNivel, puntaje: n, total: 9, linea: n === 9 ? "¡Grilla llena!" : plural(n, "casillero", "casilleros"), celdas: celdas, texto: textoG });
+          cont.querySelector("#grilla-otra").addEventListener("click", function () { var g2 = armarGrilla(G, Math.random, nv, null); if (g2) partida(g2, null); });
         }
         pintar();
         if (est.intentos <= 0 || lleno() === 9) final();
       }
-      var g = armarGrilla(G, azar(semilla("grilla" + hoyTxt())));
-      if (!g) { caja.innerHTML = "<p class='vacio'>Hoy no se pudo armar la grilla. Probá mañana.</p>"; return; }
-      partida(g, "grilla-" + hoyTxt());
-    }).catch(function () { caja.innerHTML = "<p class='vacio'>No se pudo cargar la grilla. Probá de nuevo en un rato.</p>"; caja.removeAttribute("data-listo"); });
+      delDia();
+    }).catch(function (e) { if (window.console) console.error(e); var m = document.getElementById("juego-grilla"); m.innerHTML = "<p class='vacio'>No se pudo cargar la grilla. Probá de nuevo en un rato.</p>"; m.removeAttribute("data-listo"); });
   }
 
   // ----------------------------------------------------------------- Ranking --
@@ -911,8 +984,12 @@
     poner("mas-o-menos", "Tu récord: " + leer("mom-record", 0), false);
     var ra = leer("res-anio-" + hoy, null);
     poner("anio", ra != null ? "Hoy: " + ra + "/500" : "5 momentos nuevos por día", ra != null);
-    var rg = leer("res-grilla-" + hoy, null);
-    poner("grilla", rg != null ? "Hoy: " + rg + "/9" : "Grilla nueva todos los días", rg != null);
+    var rq = leer("res-quien-" + hoy, null);
+    poner("quien", rq != null ? "Hoy: " + rq + "/300" : "Tres jugadores nuevos por día", rq != null);
+    var rg = leer("res-grilla-" + hoy, null), NG = { facil: "Fácil", intermedio: "Intermedio", dificil: "Difícil", experto: "Experto" };
+    var porNivel = NIVELES_GRILLA.map(function (k) { var v = leer("res-grilla-" + k + "-" + hoy, null); return v != null ? NG[k] + " " + v + "/9" : null; }).filter(Boolean);
+    if (rg != null) porNivel.unshift(rg + "/9");
+    poner("grilla", porNivel.length ? "Hoy: " + porNivel.join(", ") : "Cuatro dificultades, grilla nueva cada día", porNivel.length > 0);
     var mejor = Object.keys(D.temas).map(function (t) { return leer("trivia-" + t, null); }).filter(function (x) { return x != null; });
     poner("trivia", mejor.length ? "Jugaste " + plural(mejor.length, "tema", "temas") + " de " + Object.keys(D.temas).length : Object.keys(D.temas).length + " temas", false);
     if (perfil && perfil.posicion_semana) poner("ranking", "Vas " + perfil.posicion_semana + "° esta semana", false);
@@ -921,7 +998,105 @@
     poner("desafio", retos.length ? "Jugaste " + plural(retos.length, "desafío", "desafíos") : "Sin cuenta: solo el link", false);
     if (document.getElementById("juego-insignias") && !document.querySelector("[data-juego='insignias']").hidden) pintarInsignias();
   }
-  var INICIAR_AL_ABRIR = { grilla: iniciarGrilla, insignias: pintarInsignias, desafio: function () { if (sb) iniciarDesafio(); } };
+  // ------------------------------------------------------------ ¿Quién soy? --
+  var QS_PUNTOS = [100, 80, 60, 40, 20], QS_ERRORES = 3, QS_DIF = { 1: "Fácil", 2: "Intermedio", 3: "Difícil" };
+  function iniciarQuienSoy() {
+    var caja = document.getElementById("juego-quien");
+    if (!caja || caja.getAttribute("data-listo")) return;
+    caja.setAttribute("data-listo", "1");
+    caja.innerHTML = "<p class='nota-dato'>Buscando jugadores…</p>";
+    fetch("quiensoy.json").then(function (r) { if (!r.ok) throw r; return r.json(); }).then(function (Q) {
+      var J = Q.jugadores;
+      var lista = "<datalist id='lista-quien'>" + J.map(function (j) { return "<option value='" + esc(j.n) + "'>"; }).join("") + "</datalist>";
+      function buscar(txt) {
+        var v = normal(txt); if (v.length < 3) return null;
+        var exacto = J.filter(function (j) { return normal(j.n) === v; });
+        if (exacto.length) return exacto[0];
+        var ap = J.filter(function (j) { var p = normal(j.n).split(" "); return p[p.length - 1] === v || normal(j.n).slice(-v.length - 1) === " " + v; });
+        if (ap.length === 1) return ap[0];
+        var parte = J.filter(function (j) { return v.length >= 5 && normal(j.n).indexOf(v) >= 0; });
+        return parte.length === 1 ? parte[0] : (ap.length > 1 || parte.length > 1 ? "varios" : null);
+      }
+      function delDia() {
+        var r = azar(semilla("quien" + hoyTxt()));
+        return [1, 2, 3].map(function (d) { var p = J.filter(function (j) { return j.dif === d; }); return p[Math.floor(r() * p.length)]; }).filter(Boolean);
+      }
+      function partida(secretos, clave) {
+        var est = clave ? leer(clave, null) : null;
+        est = est && est.r ? est : { r: [], vistas: 1, errores: [], revelado: false };
+        function guardarEst() { if (clave) guardar(clave, est); }
+        function total() { return est.r.reduce(function (a, x) { return a + x.p; }, 0); }
+        function pintar() {
+          var termino = est.r.length >= secretos.length && !est.revelado, html = "", cfg = null;
+          if (est.revelado) {
+            var ult = est.r[est.r.length - 1], s0 = secretos[est.r.length - 1];
+            html = "<div class='qs-revela" + (ult.p ? " ok" : "") + "'><p class='qs-res'>" + (ult.p ? "¡Bien! <b>+" + ult.p + "</b>" : "Esta vez no.") + "</p>" +
+              "<h3>" + esc(s0.n) + "</h3><p class='qs-datos'>" + s0.pj + " partidos oficiales · " + plural(s0.goles, "gol", "goles") + " · " + esc(s0.etapa) + "</p>" +
+              (s0.bio ? "<p class='qs-bio'>" + esc(s0.bio) + "</p>" : "") +
+              "<button type='button' class='boton' id='qs-seguir'>" + (est.r.length >= secretos.length ? "Ver resultado" : "Siguiente jugador") + "</button></div>";
+          } else if (termino) {
+            var t = total(), max = secretos.length * 100;
+            if (clave) { guardar("res-quien-" + hoyTxt(), t); pintarEstados(); }
+            var celdas = est.r.map(function (x) { var f = []; for (var i = 0; i < x.v; i++) f.push(i === x.v - 1 && x.p ? "ok" : "mal"); return f; });
+            cfg = { juego: "¿Quién soy?" + (clave ? " #" + numeroDelDia() : ""), puntaje: t, total: max,
+              linea: est.r.filter(function (x) { return x.p; }).length + " de " + secretos.length + " adivinados", celdas: celdas,
+              texto: firma() + "¿Quién soy? de Rincón Bostero" + (clave ? " #" + numeroDelDia() : "") + "\n" + t + "/" + max + "\n" +
+                celdas.map(function (f) { return f.map(function (x) { return x === "ok" ? "🟨" : "⬜"; }).join(""); }).join("\n") + "\n" + URL_JUEGOS + "#quien" };
+            html = "<div class='qs-final'><p class='qs-total'><b>" + t + "</b><small>/" + max + "</small></p><ol class='qs-lista'>" +
+              secretos.map(function (s, i) { var x = est.r[i]; return "<li><span>" + esc(s.n) + "</span><b>" + (x && x.p ? "+" + x.p : "—") + "</b></li>"; }).join("") + "</ol>" +
+              bloqueCompartir(cfg) + "<button type='button' class='boton secundario' id='qs-practica'>Jugar con otros jugadores</button></div>";
+          } else {
+            var s = secretos[est.r.length], vale = QS_PUNTOS[est.vistas - 1];
+            html = "<div class='qs-cabeza'><span>Jugador " + (est.r.length + 1) + " de " + secretos.length + "</span><span class='qs-dif d" + s.dif + "'>" + QS_DIF[s.dif] + "</span>" +
+              "<span>Vale <b>" + vale + "</b></span></div><ol class='qs-pistas'>" +
+              s.pistas.slice(0, est.vistas).map(function (p, i) { return "<li" + (i === est.vistas - 1 ? " class='nueva'" : "") + ">" + esc(p) + "</li>"; }).join("") + "</ol>" +
+              (est.errores.length ? "<p class='qs-errores'>No es: " + est.errores.map(esc).join(", ") + "</p>" : "") +
+              "<form class='idolo-form' id='qs-form' autocomplete='off'><label class='oculto' for='qs-input'>¿Quién es?</label>" +
+              "<input id='qs-input' list='lista-quien' placeholder='¿Quién es?'>" + lista + "<button class='boton' type='submit'>Arriesgar</button></form>" +
+              "<p class='nota-dato' id='qs-msg'>Te quedan " + plural(QS_ERRORES - est.errores.length, "intento", "intentos") + ". Cada error destapa otra pista.</p>" +
+              "<div class='qs-acciones'>" + (est.vistas < s.pistas.length ? "<button type='button' class='boton secundario' id='qs-pista'>Otra pista (vale " + QS_PUNTOS[est.vistas] + ")</button>" : "") +
+              "<button type='button' class='boton secundario' id='qs-rendir'>Me rindo</button></div>";
+          }
+          caja.innerHTML = "<div class='quien'><h3 class='juego-pregunta'>" + (clave ? "¿Quién soy? Los tres de hoy" : "Modo práctica") + "</h3>" + html + "</div>";
+          if (cfg) activarCompartir(caja, cfg);
+          function cerrar(puntos) {
+            est.r.push({ p: puntos, v: est.vistas }); est.vistas = 1; est.errores = []; est.revelado = true; guardarEst();
+            if (puntos === 100) ganar("detective");
+            pintar();
+          }
+          var f = caja.querySelector("#qs-form");
+          if (f) f.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var s = secretos[est.r.length], g = buscar(caja.querySelector("#qs-input").value), msg = caja.querySelector("#qs-msg");
+            if (g === "varios") { msg.textContent = "Hay varios con ese nombre: elegí uno de la lista."; return; }
+            if (!g) { msg.textContent = "No está en la lista: solo entran jugadores con más de " + (Q.minimo - 1) + " partidos oficiales."; return; }
+            if (g.n === s.n) { cerrar(QS_PUNTOS[est.vistas - 1]); return; }
+            if (est.errores.indexOf(g.n) >= 0) { msg.textContent = "Ya lo probaste."; return; }
+            est.errores.push(g.n);
+            if (est.errores.length >= QS_ERRORES) { cerrar(0); return; }
+            if (est.vistas < s.pistas.length) est.vistas++;
+            guardarEst(); pintar();
+            var inp = caja.querySelector("#qs-input"); if (inp) inp.focus({ preventScroll: true });
+          });
+          var bp = caja.querySelector("#qs-pista");
+          if (bp) bp.addEventListener("click", function () { est.vistas++; guardarEst(); pintar(); });
+          var br = caja.querySelector("#qs-rendir");
+          if (br) br.addEventListener("click", function () { cerrar(0); });
+          var bs = caja.querySelector("#qs-seguir");
+          if (bs) bs.addEventListener("click", function () { est.revelado = false; guardarEst(); pintar(); });
+          var bpr = caja.querySelector("#qs-practica");
+          if (bpr) bpr.addEventListener("click", function () {
+            var r = Math.random, al = [1, 2, 3].map(function (d) { var p = J.filter(function (j) { return j.dif === d; }); return p[Math.floor(r() * p.length)]; });
+            partida(al, null);
+          });
+        }
+        pintar();
+      }
+      partida(delDia(), "quien-" + hoyTxt());
+    }).catch(function () { caja.innerHTML = "<p class='vacio'>No pude cargar el juego. Probá de nuevo en un rato.</p>"; caja.removeAttribute("data-listo"); });
+  }
+
+  var INICIAR_AL_ABRIR = { grilla: iniciarGrilla, quien: iniciarQuienSoy, insignias: pintarInsignias, desafio: function () { if (sb) iniciarDesafio(); } };
   var PENDIENTE = null;  // link a un desafío o liga que llegó antes de conectar con el servidor
   function mostrar() {
     var id = (location.hash || "").slice(1), m = /^(desafio|liga)-([A-Za-z0-9]{6})$/.exec(id);

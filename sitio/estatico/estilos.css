@@ -572,6 +572,21 @@ td.pts { font-weight: 700; }
 .grilla-resp { margin: 14px 0; }
 .grilla-resp summary { cursor: pointer; font-weight: 600; color: var(--azul); }
 .grilla-resp ul { padding-left: 18px; font-size: 15px; line-height: 1.6; }
+.g-niveles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; max-width: 640px; margin-bottom: 8px; }
+.g-nivel { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 4px; border: 2px solid var(--linea);
+  border-radius: 8px; background: #fff; color: var(--azul); font: 700 16px/1.1 var(--titulos); cursor: pointer; border-top-width: 5px; }
+.g-nivel small { font: 500 12px/1.2 var(--texto); color: var(--gris); }
+.g-nivel.n-facil { border-top-color: var(--verde); }
+.g-nivel.n-intermedio { border-top-color: var(--ambar); }
+.g-nivel.n-dificil { border-top-color: var(--rojo); }
+.g-nivel.n-experto { border-top-color: var(--azul-hondo); }
+.g-nivel:hover:not(.activo) { background: var(--superficie); }
+.g-nivel.activo { background: var(--azul); border-left-color: var(--azul); border-right-color: var(--azul); border-bottom-color: var(--azul); color: #fff; }
+.g-nivel.activo small { color: #dfe6f5; }
+.g-nivel:focus-visible { outline: 3px solid var(--oro); outline-offset: 2px; }
+.g-nivel-info { max-width: 640px; margin: 0 0 12px; }
+@media (max-width: 420px) { .g-niveles { gap: 4px; } .g-nivel { padding: 7px 2px; font-size: 15px; } .g-nivel small { font-size: 11px; } }
+.g-practica { color: var(--rojo); }
 
 /* Trivia: temas */
 .temas { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
@@ -721,3 +736,34 @@ tr.detalle-tabla .nota-dato { margin: 8px 0 0; }
 .rk-nombre small { display: block; color: var(--gris); font-size: 12.5px; font-weight: 400; }
 .rk-valor { font: 700 20px/1 var(--titulos); color: var(--azul); text-align: right; white-space: nowrap; }
 .rk-valor small { font: 500 11.5px/1 var(--texto); color: var(--gris); margin-left: 4px; }
+
+/* ¿Quién soy? */
+.jtarjeta.nuevo { border-color: var(--oro); }
+.jt-nuevo { display: inline-block; margin-left: 8px; padding: 2px 7px; border-radius: 4px; background: var(--oro); color: var(--azul-hondo);
+  font: 700 13px/1.3 var(--texto); font-style: normal; letter-spacing: .02em; vertical-align: 4px; }
+.quien { max-width: 680px; }
+.qs-cabeza { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-size: 15px; color: var(--gris); margin-bottom: 12px; }
+.qs-cabeza b { color: var(--azul); font: 800 22px/1 var(--titulos); }
+.qs-dif { padding: 2px 9px; border-radius: 4px; font-weight: 700; font-size: 13px; color: #fff; background: var(--verde); }
+.qs-dif.d2 { background: var(--ambar); }
+.qs-dif.d3 { background: var(--rojo); }
+.qs-pistas { list-style: none; counter-reset: pista; margin: 0 0 14px; padding: 0; display: grid; gap: 8px; }
+.qs-pistas li { counter-increment: pista; display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start;
+  padding: 12px 14px; border-radius: var(--radio); background: var(--superficie); font: 400 18px/1.4 var(--lectura); }
+.qs-pistas li::before { content: counter(pista); font: 800 24px/1 var(--titulos); color: var(--azul); }
+.qs-pistas li.nueva { background: var(--oro-suave); }
+.qs-errores { color: var(--rojo); font-size: 15px; margin: 0 0 10px; }
+.qs-acciones { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.qs-revela, .qs-final { padding: 18px 20px; border-radius: 10px; background: var(--superficie); }
+.qs-revela.ok { background: var(--oro-suave); }
+.qs-revela h3 { font: 800 34px/1.05 var(--titulos); color: var(--azul); margin: 4px 0; }
+.qs-res { font: 700 20px/1.2 var(--titulos); margin: 0; }
+.qs-res b { color: var(--verde); }
+.qs-datos { color: var(--gris); margin: 0 0 8px; }
+.qs-bio { font: 400 16px/1.5 var(--lectura); margin: 0 0 14px; }
+.qs-total { font: 800 72px/1 var(--titulos); color: var(--azul); margin: 0 0 10px; }
+.qs-total small { font-size: .45em; color: var(--gris); }
+.qs-lista { margin: 0 0 16px; padding-left: 22px; }
+.qs-lista li { padding: 4px 0; }
+.qs-lista li span { margin-right: 10px; }
+@media (max-width: 640px) { .qs-pistas li { font-size: 17px; } .qs-total { font-size: 60px; } }
