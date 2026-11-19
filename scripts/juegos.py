@@ -254,7 +254,19 @@ def preguntas_historia(rng) -> list[dict]:
                   "Boca se fundó el 3 de abril de 1905 en La Boca."),
     ]
     rec = leer_json(DATOS / "bocastats" / "records.json", {}) or {}
-    for m in rec.get("marcas", []):
+    marcas = list(rec.get("marcas", []))
+    try:  # las rachas se calculan partido a partido (sin anulados ni giras), no se toman de la copia guardada
+        import bocastats
+        of = [p for p in bocastats.todos_los_partidos() if not p["amistoso"]]
+        if len(of) > 3000:
+            r = bocastats.mejores_rachas(bocastats.todos_los_partidos())
+            calc = {"Racha de victorias más larga": r["victorias"][0], "Racha invicta más larga": r["invicto"][0]}
+            marcas = [dict(m, valor=f"{len(calc[m['titulo']])} partidos",
+                           detalle=f"Del {calc[m['titulo']][0]['fecha'][:4]} al {calc[m['titulo']][-1]['fecha'][:4]}.")
+                      if m["titulo"] in calc else m for m in marcas]
+    except Exception:
+        pass
+    for m in marcas:
         t, v, d = m["titulo"], m["valor"], m.get("detalle", "")
         if t == "Mayor goleada" and (g := re.search(r"Boca (\d+)-(\d+) (.+)", v)):
             anio = re.search(r"(\d{4})", d)
@@ -273,7 +285,9 @@ def preguntas_historia(rng) -> list[dict]:
                                 n, _numeros_cerca(n, rng, 4), d))
         elif t == "Racha de victorias más larga" and (n := re.search(r"(\d+)", v)):
             n = int(n.group(1))
-            qs.append(_pregunta("historia", "¿Cuántas victorias seguidas logró Boca en 1924, su mejor racha?", n, _numeros_cerca(n, rng, 2), d))
+            anio = re.search(r"(\d{4})", d)
+            qs.append(_pregunta("historia", f"¿Cuántas victorias seguidas logró Boca en su mejor racha{f', que empezó en {anio.group(1)}' if anio else ''}?",
+                                n, _numeros_cerca(n, rng, 2), d))
     # partidos históricos de la base de BocaStats (si está cargada)
     try:
         import bocastats

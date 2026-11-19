@@ -537,7 +537,7 @@ def datos_historial(historial: dict, partidos: list[dict]) -> tuple[dict, dict]:
         importados = bocastats.partidos_de(clave) if bs else []
         if importados:
             ultimo = importados[-1]["fecha"]
-            lista = [{"fecha": x["fecha"], "competencia": "Amistoso" if x["amistoso"] else x["torneo"],
+            lista = [{"fecha": x["fecha"], "competencia": "Amistoso" if x["amistoso"] and not x.get("no_computable") else x["torneo"],
                       "condicion": x["condicion"], "goles_boca": x["goles_boca"], "goles_rival": x["goles_rival"],
                       "resultado": x["resultado"], "amistoso": x["amistoso"]} for x in importados]
             if h:
@@ -1099,7 +1099,7 @@ def pagina_efemerides(mes: int, dia: int, items: list[dict], dias: list[str], pr
             f'<li><span class="lp-fecha">{p["fecha"][:4]}</span><span><span class="lp-cruce">'
             + (f'{e(p["rival"])} <span class="goles">{p["goles_rival"]} - {p["goles_boca"]}</span> Boca' if p["condicion"] == "V"
                else f'Boca <span class="goles">{p["goles_boca"]} - {p["goles_rival"]}</span> {e(p["rival"])}')
-            + f'</span><span class="lp-sub">{e("Amistoso" if p["amistoso"] else p["torneo"])}</span></span>'
+            + f'</span><span class="lp-sub">{e("Amistoso" if p["amistoso"] and not p.get("no_computable") else p["torneo"])}</span></span>'
             f'<span class="lp-res r-{p["resultado"]}">{p["resultado"]}</span></li>'
             for p in sorted(partidos_dia, key=lambda x: x["fecha"]))
         bloque_partidos = (f'<section style="margin-top:36px"><h2 class="titulo-seccion">Todos los partidos de un {dia} de {MESES[mes - 1]} '
@@ -1195,6 +1195,28 @@ def pagina_records(historicos: list[dict], proximos) -> str:
                       for m in marcas]
         else:
             marcas = [m for m in marcas if m["titulo"] != "Rival más enfrentado"]
+        if len(oficiales) > 3000:  # rachas calculadas partido a partido (sin anulados ni giras)
+            def _f(iso):
+                return f"{int(iso[8:10])} de {MESES[int(iso[5:7]) - 1]} de {iso[:4]}"
+            def _periodo(r):
+                a, b = r[0]["fecha"], r[-1]["fecha"]
+                if a[:4] == b[:4]:
+                    return f"Del {int(a[8:10])} de {MESES[int(a[5:7]) - 1]} al {_f(b)}"
+                return f"Del {_f(a)} al {_f(b)}"
+            rachas = bocastats.mejores_rachas(historicos)
+            nuevas = {}
+            for titulo, clave, unidad in (("Racha de victorias más larga", "victorias", "triunfos seguidos"),
+                                          ("Racha invicta más larga", "invicto", "partidos sin perder")):
+                todas = rachas.get(clave) or []
+                if todas:
+                    r = todas[0]
+                    detalle = _periodo(r)
+                    if clave == "invicto":
+                        detalle += f" ({sum(1 for p in r if p['resultado'] == 'G')} victorias y {sum(1 for p in r if p['resultado'] == 'E')} empates)"
+                    if len(todas) > 1:
+                        detalle += ". Igualada " + " y ".join(f"en {x[0]['fecha'][:4]}" for x in todas[1:])
+                    nuevas[titulo] = dict(titulo=titulo, valor=f"{len(r)} {unidad}", detalle=detalle)
+            marcas = [nuevas.get(m["titulo"], m) for m in marcas]
         items = "".join(f'<li><span class="nota-dato">{e(m["titulo"])}</span><b>{e(m["valor"])}</b><span>{e(m.get("detalle", ""))}</span></li>'
                         for m in marcas)
         partes.append(f'<section><h2 class="titulo-seccion">Marcas históricas</h2><ul class="marcas">{items}</ul></section>')

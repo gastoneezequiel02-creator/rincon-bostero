@@ -253,19 +253,53 @@ def importar_rivales() -> None:
         log(f"BocaStats: historial partido a partido de {listos} de {len(lista)} rivales")
 
 
+# Partidos que BocaStats no marca como amistosos pero que no cuentan como oficiales:
+# los anulados ("Campeonato (Anulado) 1919") y las giras ("Gira por Europa 1925").
+RE_NO_COMPUTABLE = re.compile(r"(?i)\b(anulad[oa]|gira)\b")
+
+
+def _computable(p: dict) -> dict:
+    if not p.get("amistoso") and RE_NO_COMPUTABLE.search(p.get("torneo") or ""):
+        return {**p, "amistoso": True, "no_computable": True}
+    return p
+
+
 def partidos_de(slug: str) -> list[dict]:
-    return (leer_json(CARPETA_PARTIDOS / f"{slug}.json", {}) or {}).get("partidos", [])
+    return [_computable(p) for p in (leer_json(CARPETA_PARTIDOS / f"{slug}.json", {}) or {}).get("partidos", [])]
 
 
 def todos_los_partidos() -> list[dict]:
-    """Todos los partidos importados, con el rival incluido."""
+    """Todos los partidos importados, con el rival incluido. Los anulados y las giras quedan como no oficiales."""
     salida = []
     for f in sorted(CARPETA_PARTIDOS.glob("*.json")):
         d = leer_json(f, {})
         for p in d.get("partidos", []):
-            salida.append({**p, "rival_slug": d.get("slug", f.stem), "rival": nombre_lindo(d.get("slug", f.stem), d.get("nombre", f.stem))})
+            salida.append({**_computable(p), "rival_slug": d.get("slug", f.stem),
+                           "rival": nombre_lindo(d.get("slug", f.stem), d.get("nombre", f.stem))})
     salida.sort(key=lambda p: p["fecha"])
     return salida
+
+
+def mejores_rachas(partidos: list[dict]) -> dict[str, list[list[dict]]]:
+    """Las rachas más largas de victorias y de partidos sin perder, en orden de fecha. Se cuentan solo los oficiales;
+    un partido anulado o de gira no suma, pero si no fue triunfo (o fue derrota) corta la racha igual.
+    Devuelve todas las que empatan en el primer puesto."""
+    partidos = [p for p in partidos if not p["amistoso"] or p.get("no_computable")]
+    res = {}
+    for clave, sirve in (("victorias", lambda p: p["resultado"] == "G"), ("invicto", lambda p: p["resultado"] != "P")):
+        rachas, actual = [], []
+        for p in partidos + [None]:
+            if p is not None and p.get("no_computable") and sirve(p):
+                continue
+            if p is not None and sirve(p) and not p.get("no_computable"):
+                actual.append(p)
+            else:
+                if actual:
+                    rachas.append(actual)
+                actual = []
+        largo = max((len(r) for r in rachas), default=0)
+        res[clave] = [r for r in rachas if len(r) == largo]
+    return res
 
 
 # ---------------------------------------------------------- récords y goleadores --
