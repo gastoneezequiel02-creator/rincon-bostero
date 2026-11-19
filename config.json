@@ -32,7 +32,7 @@
   "telegram": {
     "activado": true,
     "_usuarios_permitidos": "IDs numéricos de Telegram de quienes pueden cargar notas. Si alguien no autorizado le escribe al bot, el bot le contesta con su ID para que lo agregues acá.",
-    "usuarios_permitidos": []
+    "usuarios_permitidos": [1616863037]
   },
   "datos_futbol": {
     "activado": true,
@@ -105,7 +105,9 @@
     "_que_es": "Datos de historiadeboca.com.ar (con permiso): historial partido a partido de los clásicos (se importa y verifica una vez por semana) y efemérides diarias. Todo se muestra dentro de la web, con el crédito 'Datos históricos: Historia de Boca'. 'efemerides' es la página de donde se leen.",
     "activado": true,
     "efemerides": "https://historiadeboca.com.ar/efemerides.php",
-    "credito": "Historia de Boca"
+    "credito": "Historia de Boca",
+    "_actualizar_automaticamente": "Historia de Boca no habilitó (por ahora) la lectura automática desde GitHub: la web usa las copias guardadas en datos/hdb. Si algún día lo habilitan, poné true.",
+    "actualizar_automaticamente": false
   },
   "bocastats": {
     "_que_es": "Datos de bocastats.com (con permiso): historial contra 240 rivales, partido por partido desde 1905, récords y goleadores. Todo se muestra dentro de la web.",
