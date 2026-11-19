@@ -377,44 +377,163 @@ td.pts { font-weight: 700; }
 .cat-titulos summary b { font: 800 26px/1 var(--titulos); color: var(--azul); margin-right: 4px; }
 .cat-titulos ul { margin: 0 0 12px; padding-left: 18px; font-size: 15px; line-height: 1.7; }
 
-/* juegos */
-.juego-caja { max-width: 720px; margin-top: 18px; }
-.juego-progreso { display: flex; justify-content: space-between; font-size: 15px; color: var(--gris); margin-bottom: 6px; }
-.barra-progreso { height: 6px; background: var(--superficie); border-radius: 3px; overflow: hidden; margin-bottom: 18px; }
-.barra-progreso i { display: block; height: 100%; background: var(--oro); transition: width .3s; }
-.juego-pregunta { font: 700 clamp(24px, 3.2vw, 30px)/1.15 var(--titulos); margin: 0 0 18px; }
-.opciones { display: grid; gap: 10px; }
-.opcion {
-  text-align: left; font: 600 18px/1.3 var(--texto); padding: 14px 18px; min-height: 52px;
-  border: 2px solid var(--linea); border-radius: var(--radio); background: #fff; color: var(--tinta); cursor: pointer;
+/* ======================================================== juegos ==
+   Portada sobria con una tarjeta por juego. Lo llamativo va en un solo lugar:
+   el «marcador» de cada juego (panel azul noche con números grandes en oro). */
+.juegos { --noche: #061638; --oro-claro: #ffd54d; --acierto: #1f8a55; --error: #c4372e; }
+.juegos-cabeza { margin: 8px 0 18px; }
+.juegos-cabeza h1 { font: 800 clamp(44px, 6vw, 64px)/0.95 var(--titulos); color: var(--azul); margin: 0 0 6px; }
+.juegos-cabeza p { color: var(--gris); margin: 0; max-width: 60ch; }
+
+/* tarjeta grande: pregunta del día */
+.jdia {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 22px;
+  background: var(--azul); color: #fff; text-decoration: none; border-radius: 10px;
+  padding: 20px 24px; margin-bottom: 14px; border-top: 6px solid var(--oro);
 }
-.opcion:hover:not(:disabled) { border-color: var(--azul); }
-.opcion.ok, .lado.ok { background: #ddf2e6; border-color: var(--verde); color: #0f4d30; }
-.opcion.mal { background: #fbe3e1; border-color: var(--rojo); color: #7a1d16; }
-.opcion:disabled { cursor: default; }
-.juego-dato { margin-top: 16px; }
-.juego-dato p { margin: 0 0 12px; }
-.juego-final { text-align: left; }
-.puntaje { display: block; font: 800 88px/0.9 var(--titulos); color: var(--azul); margin: 8px 0; }
-.puntaje small { font-size: 40px; color: var(--gris); }
-.fila-resultado { font-size: 24px; letter-spacing: 2px; }
-.duelo { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: stretch; }
-.vs-duelo { align-self: center; font: 700 20px/1 var(--titulos); color: var(--gris); }
-.lado {
-  display: flex; flex-direction: column; justify-content: center; gap: 8px; min-height: 130px; padding: 18px;
-  border: 2px solid var(--linea); border-radius: var(--radio); background: var(--azul); color: #fff; cursor: pointer; text-align: center;
+.jdia-numero { font: 800 clamp(64px, 9vw, 96px)/0.85 var(--titulos); color: var(--oro); font-variant-numeric: tabular-nums; }
+.jdia-numero small { display: block; font: 600 15px/1.2 var(--texto); color: #c5d0ea; margin-bottom: 6px; }
+.jdia-texto b { display: block; font: 700 28px/1.05 var(--titulos); }
+.jdia-texto > span { display: block; color: #dfe6f7; font-size: 16px; margin-top: 4px; }
+.jdia-ir { background: var(--oro); color: var(--azul-hondo); font: 700 20px/1 var(--titulos); padding: 14px 22px; border-radius: 6px; }
+.jdia:hover .jdia-ir, .jdia:focus-visible .jdia-ir { background: #fff; }
+.jt-estado { display: block; margin-top: 8px; font: 600 14px/1.3 var(--texto); color: var(--gris); }
+.jdia .jt-estado { color: var(--oro-claro, #ffd54d); }
+.jt-estado.hecho::before { content: "✓ "; }
+
+/* tarjetas de juegos */
+.jtarjetas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+@media (max-width: 900px) { .jtarjetas { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .jtarjetas { grid-template-columns: 1fr; } }
+.jtarjeta {
+  display: grid; grid-template-rows: 120px 1fr; text-decoration: none; color: var(--tinta);
+  border: 2px solid var(--linea); border-radius: 10px; overflow: hidden; background: #fff;
+  transition: border-color .15s;
 }
-.lado:hover:not(:disabled) { border-color: var(--oro); }
-.lado-nombre { font: 700 24px/1.1 var(--titulos); }
-.lado-valor { font: 800 34px/1 var(--titulos); color: var(--oro); }
-.lado.ok .lado-valor { color: var(--verde); }
-.lado.mal-suave { background: var(--superficie); color: var(--tinta); }
-.lado.mal-suave .lado-valor { color: var(--azul); }
-.temas { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
-.tema { text-align: left; padding: 16px; border: 2px solid var(--linea); border-radius: var(--radio); background: #fff; cursor: pointer; display: flex; flex-direction: column; gap: 4px; color: var(--tinta); }
-.tema:hover { border-color: var(--azul); }
-.tema b { font: 700 21px/1.1 var(--titulos); color: var(--azul); }
-.tema span { font-size: 14px; color: var(--gris); }
+.jtarjeta:hover, .jtarjeta:focus-visible { border-color: var(--azul); }
+.jt-glifo { background: var(--azul); display: flex; align-items: center; justify-content: center; color: var(--oro); }
+.jt-glifo svg { width: 78px; height: 78px; fill: var(--oro); }
+.g-texto { font: 800 64px/1 var(--titulos); letter-spacing: .02em; }
+.g-texto small { font-size: .6em; color: #8fa0c9; margin: 0 4px; }
+.g-abcd { font-size: 40px; line-height: 1; text-align: center; letter-spacing: .25em; }
+.g-grilla { display: grid; grid-template-columns: repeat(3, 22px); gap: 5px; }
+.g-grilla i { width: 22px; height: 22px; border-radius: 4px; border: 2px solid #8fa0c9; }
+.g-grilla i.on { background: var(--oro); border-color: var(--oro); }
+.jt-cuerpo { padding: 14px 16px 16px; }
+.jt-cuerpo b { display: block; font: 700 25px/1.05 var(--titulos); color: var(--azul); margin-bottom: 4px; }
+.jt-cuerpo > span:not(.jt-estado) { display: block; font-size: 15px; line-height: 1.4; color: var(--tinta); }
+.jt-cuerpo .jt-estado.hecho { color: var(--verde); }
+.jextra { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; }
+@media (max-width: 640px) { .jextra { grid-template-columns: 1fr; } }
+.jextra-item { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 16px 18px;
+  background: var(--superficie); border-radius: 10px; text-decoration: none; color: var(--tinta); }
+.jextra-item b { font: 700 22px/1 var(--titulos); color: var(--azul); }
+.jextra-item span { font-size: 14px; color: var(--gris); text-align: right; }
+.jextra-item:hover b { text-decoration: underline; text-decoration-color: var(--oro); text-decoration-thickness: 3px; }
+
+/* pantalla de cada juego */
+.juego .volver { display: inline-block; font: 600 15px/1 var(--texto); color: var(--azul); text-decoration: none; padding: 8px 0; }
+.juego .volver::before { content: "‹ "; font-size: 20px; }
+.juego .volver:hover { text-decoration: underline; }
+.juego-titulo { font: 800 clamp(34px, 5vw, 46px)/1 var(--titulos); color: var(--azul); margin: 6px 0 4px; }
+.juego-bajada { color: var(--gris); margin: 0 0 16px; max-width: 62ch; }
+.juego-caja { max-width: 760px; }
+.juego-pregunta { font: 700 clamp(24px, 3.2vw, 30px)/1.15 var(--titulos); margin: 0 0 12px; }
+
+/* el marcador */
+.marcador { background: var(--noche); color: #fff; border-radius: 12px; padding: 20px 22px 22px; }
+.m-arriba { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 10px; }
+.m-tema { font: 600 15px/1.2 var(--texto); color: #c5d0ea; }
+.m-cuenta { font: 800 34px/1 var(--titulos); color: var(--oro); font-variant-numeric: tabular-nums; }
+.m-cuenta small { font-size: 20px; color: #8fa0c9; }
+.m-puntos { display: flex; gap: 5px; list-style: none; margin: 0 0 20px; padding: 0; }
+.m-puntos li { flex: 1; height: 7px; border-radius: 4px; background: rgba(255,255,255,.14); }
+.m-puntos li.ok { background: var(--oro); }
+.m-puntos li.cerca { background: #8fa0c9; }
+.m-puntos li.mal { background: var(--error); }
+.m-puntos li.actual { background: #fff; }
+.m-pregunta { font: 700 clamp(26px, 3.6vw, 34px)/1.12 var(--titulos); margin: 0 0 20px; color: #fff; }
+.marcador .opciones { display: grid; gap: 10px; }
+.marcador .opcion {
+  display: flex; align-items: center; gap: 14px; text-align: left; width: 100%;
+  font: 600 18px/1.3 var(--texto); padding: 12px 16px 12px 12px; min-height: 56px;
+  border: 2px solid transparent; border-radius: 8px; background: #fff; color: var(--tinta); cursor: pointer;
+}
+.op-letra { flex: none; width: 32px; height: 32px; border-radius: 6px; background: var(--azul); color: #fff;
+  font: 700 18px/32px var(--titulos); text-align: center; }
+.marcador .opcion:hover:not(:disabled) { border-color: var(--oro); }
+.marcador .opcion:disabled { cursor: default; }
+.marcador .opcion:disabled:not(.ok):not(.mal) { opacity: .55; }
+.marcador .opcion.ok { background: var(--acierto); color: #fff; animation: pop .35s ease-out; }
+.marcador .opcion.ok .op-letra { background: #fff; color: var(--acierto); }
+.marcador .opcion.mal { background: var(--error); color: #fff; animation: sacudir .35s ease-out; }
+.marcador .opcion.mal .op-letra { background: #fff; color: var(--error); }
+@keyframes pop { 0% { transform: scale(1); } 45% { transform: scale(1.03); } 100% { transform: scale(1); } }
+@keyframes sacudir { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-3px); } }
+.marcador .juego-dato { margin-top: 16px; }
+.marcador .juego-dato p, .m-nota { margin: 0 0 12px; color: #dfe6f7; }
+.m-veredicto b { font: 700 22px/1 var(--titulos); margin-right: 4px; }
+.m-veredicto.bien b { color: var(--oro); }
+.m-veredicto.mal b { color: #ff9b94; }
+.marcador .boton { background: var(--oro); color: var(--azul-hondo); }
+.marcador .boton.secundario { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.4); }
+.marcador a { color: var(--oro); }
+.m-fuente { font-size: 13px; color: var(--gris); margin: 10px 0 0; }
+.marcador .m-fuente { color: #8fa0c9; }
+
+/* pantalla final */
+.marcador.final { text-align: center; padding: 26px 22px 24px; }
+.m-etiqueta { color: #c5d0ea; margin: 0; font-weight: 600; }
+.m-puntaje { margin: 4px 0 6px; font: 800 clamp(96px, 16vw, 140px)/0.9 var(--titulos); color: var(--oro); font-variant-numeric: tabular-nums; }
+.m-puntaje small { font-size: .38em; color: #8fa0c9; margin-left: 4px; }
+.m-frase { font: 700 24px/1.15 var(--titulos); margin: 0 0 10px; }
+.marcador.final.chico .m-puntaje { font-size: 88px; }
+.acciones-final { margin-top: 14px; }
+.compartir-caja { display: grid; grid-template-columns: 180px 1fr; gap: 18px; align-items: center; margin-top: 18px;
+  padding: 16px; background: var(--superficie); border-radius: 12px; }
+.compartir-img img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 8px; background: var(--noche, #061638); }
+.compartir-caja .compartir { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; }
+.compartir-caja .boton.secundario, .acciones-final .boton.secundario { background: #fff; border: 2px solid var(--linea); }
+.anio-elegir .boton.elegido { background: transparent; color: #c5d0ea; border: 2px solid rgba(255,255,255,.3); opacity: 1; }
+@media (max-width: 560px) { .compartir-caja { grid-template-columns: 1fr; } .compartir-img { max-width: 220px; margin: 0 auto; } }
+
+/* ¿Más o menos?: cara a cara */
+.duelo-caras { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: stretch; }
+.vs-caras { align-self: center; font: 800 26px/1 var(--titulos); color: var(--oro); }
+.cara { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 10px 12px; cursor: pointer;
+  background: #fff; color: var(--tinta); border: 3px solid transparent; border-radius: 10px; text-align: center; }
+.cara:hover:not(:disabled) { border-color: var(--oro); }
+.cara:disabled { cursor: default; }
+.cara-foto { width: 100%; max-width: 200px; aspect-ratio: 1; border-radius: 8px; overflow: hidden; background: var(--azul);
+  display: flex; align-items: center; justify-content: center; }
+.cara-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
+.cara-iniciales { font: 800 64px/1 var(--titulos); color: var(--oro); }
+.cara-nombre { font: 700 22px/1.05 var(--titulos); }
+.cara-valor { min-height: 42px; }
+.cara-valor b { font: 800 40px/1 var(--titulos); color: var(--azul); font-variant-numeric: tabular-nums; }
+.cara-valor small { display: block; font-size: 13px; color: var(--gris); }
+.cara-credito { font-size: 10.5px; line-height: 1.25; color: var(--gris); }
+.cara.gana { border-color: var(--acierto); }
+.cara.gana .cara-valor b { color: var(--acierto); }
+.cara.pierde { opacity: .78; }
+.cara.elegida.pierde { border-color: var(--error); opacity: 1; }
+@media (max-width: 520px) {
+  .cara-nombre { font-size: 18px; }
+  .cara-valor b { font-size: 32px; }
+  .cara-iniciales { font-size: 44px; }
+  .duelo-caras { gap: 6px; }
+}
+
+/* Adiviná el ídolo */
+.idolo { display: grid; grid-template-columns: 220px 1fr; gap: 22px; align-items: start; }
+.idolo-foto { position: relative; border-radius: 12px; overflow: hidden; background: var(--azul); aspect-ratio: 3 / 4; }
+.idolo-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; transform: scale(1.12); transition: filter .6s; }
+.idolo-foto.revelada img { transform: none; }
+.idolo-foto .cara-credito { position: absolute; left: 0; right: 0; bottom: 0; padding: 6px 8px; background: rgba(6,22,56,.8); color: #dfe6f7; }
+.idolo-foto.sin-foto { display: flex; align-items: flex-end; justify-content: center; }
+.idolo-foto.sin-foto svg { width: 70%; fill: var(--oro); opacity: .9; }
+.idolo-final p { margin: 14px 0; }
+@media (max-width: 640px) { .idolo { grid-template-columns: 1fr; } .idolo-foto { max-width: 220px; margin: 0 auto; } }
 .idolo-form { display: flex; gap: 8px; margin: 14px 0 6px; flex-wrap: wrap; }
 .idolo-form input { flex: 1 1 240px; font: 500 17px/1.2 var(--texto); padding: 12px 14px; border: 2px solid var(--linea); border-radius: var(--radio); }
 .tabla-idolo th, .tabla-idolo td { font-size: 14px; padding: 8px 6px; }
@@ -423,16 +542,117 @@ td.pts { font-weight: 700; }
 .c-cerca { background: #fdecc0; color: #6b4a00; font-weight: 700; }
 .c-no { background: var(--superficie); color: var(--gris); }
 .pista { background: var(--oro-suave); padding: 10px 14px; border-radius: var(--radio); }
+
+/* ¿En qué año fue? */
+.anio-elegir { display: grid; gap: 14px; justify-items: center; text-align: center; }
+.anio-valor { font: 800 clamp(84px, 14vw, 120px)/0.9 var(--titulos); color: var(--oro); font-variant-numeric: tabular-nums; }
+.anio-valor.bien { color: var(--oro); }
+.anio-valor.cerca { color: #c5d0ea; }
+.anio-valor.lejos { color: #ff9b94; }
+.anio-elegir input[type=range] { width: 100%; max-width: 560px; accent-color: var(--oro); height: 32px; }
+.anio-botones { display: flex; gap: 8px; }
+.anio-botones .boton { min-width: 60px; }
+
+/* Grilla bostera */
+.grilla { display: grid; grid-template-columns: minmax(84px, 1fr) repeat(3, minmax(0, 1.4fr)); gap: 6px; max-width: 640px; }
+.g-esquina { display: flex; align-items: center; justify-content: center; font: 700 16px/1.1 var(--titulos); color: var(--gris); }
+.g-cab { display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px 4px; min-height: 64px;
+  background: var(--azul); color: #fff; border-radius: 8px; font: 700 clamp(14px, 2.2vw, 18px)/1.05 var(--titulos); }
+.g-cab.g-fila { min-height: 0; }
+.g-celda { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 6px;
+  border: 2px dashed var(--linea); border-radius: 8px; background: #fff; color: var(--azul); font: 700 30px/1 var(--titulos); cursor: pointer; }
+.g-celda:hover:not(:disabled) { border-color: var(--azul); }
+.g-celda.activa { border: 3px solid var(--oro); background: var(--oro-suave); }
+.g-celda:disabled { cursor: default; background: var(--superficie); }
+.g-celda small { font: 600 12px/1.2 var(--texto); color: var(--gris); }
+.g-celda.llena { background: var(--oro); border: 2px solid var(--oro); color: var(--azul-hondo); cursor: default; }
+.g-celda.llena span { font: 700 clamp(13px, 2vw, 17px)/1.05 var(--titulos); }
+.grilla-resp { margin: 14px 0; }
+.grilla-resp summary { cursor: pointer; font-weight: 600; color: var(--azul); }
+.grilla-resp ul { padding-left: 18px; font-size: 15px; line-height: 1.6; }
+
+/* Trivia: temas */
+.temas { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+.tema { text-align: left; padding: 16px; border: 2px solid var(--linea); border-radius: 10px; background: #fff; cursor: pointer;
+  display: flex; flex-direction: column; gap: 4px; color: var(--tinta); }
+.tema:hover { border-color: var(--azul); }
+.tema b { font: 700 22px/1.1 var(--titulos); color: var(--azul); }
+.tema span { font-size: 14px; color: var(--gris); }
+
+/* insignias */
+.insignias-cuenta { font-size: 17px; margin: 0 0 6px; }
+.insignias-cuenta b { font: 800 40px/1 var(--titulos); color: var(--azul); margin-right: 4px; }
+.insignias-titulo { font: 700 24px/1.1 var(--titulos); color: var(--azul); margin: 22px 0 4px; }
+.insignias { list-style: none; padding: 0; margin: 10px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+.insignias li { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; padding: 14px 8px; border-radius: 10px; background: var(--superficie); }
+.insignias li b { font: 700 19px/1.1 var(--titulos); color: var(--gris); }
+.insignias li.ganada b { color: var(--azul); }
+.insignias li span { font-size: 13px; line-height: 1.35; color: var(--gris); }
+.insignias .bloqueada { font-weight: 600; }
+.medalla { width: 84px; height: 84px; }
+.medalla .m-borde { fill: #dfe4ef; }
+.medalla .m-centro { fill: #f6f8fc; }
+.medalla text { font-family: var(--titulos); font-weight: 800; fill: #a3abc0; }
+.medalla.ganada .m-borde { fill: var(--oro); }
+.medalla.ganada .m-centro { fill: var(--azul); }
+.medalla.ganada text { fill: var(--oro); }
+
+/* aviso flotante (nueva insignia) */
+.aviso-juego { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 50; background: var(--azul-hondo); color: #fff;
+  padding: 14px 20px; border-radius: 10px; border-left: 6px solid var(--oro); box-shadow: 0 10px 30px rgba(7,29,79,.35);
+  animation: subir .3s ease-out; max-width: calc(100% - 32px); }
+.aviso-juego.sale { opacity: 0; transition: opacity .5s; }
+@keyframes subir { from { transform: translate(-50%, 20px); opacity: 0; } to { transform: translate(-50%, 0); opacity: 1; } }
+
+/* ranking: podio */
+.podio { list-style: none; padding: 0; margin: 0 0 16px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.podio li { background: var(--superficie); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 2px; }
+.podio .podio-1 { background: var(--azul); color: #fff; }
+.podio .p-pos { font: 800 34px/1 var(--titulos); color: var(--azul); }
+.podio .podio-1 .p-pos { color: var(--oro); }
+.podio b { font: 700 20px/1.1 var(--titulos); overflow-wrap: anywhere; }
+.podio .p-pts { font-size: 14px; opacity: .8; }
+.podio .soy-yo { outline: 3px solid var(--oro); }
+
 .invitacion-juego { background: var(--azul); color: #fff; border-radius: var(--radio); padding: 18px 20px; }
 .invitacion-juego .titulo-seccion { color: #fff; border-color: var(--oro); }
 .invitacion-juego p { color: #dfe6f7; margin: 0 0 14px; }
 .invitacion-juego .boton { background: var(--oro); color: var(--azul-hondo); }
-@media (max-width: 640px) { .duelo { grid-template-columns: 1fr; } .vs-duelo { text-align: center; } .lado { min-height: 96px; } }
+.hincha-semana { margin: 16px 0 0 !important; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.2); font-size: 15px; }
+.hincha-semana span { display: block; font: 700 18px/1.1 var(--titulos); color: var(--oro); margin-bottom: 2px; }
+.hincha-semana b { color: #fff; }
+.hincha-semana a { color: #fff; }
 
-/* cuenta y ranking */
-.cuenta { background: var(--superficie); border-radius: var(--radio); padding: 14px 18px; margin: 0 0 18px; }
-.cuenta p { margin: 0 0 8px; }
-.cuenta .idolo-form { margin: 0; flex: 1 1 340px; }
+@media (max-width: 640px) {
+  .jdia { grid-template-columns: auto 1fr; gap: 14px; padding: 16px 18px; }
+  .jdia-ir { grid-column: 1 / -1; text-align: center; }
+  .jtarjeta { grid-template-rows: none; grid-template-columns: 96px 1fr; }
+  .g-texto { font-size: 40px; }
+  .g-abcd { font-size: 26px; }
+  .jt-glifo svg { width: 56px; height: 56px; }
+  .g-grilla { grid-template-columns: repeat(3, 16px); gap: 4px; }
+  .g-grilla i { width: 16px; height: 16px; }
+  .marcador { padding: 16px 14px 18px; margin-inline: -4px; }
+  .podio { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marcador .opcion.ok, .marcador .opcion.mal, .aviso-juego { animation: none; }
+  .idolo-foto img { transition: none; }
+}
+
+/* cuenta */
+.cuenta { background: var(--superficie); border-radius: 10px; padding: 14px 18px; margin: 0 0 18px; }
+.cuenta p { margin: 0; }
+.cuenta-fila { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; justify-content: space-between; }
+.cuenta-fila > p { flex: 1 1 280px; }
+.cuenta-ok p b { display: block; font: 700 22px/1.1 var(--titulos); color: var(--azul); }
+.cuenta-ok p span { font-size: 14.5px; color: var(--gris); }
+.cuenta-ok { justify-content: flex-start; }
+.cuenta-ok .cuenta-acciones { margin-left: auto; }
+.avatar { width: 46px; height: 46px; border-radius: 50%; background: var(--azul); color: var(--oro); display: grid; place-items: center;
+  font: 800 22px/1 var(--titulos); flex: none; }
+.cuenta .idolo-form { margin: 8px 0 0; }
+.cuenta-mail summary { cursor: pointer; font-weight: 600; color: var(--azul); padding: 10px 0; }
 .cuenta-acciones { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
 .enlace-peligro { background: none; border: 0; color: var(--rojo); text-decoration: underline; cursor: pointer; font: 500 14px/1.3 var(--texto); padding: 6px 0; }
 .tabla-ranking td, .tabla-ranking th { font-size: 15px; }
