@@ -640,6 +640,45 @@ td.pts { font-weight: 700; }
   .idolo-foto img { transition: none; }
 }
 
+/* plantel: contratos y préstamos */
+.jugador small.contrato { display: block; color: var(--azul); font-weight: 600; margin-top: 2px; }
+.cifras-plantel { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 6px 0 26px; }
+.cifras-plantel div { background: var(--superficie); border-radius: 10px; padding: 14px 16px; }
+.cifras-plantel b { display: block; font: 800 38px/1 var(--titulos); color: var(--azul); font-variant-numeric: tabular-nums; }
+.cifras-plantel span { font-size: 14px; color: var(--gris); }
+.vencimientos { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-bottom: 30px; }
+.vence { border: 2px solid var(--linea); border-radius: 10px; padding: 12px 14px; }
+.vence b { font: 800 30px/1 var(--titulos); color: var(--azul); margin-right: 8px; }
+.vence span { font-size: 14px; color: var(--gris); }
+.vence p { margin: 8px 0 0; font-size: 14.5px; line-height: 1.45; }
+.vence:first-child { border-color: var(--oro); background: var(--oro-suave); }
+.etiqueta { display: inline-block; font: 600 11.5px/1.2 var(--texto); padding: 2px 7px; border-radius: 999px; background: var(--superficie); color: var(--gris); margin: 4px 4px 0 0; white-space: nowrap; }
+.etiqueta-ok { background: #ddf2e6; color: #0f4d30; }
+.tabla-prestamos td { vertical-align: top; }
+.tabla-prestamos td:nth-child(3) { white-space: nowrap; }
+
+/* desafío y ligas */
+.reto-crear .idolo-form { margin-top: 6px; }
+.campo, .marcador .idolo-form input { font: 500 17px/1.2 var(--texto); padding: 12px 14px; border: 2px solid var(--linea); border-radius: var(--radio); flex: 1 1 240px; }
+.mis-ligas { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 10px; }
+.mis-ligas li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 16px; padding: 12px 16px;
+  background: var(--superficie); border-radius: 10px; }
+.mis-ligas li b { display: block; font: 700 20px/1.1 var(--titulos); color: var(--azul); }
+.mis-ligas li span { font-size: 14px; color: var(--gris); }
+.mis-ligas code { font: 700 15px/1 ui-monospace, monospace; color: var(--tinta); letter-spacing: .08em; }
+.mis-ligas-acciones { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.mis-ligas-acciones .boton.secundario { background: #fff; border: 2px solid var(--linea); }
+.ligas { margin-top: 30px; padding-top: 6px; border-top: 1px solid var(--linea); }
+.ligas-forms { display: grid; gap: 4px; }
+.filtros-chicos button { font-size: 14px; padding: 6px 12px; }
+.invitacion-liga { background: var(--azul); color: #fff; border-radius: 10px; padding: 16px 18px; margin-bottom: 18px; border-left: 6px solid var(--oro); }
+.invitacion-liga p { margin: 0 0 10px; }
+.invitacion-liga .nota-dato { color: #dfe6f7; }
+.invitacion-liga .boton { background: var(--oro); color: var(--azul-hondo); }
+.mini-fila { display: inline-flex; gap: 3px; }
+.mini-fila i { width: 12px; height: 12px; border-radius: 3px; background: var(--linea); }
+.mini-fila i.ok { background: var(--oro); }
+
 /* cuenta */
 .cuenta { background: var(--superficie); border-radius: 10px; padding: 14px 18px; margin: 0 0 18px; }
 .cuenta p { margin: 0; }

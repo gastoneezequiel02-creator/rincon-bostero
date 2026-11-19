@@ -620,32 +620,212 @@
   }
 
   // ----------------------------------------------------------------- Ranking --
+  var ESTADO_RANKING = { ambito: "general", periodo: "semana", ligas: [] };
+  function linkLiga(cod) { return URL_JUEGOS + "#liga-" + cod; }
+  function tablaRanking(filas, general) {
+    if (!filas.length) return "<p class='vacio'>Todavía nadie sumó puntos en este período. ¡Podés ser el primero!</p>";
+    var podio = filas.slice(0, 3).map(function (f, i) {
+      return "<li class='podio-" + (i + 1) + (f.soy_yo ? " soy-yo" : "") + "'><span class='p-pos'>" + f.posicion + "°</span><b>" + esc(f.apodo) + "</b><span class='p-pts'>" + f.puntos + " pts</span></li>";
+    }).join("");
+    return "<ol class='podio'>" + podio + "</ol><div class='tabla-scroll'><table class='tabla-ranking'><thead><tr><th>#</th><th class='izq'>Apodo</th><th>Puntos</th>" +
+      "<th title='Aciertos en la pregunta del día'>Del día</th><th title='Aciertos en la trivia que suman'>Trivia</th><th title='Días que jugó la pregunta del día'>Días</th></tr></thead><tbody>" +
+      filas.map(function (f) {
+        return "<tr class='" + (f.soy_yo ? "fila-boca" : "") + "'><td>" + f.posicion + "</td><td class='izq'>" + esc(f.apodo) + (f.soy_yo ? " (vos)" : "") +
+          "</td><td class='pts'>" + f.puntos + "</td><td>" + f.aciertos_dia + "</td><td>" + f.aciertos_trivia + "</td><td>" + f.dias_jugados + "</td></tr>";
+      }).join("") + "</tbody></table></div><p class='nota-dato'>1 punto por cada acierto en la pregunta del día y en la primera partida de cada tema de la trivia por día. " +
+      "Solo cuenta la primera respuesta de cada pregunta." + (general ? " El primero de cada semana es el Hincha de la semana y aparece en el inicio." : "") + "</p>";
+  }
   function iniciarRanking() {
     var caja = document.getElementById("juego-ranking");
     if (!caja) return;
     if (!sb) { caja.innerHTML = "<p class='vacio'>El ranking se activa cuando se configuren las cuentas de usuario.</p>"; return; }
-    var periodo = "semana";
-    function cargar() {
-      caja.innerHTML = "<div class='filtros' role='group' aria-label='Período'>" + [["semana", "Esta semana"], ["mes", "Este mes"], ["total", "Histórico"]].map(function (p) {
-        return "<button type='button' data-p='" + p[0] + "' aria-pressed='" + (p[0] === periodo) + "'>" + p[1] + "</button>";
-      }).join("") + "</div><div id='tabla-ranking'><p class='nota-dato'>Cargando…</p></div>";
-      caja.querySelectorAll("[data-p]").forEach(function (b) { b.addEventListener("click", function () { periodo = b.getAttribute("data-p"); cargar(); }); });
-      rpc("ranking", { p_periodo: periodo }).then(function (filas) {
-        var t = document.getElementById("tabla-ranking");
-        if (!filas.length) { t.innerHTML = "<p class='vacio'>Todavía nadie sumó puntos en este período. ¡Podés ser el primero!</p>"; return; }
-        var podio = filas.slice(0, 3).map(function (f, i) {
-          return "<li class='podio-" + (i + 1) + (f.soy_yo ? " soy-yo" : "") + "'><span class='p-pos'>" + f.posicion + "°</span><b>" + esc(f.apodo) + "</b><span class='p-pts'>" + f.puntos + " pts</span></li>";
-        }).join("");
-        t.innerHTML = "<ol class='podio'>" + podio + "</ol><div class='tabla-scroll'><table class='tabla-ranking'><thead><tr><th>#</th><th class='izq'>Apodo</th><th>Puntos</th>" +
-          "<th title='Aciertos en la pregunta del día'>Del día</th><th title='Aciertos en la trivia que suman'>Trivia</th><th title='Días que jugó la pregunta del día'>Días</th></tr></thead><tbody>" +
-          filas.map(function (f) {
-            return "<tr class='" + (f.soy_yo ? "fila-boca" : "") + "'><td>" + f.posicion + "</td><td class='izq'>" + esc(f.apodo) + (f.soy_yo ? " (vos)" : "") +
-              "</td><td class='pts'>" + f.puntos + "</td><td>" + f.aciertos_dia + "</td><td>" + f.aciertos_trivia + "</td><td>" + f.dias_jugados + "</td></tr>";
-          }).join("") + "</tbody></table></div><p class='nota-dato'>1 punto por cada acierto en la pregunta del día y en la primera partida de cada tema de la trivia por día. " +
-          "Solo cuenta la primera respuesta de cada pregunta. El primero de cada semana es el Hincha de la semana y aparece en el inicio.</p>";
-      }).catch(function () { errorConexion(document.getElementById("tabla-ranking")); });
-    }
-    cargar();
+    var conCuenta = !!(perfil && perfil.apodo);
+    (conCuenta ? rpc("mis_ligas") : Promise.resolve([])).then(function (ligas) {
+      ESTADO_RANKING.ligas = ligas || [];
+      if (ESTADO_RANKING.ambito !== "general" && !ESTADO_RANKING.ligas.some(function (l) { return l.codigo === ESTADO_RANKING.ambito; })) ESTADO_RANKING.ambito = "general";
+      pintarRanking();
+    }).catch(function () { ESTADO_RANKING.ligas = []; pintarRanking(); });
+  }
+  function pintarRanking() {
+    var caja = document.getElementById("juego-ranking"), E = ESTADO_RANKING, conCuenta = !!(perfil && perfil.apodo);
+    var pendiente = leer("liga-pendiente", null);
+    var invitacion = pendiente && !E.ligas.some(function (l) { return l.codigo === pendiente; }) ? "<div class='invitacion-liga' id='invitacion-liga'><p class='nota-dato'>Buscando la liga…</p></div>" : "";
+    var ambitos = [["general", "General"]].concat(E.ligas.map(function (l) { return [l.codigo, l.nombre]; }));
+    caja.innerHTML = invitacion +
+      "<div class='filtros' role='group' aria-label='Ranking'>" + ambitos.map(function (a) {
+        return "<button type='button' data-ambito='" + a[0] + "' aria-pressed='" + (a[0] === E.ambito) + "'>" + esc(a[1]) + "</button>";
+      }).join("") + "</div>" +
+      "<div class='filtros filtros-chicos' role='group' aria-label='Período'>" + [["semana", "Esta semana"], ["mes", "Este mes"], ["total", "Histórico"]].map(function (p) {
+        return "<button type='button' data-p='" + p[0] + "' aria-pressed='" + (p[0] === E.periodo) + "'>" + p[1] + "</button>";
+      }).join("") + "</div><div id='tabla-ranking'><p class='nota-dato'>Cargando…</p></div>" +
+      "<section class='ligas'><h3 class='insignias-titulo'>Ligas con amigos</h3>" +
+      (conCuenta ? "<p class='nota-dato'>Armá una liga con tu grupo y compartí el link: cada liga tiene su propio ranking, con los mismos puntos que el general.</p>" +
+        (E.ligas.length ? "<ul class='mis-ligas'>" + E.ligas.map(function (l) {
+          return "<li><div><b>" + esc(l.nombre) + "</b><span>Código <code>" + esc(l.codigo) + "</code> · " + plural(l.miembros, "miembro", "miembros") + "</span></div>" +
+            "<div class='mis-ligas-acciones'><a class='boton secundario' target='_blank' rel='noopener' href='https://wa.me/?text=" +
+            encodeURIComponent("Sumate a mi liga «" + l.nombre + "» en los juegos de Rincón Bostero: " + linkLiga(l.codigo)) + "'>Invitar por WhatsApp</a>" +
+            "<button type='button' class='boton secundario' data-copiar='" + esc(linkLiga(l.codigo)) + "'>Copiar link</button>" +
+            "<button type='button' class='enlace-peligro' data-salir='" + esc(l.codigo) + "'>Salir</button></div></li>";
+        }).join("") + "</ul>" : "") +
+        "<div class='ligas-forms'><form class='idolo-form' id='liga-crear'><label class='oculto' for='liga-nombre'>Nombre de la liga</label>" +
+        "<input id='liga-nombre' maxlength='30' required placeholder='Nombre de la liga (ej.: Los del laburo)'><button class='boton' type='submit'>Crear liga</button></form>" +
+        "<form class='idolo-form' id='liga-unir'><label class='oculto' for='liga-codigo'>Código</label>" +
+        "<input id='liga-codigo' maxlength='6' required placeholder='Código de 6 letras' autocapitalize='characters'><button class='boton secundario' type='submit'>Unirme</button></form></div>" +
+        "<p class='nota-dato' id='liga-msg'></p>"
+        : "<p class='nota-dato'>Entrá con tu cuenta (arriba) para crear una liga o sumarte a la de tus amigos.</p>") + "</section>";
+    caja.querySelectorAll("[data-ambito]").forEach(function (b) { b.addEventListener("click", function () { E.ambito = b.getAttribute("data-ambito"); pintarRanking(); }); });
+    caja.querySelectorAll("[data-p]").forEach(function (b) { b.addEventListener("click", function () { E.periodo = b.getAttribute("data-p"); pintarRanking(); }); });
+    var msg = caja.querySelector("#liga-msg");
+    function errorLiga(err) { if (msg) msg.textContent = (err && err.message) || "No se pudo. Probá de nuevo."; }
+    var fc = caja.querySelector("#liga-crear");
+    if (fc) fc.addEventListener("submit", function (e) {
+      e.preventDefault();
+      rpc("liga_crear", { p_nombre: caja.querySelector("#liga-nombre").value }).then(function (l) { E.ambito = l.codigo; iniciarRanking(); }).catch(errorLiga);
+    });
+    var fu = caja.querySelector("#liga-unir");
+    if (fu) fu.addEventListener("submit", function (e) {
+      e.preventDefault();
+      rpc("liga_unirse", { p_codigo: caja.querySelector("#liga-codigo").value }).then(function (l) { E.ambito = l.codigo; iniciarRanking(); }).catch(errorLiga);
+    });
+    caja.querySelectorAll("[data-salir]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        if (!b.getAttribute("data-confirmar")) { b.setAttribute("data-confirmar", "1"); b.textContent = "Tocá de nuevo para salir"; return; }
+        rpc("liga_salir", { p_codigo: b.getAttribute("data-salir") }).then(function () { E.ambito = "general"; iniciarRanking(); }).catch(errorLiga);
+      });
+    });
+    if (invitacion) mostrarInvitacion(pendiente);
+    var t = caja.querySelector("#tabla-ranking");
+    var pedido = E.ambito === "general" ? rpc("ranking", { p_periodo: E.periodo }) : rpc("ranking_liga", { p_codigo: E.ambito, p_periodo: E.periodo });
+    pedido.then(function (filas) { t.innerHTML = tablaRanking(filas, E.ambito === "general"); }).catch(function () { errorConexion(t); });
+  }
+  function mostrarInvitacion(cod) {
+    var box = document.getElementById("invitacion-liga");
+    if (!box) return;
+    rpc("liga_ver", { p_codigo: cod }).then(function (l) {
+      if (!l) { box.innerHTML = "<p>No encontramos una liga con el código <b>" + esc(cod) + "</b>.</p>"; guardar("liga-pendiente", null); return; }
+      if (l.soy_miembro) { guardar("liga-pendiente", null); box.remove(); return; }
+      var conCuenta = !!(perfil && perfil.apodo);
+      box.innerHTML = "<p><b>Te invitaron a la liga «" + esc(l.nombre) + "»</b> (" + plural(l.miembros, "miembro", "miembros") + ").</p>" +
+        (conCuenta ? "<div class='compartir'><button type='button' class='boton' id='liga-aceptar'>Unirme</button><button type='button' class='boton secundario' id='liga-ignorar'>Ahora no</button></div>"
+          : "<p class='nota-dato'>Entrá con tu cuenta (arriba) y te sumamos a la liga.</p>");
+      var ok = box.querySelector("#liga-aceptar");
+      if (ok) ok.addEventListener("click", function () {
+        rpc("liga_unirse", { p_codigo: cod }).then(function (x) { guardar("liga-pendiente", null); ESTADO_RANKING.ambito = x.codigo; iniciarRanking(); aviso("Te sumaste a <b>" + esc(x.nombre) + "</b>"); })
+          .catch(function (err) { box.querySelector("p").textContent = (err && err.message) || "No se pudo."; });
+      });
+      var no = box.querySelector("#liga-ignorar");
+      if (no) no.addEventListener("click", function () { guardar("liga-pendiente", null); box.remove(); });
+    }).catch(function () { box.remove(); });
+  }
+
+  // ---------------------------------------------------- Desafío a un amigo --
+  function linkReto(cod) { return URL_JUEGOS + "#desafio-" + cod; }
+  function misRetos() { return leer("retos", []); }
+  function guardarReto(cod, datos) { var l = misRetos().filter(function (x) { return x.codigo !== cod; }); l.unshift(Object.assign({ codigo: cod }, datos)); guardar("retos", l.slice(0, 20)); }
+  function nombreJugador() { return perfil && perfil.apodo ? perfil.apodo : leer("nombre-desafio", ""); }
+  function campoNombre() {
+    if (perfil && perfil.apodo) return "<p class='nota-dato'>Jugás como <b>" + esc(perfil.apodo) + "</b>.</p>";
+    return "<label class='oculto' for='reto-nombre'>Tu nombre</label><input id='reto-nombre' class='campo' maxlength='20' placeholder='Tu nombre (lo ven tus amigos)' value='" + esc(nombreJugador()) + "'>";
+  }
+  function leerNombre(caja) {
+    if (perfil && perfil.apodo) return perfil.apodo;
+    var v = (caja.querySelector("#reto-nombre") || {}).value || "";
+    v = v.trim();
+    if (v) guardar("nombre-desafio", v);
+    return v;
+  }
+  function iniciarDesafio() {
+    var caja = document.getElementById("juego-desafio");
+    if (!caja) return;
+    if (!sb) { caja.innerHTML = "<p class='vacio'>El desafío se activa cuando se configuren las cuentas de usuario.</p>"; return; }
+    var lista = misRetos();
+    caja.innerHTML = "<div class='marcador reto-crear'><h3 class='m-pregunta'>Armá un desafío de 10 preguntas</h3>" +
+      "<p class='m-nota'>Te tocan 10 preguntas al azar de todos los temas. Las jugás vos primero y después le mandás el link a quien quieras: juegan las mismas y se ve quién sabe más. No hace falta cuenta.</p>" +
+      "<form class='idolo-form' id='reto-form'>" + campoNombre() + "<button class='boton' type='submit'>Crear desafío</button></form><p class='m-nota' id='reto-msg'></p></div>" +
+      (lista.length ? "<h3 class='insignias-titulo'>Tus desafíos</h3><ul class='mis-ligas'>" + lista.map(function (r) {
+        return "<li><div><b>" + (r.creado ? "Creado por vos" : "De " + esc(r.creador || "un amigo")) + "</b><span>Código <code>" + esc(r.codigo) + "</code>" +
+          (r.aciertos != null ? " · hiciste " + r.aciertos + "/10" : "") + "</span></div><div class='mis-ligas-acciones'><a class='boton secundario' href='#desafio-" + esc(r.codigo) + "'>Ver tabla</a></div></li>";
+      }).join("") + "</ul>" : "");
+    caja.querySelector("#reto-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var nombre = leerNombre(caja), msg = caja.querySelector("#reto-msg");
+      if (nombre.length < 2) { msg.textContent = "Poné tu nombre (al menos 2 letras)."; return; }
+      msg.textContent = "Armando el desafío…";
+      rpc("reto_crear", { p_nombre: nombre }).then(function (r) {
+        guardarReto(r.codigo, { creado: true, creador: r.creador });
+        history.replaceState(null, "", "#desafio-" + r.codigo);
+        jugarReto(caja, r, nombre);
+      }).catch(function (err) { msg.textContent = (err && err.message) || "No se pudo crear el desafío. Probá de nuevo."; });
+    });
+  }
+  function abrirReto(cod) {
+    var caja = document.getElementById("juego-desafio");
+    if (!caja) return;
+    if (!sb) { caja.innerHTML = "<p class='vacio'>El desafío se activa cuando se configuren las cuentas de usuario.</p>"; return; }
+    caja.innerHTML = "<p class='nota-dato'>Cargando el desafío…</p>";
+    rpc("reto_ver", { p_codigo: cod }).then(function (r) {
+      if (!r) { caja.innerHTML = "<p class='vacio'>No encontramos ese desafío. Revisá el link.</p><p><a class='boton' href='#desafio'>Crear uno nuevo</a></p>"; return; }
+      var mio = misRetos().filter(function (x) { return x.codigo === r.codigo; })[0];
+      if (mio && mio.aciertos != null) return tablaReto(caja, r, mio);
+      caja.innerHTML = "<div class='marcador reto-crear'><p class='m-etiqueta'>Desafío " + esc(r.codigo) + "</p><h3 class='m-pregunta'>" + esc(r.creador) + " te desafía: 10 preguntas sobre Boca</h3>" +
+        "<p class='m-nota'>" + (r.resultados.length ? plural(r.resultados.length, "persona ya lo jugó", "personas ya lo jugaron") + ". " : "") + "Jugá y fijate si le ganás.</p>" +
+        "<form class='idolo-form' id='reto-form'>" + campoNombre() + "<button class='boton' type='submit'>Jugar</button></form><p class='m-nota' id='reto-msg'></p></div>";
+      caja.querySelector("#reto-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var nombre = leerNombre(caja);
+        if (nombre.length < 2) { caja.querySelector("#reto-msg").textContent = "Poné tu nombre (al menos 2 letras)."; return; }
+        guardarReto(r.codigo, { creador: r.creador });
+        jugarReto(caja, r, nombre);
+      });
+    }).catch(function () { errorConexion(caja); });
+  }
+  function jugarReto(caja, r, nombre) {
+    jugarPreguntas(caja, r.preguntas, function (q, k) { return rpc("reto_responder", { p_codigo: r.codigo, p_pregunta: q.id, p_opcion: k }); },
+      function (h) { terminarReto(caja, r, nombre, h.map(function (x) { return x.opcion; })); });
+  }
+  function terminarReto(caja, r, nombre, opciones) {
+    caja.innerHTML = "<p class='nota-dato'>Guardando tu resultado…</p>";
+    rpc("reto_terminar", { p_codigo: r.codigo, p_nombre: nombre, p_opciones: opciones }).then(function (r2) {
+      var yo = r2.resultados.filter(function (x) { return x.nombre.toLowerCase() === nombre.toLowerCase(); })[0];
+      var dato = { creador: r2.creador, nombre: nombre, aciertos: yo ? yo.aciertos : null, detalle: yo ? yo.detalle : null };
+      var previo = misRetos().filter(function (x) { return x.codigo === r.codigo; })[0];
+      if (previo && previo.creado) dato.creado = true;
+      guardarReto(r.codigo, dato);
+      tablaReto(caja, r2, dato);
+    }).catch(function (err) {
+      // Si el nombre ya estaba usado, se puede elegir otro sin volver a jugar
+      caja.innerHTML = "<div class='marcador'><p class='m-veredicto mal'><b>No se guardó.</b> " + esc((err && err.message) || "Probá de nuevo.") + "</p>" +
+        "<form class='idolo-form' id='reto-form2'>" + (perfil && perfil.apodo ? "" : "<label class='oculto' for='reto-nombre'>Tu nombre</label><input id='reto-nombre' class='campo' maxlength='20' value='" + esc(nombre) + "'>") +
+        "<button class='boton' type='submit'>Guardar resultado</button></form></div>";
+      caja.querySelector("#reto-form2").addEventListener("submit", function (e) { e.preventDefault(); terminarReto(caja, r, leerNombre(caja) || nombre, opciones); });
+    });
+  }
+  function tablaReto(caja, r, yo) {
+    var esCreador = !!(yo && yo.creado);
+    var filas = r.resultados.map(function (x, i) {
+      var soy = yo && yo.nombre && x.nombre.toLowerCase() === yo.nombre.toLowerCase();
+      return "<tr class='" + (soy ? "fila-boca" : "") + "'><td>" + (i + 1) + "</td><td class='izq'>" + esc(x.nombre) + (soy ? " (vos)" : "") + (x.creador ? " <small class='nota-dato'>creó el desafío</small>" : "") + "</td>" +
+        "<td class='pts'>" + x.aciertos + "<small>/10</small></td><td><span class='mini-fila'>" + (x.detalle || []).map(function (ok) { return "<i class='" + (ok ? "ok" : "") + "'></i>"; }).join("") + "</span></td></tr>";
+    }).join("");
+    var mis = yo && yo.aciertos != null ? yo.aciertos : null;
+    var texto = (mis != null ? (esCreador ? "Te desafío en Rincón Bostero: hice " + mis + "/10 en 10 preguntas sobre Boca. ¿Me ganás?" : "Hice " + mis + "/10 en el desafío de " + r.creador + " en Rincón Bostero. ¿Me ganás?")
+      : r.creador + " te desafía en Rincón Bostero: 10 preguntas sobre Boca.") + "\n" + linkReto(r.codigo);
+    caja.innerHTML = (mis != null ? "<div class='marcador final'><p class='m-etiqueta'>Desafío " + esc(r.codigo) + " de " + esc(r.creador) + "</p><p class='m-puntaje'><b data-contar>" + mis + "</b><small>/10</small></p>" +
+      "<p class='m-frase'>" + (r.resultados.length > 1 ? "Vas " + (r.resultados.findIndex(function (x) { return x.nombre.toLowerCase() === (yo.nombre || "").toLowerCase(); }) + 1) + "° de " + r.resultados.length + "." : "Ahora mandale el link a tus amigos.") + "</p></div>" : "") +
+      "<div class='compartir acciones-final'><a class='boton' target='_blank' rel='noopener' href='https://wa.me/?text=" + encodeURIComponent(texto) + "'>Mandar el desafío por WhatsApp</a>" +
+      "<button type='button' class='boton secundario' data-copiar='" + esc(linkReto(r.codigo)) + "'>Copiar link</button><button type='button' class='boton secundario' id='reto-actualizar'>Actualizar tabla</button>" +
+      "<a class='boton secundario' href='#desafio'>Crear otro</a></div>" +
+      "<h3 class='insignias-titulo'>Tabla del desafío</h3><div class='tabla-scroll'><table class='tabla-ranking'><thead><tr><th>#</th><th class='izq'>Nombre</th><th>Aciertos</th><th>Pregunta por pregunta</th></tr></thead><tbody>" +
+      (filas || "<tr><td colspan='4'>Todavía nadie lo jugó.</td></tr>") + "</tbody></table></div>" +
+      (mis != null ? bloqueCompartir({ texto: texto }) : "");
+    contar(caja.querySelector("[data-contar]"), mis || 0);
+    if (mis != null) activarCompartir(caja, { juego: "Desafío de " + r.creador, puntaje: mis, total: 10, linea: "¿Me ganás? Código " + r.codigo,
+      celdas: [(yo.detalle || []).map(function (ok) { return ok ? "ok" : "mal"; })], texto: texto });
+    caja.querySelector("#reto-actualizar").addEventListener("click", function () { abrirRetoTabla(r.codigo, yo); });
+  }
+  function abrirRetoTabla(cod, yo) {
+    var caja = document.getElementById("juego-desafio");
+    rpc("reto_ver", { p_codigo: cod }).then(function (r) { if (r) tablaReto(caja, r, yo); }).catch(function () { errorConexion(caja); });
   }
 
   // --------------------------------------------------------------- Insignias --
@@ -712,7 +892,13 @@
     if (!usuario) { perfil = null; return Promise.resolve(); }
     return rpc("mi_resumen").then(function (r) { perfil = r; revisarInsigniasCuenta(); }).catch(function () { perfil = null; });
   }
-  function reiniciarJuegos() { pintarCuenta(); iniciarDia(); iniciarTrivia(); iniciarRanking(); pintarInsignias(); pintarEstados(); }
+  function reiniciarJuegos() {
+    pintarCuenta(); iniciarDia(); iniciarTrivia(); iniciarRanking(); pintarInsignias(); pintarEstados();
+    var secDesafio = document.querySelector("[data-juego='desafio']");
+    if (PENDIENTE && PENDIENTE.tipo === "desafio") { var pend = PENDIENTE; PENDIENTE = null; abrirReto(pend.codigo); }
+    else if (secDesafio && !secDesafio.hidden && !document.querySelector("#juego-desafio .marcador:not(.reto-crear)")) iniciarDesafio();
+    else if (PENDIENTE) PENDIENTE = null;
+  }
 
   // ------------------------------------------------- Portada y navegación --
   function pintarEstados() {
@@ -731,15 +917,28 @@
     poner("trivia", mejor.length ? "Jugaste " + plural(mejor.length, "tema", "temas") + " de " + Object.keys(D.temas).length : Object.keys(D.temas).length + " temas", false);
     if (perfil && perfil.posicion_semana) poner("ranking", "Vas " + perfil.posicion_semana + "° esta semana", false);
     poner("insignias", ganadas().length + " de " + INSIGNIAS.length + " ganadas", false);
+    var retos = misRetos();
+    poner("desafio", retos.length ? "Jugaste " + plural(retos.length, "desafío", "desafíos") : "Sin cuenta: solo el link", false);
     if (document.getElementById("juego-insignias") && !document.querySelector("[data-juego='insignias']").hidden) pintarInsignias();
   }
-  var INICIAR_AL_ABRIR = { grilla: iniciarGrilla, insignias: pintarInsignias };
+  var INICIAR_AL_ABRIR = { grilla: iniciarGrilla, insignias: pintarInsignias, desafio: function () { if (sb) iniciarDesafio(); } };
+  var PENDIENTE = null;  // link a un desafío o liga que llegó antes de conectar con el servidor
   function mostrar() {
-    var id = (location.hash || "").slice(1), sec = id && document.querySelector("[data-juego='" + id + "']");
+    var id = (location.hash || "").slice(1), m = /^(desafio|liga)-([A-Za-z0-9]{6})$/.exec(id);
+    if (m) {
+      var cod = m[2].toUpperCase();
+      if (m[1] === "liga") { guardar("liga-pendiente", cod); id = "ranking"; }
+      else { id = "desafio"; }
+      PENDIENTE = { tipo: m[1], codigo: cod };
+    } else if (/^[a-z-]+$/.test(id)) { PENDIENTE = null; }
+    var sec = id && /^[a-z-]+$/.test(id) && document.querySelector("[data-juego='" + id + "']");
     var portada = document.getElementById("portada-juegos");
     document.querySelectorAll("[data-juego]").forEach(function (s) { s.hidden = s !== sec; });
     portada.hidden = !!sec;
-    if (sec && INICIAR_AL_ABRIR[id]) INICIAR_AL_ABRIR[id]();
+    if (sec && PENDIENTE && sb) {
+      var pend = PENDIENTE; PENDIENTE = null;
+      if (pend.tipo === "desafio") abrirReto(pend.codigo); else iniciarRanking();
+    } else if (sec && INICIAR_AL_ABRIR[id]) INICIAR_AL_ABRIR[id]();
     if (sec) { var top = document.querySelector(".juegos").getBoundingClientRect().top + window.scrollY - 8; if (window.scrollY > top) window.scrollTo(0, top); }
   }
   window.addEventListener("hashchange", mostrar);
