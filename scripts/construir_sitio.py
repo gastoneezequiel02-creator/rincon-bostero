@@ -146,6 +146,8 @@ def pagina(titulo: str, cuerpo: str, *, activa: str = "", pre: str = "", descrip
     og_img = f'<meta property="og:image" content="{e(url_abs(imagen))}">' if imagen else ""
     fuentes = [x for x in (hdb().get("credito"), bs_opciones().get("credito")) if x]
     credito = f"<br>Datos históricos: {e(' y '.join(fuentes))}." if fuentes else ""
+    if (RAIZ / "datos" / "conquista" / "contratos.json").exists():
+        credito += "<br>Contratos, valores y préstamos: Boca en Números (Conquista Xeneize)."
     demo = ('<div class="aviso-demo">Vista previa con datos de ejemplo: las notas, partidos y tablas no son reales.</div>'
             if DEMO else "")
     return f"""<!doctype html>
@@ -885,18 +887,79 @@ TRAD_POS = {"Goalkeeper": "Arqueros", "Defender": "Defensores", "Midfielder": "M
             "Arquero": "Arqueros", "Defensor": "Defensores", "Mediocampista": "Mediocampistas", "Delantero": "Delanteros"}
 
 
+def _cruzar_nombres(nombres: list[str], otros: list[dict]) -> dict:
+    """Empareja nombres de ESPN con los de otra fuente ('Jorge Figal' ↔ 'Nicolás Figal', 'Camilo Rey' ↔ 'Camilo Rey Domenech')."""
+    from comun import normalizar
+
+    def tok(n):
+        return [t for t in re.split(r"[^a-z]+", normalizar(n)) if t]
+    salida = {}
+    for n in nombres:
+        tn = tok(n)
+        if not tn:
+            continue
+        exactos = [o for o in otros if tok(o["nombre"]) == tn]
+        subconj = [o for o in otros if set(tn) <= set(tok(o["nombre"])) or set(tok(o["nombre"])) <= set(tn)]
+        mismo_ap = [o for o in otros if tn[-1] in tok(o["nombre"])[1:] or tok(o["nombre"])[-1] == tn[-1]]
+        con_nombre = [o for o in mismo_ap if tok(o["nombre"])[0][:4] == tn[0][:4]]
+        for cand in (exactos, subconj, con_nombre, mismo_ap):
+            if len(cand) == 1:
+                salida[n] = cand[0]
+                break
+    return salida
+
+
+def _fecha_mes(iso: str) -> str:
+    if not iso or len(iso) < 7:
+        return "–"
+    return f"{MESES_CORTOS_[int(iso[5:7]) - 1]}. {iso[:4]}"
+
+
+def _fecha_corta(iso: str) -> str:
+    return f"{int(iso[8:10])}/{int(iso[5:7])}/{iso[:4]}" if iso and len(iso) >= 10 else "–"
+
+
+def _euros(v) -> str:
+    if not v:
+        return "–"
+    if v >= 1_000_000:
+        m = v / 1_000_000
+        return f"€ {m:.1f} M".replace(".0 M", " M").replace(".", ",")
+    return f"€ {round(v / 1000):.0f} mil"
+
+
+def _n(v) -> str:
+    return "–" if v is None else f"{v:,}".replace(",", ".")
+
+
 def pagina_plantel(plantel: dict, proximos) -> str:
+    import conquista
+    cont = conquista.contratos()
+    prest = conquista.prestamos()
+    cruce = _cruzar_nombres([j["nombre"] for j in plantel.get("jugadores", [])], cont.get("jugadores", [])) if cont else {}
+
     grupos = defaultdict(list)
     for j in plantel.get("jugadores", []):
         grupos[j.get("posicion") or "Otros"].append(j)
     bloques = ""
     for pos in sorted(grupos, key=lambda x: ORDEN_POS.index(x) if x in ORDEN_POS else 99):
         js = sorted(grupos[pos], key=lambda j: int(j["numero"]) if str(j.get("numero", "")).isdigit() else 99)
-        tarjetas = "".join(
-            f'<div class="jugador"><span class="num">{e(str(j.get("numero") or ""))}</span><span><b>{e(j["nombre"])}</b>'
-            f'<small>{e(str(j["edad"])) + " años" if j.get("edad") else ""}{", " + e(j["nacionalidad"]) if j.get("nacionalidad") else ""}</small></span></div>'
-            for j in js)
+        tarjetas = ""
+        for j in js:
+            c = cruce.get(j["nombre"])
+            extra = ""
+            if c:
+                partes = []
+                if c.get("vence"):
+                    partes.append(f"Contrato hasta {_fecha_mes(c['vence'])}")
+                if c.get("valor_eur"):
+                    partes.append(_euros(c["valor_eur"]))
+                extra = f'<small class="contrato">{e(" · ".join(partes))}</small>' if partes else ""
+            tarjetas += (f'<div class="jugador"><span class="num">{e(str(j.get("numero") or ""))}</span><span><b>{e(j["nombre"])}</b>'
+                         f'<small>{e(str(j["edad"])) + " años" if j.get("edad") else ""}{", " + e(j["nacionalidad"]) if j.get("nacionalidad") else ""}</small>'
+                         f'{extra}</span></div>')
         bloques += f'<h2 class="titulo-seccion">{e(TRAD_POS.get(pos, pos))}</h2><div class="plantel">{tarjetas}</div>'
+
     goleadores = ""
     gol = leer_json(RAIZ / "datos" / "bocastats" / "goleadores.json", {}) if bs_opciones() else {}
     if gol.get("jugadores"):
@@ -908,13 +971,106 @@ def pagina_plantel(plantel: dict, proximos) -> str:
             f'<td>{"" if j.get("pj_liga") is None else j["pj_liga"]}</td></tr>'
             for i, j in enumerate(gol["jugadores"], 1))
         total = sum(j["goles"] for j in gol["jugadores"])
-        goleadores = f"""<section style="margin-bottom:44px"><h2 class="titulo-seccion">Goleadores {e(str(gol.get("temporada", "")))}</h2>
-<div class="tabla-scroll"><table><thead><tr><th>#</th><th class="izq">Jugador</th><th>Goles</th><th class="izq">Por competencia</th>
+        goleadores = f"""<div class="tabla-scroll"><table><thead><tr><th>#</th><th class="izq">Jugador</th><th>Goles</th><th class="izq">Por competencia</th>
 <th title="Asistencias en la Liga">Asist.</th><th title="Partidos jugados en la Liga">PJ</th></tr></thead><tbody>{filas}</tbody></table></div>
-<p class="nota-dato">{total} goles en todas las competencias oficiales. Asistencias y partidos jugados: solo Liga. Datos: BocaStats.</p></section>"""
-    cuerpo = f"""<header class="encabezado-pagina"><h1>Plantel</h1><p>Los jugadores del plantel profesional, con su número de camiseta, y los goleadores de la temporada.</p></header>
-{goleadores}
-{bloques or '<div class="vacio">El plantel se carga solo en la próxima actualización.</div>'}"""
+<p class="nota-dato">{total} goles en todas las competencias oficiales. Asistencias y partidos jugados: solo Liga. Datos: BocaStats.</p>"""
+
+    # --- Contratos y valores
+    contratos_html = ""
+    if cont.get("jugadores"):
+        jc = sorted(cont["jugadores"], key=lambda x: (x.get("vence") or "9999", x["nombre"]))
+        hoy = ahora().date()
+
+        def edad(nac):
+            try:
+                y, m, d = map(int, nac[:10].split("-"))
+                return hoy.year - y - ((hoy.month, hoy.day) < (m, d))
+            except Exception:
+                return None
+        por_anio = defaultdict(list)
+        for x in jc:
+            por_anio[(x.get("vence") or "")[:4] or "Sin dato"].append(x)
+        resumen = "".join(
+            f'<div class="vence"><b>{e(a)}</b><span>{len(xs)} {"jugador" if len(xs) == 1 else "jugadores"}</span>'
+            f'<p>{e(", ".join(x["nombre"] for x in xs))}</p></div>'
+            for a, xs in sorted(por_anio.items()))
+        valor_total = sum(x.get("valor_eur") or 0 for x in jc)
+        filas = "".join(
+            f'<tr><td class="izq"><b>{e(x["nombre"])}</b><br><small class="nota-dato">{e(x.get("posicion", ""))}</small></td>'
+            f'<td>{"–" if edad(x.get("nacimiento", "")) is None else edad(x["nacimiento"])}</td>'
+            f'<td>{e(_fecha_mes(x.get("vence", "")))}</td><td class="pts">{e(_euros(x.get("valor_eur")))}</td>'
+            f'<td>{_n(x.get("pj"))}</td><td>{_n(x.get("minutos"))}</td><td>{_n(x.get("goles"))}</td><td>{_n(x.get("asistencias"))}</td></tr>'
+            for x in jc)
+        temporada = next((x.get("temporada") for x in jc if x.get("temporada")), "")
+        contratos_html = f"""<div class="cifras-plantel">
+  <div><b>{_euros(valor_total)}</b><span>valor de mercado del plantel ({len(jc)} jugadores)</span></div>
+  <div><b>{len(por_anio.get(str(hoy.year), []))}</b><span>contratos vencen en {hoy.year}</span></div>
+  <div><b>{len(por_anio.get(str(hoy.year + 1), []))}</b><span>vencen en {hoy.year + 1}</span></div>
+</div>
+<h2 class="titulo-seccion">Cuándo vencen los contratos</h2>
+<div class="vencimientos">{resumen}</div>
+<h2 class="titulo-seccion">Jugador por jugador</h2>
+<div class="tabla-scroll"><table><thead><tr><th class="izq">Jugador</th><th>Edad</th><th>Contrato hasta</th><th>Valor</th>
+<th title="Partidos oficiales en {e(str(temporada))}">PJ {e(str(temporada))}</th><th>Minutos</th><th>Goles</th><th title="Asistencias">Asist.</th></tr></thead><tbody>{filas}</tbody></table></div>
+<p class="nota-dato">Fechas de contrato y valores de mercado publicados por Transfermarkt, según el relevamiento de {e(cont["fuente"])} al {e(_fecha_corta(cont.get("corte", "")))}.
+Las fechas no son documentos del club. Partidos y minutos: competencias oficiales con Boca en {e(str(temporada))}.</p>"""
+
+    # --- Préstamos
+    prestamos_html = ""
+    if prest.get("jugadores"):
+        jp = sorted(prest["jugadores"], key=lambda x: (-(x.get("minutos") or 0), -(x.get("pj") or 0), x["nombre"]))
+        corte = prest.get("corte", "")
+        try:
+            import datetime as _dt
+            limite = (_dt.date.fromisoformat(corte) - _dt.timedelta(days=30)).isoformat()
+        except Exception:
+            limite = ""
+        activos = [x for x in jp if x.get("ultima") and limite and x["ultima"] >= limite]
+        con_pj = [x for x in jp if (x.get("pj") or 0) > 0]
+        goles = sum(x.get("goles") or 0 for x in jp)
+        filas = ""
+        for x in jp:
+            club = x.get("club", "")
+            pais = "" if x.get("pais") in ("", "Argentina") else f" ({x['pais']})"
+            etiquetas = ""
+            if x in activos:
+                etiquetas += '<span class="etiqueta etiqueta-ok">Activo al corte</span>'
+            if x.get("por_confirmar"):
+                etiquetas += '<span class="etiqueta">Cesión por confirmar</span>'
+            filas += (f'<tr><td class="izq"><b>{e(x["nombre"])}</b><br><small class="nota-dato">{e(x.get("posicion", ""))}</small></td>'
+                      f'<td class="izq">{e(club + pais)}<br><small class="nota-dato">{e(x.get("alcance", ""))}</small></td>'
+                      f'<td>{e(_fecha_mes(x.get("hasta", "")))}</td><td>{_n(x.get("pj"))}</td><td>{_n(x.get("titular"))}</td>'
+                      f'<td class="pts">{_n(x.get("minutos"))}</td><td>{_n(x.get("goles"))}</td><td>{_n(x.get("asistencias"))}</td>'
+                      f'<td class="izq">{e(_fecha_corta(x.get("ultima", "")))}{("<br>" + etiquetas) if etiquetas else ""}</td></tr>')
+        prestamos_html = f"""<div class="cifras-plantel">
+  <div><b>{len(jp)}</b><span>jugadores cedidos</span></div>
+  <div><b>{len(con_pj)}</b><span>ya jugaron en su club</span></div>
+  <div><b>{len(activos)}</b><span>jugaron en el mes previo al {e(_fecha_corta(corte))}</span></div>
+  <div><b>{goles}</b><span>goles entre todos</span></div>
+</div>
+<div class="tabla-scroll"><table class="tabla-prestamos"><thead><tr><th class="izq">Jugador</th><th class="izq">Dónde juega</th><th>Hasta</th>
+<th title="Partidos jugados">PJ</th><th title="Partidos como titular">Tit.</th><th>Minutos</th><th>Goles</th><th title="Asistencias">Asist.</th><th class="izq">Último partido</th></tr></thead>
+<tbody>{filas}</tbody></table></div>
+<p class="nota-dato">Ordenados por minutos jugados. Datos: {e(prest["fuente"])}, relevamiento al {e(_fecha_corta(corte))}. Son estadísticas del club de destino;
+algunas cubren solo la liga. «Activo al corte»: jugó en los 30 días anteriores al relevamiento. «Cesión por confirmar»: la cesión está publicada pero no hay una confirmación reciente del contrato. «–»: sin dato.</p>"""
+
+    pestanas = [("plantel", "Plantel", True)]
+    if contratos_html:
+        pestanas.append(("contratos", "Contratos y valores", False))
+    if prestamos_html:
+        pestanas.append(("prestamos", "Préstamos", False))
+    if goleadores:
+        pestanas.append(("goleadores", "Goleadores", False))
+    botones = "".join(f'<button type="button" data-destino="{k}" aria-pressed="{"true" if a else "false"}">{e(n)}</button>'
+                      for k, n, a in pestanas)
+    secciones = {
+        "plantel": bloques or '<div class="vacio">El plantel se carga solo en la próxima actualización.</div>',
+        "contratos": contratos_html, "prestamos": prestamos_html, "goleadores": goleadores,
+    }
+    cuerpo_secc = "".join(f'<section data-pestana-id="{k}">{secciones[k]}</section>' for k, _n2, _a in pestanas)
+    cuerpo = f"""<header class="encabezado-pagina"><h1>Plantel</h1><p>Los jugadores del plantel profesional, sus contratos, los que están a préstamo y los goleadores de la temporada.</p></header>
+<div class="filtros pestanas" role="group" aria-label="Secciones del plantel" data-pestanas>{botones}</div>
+{cuerpo_secc}"""
     return pagina("Plantel", cuerpo, activa="plantel.html", franja=barra_franja(proximos, ""))
 
 
@@ -1145,9 +1301,13 @@ def pagina_juegos(proximos) -> str:
          '<span class="g-texto">19<small>··</small></span>', "juego-anio"),
         ("grilla", "Grilla bostera", "Nombrá jugadores de Boca que también pasaron por los clubes de cada fila y columna.",
          GLIFO_GRILLA, "juego-grilla"),
+        ("desafio", "Desafiá a un amigo", "10 preguntas al azar: las jugás vos, mandás el link y se arma la tabla. No hace falta cuenta.",
+         '<span class="g-texto">1<small>vs</small>1</span>', "juego-desafio"),
         ("trivia", "Trivia por temas", "10 preguntas del tema que elijas: títulos, Superclásico, ídolos y más.",
          '<span class="g-texto g-abcd">A B<br>C D</span>', "juego-trivia"),
     ]
+    if not c:  # el desafío necesita el servidor de cuentas
+        lista = [x for x in lista if x[0] != "desafio"]
     if not datos["hay_grilla"]:
         lista = [x for x in lista if x[0] != "grilla"]
     tarjetas = "".join(
@@ -1157,7 +1317,8 @@ def pagina_juegos(proximos) -> str:
     secciones = [("del-dia", f"Pregunta del día #{dia_n}",
                   "10 preguntas por día, las mismas para todos y sin repetir. Mantené la racha.", "juego-dia")]
     secciones += [(k, n, d, caja) for k, n, d, _g, caja in lista]
-    secciones += [("ranking", "Ranking", "Los que más saben de Boca. Suman la pregunta del día y la trivia.", "juego-ranking"),
+    secciones += [("ranking", "Ranking", "Los que más saben de Boca. Suman la pregunta del día y la trivia. Armá tu liga con amigos.",
+                   "juego-ranking"),
                   ("insignias", "Tus insignias", "Se ganan jugando. Las de la cuenta se ven en cualquier dispositivo.",
                    "juego-insignias")]
     cuerpo_secc = "".join(
@@ -1183,7 +1344,7 @@ def pagina_juegos(proximos) -> str:
   </a>
   <div class="jtarjetas">{tarjetas}</div>
   <div class="jextra">
-    <a class="jextra-item" href="#ranking"><b>Ranking</b><span data-estado="ranking">Semana, mes e histórico</span></a>
+    <a class="jextra-item" href="#ranking"><b>Ranking y ligas</b><span data-estado="ranking">General y con tus amigos</span></a>
     <a class="jextra-item" href="#insignias"><b>Insignias</b><span data-estado="insignias">Mirá cuáles ganaste</span></a>
   </div>
 </div>
