@@ -16,6 +16,13 @@ from comun import (BORRADORES, ESTADO, ahora, ahora_iso, config, guardar_json, g
 
 ARCHIVO_VISTOS = ESTADO / "rss_vistos.json"
 HORAS_MAXIMAS = 36
+HORAS_REPETIDAS = 48  # contra cuántas horas de notas publicadas se compara para no repetir
+
+# Palabras que aparecen en casi cualquier titular de Boca y no ayudan a distinguir una noticia de otra
+VACIAS = set("""boca juniors xeneize xeneizes bostero bosteros club equipo plantel para como desde hasta sobre entre
+ante tras contra pero porque cuando donde este esta estos estas ese esos esas fueron sera seria tiene tienen hace hacia
+todo todos toda todas mucho muy mas menos tambien solo cada otro otra otros otras despues antes ahora luego dijo
+segun""".split())
 
 
 def leer_feed(fuente: dict) -> list[dict]:
@@ -66,6 +73,32 @@ def parecido(a: str, b: str) -> float:
     return len(pa & pb) / len(pa | pb)
 
 
+def _raices(t: str) -> set[str]:
+    """Palabras con contenido, recortadas a su raíz (viaja/viajan/viaje → viaja)."""
+    return {p[:6] for p in re.findall(r"[a-z0-9]{4,}", normalizar(t)) if p not in VACIAS}
+
+
+def misma_noticia(a: str, b: str, *, umbral: float = 0.5, minimo: int = 6) -> bool:
+    """True si dos textos (título + bajada) comparten tantas palabras clave que cuentan lo mismo."""
+    ra, rb = _raices(a), _raices(b)
+    if not ra or not rb:
+        return False
+    comunes = len(ra & rb)
+    return comunes >= minimo and comunes / min(len(ra), len(rb)) >= umbral
+
+
+def notas_recientes(horas: int = HORAS_REPETIDAS) -> list[dict]:
+    corte = (ahora() - dt.timedelta(hours=horas)).isoformat()
+    return [n for n in listar_notas() if n.get("fecha", "") >= corte]
+
+
+def textos_de_referencia(nota: dict) -> list[str]:
+    """Lo que identifica a una nota publicada: nuestro título y bajada, y los titulares de los medios que usamos."""
+    textos = [f"{nota.get('titulo', '')} {nota.get('bajada', '')}"]
+    textos += [f.get("titular", "") for f in nota.get("fuentes") or [] if f.get("titular")]
+    return textos
+
+
 def texto_del_articulo(url: str) -> str:
     """Intenta leer el texto de la nota original para darle contexto a la IA."""
     if not url or "news.google.com" in url:
@@ -90,7 +123,8 @@ def ejecutar() -> int:
     vistos = {k: v for k, v in vistos.items() if v >= limite}
 
     claves = [normalizar(k) for k in cfg.get("palabras_clave", [])]
-    recientes = [n["titulo"] for n in listar_notas()[:60]]
+    recientes = notas_recientes()
+    referencias = [t for n in recientes for t in textos_de_referencia(n)]
     corte = ahora() - dt.timedelta(hours=HORAS_MAXIMAS)
 
     candidatos, nuevos_vistos = [], {}
@@ -110,7 +144,9 @@ def ejecutar() -> int:
             texto = normalizar(it["titulo"] + " " + it["resumen"])
             if claves and not any(k in texto for k in claves):
                 continue
-            if any(parecido(it["titulo"], r) > 0.6 for r in recientes):
+            # Ya usamos este titular (u otro casi igual) para una nota publicada
+            if any(parecido(it["titulo"], r) > 0.6 or misma_noticia(f"{it['titulo']} {it['resumen']}", r, umbral=0.6)
+                   for r in referencias):
                 continue
             if any(parecido(it["titulo"], c["titulo"]) > 0.8 for c in candidatos):
                 continue
@@ -148,9 +184,17 @@ def ejecutar() -> int:
             material.append({**c, "texto": texto_del_articulo(c["link"])})
         try:
             r = ia.redactar_desde_fuentes(material)
-            nota = armar_nota(r, origen="rss", fuentes=[{"nombre": m["fuente"], "url": m["link"]} for m in material])
+            nota = armar_nota(r, origen="rss", fuentes=[{"nombre": m["fuente"], "url": m["link"], "titular": m["titulo"]}
+                                                       for m in material])
         except ia.IAError as e:
             log(f"RSS: no se pudo redactar «{material[0]['titulo']}»: {e}")
+            continue
+        # Último control: la nota ya escrita no puede contar lo mismo que otra de las últimas 48 h
+        texto_nuevo = f"{nota['titulo']} {nota['bajada']}"
+        igual = next((n for n in recientes if misma_noticia(texto_nuevo, f"{n.get('titulo', '')} {n.get('bajada', '')}")),
+                     None)
+        if igual:
+            log(f"RSS: descarto «{nota['titulo']}»: repite «{igual.get('titulo')}»")
             continue
         if cfg.get("modo") == "aprobacion":
             ruta = guardar_nota(nota, BORRADORES)
@@ -163,6 +207,7 @@ def ejecutar() -> int:
         else:
             ruta = guardar_nota(nota)
             log(f"RSS: ✅ publicada → {ruta.name}")
+        recientes.insert(0, nota)
         publicadas += 1
 
     guardar_json(ARCHIVO_VISTOS, {**vistos, **nuevos_vistos})
@@ -187,6 +232,7 @@ def armar_nota(r: dict, *, origen: str, fuentes: list | None = None, **extra) ->
         "categoria": categoria,
         "estado": estado,
         "etiquetas": [str(e) for e in (r.get("etiquetas") or [])][:6],
+        "protagonistas": [str(p).strip() for p in (r.get("protagonistas") or []) if str(p).strip()][:3],
         "fuentes": fuentes or [],
         "origen": origen,
         "fecha": ahora_iso(),

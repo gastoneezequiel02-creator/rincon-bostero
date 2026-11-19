@@ -25,6 +25,7 @@ def main(solo_sitio: bool = False):
     import cronicas
     import datos_futbol
     import historia_de_boca
+    import imagenes
     import noticias_rss
     import sincronizar_juegos
 
@@ -36,6 +37,7 @@ def main(solo_sitio: bool = False):
         ok &= paso("bot de Telegram", bot_telegram.ejecutar)
         ok &= paso("noticias RSS", noticias_rss.ejecutar)
         ok &= paso("previas y crónicas", cronicas.ejecutar)
+        paso("fotos de las notas", imagenes.ejecutar)  # si Wikimedia no anda, no frena nada
     # El sitio se arma siempre, aunque algo de arriba haya fallado
     if not paso("armar el sitio", construir_sitio.construir):
         sys.exit(1)

@@ -78,8 +78,18 @@ def badge(estado: str) -> str:
 
 def tapa(nota: dict, pre: str, grande: bool = False) -> str:
     if nota.get("imagen"):
-        return f'<div class="tapa"><img src="{pre}{e(nota["imagen"])}" alt="" loading="{"eager" if grande else "lazy"}"></div>'
+        credito = nota.get("imagen_credito", "")
+        titulo = f' title="{e(credito)}"' if credito else ""
+        return (f'<div class="tapa"><img src="{pre}{e(nota["imagen"])}" alt=""{titulo} '
+                f'loading="{"eager" if grande else "lazy"}"></div>')
     return f'<div class="tapa tapa-tipografica" aria-hidden="true"><span>{e(nota.get("categoria", "Boca"))}</span></div>'
+
+
+def tapa_con_credito(nota: dict, pre: str) -> str:
+    credito = nota.get("imagen_credito")
+    if not credito:
+        return tapa(nota, pre, grande=True)
+    return f'<figure class="tapa-figura">{tapa(nota, pre, grande=True)}<figcaption>{e(credito)}</figcaption></figure>'
 
 
 def link_nota(nota: dict, pre: str) -> str:
@@ -359,7 +369,7 @@ def pagina_nota(n: dict, relacionadas: list[dict], proximos) -> str:
     <time datetime="{e(n['fecha'])}">{e(fecha_larga(d))}, {hora(d)} h</time></div>
   <h1>{e(n['titulo'])}</h1>
   <p class="bajada">{e(n.get('bajada', ''))}</p>
-  {tapa(n, pre, grande=True) if n.get('imagen') else ''}
+  {tapa_con_credito(n, pre) if n.get('imagen') else ''}
   {aviso}
   <div class="cuerpo">{cuerpo_txt}</div>
   {etiquetas}

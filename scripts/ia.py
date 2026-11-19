@@ -148,33 +148,53 @@ FORMATO_NOTA = """Devolvé SOLO este JSON:
   "cuerpo": ["párrafo 1", "párrafo 2", "..."],
   "categoria": "una de: """ + ", ".join(CATEGORIAS) + """",
   "estado": "oficial | confirmado | rumor",
-  "etiquetas": ["2 a 5 temas o nombres propios clave"]
+  "etiquetas": ["2 a 5 temas o nombres propios clave"],
+  "protagonistas": ["nombre y apellido completos de hasta 3 personas centrales de la noticia (jugadores, DT, dirigentes); lista vacía si no hay"]
 }
 Largo del cuerpo: entre 3 y 6 párrafos, según cuánta información haya. Si hay poca información, hacé una nota corta: es preferible a rellenar."""
 
 
-def seleccionar_noticias(candidatos: list[dict], titulos_recientes: list[str], maximo: int) -> list[dict]:
-    """Agrupa titulares sobre el mismo tema y elige cuáles merecen nota."""
+def seleccionar_noticias(candidatos: list[dict], recientes: list[dict], maximo: int) -> list[dict]:
+    """Agrupa titulares sobre el mismo tema, descarta lo ya publicado y elige cuáles merecen nota.
+
+    recientes: notas de las últimas horas, cada una con titulo, bajada y fecha.
+    """
     instrucciones = _base_editorial() + """
 
-Tu tarea ahora es de EDITOR: recibís titulares de distintos medios y decidís qué publicar."""
+Tu tarea ahora es de EDITOR: recibís titulares de distintos medios y decidís qué publicar.
+Lo más importante es NO REPETIR: el lector no quiere ver la misma noticia contada dos veces con otras palabras."""
     lista = "\n".join(f"[{i}] ({c['fuente']}) {c['titulo']} — {c.get('resumen', '')[:220]}" for i, c in enumerate(candidatos))
-    recientes = "\n".join(f"- {t}" for t in titulos_recientes[:40]) or "(ninguna)"
+    publicadas = "\n".join(
+        f"P{i}. ({n.get('fecha', '')[:16].replace('T', ' ')}) {n.get('titulo', '')} — {n.get('bajada', '')[:200]}"
+        for i, n in enumerate(recientes[:40])) or "(ninguna)"
     pedido = f"""TITULARES NUEVOS:
 {lista}
 
-NOTAS QUE YA PUBLICAMOS (no repetir el mismo tema salvo que haya un dato nuevo importante):
-{recientes}
+NOTAS QUE YA PUBLICAMOS EN LAS ÚLTIMAS 48 HORAS:
+{publicadas}
 
 1. Descartá lo que no sea sobre Boca Juniors (primera, reserva, femenino o institucional), lo que sea apuestas, publicidad, otro deporte que no sea fútbol, u opinión sin hechos.
 2. Agrupá los titulares que hablan del MISMO hecho.
-3. Elegí como máximo {maximo} temas, los más importantes primero.
+3. Para cada grupo, fijate si alguna nota publicada ya cuenta ese hecho. Es el MISMO hecho aunque cambien las palabras o el enfoque. Ejemplos de MISMO hecho:
+   - "Boca viaja a Barranquilla", "Boca ya está en camino a Barranquilla" y "El plantel llegó a Barranquilla" del mismo día.
+   - "Aranda sería titular en la final" y "Arruabarrena define el equipo para la final" (los dos son el posible equipo).
+   - Varias notas de color sobre hinchas viajando o alentando antes del mismo partido: cuentan como UNA sola por día.
+   Solo es un hecho NUEVO si cambia algo concreto: se confirmó lo que era rumor, salió la lista oficial, hay un resultado, una lesión confirmada por estudios, una declaración nueva de un protagonista, una sanción, un fichaje firmado.
+4. Elegí como máximo {maximo} temas NUEVOS, los más importantes primero. Es mejor no publicar nada que repetir.
 
 Devolvé SOLO este JSON:
-{{"temas": [{{"indices": [números de los titulares del tema], "motivo": "por qué vale la pena, en 10 palabras"}}]}}
-Si nada vale la pena, devolvé {{"temas": []}}."""
-    r = generar_json(instrucciones, pedido, temperatura=0.2)
-    return r.get("temas", [])
+{{"temas": [{{"indices": [números de los titulares del tema], "repite": "P y número de la nota publicada que ya lo cuenta, o null si es un hecho nuevo", "motivo": "qué hecho nuevo aporta, en 10 palabras"}}]}}
+Si nada nuevo vale la pena, devolvé {{"temas": []}}."""
+    r = generar_json(instrucciones, pedido, temperatura=0.1)
+    temas = []
+    for t in r.get("temas", []) or []:
+        if not isinstance(t, dict):
+            continue
+        rep = t.get("repite")
+        if rep not in (None, "", "null", False) and str(rep).strip().lower() not in ("null", "none", "no"):
+            continue  # la IA dice que ya lo publicamos
+        temas.append(t)
+    return temas
 
 
 def redactar_desde_fuentes(material: list[dict]) -> dict:
