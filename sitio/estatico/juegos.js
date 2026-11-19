@@ -55,12 +55,17 @@
     { id: "quinientos", nombre: "Quinientos", glifo: "500", desc: "500 respuestas correctas con tu cuenta.", cuenta: true, ok: function (p) { return p.aciertos_total >= 500; } },
     { id: "enciclopedia", nombre: "Enciclopedia", glifo: "A–Z", desc: "Jugaste la trivia de todos los temas.", cuenta: true, ok: function (p) { return p.temas_trivia >= Object.keys(D.temas).length; } },
     { id: "hincha", nombre: "Hincha de la semana", glifo: "1°", desc: "Terminaste primero en el ranking de una semana.", cuenta: true, ok: function (p) { return p.semanas_primero >= 1; } },
+    { id: "mision1", nombre: "Misión cumplida", glifo: "✓", desc: "Cumpliste tu primera misión del día.", cuenta: true, ok: function (p) { return p.misiones_total >= 1; } },
+    { id: "mision25", nombre: "Cumplidor", glifo: "25", desc: "Cumpliste 25 misiones del día.", cuenta: true, ok: function (p) { return p.misiones_total >= 25; } },
+    { id: "nivel5", nombre: "Titular", glifo: "N5", desc: "Llegaste al nivel 5 (Titular).", cuenta: true, ok: function (p) { return nivelDe(p.xp_total || 0).n >= 5; } },
+    { id: "nivel10", nombre: "Leyenda", glifo: "N10", desc: "Llegaste al nivel 10 (Leyenda).", cuenta: true, ok: function (p) { return nivelDe(p.xp_total || 0).n >= 10; } },
     { id: "mom10", nombre: "Diez al hilo", glifo: "+10", desc: "Racha de 10 en ¿Más o menos?" },
     { id: "scout", nombre: "Ojo de scout", glifo: "2", desc: "Adivinaste el ídolo del día en 2 intentos o menos." },
     { id: "archivo", nombre: "Memoria de archivo", glifo: "±0", desc: "Clavaste el año exacto en ¿En qué año fue?" },
     { id: "historiador", nombre: "Historiador", glifo: "400", desc: "400 puntos o más en ¿En qué año fue?" },
     { id: "grilla9", nombre: "Grilla llena", glifo: "9", desc: "Completaste los 9 casilleros de la Grilla bostera." },
-    { id: "grilla-experto", nombre: "Enciclopedia", glifo: "E", desc: "Llenaste una Grilla bostera en Experto." },
+    { id: "grilla-experto", nombre: "Erudito", glifo: "E", desc: "Llenaste una Grilla bostera en Experto." },
+    { id: "conexion10", nombre: "Memoria de vestuario", glifo: "10", desc: "10 de 10 en ¿Quién jugó con quién?" },
     { id: "detective", nombre: "Detective", glifo: "?", desc: "Adivinaste un jugador de ¿Quién soy? con la primera pista." }
   ];
   function logrosLocales() { return leer("logros", {}); }
@@ -73,8 +78,57 @@
     pintarEstados();
   }
   function ganadas() {
-    var l = logrosLocales();
-    return INSIGNIAS.filter(function (i) { return i.cuenta ? !!(perfil && perfil.apodo && i.ok(perfil)) : !!l[i.id]; });
+    var l = logrosLocales(), datos = Object.assign({}, PROGRESO || {}, perfil || {});
+    return INSIGNIAS.filter(function (i) { return i.cuenta ? !!(perfil && perfil.apodo && i.ok(datos)) : !!l[i.id]; });
+  }
+
+  // ------------------------------------------- Experiencia, niveles, misiones --
+  // La experiencia la calcula el servidor (mi_progreso). Acá solo se muestra.
+  var NIVELES = [[0, "Infantiles"], [100, "Juveniles"], [300, "Reserva"], [600, "Debutante"], [1000, "Titular"],
+    [1600, "Goleador"], [2500, "Referente"], [4000, "Capitán"], [6000, "Ídolo"], [9000, "Leyenda"]];
+  var PROGRESO = null;
+  function nivelDe(xp) {
+    var i = 0; while (i + 1 < NIVELES.length && xp >= NIVELES[i + 1][0]) i++;
+    var sig = NIVELES[i + 1];
+    return { n: i + 1, nombre: NIVELES[i][1], desde: NIVELES[i][0], hasta: sig ? sig[0] : null, siguiente: sig ? sig[1] : null };
+  }
+  function conCuenta() { return !!(sb && perfil && perfil.apodo); }
+  function cargarProgreso(avisar) {
+    if (!conCuenta()) { PROGRESO = null; return Promise.resolve(null); }
+    var antes = PROGRESO;
+    return rpc("mi_progreso").then(function (p) {
+      PROGRESO = p;
+      if (avisar && antes && p) {
+        var dif = (p.xp_total || 0) - (antes.xp_total || 0);
+        if (dif > 0) aviso("<b>+" + dif + " de experiencia</b>");
+        var n0 = nivelDe(antes.xp_total || 0), n1 = nivelDe(p.xp_total || 0);
+        if (n1.n > n0.n) setTimeout(function () { aviso("<b>¡Subiste de nivel!</b> Ahora sos " + esc(n1.nombre)); }, 900);
+        var m0 = (antes.misiones_hoy || []).filter(function (m) { return m.valor >= m.meta; }).length;
+        var m1 = (p.misiones_hoy || []).filter(function (m) { return m.valor >= m.meta; }).length;
+        if (m1 > m0) setTimeout(function () { aviso("<b>Misión cumplida</b> (+20)"); }, 1800);
+      }
+      revisarInsigniasCuenta(); pintarEstados(); pintarCuenta();
+      var sec = document.querySelector("[data-juego='perfil']");
+      if (sec && !sec.hidden) pintarPerfil();
+      return p;
+    }).catch(function () { return null; });
+  }
+  // Manda al servidor el resultado de un juego que se corrige en el navegador (cuenta uno por juego y por día).
+  function reportar(juego, puntaje) {
+    if (!conCuenta() || puntaje == null) return Promise.resolve();
+    return rpc("registrar_partida", { p_juego: juego, p_puntaje: Math.max(0, Math.round(puntaje)) })
+      .then(function () { return cargarProgreso(true); }).catch(function () {});
+  }
+  // Al entrar con la cuenta, sube lo que se jugó hoy en este navegador antes de entrar.
+  function sincronizarHoy() {
+    if (!conCuenta()) return Promise.resolve();
+    var hoy = hoyTxt(), envios = [];
+    [["quien", "res-quien-"], ["anio", "res-anio-"], ["idolo", "res-idolo-"], ["conexion", "res-conexion-"]].forEach(function (x) {
+      var v = leer(x[1] + hoy, null); if (v != null) envios.push([x[0], v]);
+    });
+    NIVELES_GRILLA.forEach(function (k) { var v = leer("res-grilla-" + k + "-" + hoy, null); if (v != null) envios.push(["grilla-" + k, v]); });
+    var mom = leer("mom-hoy", null); if (mom && mom.fecha === hoy) envios.push(["mas-o-menos", mom.racha]);
+    return Promise.all(envios.map(function (e) { return rpc("registrar_partida", { p_juego: e[0], p_puntaje: e[1] }).catch(function () {}); }));
   }
   function revisarInsigniasCuenta() {
     if (!(perfil && perfil.apodo)) return;
@@ -265,7 +319,7 @@
       else previas = leer(clave, { hechas: [] }).hechas || [];
       jugarPreguntas(caja, preguntas, function (q, k) { return rpc("responder_dia", { p_pregunta: q.id, p_opcion: k }); },
         function (h) {
-          if (perfil && perfil.apodo) rpc("mi_resumen").then(function (r) { perfil = r; pintarCuenta(); revisarInsigniasCuenta(); finDelDia(caja, h, r.racha); }).catch(function () { finDelDia(caja, h); });
+          if (perfil && perfil.apodo) rpc("mi_resumen").then(function (r) { perfil = r; pintarCuenta(); revisarInsigniasCuenta(); finDelDia(caja, h, r.racha); cargarProgreso(true); }).catch(function () { finDelDia(caja, h); });
           else finDelDia(caja, h);
         }, previas, function (h) { guardar(clave, { hechas: h }); pintarEstados(); });
     }).catch(function () { errorConexion(caja); });
@@ -317,6 +371,9 @@
             dato.querySelector(".siguiente").focus({ preventScroll: true });
           } else {
             var final = racha; racha = 0;
+            var mh = leer("mom-hoy", null), hoyM = hoyTxt();
+            if (!mh || mh.fecha !== hoyM || final > mh.racha) guardar("mom-hoy", { fecha: hoyM, racha: final });
+            reportar("mas-o-menos", final);
             setTimeout(function () {
               var c = celdas.concat(["mal"]); celdas = [];
               var filas = []; for (var i = 0; i < c.length; i += 10) filas.push(c.slice(i, i + 10));
@@ -369,7 +426,7 @@
       caja.innerHTML = "<p class='nota-dato'>Armando la partida…</p>";
       rpc("trivia_iniciar", { p_tema: t }).then(function (r) {
         jugarPreguntas(caja, r.preguntas, function (q, k) { return rpc("responder_trivia", { p_sesion: r.sesion, p_pregunta: q.id, p_opcion: k }); },
-          function (h) { terminar(t, h, r.suma); if (perfil && perfil.apodo) rpc("mi_resumen").then(function (x) { perfil = x; revisarInsigniasCuenta(); pintarEstados(); }); });
+          function (h) { terminar(t, h, r.suma); if (perfil && perfil.apodo) rpc("mi_resumen").then(function (x) { perfil = x; revisarInsigniasCuenta(); pintarEstados(); cargarProgreso(true); }); });
       }).catch(function () { errorConexion(caja); });
     }
     menu();
@@ -410,7 +467,10 @@
           intentos.map(filaIntento).join("") + "</tbody></table></div>" : "";
         var abajo, cfg = null;
         if (termino) {
-          if (claveGuardado) { guardar("res-idolo-" + hoy, gano ? intentos.length : 0); if (gano && intentos.length <= 2) ganar("scout"); pintarEstados(); }
+          if (claveGuardado) {
+            if (leer("res-idolo-" + hoy, null) == null) reportar("idolo", gano ? intentos.length : 0);
+            guardar("res-idolo-" + hoy, gano ? intentos.length : 0); if (gano && intentos.length <= 2) ganar("scout"); pintarEstados();
+          }
           var res = gano ? intentos.length + "/" + MAX : "X/" + MAX;
           cfg = { juego: "Adiviná el ídolo" + (claveGuardado ? " #" + numeroDelDia() : ""), puntaje: gano ? intentos.length : "X", total: MAX,
             linea: gano ? "Lo saqué en " + plural(intentos.length, "intento", "intentos") : "Esta vez no salió", celdas: intentos.map(estados),
@@ -499,7 +559,7 @@
       }
       function final() {
         var total = rondas.reduce(function (s, x) { return s + x.puntos; }, 0);
-        if (clave) { guardar("res-anio-" + hoyTxt(), total); pintarEstados(); }
+        if (clave) { if (leer("res-anio-" + hoyTxt(), null) == null) reportar("anio", total); guardar("res-anio-" + hoyTxt(), total); pintarEstados(); }
         if (total >= 400) ganar("historiador");
         var est = rondas.map(function (x) { return x.puntos >= 90 ? "ok" : x.puntos >= 50 ? "cerca" : "mal"; });
         pantallaFinal(caja, { etiqueta: "¿En qué año fue?" + (clave ? " #" + numeroDelDia() : " · práctica"), puntaje: total, total: 500,
@@ -661,6 +721,7 @@
           if (clave) {
             var claveRes = "res-grilla-" + claveNivel(nv) + hoyTxt(), nueva = leer(claveRes, null) == null;
             guardar(claveRes, n);
+            if (nv && nueva) reportar("grilla-" + nv, n);
             if (nv && nueva) {
               var st = leer("grilla-stats", {}), e = st[nv] || { jugadas: 0, casilleros: 0, llenas: 0 };
               e.jugadas++; e.casilleros += n; if (n === 9) e.llenas++; st[nv] = e; guardar("grilla-stats", st);
@@ -698,15 +759,15 @@
   function tablaRanking(filas, general) {
     if (!filas.length) return "<p class='vacio'>Todavía nadie sumó puntos en este período. ¡Podés ser el primero!</p>";
     var podio = filas.slice(0, 3).map(function (f, i) {
-      return "<li class='podio-" + (i + 1) + (f.soy_yo ? " soy-yo" : "") + "'><span class='p-pos'>" + f.posicion + "°</span><b>" + esc(f.apodo) + "</b><span class='p-pts'>" + f.puntos + " pts</span></li>";
+      return "<li class='podio-" + (i + 1) + (f.soy_yo ? " soy-yo" : "") + "'><span class='p-pos'>" + f.posicion + "°</span><b>" + esc(f.apodo) + "</b><span class='p-pts'>" + f.puntos + " XP</span></li>";
     }).join("");
-    return "<ol class='podio'>" + podio + "</ol><div class='tabla-scroll'><table class='tabla-ranking'><thead><tr><th>#</th><th class='izq'>Apodo</th><th>Puntos</th>" +
-      "<th title='Aciertos en la pregunta del día'>Del día</th><th title='Aciertos en la trivia que suman'>Trivia</th><th title='Días que jugó la pregunta del día'>Días</th></tr></thead><tbody>" +
+    return "<ol class='podio'>" + podio + "</ol><div class='tabla-scroll'><table class='tabla-ranking'><thead><tr><th>#</th><th class='izq'>Apodo</th><th>XP</th>" +
+      "<th title='Aciertos en la pregunta del día'>Del día</th><th title='Aciertos en la trivia que suman'>Trivia</th><th title='Días que jugó algún juego'>Días</th></tr></thead><tbody>" +
       filas.map(function (f) {
         return "<tr class='" + (f.soy_yo ? "fila-boca" : "") + "'><td>" + f.posicion + "</td><td class='izq'>" + esc(f.apodo) + (f.soy_yo ? " (vos)" : "") +
           "</td><td class='pts'>" + f.puntos + "</td><td>" + f.aciertos_dia + "</td><td>" + f.aciertos_trivia + "</td><td>" + f.dias_jugados + "</td></tr>";
-      }).join("") + "</tbody></table></div><p class='nota-dato'>1 punto por cada acierto en la pregunta del día y en la primera partida de cada tema de la trivia por día. " +
-      "Solo cuenta la primera respuesta de cada pregunta." + (general ? " El primero de cada semana es el Hincha de la semana y aparece en el inicio." : "") + "</p>";
+      }).join("") + "</tbody></table></div><p class='nota-dato'>Se ordena por experiencia (XP): suman todos los juegos, una partida de cada uno por día, más las misiones. " +
+      "<a href='#perfil'>Cómo se suma</a>." + (general ? " El primero de cada semana es el Hincha de la semana y aparece en el inicio." : "") + "</p>";
   }
   function iniciarRanking() {
     var caja = document.getElementById("juego-ranking");
@@ -769,7 +830,24 @@
     if (invitacion) mostrarInvitacion(pendiente);
     var t = caja.querySelector("#tabla-ranking");
     var pedido = E.ambito === "general" ? rpc("ranking", { p_periodo: E.periodo }) : rpc("ranking_liga", { p_codigo: E.ambito, p_periodo: E.periodo });
-    pedido.then(function (filas) { t.innerHTML = tablaRanking(filas, E.ambito === "general"); }).catch(function () { errorConexion(t); });
+    pedido.then(function (filas) { t.innerHTML = tablaRanking(filas, E.ambito === "general"); pintarHistorial(); }).catch(function () { errorConexion(t); });
+    function pintarHistorial() {
+      var tipo = E.periodo === "mes" ? "mes" : "semana";
+      if (E.periodo === "total") return;
+      rpc("historial_ranking", { p_codigo: E.ambito === "general" ? null : E.ambito, p_tipo: tipo, p_n: 6 }).then(function (h) {
+        var con = (h || []).filter(function (x) { return x.podio && x.podio.length; });
+        if (!con.length) return;
+        var MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+        function fechaCorta(f) { var p = f.split("-"); return +p[2] + "/" + +p[1]; }
+        t.insertAdjacentHTML("beforeend", "<h3 class='insignias-titulo'>" + (tipo === "mes" ? "Campeones de meses anteriores" : "Campeones de semanas anteriores") + "</h3>" +
+          "<ul class='historial-rk'>" + con.map(function (x) {
+            var titulo = tipo === "mes" ? MESES[+x.desde.split("-")[1] - 1] + " " + x.desde.split("-")[0] : fechaCorta(x.desde) + " al " + fechaCorta(x.hasta);
+            return "<li><span class='h-periodo'>" + esc(titulo) + "</span>" + x.podio.map(function (p) {
+              return "<span class='h-puesto p" + p.posicion + "'>" + p.posicion + "° " + esc(p.apodo) + " <small>" + p.puntos + " XP</small></span>";
+            }).join("") + "</li>";
+          }).join("") + "</ul>");
+      }).catch(function () {});
+    }
   }
   function mostrarInvitacion(cod) {
     var box = document.getElementById("invitacion-liga");
@@ -917,13 +995,66 @@
       grupo("En este dispositivo", INSIGNIAS.filter(function (i) { return !i.cuenta; }), "Se guardan en este navegador.");
   }
 
+  // ------------------------------------------------------------ Tu perfil --
+  var NOMBRE_JUEGO = { quien: "¿Quién soy?", anio: "¿En qué año fue?", idolo: "Adiviná el ídolo", "mas-o-menos": "¿Más o menos?",
+    "grilla-facil": "Grilla (Fácil)", "grilla-intermedio": "Grilla (Intermedio)", "grilla-dificil": "Grilla (Difícil)", "grilla-experto": "Grilla (Experto)",
+    conexion: "¿Quién jugó con quién?" };
+  var DETALLE_JUEGO = { quien: "puntos sobre 300", anio: "puntos sobre 500", idolo: "intentos (0 = no salió)", "mas-o-menos": "mejor racha del día",
+    "grilla-facil": "casilleros", "grilla-intermedio": "casilleros", "grilla-dificil": "casilleros", "grilla-experto": "casilleros", conexion: "puntos sobre 500" };
+  function barra(valor, meta) { var pc = meta ? Math.min(100, Math.round(100 * valor / meta)) : 0; return "<span class='pf-barra' aria-hidden='true'><i style='width:" + pc + "%'></i></span>"; }
+  function pintarPerfil() {
+    var caja = document.getElementById("juego-perfil");
+    if (!caja) return;
+    var como = "<details class='pf-como'><summary>Cómo se suma experiencia</summary><ul>" +
+      "<li>Pregunta del día: 10 por jugarla y 10 por cada acierto.</li><li>Trivia: 5 por acierto en la primera partida de cada tema del día (hasta 100).</li>" +
+      "<li>¿Quién soy?: 10 por jugar más 1 cada 10 puntos que hagas.</li><li>Grilla: 5 por jugar más 2, 3, 4 o 5 por casillero según la dificultad (cuenta tu mejor grilla del día).</li>" +
+      "<li>¿En qué año fue?: 5 más 1 cada 20 puntos. Ídolo: 5, y 30 más si lo sacás en el primer intento (5 menos por cada intento de más). ¿Más o menos?: 5 más tu mejor racha del día (hasta 25).</li>" +
+      "<li>Cada juego cuenta una vez por día, y los juegos suman hasta 350 por día. Cada misión del día da 20 más. Jugar 5 días de la semana da 100, y cumplir 10 misiones en la semana, otros 100.</li>" +
+      "</ul><p>Niveles: " + NIVELES.map(function (n, i) { return (i + 1) + ". " + n[1] + " (" + n[0] + " XP)"; }).join(", ") + ".</p></details>";
+    if (!sb) { caja.innerHTML = "<p class='vacio'>El perfil necesita las cuentas de usuario.</p>" + como; return; }
+    if (!conCuenta()) {
+      caja.innerHTML = "<div class='pf-sin'><p><b>Entrá con tu cuenta (arriba) para tener tu perfil:</b> nivel, experiencia, misiones del día y tus números en cada juego, en cualquier dispositivo.</p>" +
+        "<p class='nota-dato'>Lo que jugaste hoy en este navegador se suma cuando entrás.</p></div>" + como;
+      return;
+    }
+    if (!PROGRESO) { caja.innerHTML = "<p class='nota-dato'>Cargando tu perfil…</p>"; return; }
+    var P = PROGRESO, xp = P.xp_total || 0, nv = nivelDe(xp);
+    var cab = "<div class='pf-cabeza'><span class='pf-nivel' aria-hidden='true'><small>Nivel</small>" + nv.n + "</span><div class='pf-datos'><h3>" + esc(perfil.apodo) + "</h3>" +
+      "<p class='pf-rango'>" + esc(nv.nombre) + "</p>" + barra(xp - nv.desde, nv.hasta ? nv.hasta - nv.desde : 1) +
+      "<p class='nota-dato'><b>" + xp + " XP</b>" + (nv.hasta ? " · faltan " + (nv.hasta - xp) + " para " + esc(nv.siguiente) : " · nivel máximo") + "</p></div>" +
+      "<ul class='pf-cifras'><li><b>" + (P.xp_hoy || 0) + "</b>XP hoy</li><li><b>" + (P.xp_semana || 0) + "</b>XP esta semana</li><li><b>" + (perfil.racha || 0) + "</b>días de racha</li></ul></div>";
+    function filaMision(texto, valor, meta, premio) {
+      var ok = valor >= meta;
+      return "<li class='" + (ok ? "hecha" : "") + "'><span class='pf-check' aria-hidden='true'>" + (ok ? "✓" : "") + "</span><div><b>" + esc(texto) + "</b>" +
+        barra(Math.min(valor, meta), meta) + "<small>" + (ok ? "Cumplida: +" + premio + " XP" : Math.min(valor, meta) + " de " + meta + " · da " + premio + " XP") + "</small></div></li>";
+    }
+    var mis = "<h3 class='insignias-titulo'>Misiones de hoy</h3><ul class='pf-misiones'>" + (P.misiones_hoy || []).map(function (m) { return filaMision(m.texto, m.valor, m.meta, 20); }).join("") +
+      "</ul><p class='nota-dato'>Cambian todos los días a la medianoche y son las mismas para todos.</p>";
+    var S = P.semana || {};
+    var sem = "<h3 class='insignias-titulo'>Misiones de la semana</h3><ul class='pf-misiones'>" +
+      filaMision("Jugá 5 días distintos", S.dias || 0, S.meta_dias || 5, 100) + filaMision("Cumplí 10 misiones del día", S.misiones || 0, S.meta_misiones || 10, 100) + "</ul>";
+    var ult = P.ultimos || [], maxU = Math.max.apply(null, [1].concat(ult.map(function (u) { return u.xp; }))), dias = [];
+    for (var i = 13; i >= 0; i--) { var d = new Date(); d.setDate(d.getDate() - i); var k = hoyTxt(d), u = ult.filter(function (x) { return x.fecha === k; })[0]; dias.push([d, u ? u.xp : 0]); }
+    var graf = "<h3 class='insignias-titulo'>Tus últimos 14 días</h3><div class='pf-dias' role='img' aria-label='Experiencia por día en los últimos 14 días'>" + dias.map(function (x) {
+      return "<span title='" + x[0].getDate() + "/" + (x[0].getMonth() + 1) + ": " + x[1] + " XP'><i style='height:" + Math.round(100 * x[1] / maxU) + "%'></i><small>" + x[0].getDate() + "</small></span>";
+    }).join("") + "</div>";
+    var pj = P.por_juego || {}, claves = Object.keys(NOMBRE_JUEGO).filter(function (k) { return pj[k]; });
+    var tabla = "<h3 class='insignias-titulo'>Tus números por juego</h3>" + (claves.length ? "<div class='tabla-scroll'><table class='tabla-ranking'><thead><tr><th class='izq'>Juego</th><th>Partidas</th><th>Mejor</th><th>Promedio</th></tr></thead><tbody>" +
+      claves.map(function (k) { var x = pj[k]; return "<tr><td class='izq'>" + esc(NOMBRE_JUEGO[k]) + "<small class='pf-det'>" + esc(DETALLE_JUEGO[k]) + "</small></td><td>" + x.partidas + "</td><td>" + x.mejor + "</td><td>" + String(x.promedio).replace(".", ",") + "</td></tr>"; }).join("") +
+      "</tbody></table></div>" : "<p class='nota-dato'>Todavía no hay partidas guardadas con tu cuenta. Jugá cualquier juego y aparecen acá.</p>") +
+      "<p class='nota-dato'>Pregunta del día: " + plural(perfil.dias_total || 0, "día jugado", "días jugados") + ", " +
+      plural(perfil.aciertos_total || 0, "acierto", "aciertos") + " en total (con la trivia) y " + (perfil.perfectos || 0) + " veces 10 de 10.</p>";
+    caja.innerHTML = cab + mis + sem + graf + tabla + como +
+      "<p class='nota-dato'><a href='#insignias'>Ver tus insignias</a> · <a href='#ranking'>Ver el ranking</a></p>";
+  }
+
   // ----------------------------------------------------------- Cuenta --
   function pintarCuenta() {
     var caja = document.getElementById("cuenta");
     if (!caja || !sb) return;
     caja.hidden = false;
     if (!usuario) {
-      caja.innerHTML = "<div class='cuenta-fila'><p><b>Entrá para sumar puntos en el ranking y ganar insignias.</b> También podés jugar sin cuenta.</p>" +
+      caja.innerHTML = "<div class='cuenta-fila'><p><b>Entrá para sumar experiencia, subir de nivel, cumplir misiones y aparecer en el ranking.</b> También podés jugar sin cuenta.</p>" +
         "<div class='cuenta-acciones'>" + (CON_GOOGLE ? "<button type='button' class='boton' id='entrar-google'>Entrar con Google</button>" : "") +
         "<details class='cuenta-mail'><summary>" + (CON_GOOGLE ? "O entrar con tu mail" : "Entrar con tu mail") + "</summary><form id='entrar-mail' class='idolo-form'>" +
         "<label for='mail' class='oculto'>Tu mail</label><input id='mail' type='email' required placeholder='Tu mail'>" +
@@ -951,7 +1082,8 @@
       return;
     }
     caja.innerHTML = "<div class='cuenta-fila cuenta-ok'><span class='avatar' aria-hidden='true'>" + esc(iniciales(perfil.apodo).toUpperCase() || perfil.apodo[0]) + "</span>" +
-      "<p><b>" + esc(perfil.apodo) + "</b><span>Racha: " + plural(perfil.racha || 0, "día", "días") + " · Esta semana: " + (perfil.puntos_semana || 0) + " pts" +
+      "<p><b>" + esc(perfil.apodo) + "</b><span>" + (PROGRESO ? "<a href='#perfil'>Nivel " + nivelDe(PROGRESO.xp_total || 0).n + ", " + esc(nivelDe(PROGRESO.xp_total || 0).nombre) + "</a> · " : "") +
+      "Racha: " + plural(perfil.racha || 0, "día", "días") + " · Esta semana: " + (perfil.puntos_semana || 0) + " XP" +
       (perfil.posicion_semana ? " (puesto " + perfil.posicion_semana + ")" : "") + " · <a href='#insignias'>" + ganadas().length + " insignias</a></span></p>" +
       "<div class='cuenta-acciones'><button type='button' class='boton secundario' id='salir'>Salir</button><button type='button' class='enlace-peligro' id='borrar'>Borrar mi cuenta</button></div></div>";
     caja.querySelector("#salir").addEventListener("click", function () { sb.auth.signOut(); });
@@ -963,10 +1095,12 @@
   }
   function cargarPerfil() {
     if (!usuario) { perfil = null; return Promise.resolve(); }
-    return rpc("mi_resumen").then(function (r) { perfil = r; revisarInsigniasCuenta(); }).catch(function () { perfil = null; });
+    return rpc("mi_resumen").then(function (r) { perfil = r; revisarInsigniasCuenta(); })
+      .then(function () { return sincronizarHoy(); }).then(function () { return cargarProgreso(false); })
+      .catch(function () { perfil = perfil || null; });
   }
   function reiniciarJuegos() {
-    pintarCuenta(); iniciarDia(); iniciarTrivia(); iniciarRanking(); pintarInsignias(); pintarEstados();
+    pintarCuenta(); iniciarDia(); iniciarTrivia(); iniciarRanking(); pintarInsignias(); pintarEstados(); pintarPerfil();
     var secDesafio = document.querySelector("[data-juego='desafio']");
     if (PENDIENTE && PENDIENTE.tipo === "desafio") { var pend = PENDIENTE; PENDIENTE = null; abrirReto(pend.codigo); }
     else if (secDesafio && !secDesafio.hidden && !document.querySelector("#juego-desafio .marcador:not(.reto-crear)")) iniciarDesafio();
@@ -984,6 +1118,8 @@
     poner("mas-o-menos", "Tu récord: " + leer("mom-record", 0), false);
     var ra = leer("res-anio-" + hoy, null);
     poner("anio", ra != null ? "Hoy: " + ra + "/500" : "5 momentos nuevos por día", ra != null);
+    var rc = leer("res-conexion-" + hoy, null), sc = leer("conexion-stats", null);
+    poner("conexion", rc != null ? "Hoy: " + rc + " puntos" : sc && sc.record ? "Tu récord: " + sc.record + " puntos" : "10 duelos nuevos por día", rc != null);
     var rq = leer("res-quien-" + hoy, null);
     poner("quien", rq != null ? "Hoy: " + rq + "/300" : "Tres jugadores nuevos por día", rq != null);
     var rg = leer("res-grilla-" + hoy, null), NG = { facil: "Fácil", intermedio: "Intermedio", dificil: "Difícil", experto: "Experto" };
@@ -994,10 +1130,92 @@
     poner("trivia", mejor.length ? "Jugaste " + plural(mejor.length, "tema", "temas") + " de " + Object.keys(D.temas).length : Object.keys(D.temas).length + " temas", false);
     if (perfil && perfil.posicion_semana) poner("ranking", "Vas " + perfil.posicion_semana + "° esta semana", false);
     poner("insignias", ganadas().length + " de " + INSIGNIAS.length + " ganadas", false);
+    if (PROGRESO) {
+      var nv0 = nivelDe(PROGRESO.xp_total || 0), mh0 = (PROGRESO.misiones_hoy || []).filter(function (m) { return m.valor >= m.meta; }).length;
+      poner("perfil", "Nivel " + nv0.n + ", " + nv0.nombre + " · Misiones de hoy: " + mh0 + "/" + (PROGRESO.misiones_hoy || []).length, false);
+    } else poner("perfil", sb ? "Entrá con tu cuenta para ver tu nivel" : "Nivel, misiones y estadísticas", false);
     var retos = misRetos();
     poner("desafio", retos.length ? "Jugaste " + plural(retos.length, "desafío", "desafíos") : "Sin cuenta: solo el link", false);
     if (document.getElementById("juego-insignias") && !document.querySelector("[data-juego='insignias']").hidden) pintarInsignias();
   }
+  // ------------------------------------------------- ¿Quién jugó con quién? --
+  var CX_DIF = { 1: "Fácil", 2: "Intermedio", 3: "Difícil" };
+  function puntosConexion(racha) { return 30 + 5 * Math.min(Math.max(racha - 1, 0), 4); }  // 30, y hasta +20 por racha
+  function iniciarConexion() {
+    var caja = document.getElementById("juego-conexion");
+    if (!caja || caja.getAttribute("data-listo")) return;
+    caja.setAttribute("data-listo", "1");
+    caja.innerHTML = "<p class='nota-dato'>Buscando jugadores…</p>";
+    fetch("conexion.json").then(function (r) { if (!r.ok) throw r; return r.json(); }).then(function (C) {
+      function delDia() {
+        var h = C.dias && C.dias[hoyTxt()];
+        if (h && h.length) return h;
+        return mezclar(C.practica, azar(semilla("conexion" + hoyTxt()))).slice(0, 10);  // por si el archivo quedó viejo
+      }
+      function partida(preguntas, clave) {
+        var est = clave ? leer(clave, null) : null;
+        est = est && est.r ? est : { r: [], racha: 0, mejor: 0, pts: 0, viendo: false };
+        function guardarEst() { if (clave) guardar(clave, est); }
+        function barras() {
+          return "<ol class='m-puntos' aria-hidden='true'>" + preguntas.map(function (_, i) {
+            var x = est.r[i]; return "<li class='" + (x ? (x.ok ? "ok" : "mal") : i === est.r.length ? "actual" : "") + "'></li>";
+          }).join("") + "</ol>";
+        }
+        function pintar() {
+          if (est.r.length >= preguntas.length && !est.viendo) return final();
+          var i = est.viendo ? est.r.length - 1 : est.r.length, q = preguntas[i], x = est.viendo ? est.r[i] : null;
+          caja.innerHTML = "<div class='marcador cx'><div class='m-arriba'><span class='m-tema'>" + CX_DIF[q.dif] + (est.racha > 1 ? " · racha de " + est.racha : "") + "</span>" +
+            "<span class='m-cuenta'>" + (i + 1) + "<small>/" + preguntas.length + "</small></span></div>" + barras() +
+            "<h3 class='m-pregunta'><span class='cx-nombre'>" + esc(q.a) + "</span> y <span class='cx-nombre'>" + esc(q.b) + "</span>, ¿jugaron juntos en Boca?</h3>" +
+            "<div class='opciones cx-opciones'>" + [[true, "Sí", "Jugaron juntos"], [false, "No", "Nunca jugaron juntos"]].map(function (o) {
+              var cls = x ? (o[0] === q.si ? " ok" : o[0] === x.elegida ? " mal" : "") : "";
+              return "<button type='button' class='opcion" + cls + "' data-si='" + o[0] + "'" + (x ? " disabled" : "") + "><span class='op-letra'>" + o[1] + "</span><span class='op-texto'>" + o[2] + "</span></button>";
+            }).join("") + "</div><div class='juego-dato' aria-live='polite'>" +
+            (x ? "<p class='m-veredicto " + (x.ok ? "bien" : "mal") + "'><b>" + (x.ok ? "¡Bien! +" + x.p : "Era al revés.") + "</b> " + esc(q.exp) + "</p>" +
+              "<button type='button' class='boton siguiente'>" + (est.r.length === preguntas.length ? "Ver resultado" : "Siguiente") + "</button>" :
+              "<p class='m-nota'>Cuenta si estuvieron juntos en la cancha en al menos un partido oficial. Racha: hasta +20 por respuesta.</p>") + "</div></div>";
+          caja.querySelectorAll(".opcion:not([disabled])").forEach(function (b) {
+            b.addEventListener("click", function () {
+              var si = b.getAttribute("data-si") === "true", ok = si === q.si;
+              est.racha = ok ? est.racha + 1 : 0;
+              var p = ok ? puntosConexion(est.racha) : 0;
+              est.pts += p; est.mejor = Math.max(est.mejor, est.racha);
+              est.r.push({ ok: ok, elegida: si, p: p }); est.viendo = true; guardarEst(); pintar();
+              var s = caja.querySelector(".siguiente"); if (s) s.focus({ preventScroll: true });
+            });
+          });
+          var sig = caja.querySelector(".siguiente");
+          if (sig) sig.addEventListener("click", function () { est.viendo = false; guardarEst(); pintar(); });
+        }
+        function final() {
+          var ac = est.r.filter(function (x) { return x.ok; }).length, max = preguntas.length * 30 + 5 * (0 + 1 + 2 + 3) + 20 * Math.max(0, preguntas.length - 4);
+          if (clave && leer("res-conexion-" + hoyTxt(), null) == null) {
+            reportar("conexion", est.pts);
+            guardar("res-conexion-" + hoyTxt(), est.pts);
+            var st = leer("conexion-stats", { jugadas: 0, aciertos: 0, preguntas: 0, record: 0, racha: 0 });
+            st.jugadas++; st.aciertos += ac; st.preguntas += preguntas.length; st.record = Math.max(st.record, est.pts); st.racha = Math.max(st.racha, est.mejor);
+            guardar("conexion-stats", st); pintarEstados();
+          }
+          if (ac === preguntas.length) ganar("conexion10");
+          var st2 = leer("conexion-stats", null);
+          var celdas = [est.r.map(function (x) { return x.ok ? "ok" : "mal"; })];
+          var cfg = clave ? { juego: "¿Quién jugó con quién? #" + numeroDelDia(), puntaje: est.pts, total: max, linea: ac + " de " + preguntas.length + " · racha de " + est.mejor, celdas: celdas,
+            texto: firma() + "¿Quién jugó con quién? #" + numeroDelDia() + " de Rincón Bostero\n" + est.pts + " puntos, " + ac + "/" + preguntas.length + " " +
+              est.r.map(function (x) { return x.ok ? "🟨" : "⬛"; }).join("") + "\n" + URL_JUEGOS + "#conexion" } : null;
+          pantallaFinal(caja, { etiqueta: "¿Quién jugó con quién?" + (clave ? " #" + numeroDelDia() : " · práctica"), puntaje: est.pts, total: max,
+            frase: ac === preguntas.length ? "¡Diez de diez! Conocés los vestuarios de memoria." : ac >= 7 ? "Muy bien." : ac >= 5 ? "Nada mal." : "Hay mucha historia: ¡a seguir!",
+            extra: "<p class='m-nota'>" + ac + " de " + preguntas.length + " correctas · mejor racha: " + est.mejor + "." +
+              (st2 && st2.jugadas ? " Tu récord: " + st2.record + " puntos y racha de " + st2.racha + ". Jugaste " + plural(st2.jugadas, "vez", "veces") + " y acertaste el " +
+                Math.round(100 * st2.aciertos / Math.max(1, st2.preguntas)) + "%." : "") + "</p>",
+            botones: "<button type='button' class='boton secundario' data-mas>Jugar 10 más (práctica)</button>", compartir: cfg });
+          caja.querySelector("[data-mas]").addEventListener("click", function () { partida(mezclar(C.practica, Math.random).slice(0, 10).sort(function (a, b) { return a.dif - b.dif; }), null); });
+        }
+        pintar();
+      }
+      partida(delDia(), "conexion-" + hoyTxt());
+    }).catch(function () { caja.innerHTML = "<p class='vacio'>No pude cargar el juego. Probá de nuevo en un rato.</p>"; caja.removeAttribute("data-listo"); });
+  }
+
   // ------------------------------------------------------------ ¿Quién soy? --
   var QS_PUNTOS = [100, 80, 60, 40, 20], QS_ERRORES = 3, QS_DIF = { 1: "Fácil", 2: "Intermedio", 3: "Difícil" };
   function iniciarQuienSoy() {
@@ -1036,7 +1254,7 @@
               "<button type='button' class='boton' id='qs-seguir'>" + (est.r.length >= secretos.length ? "Ver resultado" : "Siguiente jugador") + "</button></div>";
           } else if (termino) {
             var t = total(), max = secretos.length * 100;
-            if (clave) { guardar("res-quien-" + hoyTxt(), t); pintarEstados(); }
+            if (clave) { if (leer("res-quien-" + hoyTxt(), null) == null) reportar("quien", t); guardar("res-quien-" + hoyTxt(), t); pintarEstados(); }
             var celdas = est.r.map(function (x) { var f = []; for (var i = 0; i < x.v; i++) f.push(i === x.v - 1 && x.p ? "ok" : "mal"); return f; });
             cfg = { juego: "¿Quién soy?" + (clave ? " #" + numeroDelDia() : ""), puntaje: t, total: max,
               linea: est.r.filter(function (x) { return x.p; }).length + " de " + secretos.length + " adivinados", celdas: celdas,
@@ -1101,7 +1319,7 @@
     }).catch(function () { caja.innerHTML = "<p class='vacio'>No pude cargar el juego. Probá de nuevo en un rato.</p>"; caja.removeAttribute("data-listo"); });
   }
 
-  var INICIAR_AL_ABRIR = { grilla: iniciarGrilla, quien: iniciarQuienSoy, insignias: pintarInsignias, desafio: function () { if (sb) iniciarDesafio(); } };
+  var INICIAR_AL_ABRIR = { grilla: iniciarGrilla, quien: iniciarQuienSoy, conexion: iniciarConexion, insignias: pintarInsignias, perfil: function () { pintarPerfil(); if (conCuenta()) cargarProgreso(false); }, desafio: function () { if (sb) iniciarDesafio(); } };
   var PENDIENTE = null;  // link a un desafío o liga que llegó antes de conectar con el servidor
   function mostrar() {
     var id = (location.hash || "").slice(1), m = /^(desafio|liga)-([A-Za-z0-9]{6})$/.exec(id);

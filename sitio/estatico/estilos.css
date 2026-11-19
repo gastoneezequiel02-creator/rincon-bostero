@@ -425,7 +425,8 @@ td.pts { font-weight: 700; }
 .jt-cuerpo b { display: block; font: 700 25px/1.05 var(--titulos); color: var(--azul); margin-bottom: 4px; }
 .jt-cuerpo > span:not(.jt-estado) { display: block; font-size: 15px; line-height: 1.4; color: var(--tinta); }
 .jt-cuerpo .jt-estado.hecho { color: var(--verde); }
-.jextra { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; }
+.jextra { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+@media (max-width: 900px) and (min-width: 641px) { .jextra { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .jextra { grid-template-columns: 1fr; } }
 .jextra-item { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 16px 18px;
   background: var(--superficie); border-radius: 10px; text-decoration: none; color: var(--tinta); }
@@ -767,3 +768,52 @@ tr.detalle-tabla .nota-dato { margin: 8px 0 0; }
 .qs-lista li { padding: 4px 0; }
 .qs-lista li span { margin-right: 10px; }
 @media (max-width: 640px) { .qs-pistas li { font-size: 17px; } .qs-total { font-size: 60px; } }
+
+/* Tu perfil: nivel, experiencia y misiones */
+.pf-cabeza { display: grid; grid-template-columns: auto 1fr; gap: 16px 20px; align-items: center; padding: 20px; border-radius: 10px;
+  background: var(--azul-hondo); color: #fff; max-width: 760px; }
+.pf-nivel { display: grid; place-items: center; width: 92px; height: 92px; border-radius: 50%; border: 4px solid var(--oro);
+  font: 800 46px/1 var(--titulos); color: var(--oro); text-align: center; align-content: center; }
+.pf-nivel small { display: block; font: 600 12px/1 var(--texto); color: #c9d3ea; margin-bottom: 2px; }
+.pf-datos h3 { margin: 0; font: 800 30px/1.05 var(--titulos); color: #fff; }
+.pf-rango { margin: 2px 0 8px; font: 700 20px/1.1 var(--titulos); color: var(--oro); }
+.pf-datos .nota-dato { color: #dfe6f5; margin: 6px 0 0; }
+.pf-cifras { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; list-style: none; margin: 0; padding: 0; }
+.pf-cifras li { background: rgba(255, 255, 255, .08); border-radius: 8px; padding: 10px; font-size: 13px; color: #c9d3ea; text-align: center; }
+.pf-cifras b { display: block; font: 800 28px/1 var(--titulos); color: #fff; margin-bottom: 2px; }
+.pf-barra { display: block; height: 10px; border-radius: 5px; background: var(--linea); overflow: hidden; margin: 6px 0 2px; }
+.pf-barra i { display: block; height: 100%; background: var(--oro); border-radius: 5px; }
+.pf-cabeza .pf-barra { background: rgba(255, 255, 255, .18); }
+.pf-misiones { list-style: none; margin: 0 0 8px; padding: 0; display: grid; gap: 8px; max-width: 760px; }
+.pf-misiones li { display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: start; padding: 12px 14px; border-radius: 8px; background: var(--superficie); }
+.pf-misiones li.hecha { background: var(--oro-suave); }
+.pf-misiones b { font-weight: 600; }
+.pf-misiones small { color: var(--gris); font-size: 13px; }
+.pf-check { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--linea); display: grid; place-items: center; font-weight: 800; color: var(--azul-hondo); background: #fff; }
+.hecha .pf-check { background: var(--oro); border-color: var(--oro); }
+.pf-dias { display: grid; grid-template-columns: repeat(14, 1fr); gap: 4px; height: 120px; max-width: 760px; align-items: end; }
+.pf-dias span { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; }
+.pf-dias i { display: block; width: 100%; min-height: 2px; background: var(--azul); border-radius: 3px 3px 0 0; }
+.pf-dias small { font-size: 11px; color: var(--gris); margin-top: 3px; }
+.pf-det { display: block; font-size: 12px; color: var(--gris); }
+.pf-como { margin: 18px 0; max-width: 760px; }
+.pf-como summary { cursor: pointer; font-weight: 600; color: var(--azul); }
+.pf-como ul { padding-left: 18px; line-height: 1.55; }
+.pf-sin { padding: 16px 18px; border-radius: 10px; background: var(--superficie); max-width: 760px; }
+.historial-rk { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 6px; max-width: 760px; }
+.historial-rk li { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; padding: 10px 12px; border-radius: 8px; background: var(--superficie); }
+.h-periodo { font: 700 17px/1.1 var(--titulos); color: var(--azul); min-width: 110px; }
+.h-puesto small { color: var(--gris); }
+.h-puesto.p1 { font-weight: 700; }
+@media (max-width: 640px) {
+  .pf-nivel { width: 72px; height: 72px; font-size: 36px; }
+  .pf-datos h3 { font-size: 24px; }
+  .pf-cifras b { font-size: 22px; }
+  .pf-dias { height: 90px; }
+}
+
+/* ¿Quién jugó con quién? */
+.cx .cx-nombre { color: var(--oro); }
+.cx .cx-opciones { grid-template-columns: 1fr 1fr; }
+.cx .cx-opciones .op-letra { min-width: 44px; }
+@media (max-width: 520px) { .cx .cx-opciones { grid-template-columns: 1fr; } }
