@@ -20,7 +20,9 @@ def ejecutar() -> None:
     banco = [{k: q[k] for k in ("id", "tema", "texto", "opciones", "correcta", "dato")} for q in juegos.armar()["preguntas"]]
     url = c["supabase_url"].rstrip("/") + "/rest/v1/rpc/sincronizar_preguntas"
     # Las claves nuevas (sb_secret_...) van solo en "apikey"; las viejas (JWT service_role) también como Bearer.
-    cabeceras = {"apikey": clave}
+    # Supabase rechaza las claves secretas si el pedido parece venir de un navegador ("Mozilla/…"):
+    # se identifica como servidor
+    cabeceras = {"apikey": clave, "User-Agent": "RinconBosteroBot/1.0 (GitHub Actions; servidor)"}
     if clave.startswith("eyJ"):
         cabeceras["Authorization"] = f"Bearer {clave}"
     r = http_post_json(url, {"p": banco}, headers=cabeceras)
