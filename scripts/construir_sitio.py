@@ -35,7 +35,34 @@ def sitio() -> dict:
 
 
 def url_abs(ruta: str) -> str:
-    return sitio()["url"].rstrip("/") + "/" + ruta.lstrip("/")
+    ruta = ruta.lstrip("/")
+    if ruta == "index.html":  # la portada es la raíz del dominio
+        ruta = ""
+    return sitio()["url"].rstrip("/") + "/" + ruta
+
+
+def datos_estructurados_portada() -> str:
+    """Para Google: el nombre del sitio (con sus variantes) y la organización, solo en la portada."""
+    s = sitio()
+    raiz = url_abs("")
+    logo = url_abs("img/logo.webp") if (SITIO / "estatico" / "img" / "logo.webp").exists() else ""
+    datos = [
+        {"@context": "https://schema.org", "@type": "WebSite", "name": s["nombre"],
+         "alternateName": s.get("nombres_alternativos", []), "url": raiz, "inLanguage": "es-AR"},
+        {"@context": "https://schema.org", "@type": "NewsMediaOrganization", "name": s["nombre"], "url": raiz,
+         **({"logo": logo} if logo else {}),
+         "sameAs": [f"https://x.com/{s['twitter']}"] if s.get("twitter") else []},
+    ]
+    return "".join(f'<script type="application/ld+json">{json.dumps(d, ensure_ascii=False)}</script>' for d in datos)
+
+
+def medicion_html() -> str:
+    """Cloudflare Web Analytics: sin cookies ni datos personales."""
+    token = (config().get("estadisticas") or {}).get("cloudflare_token", "")
+    if not token:
+        return ""
+    return (f"<script defer src='https://static.cloudflareinsights.com/beacon.min.js' "
+            f"data-cf-beacon='{{\"token\": \"{token}\"}}'></script>")
 
 
 def hdb() -> dict:
@@ -157,7 +184,9 @@ def pagina(titulo: str, cuerpo: str, *, activa: str = "", pre: str = "", descrip
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(titulo_completo)}</title>
 <meta name="description" content="{e(desc)}">
-<link rel="canonical" href="{e(canonica or url_abs(activa or ''))}">
+<link rel="canonical" href="{e(canonica) if canonica else "__CANONICA__"}">
+<meta property="og:url" content="{e(canonica) if canonica else "__CANONICA__"}">
+{datos_estructurados_portada() if activa == "index.html" and not pre else ""}
 <meta property="og:title" content="{e(titulo)}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:site_name" content="{e(s['nombre'])}">
@@ -194,6 +223,7 @@ def pagina(titulo: str, cuerpo: str, *, activa: str = "", pre: str = "", descrip
   </div>
 </footer>
 <script src="{pre}estatico/app.js" defer></script>
+{medicion_html()}
 </body>
 </html>"""
 
@@ -1417,6 +1447,9 @@ el ranking y para que tu racha se mantenga en cualquier dispositivo. Tu mail no 
 <h2>Lo que queda en tu navegador</h2>
 <p>Las rachas y récords de los juegos se guardan en tu propio navegador (almacenamiento local). Si borrás los datos del navegador, se pierden.
 No usamos cookies de publicidad.</p>
+<h2>Estadísticas de visitas</h2>
+<p>Para saber cuántas personas leen la web usamos Cloudflare Web Analytics, que cuenta visitas sin cookies, sin guardar tu dirección IP
+y sin seguirte entre sitios.</p>
 <h2>Apodos</h2>
 <p>Los apodos ofensivos se borran sin aviso.</p>
 </div></article>"""
@@ -1502,6 +1535,8 @@ def construir() -> None:
         shutil.copytree(SITIO / "estatico" / "img", SALIDA / "img", dirs_exist_ok=True)
 
     def escribir(ruta: str, contenido: str):
+        if "__CANONICA__" in contenido:
+            contenido = contenido.replace("__CANONICA__", e(url_abs(ruta)))
         (SALIDA / ruta).write_text(contenido, encoding="utf-8")
 
     escribir("index.html", pagina_inicio(notas, proximos, jugados, tablas))
