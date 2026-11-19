@@ -124,13 +124,34 @@ def ejecutar_efemerides() -> None:
     log(f"Historia de Boca: {len(items)} efemérides para hoy")
 
 
-def efemerides_del_dia(mes: int, dia: int) -> list[dict]:
-    return leer_json(CARPETA_EFEMERIDES / f"{mes:02d}-{dia:02d}.json", {}).get("items", [])
+ARCHIVO_EFEMERIDES_ANIO = DATOS / "hdb" / "efemerides.json"  # los 366 días, importados desde el navegador
 
 
 def efemerides_guardadas() -> dict[str, list[dict]]:
-    """Todas las efemérides juntadas hasta ahora, por día ("11-18": [...])."""
-    return {f.stem: leer_json(f, {}).get("items", []) for f in sorted(CARPETA_EFEMERIDES.glob("*.json"))}
+    """Todas las efemérides guardadas, por día ("11-18": [...]): el archivo con el año completo,
+    más los días sueltos que haya leído el robot (si un día está en los dos, vale el del año completo)."""
+    dias = {f.stem: leer_json(f, {}).get("items", []) for f in sorted(CARPETA_EFEMERIDES.glob("*.json"))}
+    dias.update({k: v for k, v in ((leer_json(ARCHIVO_EFEMERIDES_ANIO, {}) or {}).get("dias") or {}).items() if v})
+    return dict(sorted(dias.items()))
+
+
+def efemerides_del_dia(mes: int, dia: int) -> list[dict]:
+    return efemerides_guardadas().get(f"{mes:02d}-{dia:02d}", [])
+
+
+def efemerides_destacadas(items: list[dict], n: int = 5) -> list[dict]:
+    """Las n más llamativas de un día, en orden de año: la destacada por Historia de Boca, jugadores con títulos,
+    partidos oficiales y después el resto (las más recientes primero)."""
+    def peso(x):
+        if x.get("destacado"):
+            return 0
+        if x.get("tipo") == "persona" and re.search(r"(?i)gan[óo] (un|dos|tres|\d+) t[íi]tulo", x.get("detalle", "")):
+            return 1
+        if x.get("tipo") == "partido" and "amistoso" not in normalizar(x.get("detalle", "")):
+            return 2
+        return 3
+    elegidas = sorted(items, key=lambda x: (peso(x), -x["anio"]))[:n]
+    return sorted(elegidas, key=lambda x: x["anio"])
 
 
 # ------------------------------------------------------ historial partido a partido --

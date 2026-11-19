@@ -311,14 +311,17 @@ def preguntas_historia(rng) -> list[dict]:
                                 f"{min(p['goles_boca'], p['goles_rival'])} ({p['torneo']}). ¿Contra quién?",
                                 p["rival"], [g for g in grandes if g != p["rival"]][:5]))
     # efemérides guardadas: "¿qué pasó un 18 de noviembre de 1945?"
-    for f in sorted((DATOS / "hdb" / "efemerides").glob("*.json")) if (DATOS / "hdb" / "efemerides").exists() else []:
-        items = (leer_json(f, {}) or {}).get("items", [])
-        mes, dia = int(f.stem[:2]), int(f.stem[3:])
-        for it in items:
-            otros = [x["titulo"] for x in items if x["anio"] != it["anio"]]
-            if len(otros) >= 3:
-                qs.append(_pregunta("historia", f"¿Qué pasó en la historia de Boca un {dia} de {MESES[mes - 1]} de {it['anio']}?",
-                                    it["titulo"], otros, it.get("detalle", "")))
+    # una por día: la efeméride destacada; las opciones falsas son destacadas de otros días (mismo estilo de redacción)
+    import historia_de_boca
+    destacadas = {k: next((x for x in v if x.get("destacado")), None) for k, v in historia_de_boca.efemerides_guardadas().items()}
+    destacadas = {k: v for k, v in destacadas.items() if v}
+    for clave, it in sorted(destacadas.items(), key=lambda kv: _id("efemeride" + kv[0]))[:60]:  # 60 fijas, para no tapar al resto
+        mes, dia = int(clave[:2]), int(clave[3:])
+        otros = [x["titulo"] for k, x in destacadas.items() if k != clave and x["anio"] != it["anio"] and x.get("tipo") == it.get("tipo")]
+        otros = sorted(otros, key=lambda t: _id(t + clave))[:3]
+        if len(otros) >= 3:
+            qs.append(_pregunta("historia", f"¿Qué pasó en la historia de Boca un {dia} de {MESES[mes - 1]} de {it['anio']}?",
+                                it["titulo"], otros, it.get("detalle", "")))
     return [q for q in qs if q]
 
 

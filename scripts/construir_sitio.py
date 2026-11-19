@@ -325,7 +325,8 @@ def pagina_inicio(notas, proximos, jugados, tablas) -> str:
     items = []
     if hdb():
         import historia_de_boca
-        items = [{"anio": x["anio"], "titulo": x["titulo"]} for x in historia_de_boca.efemerides_del_dia(hoy.month, hoy.day)]
+        items = [{"anio": x["anio"], "titulo": x["titulo"]}
+                 for x in historia_de_boca.efemerides_destacadas(historia_de_boca.efemerides_del_dia(hoy.month, hoy.day))]
     if not items and bs_opciones():
         # sin efemérides guardadas para hoy: partidos oficiales jugados un día como hoy (BocaStats)
         import bocastats
@@ -1081,8 +1082,11 @@ def pagina_efemerides(mes: int, dia: int, items: list[dict], dias: list[str], pr
     hoy = ahora()
     es_hoy = (mes, dia) == (hoy.month, hoy.day)
     titulo = f"Un día como hoy, {dia} de {MESES[mes - 1]}"
+    if partidos_dia:
+        items = [x for x in items if x.get("destacado") or x.get("tipo") != "partido"]
+    items = sorted(items, key=lambda x: (not x.get("destacado"), x["anio"]))
     lista = "".join(
-        f'<li><b>{x["anio"]}</b><div><h3>{e(x["titulo"])}</h3>'
+        f'<li{" class=destacada" if x.get("destacado") else ""}><b>{x["anio"]}</b><div><h3>{e(x["titulo"])}</h3>'
         f'{("<p>" + e(x["detalle"]) + "</p>") if x.get("detalle") else ""}</div></li>' for x in items)
     otros = "".join(
         f'<a href="{pre}efemerides/{d}.html"{" aria-current=page" if d == f"{mes:02d}-{dia:02d}" else ""}>'
