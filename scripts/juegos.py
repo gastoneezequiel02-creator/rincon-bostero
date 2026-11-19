@@ -513,11 +513,136 @@ def datos_mas_o_menos() -> list[dict]:
     if len(gol.get("jugadores", [])) >= 4:
         grupos.append({"pregunta": f"¿Quién hizo más goles en la temporada {gol.get('temporada', '')}?", "unidad": "goles",
                        "items": [{"nombre": j["nombre"], "valor": j["goles"]} for j in gol["jugadores"]]})
-    ids = idolos()
-    if ids:
-        grupos.append({"pregunta": "¿Quién llegó antes a la Primera de Boca?", "unidad": "", "menor": True,
-                       "items": [{"nombre": i["nombre"], "valor": i["debut"]} for i in ids]})
+    try:
+        grupos += grupos_rankings()
+    except Exception as e:
+        print(f"Juegos: no pude armar los duelos de rankings: {e}")
     return [g for g in grupos if len({i["valor"] for i in g["items"]}) >= 3]
+
+
+# ------------------------------------------------------------ fotos --------
+def _con_foto(item: dict) -> dict:
+    """Agrega la foto libre (Wikimedia) de la persona, si ya se bajó."""
+    try:
+        import imagenes
+        f = imagenes.foto_guardada(item["nombre"])
+    except Exception:
+        f = None
+    if f:
+        item = {**item, "foto": f["imagen"], "credito": f["credito"].replace("Foto de archivo: ", "")}
+    return item
+
+
+def grupos_rankings() -> list[dict]:
+    """Duelos de jugadores y técnicos a partir de los rankings históricos (Historia de Boca)."""
+    rk = leer_json(DATOS / "hdb" / "rankings.json", {}) or {}
+    js = rk.get("jugadores") or {}
+    textos = {
+        "goles": ("¿Quién hizo más goles en Boca?", "goles"),
+        "partidos": ("¿Quién jugó más partidos en Boca?", "partidos"),
+        "cabeza": ("¿Quién hizo más goles de cabeza en Boca?", "goles de cabeza"),
+        "penales": ("¿Quién convirtió más penales en Boca?", "penales"),
+        "amonestaciones": ("¿Quién vio más tarjetas amarillas en Boca?", "amarillas"),
+        "expulsiones": ("¿A quién expulsaron más veces jugando en Boca?", "expulsiones"),
+    }
+    grupos = []
+    for clave, (preg, unidad) in textos.items():
+        filas = (js.get(clave) or {}).get("filas", [])
+        if len(filas) >= 6:
+            grupos.append({"pregunta": preg, "unidad": unidad, "personas": True, "fuente": "Historia de Boca, partidos oficiales",
+                           "items": [_con_foto({"nombre": f["nombre"], "valor": f["valor"]}) for f in filas]})
+    tec = rk.get("tecnicos") or []
+    if len(tec) >= 6:
+        grupos.append({"pregunta": "¿Qué técnico ganó más partidos dirigiendo a Boca?", "unidad": "victorias", "personas": True,
+                       "fuente": "Historia de Boca, partidos oficiales",
+                       "items": [_con_foto({"nombre": t["nombre"], "valor": t["g"]}) for t in tec]})
+    return grupos
+
+
+# ------------------------------------------------------- ¿en qué año fue? --
+ORD_F = ["primera", "segunda", "tercera", "cuarta", "quinta", "sexta", "séptima", "octava", "novena", "décima"]
+ORD_M = ["primer", "segundo", "tercer", "cuarto", "quinto", "sexto", "séptimo", "octavo", "noveno", "décimo"]
+
+
+def eventos_anio() -> list[dict]:
+    """Hechos con año exacto, todos sacados de datos verificados de la web."""
+    eventos = []
+    pal = leer_json(DATOS_MANUAL / "palmares.json", {}) or {}
+    por_tipo = defaultdict(list)
+    for cat in pal.get("categorias", []):
+        for t in cat.get("titulos", []):
+            if "/" in t:
+                continue  # temporadas partidas (2017/18): el año es ambiguo
+            m = re.search(r"\b(19\d{2}|20\d{2})\b", t)
+            if not m:
+                continue
+            base = re.sub(r"\s*\(.*?\)", "", t)
+            base = re.sub(r"\s*\b(19|20)\d{2}\b\s*", " ", base).strip()
+            por_tipo[base].append(int(m.group(1)))
+    for base, anios in por_tipo.items():
+        anios.sort()
+        if base.lower().startswith(("campeonato de primera", "campeón de liga")):
+            continue  # demasiados y muy parecidos entre sí
+        masc = base.lower().startswith(("torneo", "campeonato", "metropolitano", "nacional"))
+        for i, a in enumerate(anios):
+            if len(anios) == 1:
+                texto = f"Boca gana {'el' if masc else 'la'} {base}"
+            elif i < len(ORD_F):
+                texto = f"Boca gana su {(ORD_M if masc else ORD_F)[i]} {base}"
+            else:
+                continue
+            eventos.append({"id": _id(f"tit-{base}-{a}"), "tipo": "Título", "texto": texto, "anio": a,
+                            "dato": f"{base} {a}."})
+    try:
+        import bocastats
+        partidos = [p for p in bocastats.todos_los_partidos() if not p["amistoso"]]
+    except Exception:
+        partidos = []
+    for p in partidos:
+        if p.get("rival_slug") != "river":
+            continue
+        gb, gr = p.get("goles_boca"), p.get("goles_rival")
+        if gb is None or gr is None or abs(gb - gr) < 3:
+            continue
+        comp = re.sub(r"\s*\b(19|20)\d{2}\b(/\d{2,4})?", "", p.get("torneo", "")).strip(" -") or "un torneo oficial"
+        lugar = "de local" if p.get("condicion") == "L" else "de visitante" if p.get("condicion") == "V" else "en cancha neutral"
+        art = "la" if re.match(r"(?i)(copa|supercopa|recopa|liga)", comp) else "el"
+        if gb > gr:
+            texto = f"Superclásico: Boca le gana {gb}-{gr} a River {lugar}, por {art} {comp}"
+        else:
+            texto = f"Superclásico: Boca pierde {gb}-{gr} con River {lugar}, por {art} {comp}"
+        anio = int(p["fecha"][:4])
+        eventos.append({"id": _id(f"sc-{p['fecha']}"), "tipo": "Superclásico", "texto": texto, "anio": anio,
+                        "dato": f"Fue el {int(p['fecha'][8:10])} de {MESES[int(p['fecha'][5:7]) - 1]} de {anio}."})
+    rec = leer_json(DATOS / "bocastats" / "records.json", {}) or {}
+    textos = {"Mayor goleada": "La goleada más grande de la historia de Boca: {valor}",
+              "Peor derrota": "La peor derrota de la historia de Boca: {valor}",
+              "Primer partido": "El primer partido de la historia de Boca: {valor}"}
+    for m in rec.get("marcas", []):
+        anios = re.findall(r"\b(19\d{2}|20\d{2})\b", m.get("detalle", ""))
+        if m.get("titulo") in textos and len(set(anios)) == 1:
+            eventos.append({"id": _id("rec-" + m["titulo"]), "tipo": "Récord", "texto": textos[m["titulo"]].format(valor=m["valor"]),
+                            "anio": int(anios[0]), "dato": m["detalle"] + "."})
+    return eventos
+
+
+# ---------------------------------------------------------- grilla bostera --
+MIN_GRILLA = 15  # clubes con al menos esta cantidad de jugadores compartidos con Boca
+
+
+def datos_grilla() -> dict | None:
+    """Jugadores de Boca (Wikidata) y los clubes que sirven para armar la grilla. La grilla del día la arma la web."""
+    d = leer_json(DATOS / "wikidata" / "jugadores_boca.json", {}) or {}
+    clubes = {q: c for q, c in (d.get("clubes") or {}).items() if c.get("jugadores", 0) >= MIN_GRILLA}
+    if len(clubes) < 8:
+        return None
+    orden = sorted(clubes, key=lambda q: -clubes[q]["jugadores"])
+    indice = {q: i for i, q in enumerate(orden)}
+    jugadores = []
+    for nombre, cs in d.get("jugadores", []):
+        jugadores.append([nombre] + sorted(indice[c] for c in cs if c in indice))
+    return {"fuente": "Wikidata", "consultado": d.get("consultado", "")[:10],
+            "clubes": [clubes[q]["nombre"] for q in orden], "jugadores": jugadores}
 
 
 # ------------------------------------------------------------------- armado --
@@ -535,9 +660,14 @@ def armar() -> dict:
             vistas.add(q["id"])
             unicas.append(q)
     temas = {k: v for k, v in TEMAS.items() if sum(1 for q in unicas if q["tema"] == k) >= 4}
-    return {"temas": temas, "preguntas": unicas, "mas_o_menos": datos_mas_o_menos(),
-            "idolos": [{k: i.get(k) for k in ("nombre", "apodo", "posicion", "pais", "debut", "libertadores", "intercontinental")}
-                       for i in idolos()]}
+    try:
+        eventos = eventos_anio()
+    except Exception as e:
+        print(f"Juegos: no pude armar ¿En qué año fue?: {e}")
+        eventos = []
+    return {"temas": temas, "preguntas": unicas, "mas_o_menos": datos_mas_o_menos(), "anio": eventos,
+            "idolos": [_con_foto({k: i.get(k) for k in ("nombre", "apodo", "posicion", "pais", "debut", "libertadores",
+                                                         "intercontinental")}) for i in idolos()]}
 
 
 if __name__ == "__main__":

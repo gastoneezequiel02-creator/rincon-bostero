@@ -28,6 +28,7 @@ def main(solo_sitio: bool = False):
     import imagenes
     import noticias_rss
     import sincronizar_juegos
+    import wikidata_jugadores
 
     ok = True
     if not solo_sitio:
@@ -38,6 +39,7 @@ def main(solo_sitio: bool = False):
         ok &= paso("noticias RSS", noticias_rss.ejecutar)
         ok &= paso("previas y crónicas", cronicas.ejecutar)
         paso("fotos de las notas", imagenes.ejecutar)  # si Wikimedia no anda, no frena nada
+        paso("jugadores para la grilla (Wikidata, 1 vez por semana)", wikidata_jugadores.ejecutar)
     # El sitio se arma siempre, aunque algo de arriba haya fallado
     if not paso("armar el sitio", construir_sitio.construir):
         sys.exit(1)

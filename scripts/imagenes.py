@@ -169,6 +169,69 @@ def foto_de_persona(nombre: str, cache: dict) -> dict | None:
     return res
 
 
+def _variantes(nombre: str) -> list[str]:
+    """'Hugo Orlando Gatti' → ['Hugo Orlando Gatti', 'Hugo Gatti']: Wikidata suele tener el nombre corto."""
+    t = nombre.split()
+    out = [nombre]
+    if len(t) >= 3:
+        out += [f"{t[0]} {t[-1]}", f"{t[0]} {t[-2]}"]
+    return list(dict.fromkeys(out))
+
+
+def foto_de_persona_variantes(nombre: str, cache: dict) -> dict | None:
+    """Prueba el nombre completo y versiones cortas. Lo que encuentra queda guardado bajo el nombre original."""
+    clave = normalizar(nombre)
+    guardado = cache["personas"].get(clave)
+    if guardado and guardado.get("archivo"):
+        res = cache["archivos"].get(guardado["archivo"])
+        if res and (SITIO / "estatico" / res["imagen"]).exists():
+            return res
+    for v in _variantes(nombre):
+        res = foto_de_persona(v, cache)
+        if res:
+            cache["personas"][clave] = {"archivo": next(k for k, x in cache["archivos"].items() if x is res),
+                                        "buscado": ahora().isoformat()}
+            return res
+    return None
+
+
+def foto_guardada(nombre: str) -> dict | None:
+    """Foto ya bajada de esa persona (sin conectarse): para armar la web."""
+    cache = leer_json(CACHE, {}) or {}
+    g = (cache.get("personas") or {}).get(normalizar(nombre)) or {}
+    res = (cache.get("archivos") or {}).get(g.get("archivo") or "")
+    if res and (SITIO / "estatico" / res["imagen"]).exists():
+        return res
+    return None
+
+
+def personas_de_los_juegos() -> list[str]:
+    """Ídolos, los rankings históricos y los técnicos: los que aparecen con foto en los juegos."""
+    from comun import DATOS, DATOS_MANUAL
+    nombres = [i["nombre"] for i in (leer_json(DATOS_MANUAL / "idolos.json", {}) or {}).get("idolos", [])]
+    rk = leer_json(DATOS / "hdb" / "rankings.json", {}) or {}
+    for r in (rk.get("jugadores") or {}).values():
+        nombres += [f["nombre"] for f in r.get("filas", [])]
+    nombres += [t["nombre"] for t in rk.get("tecnicos", [])]
+    return list(dict.fromkeys(nombres))
+
+
+def completar_fotos_juegos(cache: dict, maximo: int = 30) -> int:
+    """Busca la foto de las personas de los juegos que todavía no se buscaron (o se buscaron hace mucho)."""
+    hechas = 0
+    for nombre in personas_de_los_juegos():
+        g = cache["personas"].get(normalizar(nombre))
+        if g and (g.get("archivo") or g.get("buscado", "") > (ahora() - dt.timedelta(days=DIAS_REINTENTO)).isoformat()):
+            continue
+        foto_de_persona_variantes(nombre, cache)
+        if not cache["personas"].get(normalizar(nombre)):
+            cache["personas"][normalizar(nombre)] = {"archivo": None, "buscado": ahora().isoformat()}
+        hechas += 1
+        if hechas >= maximo:
+            break
+    return hechas
+
+
 def _nombres_posibles(nota: dict) -> list[str]:
     nombres = list(nota.get("protagonistas") or [])
     for e in nota.get("etiquetas") or []:
@@ -230,6 +293,15 @@ def ejecutar(dias: int = 10) -> int:
     if not config().get("imagenes", {}).get("activado", True):
         return 0
     corte = (ahora() - dt.timedelta(days=dias)).isoformat()
+    cache = _cache()
+    try:
+        n = completar_fotos_juegos(cache)
+        if n:
+            log(f"Imágenes: busqué la foto de {n} personas de los juegos")
+    except SinRed as e:
+        log(f"Imágenes: Wikimedia no respondió ({e}).")
+    finally:
+        guardar_json(CACHE, cache)
     pendientes = []
     for ruta in NOTAS.glob("*.json"):
         n = leer_json(ruta)
@@ -238,7 +310,6 @@ def ejecutar(dias: int = 10) -> int:
     if not pendientes:
         return 0
     pendientes.sort(key=lambda x: x[1].get("fecha", ""), reverse=True)
-    cache = _cache()
     hechas = 0
     try:
         for ruta, n in pendientes[:MAX_POR_CORRIDA]:

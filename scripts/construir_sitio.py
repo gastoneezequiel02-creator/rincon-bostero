@@ -299,9 +299,16 @@ def pagina_inicio(notas, proximos, jugados, tablas) -> str:
   <p class="donde">{e(u.get('estadio', ''))}</p>
 </section>""")
         dia_n = (ahora().date() - __import__("datetime").date(2026, 11, 18)).days + 1
+        hs = hincha_semana()
+        hincha = ""
+        if hs.get("ganadores"):
+            nombres = " y ".join(f"<b>{e(g['apodo'])}</b>" for g in hs["ganadores"])
+            pts = hs["ganadores"][0]["puntos"]
+            hincha = (f'<p class="hincha-semana"><span>Hincha de la semana</span>{nombres}, con {pts} puntos. '
+                      f'<a href="juegos.html#ranking">Ver ranking</a></p>')
         lateral.append(f"""<section class="invitacion-juego"><h2 class="titulo-seccion">Pregunta del día #{dia_n}</h2>
 <p>10 preguntas sobre la historia de Boca, las mismas para todos. ¿Cuántas sacás?</p>
-<a class="boton" href="juegos.html">Jugar</a></section>""")
+<a class="boton" href="juegos.html#del-dia">Jugar</a>{hincha}</section>""")
         forma = "".join(f'<li class="r-{p["resultado"]}" title="{NOMBRE_RES[p["resultado"]]} {p["goles_boca"]}-{p["goles_rival"]} '
                         f'vs {e(p["rival"]["nombre"])}">{p["resultado"]}</li>' for p in jugados[:5][::-1] if p.get("resultado"))
         lateral.append(f"""<section><h2 class="titulo-seccion">Cómo viene Boca</h2>
@@ -1090,6 +1097,33 @@ def cuentas() -> dict:
     return c if c.get("activado") and c.get("supabase_url") and c.get("supabase_anon_key") else {}
 
 
+_HINCHA = None
+
+
+def hincha_semana() -> dict:
+    """El primero del ranking de la semana pasada (se consulta una vez por armado de la web)."""
+    global _HINCHA
+    if _HINCHA is not None:
+        return _HINCHA
+    _HINCHA = {}
+    c = cuentas()
+    if not c:
+        return _HINCHA
+    try:
+        from comun import http_post_json
+        _HINCHA = http_post_json(c["supabase_url"].rstrip("/") + "/rest/v1/rpc/hincha_de_la_semana", {}, timeout=20,
+                                 headers={"apikey": c["supabase_anon_key"]}) or {}
+    except Exception as ex:
+        log(f"Sitio: no pude leer el hincha de la semana ({ex})")
+    return _HINCHA
+
+
+GLIFO_IDOLO = ('<svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="28" r="15"/>'
+               '<path d="M12 78c2-18 14-28 28-28s26 10 28 28z"/></svg>')
+GLIFO_GRILLA = '<span class="g-grilla" aria-hidden="true">' + "".join(
+    f'<i class="{"on" if k in (0, 4, 5, 7) else ""}"></i>' for k in range(9)) + "</span>"
+
+
 def pagina_juegos(proximos) -> str:
     import juegos
     datos = juegos.armar()
@@ -1097,32 +1131,64 @@ def pagina_juegos(proximos) -> str:
     c = cuentas()
     if c:  # con cuentas, las respuestas viven solo en la base de datos: la página no las lleva
         datos["preguntas"] = []
+    datos["hay_grilla"] = bool(juegos.datos_grilla())
     datos_json = json.dumps(datos, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-    juegos_lista = [("del-dia", "Pregunta del día"), ("mas-o-menos", "¿Más o menos?"), ("trivia", "Trivia por temas"),
-                    ("idolo", "Adiviná el ídolo"), ("ranking", "Ranking")]
-    pestanas = "".join(
-        f'<button type="button" data-destino="{k}" aria-pressed="{"true" if i == 0 else "false"}">{e(n)}</button>'
-        for i, (k, n) in enumerate(juegos_lista))
-    secciones = [
-        ("del-dia", "La pregunta xeneize del día", "10 preguntas por día, las mismas para todos y sin repetir de un día a otro. Compartí tu resultado y mantené la racha.", "juego-dia"),
-        ("mas-o-menos", "¿Más o menos?", "Dos opciones, una sola correcta. ¿Hasta dónde llega tu racha?", "juego-mom"),
-        ("trivia", "Trivia por temas", "10 preguntas del tema que elijas: títulos, Superclásico, rivales, historia, ídolos y la temporada.", "juego-trivia"),
-        ("idolo", "Adiviná el ídolo", "Tenés 6 intentos para descubrir al ídolo del día. Cada intento te da pistas.", "juego-idolo"),
-        ("ranking", "Ranking", "Los que más saben de Boca. Suman la pregunta del día y la trivia.", "juego-ranking"),
+    dia_n = (ahora().date() - __import__("datetime").date(2026, 11, 18)).days + 1
+
+    # (id, nombre, descripción corta, glifo, id de la caja)
+    lista = [
+        ("idolo", "Adiviná el ídolo", "Una foto borrosa y 6 intentos. Cada intento la aclara un poco más.",
+         GLIFO_IDOLO, "juego-idolo"),
+        ("mas-o-menos", "¿Más o menos?", "Cara a cara: ¿quién hizo más goles, quién jugó más partidos? Hasta que le erres.",
+         '<span class="g-texto">+<small>/</small>−</span>', "juego-mom"),
+        ("anio", "¿En qué año fue?", "5 momentos de la historia de Boca. Cuanto más cerca del año, más puntos.",
+         '<span class="g-texto">19<small>··</small></span>', "juego-anio"),
+        ("grilla", "Grilla bostera", "Nombrá jugadores de Boca que también pasaron por los clubes de cada fila y columna.",
+         GLIFO_GRILLA, "juego-grilla"),
+        ("trivia", "Trivia por temas", "10 preguntas del tema que elijas: títulos, Superclásico, ídolos y más.",
+         '<span class="g-texto g-abcd">A B<br>C D</span>', "juego-trivia"),
     ]
+    if not datos["hay_grilla"]:
+        lista = [x for x in lista if x[0] != "grilla"]
+    tarjetas = "".join(
+        f'<a class="jtarjeta" href="#{k}"><span class="jt-glifo">{g}</span><span class="jt-cuerpo">'
+        f'<b>{e(n)}</b><span>{e(d)}</span><span class="jt-estado" data-estado="{k}"></span></span></a>'
+        for k, n, d, g, _c in lista)
+    secciones = [("del-dia", f"Pregunta del día #{dia_n}",
+                  "10 preguntas por día, las mismas para todos y sin repetir. Mantené la racha.", "juego-dia")]
+    secciones += [(k, n, d, caja) for k, n, d, _g, caja in lista]
+    secciones += [("ranking", "Ranking", "Los que más saben de Boca. Suman la pregunta del día y la trivia.", "juego-ranking"),
+                  ("insignias", "Tus insignias", "Se ganan jugando. Las de la cuenta se ven en cualquier dispositivo.",
+                   "juego-insignias")]
     cuerpo_secc = "".join(
-        f'<section class="juego" data-pestana-id="{k}"><h2 class="nombre-competencia">{e(t)}</h2><p class="nota-dato">{e(d)}</p>'
-        f'<div class="juego-caja" id="{caja}"><p class="nota-dato">Cargando…</p></div></section>' for k, t, d, caja in secciones)
+        f'<section class="juego" data-juego="{k}" hidden><a class="volver" href="#">Todos los juegos</a>'
+        f'<h2 class="juego-titulo">{e(t)}</h2><p class="juego-bajada">{e(d)}</p>'
+        f'<div class="juego-caja" id="{caja}"><p class="nota-dato">Cargando…</p></div></section>'
+        for k, t, d, caja in secciones)
     sb_attrs = ""
     if c:
         sb_attrs = f' data-supabase-url="{e(c["supabase_url"])}" data-supabase-key="{e(c["supabase_anon_key"])}"'
         if c.get("entrar_con_google"):
             sb_attrs += ' data-google="1"'
     sb_script = ('<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>' if c else "")
-    cuerpo = f"""<header class="encabezado-pagina"><h1>Juegos</h1><p>¿Cuánto sabés de Boca? Todas las preguntas salen de los datos de la web.</p></header>
+    cuerpo = f"""<div class="juegos" data-dia="{dia_n}">
 <div class="cuenta" id="cuenta" hidden></div>
-<div class="filtros pestanas" role="group" aria-label="Juegos" data-pestanas>{pestanas}</div>
+<div class="portada-juegos" id="portada-juegos">
+  <header class="juegos-cabeza"><h1>Juegos</h1><p>¿Cuánto sabés de Boca? Todo sale de los datos de la web: títulos, historiales, récords y ídolos.</p></header>
+  <a class="jdia" href="#del-dia">
+    <span class="jdia-numero"><small>Pregunta del día</small>#{dia_n}</span>
+    <span class="jdia-texto"><b>10 preguntas nuevas hoy</b><span>Las mismas para todos. Compartí tu resultado y mantené la racha.</span>
+      <span class="jt-estado" data-estado="del-dia"></span></span>
+    <span class="jdia-ir">Jugar</span>
+  </a>
+  <div class="jtarjetas">{tarjetas}</div>
+  <div class="jextra">
+    <a class="jextra-item" href="#ranking"><b>Ranking</b><span data-estado="ranking">Semana, mes e histórico</span></a>
+    <a class="jextra-item" href="#insignias"><b>Insignias</b><span data-estado="insignias">Mirá cuáles ganaste</span></a>
+  </div>
+</div>
 {cuerpo_secc}
+</div>
 <script type="application/json" id="datos-juegos" data-url="{e(url_abs("juegos.html"))}"{sb_attrs}>{datos_json}</script>
 {sb_script}
 <script src="estatico/juegos.js" defer></script>"""
@@ -1264,6 +1330,10 @@ def construir() -> None:
                                                               pre="../", partidos_dia=por_dia.get(d)))
     escribir("records.html", pagina_records(historicos, proximos))
     escribir("juegos.html", pagina_juegos(proximos))
+    import juegos as _juegos
+    grilla = _juegos.datos_grilla()
+    if grilla:
+        escribir("grilla.json", json.dumps(grilla, ensure_ascii=False, separators=(",", ":")))
     escribir("privacidad.html", pagina_privacidad(proximos))
     for i, n in enumerate(notas):
         misma_cat = [x for x in notas if x is not n and x.get("categoria") == n.get("categoria")][:2]
