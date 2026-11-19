@@ -1220,6 +1220,24 @@ def pagina_records(historicos: list[dict], proximos) -> str:
         items = "".join(f'<li><span class="nota-dato">{e(m["titulo"])}</span><b>{e(m["valor"])}</b><span>{e(m.get("detalle", ""))}</span></li>'
                         for m in marcas)
         partes.append(f'<section><h2 class="titulo-seccion">Marcas históricas</h2><ul class="marcas">{items}</ul></section>')
+    pro = (leer_json(DATOS_MANUAL / "records_profesionalismo.json", {}) or {}).get("records", [])
+    if pro:
+        rp = {}
+        if len(oficiales) > 3000:  # los que se pueden, recalculados con la base (todas las competencias, desde 1931)
+            rp = bocastats.mejores_rachas([p for p in historicos if p["fecha"] >= "1931-05"])
+        filas, fuentes = "", []
+        for m in pro:
+            valor, detalle = m["valor"], m.get("detalle", "")
+            r = (rp.get(m.get("calculado")) or [None])[0] if m.get("calculado") else None
+            if r and str(len(r)) not in valor:  # la base dice otra cosa: se muestra lo calculado, sin el texto manual
+                unidad = "triunfos seguidos" if m["calculado"] == "victorias" else "partidos sin perder"
+                valor = f"{len(r)} {unidad}"
+                detalle = f'Del {_fecha_txt(r[0]["fecha"])} al {_fecha_txt(r[-1]["fecha"])}.'
+            if m.get("fuente") and m["fuente"] not in fuentes:
+                fuentes.append(m["fuente"])
+            filas += f'<li><span class="nota-dato">{e(m["titulo"])}</span><b>{e(valor)}</b><span>{e(detalle)}</span></li>'
+        partes.append(f'<section><h2 class="titulo-seccion">Récords del profesionalismo</h2><ul class="marcas">{filas}</ul>'
+                      f'<p class="nota-dato">Desde 1931. Fuentes: {e(", ".join(fuentes))} y la base partido a partido de BocaStats.</p></section>')
     partes += secciones_rankings()
     if len(oficiales) > 500:
         goleadas = sorted(oficiales, key=lambda p: (-(p["goles_boca"] - p["goles_rival"]), -p["goles_boca"], p["fecha"]))[:10]
