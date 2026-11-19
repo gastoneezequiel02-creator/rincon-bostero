@@ -1,0 +1,26 @@
+{
+  "slug": "liberal-argentino",
+  "nombre": "Liberal Argentino",
+  "importado": "2026-11-18T22:42:26-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1927-05-15",
+      "torneo": "Campeonato 1927",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1928-09-02",
+      "torneo": "Campeonato 1928",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

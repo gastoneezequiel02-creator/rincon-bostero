@@ -1,0 +1,26 @@
+{
+  "slug": "los-andes-sj",
+  "nombre": "Los Andes Sj",
+  "importado": "2026-11-18T22:42:26-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1977-12-08",
+      "torneo": "Torneo Nacional 1977",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1978-01-08",
+      "torneo": "Torneo Nacional 1977",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    }
+  ]
+}

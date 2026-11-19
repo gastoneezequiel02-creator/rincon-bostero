@@ -1,0 +1,26 @@
+{
+  "slug": "gemes-santiago",
+  "nombre": "Gemes Santiago",
+  "importado": "2026-11-18T22:42:25-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "1977-05-30",
+      "torneo": "Amistosos 1977",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "2016-06-29",
+      "torneo": "Copa Argentina 2016",
+      "condicion": "N",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

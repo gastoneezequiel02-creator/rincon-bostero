@@ -1,0 +1,35 @@
+{
+  "slug": "juv-alianza-sj",
+  "nombre": "Juv Alianza Sj",
+  "importado": "2026-11-18T22:42:23-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1975-09-24",
+      "torneo": "Torneo Nacional 1975",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1975-11-02",
+      "torneo": "Torneo Nacional 1975",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1983-04-21",
+      "torneo": "Amistosos 1983",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    }
+  ]
+}

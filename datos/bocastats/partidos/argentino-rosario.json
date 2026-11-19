@@ -1,0 +1,26 @@
+{
+  "slug": "argentino-rosario",
+  "nombre": "Argentino Rosario",
+  "importado": "2026-11-18T22:42:24-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1913-06-08",
+      "torneo": "Copa Competencia 1913",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1913-06-29",
+      "torneo": "Copa de Honor 1913",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 3,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

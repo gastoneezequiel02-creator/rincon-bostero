@@ -1,0 +1,35 @@
+{
+  "slug": "sp-almagro",
+  "nombre": "Sp Almagro",
+  "importado": "2026-11-18T22:42:23-03:00",
+  "oficiales_segun_pagina": 3,
+  "partidos": [
+    {
+      "fecha": "1920-01-04",
+      "torneo": "Campeonato 1919",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1920-04-04",
+      "torneo": "Campeonato 1920",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1920-06-20",
+      "torneo": "Copa de Honor 1920",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

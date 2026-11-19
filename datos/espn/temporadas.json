@@ -458,6 +458,19 @@
       "gf": 30,
       "gc": 20,
       "pts": 33
+    },
+    "conmebol.libertadores": {
+      "competencia": "Copa Libertadores",
+      "grupo": "Group 4",
+      "equipos": 4,
+      "pos": 2,
+      "pj": 6,
+      "g": 4,
+      "e": 1,
+      "p": 1,
+      "gf": 9,
+      "gc": 3,
+      "pts": 13
     }
   }
 }

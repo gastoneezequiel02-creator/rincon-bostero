@@ -1,0 +1,26 @@
+{
+  "slug": "puerto-comercial",
+  "nombre": "Puerto Comercial",
+  "importado": "2026-11-18T22:42:26-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1974-09-08",
+      "torneo": "Torneo Nacional 1974",
+      "condicion": "L",
+      "goles_boca": 9,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1974-11-18",
+      "torneo": "Torneo Nacional 1974",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

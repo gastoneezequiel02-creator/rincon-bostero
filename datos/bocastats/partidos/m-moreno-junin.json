@@ -1,0 +1,26 @@
+{
+  "slug": "m-moreno-junin",
+  "nombre": "M Moreno Junin",
+  "importado": "2026-11-18T22:42:26-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1982-02-21",
+      "torneo": "Torneo Nacional 1982",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1982-04-08",
+      "torneo": "Torneo Nacional 1982",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

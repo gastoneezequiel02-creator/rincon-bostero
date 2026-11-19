@@ -1,0 +1,26 @@
+{
+  "slug": "gral-san-martin",
+  "nombre": "Gral San Martin",
+  "importado": "2026-11-18T22:42:25-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1925-09-13",
+      "torneo": "Campeonato 1925",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1927-01-16",
+      "torneo": "Campeonato 1926",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

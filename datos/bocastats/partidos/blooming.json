@@ -1,0 +1,35 @@
+{
+  "slug": "blooming",
+  "nombre": "Blooming",
+  "importado": "2026-11-18T22:42:23-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1986-04-08",
+      "torneo": "Amistosos 1986",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "2000-02-23",
+      "torneo": "Copa Libertadores 2000",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 1,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2000-03-22",
+      "torneo": "Copa Libertadores 2000",
+      "condicion": "L",
+      "goles_boca": 6,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

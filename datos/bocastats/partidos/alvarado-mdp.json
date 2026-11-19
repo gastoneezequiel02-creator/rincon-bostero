@@ -1,0 +1,26 @@
+{
+  "slug": "alvarado-mdp",
+  "nombre": "Alvarado Mdp",
+  "importado": "2026-11-18T22:42:24-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "1977-11-17",
+      "torneo": "Amistosos 1977",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "2018-08-01",
+      "torneo": "Copa Argentina 2018",
+      "condicion": "N",
+      "goles_boca": 6,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

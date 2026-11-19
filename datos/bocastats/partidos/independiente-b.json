@@ -1,0 +1,26 @@
+{
+  "slug": "independiente-b",
+  "nombre": "Independiente B",
+  "importado": "2026-11-18T22:42:26-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1910-06-05",
+      "torneo": "Segunda División 1910",
+      "condicion": "L",
+      "goles_boca": 5,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1910-10-30",
+      "torneo": "Segunda División 1910",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

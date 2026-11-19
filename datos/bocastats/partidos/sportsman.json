@@ -1,0 +1,35 @@
+{
+  "slug": "sportsman",
+  "nombre": "Sportsman",
+  "importado": "2026-11-18T22:42:23-03:00",
+  "oficiales_segun_pagina": 3,
+  "partidos": [
+    {
+      "fecha": "1924-12-28",
+      "torneo": "Campeonato 1924",
+      "condicion": "L",
+      "goles_boca": 5,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1926-05-30",
+      "torneo": "Campeonato 1926",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1926-10-03",
+      "torneo": "Copa Estímulo 1926",
+      "condicion": "N",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

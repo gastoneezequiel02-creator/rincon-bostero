@@ -1,0 +1,26 @@
+{
+  "slug": "hispano-argentino",
+  "nombre": "Hispano Argentino",
+  "importado": "2026-11-18T22:42:25-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "1915-04-04",
+      "torneo": "Amistosos 1915",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1915-06-27",
+      "torneo": "Campeonato 1915",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

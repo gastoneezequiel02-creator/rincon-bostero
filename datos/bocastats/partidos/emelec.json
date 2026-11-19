@@ -1,0 +1,35 @@
+{
+  "slug": "emelec",
+  "nombre": "Emelec",
+  "importado": "2026-11-18T22:42:24-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "2002-02-27",
+      "torneo": "Copa Libertadores 2002",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2002-03-20",
+      "torneo": "Copa Libertadores 2002",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2016-01-16",
+      "torneo": "Amistosos 2016",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    }
+  ]
+}

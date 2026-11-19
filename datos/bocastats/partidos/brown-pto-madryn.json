@@ -1,0 +1,26 @@
+{
+  "slug": "brown-pto-madryn",
+  "nombre": "Brown Pto Madryn",
+  "importado": "2026-11-18T22:42:25-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "2007-02-04",
+      "torneo": "Amistosos 2007",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "2017-09-13",
+      "torneo": "Copa Argentina 2017",
+      "condicion": "N",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

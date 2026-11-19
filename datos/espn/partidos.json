@@ -779,6 +779,47 @@
     "resultado": "G"
   },
   {
+    "id": "338937",
+    "fecha": "2012-02-02T22:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "SO",
+    "estadio": "Padre Martearena",
+    "ciudad": "Salta",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "10996",
+      "nombre": "Santamarina",
+      "corto": "Santamarina",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10996.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "10996",
+      "nombre": "Santamarina",
+      "corto": "Santamarina",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10996.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
     "id": "335659",
     "fecha": "2012-02-10T21:15:00-03:00",
     "hora_a_confirmar": false,
@@ -818,6 +859,47 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "G"
+  },
+  {
+    "id": "335590",
+    "fecha": "2012-02-14T21:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "La Carolina",
+    "ciudad": "Barinas",
+    "condicion": "V",
+    "local": {
+      "id": "6763",
+      "nombre": "Zamora FC",
+      "corto": "Zamora FC",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/6763.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "6763",
+      "nombre": "Zamora FC",
+      "corto": "Zamora FC",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/6763.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
   },
   {
     "id": "335668",
@@ -902,6 +984,47 @@
     "resultado": "G"
   },
   {
+    "id": "338965",
+    "fecha": "2012-02-29T22:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Estadio del Bicentenario",
+    "ciudad": "San Juan",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "10148",
+      "nombre": "Central Córdoba (Rosario)",
+      "corto": "C. Córdoba",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10148.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "10148",
+      "nombre": "Central Córdoba (Rosario)",
+      "corto": "C. Córdoba",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10148.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "335688",
     "fecha": "2012-03-04T17:00:00-03:00",
     "hora_a_confirmar": false,
@@ -943,6 +1066,47 @@
     "resultado": "G"
   },
   {
+    "id": "335592",
+    "fecha": "2012-03-07T22:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto J. Armando",
+    "ciudad": "Ciudad Autónoma de Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "3445",
+      "nombre": "Fluminense",
+      "corto": "Fluminense",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png",
+      "goles": 2,
+      "penales": null
+    },
+    "rival": {
+      "id": "3445",
+      "nombre": "Fluminense",
+      "corto": "Fluminense",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 2,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
+  },
+  {
     "id": "335703",
     "fecha": "2012-03-11T19:10:00-03:00",
     "hora_a_confirmar": false,
@@ -982,6 +1146,47 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "P"
+  },
+  {
+    "id": "335593",
+    "fecha": "2012-03-14T19:45:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Julio H. Grondona",
+    "ciudad": "Sarandí",
+    "condicion": "V",
+    "local": {
+      "id": "2635",
+      "nombre": "Arsenal Sarandi",
+      "corto": "Arsenal Sarandi",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2635.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "rival": {
+      "id": "2635",
+      "nombre": "Arsenal Sarandi",
+      "corto": "Arsenal Sarandi",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2635.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
   },
   {
     "id": "335708",
@@ -1066,6 +1271,47 @@
     "resultado": "E"
   },
   {
+    "id": "340175",
+    "fecha": "2012-03-29T19:45:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto J. Armando",
+    "ciudad": "Ciudad Autónoma de Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "2635",
+      "nombre": "Arsenal Sarandi",
+      "corto": "Arsenal Sarandi",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2635.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "2635",
+      "nombre": "Arsenal Sarandi",
+      "corto": "Arsenal Sarandi",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2635.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "335728",
     "fecha": "2012-04-01T19:30:00-03:00",
     "hora_a_confirmar": false,
@@ -1148,6 +1394,47 @@
     "resultado": "G"
   },
   {
+    "id": "335597",
+    "fecha": "2012-04-11T22:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Estadio Olímpico Joao Havelange",
+    "ciudad": "Rio de Janeiro",
+    "condicion": "V",
+    "local": {
+      "id": "3445",
+      "nombre": "Fluminense",
+      "corto": "Fluminense",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "rival": {
+      "id": "3445",
+      "nombre": "Fluminense",
+      "corto": "Fluminense",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "335748",
     "fecha": "2012-04-15T20:10:00-03:00",
     "hora_a_confirmar": false,
@@ -1189,6 +1476,47 @@
     "resultado": "P"
   },
   {
+    "id": "335599",
+    "fecha": "2012-04-18T19:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto J. Armando",
+    "ciudad": "Ciudad Autónoma de Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "6763",
+      "nombre": "Zamora FC",
+      "corto": "Zamora FC",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/6763.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "6763",
+      "nombre": "Zamora FC",
+      "corto": "Zamora FC",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/6763.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "335758",
     "fecha": "2012-04-22T19:15:00-03:00",
     "hora_a_confirmar": false,
@@ -1222,6 +1550,47 @@
       "nombre": "Belgrano (Córdoba)",
       "corto": "Belgrano ",
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
+    "id": "340509",
+    "fecha": "2012-04-25T22:10:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "SO",
+    "estadio": "Estadio Bicentenario Ciudad de Catamarca",
+    "ciudad": "San Fernando del Valle de Catamarca",
+    "condicion": "V",
+    "local": {
+      "id": "2636",
+      "nombre": "Olimpo",
+      "corto": "Olimpo",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2636.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "2636",
+      "nombre": "Olimpo",
+      "corto": "Olimpo",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2636.png"
     },
     "goles_boca": 1,
     "goles_rival": 1,
@@ -1271,6 +1640,47 @@
     "resultado": "G"
   },
   {
+    "id": "341070",
+    "fecha": "2012-05-02T19:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "ida",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto J. Armando",
+    "ciudad": "Ciudad Autónoma de Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "4132",
+      "nombre": "Unión Española",
+      "corto": "Unión Española",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4132.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "4132",
+      "nombre": "Unión Española",
+      "corto": "Unión Española",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4132.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "335778",
     "fecha": "2012-05-06T19:15:00-03:00",
     "hora_a_confirmar": false,
@@ -1310,6 +1720,47 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "E"
+  },
+  {
+    "id": "341071",
+    "fecha": "2012-05-09T19:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "vuelta - Boca Juniors win 5-3 on aggregate",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Estadio Santa Laura SEK",
+    "ciudad": "Santiago",
+    "condicion": "V",
+    "local": {
+      "id": "4132",
+      "nombre": "Unión Española",
+      "corto": "Unión Española",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4132.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 3,
+      "penales": null
+    },
+    "rival": {
+      "id": "4132",
+      "nombre": "Unión Española",
+      "corto": "Unión Española",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4132.png"
+    },
+    "goles_boca": 3,
+    "goles_rival": 2,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
   },
   {
     "id": "335792",
@@ -1353,6 +1804,47 @@
     "resultado": "E"
   },
   {
+    "id": "335648",
+    "fecha": "2012-05-17T19:45:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "ida",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto J. Armando",
+    "ciudad": "Ciudad Autónoma de Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "3445",
+      "nombre": "Fluminense",
+      "corto": "Fluminense",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "3445",
+      "nombre": "Fluminense",
+      "corto": "Fluminense",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "335798",
     "fecha": "2012-05-20T19:15:00-03:00",
     "hora_a_confirmar": false,
@@ -1392,6 +1884,47 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "G"
+  },
+  {
+    "id": "335649",
+    "fecha": "2012-05-23T19:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "vuelta - Boca Juniors win 2-1 on aggregate",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Estadio Olímpico Joao Havelange",
+    "ciudad": "Rio de Janeiro",
+    "condicion": "V",
+    "local": {
+      "id": "3445",
+      "nombre": "Fluminense",
+      "corto": "Fluminense",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "3445",
+      "nombre": "Fluminense",
+      "corto": "Fluminense",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
   },
   {
     "id": "335804",
@@ -1435,6 +1968,47 @@
     "resultado": "G"
   },
   {
+    "id": "338982",
+    "fecha": "2012-05-30T19:45:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "SO",
+    "estadio": "Estadio del Bicentenario",
+    "ciudad": "San Juan",
+    "condicion": "V",
+    "local": {
+      "id": "17",
+      "nombre": "Rosario Central",
+      "corto": "Rosario Central",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "17",
+      "nombre": "Rosario Central",
+      "corto": "Rosario Central",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
     "id": "335818",
     "fecha": "2012-06-09T14:00:00-03:00",
     "hora_a_confirmar": false,
@@ -1474,6 +2048,47 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "E"
+  },
+  {
+    "id": "342245",
+    "fecha": "2012-06-14T20:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "ida",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto J. Armando",
+    "ciudad": "Ciudad Autónoma de Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "4139",
+      "nombre": "Universidad de Chile",
+      "corto": "U de Chile",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4139.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "4139",
+      "nombre": "Universidad de Chile",
+      "corto": "U de Chile",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4139.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
   },
   {
     "id": "335826",
@@ -1517,6 +2132,47 @@
     "resultado": "P"
   },
   {
+    "id": "342246",
+    "fecha": "2012-06-21T21:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "vuelta - Boca Juniors win 2-0 on aggregate",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Estadio Nacional Julio Martínez",
+    "ciudad": "Santiago",
+    "condicion": "V",
+    "local": {
+      "id": "4139",
+      "nombre": "Universidad de Chile",
+      "corto": "U de Chile",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4139.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "4139",
+      "nombre": "Universidad de Chile",
+      "corto": "U de Chile",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4139.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
     "id": "335838",
     "fecha": "2012-06-24T15:00:00-03:00",
     "hora_a_confirmar": false,
@@ -1553,6 +2209,88 @@
     },
     "goles_boca": 1,
     "goles_rival": 3,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
+  },
+  {
+    "id": "335652",
+    "fecha": "2012-06-27T21:50:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "ida",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto J. Armando",
+    "ciudad": "Ciudad Autónoma de Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "874",
+      "nombre": "Corinthians",
+      "corto": "Corinthians",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "874",
+      "nombre": "Corinthians",
+      "corto": "Corinthians",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
+    "id": "335653",
+    "fecha": "2012-07-04T21:50:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "vuelta - Corinthians win 3-1 on aggregate",
+    "temporada": 2011,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Pacaembu",
+    "ciudad": "São Paulo",
+    "condicion": "V",
+    "local": {
+      "id": "874",
+      "nombre": "Corinthians",
+      "corto": "Corinthians",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "874",
+      "nombre": "Corinthians",
+      "corto": "Corinthians",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 2,
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "P"

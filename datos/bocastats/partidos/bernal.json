@@ -1,0 +1,26 @@
+{
+  "slug": "bernal",
+  "nombre": "Bernal",
+  "importado": "2026-11-18T22:42:24-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1908-05-10",
+      "torneo": "Segunda División 1908",
+      "condicion": "L",
+      "goles_boca": 7,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1908-05-24",
+      "torneo": "Segunda División 1908",
+      "condicion": "V",
+      "goles_boca": 5,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

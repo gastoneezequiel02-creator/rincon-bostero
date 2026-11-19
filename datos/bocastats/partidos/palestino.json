@@ -1,0 +1,35 @@
+{
+  "slug": "palestino",
+  "nombre": "Palestino",
+  "importado": "2026-11-18T22:42:24-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1976-04-28",
+      "torneo": "Amistosos 1976",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 1,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "2015-02-18",
+      "torneo": "Copa Libertadores 2015",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2015-04-16",
+      "torneo": "Copa Libertadores 2015",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

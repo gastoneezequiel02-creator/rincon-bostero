@@ -1,0 +1,35 @@
+{
+  "slug": "junin",
+  "nombre": "Junin",
+  "importado": "2026-11-18T22:42:23-03:00",
+  "oficiales_segun_pagina": 3,
+  "partidos": [
+    {
+      "fecha": "1909-05-30",
+      "torneo": "Copa Bullrich 1909",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1910-08-28",
+      "torneo": "Segunda División 1910",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1910-11-27",
+      "torneo": "Segunda División 1910",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": false
+    }
+  ]
+}

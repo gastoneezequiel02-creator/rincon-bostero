@@ -1,0 +1,26 @@
+{
+  "slug": "ferrocarril-sud",
+  "nombre": "Ferrocarril Sud",
+  "importado": "2026-11-18T22:42:25-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1913-07-06",
+      "torneo": "Campeonato 1913",
+      "condicion": "L",
+      "goles_boca": 6,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1914-04-05",
+      "torneo": "Campeonato 1914",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

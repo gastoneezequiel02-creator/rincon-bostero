@@ -1,0 +1,35 @@
+{
+  "slug": "talleres-lanus",
+  "nombre": "Talleres Lanus",
+  "importado": "2026-11-18T22:42:23-03:00",
+  "oficiales_segun_pagina": 3,
+  "partidos": [
+    {
+      "fecha": "1934-04-29",
+      "torneo": "Campeonato 1934",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1934-08-05",
+      "torneo": "Campeonato 1934",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1934-11-01",
+      "torneo": "Campeonato 1934",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}
