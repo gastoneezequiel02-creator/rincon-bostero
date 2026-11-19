@@ -106,7 +106,16 @@ def prestamos() -> dict:
 
 
 def contratos() -> dict:
-    return leer_json(CARPETA / "contratos.json", {}) or {}
+    """Contratos de Boca en Números, completados con datos/manual/correcciones_contratos.json donde les falte el dato."""
+    from comun import DATOS_MANUAL, normalizar
+    datos = leer_json(CARPETA / "contratos.json", {}) or {}
+    corr = (leer_json(DATOS_MANUAL / "correcciones_contratos.json", {}) or {}).get("contratos", {})
+    por_nombre = {normalizar(k): v for k, v in corr.items()}
+    for j in datos.get("jugadores", []):
+        c = por_nombre.get(normalizar(j.get("nombre", "")))
+        if c and c.get("vence") and not j.get("vence"):
+            j["vence"] = c["vence"]
+    return datos
 
 
 if __name__ == "__main__":

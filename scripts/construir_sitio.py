@@ -910,6 +910,8 @@ def _cruzar_nombres(nombres: list[str], otros: list[dict]) -> dict:
 
 
 def _fecha_mes(iso: str) -> str:
+    if iso and len(iso) == 4 and iso.isdigit():
+        return iso  # solo se sabe el año
     if not iso or len(iso) < 7:
         return "–"
     return f"{MESES_CORTOS_[int(iso[5:7]) - 1]}. {iso[:4]}"
