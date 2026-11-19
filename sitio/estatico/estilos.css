@@ -325,6 +325,8 @@ td.pts { font-weight: 700; }
 .almanaque b { font: 800 34px/1 var(--titulos); color: var(--azul); }
 .almanaque h3 { font: 700 23px/1.15 var(--titulos); margin: 2px 0 4px; }
 .almanaque p { margin: 0; font: 400 17px/1.5 var(--lectura); color: #2b3655; }
+.almanaque li.destacada { background: var(--oro-suave); border-left: 4px solid var(--oro); padding: 18px 16px; margin-bottom: 8px; }
+.almanaque li.destacada h3 { font-size: 27px; }
 .dias { display: flex; flex-wrap: wrap; gap: 6px; }
 .dias a { padding: 6px 10px; border-radius: 999px; background: var(--superficie); text-decoration: none; font-size: 15px; }
 .dias a[aria-current="page"] { background: var(--azul); color: #fff; }
