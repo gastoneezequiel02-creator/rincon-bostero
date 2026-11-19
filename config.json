@@ -4,7 +4,12 @@
     "lema": "Noticias de Boca, todos los días",
     "url": "https://rinconbostero.com.ar",
     "twitter": "RinconDeBoca",
-    "zona_horaria_utc": -3
+    "zona_horaria_utc": -3,
+    "nombres_alternativos": [
+      "Rincon Bostero",
+      "El Rincón Bostero",
+      "RinconBostero"
+    ]
   },
   "noticias_rss": {
     "activado": true,
@@ -32,7 +37,9 @@
   "telegram": {
     "activado": true,
     "_usuarios_permitidos": "IDs numéricos de Telegram de quienes pueden cargar notas. Si alguien no autorizado le escribe al bot, el bot le contesta con su ID para que lo agregues acá.",
-    "usuarios_permitidos": [1616863037]
+    "usuarios_permitidos": [
+      1616863037
+    ]
   },
   "datos_futbol": {
     "activado": true,
@@ -122,5 +129,9 @@
     "_supabase_anon_key": "Es la clave pública 'anon' del proyecto: está pensada para ir en la web, no es secreta. La clave 'service_role' NUNCA va acá: va en GitHub Secrets como SUPABASE_SERVICE_KEY.",
     "entrar_con_google": true,
     "_entrar_con_google": "Ponelo en true solo después de configurar Google en Supabase (paso opcional de la guía). Sin eso, se entra con el link por mail."
+  },
+  "estadisticas": {
+    "_que_es": "Cloudflare Web Analytics (cuenta de Cloudflare del dueño). El token es público: va en el HTML de cada página.",
+    "cloudflare_token": "5a810af9e97e44748310f662deb174a2"
   }
 }
