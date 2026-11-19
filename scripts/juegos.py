@@ -11,7 +11,7 @@ import random
 import re
 from collections import defaultdict
 
-from comun import DATOS, DATOS_ESPN, DATOS_MANUAL, leer_json, normalizar
+from comun import DATOS, DATOS_ESPN, DATOS_MANUAL, config, leer_json, normalizar
 
 TEMAS = {
     "titulos": "Títulos y copas",
@@ -645,10 +645,22 @@ def eventos_anio() -> list[dict]:
 
 # ---------------------------------------------------------- grilla bostera --
 MIN_GRILLA = 15  # clubes con al menos esta cantidad de jugadores compartidos con Boca
+# Dificultades de la Grilla. "fama" de un casillero = partidos oficiales en Boca (Historia de Boca) del jugador
+# más conocido que lo resuelve (tope 300). clubes: entre cuántos clubes (los de más jugadores en común) se elige;
+# piso: fama mínima de cada casillero; media: rango de la fama promedio de los 9; resp: respuestas mínimas.
+# Se pueden cambiar desde config.json → "juegos": {"grilla_niveles": {...}}.
+NIVELES_GRILLA = {
+    "facil": {"nombre": "Fácil", "clubes": 16, "piso": 100, "media": [180, 9999], "resp": 2},
+    "intermedio": {"nombre": "Intermedio", "clubes": 24, "piso": 40, "media": [90, 180], "resp": 1},
+    "dificil": {"nombre": "Difícil", "clubes": 32, "piso": 8, "media": [35, 90], "resp": 1},
+    "experto": {"nombre": "Experto", "clubes": 999, "piso": 0, "media": [0, 35], "resp": 1},
+}
 
 
 def datos_grilla() -> dict | None:
-    """Jugadores de Boca (Wikidata) y los clubes que sirven para armar la grilla. La grilla del día la arma la web."""
+    """Jugadores de Boca (Wikidata) y los clubes que sirven para armar la grilla. La grilla del día la arma la web.
+    "pj" (mismo orden que "jugadores") son los partidos oficiales en Boca según Historia de Boca, para las
+    dificultades; 0 si no se pudo cruzar el nombre."""
     d = leer_json(DATOS / "wikidata" / "jugadores_boca.json", {}) or {}
     clubes = {q: c for q, c in (d.get("clubes") or {}).items() if c.get("jugadores", 0) >= MIN_GRILLA}
     if len(clubes) < 8:
@@ -658,8 +670,22 @@ def datos_grilla() -> dict | None:
     jugadores = []
     for nombre, cs in d.get("jugadores", []):
         jugadores.append([nombre] + sorted(indice[c] for c in cs if c in indice))
-    return {"fuente": "Wikidata", "consultado": d.get("consultado", "")[:10],
-            "clubes": [clubes[q]["nombre"] for q in orden], "jugadores": jugadores}
+    salida = {"fuente": "Wikidata", "consultado": d.get("consultado", "")[:10],
+              "clubes": [clubes[q]["nombre"] for q in orden], "jugadores": jugadores}
+    try:
+        import jugadores_hdb
+        pj = jugadores_hdb.partidos_por_nombre([j[0] for j in jugadores])
+    except Exception as e:
+        print(f"Juegos: no pude cruzar la grilla con Historia de Boca: {e}")
+        pj = {}
+    if len(pj) >= 200:  # sin una base razonable, la grilla sigue como antes (sin dificultades)
+        niveles = dict(NIVELES_GRILLA)
+        for k, v in ((config().get("juegos") or {}).get("grilla_niveles") or {}).items():
+            niveles[k] = {**niveles.get(k, {}), **v}
+        salida["pj"] = [pj.get(j[0], 0) for j in jugadores]
+        salida["niveles"] = niveles
+        salida["fuente_pj"] = "Historia de Boca"
+    return salida
 
 
 # ------------------------------------------------------------------- armado --

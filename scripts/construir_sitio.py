@@ -1364,18 +1364,22 @@ def pagina_juegos(proximos) -> str:
     if c:  # con cuentas, las respuestas viven solo en la base de datos: la página no las lleva
         datos["preguntas"] = []
     datos["hay_grilla"] = bool(juegos.datos_grilla())
+    import jugadores_hdb
+    hay_quien = bool(jugadores_hdb.datos_quien_soy())
     datos_json = json.dumps(datos, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     dia_n = (ahora().date() - __import__("datetime").date(2026, 11, 18)).days + 1
 
     # (id, nombre, descripción corta, glifo, id de la caja)
     lista = [
+        ("quien", "¿Quién soy?", "Cinco pistas para descubrir a un jugador con más de 70 partidos en Boca. Con menos pistas, más puntos.",
+         '<span class="g-texto">?</span>', "juego-quien"),
         ("idolo", "Adiviná el ídolo", "Una foto borrosa y 6 intentos. Cada intento la aclara un poco más.",
          GLIFO_IDOLO, "juego-idolo"),
         ("mas-o-menos", "¿Más o menos?", "Cara a cara: ¿quién hizo más goles, quién jugó más partidos? Hasta que le erres.",
          '<span class="g-texto">+<small>/</small>−</span>', "juego-mom"),
         ("anio", "¿En qué año fue?", "5 momentos de la historia de Boca. Cuanto más cerca del año, más puntos.",
          '<span class="g-texto">19<small>··</small></span>', "juego-anio"),
-        ("grilla", "Grilla bostera", "Nombrá jugadores de Boca que también pasaron por los clubes de cada fila y columna.",
+        ("grilla", "Grilla bostera", "Nombrá jugadores de Boca que también pasaron por los clubes de cada fila y columna. De Fácil a Experto.",
          GLIFO_GRILLA, "juego-grilla"),
         ("desafio", "Desafiá a un amigo", "10 preguntas al azar: las jugás vos, mandás el link y se arma la tabla. No hace falta cuenta.",
          '<span class="g-texto">1<small>vs</small>1</span>', "juego-desafio"),
@@ -1386,9 +1390,13 @@ def pagina_juegos(proximos) -> str:
         lista = [x for x in lista if x[0] != "desafio"]
     if not datos["hay_grilla"]:
         lista = [x for x in lista if x[0] != "grilla"]
+    if not hay_quien:
+        lista = [x for x in lista if x[0] != "quien"]
+    NUEVOS = {"quien"}
     tarjetas = "".join(
-        f'<a class="jtarjeta" href="#{k}"><span class="jt-glifo">{g}</span><span class="jt-cuerpo">'
-        f'<b>{e(n)}</b><span>{e(d)}</span><span class="jt-estado" data-estado="{k}"></span></span></a>'
+        f'<a class="jtarjeta{" nuevo" if k in NUEVOS else ""}" href="#{k}"><span class="jt-glifo">{g}</span><span class="jt-cuerpo">'
+        f'<b>{e(n)}{"<em class=jt-nuevo>Nuevo</em>" if k in NUEVOS else ""}</b><span>{e(d)}</span>'
+        f'<span class="jt-estado" data-estado="{k}"></span></span></a>'
         for k, n, d, g, _c in lista)
     secciones = [("del-dia", f"Pregunta del día #{dia_n}",
                   "10 preguntas por día, las mismas para todos y sin repetir. Mantené la racha.", "juego-dia")]
@@ -1573,6 +1581,10 @@ def construir() -> None:
     escribir("records.html", pagina_records(historicos, proximos))
     escribir("juegos.html", pagina_juegos(proximos))
     import juegos as _juegos
+    import jugadores_hdb
+    quien = jugadores_hdb.datos_quien_soy()
+    if quien:
+        escribir("quiensoy.json", json.dumps(quien, ensure_ascii=False, separators=(",", ":")))
     grilla = _juegos.datos_grilla()
     if grilla:
         escribir("grilla.json", json.dumps(grilla, ensure_ascii=False, separators=(",", ":")))
