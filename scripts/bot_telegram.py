@@ -16,7 +16,7 @@ import urllib.parse
 
 import ia
 from comun import (BORRADORES, ESTADO, IMAGENES_NOTAS, NOTAS, config, guardar_json, guardar_nota, http_get,
-                   http_get_json, http_post_json, leer_json, limpiar_html, listar_notas, log, secreto)
+                   http_get_json, http_post_json, leer_json, limpiar_html, listar_notas, log, parsear_fecha, secreto)
 from noticias_rss import armar_nota
 
 ARCHIVO_ESTADO = ESTADO / "telegram.json"
@@ -30,6 +30,7 @@ Para publicar una nota, mandame:
 • El link de un tweet (x.com/…/status/…), o reenviame el mensaje.
 • Opcional: agregá tu propio texto con más datos o contexto.
 • Opcional: una foto (propia o con permiso) y la uso como imagen de la nota.
+  (Una foto con un texto corto y sin link la guardo en el banco de fotos, no hago nota.)
 
 Para marcar cómo es la info, empezá el mensaje con:
 #oficial · #confirmado · #rumor
@@ -190,6 +191,17 @@ def procesar_mensaje(msg: dict, ya_avisados: set) -> None:
             EPIGRAFES_DE_ALBUM[grupo] = texto
         else:
             texto = EPIGRAFES_DE_ALBUM.get(grupo, "")
+    # Una foto con un epígrafe corto, sin link ni #oficial/#confirmado/#rumor, es una foto para el banco:
+    # no alcanza para una nota y la IA no debe inventarla a partir de la descripción de la foto.
+    if fotos_del_mensaje(msg) and not texto.startswith("/") and not RE_URL.search(texto) \
+            and not re.search(r"(?i)#(oficial|confirmado|rumor)\b", texto) and len(texto) < 160:
+        texto = "/banco " + (texto or "general")
+    # Ventana configurable: fotos mandadas sin comando en ese rato van al banco (con su epígrafe como descripción)
+    ventana = config()["telegram"].get("fotos_al_banco_entre") or []
+    if len(ventana) == 2 and fotos_del_mensaje(msg) and not texto.startswith("/") and not RE_URL.search(texto):
+        desde, hasta = (parsear_fecha(x) for x in ventana)
+        if desde and hasta and desde.timestamp() <= msg.get("date", 0) <= hasta.timestamp():
+            texto = "/banco " + (texto or "general")
     if re.match(r"(?i)/banco(@\w+)?\b", texto):
         cargar_al_banco(msg, chat_id, texto)
         return
