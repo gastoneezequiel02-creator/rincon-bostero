@@ -358,5 +358,20 @@
       "gc": 4,
       "pts": 12
     }
+  },
+  "2015": {
+    "arg.1": {
+      "competencia": "Liga Profesional",
+      "grupo": "Campeonato 2015",
+      "equipos": 30,
+      "pos": 1,
+      "pj": 30,
+      "g": 20,
+      "e": 4,
+      "p": 6,
+      "gf": 49,
+      "gc": 26,
+      "pts": 64
+    }
   }
 }
