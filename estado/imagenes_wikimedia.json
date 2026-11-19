@@ -667,6 +667,14 @@
     "carlos daniel": {
       "archivo": "Carlos tapia argentina juvenil.jpg",
       "buscado": "2026-11-18T23:24:44.188257-03:00"
+    },
+    "lautaro di lollo": {
+      "archivo": "Lautaro Di Lollo (cropped).jpg",
+      "buscado": "2026-11-19T03:02:50.735417-03:00"
+    },
+    "ignacio moroni": {
+      "archivo": null,
+      "buscado": "2026-11-19T03:02:50.933913-03:00"
     }
   },
   "archivos": {
@@ -1033,6 +1041,14 @@
     "La Bombonera - 2006 (238772908).jpg": {
       "imagen": "img/archivo/la-bombonera-2006-238772908-26c3da.jpg",
       "credito": "Foto de archivo: Kai Hendry from Singapore, Malaysia / Wikimedia Commons (CC BY 2.0)"
+    },
+    "Lautaro Di Lollo (cropped).jpg": {
+      "imagen": "img/archivo/lautaro-di-lollo-cropped-c1db20.jpg",
+      "credito": "Foto de archivo: BugWarp / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "Estadio Alberto J. Armando field night view.jpg": {
+      "imagen": "img/archivo/estadio-alberto-j-armando-field-night-view-7ac611.jpg",
+      "credito": "Foto de archivo: Ministerio de Cultura de la Nación / Wikimedia Commons (CC BY-SA 2.0)"
     }
   },
   "bombonera": {
