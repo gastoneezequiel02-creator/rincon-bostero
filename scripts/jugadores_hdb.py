@@ -15,7 +15,7 @@ import re
 from comun import DATOS, leer_json, normalizar
 
 ARCHIVO = DATOS / "hdb" / "jugadores.json"
-MIN_PJ_QUIEN_SOY = 71  # "más de 70 partidos oficiales"
+MIN_PJ_QUIEN_SOY = 50  # "50 partidos oficiales o más"
 
 PUESTOS = ["arquero", "marcador central", "marcador de punta derecho", "marcador de punta izquierdo",
            "lateral derecho", "lateral izquierdo", "defensor", "zaguero", "back", "medio derecho", "medio izquierdo",

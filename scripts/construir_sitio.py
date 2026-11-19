@@ -1371,7 +1371,7 @@ def pagina_juegos(proximos) -> str:
 
     # (id, nombre, descripción corta, glifo, id de la caja)
     lista = [
-        ("quien", "¿Quién soy?", "Cinco pistas para descubrir a un jugador con más de 70 partidos en Boca. Con menos pistas, más puntos.",
+        ("quien", "¿Quién soy?", "Cinco pistas para descubrir a un jugador con 50 partidos o más en Boca. Con menos pistas, más puntos.",
          '<span class="g-texto">?</span>', "juego-quien"),
         ("idolo", "Adiviná el ídolo", "Una foto borrosa y 6 intentos. Cada intento la aclara un poco más.",
          GLIFO_IDOLO, "juego-idolo"),
