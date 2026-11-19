@@ -1,0 +1,17 @@
+{
+  "slug": "sociedad-sportiva",
+  "nombre": "Sociedad Sportiva",
+  "importado": "2026-11-18T22:51:10-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "1910-06-19",
+      "torneo": "Segunda División 1910",
+      "condicion": "L",
+      "goles_boca": 6,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

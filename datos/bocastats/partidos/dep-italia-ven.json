@@ -1,0 +1,26 @@
+{
+  "slug": "dep-italia-ven",
+  "nombre": "Dep Italia Ven",
+  "importado": "2026-11-18T22:51:06-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "1966-02-23",
+      "torneo": "Copa Libertadores 1966",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1966-03-08",
+      "torneo": "Copa Libertadores 1966",
+      "condicion": "L",
+      "goles_boca": 5,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

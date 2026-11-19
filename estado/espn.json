@@ -119,6 +119,12 @@
     "2011:conmebol.recopa",
     "2011:arg.copa",
     "2011:arg.supercopa",
-    "2011:fifa.cwc"
+    "2011:fifa.cwc",
+    "2010:arg.1",
+    "2010:arg.copa_lpf",
+    "2010:conmebol.libertadores",
+    "2010:conmebol.sudamericana",
+    "2010:conmebol.recopa",
+    "2010:arg.copa"
   ]
 }

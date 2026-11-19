@@ -1,0 +1,17 @@
+{
+  "slug": "g-belgrano-lp",
+  "nombre": "G Belgrano Lp",
+  "importado": "2026-11-18T22:51:09-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "1918-06-02",
+      "torneo": "Copa Competencia 1918",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

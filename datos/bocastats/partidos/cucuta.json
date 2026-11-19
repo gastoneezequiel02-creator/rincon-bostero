@@ -1,0 +1,26 @@
+{
+  "slug": "cucuta",
+  "nombre": "Cucuta",
+  "importado": "2026-11-18T22:51:05-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "2007-05-31",
+      "torneo": "Copa Libertadores 2007",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2007-06-07",
+      "torneo": "Copa Libertadores 2007",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "dep-capiata",
+  "nombre": "Dep Capiata",
+  "importado": "2026-11-18T22:51:05-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "2014-10-15",
+      "torneo": "Copa Sudamericana 2014",
+      "condicion": "L",
+      "goles_boca": 0,
+      "goles_rival": 1,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2014-10-23",
+      "torneo": "Copa Sudamericana 2014",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "agropecuario",
+  "nombre": "Agropecuario",
+  "importado": "2026-11-18T22:51:08-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "2022-08-10",
+      "torneo": "Copa Argentina 2022",
+      "condicion": "N",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

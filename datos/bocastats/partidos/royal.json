@@ -1,0 +1,17 @@
+{
+  "slug": "royal",
+  "nombre": "Royal",
+  "importado": "2026-11-18T22:51:09-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "1909-07-25",
+      "torneo": "Segunda División 1909",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

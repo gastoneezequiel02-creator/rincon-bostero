@@ -1,0 +1,17 @@
+{
+  "slug": "huracan-las-heras",
+  "nombre": "Huracan Las Heras",
+  "importado": "2026-11-18T22:51:09-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "2015-05-27",
+      "torneo": "Copa Argentina 2015",
+      "condicion": "N",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

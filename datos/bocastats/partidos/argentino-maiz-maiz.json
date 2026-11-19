@@ -1,0 +1,17 @@
+{
+  "slug": "argentino-maiz-maiz",
+  "nombre": "Argentino Maiz Maiz",
+  "importado": "2026-11-18T22:51:08-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "2025-01-22",
+      "torneo": "Copa Argentina 2025",
+      "condicion": "N",
+      "goles_boca": 5,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

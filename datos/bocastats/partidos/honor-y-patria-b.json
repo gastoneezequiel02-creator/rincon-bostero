@@ -1,0 +1,17 @@
+{
+  "slug": "honor-y-patria-b",
+  "nombre": "Honor Y Patria B",
+  "importado": "2026-11-18T22:51:09-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "1931-03-29",
+      "torneo": "Campeonato 1930",
+      "condicion": "V",
+      "goles_boca": 9,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

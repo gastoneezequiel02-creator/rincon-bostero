@@ -472,5 +472,20 @@
       "gc": 3,
       "pts": 13
     }
+  },
+  "2010": {
+    "arg.1": {
+      "competencia": "Liga Profesional",
+      "grupo": "Torneo Clausura 2011",
+      "equipos": 20,
+      "pos": 6,
+      "pj": 18,
+      "g": 7,
+      "e": 6,
+      "p": 5,
+      "gf": 22,
+      "gc": 20,
+      "pts": 27
+    }
   }
 }

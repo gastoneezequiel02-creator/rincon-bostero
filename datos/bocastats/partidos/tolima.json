@@ -1,0 +1,26 @@
+{
+  "slug": "tolima",
+  "nombre": "Tolima",
+  "importado": "2026-11-18T22:51:07-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "2019-03-12",
+      "torneo": "Copa Libertadores 2019",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2019-04-24",
+      "torneo": "Copa Libertadores 2019",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": false
+    }
+  ]
+}

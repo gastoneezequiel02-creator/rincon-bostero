@@ -1,0 +1,17 @@
+{
+  "slug": "racing-club-b",
+  "nombre": "Racing Club B",
+  "importado": "2026-11-18T22:51:09-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "1910-07-24",
+      "torneo": "Segunda División 1910",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

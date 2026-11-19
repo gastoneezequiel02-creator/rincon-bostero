@@ -1,0 +1,17 @@
+{
+  "slug": "pretender",
+  "nombre": "Pretender",
+  "importado": "2026-11-18T22:51:09-03:00",
+  "oficiales_segun_pagina": 1,
+  "partidos": [
+    {
+      "fecha": "1909-09-19",
+      "torneo": "Segunda División 1909",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

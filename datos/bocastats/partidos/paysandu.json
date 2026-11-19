@@ -1,0 +1,26 @@
+{
+  "slug": "paysandu",
+  "nombre": "Paysandu",
+  "importado": "2026-11-18T22:51:06-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "2003-04-24",
+      "torneo": "Copa Libertadores 2003",
+      "condicion": "L",
+      "goles_boca": 0,
+      "goles_rival": 1,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2003-05-15",
+      "torneo": "Copa Libertadores 2003",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

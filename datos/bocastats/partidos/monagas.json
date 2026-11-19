@@ -1,0 +1,26 @@
+{
+  "slug": "monagas",
+  "nombre": "Monagas",
+  "importado": "2026-11-18T22:51:06-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "2023-04-06",
+      "torneo": "Copa Libertadores 2023",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "2023-06-29",
+      "torneo": "Copa Libertadores 2023",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

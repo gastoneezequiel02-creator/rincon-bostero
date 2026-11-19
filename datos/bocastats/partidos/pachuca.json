@@ -1,0 +1,26 @@
+{
+  "slug": "pachuca",
+  "nombre": "Pachuca",
+  "importado": "2026-11-18T22:51:06-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "2005-03-16",
+      "torneo": "Copa Libertadores 2005",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2005-04-06",
+      "torneo": "Copa Libertadores 2005",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}

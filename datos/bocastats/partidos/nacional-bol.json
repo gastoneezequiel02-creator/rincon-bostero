@@ -1,0 +1,26 @@
+{
+  "slug": "nacional-bol",
+  "nombre": "Nacional Bol",
+  "importado": "2026-11-18T22:51:06-03:00",
+  "oficiales_segun_pagina": 2,
+  "partidos": [
+    {
+      "fecha": "2024-04-03",
+      "torneo": "Copa Sudamericana 2024",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "2024-05-29",
+      "torneo": "Copa Sudamericana 2024",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    }
+  ]
+}
