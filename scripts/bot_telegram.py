@@ -10,6 +10,7 @@ mensajes pendientes y responde.
 from __future__ import annotations
 
 import re
+import time
 import urllib.parse
 
 import ia
@@ -20,6 +21,7 @@ from noticias_rss import armar_nota
 ARCHIVO_ESTADO = ESTADO / "telegram.json"
 RE_URL = re.compile(r"https?://\S+")
 RE_TWEET = re.compile(r"https?://(?:www\.|mobile\.)?(?:x|twitter)\.com/([A-Za-z0-9_]+)/status/(\d+)")
+RE_SLUG_EN_LINK = re.compile(r"/notas/([a-z0-9-]+)\.html")
 
 AYUDA = """👋 Soy el bot de {nombre}.
 
@@ -30,6 +32,12 @@ Para publicar una nota, mandame:
 
 Para marcar cómo es la info, empezá el mensaje con:
 #oficial · #confirmado · #rumor
+
+Para cambiarle la foto a una nota ya publicada:
+• Mandame la foto con el texto /foto → va en la última nota.
+• /foto nombre-de-la-nota → va en esa nota (los nombres salen en /ultimas).
+• O respondé con la foto y /foto a mi mensaje de esa nota.
+• Si querés, agregá el crédito al final: /foto nombre-de-la-nota Foto: Juan Pérez
 
 Comandos:
 /ultimas – las últimas 5 notas
@@ -74,6 +82,16 @@ def leer_tweet(url: str) -> dict | None:
 
 
 # --------------------------------------------------------------- fotos --
+def fotos_del_mensaje(msg: dict) -> list[dict]:
+    """La foto del mensaje: la comprimida de Telegram o una imagen mandada como archivo."""
+    if msg.get("photo"):
+        return msg["photo"]
+    doc = msg.get("document") or {}
+    if str(doc.get("mime_type", "")).startswith("image/"):
+        return [doc]
+    return []
+
+
 def bajar_foto(fotos: list[dict], nombre: str) -> str | None:
     if not fotos:
         return None
@@ -156,9 +174,13 @@ def procesar_mensaje(msg: dict, ya_avisados: set) -> None:
     if texto.startswith(("/start", "/ayuda", "/help")):
         responder(chat_id, AYUDA.format(nombre=config()["sitio"]["nombre"]))
         return
+    if re.match(r"(?i)/foto(@\w+)?\b", texto):
+        cambiar_foto(msg, chat_id, texto)
+        return
     if texto.startswith("/ultimas"):
         notas = listar_notas()[:5]
-        lista = "\n".join(f"• {n['titulo']}\n  /borrar {n['slug']}" for n in notas) or "No hay notas todavía."
+        lista = "\n\n".join(f"• {n['titulo']}\n  /foto {n['slug']}\n  /borrar {n['slug']}" for n in notas) \
+            or "No hay notas todavía."
         responder(chat_id, lista)
         return
     if texto.startswith("/borrar"):
@@ -218,7 +240,7 @@ def procesar_mensaje(msg: dict, ya_avisados: set) -> None:
     except ia.IAError:
         responder(chat_id, "⚠️ No pude armar la nota con eso. Probá agregando más contexto.")
         return
-    imagen = bajar_foto(msg.get("photo") or [], nota["id"])
+    imagen = bajar_foto(fotos_del_mensaje(msg), nota["id"])
     if imagen:
         nota["imagen"] = imagen
     guardar_nota(nota)
@@ -226,6 +248,62 @@ def procesar_mensaje(msg: dict, ya_avisados: set) -> None:
     responder(chat_id, f"✅ Publicada ({nota['estado']}):\n{nota['titulo']}\n\n"
                        f"Aparece en la web en unos minutos:\n{url_nota(nota)}\n\n"
                        f"¿Algo mal? /borrar {nota['slug']}")
+
+
+def cambiar_foto(msg: dict, chat_id: int, texto: str) -> None:
+    """/foto [nombre-de-la-nota] [crédito]: pone la foto del mensaje en una nota ya publicada."""
+    fotos = fotos_del_mensaje(msg)
+    if not fotos:
+        responder(chat_id, "Mandame la foto con el texto /foto (en el epígrafe de la foto).\n"
+                           "Va en la última nota, o en la que digas: /foto nombre-de-la-nota\n"
+                           "Los nombres de las notas salen en /ultimas.")
+        return
+    resto = re.sub(r"(?i)^/foto(@\w+)?", "", texto).strip()
+    partes = resto.split(maxsplit=1)
+    slug = None
+    if partes and (NOTAS / f"{partes[0].strip()}.json").exists():
+        slug = partes[0].strip()
+        resto = partes[1] if len(partes) > 1 else ""
+    if not slug:
+        # Respondiendo a un mensaje del bot que tiene el link de una nota
+        citado = msg.get("reply_to_message") or {}
+        enlaces = RE_SLUG_EN_LINK.findall((citado.get("text") or "") + " " + (citado.get("caption") or ""))
+        enlaces = [x for x in dict.fromkeys(enlaces) if (NOTAS / f"{x}.json").exists()]
+        if len(enlaces) == 1:
+            slug = enlaces[0]
+    if not slug and partes and re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+){2,}", partes[0].strip()):
+        responder(chat_id, f"No encontré la nota «{partes[0].strip()}». Usá /ultimas para ver los nombres.")
+        return
+    if not slug:
+        notas = listar_notas()
+        if not notas:
+            responder(chat_id, "Todavía no hay notas publicadas.")
+            return
+        slug = notas[0]["slug"]
+
+    archivo = NOTAS / f"{slug}.json"
+    nota = leer_json(archivo, {})
+    if not nota:
+        responder(chat_id, "No pude abrir esa nota. Probá de nuevo en un rato.")
+        return
+    # Nombre nuevo cada vez, así los navegadores no muestran la foto vieja guardada
+    imagen = bajar_foto(fotos, f"{nota.get('id', slug)}-{int(time.time())}")
+    if not imagen:
+        responder(chat_id, "⚠️ No pude bajar la foto. Mandala de nuevo en un rato.")
+        return
+    anterior = nota.get("imagen", "")
+    if anterior.startswith("img/notas/"):
+        (IMAGENES_NOTAS / anterior.split("/")[-1]).unlink(missing_ok=True)
+    nota["imagen"] = imagen
+    credito = re.sub(r"\s+", " ", resto).strip()[:120]
+    if credito:
+        nota["imagen_credito"] = credito
+    else:
+        nota.pop("imagen_credito", None)
+    guardar_json(archivo, nota)
+    log(f"Telegram: 🖼️ foto nueva en {slug}")
+    responder(chat_id, f"🖼️ Listo, cambié la foto de:\n{nota['titulo']}\n\n"
+                       f"Se ve en la web en la próxima actualización:\n{url_nota(nota)}")
 
 
 def ejecutar() -> int:
