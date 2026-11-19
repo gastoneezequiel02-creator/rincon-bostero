@@ -75,7 +75,9 @@ def opciones() -> dict:
 
 
 def nombre_lindo(slug: str, nombre: str) -> str:
-    return NOMBRES.get(slug, nombre)
+    # el índice a veces trae la sigla delante ("TI\n Tigre"): queda solo el nombre
+    limpio = re.sub(r"^\s*[A-Z0-9]{2,4}\s*\n\s*", "", nombre or "").strip()
+    return NOMBRES.get(slug, limpio or nombre)
 
 
 # ------------------------------------------------------------ índice de rivales --
@@ -261,7 +263,7 @@ def todos_los_partidos() -> list[dict]:
     for f in sorted(CARPETA_PARTIDOS.glob("*.json")):
         d = leer_json(f, {})
         for p in d.get("partidos", []):
-            salida.append({**p, "rival_slug": d.get("slug", f.stem), "rival": d.get("nombre", f.stem)})
+            salida.append({**p, "rival_slug": d.get("slug", f.stem), "rival": nombre_lindo(d.get("slug", f.stem), d.get("nombre", f.stem))})
     salida.sort(key=lambda p: p["fecha"])
     return salida
 
