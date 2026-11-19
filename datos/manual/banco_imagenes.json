@@ -1,265 +1,265 @@
 {
-  "_que_es": "Banco de imágenes propio. Se carga por Telegram con /banco. 'general': sirve para cualquier nota. Solo fotos propias o con permiso de su autor.",
-  "imagenes": [
-    {
-      "id": "13a318bd",
-      "archivo": "img/banco/13a318bd.jpg",
-      "descripcion": "LEANDRO PAREDES",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:39-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "3e42c9a9",
-      "archivo": "img/banco/3e42c9a9.jpg",
-      "descripcion": "vasco arruebarrena",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:39-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "d80e4319",
-      "archivo": "img/banco/d80e4319.jpg",
-      "descripcion": "VASCO ARRUEBARRENA",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:39-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "9e138a6e",
-      "archivo": "img/banco/9e138a6e.jpg",
-      "descripcion": "VASCO ARRUEBARRENA FESTEJANDO",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:39-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "90ea94f8",
-      "archivo": "img/banco/90ea94f8.jpg",
-      "descripcion": "PLANTEL DE BOCA",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:39-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "d8f7bf77",
-      "archivo": "img/banco/d8f7bf77.jpg",
-      "descripcion": "LEANDRO PAREDES",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:39-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "a0148613",
-      "archivo": "img/banco/a0148613.jpg",
-      "descripcion": "leandro paredes festejando",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:39-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "444f26ea",
-      "archivo": "img/banco/444f26ea.jpg",
-      "descripcion": "bombonera",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "6c692f47",
-      "archivo": "img/banco/6c692f47.jpg",
-      "descripcion": "bombonera",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "7f9ef315",
-      "archivo": "img/banco/7f9ef315.jpg",
-      "descripcion": "hinchas de boca",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "4057a230",
-      "archivo": "img/banco/4057a230.jpg",
-      "descripcion": "hinchas de boca",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "d29ef2a1",
-      "archivo": "img/banco/d29ef2a1.jpg",
-      "descripcion": "hinchas de boca",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "b867d206",
-      "archivo": "img/banco/b867d206.jpg",
-      "descripcion": "hinchas festejando",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "c0df00f8",
-      "archivo": "img/banco/c0df00f8.jpg",
-      "descripcion": "la bombonera",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "fd15dea4",
-      "archivo": "img/banco/fd15dea4.jpg",
-      "descripcion": "hincha de river llorando",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "62b6a644",
-      "archivo": "img/banco/62b6a644.jpg",
-      "descripcion": "jugador de river triste",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "620ef45c",
-      "archivo": "img/banco/620ef45c.jpg",
-      "descripcion": "juan roman riquelme",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 1,
-      "ultimo_uso": "2026-11-19T15:42-03:00"
-    },
-    {
-      "id": "7bf7ae20",
-      "archivo": "img/banco/7bf7ae20.jpg",
-      "descripcion": "juan roman riquelme con un microfono",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "34c9de0e",
-      "archivo": "img/banco/34c9de0e.jpg",
-      "descripcion": "juan roman riquelme declarando",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "c3d9cc3c",
-      "archivo": "img/banco/c3d9cc3c.jpg",
-      "descripcion": "riquelme tomando mate",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "9441abaf",
-      "archivo": "img/banco/9441abaf.jpg",
-      "descripcion": "riquelme sonriendo",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "537b3f02",
-      "archivo": "img/banco/537b3f02.jpg",
-      "descripcion": "miguel merentiel",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "3771e803",
-      "archivo": "img/banco/3771e803.jpg",
-      "descripcion": "miguel merentiel",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "d78f426f",
-      "archivo": "img/banco/d78f426f.jpg",
-      "descripcion": "mercado de pases",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "9083b2cd",
-      "archivo": "img/banco/9083b2cd.jpg",
-      "descripcion": "mercado de pases boca",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    },
-    {
-      "id": "89b4f683",
-      "archivo": "img/banco/89b4f683.jpg",
-      "descripcion": "mercado de pases boca",
-      "credito": "",
-      "general": false,
-      "cargada": "2026-11-19T15:40-03:00",
-      "usos": 0,
-      "ultimo_uso": ""
-    }
-  ]
+ "_que_es": "Banco de imágenes propio. Se carga por Telegram con /banco. 'general': sirve para cualquier nota. Solo fotos propias o con permiso de su autor.",
+ "imagenes": [
+  {
+   "id": "13a318bd",
+   "archivo": "img/banco/13a318bd.jpg",
+   "descripcion": "Leandro Paredes",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:39-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "3e42c9a9",
+   "archivo": "img/banco/3e42c9a9.jpg",
+   "descripcion": "Vasco Arruabarrena",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:39-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "d80e4319",
+   "archivo": "img/banco/d80e4319.jpg",
+   "descripcion": "Vasco Arruabarrena",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:39-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "9e138a6e",
+   "archivo": "img/banco/9e138a6e.jpg",
+   "descripcion": "Vasco Arruabarrena festejando",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:39-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "90ea94f8",
+   "archivo": "img/banco/90ea94f8.jpg",
+   "descripcion": "Plantel de Boca",
+   "credito": "",
+   "general": true,
+   "cargada": "2026-11-19T15:39-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "d8f7bf77",
+   "archivo": "img/banco/d8f7bf77.jpg",
+   "descripcion": "Leandro Paredes",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:39-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "a0148613",
+   "archivo": "img/banco/a0148613.jpg",
+   "descripcion": "Leandro Paredes festejando",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:39-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "444f26ea",
+   "archivo": "img/banco/444f26ea.jpg",
+   "descripcion": "La Bombonera",
+   "credito": "",
+   "general": true,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "6c692f47",
+   "archivo": "img/banco/6c692f47.jpg",
+   "descripcion": "La Bombonera",
+   "credito": "",
+   "general": true,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "7f9ef315",
+   "archivo": "img/banco/7f9ef315.jpg",
+   "descripcion": "Hinchas de Boca",
+   "credito": "",
+   "general": true,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "4057a230",
+   "archivo": "img/banco/4057a230.jpg",
+   "descripcion": "Hinchas de Boca",
+   "credito": "",
+   "general": true,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "d29ef2a1",
+   "archivo": "img/banco/d29ef2a1.jpg",
+   "descripcion": "Hinchas de Boca",
+   "credito": "",
+   "general": true,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "b867d206",
+   "archivo": "img/banco/b867d206.jpg",
+   "descripcion": "Hinchas de Boca festejando",
+   "credito": "",
+   "general": true,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "c0df00f8",
+   "archivo": "img/banco/c0df00f8.jpg",
+   "descripcion": "La Bombonera",
+   "credito": "",
+   "general": true,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "fd15dea4",
+   "archivo": "img/banco/fd15dea4.jpg",
+   "descripcion": "Hincha de River llorando",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "62b6a644",
+   "archivo": "img/banco/62b6a644.jpg",
+   "descripcion": "Jugador de River triste",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "620ef45c",
+   "archivo": "img/banco/620ef45c.jpg",
+   "descripcion": "Juan Román Riquelme",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 1,
+   "ultimo_uso": "2026-11-19T15:42-03:00"
+  },
+  {
+   "id": "7bf7ae20",
+   "archivo": "img/banco/7bf7ae20.jpg",
+   "descripcion": "Juan Román Riquelme con un micrófono",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "34c9de0e",
+   "archivo": "img/banco/34c9de0e.jpg",
+   "descripcion": "Juan Román Riquelme declarando",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "c3d9cc3c",
+   "archivo": "img/banco/c3d9cc3c.jpg",
+   "descripcion": "Juan Román Riquelme tomando mate",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "9441abaf",
+   "archivo": "img/banco/9441abaf.jpg",
+   "descripcion": "Juan Román Riquelme sonriendo",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "537b3f02",
+   "archivo": "img/banco/537b3f02.jpg",
+   "descripcion": "Miguel Merentiel",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "3771e803",
+   "archivo": "img/banco/3771e803.jpg",
+   "descripcion": "Miguel Merentiel",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "d78f426f",
+   "archivo": "img/banco/d78f426f.jpg",
+   "descripcion": "Mercado de pases, fichajes y refuerzos",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "9083b2cd",
+   "archivo": "img/banco/9083b2cd.jpg",
+   "descripcion": "Mercado de pases, fichajes y refuerzos",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  },
+  {
+   "id": "89b4f683",
+   "archivo": "img/banco/89b4f683.jpg",
+   "descripcion": "Mercado de pases, fichajes y refuerzos",
+   "credito": "",
+   "general": false,
+   "cargada": "2026-11-19T15:40-03:00",
+   "usos": 0,
+   "ultimo_uso": ""
+  }
+ ]
 }
