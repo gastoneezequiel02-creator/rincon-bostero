@@ -12,6 +12,7 @@ En el repositorio hay una copia inicial (datos/bocastats/*.json) para que la web
 from __future__ import annotations
 
 import datetime as dt
+import html as html_mod
 import re
 
 from comun import DATOS, ahora, config, guardar_json, http_get, leer_json, log, normalizar
@@ -133,13 +134,49 @@ def importar_indice() -> None:
 
 
 # ---------------------------------------------------------- partido por partido --
+def _torneo_normalizado(torneo: str, anio: int, mes: int) -> str:
+    torneo = re.sub(r"\s+", " ", html_mod.unescape(torneo)).strip(" |,.")
+    if re.search(r"(?i)argentine liga profesional", torneo):
+        # desde 2025 la liga se juega en Apertura (primer semestre) y Clausura (segundo)
+        torneo = (f"Torneo {'Apertura' if mes <= 6 else 'Clausura'} {anio}" if anio >= 2025 else f"Liga Profesional {anio}")
+    return torneo
+
+
+def _parsear_filas_con_datos(html: str) -> list[dict]:
+    """Filas de la tabla «Todos los partidos»: <tr data-res data-cond data-fecha data-gf data-gc> + competencia."""
+    partidos = []
+    for etiqueta, cuerpo in re.findall(r'(?is)<tr\b([^>]*\bdata-fecha="\d{8}"[^>]*)>(.*?)</tr>', html):
+        attrs = dict(re.findall(r'data-([a-z]+)="([^"]*)"', etiqueta))
+        try:
+            fecha, gb, gr = attrs["fecha"], int(attrs["gf"]), int(attrs["gc"])
+        except (KeyError, ValueError):
+            continue
+        comp = re.search(r'(?is)<td[^>]*class="[^"]*td-comp[^"]*"[^>]*>(.*?)</td>', cuerpo)
+        torneo = _torneo_normalizado(re.sub(r"<[^>]+>", " ", comp.group(1)) if comp else "", int(fecha[:4]), int(fecha[4:6]))
+        condicion = {"local": "L", "visitante": "V", "neutral": "N"}.get(attrs.get("cond", "").lower(), "N")
+        partidos.append({"fecha": f"{fecha[:4]}-{fecha[4:6]}-{fecha[6:]}", "torneo": torneo, "condicion": condicion,
+                         "goles_boca": gb, "goles_rival": gr, "resultado": "G" if gb > gr else "P" if gb < gr else "E",
+                         "amistoso": torneo.lower().startswith("amistos")})
+    return partidos
+
+
 def parsear_rival(html: str) -> dict:
     texto = _texto_con_filas(html)
     info = {}
-    if m := re.search(r"(\d+)\s+partidos oficiales", texto):
+    if m := re.search(r"(?i)(\d+)\s+partidos oficiales", texto):
         info["oficiales"] = int(m.group(1))
-    if m := re.search(r"(\d+)\s+totales", texto) or re.search(r"Mostrando\s+(\d+)\s+de\s+(\d+)", texto):
+    if m := re.search(r"(?i)(\d+)\s+totales", texto) or re.search(r"(?i)Mostrando\s+(\d+)\s+de\s+(\d+)", texto):
         info["totales"] = int(m.groups()[-1])
+    con_datos = _parsear_filas_con_datos(html)
+    if con_datos:
+        vistos, unicos = set(), []
+        for x in con_datos:  # la tabla de «últimos antecedentes» repite los más recientes
+            k = (x["fecha"], x["goles_boca"], x["goles_rival"])
+            if k not in vistos:
+                vistos.add(k)
+                unicos.append(x)
+        con_datos = sorted(unicos, key=lambda p: p["fecha"])
+        return {"partidos": con_datos, **info}
     partidos = []
     lineas = [l for l in texto.split("\n") if RE_FECHA.search(l)]
     for linea in lineas:

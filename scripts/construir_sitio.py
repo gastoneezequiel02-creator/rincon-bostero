@@ -302,13 +302,24 @@ def pagina_inicio(notas, proximos, jugados, tablas) -> str:
         lateral.append(f'<section><h2 class="titulo-seccion">Lo que viene <a href="fixture.html">Fixture</a></h2>'
                        f'<ul class="lista-partidos">{filas}</ul></section>')
     lateral.append(mini_tabla(tablas, pre))
+    hoy = ahora()
+    items = []
     if hdb():
         import historia_de_boca
-        hoy = ahora()
-        items = historia_de_boca.efemerides_del_dia(hoy.month, hoy.day)
-        if items:
-            lista = "".join(f'<li><b>{x["anio"]}</b><span>{e(x["titulo"])}</span></li>' for x in items[:5])
-            lateral.append(f"""<section class="efemeride"><h2 class="titulo-seccion">Un día como hoy <a href="efemerides.html">Ver todas</a></h2>
+        items = [{"anio": x["anio"], "titulo": x["titulo"]} for x in historia_de_boca.efemerides_del_dia(hoy.month, hoy.day)]
+    if not items and bs_opciones():
+        # sin efemérides guardadas para hoy: partidos oficiales jugados un día como hoy (BocaStats)
+        import bocastats
+        del_dia = [x for x in bocastats.todos_los_partidos()
+                   if not x["amistoso"] and x["fecha"][5:10] == f"{hoy.month:02d}-{hoy.day:02d}" and x["fecha"][:4] < str(hoy.year)]
+        del_dia.sort(key=lambda x: (-abs(x["goles_boca"] - x["goles_rival"]), x["fecha"]))
+        for x in sorted(del_dia[:5], key=lambda x: x["fecha"]):
+            verbo = {"G": "le ganó a", "E": "empató con", "P": "perdió con"}[x["resultado"]]
+            items.append({"anio": int(x["fecha"][:4]),
+                          "titulo": f'Boca {verbo} {x["rival"]} {x["goles_boca"]}-{x["goles_rival"]} ({x["torneo"]})'})
+    if items:
+        lista = "".join(f'<li><b>{x["anio"]}</b><span>{e(x["titulo"])}</span></li>' for x in items[:5])
+        lateral.append(f"""<section class="efemeride"><h2 class="titulo-seccion">Un día como hoy <a href="efemerides.html">Ver todas</a></h2>
 <ul class="efemerides">{lista}</ul></section>""")
 
     cuerpo = f"""<div class="portada">

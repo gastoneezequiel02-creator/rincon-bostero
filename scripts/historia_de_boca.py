@@ -462,6 +462,8 @@ def rankings() -> dict:
 def ejecutar() -> None:
     if not opciones():
         return
+    if not opciones().get("actualizar_automaticamente", True):
+        return  # Historia de Boca no habilitó la lectura automática: se usan las copias guardadas
     ejecutar_efemerides()
     importar_historiales()
     for paso in (importar_rankings, importar_campanias):
