@@ -679,6 +679,14 @@
     "everson": {
       "archivo": null,
       "buscado": "2026-11-19T05:41:06.537810-03:00"
+    },
+    "inteligencia artificial": {
+      "archivo": null,
+      "buscado": "2026-11-19T07:50:29.237710-03:00"
+    },
+    "diego martinez": {
+      "archivo": null,
+      "buscado": "2026-11-19T07:50:29.714826-03:00"
     }
   },
   "archivos": {
@@ -1061,6 +1069,14 @@
     "Estrellas de La Bombonera, Buenos Aires ARG.jpg": {
       "imagen": "img/archivo/estrellas-de-la-bombonera-buenos-aires-arg-8768a2.jpg",
       "credito": "Foto de archivo: Stefano Vigorelli / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "La Bombonera 2.jpg": {
+      "imagen": "img/archivo/la-bombonera-2-679c05.jpg",
+      "credito": "Foto de archivo: Matibro / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "Boca Juniors stadı La Bombonera giriş 2018.jpg": {
+      "imagen": "img/archivo/boca-juniors-stad-la-bombonera-giris-2018-ff1eb4.jpg",
+      "credito": "Foto de archivo: Mehmettorun / Wikimedia Commons (CC BY-SA 4.0)"
     }
   },
   "bombonera": {
