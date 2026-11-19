@@ -205,6 +205,47 @@
     "resultado": "G"
   },
   {
+    "id": "396294",
+    "fecha": "2014-09-04T21:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Sudamericana",
+    "competencia_slug": "conmebol.sudamericana",
+    "instancia": "ida",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Gigante de Arroyito",
+    "ciudad": "Rosario",
+    "condicion": "V",
+    "local": {
+      "id": "17",
+      "nombre": "Rosario Central",
+      "corto": "Rosario Central",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "17",
+      "nombre": "Rosario Central",
+      "corto": "Rosario Central",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
     "id": "399456",
     "fecha": "2014-09-07T21:30:00-03:00",
     "hora_a_confirmar": false,
@@ -240,6 +281,47 @@
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2636.png"
     },
     "goles_boca": 1,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "396291",
+    "fecha": "2014-09-18T21:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Sudamericana",
+    "competencia_slug": "conmebol.sudamericana",
+    "instancia": "vuelta - Boca Juniors win 4-1 on aggregate",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 3,
+      "penales": null
+    },
+    "visitante": {
+      "id": "17",
+      "nombre": "Rosario Central",
+      "corto": "Rosario Central",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "17",
+      "nombre": "Rosario Central",
+      "corto": "Rosario Central",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png"
+    },
+    "goles_boca": 3,
     "goles_rival": 0,
     "penales_boca": null,
     "penales_rival": null,
@@ -451,6 +533,47 @@
     "resultado": "G"
   },
   {
+    "id": "406816",
+    "fecha": "2014-10-15T21:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Sudamericana",
+    "competencia_slug": "conmebol.sudamericana",
+    "instancia": "ida",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "10853",
+      "nombre": "Deportivo Capiatá",
+      "corto": "Capiatá",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10853.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "10853",
+      "nombre": "Deportivo Capiatá",
+      "corto": "Capiatá",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10853.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
+  },
+  {
     "id": "399397",
     "fecha": "2014-10-19T21:30:00-03:00",
     "hora_a_confirmar": false,
@@ -487,6 +610,47 @@
     },
     "goles_boca": 3,
     "goles_rival": 2,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "406809",
+    "fecha": "2014-10-23T21:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Sudamericana",
+    "competencia_slug": "conmebol.sudamericana",
+    "instancia": "vuelta - Tied on aggregate - CABJ win 4-3 on penalties",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "SO",
+    "estadio": "Estadio Feliciano Cáceres",
+    "ciudad": "Luque",
+    "condicion": "V",
+    "local": {
+      "id": "10853",
+      "nombre": "Deportivo Capiatá",
+      "corto": "Capiatá",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10853.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "10853",
+      "nombre": "Deportivo Capiatá",
+      "corto": "Capiatá",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/10853.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 0,
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "G"
@@ -533,6 +697,47 @@
     "resultado": "G"
   },
   {
+    "id": "408593",
+    "fecha": "2014-10-30T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Sudamericana",
+    "competencia_slug": "conmebol.sudamericana",
+    "instancia": "ida",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "2671",
+      "nombre": "Cerro Porteño",
+      "corto": "Cerro Porteño",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2671.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "2671",
+      "nombre": "Cerro Porteño",
+      "corto": "Cerro Porteño",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2671.png"
+    },
+    "goles_boca": 1,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "399376",
     "fecha": "2014-11-02T16:00:00-03:00",
     "hora_a_confirmar": false,
@@ -572,6 +777,47 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "P"
+  },
+  {
+    "id": "408592",
+    "fecha": "2014-11-06T19:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Sudamericana",
+    "competencia_slug": "conmebol.sudamericana",
+    "instancia": "vuelta - Boca Juniors win 5-1 on aggregate",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Estadio ueno Defensores del Chaco",
+    "ciudad": "Asunción",
+    "condicion": "V",
+    "local": {
+      "id": "2671",
+      "nombre": "Cerro Porteño",
+      "corto": "Cerro Porteño",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2671.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 4,
+      "penales": null
+    },
+    "rival": {
+      "id": "2671",
+      "nombre": "Cerro Porteño",
+      "corto": "Cerro Porteño",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/2671.png"
+    },
+    "goles_boca": 4,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
   },
   {
     "id": "399373",
@@ -656,6 +902,47 @@
     "resultado": "E"
   },
   {
+    "id": "409229",
+    "fecha": "2014-11-20T20:45:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Sudamericana",
+    "competencia_slug": "conmebol.sudamericana",
+    "instancia": "ida",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "16",
+      "nombre": "River Plate",
+      "corto": "River Plate",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "16",
+      "nombre": "River Plate",
+      "corto": "River Plate",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "E"
+  },
+  {
     "id": "399345",
     "fecha": "2014-11-23T19:10:00-03:00",
     "hora_a_confirmar": false,
@@ -695,6 +982,47 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "G"
+  },
+  {
+    "id": "409227",
+    "fecha": "2014-11-27T20:45:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Sudamericana",
+    "competencia_slug": "conmebol.sudamericana",
+    "instancia": "vuelta - River Plate win 1-0 on aggregate",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Mâs Monumental",
+    "ciudad": "Buenos Aires",
+    "condicion": "V",
+    "local": {
+      "id": "16",
+      "nombre": "River Plate",
+      "corto": "River Plate",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "16",
+      "nombre": "River Plate",
+      "corto": "River Plate",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
   },
   {
     "id": "399337",
@@ -861,6 +1189,47 @@
     "resultado": "G"
   },
   {
+    "id": "411935",
+    "fecha": "2015-02-18T18:45:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Estadio Santa Laura-Universidad SEK",
+    "ciudad": "Santiago",
+    "condicion": "V",
+    "local": {
+      "id": "4422",
+      "nombre": "Palestino",
+      "corto": "Palestino",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4422.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "rival": {
+      "id": "4422",
+      "nombre": "Palestino",
+      "corto": "Palestino",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4422.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "413070",
     "fecha": "2015-02-22T21:30:00-03:00",
     "hora_a_confirmar": false,
@@ -897,6 +1266,47 @@
     },
     "goles_boca": 2,
     "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "411919",
+    "fecha": "2015-02-26T20:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5501",
+      "nombre": "Montevideo Wanderers",
+      "corto": "Wanderers",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5501.png",
+      "goles": 1,
+      "penales": null
+    },
+    "rival": {
+      "id": "5501",
+      "nombre": "Montevideo Wanderers",
+      "corto": "Wanderers",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5501.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 1,
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "G"
@@ -984,6 +1394,47 @@
     "resultado": "E"
   },
   {
+    "id": "411902",
+    "fecha": "2015-03-11T20:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 5,
+      "penales": null
+    },
+    "visitante": {
+      "id": "6763",
+      "nombre": "Zamora FC",
+      "corto": "Zamora FC",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/6763.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "6763",
+      "nombre": "Zamora FC",
+      "corto": "Zamora FC",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/6763.png"
+    },
+    "goles_boca": 5,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "413025",
     "fecha": "2015-03-14T18:15:00-03:00",
     "hora_a_confirmar": false,
@@ -1019,6 +1470,47 @@
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png"
     },
     "goles_boca": 2,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "411894",
+    "fecha": "2015-03-17T22:15:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Estadio Agustín Tovar",
+    "ciudad": "Barinas",
+    "condicion": "V",
+    "local": {
+      "id": "6763",
+      "nombre": "Zamora FC",
+      "corto": "Zamora FC",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/6763.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 5,
+      "penales": null
+    },
+    "rival": {
+      "id": "6763",
+      "nombre": "Zamora FC",
+      "corto": "Zamora FC",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/6763.png"
+    },
+    "goles_boca": 5,
     "goles_rival": 1,
     "penales_boca": null,
     "penales_rival": null,
@@ -1148,6 +1640,47 @@
     "resultado": "G"
   },
   {
+    "id": "411871",
+    "fecha": "2015-04-09T21:45:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Estadio Centenario",
+    "ciudad": "Montevideo",
+    "condicion": "V",
+    "local": {
+      "id": "5501",
+      "nombre": "Montevideo Wanderers",
+      "corto": "Wanderers",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5501.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 3,
+      "penales": null
+    },
+    "rival": {
+      "id": "5501",
+      "nombre": "Montevideo Wanderers",
+      "corto": "Wanderers",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5501.png"
+    },
+    "goles_boca": 3,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "412970",
     "fecha": "2015-04-12T18:15:00-03:00",
     "hora_a_confirmar": false,
@@ -1187,6 +1720,47 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "E"
+  },
+  {
+    "id": "411858",
+    "fecha": "2015-04-16T19:45:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "4422",
+      "nombre": "Palestino",
+      "corto": "Palestino",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4422.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "4422",
+      "nombre": "Palestino",
+      "corto": "Palestino",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/4422.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
   },
   {
     "id": "412950",
@@ -1271,6 +1845,47 @@
     "resultado": "G"
   },
   {
+    "id": "419844",
+    "fecha": "2015-05-07T21:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Libertadores",
+    "competencia_slug": "conmebol.libertadores",
+    "instancia": "ida",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Mâs Monumental",
+    "ciudad": "Buenos Aires",
+    "condicion": "V",
+    "local": {
+      "id": "16",
+      "nombre": "River Plate",
+      "corto": "River Plate",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "16",
+      "nombre": "River Plate",
+      "corto": "River Plate",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png"
+    },
+    "goles_boca": 0,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "P"
+  },
+  {
     "id": "412920",
     "fecha": "2015-05-10T21:30:00-03:00",
     "hora_a_confirmar": false,
@@ -1351,6 +1966,47 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "P"
+  },
+  {
+    "id": "420338",
+    "fecha": "2015-05-27T20:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "San Juan del Bicentenario",
+    "ciudad": "San Juan",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "visitante": {
+      "id": "11974",
+      "nombre": "Huracán (Las Heras)",
+      "corto": "Huracán LH",
+      "escudo": "",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "11974",
+      "nombre": "Huracán (Las Heras)",
+      "corto": "Huracán LH",
+      "escudo": ""
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
   },
   {
     "id": "412889",
@@ -1558,6 +2214,47 @@
     "resultado": "G"
   },
   {
+    "id": "431526",
+    "fecha": "2015-07-29T19:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Don Carlos Antonio Romero",
+    "ciudad": "",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 3,
+      "penales": null
+    },
+    "visitante": {
+      "id": "235",
+      "nombre": "Banfield",
+      "corto": "Banfield",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png",
+      "goles": 0,
+      "penales": null
+    },
+    "rival": {
+      "id": "235",
+      "nombre": "Banfield",
+      "corto": "Banfield",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png"
+    },
+    "goles_boca": 3,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "412824",
     "fecha": "2015-08-02T18:15:00-03:00",
     "hora_a_confirmar": false,
@@ -1635,6 +2332,47 @@
     },
     "goles_boca": 2,
     "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "433274",
+    "fecha": "2015-08-19T21:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "San Juan del Bicentenario",
+    "ciudad": "San Juan",
+    "condicion": "V",
+    "local": {
+      "id": "17524",
+      "nombre": "Guaraní A. Franco",
+      "corto": "Guaraní",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17524.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 4,
+      "penales": null
+    },
+    "rival": {
+      "id": "17524",
+      "nombre": "Guaraní A. Franco",
+      "corto": "Guaraní",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17524.png"
+    },
+    "goles_boca": 4,
+    "goles_rival": 0,
     "penales_boca": null,
     "penales_rival": null,
     "resultado": "G"
@@ -1845,6 +2583,47 @@
     "resultado": "G"
   },
   {
+    "id": "435823",
+    "fecha": "2015-09-23T21:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Mario Alberto Kempes",
+    "ciudad": "Córdoba",
+    "condicion": "V",
+    "local": {
+      "id": "8950",
+      "nombre": "Defensa y Justicia",
+      "corto": "Def. y Jus.",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
+      "goles": 1,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "rival": {
+      "id": "8950",
+      "nombre": "Defensa y Justicia",
+      "corto": "Def. y Jus.",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 1,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "412709",
     "fecha": "2015-09-27T18:15:00-03:00",
     "hora_a_confirmar": false,
@@ -1968,6 +2747,47 @@
     "resultado": "P"
   },
   {
+    "id": "436525",
+    "fecha": "2015-10-23T19:00:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "San Juan del Bicentenario",
+    "ciudad": "San Juan",
+    "condicion": "V",
+    "local": {
+      "id": "12",
+      "nombre": "Lanús",
+      "corto": "Lanús ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "rival": {
+      "id": "12",
+      "nombre": "Lanús",
+      "corto": "Lanús ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png"
+    },
+    "goles_boca": 2,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
     "id": "412675",
     "fecha": "2015-11-01T18:00:00-03:00",
     "hora_a_confirmar": false,
@@ -2003,6 +2823,47 @@
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/7767.png"
     },
     "goles_boca": 1,
+    "goles_rival": 0,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": "G"
+  },
+  {
+    "id": "436973",
+    "fecha": "2015-11-04T21:10:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Copa Argentina",
+    "competencia_slug": "arg.copa",
+    "instancia": "",
+    "temporada": 2014,
+    "estado": "finalizado",
+    "detalle": "FT",
+    "estadio": "Mario Alberto Kempes",
+    "ciudad": "Córdoba",
+    "condicion": "V",
+    "local": {
+      "id": "17",
+      "nombre": "Rosario Central",
+      "corto": "Rosario Central",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
+      "goles": 0,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": 2,
+      "penales": null
+    },
+    "rival": {
+      "id": "17",
+      "nombre": "Rosario Central",
+      "corto": "Rosario Central",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png"
+    },
+    "goles_boca": 2,
     "goles_rival": 0,
     "penales_boca": null,
     "penales_rival": null,

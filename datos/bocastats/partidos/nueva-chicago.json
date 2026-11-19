@@ -1,3 +1,233 @@
 {
-  "intento": "2026-11-18T22:05:44-03:00"
+  "slug": "nueva-chicago",
+  "nombre": "NC\n Nueva Chicago",
+  "importado": "2026-11-18T22:17:36-03:00",
+  "oficiales_segun_pagina": 22,
+  "partidos": [
+    {
+      "fecha": "1920-04-25",
+      "torneo": "Campeonato 1920",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1920-12-19",
+      "torneo": "Campeonato 1920",
+      "condicion": "L",
+      "goles_boca": 7,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1921-04-10",
+      "torneo": "Amistosos 1921",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "1921-04-25",
+      "torneo": "Campeonato 1921",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1921-12-11",
+      "torneo": "Campeonato 1921",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1922-06-04",
+      "torneo": "Campeonato 1922",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1923-07-29",
+      "torneo": "Campeonato 1923",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1923-11-25",
+      "torneo": "Campeonato 1923",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1924-04-20",
+      "torneo": "Campeonato 1924",
+      "condicion": "V",
+      "goles_boca": 6,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1925-10-25",
+      "torneo": "Copa Competencia 1925",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1966-06-22",
+      "torneo": "Amistosos 1966",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1982-09-05",
+      "torneo": "Torneo Metropolitano 1982",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1982-12-08",
+      "torneo": "Torneo Metropolitano 1982",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1983-07-17",
+      "torneo": "Torneo Metropolitano 1983",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1983-11-01",
+      "torneo": "Torneo Metropolitano 1983",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 5,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1996-04-18",
+      "torneo": "Amistosos 1996",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "2001-11-18",
+      "torneo": "Torneo Apertura 2001",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2002-04-17",
+      "torneo": "Torneo Clausura 2002",
+      "condicion": "L",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "2002-07-28",
+      "torneo": "Torneo Apertura 2002",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "2003-02-16",
+      "torneo": "Torneo Clausura 2003",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2003-10-19",
+      "torneo": "Torneo Apertura 2003",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2004-04-18",
+      "torneo": "Torneo Clausura 2004",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2006-09-24",
+      "torneo": "Torneo Apertura 2006",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2007-03-31",
+      "torneo": "Torneo Clausura 2007",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2015-04-12",
+      "torneo": "Campeonato 2015",
+      "condicion": "L",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    }
+  ]
 }

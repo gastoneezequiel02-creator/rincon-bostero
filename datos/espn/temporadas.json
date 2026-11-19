@@ -387,6 +387,19 @@
       "gf": 25,
       "gc": 23,
       "pts": 31
+    },
+    "conmebol.libertadores": {
+      "competencia": "Copa Libertadores",
+      "grupo": "COPA LIBERTADORES - GROUP 5",
+      "equipos": 4,
+      "pos": 1,
+      "pj": 6,
+      "g": 6,
+      "e": 0,
+      "p": 0,
+      "gf": 19,
+      "gc": 2,
+      "pts": 18
     }
   }
 }

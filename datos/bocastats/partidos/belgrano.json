@@ -1,3 +1,575 @@
 {
-  "intento": "2026-11-18T22:05:41-03:00"
+  "slug": "belgrano",
+  "nombre": "BE\n Belgrano",
+  "importado": "2026-11-18T22:17:32-03:00",
+  "oficiales_segun_pagina": 42,
+  "partidos": [
+    {
+      "fecha": "1938-05-25",
+      "torneo": "Amistosos 1938",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1944-03-19",
+      "torneo": "Amistosos 1944",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1944-10-15",
+      "torneo": "Amistosos 1944",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "1947-04-04",
+      "torneo": "Amistosos 1947",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1947-11-23",
+      "torneo": "Amistosos 1947",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "1950-03-19",
+      "torneo": "Amistosos 1950",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1954-03-27",
+      "torneo": "Amistosos 1954",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1956-12-06",
+      "torneo": "Amistosos 1956",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1958-12-17",
+      "torneo": "Amistosos 1958",
+      "condicion": "V",
+      "goles_boca": 6,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1960-12-07",
+      "torneo": "Amistosos 1960",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1962-08-19",
+      "torneo": "Amistosos 1962",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1968-09-29",
+      "torneo": "Torneo Nacional 1968",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1971-02-11",
+      "torneo": "Amistosos 1971",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1972-11-26",
+      "torneo": "Torneo Nacional 1972",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 2,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1973-10-10",
+      "torneo": "Torneo Nacional 1973",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1974-09-15",
+      "torneo": "Torneo Nacional 1974",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1974-11-22",
+      "torneo": "Torneo Nacional 1974",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1976-08-17",
+      "torneo": "Amistosos 1976",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1978-08-24",
+      "torneo": "Amistosos 1978",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 5,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1981-04-01",
+      "torneo": "Amistosos 1981",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1984-05-25",
+      "torneo": "Amistosos 1984",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1986-02-18",
+      "torneo": "Amistosos 1986",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "1986-03-30",
+      "torneo": "Amistosos 1986",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": true
+    },
+    {
+      "fecha": "1989-01-22",
+      "torneo": "Amistosos 1989",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1990-01-16",
+      "torneo": "Amistosos 1990",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": true
+    },
+    {
+      "fecha": "1991-01-30",
+      "torneo": "Amistosos 1991",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": true
+    },
+    {
+      "fecha": "1991-12-15",
+      "torneo": "Torneo Apertura 1991",
+      "condicion": "L",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1992-06-28",
+      "torneo": "Torneo Clausura 1992",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 1,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1992-08-14",
+      "torneo": "Torneo Apertura 1992",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1993-02-28",
+      "torneo": "Torneo Clausura 1993",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "1993-11-14",
+      "torneo": "Torneo Apertura 1993",
+      "condicion": "L",
+      "goles_boca": 0,
+      "goles_rival": 1,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1994-05-23",
+      "torneo": "Torneo Clausura 1994",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 1,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1994-12-06",
+      "torneo": "Torneo Apertura 1994",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1995-06-11",
+      "torneo": "Torneo Clausura 1995",
+      "condicion": "L",
+      "goles_boca": 0,
+      "goles_rival": 1,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "1995-10-28",
+      "torneo": "Torneo Apertura 1995",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1996-06-09",
+      "torneo": "Torneo Clausura 1996",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1998-09-13",
+      "torneo": "Torneo Apertura 1998",
+      "condicion": "V",
+      "goles_boca": 4,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1999-04-04",
+      "torneo": "Torneo Clausura 1999",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "1999-12-12",
+      "torneo": "Torneo Apertura 1999",
+      "condicion": "V",
+      "goles_boca": 5,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2000-07-09",
+      "torneo": "Torneo Clausura 2000",
+      "condicion": "L",
+      "goles_boca": 5,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2000-09-09",
+      "torneo": "Torneo Apertura 2000",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2001-03-11",
+      "torneo": "Torneo Clausura 2001",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "2001-08-19",
+      "torneo": "Torneo Apertura 2001",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2002-02-10",
+      "torneo": "Torneo Clausura 2002",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2006-12-03",
+      "torneo": "Torneo Apertura 2006",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 1,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2007-06-10",
+      "torneo": "Torneo Clausura 2007",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2011-10-16",
+      "torneo": "Torneo Apertura 2011",
+      "condicion": "L",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "2012-04-22",
+      "torneo": "Torneo Clausura 2012",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "2012-10-07",
+      "torneo": "Torneo Inicial 2012",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2013-04-21",
+      "torneo": "Torneo Final 2013",
+      "condicion": "L",
+      "goles_boca": 0,
+      "goles_rival": 0,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "2013-08-07",
+      "torneo": "Torneo Inicial 2013",
+      "condicion": "V",
+      "goles_boca": 2,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2014-02-16",
+      "torneo": "Torneo Final 2014",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 3,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2014-08-17",
+      "torneo": "Campeonato 2014",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2015-07-26",
+      "torneo": "Campeonato 2015",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2016-09-11",
+      "torneo": "Campeonato 2016/2017",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2017-10-29",
+      "torneo": "Superliga 2017/2018",
+      "condicion": "L",
+      "goles_boca": 4,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2019-02-10",
+      "torneo": "Superliga 2018/2019",
+      "condicion": "V",
+      "goles_boca": 1,
+      "goles_rival": 1,
+      "resultado": "E",
+      "amistoso": false
+    },
+    {
+      "fecha": "2023-05-14",
+      "torneo": "Campeonato 2023",
+      "condicion": "L",
+      "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2023-10-10",
+      "torneo": "Copa Liga Profesional 2023",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 4,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2024-03-03",
+      "torneo": "Copa Liga Profesional 2024",
+      "condicion": "L",
+      "goles_boca": 3,
+      "goles_rival": 2,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2024-09-28",
+      "torneo": "Campeonato 2024",
+      "condicion": "V",
+      "goles_boca": 0,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": false
+    },
+    {
+      "fecha": "2025-04-12",
+      "torneo": "Torneo Apertura 2025",
+      "condicion": "V",
+      "goles_boca": 3,
+      "goles_rival": 1,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2025-10-18",
+      "torneo": "Torneo Clausura 2025",
+      "condicion": "L",
+      "goles_boca": 1,
+      "goles_rival": 2,
+      "resultado": "P",
+      "amistoso": false
+    }
+  ]
 }
