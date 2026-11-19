@@ -21,6 +21,7 @@ def paso(nombre, funcion):
 def main(solo_sitio: bool = False):
     import bocastats
     import bot_telegram
+    import conquista
     import construir_sitio
     import cronicas
     import datos_futbol
@@ -40,6 +41,7 @@ def main(solo_sitio: bool = False):
         ok &= paso("previas y crónicas", cronicas.ejecutar)
         paso("fotos de las notas", imagenes.ejecutar)  # si Wikimedia no anda, no frena nada
         paso("jugadores para la grilla (Wikidata, 1 vez por semana)", wikidata_jugadores.ejecutar)
+        paso("préstamos y contratos (Boca en Números, 1 vez por día)", conquista.ejecutar)
     # El sitio se arma siempre, aunque algo de arriba haya fallado
     if not paso("armar el sitio", construir_sitio.construir):
         sys.exit(1)
