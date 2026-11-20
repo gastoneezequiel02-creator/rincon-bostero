@@ -5,6 +5,7 @@ Uso:  python scripts/construir_sitio.py
 """
 from __future__ import annotations
 
+import hashlib
 import html
 import json
 import os
@@ -199,7 +200,7 @@ def pagina(titulo: str, cuerpo: str, *, activa: str = "", pre: str = "", descrip
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{pre}estatico/estilos.css">
+<link rel="stylesheet" href="{pre}estatico/estilos.css?v={version_estatico("estilos.css")}">
 </head>
 <body>
 {demo}
@@ -222,7 +223,7 @@ def pagina(titulo: str, cuerpo: str, *, activa: str = "", pre: str = "", descrip
     <a href="{pre}privacidad.html">Privacidad</a></div>
   </div>
 </footer>
-<script src="{pre}estatico/app.js" defer></script>
+<script src="{pre}estatico/app.js?v={version_estatico("app.js")}" defer></script>
 {medicion_html()}
 </body>
 </html>"""
@@ -250,6 +251,19 @@ def barra_franja(proximos: list[dict], pre: str) -> str:
 
 
 # ================================================================ páginas ==
+_VERSIONES: dict[str, str] = {}
+
+
+def version_estatico(nombre: str) -> str:
+    """Huella corta del archivo: cuando cambia, el navegador baja la versión nueva en vez de usar la guardada."""
+    if nombre not in _VERSIONES:
+        try:
+            _VERSIONES[nombre] = hashlib.sha1((RAIZ / "sitio" / "estatico" / nombre).read_bytes()).hexdigest()[:10]
+        except OSError:
+            _VERSIONES[nombre] = "1"
+    return _VERSIONES[nombre]
+
+
 def item_lista(n: dict, pre: str) -> str:
     return f"""<li data-grupo="{e(n.get('categoria', ''))}">
   <a href="{link_nota(n, pre)}">{tapa(n, pre)}</a>
@@ -1464,7 +1478,7 @@ def pagina_juegos(proximos) -> str:
 </div>
 <script type="application/json" id="datos-juegos" data-url="{e(url_abs("juegos.html"))}"{sb_attrs}>{datos_json}</script>
 {sb_script}
-<script src="estatico/juegos.js" defer></script>"""
+<script src="estatico/juegos.js?v={version_estatico("juegos.js")}" defer></script>"""
     return pagina("Juegos", cuerpo, activa="juegos.html", franja=barra_franja(proximos, ""))
 
 
