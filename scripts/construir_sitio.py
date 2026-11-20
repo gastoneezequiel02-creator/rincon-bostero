@@ -1319,8 +1319,29 @@ def pagina_records(historicos: list[dict], proximos) -> str:
         partes.append('<div class="vacio">Los récords aparecen cuando se cargan los datos históricos.</div>')
     act = rec.get("actualizado_fuente")
     pie = f'<p class="nota-dato" style="margin-top:28px">Datos históricos: Historia de Boca y BocaStats{f" (BocaStats al {_fecha_txt(act)})" if act else ""}.</p>' if rec else ""
+    # Pestañas como en Plantel: cada sección va a la pestaña que le corresponde según su título
+    grupos = [("resumen", "Resumen", ("Balance histórico", "Títulos")),
+              ("marcas", "Marcas y rachas", ("Marcas históricas", "Récords del profesionalismo")),
+              ("jugadores", "Jugadores", ("Jugadores",)),
+              ("tecnicos", "Técnicos", ("Técnicos",)),
+              ("partidos", "Goleadas y décadas", ("goleadas", "Década por década")),
+              ("rivales", "Rivales", ("rivales más enfrentados",))]
+    por_grupo = {k: [] for k, _n, _c in grupos}
+    for parte in partes:
+        m = re.search(r'<h2 class="titulo-seccion">(.*?)</h2>', parte, re.S)
+        titulo = re.sub(r"<[^>]+>", "", m.group(1)) if m else ""
+        destino = next((k for k, _n, claves in grupos if any(c in titulo for c in claves)), "resumen")
+        por_grupo[destino].append(parte)
+    activos = [(k, n) for k, n, _c in grupos if por_grupo[k]]
+    if len(activos) > 1:
+        botones = "".join(f'<button type="button" data-destino="{k}" aria-pressed="{"true" if i == 0 else "false"}">{e(n)}</button>'
+                          for i, (k, n) in enumerate(activos))
+        contenido = (f'<div class="filtros pestanas" role="group" aria-label="Secciones de récords" data-pestanas>{botones}</div>' +
+                     "".join(f'<section data-pestana-id="{k}" class="records">{"".join(por_grupo[k])}</section>' for k, _n in activos))
+    else:
+        contenido = f'<div class="records">{"".join(partes)}</div>'
     cuerpo = f"""<header class="encabezado-pagina"><h1>Récords</h1><p>Los números de Boca desde 1905: balance, goleadores, los que más jugaron, técnicos, goleadas y rivales.</p></header>
-<div class="records">{"".join(partes)}</div>{pie}"""
+{contenido}{pie}"""
     return pagina("Récords", cuerpo, activa="records.html", franja=barra_franja(proximos, ""))
 
 
