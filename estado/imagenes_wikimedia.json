@@ -735,6 +735,10 @@
     "andres matonte": {
       "archivo": null,
       "buscado": "2026-11-20T07:33:05.399621-03:00"
+    },
+    "nico paz": {
+      "archivo": null,
+      "buscado": "2026-11-20T08:39:05.534169-03:00"
     }
   },
   "archivos": {
@@ -1133,6 +1137,14 @@
     "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 05.jpg": {
       "imagen": "img/archivo/vista-aerea-del-estadio-alberto-j-armando-la-bombo-be8998.jpg",
       "credito": "Foto de archivo: ProtoplasmaKid / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "La Bombonera - 2012 (8336738589).jpg": {
+      "imagen": "img/archivo/la-bombonera-2012-8336738589-daf1eb.jpg",
+      "credito": "Foto de archivo: Vania Wolf from Indaiatuba, Brasil / Wikimedia Commons (CC BY-SA 2.0)"
+    },
+    "La Bombonera - Buenos Aires - Argentina.jpg": {
+      "imagen": "img/archivo/la-bombonera-buenos-aires-argentina-c2a885.jpg",
+      "credito": "Foto de archivo: Diego Delso / Wikimedia Commons (CC BY-SA 3.0)"
     }
   },
   "bombonera": {
