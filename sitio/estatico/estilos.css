@@ -23,6 +23,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }  /* si no, los display: grid/flex le ganan y los filtros no ocultan nada */
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;

@@ -44,7 +44,8 @@
       grupo.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
       var v = b.getAttribute("data-valor");
       objetivo.querySelectorAll("[data-grupo]").forEach(function (item) {
-        item.hidden = !(v === "todos" || item.getAttribute("data-grupo").split(" ").indexOf(v) >= 0);
+        var g = item.getAttribute("data-grupo") || "";  // ojo: hay categorías con espacios ("Mercado de pases")
+        item.hidden = !(v === "todos" || g === v || g.split(" ").indexOf(v) >= 0);
       });
       objetivo.querySelectorAll("[data-anio]").forEach(function (h) {
         var sig = h.nextElementSibling, visible = false;
