@@ -739,6 +739,14 @@
     "nico paz": {
       "archivo": null,
       "buscado": "2026-11-20T08:39:05.534169-03:00"
+    },
+    "lozano": {
+      "archivo": null,
+      "buscado": "2026-11-20T11:57:04.706704-03:00"
+    },
+    "ander herrera": {
+      "archivo": "2019-07-17 SG Dynamo Dresden vs. Paris Saint-Germain by Sandro Halank–282 (cropped).jpg",
+      "buscado": "2026-11-20T11:57:05.876535-03:00"
     }
   },
   "archivos": {
@@ -1148,6 +1156,18 @@
     },
     "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 08.jpg": {
       "imagen": "img/archivo/vista-aerea-del-estadio-alberto-j-armando-la-bombo-153f53.jpg",
+      "credito": "Foto de archivo: ProtoplasmaKid / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "Boca Junior stadium.JPG": {
+      "imagen": "img/archivo/boca-junior-stadium-881c9c.jpg",
+      "credito": "Foto de archivo: Helge Høifødt / Wikimedia Commons (CC BY-SA 3.0)"
+    },
+    "2019-07-17 SG Dynamo Dresden vs. Paris Saint-Germain by Sandro Halank–282 (cropped).jpg": {
+      "imagen": "img/archivo/2019-07-17-sg-dynamo-dresden-vs-paris-saint-germai-ffda37.jpg",
+      "credito": "Foto de archivo: Sandro Halank , Wikimedia Commons / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 10.jpg": {
+      "imagen": "img/archivo/vista-aerea-del-estadio-alberto-j-armando-la-bombo-b4889c.jpg",
       "credito": "Foto de archivo: ProtoplasmaKid / Wikimedia Commons (CC BY-SA 4.0)"
     }
   },
