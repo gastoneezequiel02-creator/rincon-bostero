@@ -76,13 +76,13 @@
             "corto": "Lanús ",
             "id": "12",
             "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
-            "pj": 15,
+            "pj": 16,
             "p": 4,
             "dg": 7,
-            "pts": 25,
-            "gc": 11,
-            "gf": 18,
-            "e": 4,
+            "pts": 26,
+            "gc": 12,
+            "gf": 19,
+            "e": 5,
             "g": 7,
             "pos": 5,
             "es_boca": false
@@ -236,13 +236,13 @@
             "corto": "C. Córdoba (SE)",
             "id": "11989",
             "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
-            "pj": 15,
+            "pj": 16,
             "p": 9,
             "dg": -14,
-            "pts": 10,
-            "gc": 25,
-            "gf": 11,
-            "e": 4,
+            "pts": 11,
+            "gc": 26,
+            "gf": 12,
+            "e": 5,
             "g": 2,
             "pos": 15,
             "es_boca": false
@@ -495,7 +495,7 @@
         ]
       }
     ],
-    "actualizado": "2026-11-20T22:34-03:00"
+    "actualizado": "2026-11-20T23:34-03:00"
   },
   "arg.copa_lpf": {
     "slug": "arg.copa_lpf",
@@ -961,7 +961,7 @@
         ]
       }
     ],
-    "actualizado": "2026-11-20T22:34-03:00"
+    "actualizado": "2026-11-20T23:34-03:00"
   },
   "conmebol.libertadores": {
     "slug": "conmebol.libertadores",
@@ -1527,7 +1527,7 @@
         ]
       }
     ],
-    "actualizado": "2026-11-20T22:34-03:00"
+    "actualizado": "2026-11-20T23:34-03:00"
   },
   "fifa.cwc": {
     "slug": "fifa.cwc",
@@ -2119,6 +2119,6 @@
         ]
       }
     ],
-    "actualizado": "2026-11-20T22:34-03:00"
+    "actualizado": "2026-11-20T23:34-03:00"
   }
 }
