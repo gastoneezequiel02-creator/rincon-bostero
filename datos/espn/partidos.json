@@ -31905,8 +31905,8 @@
     "competencia_slug": "conmebol.sudamericana",
     "instancia": "",
     "temporada": 2026,
-    "estado": "programado",
-    "detalle": "11/21 - 5:30 PM EST",
+    "estado": "en_juego",
+    "detalle": "38'",
     "estadio": "Metropolitano Roberto Meléndez",
     "ciudad": "Barranquilla",
     "condicion": "V",
@@ -31915,7 +31915,7 @@
       "nombre": "Atlético-MG",
       "corto": "Atlético-MG",
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png",
-      "goles": null,
+      "goles": 0,
       "penales": null
     },
     "visitante": {
@@ -31923,7 +31923,7 @@
       "nombre": "Boca Juniors",
       "corto": "Boca ",
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-      "goles": null,
+      "goles": 1,
       "penales": null
     },
     "rival": {
@@ -31932,8 +31932,8 @@
       "corto": "Atlético-MG",
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png"
     },
-    "goles_boca": null,
-    "goles_rival": null,
+    "goles_boca": 1,
+    "goles_rival": 0,
     "penales_boca": null,
     "penales_rival": null,
     "resultado": null
