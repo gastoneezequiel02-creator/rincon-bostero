@@ -31906,7 +31906,7 @@
     "instancia": "",
     "temporada": 2026,
     "estado": "en_juego",
-    "detalle": "38'",
+    "detalle": "58'",
     "estadio": "Metropolitano Roberto Meléndez",
     "ciudad": "Barranquilla",
     "condicion": "V",
@@ -31923,7 +31923,7 @@
       "nombre": "Boca Juniors",
       "corto": "Boca ",
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-      "goles": 1,
+      "goles": 2,
       "penales": null
     },
     "rival": {
@@ -31932,7 +31932,7 @@
       "corto": "Atlético-MG",
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png"
     },
-    "goles_boca": 1,
+    "goles_boca": 2,
     "goles_rival": 0,
     "penales_boca": null,
     "penales_rival": null,
