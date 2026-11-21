@@ -795,6 +795,10 @@
     "central cordoba": {
       "archivo": null,
       "buscado": "2026-11-21T15:28:08.078015-03:00"
+    },
+    "paul bianchi": {
+      "archivo": null,
+      "buscado": "2026-11-21T16:25:11.270663-03:00"
     }
   },
   "archivos": {
@@ -1233,6 +1237,10 @@
     "20170807 La Bombonera - Estadio Alberto Jacinto Armando.jpg": {
       "imagen": "img/archivo/20170807-la-bombonera-estadio-alberto-jacinto-arma-ab6816.jpg",
       "credito": "Foto de archivo: Matthias Bethke / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 11.jpg": {
+      "imagen": "img/archivo/vista-aerea-del-estadio-alberto-j-armando-la-bombo-5593e2.jpg",
+      "credito": "Foto de archivo: ProtoplasmaKid / Wikimedia Commons (CC BY-SA 4.0)"
     }
   },
   "bombonera": {
