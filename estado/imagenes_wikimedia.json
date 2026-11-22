@@ -807,6 +807,10 @@
     "mario pergolini": {
       "archivo": null,
       "buscado": "2026-11-22T00:55:29.067839-03:00"
+    },
+    "enner valencia": {
+      "archivo": "Enner Valencia Cote D'Ivoire v Ecuador 14 June 2026-95.jpg",
+      "buscado": "2026-11-22T01:58:09.235878-03:00"
     }
   },
   "archivos": {
@@ -1249,6 +1253,10 @@
     "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 11.jpg": {
       "imagen": "img/archivo/vista-aerea-del-estadio-alberto-j-armando-la-bombo-5593e2.jpg",
       "credito": "Foto de archivo: ProtoplasmaKid / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "Enner Valencia Cote D'Ivoire v Ecuador 14 June 2026-95.jpg": {
+      "imagen": "img/archivo/enner-valencia-cote-d-ivoire-v-ecuador-14-june-202-41c0b1.jpg",
+      "credito": "Foto de archivo: Bryan Berlin / Wikimedia Commons (CC BY-SA 4.0)"
     }
   },
   "bombonera": {
