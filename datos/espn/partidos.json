@@ -31905,8 +31905,8 @@
     "competencia_slug": "conmebol.sudamericana",
     "instancia": "",
     "temporada": 2026,
-    "estado": "en_juego",
-    "detalle": "58'",
+    "estado": "finalizado",
+    "detalle": "FT",
     "estadio": "Metropolitano Roberto Meléndez",
     "ciudad": "Barranquilla",
     "condicion": "V",
@@ -31936,7 +31936,7 @@
     "goles_rival": 0,
     "penales_boca": null,
     "penales_rival": null,
-    "resultado": null
+    "resultado": "G"
   },
   {
     "id": "401933757",
