@@ -831,6 +831,14 @@
     "la cobra": {
       "archivo": null,
       "buscado": "2026-11-22T09:27:18.504016-03:00"
+    },
+    "suruga bank": {
+      "archivo": null,
+      "buscado": "2026-11-22T11:27:08.425763-03:00"
+    },
+    "independiente rivadavia": {
+      "archivo": null,
+      "buscado": "2026-11-22T11:27:08.715836-03:00"
     }
   },
   "archivos": {
@@ -1277,6 +1285,10 @@
     "Enner Valencia Cote D'Ivoire v Ecuador 14 June 2026-95.jpg": {
       "imagen": "img/archivo/enner-valencia-cote-d-ivoire-v-ecuador-14-june-202-41c0b1.jpg",
       "credito": "Foto de archivo: Bryan Berlin / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "Estadio Alberto J. Armando field view.jpg": {
+      "imagen": "img/archivo/estadio-alberto-j-armando-field-view-e02648.jpg",
+      "credito": "Foto de archivo: Ministerio de Cultura de la Nación / Wikimedia Commons (CC BY-SA 2.0)"
     }
   },
   "bombonera": {
