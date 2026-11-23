@@ -754,7 +754,26 @@
   }
 
   // ----------------------------------------------------------------- Ranking --
-  var ESTADO_RANKING = { ambito: "general", periodo: "semana", ligas: [] };
+  var ESTADO_RANKING = { ambito: "general", periodo: "semana", tabla: "xp", ligas: [] };
+  var TABLAS_RANKING = [["xp", "Experiencia"], ["mom", "Racha en ¿Más o menos?"], ["aciertos", "Aciertos seguidos"], ["dias", "Días seguidos"]];
+  var NOTAS_RACHAS = {
+    mom: "La racha más larga de aciertos seguidos en ¿Más o menos? jugando con tu cuenta.",
+    aciertos: "Respuestas correctas seguidas en la Pregunta del día, aunque la racha siga de un día al otro. Se corrigen en el servidor.",
+    dias: "Días seguidos jugando la Pregunta del día: si hoy todavía no jugaste, la racha cuenta hasta ayer. «Mejor» es la racha más larga de cada uno."
+  };
+  function tablaRachas(filas, tipo) {
+    if (!filas.length) return "<p class='vacio'>Todavía no hay rachas en este período. ¡Podés ser el primero!</p><p class='nota-dato'>" + NOTAS_RACHAS[tipo] + "</p>";
+    var unidad = tipo === "dias" ? ["día", "días"] : ["seguido", "seguidos"];
+    var podio = filas.slice(0, 3).map(function (f, i) {
+      return "<li class='podio-" + (i + 1) + (f.soy_yo ? " soy-yo" : "") + "'><span class='p-pos'>" + f.posicion + "°</span><b>" + esc(f.apodo) + "</b><span class='p-pts'>" + plural(f.valor, unidad[0], unidad[1]) + "</span></li>";
+    }).join("");
+    return "<ol class='podio'>" + podio + "</ol><div class='tabla-scroll'><table class='tabla-ranking'><thead><tr><th>#</th><th class='izq'>Apodo</th><th>" +
+      (tipo === "dias" ? "Racha actual</th><th>Mejor" : "Racha") + "</th></tr></thead><tbody>" +
+      filas.map(function (f) {
+        return "<tr class='" + (f.soy_yo ? "fila-boca" : "") + "'><td>" + f.posicion + "</td><td class='izq'>" + esc(f.apodo) + (f.soy_yo ? " (vos)" : "") +
+          "</td><td class='pts'>" + f.valor + "</td>" + (tipo === "dias" ? "<td>" + (f.extra || f.valor) + "</td>" : "") + "</tr>";
+      }).join("") + "</tbody></table></div><p class='nota-dato'>" + NOTAS_RACHAS[tipo] + "</p>";
+  }
   function linkLiga(cod) { return URL_JUEGOS + "#liga-" + cod; }
   function tablaRanking(filas, general) {
     if (!filas.length) return "<p class='vacio'>Todavía nadie sumó puntos en este período. ¡Podés ser el primero!</p>";
@@ -789,9 +808,12 @@
       "<div class='filtros' role='group' aria-label='Ranking'>" + ambitos.map(function (a) {
         return "<button type='button' data-ambito='" + a[0] + "' aria-pressed='" + (a[0] === E.ambito) + "'>" + esc(a[1]) + "</button>";
       }).join("") + "</div>" +
-      "<div class='filtros filtros-chicos' role='group' aria-label='Período'>" + [["semana", "Esta semana"], ["mes", "Este mes"], ["total", "Histórico"]].map(function (p) {
+      "<div class='filtros filtros-chicos' role='group' aria-label='Qué se compara'>" + TABLAS_RANKING.map(function (x) {
+        return "<button type='button' data-tabla='" + x[0] + "' aria-pressed='" + (x[0] === E.tabla) + "'>" + x[1] + "</button>";
+      }).join("") + "</div>" +
+      (E.tabla === "dias" ? "" : "<div class='filtros filtros-chicos' role='group' aria-label='Período'>" + [["semana", "Esta semana"], ["mes", "Este mes"], ["total", "Histórico"]].map(function (p) {
         return "<button type='button' data-p='" + p[0] + "' aria-pressed='" + (p[0] === E.periodo) + "'>" + p[1] + "</button>";
-      }).join("") + "</div><div id='tabla-ranking'><p class='nota-dato'>Cargando…</p></div>" +
+      }).join("") + "</div>") + "<div id='tabla-ranking'><p class='nota-dato'>Cargando…</p></div>" +
       "<section class='ligas'><h3 class='insignias-titulo'>Ligas con amigos</h3>" +
       (conCuenta ? "<p class='nota-dato'>Armá una liga con tu grupo y compartí el link: cada liga tiene su propio ranking, con los mismos puntos que el general.</p>" +
         (E.ligas.length ? "<ul class='mis-ligas'>" + E.ligas.map(function (l) {
@@ -809,6 +831,7 @@
         : "<p class='nota-dato'>Entrá con tu cuenta (arriba) para crear una liga o sumarte a la de tus amigos.</p>") + "</section>";
     caja.querySelectorAll("[data-ambito]").forEach(function (b) { b.addEventListener("click", function () { E.ambito = b.getAttribute("data-ambito"); pintarRanking(); }); });
     caja.querySelectorAll("[data-p]").forEach(function (b) { b.addEventListener("click", function () { E.periodo = b.getAttribute("data-p"); pintarRanking(); }); });
+    caja.querySelectorAll("[data-tabla]").forEach(function (b) { b.addEventListener("click", function () { E.tabla = b.getAttribute("data-tabla"); pintarRanking(); }); });
     var msg = caja.querySelector("#liga-msg");
     function errorLiga(err) { if (msg) msg.textContent = (err && err.message) || "No se pudo. Probá de nuevo."; }
     var fc = caja.querySelector("#liga-crear");
@@ -829,8 +852,13 @@
     });
     if (invitacion) mostrarInvitacion(pendiente);
     var t = caja.querySelector("#tabla-ranking");
-    var pedido = E.ambito === "general" ? rpc("ranking", { p_periodo: E.periodo }) : rpc("ranking_liga", { p_codigo: E.ambito, p_periodo: E.periodo });
-    pedido.then(function (filas) { t.innerHTML = tablaRanking(filas, E.ambito === "general"); pintarHistorial(); }).catch(function () { errorConexion(t); });
+    if (E.tabla !== "xp") {
+      rpc("ranking_rachas", { p_tipo: E.tabla, p_periodo: E.tabla === "dias" ? "total" : E.periodo, p_codigo: E.ambito === "general" ? null : E.ambito })
+        .then(function (filas) { t.innerHTML = tablaRachas(filas, E.tabla); }).catch(function () { errorConexion(t); });
+    } else {
+      var pedido = E.ambito === "general" ? rpc("ranking", { p_periodo: E.periodo }) : rpc("ranking_liga", { p_codigo: E.ambito, p_periodo: E.periodo });
+      pedido.then(function (filas) { t.innerHTML = tablaRanking(filas, E.ambito === "general"); pintarHistorial(); }).catch(function () { errorConexion(t); });
+    }
     function pintarHistorial() {
       var tipo = E.periodo === "mes" ? "mes" : "semana";
       if (E.periodo === "total") return;
