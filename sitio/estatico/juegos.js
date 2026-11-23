@@ -373,7 +373,7 @@
             var final = racha; racha = 0;
             var mh = leer("mom-hoy", null), hoyM = hoyTxt();
             if (!mh || mh.fecha !== hoyM || final > mh.racha) guardar("mom-hoy", { fecha: hoyM, racha: final });
-            reportar("mas-o-menos", final);
+            var enviado = reportar("mas-o-menos", final);
             setTimeout(function () {
               var c = celdas.concat(["mal"]); celdas = [];
               var filas = []; for (var i = 0; i < c.length; i += 10) filas.push(c.slice(i, i + 10));
@@ -383,6 +383,9 @@
                 compartir: { juego: "¿Más o menos?", puntaje: final, linea: final === 1 ? "1 acierto seguido" : final + " aciertos seguidos", celdas: filas.slice(-4),
                   texto: firma() + "Hice una racha de " + final + " en ¿Más o menos? de Rincón Bostero. Mi récord: " + record + ".\n" + URL_JUEGOS + "#mas-o-menos" } });
               caja.querySelector("[data-otra]").addEventListener("click", ronda);
+              var ancla = caja.querySelector(".acciones-final");  // el ranking va arriba del bloque para compartir
+              (ancla || caja).insertAdjacentHTML(ancla ? "afterend" : "beforeend", "<section class='mini-ranking' id='mom-ranking'><p class='nota-dato'>Cargando el ranking…</p></section>");
+              enviado.then(function () { rankingMasOMenos(document.getElementById("mom-ranking"), final); });
             }, REDUCIR ? 300 : 1400);
             dato.innerHTML = "<p class='m-veredicto mal'><b>Uh, no.</b> Se cortó la racha.</p>";
           }
@@ -390,6 +393,33 @@
       });
     }
     ronda();
+  }
+
+  // Al terminar ¿Más o menos?: las mejores rachas de la semana (y dónde quedaste vos)
+  function rankingMasOMenos(caja, final) {
+    if (!caja) return;
+    if (!sb) { caja.remove(); return; }
+    var periodo = "semana";
+    function pintar() {
+      caja.innerHTML = "<p class='nota-dato'>Cargando el ranking…</p>";
+      rpc("ranking_rachas", { p_tipo: "mom", p_periodo: periodo, p_codigo: null }).then(function (filas) {
+        var yo = filas.filter(function (f) { return f.soy_yo; })[0];
+        var top = filas.slice(0, 5);
+        var lista = top.length ? "<ol class='mini-rk'>" + top.map(function (f) {
+          return "<li class='" + (f.soy_yo ? "soy-yo" : "") + "'><span>" + f.posicion + "°</span><b>" + esc(f.apodo) + (f.soy_yo ? " (vos)" : "") + "</b><em>" + f.valor + "</em></li>";
+        }).join("") + (yo && top.indexOf(yo) < 0 ? "<li class='soy-yo separado'><span>" + yo.posicion + "°</span><b>" + esc(yo.apodo) + " (vos)</b><em>" + yo.valor + "</em></li>" : "") + "</ol>"
+          : "<p class='vacio'>Todavía nadie anotó una racha " + (periodo === "semana" ? "esta semana" : "") + ". ¡Podés ser el primero!</p>";
+        var pie = conCuenta() ? (yo ? "" : "<p class='nota-dato'>Tu racha de " + final + " todavía no alcanza para entrar. ¡Otra!</p>")
+          : "<p class='nota-dato'>Entrá con tu cuenta (arriba) para aparecer en el ranking: cuenta tu mejor racha de cada día.</p>";
+        caja.innerHTML = "<div class='mini-rk-cabeza'><h3 class='insignias-titulo'>Ranking de rachas</h3><div class='filtros filtros-chicos' role='group' aria-label='Período'>" +
+          [["semana", "Esta semana"], ["total", "Histórico"]].map(function (p) { return "<button type='button' data-mp='" + p[0] + "' aria-pressed='" + (p[0] === periodo) + "'>" + p[1] + "</button>"; }).join("") +
+          "</div></div>" + lista + pie + "<p class='nota-dato'><a href='#ranking' data-ver-rachas>Ver el ranking completo</a></p>";
+        caja.querySelectorAll("[data-mp]").forEach(function (b) { b.addEventListener("click", function () { periodo = b.getAttribute("data-mp"); pintar(); }); });
+        var ver = caja.querySelector("[data-ver-rachas]");
+        if (ver) ver.addEventListener("click", function () { ESTADO_RANKING.tabla = "mom"; ESTADO_RANKING.periodo = periodo; ESTADO_RANKING.ambito = "general"; setTimeout(iniciarRanking, 0); });
+      }).catch(function () { caja.remove(); });
+    }
+    pintar();
   }
 
   // -------------------------------------------------------- 3. Trivia por temas --

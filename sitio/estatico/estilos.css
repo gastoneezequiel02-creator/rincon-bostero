@@ -818,3 +818,14 @@ tr.detalle-tabla .nota-dato { margin: 8px 0 0; }
 .cx .cx-opciones { grid-template-columns: 1fr 1fr; }
 .cx .cx-opciones .op-letra { min-width: 44px; }
 @media (max-width: 520px) { .cx .cx-opciones { grid-template-columns: 1fr; } }
+
+/* Mini ranking al terminar un juego */
+.mini-ranking { margin-top: 18px; padding: 16px 18px; border-radius: 10px; background: var(--superficie); max-width: 640px; }
+.mini-rk-cabeza { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: space-between; }
+.mini-rk-cabeza .insignias-titulo { margin: 0; }
+.mini-rk { list-style: none; margin: 10px 0 6px; padding: 0; display: grid; gap: 4px; }
+.mini-rk li { display: grid; grid-template-columns: 36px 1fr auto; gap: 10px; align-items: baseline; padding: 7px 10px; border-radius: 6px; background: #fff; }
+.mini-rk li span { font: 700 18px/1 var(--titulos); color: var(--gris); }
+.mini-rk li em { font: 800 22px/1 var(--titulos); font-style: normal; color: var(--azul); }
+.mini-rk li.soy-yo { background: var(--oro-suave); }
+.mini-rk li.separado { margin-top: 6px; }
