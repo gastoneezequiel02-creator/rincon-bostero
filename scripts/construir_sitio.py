@@ -787,7 +787,9 @@ def bloque_titulos(palmares: dict) -> str:
         f'<details class="cat-titulos"><summary><b>{len(ts)}</b> {e(cat)}</summary>'
         f'<ul>{"".join(f"<li>{e(t)}</li>" for t, _ in sorted(ts, key=lambda x: x[1]))}</ul></details>'
         for cat, ts in por_cat.items())
-    ultimo = max(lista, key=lambda x: x[2])
+    # "ultimo" en palmares.json manda; si no está, el de año más reciente y, si empatan, el último cargado
+    ultimo = next((x for x in lista if x[1] == palmares.get("ultimo")), None) or \
+        max(enumerate(lista), key=lambda x: (x[1][2], x[0]))[1]
     fuente = f'<p class="nota-dato">Títulos oficiales. Fuente: {e(palmares["fuente"])}.</p>' if palmares.get("fuente") else ""
     return f"""<section class="titulos"><h2 class="titulo-seccion">Títulos</h2>
 <div class="titulos-total"><b>{len(lista)}</b><span>títulos oficiales. El último: {e(ultimo[1])}.</span></div>
