@@ -1444,7 +1444,7 @@ def pagina_juegos(proximos) -> str:
                   "10 preguntas por día, las mismas para todos y sin repetir. Mantené la racha.", "juego-dia")]
     secciones += [(k, n, d, caja) for k, n, d, _g, caja in lista]
     secciones += [("perfil", "Tu perfil", "Tu nivel, tu experiencia, las misiones del día y tus números en cada juego.", "juego-perfil"),
-                  ("ranking", "Ranking", "Los que más saben de Boca, por experiencia: suman todos los juegos y las misiones. Armá tu liga con amigos.",
+                  ("ranking", "Ranking", "Los que más saben de Boca, por experiencia y por rachas: suman todos los juegos y las misiones. Armá tu liga con amigos.",
                    "juego-ranking"),
                   ("insignias", "Tus insignias", "Se ganan jugando. Las de la cuenta se ven en cualquier dispositivo.",
                    "juego-insignias")]
@@ -1472,7 +1472,7 @@ def pagina_juegos(proximos) -> str:
   <div class="jtarjetas">{tarjetas}</div>
   <div class="jextra">
     <a class="jextra-item" href="#perfil"><b>Tu perfil</b><span data-estado="perfil">Nivel, misiones y estadísticas</span></a>
-    <a class="jextra-item" href="#ranking"><b>Ranking y ligas</b><span data-estado="ranking">General y con tus amigos</span></a>
+    <a class="jextra-item" href="#ranking"><b>Ranking y ligas</b><span data-estado="ranking">General, rachas y con tus amigos</span></a>
     <a class="jextra-item" href="#insignias"><b>Insignias</b><span data-estado="insignias">Mirá cuáles ganaste</span></a>
   </div>
 </div>
