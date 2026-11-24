@@ -66,6 +66,7 @@
     { id: "grilla9", nombre: "Grilla llena", glifo: "9", desc: "Completaste los 9 casilleros de la Grilla bostera." },
     { id: "grilla-experto", nombre: "Erudito", glifo: "E", desc: "Llenaste una Grilla bostera en Experto." },
     { id: "conexion10", nombre: "Memoria de vestuario", glifo: "10", desc: "10 de 10 en ¿Quién jugó con quién?" },
+    { id: "falta5", nombre: "Memoria de campeón", glifo: "11", desc: "Adivinaste los 5 de ¿Quién falta? de un día." },
     { id: "detective", nombre: "Detective", glifo: "?", desc: "Adivinaste un jugador de ¿Quién soy? con la primera pista." }
   ];
   function logrosLocales() { return leer("logros", {}); }
@@ -123,7 +124,7 @@
   function sincronizarHoy() {
     if (!conCuenta()) return Promise.resolve();
     var hoy = hoyTxt(), envios = [];
-    [["quien", "res-quien-"], ["anio", "res-anio-"], ["idolo", "res-idolo-"], ["conexion", "res-conexion-"]].forEach(function (x) {
+    [["quien", "res-quien-"], ["anio", "res-anio-"], ["idolo", "res-idolo-"], ["conexion", "res-conexion-"], ["falta", "res-falta-"]].forEach(function (x) {
       var v = leer(x[1] + hoy, null); if (v != null) envios.push([x[0], v]);
     });
     NIVELES_GRILLA.forEach(function (k) { var v = leer("res-grilla-" + k + "-" + hoy, null); if (v != null) envios.push(["grilla-" + k, v]); });
@@ -1056,9 +1057,9 @@
   // ------------------------------------------------------------ Tu perfil --
   var NOMBRE_JUEGO = { quien: "¿Quién soy?", anio: "¿En qué año fue?", idolo: "Adiviná el ídolo", "mas-o-menos": "¿Más o menos?",
     "grilla-facil": "Grilla (Fácil)", "grilla-intermedio": "Grilla (Intermedio)", "grilla-dificil": "Grilla (Difícil)", "grilla-experto": "Grilla (Experto)",
-    conexion: "¿Quién jugó con quién?" };
+    conexion: "¿Quién jugó con quién?", falta: "¿Quién falta?" };
   var DETALLE_JUEGO = { quien: "puntos sobre 300", anio: "puntos sobre 500", idolo: "intentos (0 = no salió)", "mas-o-menos": "mejor racha del día",
-    "grilla-facil": "casilleros", "grilla-intermedio": "casilleros", "grilla-dificil": "casilleros", "grilla-experto": "casilleros", conexion: "puntos sobre 500" };
+    "grilla-facil": "casilleros", "grilla-intermedio": "casilleros", "grilla-dificil": "casilleros", "grilla-experto": "casilleros", conexion: "puntos sobre 500", falta: "puntos sobre 500" };
   function barra(valor, meta) { var pc = meta ? Math.min(100, Math.round(100 * valor / meta)) : 0; return "<span class='pf-barra' aria-hidden='true'><i style='width:" + pc + "%'></i></span>"; }
   function pintarPerfil() {
     var caja = document.getElementById("juego-perfil");
@@ -1178,6 +1179,8 @@
     poner("anio", ra != null ? "Hoy: " + ra + "/500" : "5 momentos nuevos por día", ra != null);
     var rc = leer("res-conexion-" + hoy, null), sc = leer("conexion-stats", null);
     poner("conexion", rc != null ? "Hoy: " + rc + " puntos" : sc && sc.record ? "Tu récord: " + sc.record + " puntos" : "10 duelos nuevos por día", rc != null);
+    var rf = leer("res-falta-" + hoy, null), sf = leer("falta-stats", null);
+    poner("falta", rf != null ? "Hoy: " + rf + "/500" : sf && sf.record ? "Tu récord: " + sf.record + "/500" : "5 campeones nuevos por día", rf != null);
     var rq = leer("res-quien-" + hoy, null);
     poner("quien", rq != null ? "Hoy: " + rq + "/300" : "Tres jugadores nuevos por día", rq != null);
     var rg = leer("res-grilla-" + hoy, null), NG = { facil: "Fácil", intermedio: "Intermedio", dificil: "Difícil", experto: "Experto" };
@@ -1380,7 +1383,148 @@
     }).catch(function () { caja.innerHTML = "<p class='vacio'>No pude cargar el juego. Probá de nuevo en un rato.</p>"; caja.removeAttribute("data-listo"); });
   }
 
-  var INICIAR_AL_ABRIR = { grilla: iniciarGrilla, quien: iniciarQuienSoy, conexion: iniciarConexion, insignias: pintarInsignias, perfil: function () { pintarPerfil(); if (conCuenta()) cargarProgreso(false); }, desafio: function () { if (sb) iniciarDesafio(); } };
+  // ------------------------------------------------------------ ¿Quién falta? --
+  var FX_PUNTOS = [100, 60, 30], FX_ERRORES = 3, FX_DIF = { 1: "Fácil", 2: "Intermedio", 3: "Difícil" }, FX_MIN = { 1: 80, 2: 50, 3: 20 };
+  function inicialesFx(n) {
+    return String(n).split(/\s+/).filter(function (x) { return x && !/^(de|del|la|las|los|y)$/i.test(x); })
+      .map(function (x) { return x[0].toUpperCase() + "."; }).join(" ");
+  }
+  function iniciarFalta() {
+    var caja = document.getElementById("juego-falta");
+    if (!caja || caja.getAttribute("data-listo")) return;
+    caja.setAttribute("data-listo", "1");
+    caja.innerHTML = "<p class='nota-dato'>Armando los equipos…</p>";
+    fetch("falta.json").then(function (r) { if (!r.ok) throw r; return r.json(); }).then(function (F) {
+      var T = F.torneos, N = F.nombres || [];
+      var lista = "<datalist id='lista-falta'>" + N.map(function (n) { return "<option value='" + esc(n) + "'>"; }).join("") + "</datalist>";
+      // Devuelve los nombres que coinciden con lo escrito (nombre completo, apellido o parte del nombre)
+      function candidatos(txt) {
+        var v = normal(txt); if (v.length < 3) return [];
+        var exacto = N.filter(function (n) { return normal(n) === v; });
+        if (exacto.length) return exacto;
+        var ap = N.filter(function (n) { var x = normal(n); return x.slice(-v.length - 1) === " " + v; });
+        if (ap.length) return ap;
+        return v.length >= 5 ? N.filter(function (n) { return normal(n).indexOf(v) >= 0; }) : [];
+      }
+      function pistasDe(x) {
+        var p = [];
+        p.push((x.puesto ? "Puesto: " + x.puesto + ". " : "") + (x.etapa ? "Jugó en Boca " + (x.etapa.indexOf(" a ") > 0 ? "de " : "en ") + x.etapa + "." : ""));
+        p.push("Iniciales: " + inicialesFx(x.n) + " En total jugó " + x.pjt + " partidos oficiales en Boca" + (x.golt ? " e hizo " + plural(x.golt, "gol", "goles") : "") + "." +
+          (x.lugar ? " Nació en " + x.lugar + "." : ""));
+        return p;
+      }
+      function delDia() {
+        var h = F.dias && F.dias[hoyTxt()];
+        if (h && h.length) return h;
+        return alAzar(azar(semilla("falta" + hoyTxt())));  // por si el archivo quedó viejo
+      }
+      function alAzar(r) {
+        var usados = {};
+        return [1, 1, 2, 2, 3].map(function (d) {
+          var pool = T.map(function (t, k) { return k; }).filter(function (k) { return T[k].dif === d && !usados[k]; });
+          var k = pool[Math.floor(r() * pool.length)]; usados[k] = 1;
+          var cand = T[k].jugadores.map(function (x, i) { return i; }).filter(function (i) { return T[k].jugadores[i].pjt >= FX_MIN[d]; });
+          return [k, cand[Math.floor(r() * cand.length)]];
+        });
+      }
+      function partida(rondas, clave) {
+        var est = clave ? leer(clave, null) : null;
+        est = est && est.r ? est : { r: [], pistas: 0, errores: [], revelado: false };
+        function guardarEst() { if (clave) guardar(clave, est); }
+        function total() { return est.r.reduce(function (a, x) { return a + x.p; }, 0); }
+        function filas(t, oculto, revelar, acerto) {
+          return "<ol class='fx-lista'>" + t.jugadores.map(function (x, i) {
+            var es = i === oculto, nombre;
+            if (es && !revelar) nombre = "<span class='fx-hueco'>¿?</span>";
+            else nombre = x.url ? "<a href='" + esc(x.url) + "'>" + esc(x.n) + "</a>" : esc(x.n);
+            return "<li class='" + (es ? "fx-falta" + (revelar ? (acerto ? " ok" : " mal") : "") : "") + "'><span class='fx-pos'>" + (i + 1) + "</span>" +
+              "<span class='fx-nombre'>" + nombre + "</span><span class='fx-pj'>" + x.pj + "<small>PJ</small></span><span class='fx-gol'>" + x.gol + "<small>G</small></span></li>";
+          }).join("") + "</ol>";
+        }
+        function cabezaTorneo(t) {
+          return "<div class='fx-torneo'><b>" + esc(t.titulo) + "</b><span>Campeón</span></div>" +
+            "<p class='fx-bajada'>Los " + t.jugadores.length + " que más partidos jugaron en ese torneo. Falta uno: ¿quién es?</p>";
+        }
+        function pintar() {
+          var termino = est.r.length >= rondas.length && !est.revelado, html = "", cfg = null;
+          if (est.revelado) {
+            var ult = est.r[est.r.length - 1], rd = rondas[est.r.length - 1], t0 = T[rd[0]], x0 = t0.jugadores[rd[1]];
+            html = "<div class='qs-revela" + (ult.p ? " ok" : "") + "'><p class='qs-res'>" + (ult.p ? "¡Bien! <b>+" + ult.p + "</b>" : "Esta vez no.") + "</p>" +
+              "<h3>" + esc(x0.n) + "</h3><p class='qs-datos'>" + x0.pj + " partidos y " + plural(x0.gol, "gol", "goles") + " en " + esc(t0.titulo) +
+              " · " + x0.pjt + " partidos oficiales en Boca</p>" + cabezaTorneo(t0).replace(/<p class='fx-bajada'>.*<\/p>/, "") + filas(t0, rd[1], true, !!ult.p) +
+              "<button type='button' class='boton' id='fx-seguir'>" + (est.r.length >= rondas.length ? "Ver resultado" : "Siguiente campeón") + "</button></div>";
+          } else if (termino) {
+            var tt = total(), max = rondas.length * 100, ac = est.r.filter(function (x) { return x.p; }).length;
+            if (clave && leer("res-falta-" + hoyTxt(), null) == null) {
+              reportar("falta", tt); guardar("res-falta-" + hoyTxt(), tt);
+              var st = leer("falta-stats", { jugadas: 0, aciertos: 0, rondas: 0, record: 0 });
+              st.jugadas++; st.aciertos += ac; st.rondas += rondas.length; st.record = Math.max(st.record, tt);
+              guardar("falta-stats", st); pintarEstados();
+            }
+            if (clave && ac === rondas.length) ganar("falta5");
+            var celdas = est.r.map(function (x) { var f = []; for (var i = 0; i < x.v; i++) f.push(i === x.v - 1 && x.p ? "ok" : "mal"); return f; });
+            cfg = { juego: "¿Quién falta?" + (clave ? " #" + numeroDelDia() : ""), puntaje: tt, total: max, linea: ac + " de " + rondas.length + " adivinados", celdas: celdas,
+              texto: firma() + "¿Quién falta? de Rincón Bostero" + (clave ? " #" + numeroDelDia() : "") + "\n" + tt + "/" + max + "\n" +
+                celdas.map(function (f) { return f.map(function (x) { return x === "ok" ? "🟨" : "⬜"; }).join(""); }).join("\n") + "\n" + URL_JUEGOS + "#falta" };
+            var st2 = leer("falta-stats", null);
+            html = "<div class='qs-final'><p class='qs-total'><b>" + tt + "</b><small>/" + max + "</small></p><ol class='qs-lista'>" +
+              rondas.map(function (rd, i) { var x = est.r[i]; return "<li><span>" + esc(T[rd[0]].titulo) + ": <b>" + esc(T[rd[0]].jugadores[rd[1]].n) + "</b></span><b>" + (x && x.p ? "+" + x.p : "—") + "</b></li>"; }).join("") + "</ol>" +
+              (clave && st2 && st2.jugadas ? "<p class='nota-dato'>Jugaste " + plural(st2.jugadas, "vez", "veces") + ", adivinaste el " + Math.round(100 * st2.aciertos / Math.max(1, st2.rondas)) + "% y tu récord es " + st2.record + "/500.</p>" : "") +
+              bloqueCompartir(cfg) + "<button type='button' class='boton secundario' id='fx-practica'>Jugar con otros campeones</button></div>";
+          } else {
+            var rd2 = rondas[est.r.length], t = T[rd2[0]], x = t.jugadores[rd2[1]], pis = pistasDe(x), vale = FX_PUNTOS[est.pistas];
+            var dif = t.dif;
+            html = "<div class='qs-cabeza'><span>Campeón " + (est.r.length + 1) + " de " + rondas.length + "</span><span class='qs-dif d" + dif + "'>" + FX_DIF[dif] + "</span>" +
+              "<span>Vale <b>" + vale + "</b></span></div>" + cabezaTorneo(t) + filas(t, rd2[1], false) +
+              (est.pistas ? "<ol class='qs-pistas'>" + pis.slice(0, est.pistas).map(function (p, i) { return "<li" + (i === est.pistas - 1 ? " class='nueva'" : "") + ">" + esc(p) + "</li>"; }).join("") + "</ol>" : "") +
+              (est.errores.length ? "<p class='qs-errores'>No es: " + est.errores.map(esc).join(", ") + "</p>" : "") +
+              "<form class='idolo-form' id='fx-form' autocomplete='off'><label class='oculto' for='fx-input'>¿Quién falta?</label>" +
+              "<input id='fx-input' list='lista-falta' placeholder='¿Quién falta?'>" + lista + "<button class='boton' type='submit'>Arriesgar</button></form>" +
+              "<p class='nota-dato' id='fx-msg'>" + (FX_ERRORES - est.errores.length === 1 ? "Te queda 1 intento" : "Te quedan " + (FX_ERRORES - est.errores.length) + " intentos") + ". Con el apellido alcanza; cada error destapa una pista.</p>" +
+              "<div class='qs-acciones'>" + (est.pistas < pis.length ? "<button type='button' class='boton secundario' id='fx-pista'>Ver una pista (vale " + FX_PUNTOS[est.pistas + 1] + ")</button>" : "") +
+              "<button type='button' class='boton secundario' id='fx-rendir'>Me rindo</button></div>";
+          }
+          caja.innerHTML = "<div class='quien falta'><h3 class='juego-pregunta'>" + (clave ? "¿Quién falta? Los cinco de hoy" : "Modo práctica") + "</h3>" + html + "</div>";
+          if (cfg) activarCompartir(caja, cfg);
+          function cerrar(puntos) {
+            est.r.push({ p: puntos, v: est.pistas + 1 }); est.pistas = 0; est.errores = []; est.revelado = true; guardarEst();
+            pintar();
+            var s = caja.querySelector("#fx-seguir"); if (s) s.focus({ preventScroll: true });
+          }
+          var f = caja.querySelector("#fx-form");
+          if (f) f.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var texto = caja.querySelector("#fx-input").value.replace(/\s+/g, " ").trim(), msg = caja.querySelector("#fx-msg");
+            var rd = rondas[est.r.length], t = T[rd[0]], x = t.jugadores[rd[1]];
+            if (normal(texto).length < 3) { msg.textContent = "Escribí el nombre o el apellido de un jugador."; return; }
+            var c = candidatos(texto);
+            if (c.indexOf(x.n) >= 0) { cerrar(FX_PUNTOS[est.pistas]); return; }
+            var visibles = t.jugadores.filter(function (y, i) { return i !== rd[1]; }).map(function (y) { return y.n; });
+            if (c.length && c.every(function (n) { return visibles.indexOf(n) >= 0; })) { msg.textContent = "Ese ya está en la lista: falta otro."; return; }
+            var nombre = c.length === 1 ? c[0] : texto;
+            if (est.errores.some(function (y) { return normal(y) === normal(nombre); })) { msg.textContent = "Ya lo probaste."; return; }
+            est.errores.push(nombre);
+            if (est.errores.length >= FX_ERRORES) { cerrar(0); return; }
+            if (est.pistas < 2) est.pistas++;
+            guardarEst(); pintar();
+            var inp = caja.querySelector("#fx-input"); if (inp) inp.focus({ preventScroll: true });
+          });
+          var bp = caja.querySelector("#fx-pista");
+          if (bp) bp.addEventListener("click", function () { est.pistas++; guardarEst(); pintar(); });
+          var br = caja.querySelector("#fx-rendir");
+          if (br) br.addEventListener("click", function () { cerrar(0); });
+          var bs = caja.querySelector("#fx-seguir");
+          if (bs) bs.addEventListener("click", function () { est.revelado = false; guardarEst(); pintar(); });
+          var bpr = caja.querySelector("#fx-practica");
+          if (bpr) bpr.addEventListener("click", function () { partida(alAzar(Math.random), null); });
+        }
+        pintar();
+      }
+      partida(delDia(), "falta-" + hoyTxt());
+    }).catch(function () { caja.innerHTML = "<p class='vacio'>No pude cargar el juego. Probá de nuevo en un rato.</p>"; caja.removeAttribute("data-listo"); });
+  }
+
+  var INICIAR_AL_ABRIR = { grilla: iniciarGrilla, quien: iniciarQuienSoy, conexion: iniciarConexion, falta: iniciarFalta, insignias: pintarInsignias, perfil: function () { pintarPerfil(); if (conCuenta()) cargarProgreso(false); }, desafio: function () { if (sb) iniciarDesafio(); } };
   var PENDIENTE = null;  // link a un desafío o liga que llegó antes de conectar con el servidor
   function mostrar() {
     var id = (location.hash || "").slice(1), m = /^(desafio|liga)-([A-Za-z0-9]{6})$/.exec(id);
