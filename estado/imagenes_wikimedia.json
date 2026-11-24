@@ -1483,6 +1483,118 @@
     "leonardo rafael jara": {
       "archivo": "InddelVal-Boca (8).jpg",
       "buscado": "2026-11-24T00:42:00.692089-03:00"
+    },
+    "antonio americo alberino": {
+      "archivo": "Antonio Alberino.jpg",
+      "buscado": "2026-11-24T00:58:51.004905-03:00"
+    },
+    "antonio alberino": {
+      "archivo": "Antonio Alberino.jpg",
+      "buscado": "2026-11-24T00:58:51.004864-03:00"
+    },
+    "angel osvaldo nardiello": {
+      "archivo": "Osvaldonardiello bocajrs.jpg",
+      "buscado": "2026-11-24T00:58:51.380321-03:00"
+    },
+    "julio alberto buffarini": {
+      "archivo": "Buffarini (cropped).jpg",
+      "buscado": "2026-11-24T00:58:51.703739-03:00"
+    },
+    "francisco taggino": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:51.882260-03:00"
+    },
+    "donato alberto penella": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:52.065235-03:00"
+    },
+    "donato penella": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:52.286002-03:00"
+    },
+    "donato alberto": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:52.500631-03:00"
+    },
+    "luis alberto carranza": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:52.688835-03:00"
+    },
+    "luis carranza": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:52.883297-03:00"
+    },
+    "luis alberto": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:53.167992-03:00"
+    },
+    "oscar ruben peracca": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:53.254507-03:00"
+    },
+    "oscar peracca": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:53.370633-03:00"
+    },
+    "oscar ruben": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:53.630530-03:00"
+    },
+    "carlos maria garcia cambon": {
+      "archivo": "Garciacambon en chacarita.jpg",
+      "buscado": "2026-11-24T00:58:54.049876-03:00"
+    },
+    "jose maria silvero": {
+      "archivo": "Silvero (Estudiantes LP) - El Gráfico 2013.jpg",
+      "buscado": "2026-11-24T00:58:54.493098-03:00"
+    },
+    "victor hugo marchesini": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:54.684898-03:00"
+    },
+    "victor marchesini": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:54.785559-03:00"
+    },
+    "victor hugo": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:55.078914-03:00"
+    },
+    "walter adrian samuel": {
+      "archivo": "Walter Samuel - Inter Mailand (1).jpg",
+      "buscado": "2026-11-24T00:58:55.456176-03:00"
+    },
+    "walter daniel erviti": {
+      "archivo": "O banfield walter erviti-1258405.jpg",
+      "buscado": "2026-11-24T00:58:55.857175-03:00"
+    },
+    "segundo gregorio ibanez": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:55.970223-03:00"
+    },
+    "segundo ibanez": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:56.068394-03:00"
+    },
+    "segundo gregorio": {
+      "archivo": null,
+      "buscado": "2026-11-24T00:58:56.172301-03:00"
+    },
+    "juan jose rodriguez": {
+      "archivo": "J. J. Rodríguez (Racing) - El Gráfico 2491.jpg",
+      "buscado": "2026-11-24T00:58:56.558099-03:00"
+    },
+    "ernesto jose grillo": {
+      "archivo": "Ernesto Grillo Boca Juniors.jpg",
+      "buscado": "2026-11-24T00:58:57.014127-03:00"
+    },
+    "ernesto grillo": {
+      "archivo": "Ernesto Grillo Boca Juniors.jpg",
+      "buscado": "2026-11-24T00:58:57.014085-03:00"
+    },
+    "juan manuel sanchez mino": {
+      "archivo": "DSeMA1gWsAE0Cw8.jpg",
+      "buscado": "2026-11-24T00:58:57.387493-03:00"
     }
   },
   "archivos": {
@@ -2129,6 +2241,46 @@
     "InddelVal-Boca (8).jpg": {
       "imagen": "img/archivo/inddelval-boca-8-fc46a3.jpg",
       "credito": "Foto de archivo: Agencia de Noticias ANDES / Wikimedia Commons (CC BY-SA 2.0)"
+    },
+    "Antonio Alberino.jpg": {
+      "imagen": "img/archivo/antonio-alberino-ce18f2.jpg",
+      "credito": "Foto de archivo: El Grafico magazine / Wikimedia Commons (Public domain)"
+    },
+    "Osvaldonardiello bocajrs.jpg": {
+      "imagen": "img/archivo/osvaldonardiello-bocajrs-94b937.jpg",
+      "credito": "Foto de archivo: Unknown author Unknown author / Wikimedia Commons (Public domain)"
+    },
+    "Buffarini (cropped).jpg": {
+      "imagen": "img/archivo/buffarini-cropped-2c449d.jpg",
+      "credito": "Foto de archivo: Caslacuervo1308 / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "Garciacambon en chacarita.jpg": {
+      "imagen": "img/archivo/garciacambon-en-chacarita-929198.jpg",
+      "credito": "Foto de archivo: Unknown author Unknown author / Wikimedia Commons (Public domain)"
+    },
+    "Silvero (Estudiantes LP) - El Gráfico 2013.jpg": {
+      "imagen": "img/archivo/silvero-estudiantes-lp-el-grafico-2013-820bdc.jpg",
+      "credito": "Foto de archivo: El Gráfico / Wikimedia Commons (Public domain)"
+    },
+    "Walter Samuel - Inter Mailand (1).jpg": {
+      "imagen": "img/archivo/walter-samuel-inter-mailand-1-828b44.jpg",
+      "credito": "Foto de archivo: Steindy ( talk ) 17:05, 29 November 2009 (UTC) / Wikimedia Commons (CC BY-SA 3.0)"
+    },
+    "O banfield walter erviti-1258405.jpg": {
+      "imagen": "img/archivo/o-banfield-walter-erviti-1258405-a8491c.jpg",
+      "credito": "Foto de archivo: Berna Banfield / Wikimedia Commons (Public domain)"
+    },
+    "J. J. Rodríguez (Racing) - El Gráfico 2491.jpg": {
+      "imagen": "img/archivo/j-j-rodriguez-racing-el-grafico-2491-1fab68.jpg",
+      "credito": "Foto de archivo: El Gráfico / Wikimedia Commons (Public domain)"
+    },
+    "Ernesto Grillo Boca Juniors.jpg": {
+      "imagen": "img/archivo/ernesto-grillo-boca-juniors-97d3ae.jpg",
+      "credito": "Foto de archivo: Unknown author Unknown author / Wikimedia Commons (Public domain)"
+    },
+    "DSeMA1gWsAE0Cw8.jpg": {
+      "imagen": "img/archivo/dsema1gwsae0cw8-3c677d.jpg",
+      "credito": "Foto de archivo: Jonatave / Wikimedia Commons (CC BY-SA 4.0)"
     }
   },
   "bombonera": {
