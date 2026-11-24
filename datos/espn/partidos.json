@@ -32019,5 +32019,87 @@
     "penales_boca": null,
     "penales_rival": null,
     "resultado": null
+  },
+  {
+    "id": "401936498",
+    "fecha": "2027-02-17T17:00:00-03:00",
+    "hora_a_confirmar": true,
+    "competencia": "Recopa Sudamericana",
+    "competencia_slug": "conmebol.recopa",
+    "instancia": "ida",
+    "temporada": 2027,
+    "estado": "programado",
+    "detalle": "TBD",
+    "estadio": "",
+    "ciudad": "",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": null,
+      "penales": null
+    },
+    "visitante": {
+      "id": "131554",
+      "nombre": "TBD Away",
+      "corto": "TBD Away",
+      "escudo": "",
+      "goles": null,
+      "penales": null
+    },
+    "rival": {
+      "id": "131554",
+      "nombre": "TBD Away",
+      "corto": "TBD Away",
+      "escudo": ""
+    },
+    "goles_boca": null,
+    "goles_rival": null,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": null
+  },
+  {
+    "id": "401936480",
+    "fecha": "2027-02-24T17:00:00-03:00",
+    "hora_a_confirmar": true,
+    "competencia": "Recopa Sudamericana",
+    "competencia_slug": "conmebol.recopa",
+    "instancia": "vuelta - Tied on aggregate",
+    "temporada": 2027,
+    "estado": "programado",
+    "detalle": "TBD",
+    "estadio": "",
+    "ciudad": "",
+    "condicion": "V",
+    "local": {
+      "id": "131556",
+      "nombre": "TBD Home",
+      "corto": "TBD Home",
+      "escudo": "",
+      "goles": null,
+      "penales": null
+    },
+    "visitante": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": null,
+      "penales": null
+    },
+    "rival": {
+      "id": "131556",
+      "nombre": "TBD Home",
+      "corto": "TBD Home",
+      "escudo": ""
+    },
+    "goles_boca": null,
+    "goles_rival": null,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": null
   }
 ]
