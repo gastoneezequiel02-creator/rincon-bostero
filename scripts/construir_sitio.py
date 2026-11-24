@@ -25,7 +25,7 @@ e = html.escape
 
 MENU = [("index.html", "Inicio"), ("noticias.html", "Noticias"), ("juegos.html", "Juegos"), ("fixture.html", "Fixture y posiciones"),
         ("historial.html", "Historial"), ("campanas.html", "Campañas"), ("records.html", "Récords"), ("efemerides.html", "Un día como hoy"),
-        ("plantel.html", "Plantel")]
+        ("plantel.html", "Plantel"), ("jugadores.html", "Jugadores")]
 NOMBRE_ESTADO = {"oficial": "Oficial", "confirmado": "Confirmado", "rumor": "Rumor"}
 NOMBRE_RES = {"G": "Ganó", "E": "Empató", "P": "Perdió"}
 
@@ -165,7 +165,7 @@ def logo_html(pre: str) -> str:
 
 
 def pagina(titulo: str, cuerpo: str, *, activa: str = "", pre: str = "", descripcion: str = "",
-           imagen: str = "", canonica: str = "", franja: str = "") -> str:
+           imagen: str = "", canonica: str = "", franja: str = "", robots: str = "") -> str:
     s = sitio()
     titulo_completo = f"{titulo} | {s['nombre']}" if titulo != s["nombre"] else f"{s['nombre']}: {s['lema']}"
     desc = descripcion or s["lema"]
@@ -184,7 +184,7 @@ def pagina(titulo: str, cuerpo: str, *, activa: str = "", pre: str = "", descrip
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(titulo_completo)}</title>
-<meta name="description" content="{e(desc)}">
+<meta name="description" content="{e(desc)}">{f'<meta name="robots" content="{e(robots)}">' if robots else ""}
 <link rel="canonical" href="{e(canonica) if canonica else "__CANONICA__"}">
 <meta property="og:url" content="{e(canonica) if canonica else "__CANONICA__"}">
 {datos_estructurados_portada() if activa == "index.html" and not pre else ""}
@@ -251,6 +251,16 @@ def barra_franja(proximos: list[dict], pre: str) -> str:
 
 
 # ================================================================ páginas ==
+def link_jugador(nombre: str, pre: str = "") -> str:
+    """El nombre con link a su ficha de jugador histórico, si hay una (y una sola) que coincida."""
+    try:
+        import paginas_jugadores
+        url = paginas_jugadores.url_jugador(nombre, pre) if hdb() else None
+    except Exception:
+        url = None
+    return f'<a href="{e(url)}">{e(nombre)}</a>' if url else e(nombre)
+
+
 _VERSIONES: dict[str, str] = {}
 
 
@@ -1004,7 +1014,7 @@ def pagina_plantel(plantel: dict, proximos) -> str:
                 if c.get("valor_eur"):
                     partes.append(_euros(c["valor_eur"]))
                 extra = f'<small class="contrato">{e(" · ".join(partes))}</small>' if partes else ""
-            tarjetas += (f'<div class="jugador"><span class="num">{e(str(j.get("numero") or ""))}</span><span><b>{e(j["nombre"])}</b>'
+            tarjetas += (f'<div class="jugador"><span class="num">{e(str(j.get("numero") or ""))}</span><span><b>{link_jugador(j["nombre"])}</b>'
                          f'<small>{e(str(j["edad"])) + " años" if j.get("edad") else ""}{", " + e(j["nacionalidad"]) if j.get("nacionalidad") else ""}</small>'
                          f'{extra}</span></div>')
         bloques += f'<h2 class="titulo-seccion">{e(TRAD_POS.get(pos, pos))}</h2><div class="plantel">{tarjetas}</div>'
@@ -1183,7 +1193,7 @@ def secciones_rankings() -> list[str]:
                 extra = f'<small>en {f["partidos"]} partidos</small>'
             elif clave == "partidos" and f.get("goles") is not None:
                 extra = f'<small>{f["goles"]} goles</small>'
-            items += (f'<li><span class="rk-pos">{i}</span><span class="rk-nombre">{e(f["nombre"])}{extra}</span>'
+            items += (f'<li><span class="rk-pos">{i}</span><span class="rk-nombre">{link_jugador(f["nombre"])}{extra}</span>'
                       f'<span class="rk-valor">{f["valor"]}<small>{unidad[clave]}</small></span></li>')
         tarjetas += f'<article class="ranking"><h3>{e(r["titulo"])}</h3><ol>{items}</ol></article>'
     if tarjetas:
@@ -1556,8 +1566,8 @@ def feed_rss(notas) -> str:
             f'{items}</channel></rss>')
 
 
-def sitemap(notas) -> str:
-    urls = [url_abs(h) for h, _ in MENU] + [url_abs(f"notas/{n['slug']}.html") for n in notas]
+def sitemap(notas, extra: list[str] | None = None) -> str:
+    urls = [url_abs(h) for h, _ in MENU] + [url_abs(f"notas/{n['slug']}.html") for n in notas] + [url_abs(x) for x in extra or []]
     if hdb():
         import historia_de_boca
         urls += [url_abs(f"efemerides/{d}.html") for d in historia_de_boca.efemerides_guardadas()]
@@ -1631,22 +1641,34 @@ def construir() -> None:
     import juegos as _juegos
     import jugadores_hdb
     quien = jugadores_hdb.datos_quien_soy()
+    import paginas_jugadores
     if quien:
+        for q in quien["jugadores"]:
+            q["url"] = paginas_jugadores.url_jugador(q["n"]) or ""
         escribir("quiensoy.json", json.dumps(quien, ensure_ascii=False, separators=(",", ":")))
     conexion = jugadores_hdb.datos_conexion(ahora().date())
     if conexion:
+        for q in [x for lista in conexion["dias"].values() for x in lista] + conexion["practica"]:
+            q["ua"], q["ub"] = paginas_jugadores.url_jugador(q["a"]) or "", paginas_jugadores.url_jugador(q["b"]) or ""
         escribir("conexion.json", json.dumps(conexion, ensure_ascii=False, separators=(",", ":")))
     grilla = _juegos.datos_grilla()
     if grilla:
         escribir("grilla.json", json.dumps(grilla, ensure_ascii=False, separators=(",", ":")))
     escribir("privacidad.html", pagina_privacidad(proximos))
+    urls_jugadores = []
+    if hdb():
+        import paginas_jugadores
+        try:
+            urls_jugadores = paginas_jugadores.generar(escribir, SALIDA, pagina, lambda pre: barra_franja(proximos, pre), url_abs)
+        except Exception as ex:  # que una falla acá no deje sin web al resto
+            log(f"Sitio: no pude armar las páginas de jugadores ({ex})")
     for i, n in enumerate(notas):
         misma_cat = [x for x in notas if x is not n and x.get("categoria") == n.get("categoria")][:2]
         otras = [x for x in notas if x is not n and x not in misma_cat][:4 - len(misma_cat)]
         escribir(f"notas/{n['slug']}.html", pagina_nota(n, misma_cat + otras, proximos))
     escribir("calendario.ics", calendario_ics(proximos, jugados))
     escribir("feed.xml", feed_rss(notas))
-    escribir("sitemap.xml", sitemap(notas))
+    escribir("sitemap.xml", sitemap(notas, urls_jugadores))
     escribir("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {url_abs('sitemap.xml')}\n")
     raiz = url_abs("")
     escribir("404.html", pagina("Página no encontrada",

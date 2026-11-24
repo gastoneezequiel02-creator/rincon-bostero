@@ -213,6 +213,9 @@ def personas_de_los_juegos() -> list[str]:
     for r in (rk.get("jugadores") or {}).values():
         nombres += [f["nombre"] for f in r.get("filas", [])]
     nombres += [t["nombre"] for t in rk.get("tecnicos", [])]
+    # y los jugadores históricos con 100 partidos o más, para sus fichas
+    jug = (leer_json(DATOS / "hdb" / "jugadores.json", {}) or {}).get("jugadores", {})
+    nombres += [j["n"] for j in sorted(jug.values(), key=lambda x: -(x.get("pj") or 0)) if (j.get("pj") or 0) >= 100 and j.get("n")]
     return list(dict.fromkeys(nombres))
 
 
