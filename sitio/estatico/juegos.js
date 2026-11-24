@@ -1230,6 +1230,8 @@
               return "<button type='button' class='opcion" + cls + "' data-si='" + o[0] + "'" + (x ? " disabled" : "") + "><span class='op-letra'>" + o[1] + "</span><span class='op-texto'>" + o[2] + "</span></button>";
             }).join("") + "</div><div class='juego-dato' aria-live='polite'>" +
             (x ? "<p class='m-veredicto " + (x.ok ? "bien" : "mal") + "'><b>" + (x.ok ? "¡Bien! +" + x.p : "Era al revés.") + "</b> " + esc(q.exp) + "</p>" +
+              (q.ua || q.ub ? "<p class='m-nota cx-fichas'>Fichas: " + [[q.a, q.ua], [q.b, q.ub]].filter(function (y) { return y[1]; }).map(function (y) {
+                return "<a href='" + esc(y[1]) + "'>" + esc(y[0]) + "</a>"; }).join(" · ") + "</p>" : "") +
               "<button type='button' class='boton siguiente'>" + (est.r.length === preguntas.length ? "Ver resultado" : "Siguiente") + "</button>" :
               "<p class='m-nota'>Cuenta si estuvieron juntos en la cancha en al menos un partido oficial. Racha: hasta +20 por respuesta.</p>") + "</div></div>";
           caja.querySelectorAll(".opcion:not([disabled])").forEach(function (b) {
@@ -1309,6 +1311,7 @@
             html = "<div class='qs-revela" + (ult.p ? " ok" : "") + "'><p class='qs-res'>" + (ult.p ? "¡Bien! <b>+" + ult.p + "</b>" : "Esta vez no.") + "</p>" +
               "<h3>" + esc(s0.n) + "</h3><p class='qs-datos'>" + s0.pj + " partidos oficiales · " + plural(s0.goles, "gol", "goles") + " · " + esc(s0.etapa) + "</p>" +
               (s0.bio ? "<p class='qs-bio'>" + esc(s0.bio) + "</p>" : "") +
+              (s0.url ? "<p class='qs-ficha'><a href='" + esc(s0.url) + "'>Ver su ficha completa</a></p>" : "") +
               "<button type='button' class='boton' id='qs-seguir'>" + (est.r.length >= secretos.length ? "Ver resultado" : "Siguiente jugador") + "</button></div>";
           } else if (termino) {
             var t = total(), max = secretos.length * 100;
