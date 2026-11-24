@@ -15,7 +15,7 @@ import datetime as dt
 import html as html_mod
 import re
 
-from comun import DATOS, ahora, config, guardar_json, http_get, leer_json, log, normalizar
+from comun import DATOS, DATOS_ESPN, ahora, config, guardar_json, http_get, leer_json, log, normalizar
 from historia_de_boca import _texto_con_filas
 
 BASE = "https://bocastats.com"
@@ -325,27 +325,137 @@ def importar_records() -> None:
     log(f"BocaStats: récords actualizados ({balance['pj']} partidos)")
 
 
-def importar_goleadores() -> None:
+def parsear_goleadores(html: str) -> list[dict]:
+    """Tabla de artilleros de bocastats.com/goleadores/ (filas <a class="gol-row">: nombre, "Puesto · 10 Liga (5 Clausura)
+    · 1 Libertadores", goles, asistencias y partidos de Liga)."""
+    filas = []
+    for bloque in re.findall(r'(?s)<a[^>]*class="gol-row[^"]*"[^>]*>(.*?)</a>', html):
+        nombre = re.search(r'(?s)class="gol-player-name"[^>]*>(.*?)<', bloque)
+        pos = re.search(r'(?s)class="gol-player-pos"[^>]*>(.*?)<', bloque)
+        goles = re.search(r'class="gol-stat gol-stat-goles"[^>]*>\s*(\d+)', bloque)
+        if not (nombre and goles):
+            continue
+        partes = [x.strip() for x in html_mod.unescape(pos.group(1) if pos else "").split("·")]
+        desglose = {}
+        for x in partes[1:]:
+            m = re.match(r"(\d+)\s+([^(]+?)\s*(\(.*\))?$", x)
+            if m:
+                desglose[m.group(2).strip()] = int(m.group(1))
+        fila = {"nombre": html_mod.unescape(nombre.group(1)).strip(), "posicion": partes[0] if partes else "",
+                "goles": int(goles.group(1)), "desglose": desglose}
+        ast = re.search(r'gol-col-ast"[^>]*>\s*(\d+)', bloque)
+        pj = re.search(r'gol-col-pj"[^>]*>\s*(\d+)', bloque)
+        if ast:
+            fila["asistencias_liga"] = int(ast.group(1))
+        if pj:
+            fila["pj_liga"] = int(pj.group(1))
+        filas.append(fila)
+    return filas
+
+
+def importar_goleadores() -> bool:
+    """Devuelve True si pudo actualizar la tabla (si no, queda la copia anterior y se reintenta en la próxima corrida)."""
     try:
-        texto = _texto_con_filas(http_get(f"{BASE}/goleadores/", timeout=40).decode("utf-8", "ignore"))
+        html = http_get(f"{BASE}/goleadores/", timeout=40).decode("utf-8", "ignore")
     except Exception as e:
         log(f"BocaStats: no pude leer los goleadores ({e})")
-        return
-    filas = []
-    for m in re.finditer(r"([A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑáéíóúñü'´\. ]{3,40}?)\s*\|?\s*(Arquero|Defensor|Mediocampista|Delantero)\s*\|?\s*(\d{1,3})\b", texto):
-        filas.append({"nombre": m.group(1).strip(), "posicion": m.group(2), "goles": int(m.group(3))})
+        return False
+    filas = parsear_goleadores(html)
+    if len(filas) < 5:  # por si cambian el diseño otra vez: el formato viejo, en texto
+        texto = _texto_con_filas(html)
+        filas = [{"nombre": m.group(1).strip(), "posicion": m.group(2), "goles": int(m.group(3))} for m in re.finditer(
+            r"([A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÑáéíóúñü'´\. ]{3,40}?)\s*\|?\s*(Arquero|Defensor|Mediocampista|Delantero)\s*\|?\s*(\d{1,3})\b", texto)]
     goles = [f["goles"] for f in filas]
-    if len(filas) < 5 or goles != sorted(goles, reverse=True):
+    if len(filas) < 5 or goles != sorted(goles, reverse=True) or any(f.get("desglose") and sum(f["desglose"].values()) != f["goles"] for f in filas):
         log("BocaStats: no pude verificar la tabla de goleadores. Uso la copia anterior.")
-        return
+        return False
     anterior = {j["nombre"]: j for j in leer_json(CARPETA / "goleadores.json", {}).get("jugadores", [])}
-    for f in filas:  # conserva el desglose por competencia si el jugador ya estaba y no cambió
+    for f in filas:  # si el formato viejo no trae el desglose, conserva el anterior cuando los goles no cambiaron
         viejo = anterior.get(f["nombre"])
-        if viejo and viejo.get("goles") == f["goles"]:
+        if viejo and viejo.get("goles") == f["goles"] and not f.get("desglose"):
             f.update({k: viejo[k] for k in ("desglose", "asistencias_liga", "pj_liga") if k in viejo})
-    guardar_json(CARPETA / "goleadores.json", {**leer_json(CARPETA / "goleadores.json", {}),
+    m = re.search(r"(?i)Actualizado el (\d{1,2}) de (\w+) de (\d{4})", html)
+    meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+    extra = {}
+    if m and m.group(2).lower() in meses:
+        extra["actualizado_fuente"] = f"{m.group(3)}-{meses.index(m.group(2).lower()) + 1:02d}-{int(m.group(1)):02d}"
+    guardar_json(CARPETA / "goleadores.json", {**leer_json(CARPETA / "goleadores.json", {}), **extra,
                                                "consultado": ahora().date().isoformat(), "jugadores": filas})
-    log(f"BocaStats: goleadores actualizados ({len(filas)} jugadores)")
+    log(f"BocaStats: goleadores actualizados ({len(filas)} jugadores, {sum(goles)} goles)")
+    return True
+
+
+# ------------------------------------------- goles recientes que BocaStats no cargó --
+# BocaStats a veces tarda días en sumar los goles de un partido. Para que la tabla de goleadores no quede atrasada,
+# se leen de ESPN los goles de Boca de los partidos de los últimos días y se suman mientras BocaStats no los cargue.
+# Para saber si ya los cargó, cuando se ve el partido por primera vez se anota cuántos goles le contaba BocaStats
+# a cada goleador en esa competencia ("antes"): en cuanto ese número sube, el gol de ESPN deja de sumarse.
+ARCHIVO_RECIENTES = CARPETA / "goles_recientes.json"
+DIAS_RECIENTES = 12
+COMP_BS = {"arg.1": "Liga", "conmebol.libertadores": "Libertadores", "conmebol.sudamericana": "Sudamericana",
+           "arg.copa": "Copa Argentina"}
+
+
+def _buscar_goleador(tabla: list[dict], nombre: str) -> dict | None:
+    n = normalizar(nombre)
+    for j in tabla:
+        if normalizar(j["nombre"]) == n:
+            return j
+    ap = n.split()[-1] if n else ""
+    candidatos = [j for j in tabla if normalizar(j["nombre"]).split()[-1:] == [ap]]
+    return candidatos[0] if len(candidatos) == 1 else None
+
+
+def actualizar_goles_recientes() -> None:
+    from datos_futbol import resumen_partido
+    rec = leer_json(ARCHIVO_RECIENTES, {}) or {}
+    tabla = leer_json(CARPETA / "goleadores.json", {}).get("jugadores", [])
+    desde = (ahora() - dt.timedelta(days=DIAS_RECIENTES)).date().isoformat()
+    for p in leer_json(DATOS_ESPN / "partidos.json", []) or []:
+        comp = COMP_BS.get(p.get("competencia_slug"))
+        if not comp or p.get("estado") != "finalizado" or (p.get("fecha") or "")[:10] < desde or p["id"] in rec:
+            continue
+        try:
+            hechos = resumen_partido(p["id"], p["competencia_slug"])["hechos"]
+        except Exception as e:
+            log(f"BocaStats: no pude leer los goles de {p['id']} en ESPN ({e})")
+            continue
+        goles = {}
+        for h in hechos:
+            if h["tipo"] == "gol" and "boca" in normalizar(h["equipo"]) and h["jugador"] and "own goal" not in h["detalle"].lower():
+                goles[h["jugador"]] = goles.get(h["jugador"], 0) + 1
+        base = {}
+        for nombre in goles:
+            j = _buscar_goleador(tabla, nombre)
+            base[nombre] = {"bs": j["nombre"] if j else None, "antes": ((j or {}).get("desglose") or {}).get(comp, 0)}
+        rec[p["id"]] = {"fecha": p["fecha"][:10], "competencia": comp, "rival": (p.get("rival") or {}).get("nombre", ""),
+                        "goles": goles, "base": base}
+        log(f"BocaStats: goles de ESPN vs {rec[p['id']]['rival']}: {goles}")
+    rec = {k: v for k, v in rec.items() if v["fecha"] >= desde}
+    guardar_json(ARCHIVO_RECIENTES, rec)
+
+
+def goleadores() -> dict:
+    """La tabla de BocaStats más los goles recientes que todavía no cargó (ver arriba)."""
+    gol = leer_json(CARPETA / "goleadores.json", {}) or {}
+    tabla = [dict(j, desglose=dict(j.get("desglose") or {})) for j in gol.get("jugadores", [])]
+    originales = {j["nombre"]: dict(j.get("desglose") or {}) for j in gol.get("jugadores", [])}
+    sumados = 0
+    for m in sorted((leer_json(ARCHIVO_RECIENTES, {}) or {}).values(), key=lambda x: x["fecha"]):
+        for nombre, g in m["goles"].items():
+            b = m["base"].get(nombre, {})
+            j = next((x for x in tabla if x["nombre"] == b.get("bs")), None) if b.get("bs") else _buscar_goleador(tabla, nombre)
+            if j and (originales.get(j["nombre"], {}).get(m["competencia"], 0) != b.get("antes", 0)):
+                continue  # BocaStats ya lo cargó
+            if not j:
+                j = {"nombre": nombre, "posicion": "", "goles": 0, "desglose": {}}
+                tabla.append(j)
+            j["goles"] += g
+            j["desglose"][m["competencia"]] = j["desglose"].get(m["competencia"], 0) + g
+            j["recientes"] = j.get("recientes", 0) + g
+            sumados += g
+    tabla.sort(key=lambda j: -j["goles"])
+    return {**gol, "jugadores": tabla, "goles_recientes": sumados}
 
 
 def ejecutar() -> None:
@@ -358,10 +468,15 @@ def ejecutar() -> None:
         importar_indice()
         importar_records()
         estado["indice"] = hoy
-    if estado.get("goleadores", "") < hoy:  # los goleadores cambian seguido: una vez por día
-        importar_goleadores()
-        estado["goleadores"] = hoy
+    # Los goleadores cambian seguido: se revisan cada 3 horas, y si falla se reintenta en la corrida siguiente
+    hace_3h = (ahora() - dt.timedelta(hours=3)).isoformat(timespec="minutes")
+    if estado.get("goleadores", "") < hace_3h and importar_goleadores():
+        estado["goleadores"] = ahora().isoformat(timespec="minutes")
     guardar_json(CARPETA / "estado.json", estado)
+    try:
+        actualizar_goles_recientes()
+    except Exception as e:
+        log(f"BocaStats: no pude revisar los goles recientes ({e})")
     importar_rivales()
 
 

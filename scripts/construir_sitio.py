@@ -1010,7 +1010,8 @@ def pagina_plantel(plantel: dict, proximos) -> str:
         bloques += f'<h2 class="titulo-seccion">{e(TRAD_POS.get(pos, pos))}</h2><div class="plantel">{tarjetas}</div>'
 
     goleadores = ""
-    gol = leer_json(RAIZ / "datos" / "bocastats" / "goleadores.json", {}) if bs_opciones() else {}
+    import bocastats as _bs
+    gol = _bs.goleadores() if bs_opciones() else {}
     if gol.get("jugadores"):
         filas = "".join(
             f'<tr><td>{i}</td><td class="izq"><b>{e(j["nombre"])}</b><br><small class="nota-dato">{e(j.get("posicion", ""))}</small></td>'
@@ -1022,7 +1023,10 @@ def pagina_plantel(plantel: dict, proximos) -> str:
         total = sum(j["goles"] for j in gol["jugadores"])
         goleadores = f"""<div class="tabla-scroll"><table><thead><tr><th>#</th><th class="izq">Jugador</th><th>Goles</th><th class="izq">Por competencia</th>
 <th title="Asistencias en la Liga">Asist.</th><th title="Partidos jugados en la Liga">PJ</th></tr></thead><tbody>{filas}</tbody></table></div>
-<p class="nota-dato">{total} goles en todas las competencias oficiales. Asistencias y partidos jugados: solo Liga. Datos: BocaStats.</p>"""
+<p class="nota-dato">{total} goles en todas las competencias oficiales. Asistencias y partidos jugados: solo Liga. Datos: BocaStats{
+    f" (al {_fecha_txt(gol['actualizado_fuente'])})" if gol.get("actualizado_fuente") else ""}{
+    f", más {gol['goles_recientes']} {'gol' if gol['goles_recientes'] == 1 else 'goles'} de los últimos partidos que BocaStats todavía no cargó (ESPN)"
+    if gol.get("goles_recientes") else ""}.</p>"""
 
     # --- Contratos y valores
     contratos_html = ""

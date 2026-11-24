@@ -399,7 +399,8 @@ def preguntas_idolos(rng) -> list[dict]:
 # ------------------------------------------------------------------ temporada --
 def preguntas_temporada(rng) -> list[dict]:
     qs = []
-    gol = leer_json(DATOS / "bocastats" / "goleadores.json", {}) or {}
+    import bocastats
+    gol = bocastats.goleadores()
     js = gol.get("jugadores", [])
     t = gol.get("temporada")
     if len(js) >= 4:
@@ -526,7 +527,8 @@ def datos_mas_o_menos() -> list[dict]:
             cuenta[n] += 1
         grupos.append({"pregunta": "¿Qué ganó Boca más veces?", "unidad": "títulos",
                        "items": [{"nombre": n, "valor": v} for n, v in cuenta.items()]})
-    gol = (leer_json(DATOS / "bocastats" / "goleadores.json", {}) or {})
+    import bocastats
+    gol = bocastats.goleadores()
     if len(gol.get("jugadores", [])) >= 4:
         grupos.append({"pregunta": f"¿Quién hizo más goles en la temporada {gol.get('temporada', '')}?", "unidad": "goles",
                        "items": [{"nombre": j["nombre"], "valor": j["goles"]} for j in gol["jugadores"]]})
