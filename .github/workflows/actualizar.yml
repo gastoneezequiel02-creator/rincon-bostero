@@ -76,5 +76,14 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _sitio
+      # GitHub Pages a veces falla de su lado ("No artifacts named github-pages were found", "Deployment failed,
+      # try again later"): se espera un minuto y se reintenta una vez antes de dar la corrida por fallada.
       - id: publicar
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - name: Esperar antes de reintentar la publicación
+        if: steps.publicar.outcome == 'failure'
+        run: sleep 60
+      - name: Reintentar la publicación
+        if: steps.publicar.outcome == 'failure'
         uses: actions/deploy-pages@v4
