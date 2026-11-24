@@ -15,7 +15,7 @@ import datetime as dt
 import html as html_mod
 import re
 
-from comun import DATOS, DATOS_ESPN, ahora, config, guardar_json, http_get, leer_json, log, normalizar
+from comun import DATOS, DATOS_ESPN, ahora, config, guardar_json, http_get, leer_json, log, normalizar, parsear_fecha
 from historia_de_boca import _texto_con_filas
 
 BASE = "https://bocastats.com"
@@ -390,8 +390,11 @@ def importar_goleadores() -> bool:
 # se leen de ESPN los goles de Boca de los partidos de los últimos días y se suman mientras BocaStats no los cargue.
 # Para saber si ya los cargó, cuando se ve el partido por primera vez se anota cuántos goles le contaba BocaStats
 # a cada goleador en esa competencia ("antes"): en cuanto ese número sube, el gol de ESPN deja de sumarse.
+# Solo se anota un partido si se lo ve dentro de las 72 horas de jugado: más tarde, BocaStats puede haberlo cargado ya
+# y el "antes" saldría con el gol incluido (se contaría dos veces).
 ARCHIVO_RECIENTES = CARPETA / "goles_recientes.json"
 DIAS_RECIENTES = 12
+HORAS_PARA_ANOTAR = 72
 COMP_BS = {"arg.1": "Liga", "conmebol.libertadores": "Libertadores", "conmebol.sudamericana": "Sudamericana",
            "arg.copa": "Copa Argentina"}
 
@@ -415,6 +418,10 @@ def actualizar_goles_recientes() -> None:
         comp = COMP_BS.get(p.get("competencia_slug"))
         if not comp or p.get("estado") != "finalizado" or (p.get("fecha") or "")[:10] < desde or p["id"] in rec:
             continue
+        jugado = parsear_fecha(p["fecha"])
+        if not jugado or ahora() - jugado > dt.timedelta(hours=HORAS_PARA_ANOTAR):
+            rec[p["id"]] = {"fecha": p["fecha"][:10], "competencia": comp, "goles": {}, "base": {}, "tarde": True}
+            continue
         try:
             hechos = resumen_partido(p["id"], p["competencia_slug"])["hechos"]
         except Exception as e:
@@ -429,7 +436,7 @@ def actualizar_goles_recientes() -> None:
             j = _buscar_goleador(tabla, nombre)
             base[nombre] = {"bs": j["nombre"] if j else None, "antes": ((j or {}).get("desglose") or {}).get(comp, 0)}
         rec[p["id"]] = {"fecha": p["fecha"][:10], "competencia": comp, "rival": (p.get("rival") or {}).get("nombre", ""),
-                        "goles": goles, "base": base}
+                        "goles": goles, "base": base, "visto": ahora().isoformat(timespec="minutes")}
         log(f"BocaStats: goles de ESPN vs {rec[p['id']]['rival']}: {goles}")
     rec = {k: v for k, v in rec.items() if v["fecha"] >= desde}
     guardar_json(ARCHIVO_RECIENTES, rec)
@@ -442,6 +449,11 @@ def goleadores() -> dict:
     originales = {j["nombre"]: dict(j.get("desglose") or {}) for j in gol.get("jugadores", [])}
     sumados = 0
     for m in sorted((leer_json(ARCHIVO_RECIENTES, {}) or {}).values(), key=lambda x: x["fecha"]):
+        # los anotados antes de esta regla no tienen "visto": se vieron por primera vez el 23/11/2026 a las 23:31
+        visto = parsear_fecha(m.get("visto") or "2026-11-23T23:31-03:00")
+        jugado = parsear_fecha(m["fecha"] + "T00:00-03:00")
+        if m.get("tarde") or (visto and jugado and visto - jugado > dt.timedelta(hours=HORAS_PARA_ANOTAR + 24)):
+            continue
         for nombre, g in m["goles"].items():
             b = m["base"].get(nombre, {})
             j = next((x for x in tabla if x["nombre"] == b.get("bs")), None) if b.get("bs") else _buscar_goleador(tabla, nombre)
