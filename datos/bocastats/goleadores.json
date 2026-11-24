@@ -1,202 +1,204 @@
 {
- "_fuente": "BocaStats (bocastats.com/goleadores/), con permiso. Goles en todas las competencias oficiales; asistencias y PJ solo de Liga. Copia del 18/11/2026; se actualiza sola una vez por semana.",
- "consultado": "2026-11-18",
- "temporada": 2026,
- "actualizado_fuente": "2026-11-14",
- "jugadores": [
-  {
-   "nombre": "Miguel Merentiel",
-   "posicion": "Delantero",
-   "goles": 15,
-   "desglose": {
-    "Liga": 10,
-    "Libertadores": 1,
-    "Sudamericana": 4
-   },
-   "asistencias_liga": 2,
-   "pj_liga": 28
-  },
-  {
-   "nombre": "Santiago Ascacíbar",
-   "posicion": "Mediocampista",
-   "goles": 8,
-   "desglose": {
-    "Liga": 5,
-    "Libertadores": 1,
-    "Sudamericana": 2
-   },
-   "asistencias_liga": 2,
-   "pj_liga": 29
-  },
-  {
-   "nombre": "Enner Valencia",
-   "posicion": "Delantero",
-   "goles": 6,
-   "desglose": {
-    "Liga": 3,
-    "Copa Argentina": 3
-   },
-   "asistencias_liga": 2,
-   "pj_liga": 10
-  },
-  {
-   "nombre": "Leonel Flores",
-   "posicion": "Mediocampista",
-   "goles": 5,
-   "desglose": {
-    "Liga": 3,
-    "Sudamericana": 1,
-    "Copa Argentina": 1
-   },
-   "asistencias_liga": 2,
-   "pj_liga": 15
-  },
-  {
-   "nombre": "Lautaro Di Lollo",
-   "posicion": "Defensor",
-   "goles": 5,
-   "desglose": {
-    "Liga": 3,
-    "Libertadores": 1,
-    "Sudamericana": 1
-   },
-   "asistencias_liga": 1,
-   "pj_liga": 27
-  },
-  {
-   "nombre": "Alan Velasco",
-   "posicion": "Mediocampista",
-   "goles": 5,
-   "desglose": {
-    "Liga": 4,
-    "Copa Argentina": 1
-   },
-   "asistencias_liga": 1,
-   "pj_liga": 19
-  },
-  {
-   "nombre": "Leandro Paredes",
-   "posicion": "Mediocampista",
-   "goles": 4,
-   "desglose": {
-    "Liga": 2,
-    "Libertadores": 1,
-    "Sudamericana": 1
-   },
-   "asistencias_liga": 4,
-   "pj_liga": 26
-  },
-  {
-   "nombre": "Adam Bareiro",
-   "posicion": "Delantero",
-   "goles": 4,
-   "desglose": {
-    "Liga": 3,
-    "Libertadores": 1
-   },
-   "asistencias_liga": 1,
-   "pj_liga": 10
-  },
-  {
-   "nombre": "Milton Giménez",
-   "posicion": "Delantero",
-   "goles": 4,
-   "desglose": {
-    "Liga": 4
-   },
-   "asistencias_liga": 0,
-   "pj_liga": 9
-  },
-  {
-   "nombre": "Ángel Romero",
-   "posicion": "Mediocampista",
-   "goles": 3,
-   "desglose": {
-    "Liga": 3
-   },
-   "asistencias_liga": 0,
-   "pj_liga": 15
-  },
-  {
-   "nombre": "Leandro Lozano",
-   "posicion": "Defensor",
-   "goles": 2,
-   "desglose": {
-    "Liga": 1,
-    "Sudamericana": 1
-   },
-   "asistencias_liga": 2,
-   "pj_liga": 24
-  },
-  {
-   "nombre": "Sebastián Villa",
-   "posicion": "Mediocampista",
-   "goles": 1,
-   "desglose": {
-    "Sudamericana": 1
-   },
-   "asistencias_liga": 8,
-   "pj_liga": 28
-  },
-  {
-   "nombre": "Lautaro Blanco",
-   "posicion": "Defensor",
-   "goles": 1,
-   "desglose": {
-    "Liga": 1
-   },
-   "asistencias_liga": 5,
-   "pj_liga": 29
-  },
-  {
-   "nombre": "Tomás Aranda",
-   "posicion": "Mediocampista",
-   "goles": 1,
-   "desglose": {
-    "Liga": 1
-   },
-   "asistencias_liga": 3,
-   "pj_liga": 21
-  },
-  {
-   "nombre": "Milton Delgado",
-   "posicion": "Mediocampista",
-   "goles": 1,
-   "desglose": {
-    "Sudamericana": 1
-   },
-   "asistencias_liga": 2,
-   "pj_liga": 29
-  },
-  {
-   "nombre": "Tomás Belmonte",
-   "posicion": "Mediocampista",
-   "goles": 1,
-   "desglose": {
-    "Liga": 1
-   },
-   "asistencias_liga": 1,
-   "pj_liga": 17
-  },
-  {
-   "nombre": "Facundo Herrera",
-   "posicion": "Defensor",
-   "goles": 1,
-   "desglose": {
-    "Liga": 1
-   },
-   "asistencias_liga": 0,
-   "pj_liga": 8
-  },
-  {
-   "nombre": "Ander Herrera",
-   "posicion": "Mediocampista",
-   "goles": 1,
-   "desglose": {
-    "Libertadores": 1
-   },
-   "asistencias_liga": 0,
-   "pj_liga": null
-  }
- ]
+  "_fuente": "BocaStats (bocastats.com/goleadores/), con permiso. Goles en todas las competencias oficiales; asistencias y PJ solo de Liga. Copia del 18/11/2026; se actualiza sola una vez por semana.",
+  "consultado": "2026-11-23",
+  "temporada": 2026,
+  "actualizado_fuente": "2026-11-23",
+  "jugadores": [
+    {
+      "nombre": "Miguel Merentiel",
+      "posicion": "Delantero",
+      "goles": 15,
+      "desglose": {
+        "Liga": 10,
+        "Libertadores": 1,
+        "Sudamericana": 4
+      },
+      "asistencias_liga": 2,
+      "pj_liga": 28
+    },
+    {
+      "nombre": "Santiago Ascacíbar",
+      "posicion": "Mediocampista",
+      "goles": 9,
+      "desglose": {
+        "Liga": 5,
+        "Libertadores": 1,
+        "Sudamericana": 2,
+        "Copa Argentina": 1
+      },
+      "asistencias_liga": 2,
+      "pj_liga": 29
+    },
+    {
+      "nombre": "Enner Valencia",
+      "posicion": "Delantero",
+      "goles": 6,
+      "desglose": {
+        "Liga": 3,
+        "Copa Argentina": 3
+      },
+      "asistencias_liga": 2,
+      "pj_liga": 10
+    },
+    {
+      "nombre": "Leonel Flores",
+      "posicion": "Mediocampista",
+      "goles": 5,
+      "desglose": {
+        "Liga": 3,
+        "Sudamericana": 1,
+        "Copa Argentina": 1
+      },
+      "asistencias_liga": 2,
+      "pj_liga": 15
+    },
+    {
+      "nombre": "Lautaro Di Lollo",
+      "posicion": "Defensor",
+      "goles": 5,
+      "desglose": {
+        "Liga": 3,
+        "Libertadores": 1,
+        "Sudamericana": 1
+      },
+      "asistencias_liga": 1,
+      "pj_liga": 27
+    },
+    {
+      "nombre": "Alan Velasco",
+      "posicion": "Mediocampista",
+      "goles": 5,
+      "desglose": {
+        "Liga": 4,
+        "Copa Argentina": 1
+      },
+      "asistencias_liga": 1,
+      "pj_liga": 19
+    },
+    {
+      "nombre": "Leandro Paredes",
+      "posicion": "Mediocampista",
+      "goles": 4,
+      "desglose": {
+        "Liga": 2,
+        "Libertadores": 1,
+        "Sudamericana": 1
+      },
+      "asistencias_liga": 4,
+      "pj_liga": 26
+    },
+    {
+      "nombre": "Adam Bareiro",
+      "posicion": "Delantero",
+      "goles": 4,
+      "desglose": {
+        "Liga": 3,
+        "Libertadores": 1
+      },
+      "asistencias_liga": 1,
+      "pj_liga": 10
+    },
+    {
+      "nombre": "Milton Giménez",
+      "posicion": "Delantero",
+      "goles": 4,
+      "desglose": {
+        "Liga": 4
+      },
+      "asistencias_liga": 0,
+      "pj_liga": 9
+    },
+    {
+      "nombre": "Leandro Lozano",
+      "posicion": "Defensor",
+      "goles": 3,
+      "desglose": {
+        "Liga": 1,
+        "Sudamericana": 1,
+        "Copa Argentina": 1
+      },
+      "asistencias_liga": 2,
+      "pj_liga": 24
+    },
+    {
+      "nombre": "Ángel Romero",
+      "posicion": "Mediocampista",
+      "goles": 3,
+      "desglose": {
+        "Liga": 3
+      },
+      "asistencias_liga": 0,
+      "pj_liga": 15
+    },
+    {
+      "nombre": "Sebastián Villa",
+      "posicion": "Mediocampista",
+      "goles": 2,
+      "desglose": {
+        "Sudamericana": 1,
+        "Copa Argentina": 1
+      },
+      "asistencias_liga": 8,
+      "pj_liga": 28
+    },
+    {
+      "nombre": "Lautaro Blanco",
+      "posicion": "Defensor",
+      "goles": 1,
+      "desglose": {
+        "Liga": 1
+      },
+      "asistencias_liga": 5,
+      "pj_liga": 29
+    },
+    {
+      "nombre": "Tomás Aranda",
+      "posicion": "Mediocampista",
+      "goles": 1,
+      "desglose": {
+        "Liga": 1
+      },
+      "asistencias_liga": 3,
+      "pj_liga": 21
+    },
+    {
+      "nombre": "Milton Delgado",
+      "posicion": "Mediocampista",
+      "goles": 1,
+      "desglose": {
+        "Sudamericana": 1
+      },
+      "asistencias_liga": 2,
+      "pj_liga": 29
+    },
+    {
+      "nombre": "Tomás Belmonte",
+      "posicion": "Mediocampista",
+      "goles": 1,
+      "desglose": {
+        "Liga": 1
+      },
+      "asistencias_liga": 1,
+      "pj_liga": 17
+    },
+    {
+      "nombre": "Facundo Herrera",
+      "posicion": "Defensor",
+      "goles": 1,
+      "desglose": {
+        "Liga": 1
+      },
+      "asistencias_liga": 0,
+      "pj_liga": 8
+    },
+    {
+      "nombre": "Ander Herrera",
+      "posicion": "Mediocampista",
+      "goles": 1,
+      "desglose": {
+        "Libertadores": 1
+      },
+      "asistencias_liga": 0
+    }
+  ]
 }
