@@ -348,3 +348,108 @@ def datos_conexion(hoy, dias: int = 10, practica: int = 150) -> dict | None:
         if q:
             salida["practica"].append(q)
     return salida
+
+
+# ------------------------------------------------------------ ¿Quién falta? --
+# Los que más partidos jugaron en un torneo que Boca ganó, menos uno: hay que adivinar cuál falta.
+# Se usan solo los torneos donde ese grupo queda bien cortado (el último de la lista jugó más que el siguiente),
+# así la respuesta es una sola.
+RONDAS_FALTA = 5
+DIF_FALTA = [1, 1, 2, 2, 3]  # la dificultad de cada ronda del día
+
+
+def _nombre_hdb_titulo(titulo: str, torneos: set) -> str | None:
+    """El nombre del título en palmares.json → el nombre del torneo en Historia de Boca."""
+    t = titulo
+    m = re.search(r"(\d{4})/(\d{2})$", t)
+    largo = re.sub(r"(\d{4})/(\d{2})$", lambda x: f"{x.group(1)}/{x.group(1)[:2]}{x.group(2)}", t)
+    opciones = [t, largo,
+                largo.replace("Campeonato de Primera División", "Campeonato"),
+                largo.replace("Superliga Argentina", "Superliga"),
+                t.replace("Copa de la Liga Profesional", "Copa Liga Profesional"),
+                t.replace("Liga Profesional", "Campeonato"),
+                re.sub(r"(Supercopa|Recopa) Sudamericana", r"\1", t),
+                t.replace("Copa Argentina 1969", "Copa de Argentina 1969"),
+                t.replace("Copa de Oro Nicolás Leoz", "Copa de Oro")]
+    if m:
+        opciones.append(re.sub(r"(\d{4})/\d{2}$", r"\1", t.replace("Copa Diego Armando Maradona", "Copa Diego Maradona")))
+    return next((o for o in opciones if o in torneos), None)
+
+
+def _corte(filas: list) -> int | None:
+    """Cuántos van en la lista: 11 si se puede; si no, 10 o 12. Tiene que haber un corte limpio."""
+    for n in (11, 10, 12):
+        if len(filas) > n and filas[n - 1][0] > filas[n][0] and filas[n - 1][0] >= 2:
+            return n
+    return None
+
+
+def _dif_titulo(a: int) -> int:
+    return 1 if a >= 1998 else 2 if a >= 1962 else 3
+
+
+def torneos_falta() -> list[dict]:
+    todos = jugadores()
+    palm = leer_json(DATOS / "manual" / "palmares.json", {}) or {}
+    titulos_boca = [t for c in palm.get("categorias", []) for t in c.get("titulos", [])]
+    consultado = (leer_json(ARCHIVO, {}) or {}).get("consultado", "")
+    anio_datos = int(consultado[:4]) if consultado[:4].isdigit() else 9999
+    por_torneo: dict[str, list] = {}
+    for i, j in todos.items():
+        for t in j.get("tor", []):
+            if t[1]:
+                por_torneo.setdefault(t[0], []).append((t[1], t[2] or 0, i))
+    salida = []
+    for titulo in titulos_boca:
+        nombre = _nombre_hdb_titulo(titulo, set(por_torneo))
+        a = _anio_torneo(titulo)
+        if not nombre or not a or a >= anio_datos:  # el del año en curso puede estar incompleto
+            continue
+        filas = sorted(por_torneo[nombre], key=lambda x: (-x[0], -x[1], todos[x[2]]["n"]))
+        n = _corte(filas)
+        if not n or filas[0][0] < 5:
+            continue
+        lista = []
+        for pj, gol, i in filas[:n]:
+            j = todos[i]
+            r = _rango(j)
+            lista.append({"id": i, "n": j["n"], "pj": pj, "gol": gol, "pjt": j.get("pj") or 0, "golt": j.get("gol") or 0,
+                          "puesto": puesto(j), "etapa": (f"{r[0]}" if r and r[0] == r[1] else f"{r[0]} a {r[1]}") if r else "",
+                          "lugar": j.get("lugar") or ""})
+        salida.append({"titulo": titulo, "torneo": nombre, "anio": a, "dif": _dif_titulo(a), "jugadores": lista})
+    return salida
+
+
+def _escondible(x: dict, dif: int) -> bool:
+    """A quién se puede esconder: alguien con una carrera en Boca que se pueda recordar."""
+    return x["pjt"] >= {1: 80, 2: 50, 3: 20}[dif]
+
+
+def datos_falta(hoy, dias: int = 10) -> dict | None:
+    """Rondas de hoy y de los próximos días (las mismas para todos) y los torneos para practicar.
+    Cada ronda es [índice del torneo, índice del jugador que falta]."""
+    import datetime as dt
+    import random
+    torneos = torneos_falta()
+    pools = {d: [k for k, t in enumerate(torneos) if t["dif"] == d and any(_escondible(x, d) for x in t["jugadores"])]
+             for d in (1, 2, 3)}
+    if any(len(p) < 3 for p in pools.values()):
+        return None
+    for d, p in pools.items():  # orden fijo: así no se repite un torneo hasta pasar por todos los de su época
+        random.Random(semilla(f"falta-orden-{d}")).shuffle(p)
+    base = dt.date(2026, 11, 24)
+    salida = {"dias": {}, "torneos": torneos, "fuente": credito()}
+    for k in range(dias):
+        fecha = hoy + dt.timedelta(days=k)
+        n = (fecha - base).days
+        rng = random.Random(semilla("falta" + fecha.isoformat()))
+        rondas, cuenta = [], {1: 0, 2: 0, 3: 0}
+        for d in DIF_FALTA:
+            por_dia = DIF_FALTA.count(d)
+            p = pools[d]
+            t = p[(n * por_dia + cuenta[d]) % len(p)]
+            cuenta[d] += 1
+            cand = [i for i, x in enumerate(torneos[t]["jugadores"]) if _escondible(x, d)]
+            rondas.append([t, rng.choice(cand)])
+        salida["dias"][fecha.isoformat()] = rondas
+    return salida

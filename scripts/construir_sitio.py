@@ -1418,6 +1418,7 @@ def pagina_juegos(proximos) -> str:
     import jugadores_hdb
     hay_quien = bool(jugadores_hdb.datos_quien_soy())
     hay_conexion = bool(jugadores_hdb.datos_conexion(ahora().date(), dias=1, practica=5))
+    hay_falta = bool(jugadores_hdb.datos_falta(ahora().date(), dias=1))
     datos_json = json.dumps(datos, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     dia_n = (ahora().date() - __import__("datetime").date(2026, 11, 18)).days + 1
 
@@ -1425,6 +1426,8 @@ def pagina_juegos(proximos) -> str:
     lista = [
         ("quien", "¿Quién soy?", "Cinco pistas para descubrir a un jugador con 50 partidos o más en Boca. Con menos pistas, más puntos.",
          '<span class="g-texto">?</span>', "juego-quien"),
+        ("falta", "¿Quién falta?", "Los que más jugaron en un equipo campeón de Boca, menos uno. ¿Quién falta? 5 títulos por día.",
+         '<span class="g-texto">11<small>−1</small></span>', "juego-falta"),
         ("conexion", "¿Quién jugó con quién?", "Dos jugadores de Boca: ¿compartieron cancha en un partido oficial? 10 por día, cada vez más difíciles.",
          '<span class="g-texto">A<small>+</small>B</span>', "juego-conexion"),
         ("idolo", "Adiviná el ídolo", "Una foto borrosa y 6 intentos. Cada intento la aclara un poco más.",
@@ -1448,7 +1451,9 @@ def pagina_juegos(proximos) -> str:
         lista = [x for x in lista if x[0] != "quien"]
     if not hay_conexion:
         lista = [x for x in lista if x[0] != "conexion"]
-    NUEVOS = {"quien", "conexion"}
+    if not hay_falta:
+        lista = [x for x in lista if x[0] != "falta"]
+    NUEVOS = {"falta", "quien", "conexion"}
     tarjetas = "".join(
         f'<a class="jtarjeta{" nuevo" if k in NUEVOS else ""}" href="#{k}"><span class="jt-glifo">{g}</span><span class="jt-cuerpo">'
         f'<b>{e(n)}{"<em class=jt-nuevo>Nuevo</em>" if k in NUEVOS else ""}</b><span>{e(d)}</span>'
@@ -1651,6 +1656,14 @@ def construir() -> None:
         for q in [x for lista in conexion["dias"].values() for x in lista] + conexion["practica"]:
             q["ua"], q["ub"] = paginas_jugadores.url_jugador(q["a"]) or "", paginas_jugadores.url_jugador(q["b"]) or ""
         escribir("conexion.json", json.dumps(conexion, ensure_ascii=False, separators=(",", ":")))
+    falta = jugadores_hdb.datos_falta(ahora().date())
+    if falta:
+        for t in falta["torneos"]:
+            for x in t["jugadores"]:
+                x["url"] = paginas_jugadores.url_jugador(x["n"]) or ""
+                del x["id"]
+        falta["nombres"] = sorted({j["n"] for j in jugadores_hdb.jugadores().values() if (j.get("pj") or 0) >= 1 and j.get("n")})
+        escribir("falta.json", json.dumps(falta, ensure_ascii=False, separators=(",", ":")))
     grilla = _juegos.datos_grilla()
     if grilla:
         escribir("grilla.json", json.dumps(grilla, ensure_ascii=False, separators=(",", ":")))
