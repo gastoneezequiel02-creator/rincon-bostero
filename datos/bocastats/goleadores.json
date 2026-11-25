@@ -2,16 +2,16 @@
   "_fuente": "BocaStats (bocastats.com/goleadores/), con permiso. Goles en todas las competencias oficiales; asistencias y PJ solo de Liga. Copia del 18/11/2026; se actualiza sola una vez por semana.",
   "consultado": "2026-11-24",
   "temporada": 2026,
-  "actualizado_fuente": "2026-11-23",
+  "actualizado_fuente": "2026-11-24",
   "jugadores": [
     {
       "nombre": "Miguel Merentiel",
       "posicion": "Delantero",
-      "goles": 15,
+      "goles": 16,
       "desglose": {
         "Liga": 10,
         "Libertadores": 1,
-        "Sudamericana": 4
+        "Sudamericana": 5
       },
       "asistencias_liga": 2,
       "pj_liga": 28
@@ -19,11 +19,11 @@
     {
       "nombre": "Santiago Ascacíbar",
       "posicion": "Mediocampista",
-      "goles": 9,
+      "goles": 10,
       "desglose": {
         "Liga": 5,
         "Libertadores": 1,
-        "Sudamericana": 2,
+        "Sudamericana": 3,
         "Copa Argentina": 1
       },
       "asistencias_liga": 2,
