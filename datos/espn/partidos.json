@@ -31980,6 +31980,47 @@
     "resultado": "G"
   },
   {
+    "id": "401936657",
+    "fecha": "2026-11-29T20:30:00-03:00",
+    "hora_a_confirmar": false,
+    "competencia": "Liga Profesional",
+    "competencia_slug": "arg.1",
+    "instancia": "",
+    "temporada": 2026,
+    "estado": "programado",
+    "detalle": "11/29 - 6:30 PM EST",
+    "estadio": "Alberto José Armando (La Bombonera)",
+    "ciudad": "Buenos Aires",
+    "condicion": "L",
+    "local": {
+      "id": "5",
+      "nombre": "Boca Juniors",
+      "corto": "Boca ",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+      "goles": null,
+      "penales": null
+    },
+    "visitante": {
+      "id": "9",
+      "nombre": "Gimnasia La Plata",
+      "corto": "Gimnasia LP",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9.png",
+      "goles": null,
+      "penales": null
+    },
+    "rival": {
+      "id": "9",
+      "nombre": "Gimnasia La Plata",
+      "corto": "Gimnasia LP",
+      "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9.png"
+    },
+    "goles_boca": null,
+    "goles_rival": null,
+    "penales_boca": null,
+    "penales_rival": null,
+    "resultado": null
+  },
+  {
     "id": "401932277",
     "fecha": "2026-12-02T20:00:00-03:00",
     "hora_a_confirmar": false,
