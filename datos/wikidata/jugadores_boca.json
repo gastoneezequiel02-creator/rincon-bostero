@@ -1,55 +1,7 @@
 {
   "_fuente": "Wikidata (CC0). Jugadores con «miembro del equipo deportivo: Club Atlético Boca Juniors».",
-  "consultado": "2026-11-18T23:12:20.503558-03:00",
+  "consultado": "2026-11-26T00:10:15.629993-03:00",
   "clubes": {
-    "Q1023532": {
-      "nombre": "Atlas de Guadalajara",
-      "jugadores": 10
-    },
-    "Q12297": {
-      "nombre": "Villarreal",
-      "jugadores": 16
-    },
-    "Q214940": {
-      "nombre": "Estudiantes (LP)",
-      "jugadores": 61
-    },
-    "Q214978": {
-      "nombre": "Independiente",
-      "jugadores": 56
-    },
-    "Q221882": {
-      "nombre": "Newell's",
-      "jugadores": 42
-    },
-    "Q670186": {
-      "nombre": "Deportivo Toluca",
-      "jugadores": 9
-    },
-    "Q736937": {
-      "nombre": "Pachuca",
-      "jugadores": 9
-    },
-    "Q75729": {
-      "nombre": "Sporting Clube de Portugal",
-      "jugadores": 9
-    },
-    "Q1022904": {
-      "nombre": "Atlanta",
-      "jugadores": 37
-    },
-    "Q79800": {
-      "nombre": "Selección Argentina",
-      "jugadores": 240
-    },
-    "Q1543": {
-      "nombre": "Milan",
-      "jugadores": 13
-    },
-    "Q172020": {
-      "nombre": "Selección paraguaya",
-      "jugadores": 16
-    },
     "Q215163": {
       "nombre": "Vélez Sarsfield",
       "jugadores": 47
@@ -58,213 +10,121 @@
       "nombre": "Belgrano",
       "jugadores": 23
     },
+    "Q79800": {
+      "nombre": "Selección Argentina",
+      "jugadores": 241
+    },
+    "Q2317584": {
+      "nombre": "Los Andes",
+      "jugadores": 10
+    },
+    "Q318307": {
+      "nombre": "Rosario Central",
+      "jugadores": 42
+    },
+    "Q1543": {
+      "nombre": "Milan",
+      "jugadores": 12
+    },
+    "Q18640": {
+      "nombre": "Gimnasia (LP)",
+      "jugadores": 33
+    },
+    "Q631": {
+      "nombre": "Inter",
+      "jugadores": 17
+    },
+    "Q214940": {
+      "nombre": "Estudiantes (LP)",
+      "jugadores": 61
+    },
     "Q220621": {
       "nombre": "Argentinos Juniors",
       "jugadores": 61
     },
-    "Q324589": {
-      "nombre": "Lanús",
-      "jugadores": 36
+    "Q327172": {
+      "nombre": "Huracán",
+      "jugadores": 55
+    },
+    "Q15799": {
+      "nombre": "River Plate",
+      "jugadores": 73
+    },
+    "Q519966": {
+      "nombre": "Sarmiento",
+      "jugadores": 16
+    },
+    "Q10308": {
+      "nombre": "Zaragoza",
+      "jugadores": 12
     },
     "Q459090": {
       "nombre": "América",
+      "jugadores": 15
+    },
+    "Q663400": {
+      "nombre": "Deportivo Cali",
       "jugadores": 15
     },
     "Q80899": {
       "nombre": "Unión",
       "jugadores": 42
     },
-    "Q845859": {
-      "nombre": "de Futbol Cruz Azul",
-      "jugadores": 11
-    },
-    "Q80886": {
-      "nombre": "Tigre",
-      "jugadores": 34
-    },
-    "Q18640": {
-      "nombre": "Gimnasia (LP)",
-      "jugadores": 33
-    },
-    "Q910444": {
-      "nombre": "Ferro",
-      "jugadores": 36
-    },
-    "Q15799": {
-      "nombre": "River Plate",
-      "jugadores": 74
-    },
-    "Q218282": {
-      "nombre": "San Lorenzo",
-      "jugadores": 48
+    "Q1022939": {
+      "nombre": "Talleres",
+      "jugadores": 32
     },
     "Q692646": {
       "nombre": "Banfield",
       "jugadores": 46
     },
-    "Q744555": {
-      "nombre": "Nueva Chicago",
+    "Q1074980": {
+      "nombre": "Olimpo",
       "jugadores": 16
-    },
-    "Q1022939": {
-      "nombre": "Talleres",
-      "jugadores": 32
-    },
-    "Q853053": {
-      "nombre": "Chacarita Juniors",
-      "jugadores": 46
-    },
-    "Q10308": {
-      "nombre": "Zaragoza",
-      "jugadores": 12
-    },
-    "Q631": {
-      "nombre": "Inter",
-      "jugadores": 16
-    },
-    "Q499616": {
-      "nombre": "Nacional de Football",
-      "jugadores": 27
-    },
-    "Q80897": {
-      "nombre": "Colón",
-      "jugadores": 30
-    },
-    "Q134916": {
-      "nombre": "Selección uruguaya",
-      "jugadores": 27
-    },
-    "Q1191661": {
-      "nombre": "Español",
-      "jugadores": 14
-    },
-    "Q212564": {
-      "nombre": "Selección colombiana",
-      "jugadores": 13
-    },
-    "Q332605": {
-      "nombre": "Atlético Nacional",
-      "jugadores": 12
-    },
-    "Q327172": {
-      "nombre": "Huracán",
-      "jugadores": 55
     },
     "Q151907": {
       "nombre": "Platense",
       "jugadores": 29
     },
-    "Q391987": {
-      "nombre": "América de Cali",
-      "jugadores": 15
+    "Q324589": {
+      "nombre": "Lanús",
+      "jugadores": 36
     },
-    "Q16320": {
-      "nombre": "Peñarol",
-      "jugadores": 25
+    "Q853053": {
+      "nombre": "Chacarita Juniors",
+      "jugadores": 46
     },
-    "Q185163": {
-      "nombre": "OGC Niza",
-      "jugadores": 9
-    },
-    "Q38568": {
-      "nombre": "São Paulo",
-      "jugadores": 12
-    },
-    "Q80964": {
-      "nombre": "Sociedade Esportiva Palmeiras",
-      "jugadores": 8
-    },
-    "Q757470": {
-      "nombre": "Atlético Tucumán",
+    "Q1022923": {
+      "nombre": "Gimnasia y Esgrima (Jujuy)",
       "jugadores": 10
-    },
-    "Q1424072": {
-      "nombre": "Independiente Santa Fe",
-      "jugadores": 18
-    },
-    "Q332524": {
-      "nombre": "Junior de Barranquilla",
-      "jugadores": 10
-    },
-    "Q35933": {
-      "nombre": "Corinthians",
-      "jugadores": 12
-    },
-    "Q318307": {
-      "nombre": "Rosario Central",
-      "jugadores": 42
-    },
-    "Q221695": {
-      "nombre": "Grêmio Foot-Ball Porto Alegrense",
-      "jugadores": 10
-    },
-    "Q8723": {
-      "nombre": "Real Betis Balompié",
-      "jugadores": 10
-    },
-    "Q1422": {
-      "nombre": "Juventus",
-      "jugadores": 10
-    },
-    "Q676899": {
-      "nombre": "Selección de Italia",
-      "jugadores": 8
-    },
-    "Q2798": {
-      "nombre": "Udinese Calcio",
-      "jugadores": 9
-    },
-    "Q604589": {
-      "nombre": "Olimpia",
-      "jugadores": 10
-    },
-    "Q914086": {
-      "nombre": "Cerro Porteño",
-      "jugadores": 10
-    },
-    "Q19066": {
-      "nombre": "Universitario de Deportes",
-      "jugadores": 9
-    },
-    "Q212166": {
-      "nombre": "selección de fútbol del Perú",
-      "jugadores": 9
-    },
-    "Q427446": {
-      "nombre": "U. Católica (Chile)",
-      "jugadores": 16
-    },
-    "Q737753": {
-      "nombre": "Universidad de Chile",
-      "jugadores": 11
-    },
-    "Q1074980": {
-      "nombre": "Olimpo",
-      "jugadores": 16
     },
     "Q332527": {
       "nombre": "Deportivo Independiente Medellín",
       "jugadores": 13
     },
-    "Q47533": {
-      "nombre": "Once Caldas",
-      "jugadores": 8
+    "Q427446": {
+      "nombre": "U. Católica (Chile)",
+      "jugadores": 16
     },
-    "Q5014111": {
-      "nombre": "de Regatas Vasco da Gama",
-      "jugadores": 11
+    "Q214978": {
+      "nombre": "Independiente",
+      "jugadores": 56
     },
-    "Q80958": {
-      "nombre": "Botafogo de Futebol e Regatas",
-      "jugadores": 10
+    "Q744555": {
+      "nombre": "Nueva Chicago",
+      "jugadores": 16
+    },
+    "Q80897": {
+      "nombre": "Colón",
+      "jugadores": 30
     },
     "Q17479": {
       "nombre": "Flamengo",
       "jugadores": 15
     },
-    "Q2052": {
-      "nombre": "ACF Fiorentina",
-      "jugadores": 11
+    "Q270995": {
+      "nombre": "Clube Atlético Mineiro",
+      "jugadores": 10
     },
     "Q80955": {
       "nombre": "Santos",
@@ -274,93 +134,237 @@
       "nombre": "Selección brasileña",
       "jugadores": 12
     },
-    "Q8780": {
-      "nombre": "Real Club Deportivo Espanyol de Barcelona",
-      "jugadores": 8
-    },
-    "Q12230": {
-      "nombre": "Real Murcia",
-      "jugadores": 8
-    },
-    "Q7156": {
-      "nombre": "Fútbol Club Barcelona",
-      "jugadores": 9
-    },
-    "Q1280895": {
-      "nombre": "Necaxa",
-      "jugadores": 9
-    },
-    "Q849823": {
-      "nombre": "Tigres de la UANL",
-      "jugadores": 8
-    },
-    "Q663400": {
-      "nombre": "Deportivo Cali",
+    "Q391987": {
+      "nombre": "América de Cali",
       "jugadores": 15
     },
-    "Q270995": {
-      "nombre": "Clube Atlético Mineiro",
-      "jugadores": 10
+    "Q75729": {
+      "nombre": "Sporting Clube de Portugal",
+      "jugadores": 9
     },
-    "Q2317584": {
-      "nombre": "Los Andes",
-      "jugadores": 10
+    "Q1424072": {
+      "nombre": "Independiente Santa Fe",
+      "jugadores": 18
     },
-    "Q1102931": {
-      "nombre": "Almirante Brown",
-      "jugadores": 8
+    "Q212564": {
+      "nombre": "Selección colombiana",
+      "jugadores": 13
     },
-    "Q971490": {
-      "nombre": "Aldosivi",
-      "jugadores": 15
+    "Q221882": {
+      "nombre": "Newell's",
+      "jugadores": 43
     },
     "Q8701": {
       "nombre": "Atlético Madrid",
+      "jugadores": 14
+    },
+    "Q207373": {
+      "nombre": "Colo Colo",
       "jugadores": 13
     },
-    "Q162923": {
-      "nombre": "Tiro Federal",
+    "Q134916": {
+      "nombre": "Selección uruguaya",
+      "jugadores": 27
+    },
+    "Q499616": {
+      "nombre": "Nacional de Football",
+      "jugadores": 27
+    },
+    "Q12297": {
+      "nombre": "Villarreal",
+      "jugadores": 16
+    },
+    "Q2798": {
+      "nombre": "Udinese Calcio",
+      "jugadores": 9
+    },
+    "Q16320": {
+      "nombre": "Peñarol",
+      "jugadores": 25
+    },
+    "Q1022904": {
+      "nombre": "Atlanta",
+      "jugadores": 37
+    },
+    "Q670186": {
+      "nombre": "Deportivo Toluca",
+      "jugadores": 9
+    },
+    "Q910444": {
+      "nombre": "Ferro",
+      "jugadores": 36
+    },
+    "Q212166": {
+      "nombre": "selección de fútbol del Perú",
+      "jugadores": 9
+    },
+    "Q332605": {
+      "nombre": "Atlético Nacional",
+      "jugadores": 12
+    },
+    "Q5014111": {
+      "nombre": "de Regatas Vasco da Gama",
+      "jugadores": 11
+    },
+    "Q80964": {
+      "nombre": "Sociedade Esportiva Palmeiras",
+      "jugadores": 8
+    },
+    "Q172020": {
+      "nombre": "Selección paraguaya",
+      "jugadores": 15
+    },
+    "Q604589": {
+      "nombre": "Olimpia",
+      "jugadores": 10
+    },
+    "Q218282": {
+      "nombre": "San Lorenzo",
+      "jugadores": 48
+    },
+    "Q221695": {
+      "nombre": "Grêmio Foot-Ball Porto Alegrense",
       "jugadores": 10
     },
     "Q646088": {
       "nombre": "All Boys",
       "jugadores": 15
     },
-    "Q207373": {
-      "nombre": "Colo Colo",
-      "jugadores": 13
-    },
-    "Q519966": {
-      "nombre": "Sarmiento",
-      "jugadores": 16
-    },
-    "Q2739": {
-      "nombre": "Roma",
-      "jugadores": 15
-    },
-    "Q80882": {
-      "nombre": "Godoy Cruz Antonio Tomba",
-      "jugadores": 10
-    },
-    "Q80921": {
-      "nombre": "San Martín (San Juan)",
-      "jugadores": 9
-    },
-    "Q2454482": {
-      "nombre": "Sportivo Independiente Rivadavia",
-      "jugadores": 8
+    "Q38568": {
+      "nombre": "São Paulo",
+      "jugadores": 12
     },
     "Q249612": {
       "nombre": "Sport Emelec",
       "jugadores": 12
     },
+    "Q7156": {
+      "nombre": "Fútbol Club Barcelona",
+      "jugadores": 9
+    },
+    "Q10333": {
+      "nombre": "Valencia",
+      "jugadores": 8
+    },
+    "Q849823": {
+      "nombre": "Tigres de la UANL",
+      "jugadores": 8
+    },
+    "Q1422": {
+      "nombre": "Juventus",
+      "jugadores": 10
+    },
+    "Q35933": {
+      "nombre": "Corinthians",
+      "jugadores": 12
+    },
+    "Q2052": {
+      "nombre": "ACF Fiorentina",
+      "jugadores": 11
+    },
+    "Q8780": {
+      "nombre": "Real Club Deportivo Espanyol de Barcelona",
+      "jugadores": 8
+    },
+    "Q2739": {
+      "nombre": "Roma",
+      "jugadores": 15
+    },
+    "Q676899": {
+      "nombre": "Selección de Italia",
+      "jugadores": 8
+    },
+    "Q8723": {
+      "nombre": "Real Betis Balompié",
+      "jugadores": 10
+    },
+    "Q971490": {
+      "nombre": "Aldosivi",
+      "jugadores": 15
+    },
+    "Q80921": {
+      "nombre": "San Martín (San Juan)",
+      "jugadores": 9
+    },
+    "Q80886": {
+      "nombre": "Tigre",
+      "jugadores": 34
+    },
+    "Q80958": {
+      "nombre": "Botafogo de Futebol e Regatas",
+      "jugadores": 10
+    },
+    "Q1280895": {
+      "nombre": "Necaxa",
+      "jugadores": 9
+    },
+    "Q914086": {
+      "nombre": "Cerro Porteño",
+      "jugadores": 10
+    },
+    "Q736937": {
+      "nombre": "Pachuca",
+      "jugadores": 9
+    },
+    "Q1023532": {
+      "nombre": "Atlas de Guadalajara",
+      "jugadores": 10
+    },
+    "Q845859": {
+      "nombre": "de Futbol Cruz Azul",
+      "jugadores": 11
+    },
+    "Q185163": {
+      "nombre": "OGC Niza",
+      "jugadores": 9
+    },
+    "Q737753": {
+      "nombre": "Universidad de Chile",
+      "jugadores": 11
+    },
+    "Q47533": {
+      "nombre": "Once Caldas",
+      "jugadores": 8
+    },
     "Q1102935": {
       "nombre": "Almagro",
       "jugadores": 8
     },
-    "Q1022923": {
-      "nombre": "Gimnasia y Esgrima (Jujuy)",
+    "Q757470": {
+      "nombre": "Atlético Tucumán",
       "jugadores": 10
+    },
+    "Q332524": {
+      "nombre": "Junior de Barranquilla",
+      "jugadores": 10
+    },
+    "Q2454482": {
+      "nombre": "Sportivo Independiente Rivadavia",
+      "jugadores": 8
+    },
+    "Q1191661": {
+      "nombre": "Español",
+      "jugadores": 14
+    },
+    "Q19066": {
+      "nombre": "Universitario de Deportes",
+      "jugadores": 9
+    },
+    "Q162923": {
+      "nombre": "Tiro Federal",
+      "jugadores": 10
+    },
+    "Q80882": {
+      "nombre": "Godoy Cruz Antonio Tomba",
+      "jugadores": 10
+    },
+    "Q1102931": {
+      "nombre": "Almirante Brown",
+      "jugadores": 8
+    },
+    "Q12230": {
+      "nombre": "Real Murcia",
+      "jugadores": 8
     }
   },
   "jugadores": [
@@ -1587,7 +1591,6 @@
       "Darío Cvitanich",
       [
         "Q1022939",
-        "Q15799",
         "Q185163",
         "Q692646",
         "Q736937"
@@ -1596,6 +1599,7 @@
     [
       "Darío Luis Felman Castro",
       [
+        "Q10333",
         "Q2454482",
         "Q79800"
       ]
@@ -1764,6 +1768,7 @@
     [
       "Edinson Cavani",
       [
+        "Q10333",
         "Q134916"
       ]
     ],
@@ -2278,6 +2283,7 @@
       "Fernando Cáceres",
       [
         "Q10308",
+        "Q10333",
         "Q15799",
         "Q214978",
         "Q220621",
@@ -2298,6 +2304,7 @@
     [
       "Fernando Gago",
       [
+        "Q10333",
         "Q215163",
         "Q2739",
         "Q79800"
@@ -2317,6 +2324,7 @@
     [
       "Fernando Morena",
       [
+        "Q10333",
         "Q134916",
         "Q16320",
         "Q17479"
@@ -2690,13 +2698,6 @@
       "Gustavo Eberto",
       [
         "Q1022939"
-      ]
-    ],
-    [
-      "Gustavo Gómez Portillo",
-      [
-        "Q1543",
-        "Q172020"
       ]
     ],
     [
@@ -3758,6 +3759,7 @@
       "Kily González",
       [
         "Q10308",
+        "Q10333",
         "Q218282",
         "Q318307",
         "Q631",
@@ -3911,6 +3913,7 @@
     [
       "Lucas Orbán",
       [
+        "Q10333",
         "Q15799",
         "Q79800",
         "Q80886"
@@ -6074,6 +6077,16 @@
       [
         "Q1022904",
         "Q79800"
+      ]
+    ],
+    [
+      "Éver Banega",
+      [
+        "Q10333",
+        "Q221882",
+        "Q631",
+        "Q79800",
+        "Q8701"
       ]
     ],
     [
