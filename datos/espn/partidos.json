@@ -31946,8 +31946,8 @@
     "competencia_slug": "arg.1",
     "instancia": "",
     "temporada": 2026,
-    "estado": "programado",
-    "detalle": "11/25 - 7:00 PM EST",
+    "estado": "en_juego",
+    "detalle": "32'",
     "estadio": "Alberto José Armando (La Bombonera)",
     "ciudad": "Buenos Aires",
     "condicion": "L",
@@ -31956,7 +31956,7 @@
       "nombre": "Boca Juniors",
       "corto": "Boca ",
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-      "goles": null,
+      "goles": 1,
       "penales": null
     },
     "visitante": {
@@ -31964,7 +31964,7 @@
       "nombre": "Independiente Rivadavia",
       "corto": "Ind. Rivadavia",
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9744.png",
-      "goles": null,
+      "goles": 0,
       "penales": null
     },
     "rival": {
@@ -31973,8 +31973,8 @@
       "corto": "Ind. Rivadavia",
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9744.png"
     },
-    "goles_boca": null,
-    "goles_rival": null,
+    "goles_boca": 1,
+    "goles_rival": 0,
     "penales_boca": null,
     "penales_rival": null,
     "resultado": null
