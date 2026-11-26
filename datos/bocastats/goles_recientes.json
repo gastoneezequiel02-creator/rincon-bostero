@@ -41,5 +41,25 @@
         "antes": 4
       }
     }
+  },
+  "401933757": {
+    "fecha": "2026-11-25",
+    "competencia": "Liga",
+    "rival": "Independiente Rivadavia",
+    "goles": {
+      "Leandro Paredes": 1,
+      "Miguel Merentiel": 1
+    },
+    "base": {
+      "Leandro Paredes": {
+        "bs": "Leandro Paredes",
+        "antes": 2
+      },
+      "Miguel Merentiel": {
+        "bs": "Miguel Merentiel",
+        "antes": 10
+      }
+    },
+    "visto": "2026-11-25T23:02-03:00"
   }
 }

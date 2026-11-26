@@ -10659,13 +10659,25 @@
       "corto": "Ind. Rivadavia",
       "escudo": "https://a.espncdn.com/i/teamlogos/soccer/500/9744.png"
     },
-    "pj": 3,
-    "g": 2,
+    "pj": 4,
+    "g": 3,
     "e": 1,
     "p": 0,
-    "gf": 6,
+    "gf": 8,
     "gc": 1,
     "partidos": [
+      {
+        "id": "401933757",
+        "fecha": "2026-11-25T21:00:00-03:00",
+        "competencia": "Liga Profesional",
+        "condicion": "L",
+        "goles_boca": 2,
+        "goles_rival": 0,
+        "penales_boca": null,
+        "penales_rival": null,
+        "resultado": "G",
+        "temporada": 2026
+      },
       {
         "id": "729053",
         "fecha": "2025-08-17T20:30:00-03:00",

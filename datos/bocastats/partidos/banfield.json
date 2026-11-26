@@ -1,8 +1,8 @@
 {
   "slug": "banfield",
-  "nombre": "BA\n Banfield",
-  "importado": "2026-11-18T22:17:16-03:00",
-  "oficiales_segun_pagina": 120,
+  "nombre": "Banfield",
+  "importado": "2026-11-25T23:02:17-03:00",
+  "oficiales_segun_pagina": 121,
   "partidos": [
     {
       "fecha": "1911-09-03",
@@ -1170,6 +1170,15 @@
       "torneo": "Torneo Clausura 2025",
       "condicion": "L",
       "goles_boca": 2,
+      "goles_rival": 0,
+      "resultado": "G",
+      "amistoso": false
+    },
+    {
+      "fecha": "2026-11-14",
+      "torneo": "Copa Argentina",
+      "condicion": "V",
+      "goles_boca": 3,
       "goles_rival": 0,
       "resultado": "G",
       "amistoso": false
