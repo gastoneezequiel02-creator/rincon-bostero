@@ -6,13 +6,16 @@ nacimiento, lugar de nacimiento, biografía, partidos y goles por torneo, dorsal
 (compañeros en al menos un partido oficial).
 
 De acá salen "¿Quién soy?", las dificultades de la Grilla y "¿Quién jugó con quién?".
+
+Los partidos que Boca juega después de la descarga se suman solos con los datos de ESPN (formación, cambios y
+goles): datos/hdb/partidos_nuevos.json. Cuando se vuelva a bajar la base, esos partidos dejan de sumarse.
 """
 from __future__ import annotations
 
 import hashlib
 import re
 
-from comun import DATOS, leer_json, normalizar
+from comun import DATOS, ahora, guardar_json, leer_json, log, normalizar
 
 ARCHIVO = DATOS / "hdb" / "jugadores.json"
 MIN_PJ_QUIEN_SOY = 50  # "50 partidos oficiales o más"
@@ -32,7 +35,13 @@ def _cargar() -> dict:
 
 
 def jugadores() -> dict[str, dict]:
-    return _cargar()
+    """Los jugadores de Historia de Boca, con los partidos jugados después de la descarga ya sumados."""
+    todos = _cargar()
+    try:
+        sumar_partidos_nuevos(todos)
+    except Exception as e:  # si algo sale mal, quedan las cifras de la descarga
+        log(f"Historia de Boca: no pude sumar los partidos nuevos ({e})")
+    return todos
 
 
 def credito() -> str:
@@ -453,3 +462,175 @@ def datos_falta(hoy, dias: int = 10) -> dict | None:
             rondas.append([t, rng.choice(cand)])
         salida["dias"][fecha.isoformat()] = rondas
     return salida
+
+
+
+# ------------------------------------------- partidos posteriores a la descarga --
+ARCHIVO_NUEVOS = DATOS / "hdb" / "partidos_nuevos.json"
+MAX_PARTIDOS_POR_CORRIDA = 8
+
+
+def _oficial(slug: str) -> bool:
+    slug = slug or ""
+    return "friendly" not in slug and (slug.startswith(("arg.", "conmebol.")) or slug == "fifa.cwc")
+
+
+def _torneo_hdb(slug: str, fecha: str, temporada: str, liga: str) -> str:
+    """El nombre del torneo como lo escribe Historia de Boca ("Torneo Clausura 2026", "Copa Sudamericana 2026")."""
+    y = fecha[:4]
+    if slug == "arg.1":
+        if "apertura" in temporada.lower():
+            return f"Torneo Apertura {y}"
+        if "clausura" in temporada.lower():
+            return f"Torneo Clausura {y}"
+        return f"Torneo {'Apertura' if int(fecha[5:7]) < 7 else 'Clausura'} {y}"
+    fijos = {"arg.copa": "Copa Argentina", "conmebol.libertadores": "Copa Libertadores",
+             "conmebol.sudamericana": "Copa Sudamericana", "conmebol.recopa": "Recopa"}
+    return f"{fijos.get(slug) or liga or slug} {y}"
+
+
+def _minuto(texto: str) -> int:
+    """"37'" → 37; "90'+3'" → 90."""
+    m = re.match(r"\s*(\d+)", texto or "")
+    return int(m.group(1)) if m else 0
+
+
+def leer_partido_espn(resumen: dict, slug: str, fecha: str) -> dict | None:
+    """De un resumen de ESPN: resultado, torneo y, por cada jugador de Boca que entró, si fue titular, minutos y goles."""
+    comp = ((resumen.get("header") or {}).get("competitions") or [{}])[0]
+    estado = ((comp.get("status") or {}).get("type") or {})
+    if not estado.get("completed"):
+        return None
+    equipos = comp.get("competitors") or []
+    boca = next((c for c in equipos if "boca juniors" in normalizar((c.get("team") or {}).get("displayName", ""))), None)
+    rival = next((c for c in equipos if c is not boca), None)
+    plantel = next((r for r in resumen.get("rosters") or []
+                    if "boca juniors" in normalizar((r.get("team") or {}).get("displayName", ""))), None)
+    if not boca or not rival or not plantel:
+        return None
+    gb, gr = int(boca.get("score") or 0), int(rival.get("score") or 0)
+    todos_los_minutos = [_minuto((x.get("clock") or {}).get("displayValue")) for r in resumen.get("rosters") or []
+                         for j in r.get("roster") or [] for x in j.get("plays") or []]
+    alargue = "AET" in (estado.get("name", "") + estado.get("detail", "")).upper() or max(todos_los_minutos + [0]) > 100
+    duracion = 120 if alargue else 90
+    lista = []
+    for j in plantel.get("roster") or []:
+        st = {x.get("name"): x.get("value") for x in j.get("stats") or []}
+        if not (j.get("starter") or j.get("subbedIn") or (st.get("appearances") or 0) >= 1):
+            continue
+        cambios = [min(_minuto((x.get("clock") or {}).get("displayValue")), duracion) for x in j.get("plays") or [] if x.get("substitution")]
+        rojas = [min(_minuto((x.get("clock") or {}).get("displayValue")), duracion) for x in j.get("plays") or [] if x.get("redCard")]
+        if j.get("starter"):
+            ini = 0
+            fin = cambios[0] if j.get("subbedOut") and cambios else duracion
+        else:
+            ini = cambios[0] if cambios else duracion
+            fin = cambios[1] if j.get("subbedOut") and len(cambios) > 1 else duracion
+        if rojas:
+            fin = min(fin, rojas[0])
+        a = j.get("athlete") or {}
+        lista.append({"espn": a.get("id"), "n": a.get("displayName", ""), "tit": bool(j.get("starter")),
+                      "min": max(0, fin - ini), "gol": int(st.get("totalGoals") or 0)})
+    if not lista:
+        return None
+    temporada = ((resumen.get("header") or {}).get("season") or {}).get("name", "")
+    liga = ((resumen.get("header") or {}).get("league") or {}).get("name", "")
+    return {"fecha": fecha, "slug": slug, "torneo": _torneo_hdb(slug, fecha, temporada, liga),
+            "rival": (rival.get("team") or {}).get("displayName", ""), "goles": [gb, gr],
+            "res": "g" if gb > gr else "e" if gb == gr else "p", "duracion": duracion, "jugadores": lista}
+
+
+def actualizar_partidos_nuevos() -> None:
+    """Baja de ESPN los partidos oficiales que Boca jugó después de la descarga de Historia de Boca."""
+    from datos_futbol import SITE
+    from comun import DATOS_ESPN, http_get_json
+    consultado = (leer_json(ARCHIVO, {}) or {}).get("consultado", "")
+    if not consultado:
+        return
+    guardados = leer_json(ARCHIVO_NUEVOS, {}) or {}
+    guardados = {k: v for k, v in guardados.items() if v.get("fecha", "") > consultado}  # al volver a bajar la base
+    nuevos = 0
+    for p in leer_json(DATOS_ESPN / "partidos.json", []) or []:
+        fecha = (p.get("fecha") or "")[:10]
+        if (p.get("estado") != "finalizado" or not _oficial(p.get("competencia_slug")) or fecha <= consultado
+                or p["id"] in guardados or nuevos >= MAX_PARTIDOS_POR_CORRIDA):
+            continue
+        nuevos += 1
+        try:
+            partido = leer_partido_espn(http_get_json(f"{SITE}/{p['competencia_slug']}/summary?event={p['id']}"),
+                                        p["competencia_slug"], fecha)
+        except Exception as e:
+            log(f"Historia de Boca: no pude leer el partido {p['id']} en ESPN ({e})")
+            continue
+        if partido:
+            partido["visto"] = ahora().isoformat(timespec="minutes")
+            guardados[p["id"]] = partido
+            log(f"Historia de Boca: sumo el partido vs {partido['rival']} ({fecha}, {len(partido['jugadores'])} jugadores)")
+    guardar_json(ARCHIVO_NUEVOS, dict(sorted(guardados.items(), key=lambda x: x[1]["fecha"])))
+
+
+def _palabras(nombre: str) -> list[str]:
+    return [x for x in re.sub(r"[^a-z ]", " ", normalizar(nombre or "")).split() if x not in ("de", "del", "la", "los", "y")]
+
+
+def _mismo_nombre(a: str, b: str) -> bool:
+    return a == b or (len(a) >= 4 and len(b) >= 4 and (a.startswith(b) or b.startswith(a)))  # William / Williams
+
+
+def buscar_por_nombre_espn(nombre: str, todos: dict, desde_anio: int) -> str | None:
+    """El id de Historia de Boca de un jugador de ESPN ("Miguel Merentiel" → "Miguel Angel Merentiel"),
+    buscando entre los que jugaron en Boca hace poco."""
+    pal = _palabras(nombre)
+    if not pal:
+        return None
+    candidatos = []
+    for i, j in todos.items():
+        if not any((_anio_torneo(t[0]) or 0) >= desde_anio for t in j.get("tor", [])):
+            continue
+        hdb = _palabras(j.get("n"))
+        if all(any(_mismo_nombre(p, h) for h in hdb) for p in pal):
+            candidatos.append(i)
+    if len(candidatos) == 1:
+        return candidatos[0]
+    # con un solo nombre en ESPN ("Fabra"), o si hay dos parecidos: el apellido tiene que coincidir con el último
+    exactos = [i for i in candidatos if _palabras(todos[i]["n"])[-1] == pal[-1]]
+    return exactos[0] if len(exactos) == 1 else None
+
+
+def sumar_partidos_nuevos(todos: dict) -> None:
+    partidos = leer_json(ARCHIVO_NUEVOS, {}) or {}
+    consultado = (leer_json(ARCHIVO, {}) or {}).get("consultado", "")
+    if not partidos or not consultado:
+        return
+    desde = int(consultado[:4]) - 1
+    cache: dict[str, str | None] = {}
+    for pid, p in partidos.items():
+        if p.get("fecha", "") <= consultado:
+            continue
+        ids = []
+        for x in p["jugadores"]:
+            if x["n"] not in cache:
+                cache[x["n"]] = buscar_por_nombre_espn(x["n"], todos, desde)
+            i = cache[x["n"]]
+            if not i:
+                continue
+            ids.append(i)
+            j = todos[i]
+            j["pj"] = (j.get("pj") or 0) + 1
+            j["gol"] = (j.get("gol") or 0) + x["gol"]
+            j["min"] = (j.get("min") or 0) + x["min"]
+            clave = "tit" if x["tit"] else "ing"
+            j[clave] = (j.get(clave) or 0) + 1
+            j[p["res"]] = (j.get(p["res"]) or 0) + 1
+            tor = j.setdefault("tor", [])
+            fila = next((t for t in tor if t[0] == p["torneo"]), None)
+            if fila:
+                fila[1] += 1
+                fila[2] += x["gol"]
+            else:
+                tor.append([p["torneo"], 1, x["gol"]])
+        for i in ids:  # los que compartieron cancha quedan como compañeros
+            comp = todos[i].setdefault("comp", [])
+            for k in ids:
+                if k != i and k not in comp:
+                    comp.append(k)

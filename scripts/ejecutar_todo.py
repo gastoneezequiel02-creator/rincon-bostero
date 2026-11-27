@@ -27,6 +27,7 @@ def main(solo_sitio: bool = False):
     import datos_futbol
     import historia_de_boca
     import imagenes
+    import jugadores_hdb
     import noticias_rss
     import sincronizar_juegos
     import wikidata_jugadores
@@ -36,6 +37,7 @@ def main(solo_sitio: bool = False):
         ok &= paso("datos de fútbol", datos_futbol.ejecutar)
         ok &= paso("datos de Historia de Boca", historia_de_boca.ejecutar)
         ok &= paso("datos de BocaStats", bocastats.ejecutar)
+        paso("partidos nuevos para las cifras de Historia de Boca (ESPN)", jugadores_hdb.actualizar_partidos_nuevos)
         ok &= paso("bot de Telegram", bot_telegram.ejecutar)
         ok &= paso("noticias RSS", noticias_rss.ejecutar)
         ok &= paso("previas y crónicas", cronicas.ejecutar)
