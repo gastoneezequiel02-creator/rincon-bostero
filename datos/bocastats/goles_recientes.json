@@ -1,28 +1,4 @@
 {
-  "401926286": {
-    "fecha": "2026-11-14",
-    "competencia": "Copa Argentina",
-    "rival": "Banfield",
-    "goles": {
-      "Santiago Ascacibar": 1,
-      "Sebastián Villa": 1,
-      "Leandro Lozano": 1
-    },
-    "base": {
-      "Santiago Ascacibar": {
-        "bs": "Santiago Ascacíbar",
-        "antes": 1
-      },
-      "Sebastián Villa": {
-        "bs": "Sebastián Villa",
-        "antes": 1
-      },
-      "Leandro Lozano": {
-        "bs": "Leandro Lozano",
-        "antes": 1
-      }
-    }
-  },
   "401913961": {
     "fecha": "2026-11-21",
     "competencia": "Sudamericana",
