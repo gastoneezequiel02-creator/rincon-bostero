@@ -1,0 +1,256 @@
+{
+  "401913961": {
+    "fecha": "2026-11-21",
+    "slug": "conmebol.sudamericana",
+    "torneo": "Copa Sudamericana 2026",
+    "rival": "Atlético-MG",
+    "goles": [
+      2,
+      0
+    ],
+    "res": "g",
+    "duracion": 90,
+    "jugadores": [
+      {
+        "espn": "166323",
+        "n": "Álvaro Montero",
+        "tit": true,
+        "min": 90,
+        "gol": 0
+      },
+      {
+        "espn": "400357",
+        "n": "Facundo Herrera",
+        "tit": true,
+        "min": 90,
+        "gol": 0
+      },
+      {
+        "espn": "341457",
+        "n": "Lautaro Di Lollo",
+        "tit": true,
+        "min": 90,
+        "gol": 0
+      },
+      {
+        "espn": "290542",
+        "n": "Lautaro Blanco",
+        "tit": true,
+        "min": 90,
+        "gol": 0
+      },
+      {
+        "espn": "338991",
+        "n": "Leandro Lozano",
+        "tit": true,
+        "min": 90,
+        "gol": 0
+      },
+      {
+        "espn": "153115",
+        "n": "Leandro Paredes",
+        "tit": true,
+        "min": 58,
+        "gol": 0
+      },
+      {
+        "espn": "382978",
+        "n": "Milton Delgado",
+        "tit": true,
+        "min": 90,
+        "gol": 0
+      },
+      {
+        "espn": "233734",
+        "n": "Santiago Ascacibar",
+        "tit": true,
+        "min": 77,
+        "gol": 1
+      },
+      {
+        "espn": "260812",
+        "n": "Miguel Merentiel",
+        "tit": true,
+        "min": 64,
+        "gol": 1
+      },
+      {
+        "espn": "141790",
+        "n": "Sebastián Villa",
+        "tit": true,
+        "min": 77,
+        "gol": 0
+      },
+      {
+        "espn": "400359",
+        "n": "Tomás Aranda",
+        "tit": true,
+        "min": 64,
+        "gol": 0
+      },
+      {
+        "espn": "286516",
+        "n": "Alan Velasco",
+        "tit": false,
+        "min": 26,
+        "gol": 0
+      },
+      {
+        "espn": "171771",
+        "n": "Enner Valencia",
+        "tit": false,
+        "min": 26,
+        "gol": 0
+      },
+      {
+        "espn": "400360",
+        "n": "Leonel Flores",
+        "tit": false,
+        "min": 13,
+        "gol": 0
+      },
+      {
+        "espn": "256199",
+        "n": "Tomás Belmonte",
+        "tit": false,
+        "min": 32,
+        "gol": 0
+      },
+      {
+        "espn": "152706",
+        "n": "Rodrigo Battaglia",
+        "tit": false,
+        "min": 13,
+        "gol": 0
+      }
+    ],
+    "visto": "2026-11-27T14:36-03:00"
+  },
+  "401933757": {
+    "fecha": "2026-11-25",
+    "slug": "arg.1",
+    "torneo": "Torneo Clausura 2026",
+    "rival": "Independiente Rivadavia",
+    "goles": [
+      2,
+      0
+    ],
+    "res": "g",
+    "duracion": 90,
+    "jugadores": [
+      {
+        "espn": "166323",
+        "n": "Álvaro Montero",
+        "tit": true,
+        "min": 90,
+        "gol": 0
+      },
+      {
+        "espn": "400357",
+        "n": "Facundo Herrera",
+        "tit": true,
+        "min": 90,
+        "gol": 0
+      },
+      {
+        "espn": "341457",
+        "n": "Lautaro Di Lollo",
+        "tit": true,
+        "min": 90,
+        "gol": 0
+      },
+      {
+        "espn": "290542",
+        "n": "Lautaro Blanco",
+        "tit": true,
+        "min": 90,
+        "gol": 0
+      },
+      {
+        "espn": "338991",
+        "n": "Leandro Lozano",
+        "tit": true,
+        "min": 90,
+        "gol": 0
+      },
+      {
+        "espn": "153115",
+        "n": "Leandro Paredes",
+        "tit": true,
+        "min": 90,
+        "gol": 1
+      },
+      {
+        "espn": "382978",
+        "n": "Milton Delgado",
+        "tit": true,
+        "min": 37,
+        "gol": 0
+      },
+      {
+        "espn": "256199",
+        "n": "Tomás Belmonte",
+        "tit": true,
+        "min": 90,
+        "gol": 0
+      },
+      {
+        "espn": "260812",
+        "n": "Miguel Merentiel",
+        "tit": true,
+        "min": 72,
+        "gol": 1
+      },
+      {
+        "espn": "141790",
+        "n": "Sebastián Villa",
+        "tit": true,
+        "min": 72,
+        "gol": 0
+      },
+      {
+        "espn": "400359",
+        "n": "Tomás Aranda",
+        "tit": true,
+        "min": 72,
+        "gol": 0
+      },
+      {
+        "espn": "400360",
+        "n": "Leonel Flores",
+        "tit": false,
+        "min": 18,
+        "gol": 0
+      },
+      {
+        "espn": "274298",
+        "n": "William Alarcón",
+        "tit": false,
+        "min": 12,
+        "gol": 0
+      },
+      {
+        "espn": "252629",
+        "n": "Adam Bareiro",
+        "tit": false,
+        "min": 18,
+        "gol": 0
+      },
+      {
+        "espn": "286516",
+        "n": "Alan Velasco",
+        "tit": false,
+        "min": 41,
+        "gol": 0
+      },
+      {
+        "espn": "152706",
+        "n": "Rodrigo Battaglia",
+        "tit": false,
+        "min": 18,
+        "gol": 0
+      }
+    ],
+    "visto": "2026-11-27T14:36-03:00"
+  }
+}
