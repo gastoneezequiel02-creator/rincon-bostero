@@ -1,20 +1,20 @@
 {
   "_fuente": "BocaStats (bocastats.com/goleadores/), con permiso. Goles en todas las competencias oficiales; asistencias y PJ solo de Liga. Copia del 18/11/2026; se actualiza sola una vez por semana.",
-  "consultado": "2026-11-26",
+  "consultado": "2026-11-27",
   "temporada": 2026,
-  "actualizado_fuente": "2026-11-25",
+  "actualizado_fuente": "2026-11-26",
   "jugadores": [
     {
       "nombre": "Miguel Merentiel",
       "posicion": "Delantero",
-      "goles": 16,
+      "goles": 17,
       "desglose": {
-        "Liga": 10,
+        "Liga": 11,
         "Libertadores": 1,
         "Sudamericana": 5
       },
       "asistencias_liga": 2,
-      "pj_liga": 28
+      "pj_liga": 29
     },
     {
       "nombre": "Santiago Ascacíbar",
@@ -41,6 +41,18 @@
       "pj_liga": 10
     },
     {
+      "nombre": "Leandro Paredes",
+      "posicion": "Mediocampista",
+      "goles": 5,
+      "desglose": {
+        "Liga": 3,
+        "Libertadores": 1,
+        "Sudamericana": 1
+      },
+      "asistencias_liga": 4,
+      "pj_liga": 27
+    },
+    {
       "nombre": "Leonel Flores",
       "posicion": "Mediocampista",
       "goles": 5,
@@ -50,7 +62,7 @@
         "Copa Argentina": 1
       },
       "asistencias_liga": 2,
-      "pj_liga": 15
+      "pj_liga": 16
     },
     {
       "nombre": "Lautaro Di Lollo",
@@ -62,7 +74,7 @@
         "Sudamericana": 1
       },
       "asistencias_liga": 1,
-      "pj_liga": 27
+      "pj_liga": 28
     },
     {
       "nombre": "Alan Velasco",
@@ -73,19 +85,7 @@
         "Copa Argentina": 1
       },
       "asistencias_liga": 1,
-      "pj_liga": 19
-    },
-    {
-      "nombre": "Leandro Paredes",
-      "posicion": "Mediocampista",
-      "goles": 4,
-      "desglose": {
-        "Liga": 2,
-        "Libertadores": 1,
-        "Sudamericana": 1
-      },
-      "asistencias_liga": 4,
-      "pj_liga": 26
+      "pj_liga": 20
     },
     {
       "nombre": "Adam Bareiro",
@@ -96,7 +96,7 @@
         "Libertadores": 1
       },
       "asistencias_liga": 1,
-      "pj_liga": 10
+      "pj_liga": 11
     },
     {
       "nombre": "Milton Giménez",
@@ -117,8 +117,8 @@
         "Sudamericana": 1,
         "Copa Argentina": 1
       },
-      "asistencias_liga": 2,
-      "pj_liga": 24
+      "asistencias_liga": 3,
+      "pj_liga": 25
     },
     {
       "nombre": "Ángel Romero",
@@ -139,7 +139,7 @@
         "Copa Argentina": 1
       },
       "asistencias_liga": 8,
-      "pj_liga": 28
+      "pj_liga": 29
     },
     {
       "nombre": "Lautaro Blanco",
@@ -149,7 +149,7 @@
         "Liga": 1
       },
       "asistencias_liga": 5,
-      "pj_liga": 29
+      "pj_liga": 30
     },
     {
       "nombre": "Tomás Aranda",
@@ -159,7 +159,7 @@
         "Liga": 1
       },
       "asistencias_liga": 3,
-      "pj_liga": 21
+      "pj_liga": 22
     },
     {
       "nombre": "Milton Delgado",
@@ -169,7 +169,7 @@
         "Sudamericana": 1
       },
       "asistencias_liga": 2,
-      "pj_liga": 29
+      "pj_liga": 30
     },
     {
       "nombre": "Tomás Belmonte",
@@ -179,7 +179,7 @@
         "Liga": 1
       },
       "asistencias_liga": 1,
-      "pj_liga": 17
+      "pj_liga": 18
     },
     {
       "nombre": "Facundo Herrera",
@@ -189,7 +189,7 @@
         "Liga": 1
       },
       "asistencias_liga": 0,
-      "pj_liga": 8
+      "pj_liga": 9
     },
     {
       "nombre": "Ander Herrera",
