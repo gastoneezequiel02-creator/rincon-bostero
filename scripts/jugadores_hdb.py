@@ -75,7 +75,9 @@ def titulos(j: dict) -> tuple[int, bool]:
         x = m.group(1).lower()
         n = int(x) if x.isdigit() else NUMEROS.get(x, 0)
     detalle = normalizar(bio[m.end():m.end() + 260]) if m else ""
-    return n, any(t in detalle for t in INTERNACIONALES)
+    nuevos = j.get("titulos_nuevos") or []  # ganados después de la descarga (ver sumar_partidos_nuevos)
+    return n + len(nuevos), any(t in detalle for t in INTERNACIONALES) or any(
+        t in normalizar(x) for x in nuevos for t in INTERNACIONALES)
 
 
 def anio(fecha: str) -> int | None:
@@ -634,3 +636,19 @@ def sumar_partidos_nuevos(todos: dict) -> None:
             for k in ids:
                 if k != i and k not in comp:
                     comp.append(k)
+    _sumar_titulos_nuevos(todos, {p["torneo"] for p in partidos.values() if p.get("fecha", "") > consultado})
+
+
+def _sumar_titulos_nuevos(todos: dict, torneos: set) -> None:
+    """Un título cargado en palmares.json cuyo torneo se siguió jugando después de la descarga no está en las
+    biografías: se le suma a cada jugador que jugó al menos un partido de ese torneo."""
+    palm = leer_json(DATOS / "manual" / "palmares.json", {}) or {}
+    for titulo in [t for c in palm.get("categorias", []) for t in c.get("titulos", [])]:
+        torneo = _nombre_hdb_titulo(titulo, torneos)
+        if not torneo:
+            continue
+        for j in todos.values():
+            if any(t[0] == torneo and t[1] for t in j.get("tor", [])):
+                nuevos = j.setdefault("titulos_nuevos", [])
+                if titulo not in nuevos:
+                    nuevos.append(titulo)
