@@ -1715,6 +1715,10 @@
     "abel ferreira": {
       "archivo": null,
       "buscado": "2026-11-27T16:45:35.103544-03:00"
+    },
+    "joaquin pineyro": {
+      "archivo": null,
+      "buscado": "2026-11-27T21:37:23.620236-03:00"
     }
   },
   "archivos": {
@@ -2404,6 +2408,10 @@
     },
     "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 09.jpg": {
       "imagen": "img/archivo/vista-aerea-del-estadio-alberto-j-armando-la-bombo-fd946c.jpg",
+      "credito": "Foto de archivo: ProtoplasmaKid / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "Vista aérea del Estadio Alberto J. Armando \"La Bombonera\" 12.jpg": {
+      "imagen": "img/archivo/vista-aerea-del-estadio-alberto-j-armando-la-bombo-dc2a2d.jpg",
       "credito": "Foto de archivo: ProtoplasmaKid / Wikimedia Commons (CC BY-SA 4.0)"
     }
   },
