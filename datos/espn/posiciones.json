@@ -495,7 +495,7 @@
         ]
       }
     ],
-    "actualizado": "2026-11-28T09:15-03:00"
+    "actualizado": "2026-11-28T10:26-03:00"
   },
   "arg.copa_lpf": {
     "slug": "arg.copa_lpf",
@@ -961,7 +961,7 @@
         ]
       }
     ],
-    "actualizado": "2026-11-28T09:15-03:00"
+    "actualizado": "2026-11-28T10:26-03:00"
   },
   "conmebol.libertadores": {
     "slug": "conmebol.libertadores",
@@ -1527,7 +1527,7 @@
         ]
       }
     ],
-    "actualizado": "2026-11-28T09:15-03:00"
+    "actualizado": "2026-11-28T10:26-03:00"
   },
   "fifa.cwc": {
     "slug": "fifa.cwc",
@@ -2119,6 +2119,6 @@
         ]
       }
     ],
-    "actualizado": "2026-11-28T09:15-03:00"
+    "actualizado": "2026-11-28T10:26-03:00"
   }
 }
